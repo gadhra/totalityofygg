@@ -1,0 +1,234 @@
+\renewcommand{\yggMechanics}{%
+  \mychapter{Core Mechanics}{core-mechanics}
+}
+
+\renewcommand{\yggMechanicsText}{%
+
+
+\mysection{Rolls}{rolls}
+
+There are 3 types of "special" die rolls in ToY
+
+\mytable{X c}{
+  \thead{Roll} & \thead{Symbol} \\
+}{
+    Roll 20 & \RO \\
+    Roll Better & \RB \\
+    Roll to Succeed & \RS \\
+}
+
+Rolls are distinct from one another i.e. powers and abilities that affect \RO (like a Knave's Luck Die) cannot affect \RB or \RS
+
+\mysubsection{Failure}{rolls-failure}
+A Failure occurs when you roll a \myital{natural} 1 or a 2 on a \RS (\myital{natural} means that's what's on the face of the die). Failure has different effects depending on the type of die you might be rolling.  Details of what happens if you fail will be in the description of the roll.
+
+\mysubsection{Roll Twenty}{rolls-roll-twenty}
+In a \RO attempt you have to roll a 20 or better with a combination of dice and modifiers. A 19 misses, a 20 succeeds. 
+
+\mysubsection{Roll to Succeed}{rolls-roll-to-succeed}
+To roll to succeed, you must roll a die without rolling a Failure (a natural 1 or 2, see below).  \RS rolls cannot be modified (though they can sometimes be changed).  
+
+\cbreak
+
+\mysubsection{Roll Better}{rolls-roll-better}
+In a \RB attempt you roll a single die plus modifiers and try to beat 1 or more other \RB rolls.  This roll is called a "test". The type of die will be defined with the \RB
+
+\example {%
+  An orc attempts to push a Barbarian off a ledge.  Both the orc and the Barbarian attempt a \RB : \VIG test, highest roll wins \\ ~\\ A Sorcerer casts Battering Beam at a kobold.  The kobold fails its Save and must attempt a \RB : \VIG vs. the Sorcerer's \INT \\ ~\\ Two Allies rush toward an idol teetering on the brink of a chasm.  They each attempt a \RB : \MD+\DEX test to see who gets there first
+}
+
+When Monsters attempt a \RB, they add their {hd} as a modifier to their test i.e. a 6 {hd} Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{characters-primary-stat}.
+
+Ties go to the Allies.  If there's a tie between Allies, roll a d6 and add its result to your \RB until there's a winner.
+
+\newpage
+
+\mysection{Dice}{dice}
+The ToY rules use 10 different dice: d24, d20, d16, d12, d10, d8, d6, d4, d3, and d2 (a coin flip).   If you were to dump out all the dice in your Crown Royal bag and put them in order from lowest to highest (d2, d3, d4, etc), you'd have a Dice Chain
+
+\mysubsection{Dice Chains}{dice-dice-chains}
+The ToY dice chain is:
+~\\
+
+\example {%
+  \mybold{d2 \DubArrw d3 \DubArrw d4 \DubArrw d6 \DubArrw d8 \DubArrw d10 \DubArrw d12 \DubArrw ... \\ ... d16 \DubArrw d20 \DubArrw d24}
+}
+\mylist {%
+  \item When you see \DCUP , move 1 up the dice chain (so from a d6 to a d8).
+  \item When you see \DCDOWN , move 1 down the dice chain (so from a d6 to a d4).  
+}
+
+Dice can't go higher than d24 or lower than d2.  If a die is \mybold{exhausted}  that means it is lost (set to 0).
+
+\mysubsection{Static Dice \hfill \STATIC}{dice-static-dice}
+\example{%
+  \mybold{The base die used in \RO tries.}
+}
+
+Static dice are dice used in \RO tries; they are often combined together with other modifiers to get to a 20 or better.
+
+\myital{Examples: \mylink{Tangible Stats}{tangible-stats}; Knowledge Dice}
+
+\cbreak
+
+\mysubsection{Usage Dice \hfill \UD}{dice-usage-dice}
+\example{% 
+  \mybold A die used to \RS or modify \RO tries. It moves \DCDOWN on a Failure 
+}
+
+Whenever you \RS a Usage Die (\UD), you move \DCDOWN on a Failure (see Rolls).  If you roll a d2, the \UD is automatically exhausted after your roll.
+
+\UD have a maximum (\MAX) and current value.  For example, your \UD for your Armor might be a d8 \MAX but you've taken a few hits and now it's a d4 (current).  Unless specified, a \DCDOWN or \DCUP refers to the "current" value.  i.e.  "your Presence moves \DCDOWN" vs. "your \MAX Presence moves \DCDOWN"
+
+\myital{Examples: \mylink{Intangible Stats}{intangible-stats}; Deed Dice and Luck Dice; Mojo; some equipment (narcotics, armor, arrows, torches, etc)}
+
+
+\mysubsection{Pool Dice  \hfill \POOL}{dice-pool-dice}
+\example{%
+  \mybold{A die used to \RS.  It is exhausted on a Failure} 
+}
+
+When you \RS a Pool die, the die is immediately exhausted if you fail (it doesn't move \DCDOWN like a \UD does).  
+
+\myital{Examples: Faith Die, Blood Die, Grace Die}
+
+
+\mysubsection{Knack Dice  \hfill \KNACK}{dice-knack-dice}
+\example{%
+  \mybold{A d6 (always) rolled used for simple checks} 
+}
+
+There are certain skills and abilities in ToY that are Knack Die.  A Knack Die is always a d6.  Knack Die are written as \myital{x-in-6} i.e. 1-in-6, 2-in-6, etc.  If your Knack Die is 2-in-6, you succeed if you roll a 1 or a 2 on a d6.  
+
+It's possible for a Knack die to be a 6-in-6.  If you see 6-in-6, roll 2d6 - you only fail on a 2 (snake eyes).
+
+Examples: Saves, Skill Dice
+
+\newpage
+
+\mysection{Tangible Stats}{tangible-stats}
+
+Tangible Stats are the physical, definable aspects of your character.  Tangible Stats are \STATIC and don't go up or down unless something really bad happens.
+
+\mysubsection{VIGOR}{tangible-stats-vigor}
+
+How strong you are, how much pain and hardship you can endure, your physical essence.  \VIG is used for Hard attacks and is the Primary Stat for Sellswords (Soldiers and Barbarians)
+
+
+\mysubsection{DEXTERITY}{tangible-stats-dexterity}
+
+How adroit you are, your hand-eye coordination, your speed.  A high \DEX gets you bonuses to figuring out if you attack first, and is used for Fast attacks.  Primary Stat for Knaves (Bravos and Archaeologists)
+
+
+\mysubsection{INTELLECT}{tangible-stats-intellect}
+
+How smart you are, how easy it is for you to learn and remember things.   A high \INT gets you bonuses on Leechcraft, Chymistry, Blood, and Wizardry. Primary Stat for Magicians (Sorcerers and Leeches)
+
+
+\mysubsection{FOCUS}{tangible-stats-focus}
+
+How well you can concentrate, how patient you are, your ability to observe and control magical energies. A high \FOC gets you bonuses on Faith, Liturgies, Charms, and Necromancy. Primary Stat for Devotees (Witches and Mystics)
+
+\cbreak
+
+
+\mysection{Intangible Stats }{intangible-stats}
+
+
+Intangible Stats are the nonphysical, abstract aspects of your character. Intangible Stats are \UD and their die will decrease with use.  You can use your Intangible Stats to modify any \RO or \RB attempt using its \myital{corresponding} Tangible Stat (see below).
+
+
+\mysubsection{PRESENCE}{intangible-stats-presence}
+
+Confidence, attractiveness, leadership, and intimidation. The Arbiter might ask you if you'd like to roll your Presence \UD if you're trying to sweet talk someone, keep a group of peons from breaking morale, or scaring a couple of kobolds into telling you what you want to know. 
+
+You can roll your Presence die and add its result to any \RO or \RB attempt you're making that involves \VIG.  If your Presence is exhausted, your confidence ebbs: you are unable to heal Grit until you gain a Presence \UD back.
+
+
+\mysubsection{TALENT}{intangible-stats-talent}
+
+It always seems like you're in the right place at the right time, or that you have the favor of the Gods. The Arbiter might ask you if you'd like to roll your Talent \UD if you're trying to see if something works by pure random luck ("I randomly press buttons on the console and hope something good happens"; "I close my eyes and try to jump off the roof into the hay cart").  
+
+You can roll your Talent die and add its result to any \RO or \RB attempt you're making that involves \DEX.  If your Talent is exhausted, your luck has run out: you automatically take a 1 in any \mylink{Luck Contests}{other-stuff-luck-contests} until you gain a Talent \UD back.
+
+
+\mysubsection{AWARENESS}{intangible-stats-awareness}
+
+Your idle perception.  The Arbiter will ask you to roll your Awareness if you're looking for traps or to  notice something that you might not be actively looking for (you can say no!).  
+
+You can roll your Awareness die and add its result to any \RO or \RB attempt you're making that involves \INT.  If your Awareness is exhausted, you are mentally fogged: you always lose Init until you gain an Awareness \UD back.
+
+
+\mysubsection{SANITY}{intangible-stats-sanity}
+
+How lucid you are, and how likely you are to keep your cool.  The Arbiter might tell you to make a Sanity roll when you see something particularly heinous (you don't get to say no on this one).  
+
+You can roll your Sanity \UD and add its result to any \RO or \RB attempt you're making that involves \FOC.  If you ever Fail a Sanity roll (roll a 1 or a 2), you must roll on \mylink{Terrifying Tables}{terrifying-tables} (the Arbiter will determine which table to roll on). If your Sanity is exhausted, you immediately gain the Madness "Shot Nerves" in addition to any other Madnesses until you gain a Sanity \UD back.
+
+\newpage
+
+
+\mysection{Time}{time}
+
+\mysubsection{Top Of / Bottom Of ...}{time-top-bottom}
+If you see an effect that happens at the "top of the Moment", this is just before you take your \myital{first} action in a Moment (but after you've rolled Init).
+
+If you see an effect that happens at the "bottom of the Moment", this is immediately after everyone (including the Monsters) have taken a turn, and before Init is rolled.
+
+
+\mysubsection{Combat}{time-combat}
+There are 2 important types of tracked time in Combat - Moments and Minutes.  Moments are fast-paced scenes of danger and Minutes encompass the entire Combat.  
+
+
+\mysubsection{Out of Combat}{time-out-of-combat}
+
+Outside of combat there are Hours, Days and Weeks for things that take … you know, that long.  You don't specify a number, it's just an abstract i.e. "that will take Minutes to do" or "you'll need to rest for Hours".  More information can be found in the sections \mylink{Taking a Breather}{combat-taking-a-breaker} and \mylink{Longer Rests}{combat-longer-rests}
+
+\mysubsection{Session}{time-session}
+A session is any time you sit down to play for a morning/afternoon/evening.  When everyone goes home or the game stops, that ends the session.
+
+
+\mysubsection{Adventure}{time-adventure}
+Determined by the Arbiter, see the section on \mylink{Adventures}{players-resources-adventures}.
+
+\cbreak
+
+\mysection{Distance}{distance}
+
+\mysubsection{Combat}{distance-combat}
+There are 4 abstract ranges for measuring distance:  \mybold{Close}, \mybold{Nearby}, \mybold{Far-Away}, and \mybold{Distant} .  \MAX Combat distance is 100 meters
+
+\mytable{X c}{
+  \thead{} & \thead{} \\
+}{
+    Close & ~1m \\
+    Nearby & ~10m \\
+    Far Away & ~50m \\
+    Distant & ~100m \\
+}
+
+
+\mysubsection{Non-Combat}{distance-non-combat}
+
+Non Combat distances are covered in the Arbiter's section on Travel
+
+
+\mysection{Other Stuff}{other-stuff}
+
+
+\mysubsection{Terror, Horror, and Madness}{other-stuff-terror-horror-madness}
+
+Bearing witness to horrible or terrible things can prompt a roll of your Sanity \UD.  If you roll a Failure, you must roll on the \mylink{Terrifying Tables}{terrifying-tables} (the Arbiter will determine which table to roll on). 
+
+Examples that might prompt a Sanity roll:  witnessing a member of the party getting killed; a horrifying creature you've never seen before; a situation that shakes your beliefs; or surviving a brush on \mylink{Death's Door}{combat-deaths-door}
+
+
+\mysubsection{Luck Contests}{other-stuff-luck-contests}
+
+The Arbiter may call for a Luck Contest if she is trying to figure out what random bad thing is going to happen to someone ("the ogre turns his attention towards one of you"; "one of you gets hit with 2 effects, not just one", etc. )
+
+You can choose to roll \mybold{any} \mylink{Intangible Stats }{intangible-stats} \UD you choose.  Instead of rolling the \UD, you can opt to "take a one" (meaning your roll is the equivalent of a 1).  The person with the lowest roll is the victim. If there's a tie for last (including if multiple people decide to "take a one"), the Arbiter chooses whoever has the lowest Talent.  If there is still a tie, the Arbiter gets to pick (roll randomly or do whatever feels right).
+
+\newpage
+
+}

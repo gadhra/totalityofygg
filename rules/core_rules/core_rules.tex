@@ -1,0 +1,58 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+% This file is also released under CC BY 4.0.
+
+\documentclass{article}
+\usepackage{ygg}
+
+%
+\newcommand{\yggVersion}{v0.0}
+\newcommand{\yggCredits}{}
+\newcommand{\yggTitle}{}
+\newcommand{\yggToC}{}
+
+% Section Titles
+\newcommand{\yggMechanics}{}
+\newcommand{\yggAllies}{}
+\newcommand{\yggClasses}{}
+\newcommand{\yggFlavors}{}
+\newcommand{\yggSkillsSaves}{}
+\newcommand{\yggCombat}{}
+\newcommand{\yggCivilization}{}
+\newcommand{\yggMiscellania}{}
+\newcommand{\yggArbiter}{}
+\newcommand{\yggAppendices}{}
+
+% Body
+\newcommand{\yggMechanicsText}{}
+\newcommand{\yggAlliesText}{}
+\newcommand{\yggClassesText}{}
+\newcommand{\yggFlavorsText}{}
+\newcommand{\yggSkillsSavesText}{}
+\newcommand{\yggCombatText}{}
+\newcommand{\yggCivilizationText}{}
+\newcommand{\yggMiscellaniaText}{}
+\newcommand{\yggArbiterText}{}
+\newcommand{\yggAppendicesText}{}
+
+\input{mechanics.tex}
+\input{allies.tex}
+
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% --- core mechanics -----------------------------------------------------------------
+\noindent\yggMechanics
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggMechanicsText
+\end{multicols}
+\vfill\newpage
+
+\end{document}

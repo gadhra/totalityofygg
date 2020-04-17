@@ -1,0 +1,257 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\ProvidesFile{ygg.sty}
+\ProvidesPackage{ygg}
+
+% --- common packages --------------------------------------------------
+
+\usepackage[cmyk,table,usenames,dvipsnames]{xcolor} % load early to avoid name clash
+\usepackage{verbatim}  % \begin{comment} support
+\usepackage{eso-pic}   % AddToShipoutPicture support
+\usepackage{units}   % nice fractions (like "1/2")
+\usepackage{multicol}  % 2-columns
+
+% --- colors -----------------------------------------------------------
+\DefineNamedColor{named}{primary}{cmyk}{0.75,0.68,0.67,0.90} % blacker than black
+\DefineNamedColor{named}{silver}{rgb}{0.75, 0.75, 0.75}
+\DefineNamedColor{named}{gainsboro}{cmyk}{ 0.00, 0.00, 0.00, 0.12}
+
+% --- page & basic text setup ------------------------------------------
+
+\usepackage[driver=none]{geometry}
+
+\geometry{% Letter
+  paperheight=11in,
+  paperwidth=8.5in,
+  margin=1in
+}
+% More space between columns
+\setlength{\columnsep}{3em}
+
+% Column macro
+\newcommand{\cbreak} {
+  \vfill\null
+  \columnbreak
+} 
+
+% Don't indent paragraphs, add some space instead
+\setlength{\parindent}{0em}
+\setlength{\parskip}{3mm}
+
+
+% --- header and footer ------------------------------------------------
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfootoffset[RO,L]{0mm}
+\fancyfoot[C]{\bf\color{primary}\fftext\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- pdf tweaks -------------------------------------------------------
+
+% fix a transparent png rendering bug
+\AddToShipoutPicture{%
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+}
+
+% some usefull default pdf settings
+\usepackage{hyperref}
+\hypersetup{
+  pdfpagelayout=TwoPageRight,
+  pdfstartview=Fit,
+  pdfpagemode=UseOutlines,
+  pdfprintscaling=None,
+  colorlinks=true,
+  bookmarksnumbered=false,
+  bookmarksopen=true,
+  linkcolor = blue,
+  anchorcolor = blue
+}
+
+\usepackage{ocgx} % for pdf layer support
+
+% --- fonts & symbols --------------------------------------------------
+
+\usepackage{fontspec}
+\ifdefined\fontsearchpath\else\newcommand{\fontsearchpath}{../fonts}\fi
+
+% Free Futura font, based off of TSR's PH1e
+\newfontfamily{\fftext}[
+  Path=\fontsearchpath/futura/,
+  Mapping=tex-text,
+  UprightFont={FuturaBook},
+  ItalicFont={FuturaBook-Italic},
+  BoldFont={Futura-Bold}
+]{FuturaBook}
+
+% Fredericka the Great
+\newfontfamily{\fffancy}[
+  Path=\fontsearchpath/fredericka-the-great/,
+  Mapping=tex-text,
+  UprightFont={FrederickatheGreat-Regular}
+]{FrederickatheGreat}
+
+% Symbols
+\newfontfamily{\ffstixmath}[
+  Path=\fontsearchpath/stix/,
+  Mapping=tex-text,
+  Extension={.otf},
+  UprightFont={STIX2Math},
+  BoldFont={STIX2Math},
+  ItalicFont={STIX2Math},
+  BoldItalicFont={STIX2Math} 
+]{STIX2Math}
+
+% --- symbol macros --------------------------------------------------
+\newcommand{\LVL}{{\fftext \textbf{[lvl] }}}
+\newcommand{\MAX}{{\fftext \textbf{[max] }}}
+\newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7} }}}
+\newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9} }}}
+
+\newcommand{\RB}{{\fftext \textbf{R\ffstixmath{\char"29C1} }}}
+\newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713} }}}
+\newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473} }}}
+
+\newcommand{\INT}{{\fftext \textbf{\ffstixmath{\char"2666}}INT }}
+\newcommand{\FOC}{{\fftext \textbf{\ffstixmath{\char"2665}}FOC }}
+\newcommand{\VIG}{{\fftext \textbf{\ffstixmath{\char"2663}}VIG }}
+\newcommand{\DEX}{{\fftext \textbf{\ffstixmath{\char"2660}}DEX }}
+
+\newcommand{\UD}{{\fftext \textbf{U\ffstixmath{\char"2685} }}}
+\newcommand{\MD}{{\fftext \textbf{M\ffstixmath{\char"2685} }}}
+\newcommand{\HD}{{\fftext \textbf{Hit\ffstixmath{\char"2685} }}}
+\newcommand{\STATIC}{{\fftext \textbf{Static\ffstixmath{\char"2685} }}}
+\newcommand{\POOL}{{\fftext \textbf{Pool\ffstixmath{\char"2685} }}}
+\newcommand{\DEATH}{{\fftext \textbf{Death\ffstixmath{\char"2685} }}}
+\newcommand{\KNACK}{{\fftext \textbf{Knack\ffstixmath{\char"2685} }}}
+
+\newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
+
+% --- section headers --------------------------------------------------
+\usepackage{titlesec}
+
+\titleformat*{\section}{\Huge\bfseries\fffancy\filcenter}
+\titleformat*{\subsection}{\Huge\bfseries\fftext}
+\titleformat*{\subsubsection}{\Large\bfseries\fftext}
+
+
+\newcommand{\mychapter}[2]{
+  \topskip0pt
+  \vspace*{\fill}
+  \hypertarget{#2}{%
+    \section*{#1}\zlabel{#2}
+  }
+  \vspace*{\fill}
+}
+
+\newcommand{\mysection}[2]{
+  \hypertarget{#2}{%
+    \subsection*{#1}\zlabel{#2}
+  }
+} 
+
+\newcommand{\mysubsection}[2]{
+  \begin{flushleft}
+  \hypertarget{#2}{%
+    \subsubsection*{#1}\zlabel{#2}
+   }
+   \hrule height1mm
+   \end{flushleft}
+} 
+
+
+% --- page references --------------------------------------------------
+
+\usepackage{zref-user,zref-titleref,zref-hyperref}
+\newcommand{\refPage}[1]{\book\,\zpageref{#1}}
+
+% --- common style items -----------------------------------------------
+
+\newcommand{\mybold}[1]{{\textbf{#1}}}
+\newcommand{\myital}[1]{{\textit{#1}}}
+\newcommand{\mylink}[2]{
+  \hyperlink{#2}{#1}
+}
+
+
+% --- tables -----------------------------------------------------------
+
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{dcolumn}
+
+\renewcommand{\tabcolsep}{1mm}
+
+\newcolumntype{x}[1]{%
+>{\raggedright\hspace{0pt}}p{#1}%
+}
+\newcolumntype{y}[1]{%
+>{\centering\hspace{0pt}}p{#1}%
+}
+\newcolumntype{z}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}%
+}
+
+\newcommand{\thead}[1]{
+  \fftext\textbf{
+    \noindent%
+    \rowcolors[]{1}{white}{}%
+    \color{primary}#1
+  }
+}
+
+\newcommand{\tn}{\tabularnewline}
+
+\newcommand{\mytable}[4][\fftext\normalsize]{
+  \renewcommand{\arraystretch}{0.95}{
+    {#1%
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \RaggedRight\setlength{\extrarowheight}{0.15\baselineskip}%
+    \begin{tabularx}{\columnwidth}{#2}
+    \rowcolor{white}
+    #3 % header
+    \rowcolor{silver}
+    #4 % body
+    \end{tabularx}\vspace{2pt plus 6pt}
+    }
+  }
+}
+
+
+
+% --- lists ------------------------------------------------------------
+
+\newcommand{\mylist}[1]{%
+  \begin{list}{
+    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+  \end{list}
+}
+
+% --- example block ------------------------------------------------------------
+\usepackage{tcolorbox}
+\newcommand{\example}[1] {%
+  \begin{tcolorbox}[width=\linewidth,colback={gainsboro}]
+    \centering
+    #1
+  \end{tcolorbox}
+}
+
+
+% A way to produce similar looking "statblocks"
+% 1 = NSC/Monster name, e.g. "Giant rat"
+% 2 = hit die, e.g. "4"
+% 3 = action die, e.g. "6"
+% 4 = reaction die, e.g. "4"
+\newcommand{\nsc}[4]{\keyword{#1:} \HD#2 \AD#3 \RD#4}
