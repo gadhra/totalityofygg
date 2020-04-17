@@ -48,10 +48,12 @@
 
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[L]{\small\fftext\yggVersion}
+\fancyhead[R]{\small\fftext{The Totality of Ygg}}
 \fancyfootoffset[RO,L]{0mm}
 \fancyfoot[C]{\bf\color{primary}\fftext\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{.25pt}
+\renewcommand{\footrulewidth}{.25pt}
 
 % --- pdf tweaks -------------------------------------------------------
 
@@ -60,20 +62,6 @@
 \makeatletter%
 \special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
 \makeatother%
-}
-
-% some usefull default pdf settings
-\usepackage{hyperref}
-\hypersetup{
-  pdfpagelayout=TwoPageRight,
-  pdfstartview=Fit,
-  pdfpagemode=UseOutlines,
-  pdfprintscaling=None,
-  colorlinks=true,
-  bookmarksnumbered=false,
-  bookmarksopen=true,
-  linkcolor = blue,
-  anchorcolor = blue
 }
 
 \usepackage{ocgx} % for pdf layer support
@@ -138,6 +126,19 @@
 % --- section headers --------------------------------------------------
 \usepackage{titlesec}
 
+% Vertical center title page
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+% hide the section numbers
+\renewcommand\thesection{}
+\renewcommand\thesubsection{}
+\renewcommand\thesubsubsection{}
+
+% set the ToC depth
+\setcounter{tocdepth}{2}
+
 \titleformat*{\section}{\Huge\bfseries\fffancy\filcenter}
 \titleformat*{\subsection}{\Huge\bfseries\fftext}
 \titleformat*{\subsubsection}{\Large\bfseries\fftext}
@@ -147,21 +148,21 @@
   \topskip0pt
   \vspace*{\fill}
   \hypertarget{#2}{%
-    \section*{#1}\zlabel{#2}
+    \section{#1}\zlabel{#2}
   }
   \vspace*{\fill}
 }
 
 \newcommand{\mysection}[2]{
   \hypertarget{#2}{%
-    \subsection*{#1}\zlabel{#2}
+    \subsection{#1}\zlabel{#2}
   }
 } 
 
 \newcommand{\mysubsection}[2]{
   \begin{flushleft}
   \hypertarget{#2}{%
-    \subsubsection*{#1}\zlabel{#2}
+    \subsubsection{#1}\zlabel{#2}
    }
    \hrule height1mm
    \end{flushleft}
@@ -255,3 +256,22 @@
 % 3 = action die, e.g. "6"
 % 4 = reaction die, e.g. "4"
 \newcommand{\nsc}[4]{\keyword{#1:} \HD#2 \AD#3 \RD#4}
+
+
+% some usefull default pdf settings
+% this needs to go last in order to generate
+% a PDF index
+\usepackage{hyperref}
+\hypersetup{
+  pdftex,
+  pdfpagelayout=TwoPageRight,
+  pdfstartview=Fit,
+  pdfpagemode=UseOutlines,
+  pdfprintscaling=None,
+  colorlinks=true,
+  bookmarksnumbered=true,
+  bookmarksopen=true,
+  linkcolor = blue,
+  anchorcolor = blue,
+}
+\usepackage{hypcap}
