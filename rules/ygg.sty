@@ -122,6 +122,7 @@
 \newcommand{\KNACK}{{\fftext \textbf{Knack\ffstixmath{\char"2685} }}}
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
+\newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C} }}}
 
 % --- section headers --------------------------------------------------
 \usepackage{titlesec}
@@ -240,12 +241,26 @@
   \end{list}
 }
 
+\newcommand{\mybullet}[1]{%
+  \begin{itemize}{
+    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+  \end{itemize}
+}
+
 % --- example block ------------------------------------------------------------
 \usepackage{tcolorbox}
 \newcommand{\example}[1] {%
   \begin{tcolorbox}[width=\linewidth,colback={gainsboro}]
     \centering
     #1
+  \end{tcolorbox}
+}
+
+% --- flavor block ------------------------------------------------------------
+\newcommand{\flavor}[1] {%
+  \begin{tcolorbox}[width=\linewidth,colback=white]
+    \centering
+    \myital{#1}
   \end{tcolorbox}
 }
 
@@ -263,7 +278,6 @@
 % a PDF index
 \usepackage{hyperref}
 \hypersetup{
-  pdftex,
   pdfpagelayout=TwoPageRight,
   pdfstartview=Fit,
   pdfpagemode=UseOutlines,
