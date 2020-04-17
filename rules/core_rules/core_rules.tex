@@ -1,15 +1,13 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
-% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
-% This file is also released under CC BY 4.0.
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
 
 \documentclass{article}
 \usepackage{ygg}
-
-%
-\newcommand{\yggVersion}{v0.0}
-\newcommand{\yggCredits}{}
-\newcommand{\yggTitle}{}
-\newcommand{\yggToC}{}
+\newcommand{\yggVersion}{%
+  v0.7beta
+}
 
 % Section Titles
 \newcommand{\yggMechanics}{}
@@ -39,14 +37,33 @@
 \input{allies.tex}
 
 
+
 % ###########################################################################
 % ###########################################################################
 % ###########################################################################
 % ###########################################################################
 % ###########################################################################
+
+\title{{\Huge\fffancy The Totality of Ygg }}
+\author{by Stefan Antonowicz}
+\date{}
+
+% table of contents
+\renewcommand\contentsname{{\small\fftext Table of Contents }}
 
 \begin{document}\fftext
 
+% --- title page --------------------------------------------------------------------
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+
+\begin{multicols*}{2}
+  \let\clearpage\relax
+  \vspace{-5cm}
+  \small\fftext\tableofcontents
+\end{multicols*}
+\vfill\newpage
 % --- core mechanics -----------------------------------------------------------------
 \noindent\yggMechanics
 \vfill\newpage
