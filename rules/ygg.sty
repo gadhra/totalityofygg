@@ -99,8 +99,16 @@
 ]{STIX2Math}
 
 % --- symbol macros --------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+
 \newcommand{\LVL}{{\fftext \textbf{[lvl] }}}
 \newcommand{\MAX}{{\fftext \textbf{[max] }}}
+\newcommand{\SUM}{{\fftext \textbf{[sum] }}}
+\newcommand{\FE}{{\fftext{fe}}}
+
 \newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7} }}}
 \newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9} }}}
 
@@ -121,8 +129,16 @@
 \newcommand{\DEATH}{{\fftext \textbf{Death\ffstixmath{\char"2685} }}}
 \newcommand{\KNACK}{{\fftext \textbf{Knack\ffstixmath{\char"2685} }}}
 
+
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
 \newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C} }}}
+\newcommand{\TheAuthority}{
+  {
+    \fontfamily{lmr}\selectfont {
+      M\={a}na-Yood-Sush\={a}\={i}
+    }
+  }
+}
 
 % --- section headers --------------------------------------------------
 \usepackage{titlesec}
@@ -154,6 +170,7 @@
   \vspace*{\fill}
 }
 
+
 \newcommand{\mysection}[2]{
   \hypertarget{#2}{%
     \subsection{#1}\zlabel{#2}
@@ -181,6 +198,9 @@
 \newcommand{\myital}[1]{{\textit{#1}}}
 \newcommand{\mylink}[2]{
   \hyperlink{#2}{#1}
+}
+\newcommand{\myanchor}[2]{
+  \hypertarget{#2}{#1}
 }
 
 
