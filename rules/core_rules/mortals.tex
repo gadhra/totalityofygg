@@ -1,0 +1,640 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggMortals}{%
+  \mychapter{Mortals}{mortals}
+}
+
+\renewcommand{\yggMortalsText}{%
+
+  \flavor{And Kib grew weary of the second game, and raised his hand in the Middle of All, making the sign of Kib, and made Men: out of beasts he made them, and Earth was covered with Men.  \Tilde Lord Dunsany}
+
+  The Mortal races (humans, collectively) cover each of the moons of Tartarus, from the tops of the Mountains of Madness on Acheron to the depths of the Caliphate of Holes on Styx. Humans are pursued by Sish, the Destroyer of Hours, and fall beneath the sign of Mung, the God of All Deaths.  The children of Kib breed prolifically in the face of Death.  They are said to be the playthings of the Small Gods, until the Authority \TheAuthority arises from his slumber and drowns the Worlds.  Through the signs of Life and Death, Order is maintained.
+
+  Mortals are marked by the sign of Kib, the \myital{noumenon} - the soul or spirit, the impenetrable "thing-in-itself", which exists despite their inability to perceive or sense it.  The existence of this soul means that humankind are Hallowed, sacred to \TheAuthority. Hallowed things stand in opposition to Magick, a phenomenon whose rules are bound in Chaos rather than Order.
+
+  \mysubsection{Mortal Adventurers}{mortal-adventurers}
+
+  Game-wise, Mortal adventurers in the story you're creating with the Arbiter have a Trope and a Flavor attached to them.  A Trope is a broad literary concept that contains multiple Flavors beneath them - Flavors beneath a Trope have basic things that they share with the other Flavors of their Trope.  The four major Tropes are:
+
+
+
+  \mylist {
+    \item \mybold{\mylink{The Sellsword}{trope-sellsword}}  The heresy of the Saigoths prophesizes that at the end of things, Mung will set his back against Trehagobol and "...wielding the Sword of Severing which is called Death, shall fight out his last fight with the hound Time, his empty scabbard Sleep clattering loose behind him".  Sellswords see the inevitability of Death in everything around them, and seek to be the last standing at the end.  They are governed by \VIG
+    \item \mybold{\mylink{The Knave}{trope-knave}}  In the "Sayings of Limpang-Tung", he vows to "... send jests into the world and a little mirth", and that we should pray to Limpang-Tung "... while Death seems to thee as far away as the purple rim of hills; or sorrow as far off as rain in the blue days of summer".   But ... as we grow old, then it is pointless to pray to Limpang-Tung, for you have become "...part of a scheme that he doth not understand".  Knaves are thrill-seekers and materialists, seeking to drink life to the last dregs.  Knaves prefer stealth over violence whenever possible (though they are capable of much violence if need be).  They are governed by \DEX
+    \item \mybold{\mylink{The Magician}{trope-magician}} Eld, first of the high Prophets, told the prophet Imbaun on his initiation that "... we have all looked upwards in the Hall of Night towards the secret of Things, and ever it was dark, and the Secret faint and in an unknown tongue."  As we know, however, Imbaun was to become the prophet of Dorozhand, and was showed "... the paths of Sish stretching far down into future time".  There is always more to know before THE END.  Magicians seek to understand the Secret and uncover its power before they fall beneath the sword of Mung.  Magicians are governed by \INT
+    \item \mybold{\mylink{The Devotee}{trope-devotee}}   The eyes of Dorozhand, god of Destiny, have gazed upon the Devotee - they become "... the arrow from the bow of Dorozhand hurled forward at a mark he may not see - to the goal of Dorozhand."  Even the Small Gods fear Dorozhand, for "... they have seen a look in the eyes of Dorozhand that regardeth beyond the gods."  Devotees believe in believing; in fate, kismet, and destiny; and that we all have a role to play in the great Game of the Small Gods played before the bed of \TheAuthority.  Devotees are goverened by \FOC.
+
+  }
+
+
+  \mysubsection{Mortal Origins}{mortal-origins}
+
+  \myital{Note:  These are just suggestions - feel free to buck the rules!}
+
+  \mybullet {
+    \item  Roll a d6:  1-3 you're from the country, 4-5 a village, 6 the big city
+    \item  Roll or pick from the list of \mylink{d30 Character Occupations}{appendixb-character-occupations}.  This is either what you were doing before, or what you were \myital{going} to do before you (presumably) ran away from home.
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  SELLSWORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Trope: The Sellsword}{trope-sellsword}
+
+  \mysubsection{Base Stats}{sellsword-base-stats}
+  \HD d10 \hfill Primary Stat: \VIG
+  
+  \mytable{X r}{
+    \thead{Level} & \thead{Deed Die} \\
+  }{
+    1 & d4 \UD \\
+    2-3 & d6 \UD \\
+    4-5 & d8 \UD \\
+    6-7 & d10 \UD \\
+    8 & d12 \UD \\
+    9 & d16 \UD \\
+  }
+
+
+  \mysubsection{Ferocity}{sellsword-ferocity}
+  
+  Sellswords add their \LVL to any \RO or \RB attempt they're trying that that includes their \VIG.  Sellswords also add their \LVL to weapon damage.  This bonus is applied \mybold{after}  the die explodes.
+
+  \cbreak
+
+  \mysubsection{Exploding Damage}{sellsword-damage}
+
+  If a Sellsword hits for \MAX damage on the die, the die explodes i.e. they roll again and add the second roll to the first.  If they roll \MAX damage again, the roll continues.  This roll must be the \myital{natural} (not modified) maximum roll on the die (though some powers and abilities can change a natural roll).  Modifiers to damage are added or subtracted to the damage \mybold{after}  the die explodes (including Deed Die).  Note this means that Sellswords don't Crit as other classes do.
+
+  \example{Charse, a level 1 Sellsword, attacks a goblin with a Shortsword (d6).  He makes his Fight check and hits, and rolls a 6 for damage. He rolls again and rolls another 6.  He rolls a 3rd time and rolls a 4.  He deals 17 points of damage(!) [6+6+4+\LVL] and the goblin is reduced to a fine pink mist.}
+
+ 
+
+  \mysubsection{Deed Dice}{sellsword-deed-dice} 
+
+  Sellswords have a Deed Die - a unique \UD whose result can be applied to any of their Fight checks. Roll the Deed Die and add its result to your Fight check.  If the Fight check hits, the result of the Deed Die is \mybold{also}  added to the damage for the attack. If you wish, you can roll your Deed Die  \myital{after} your initial Fight check is rolled.  You get your Deed Die back by taking a Sojourn or longer rest.  The damage for a Deed Die is applied \mybold{after}  the die explodes, if applicable.  You can only roll your Deed Die once per Moment.
+
+  \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  SOLDIER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Flavor: Soldier }{flavor-soldier }
+  \flavor{
+    We few, we happy few, we band of brothers;
+    For he to-day that sheds his blood with me
+    Shall be my brother; be he ne'er so vile,
+    This day shall gentle his condition;
+    And gentlemen in England now a-bed
+    Shall think themselves accurs'd they were not here,
+    And hold their manhoods cheap whiles any speaks
+    That fought with us upon Saint Crispin's day.
+  }
+  
+  
+  \mysubsection{Modifications}{soldier-modifications}
+
+  \mybold{Master and Commander}
+  You Presence starts \DCUP
+
+  \mybold{Born in the Saddle}
+  Your Skill : Travel starts at 2-in-6.
+
+  \mybold{Fighting Sense}
+  When rolling for Grit, add your \LVL to the roll.   This includes the Grit you start the game with.
+
+  \mysubsection{Enhancements}{soldier-enhancements}
+  
+  \mybold{Second Skin}
+  Your armor doesn't count as a Significant Item.  Once per Session, you can repair 1 \UD of your Armor when you Bivouac, up to its \MAX value
+
+  \mybold{Veteran}
+  You already have some experience with the hardships of a military life.  You start with d6+1 Grit (the +1 is for your \LVL, see Fighting Sense above)
+
+
+  \mybold{\myital{Optional: The Vow}}
+  You must make a vow - a short, specific, personal statement that you will not forget.  You have to Save if you want to break your Vow for up to Minutes.  Ex.  "I will protect my friend Johann", "I will never harm an unarmed person", etc.
+
+  \mysubsection{Level Bonus}{soldier-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   Choose an Ally at the start of Combat.  You must keep that Ally Close to you.   If that ally would take damage from a physical attack, you can choose to take the damage for them instead
+    \item \mybold{Level 5:}  If you have a banner in one of your hands, you can perform a Rallying Cry.  Make an \RS : Presence. If you don't roll a failure, for every Moment for the remainder of Combat you can forego a Fight check to allow all Allies to win Init.
+    \item\mybold{Level 7:}  You attract a band of warriors around you. 7 men-at-arms pledge their blades to your cause. They have Orderly morale; are armed with Light armor, shields, helmets, and spears - they are otherwise Level 0 characters.  These men-at-arms expect nominal pay, room, and board - otherwise, they will need to make periodic Morale checks at the discretion of the Arbiter.
+  }
+
+  \mysubsection{Professional Gear}{soldier-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, you start with a worn but well kept suit of Medium armor (chain, scaled, lamellar, or ring) and either (a) or (b):
+  \mybullet {
+    \item \mybold{(A)}  Strongbow and helmet, Quiver of Arrows, sealed and unopened orders, and a mirror and razor
+    \item \mybold{(B)}  Shortsword and shield, spear, a small tin flute, a letter from home, and a scrap of an enemy's banner
+  }
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  BARBARIAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \mysection{Flavor: Barbarian}{flavor-barbarian}
+
+  \flavor{Hither came Conan, the Cimmerian, black-haired, sullen-eyed, sword in hand, a thief, a reaver, a slayer, with gigantic melancholies and gigantic mirth, to tread the jeweled thrones of the Earth under his sandaled feet. \Tilde R.E.H.}
+
+  No Gods.  No masters.  No wizardry.  No tricks.  No illusions.  Only freedom.  This is the great gift of the Authority, but so many are afraid of what true sovereignty means that they make laws to protect them and bestow power to others over them and give up the open road to live in a cage.  Civilization is a slave's collar.  Friends are traitors.  You need only steel at your side to make your way in the world, nothing more.  There is no calvalry to save you, no Gods to protect you.  There is only you.  We all die alone.  Grapple with that fear, master it, rush headlong into the Void screaming a battle song, eat and drink your fill when you can.  We all die alone.  But you will live and die free.
+
+  \example{
+    Savage. Ranger. Scout. Warden. Warrior. Conan, Thundarr, Fafrd, Robin Hood, Strider, Ragnar Lodbrook, Ned Kelly, Zatoichi, and One Eye (Valhalla Rising). \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Barbarian/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{barbarian-modifications}
+
+  \mybold{Crazy Ivan}
+  Your Awareness starts at \DCUP
+
+  \mybold{Into the Wilds}
+  Your Bushcraft skill starts at 2-in-6
+
+  \mybold{Tougher than a Coffin Nail}
+  Every level (including first), you can roll your \VIG and, if the result is greater than your current Flesh, replace your Flesh with this result (don't forget to add your \LVL to any \VIG die you roll)
+
+  Additionally, when you take a Bivouac, you restore \LVL x2 Flesh instead of just \LVL Flesh.
+
+  \cbreak
+
+  \mysubsection{Enhancements}{barbarian-enhancements}
+
+  \mybold{Swordarm}
+  Two handed weapons count as one Significant Item instead of two.
+
+  \mybold{3 Kills Per Stroke}
+  Treat any Brawl weapon you use as if it had Cleave.
+
+  \mybold{Optional: The Cimmerian}
+  Your appearance is so outlandish even educated and well-traveled people will stop to stare at you. People can pick you easily out of a crowd, and your reputation precedes you.
+
+  \mysubsection{Level Bonus}{barbarian-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   Your danger sense prevents you (alone) from being Surprised - including the Drop.
+    \item \mybold{Level 5:}  Once per Session, if you're in a wilderness setting, you can say that you know of a cache nearby hidden in a tree bole, under a cairn, etc.  The cache can contains one of: 1. d8 \UD of food and water; 2. a shortbow with d8 \UD of arrows; 3. a suit of normal sized Light Armor; 4. a war axe, spear, and set of 4 daggers; 5. a small minor item (lantern and a few flasks of oil, ok; vials of poison or a looking glass, not ok)
+    \item\mybold{Level 7:}  Once per Session, if you're in a Rage, you can use your Fight action to kill every Monster in Close range provided they have 3 {hd} or less.  If you do a good job describing this to the Arbiter, it will prompt a morale check in any Nearby Monsters if they have 5 {hd} or less.
+  }
+
+  \mysubsection{Professional Gear}{barbarian-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, you start with a Hard weapon (and ammo if it's a Shoot weapon) and either (a) or (b):
+
+  \mybullet {
+    \item \mybold{(A)}  Two extra hand axes and a half-jar of Woad (d4 \UD)
+    \item \mybold{(B)}  Wolf hide armor (Light), iron collar and manacles (optionally still affixed), and a leather headbandr
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  KNAVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Trope: The Knave}{trope-knave}
+
+  \mysubsection{Base Stats}{knave-base-stats}
+  \HD d8 \hfill Primary Stat: \DEX
+  
+  \mytable{X r}{
+    \thead{Level} & \thead{Luck Die} \\
+  }{
+    1 & d4 \UD \\
+    2-3 & d6 \UD \\
+    4-5 & d8 \UD \\
+    6-7 & d10 \UD \\
+    8 & d12 \UD \\
+    9 & d16 \UD \\
+  }
+
+  \mysubsection{Puissance}{knave-puissance}
+  Knaves add their \LVL to any \RO or \RB attempt they're trying that includes their \DEX.  
+
+  \mysubsection{Luck Dice}{knave-luck-die}
+  Knaves have a Luck Die - a unique \UD whose result can be applied to any \RO or \RB try that includes \DEX.  Roll the Luck Die and add its result to your \RO or \RB check.  You can only roll your Luck Die once per \RO or \RB attempt.
+
+  \mysubsection{Murder}{knave-murder}
+  If you get \mylink{The Drop}{combat-surprise} on someone, you can attempt a Murder.  Murder can only be performed at Close range with a Shortsword, Dagger, Club, or Hand Axe.  Make a Fight \RO, adding your \LVL as a modifier. If you hit, pick \mybold{one} of the following attacks:
+
+  \mybullet {
+    \item \mybold{Cautious:}  You automatically \mylink{Crit}{combat-crits-and-fumbles} (do maximum damage + \LVL).  Any weapon.
+    \item \mybold{Reckless:}  You do 3d6 damage.  Any weapon.
+    \item \mybold{Bloody:}  You roll damage normally, but the Monster is also Bleeding. Stabbing only.
+    \item \mybold{Waylaying:}  You can either roll damage and the Monster is Woozy, or do no damage and the Monster must Save or be Knocked Out.  Bashing only.
+  }
+
+   Murder is a Combat Option, so it can't be combined with other Combat Options (like Florentine). Damage bypasses any Armor or Soak, if applicable (you slip the blade between the Monster's scales / plate mail / chink in carapace).  Once you perform a Murder, you have to Skulk again before you can try it on someone else.   Note that Monsters who are Amorphous or immune to surprise cannot be Murdered. 
+   
+  \mysubsection{Knavery}{knave-knavery}
+
+  All Knaves have the following six skills:
+  \mylist {
+    \item \mybold{B\&E}  Open locks, pry doors, and untie bonds 
+    \item \mybold{Clamber} Scale impenetrable fortresses, icy cliffs, and wizard's towers
+    \item \mybold{Defuse} Figure out how traps work, take them apart ... and put them back together.  Note that Defuse doesn't help you \myital{find} a trap, though anyone can find a trap if they're looking for it with an Awareness check
+    \item \mybold{Dissemble} Disguise yourself as a castle guard or a noble's daughter.  Lie to the police.  Forge a document
+    \item \mybold{Foist} Lift pouches from belts and slip rings from fingers; palm cards and plant evidence 
+    \item \mybold{Skulk} Hide in shadows and creep silently through rooms.  A successful Skulk might let you get The Drop on someone. More details on Skulk can be found in the section on \mylink{Surprise}{combat-surprise}
+  }
+
+  Knaves skills (including Murder) cannot be used if you're wearing heavier than Light armor, or if you're using a shield. To perform Knavery, you must \RO using the following:
+
+  Your \DEX plus
+
+
+  Your Knave \STATIC.  Depending on your Flavor of Knave, your Knave \STATIC is either a d10 or a d8.  If a skill is listed as a Primary skill, your Knave Die is a d10 \STATIC; if a skill is listed as a Secondary skill, your Knave Die is a d8 \STATIC
+
+  Difficulty. The Arbiter assigns a difficulty to the task between 0 and 9, where 9 is “easy (for a thief)” and 0 is “holy shit you've got to be kidding me” (see {Knave Checks}{arbiters-resources-knave-checks} for some examples)
+
+  A \mybold{Knavery \RO}  is:
+
+  \DEX  plus \STATIC plus \mybold{Difficulty} 
+
+
+
+  \myital{Don't forget to add your \LVL after you roll - you're using \DEX for this \RO attempt, after all!}
+
+  \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  BRAVO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Flavor: Bravo}{flavor-bravo}
+  
+  \flavor{No matter how subtle the wizard, a knife between the shoulder blades will seriously cramp his style. \Tilde Vlad Taltos}
+
+  Civilization was inevitable, the natural evolution of existence.  Some folks try to eschew it, pretend it's not there and run out into the heath and eat bugs and berries, but it lurks in the corner of their eye, growing like a mold across the face of the world.  Kingdoms may come and go, but civilization?  Fucking eternal.  Even in the cities folks try to pretend that their homes aren't built on blood and sweat and shit, old bones and older stones.  They push the underbelly out of sight, but it's still there, always.  Like the brother no one wants to show up at a wedding.  This is your workshop, where you ply your trade.  Sooner or later they come to you - for favors, for money, for the thing they want but they just can't seem to get.  And there you sit, right there at the center, where the true action is, where things happen that change the true course of history.  Where life is pure - the strong and the weak, the haves and the have-nots. And you won't be a have-not.  You \mybold{are}  civilization.  You \mybold{are}  history.
+
+  \example{
+    Thug.  Spy. Assassin.  Bandit.  Rowdy.  Ruffian. Brigand. Bronn, Vlad Taltos, "Brick Top" Polford, Snake Plissken, Leon (The Professional), Sparafucile, and Altair (Assassin's Creed) \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Bravo/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{bravo-modifications}
+
+  \mybold{Ears of a Fox}
+  Your Awareness starts at \DCUP
+
+  \mybold{Rat Senses}
+  Your Listen OR Eyeball skill start at 2-in-6. 
+
+  \mysubsection{Enhancements}{bravo-enhancements}
+
+  \mybold{Steady Hands}
+  You do not need to make any checks for handling poisons
+
+  \mybold{Knave Skills:}
+  Primary (d10): Dissemble, Foist, Skulk.  Secondary (d8):  B\&E, Clamber, Defuse.  See the section on \mylink{Knavery}{knave-knavery} for details
+
+  \mybold{Optional: Outstanding Contract}
+  There's an outstanding contract on your head, revenge for something you did.  Tell the Arbiter who and why they want to kill you.
+
+  \mysubsection{Level Bonus}{bravo-bonus}
+  \mybullet {
+    \item \mybold{Level 3:}   A good assassin collects information before closing in for the kill. For every fact that you know about your target, you deal an additional +2 damage when you attempt a Murder, up to a maximum of +10.  You can only use the Cautious Murder option in this case. The facts don't have to be major, but they cannot be trivial. "Drinks Earl Grey tea", "Commands the fifth cavalry", "Is named Ostruchus Poncelroy" are all good facts. "Is currently inside his tent", "Is a man", "Has two arms" are not. If you could learn it by looking at a snapshot of the current scene, it's trivial
+    \item \mybold{Level 5:}   Once per Combat, you can step into a shadow and step out of another Nearby shadow in your next Maneuver. You can use this to get the Drop on someone, but there \mybold{must} be shadows present (you couldn't do this in a sunny field, for example)
+    \item \mybold{Level 7:}  Once per Adventure, at any time, you may declare that you are walking off-screen. During any Session of the Adventure, you may reveal yourself to have been a minor NPC in the background of the scene "all along" as long as there actually are minor NPCs in the background of the scene. You can always walk back on stage at any time, even climbing in a window. This ability is limited by plausibility.
+
+  }
+
+  \mysubsection{Professional Gear}{bravo-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, start with a bandolier, 2 daggers, and either (a) or (b):
+
+  \mybullet {
+    \item \mybold{(A)}  length of flexible wire, a makeup kit, black gambeson (Light),  and an unopened contract
+    \item \mybold{(B)}  short sword x2, small black book, an iron crowbar, and a single playing card (your choice)
+  }  
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  ARCHAEOLOGIST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Flavor: Archaeologist}{flavor-archaeologist}
+
+  \flavor{Fortune and glory, kid.  Fortune and glory. \Tilde Indiana Jones}
+
+
+  The world you live in is only a sliver of What Was.  There is mystery and history out there, every day buried further and further beneath the sands of the hourglass.  What we know is just a fraction of a fraction of what there \myital{is} to know.  Treasures locked deep in forgotten mines, relics in lost tombs, unremembered lore that can change the course of Time and laugh in the face of Death.  Lost things leave footprints, scraps of paper, crushed butts of smokes that tell stories.  When you think of What Was it almost drives you mad; it fills you with an ache that drives you from your seat to grab forever at the horizon.  It's up to you to rescue What Was from oblivion. What is behind the next door, beneath the next flagstone, long forgotten but still, eternally, THERE?    There's only one way to find out ...
+
+
+
+  \example{
+    Swashbuckler.  Adventurer.  Buccaneer.  Traveler. Daredevil. Pirate. Tomb Robber. The Grey Mouser, Indiana Jones, John Carter of Mars, Inigo Montoya, the Duke of Mantua (Rigoletto), Errol Flynn (in like...everything), Jack Sparrow, and Falstaff. \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/archaeologist}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{archaeologist-modifications}
+
+  \mybold{I'll Make It Up as I Go}
+  Your Talent starts at \DCUP
+
+  \mybold{Well Traveled}
+  Your Skill: Salt OR Skill: Lore start at 2-in-6. 
+
+  \mysubsection{Enhancements}{archaeologist-enhancements}
+
+  \mybold{What's that say?}
+  You can attempt to cast spells from Sorcerer's scrolls.  Instead of rolling d6 however, you roll up to your \LVL d4 (so if you were level 4, you could roll up to 4d4).  The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.
+
+  \mybold{Duelist}
+  You can use the Florentine Mighty Deed no matter what your \DEX is
+
+  \mybold{Knave Skills:}
+  Primary (d10): B\&E, Clamber, Defuse.  Secondary (8):  Dissemble, Foist, Skulk.  See the section on \mylink{Knavery}{knave-knavery} for details
+
+  \mybold{Optional: Arch-Nemesis}
+  You have an arch-nemesis who always seems to be a step ahead of you when it comes to obtaining artifacts. Tell the Arbiter a little bit about them.
+
+  \mysubsection{Level Bonus}{archaeologist-bonus}
+  \mybullet {
+    \item \mybold{Level 3:}   You're immune to the effects of cursed or supernatural items you carry as long as you intend to sell them.  If you use the item or gain any benefit from it, you suffer the negative effects
+    \item \mybold{Level 5:}   Once per Session, you can automatically escape from something that is restraining you and that you could plausibly escape from. This includes grapples, lynchings, and awkward social situations, but not sealed coffins
+    \item \mybold{Level 7:}  In a Medium or Large Civilization, you may spend any amount of money to buy an Unlabeled Package. When the package is unwrapped, you declare what it contains, provided (a) it didn't cost more than you originally paid, (b) is smaller than a 1m cube, (c) wouldn't take up more than 1 Significant Item slot (no storing 100,000au in an Unlabeled package, for example), (d) is mundane, and (e) would be available in the Civilization you came from
+  }
+
+  \mysubsection{Professional Gear}{archaeologist-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, you start with a bandolier with 2 daggers and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  A whip, a hat, a leather jacket (Light armor), and a satchel containing your "diary"
+      \item \mybold{(B)}  A shortsword, 50m of rope, a bundle of love letters, and a perfumed handkerchief
+
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  MAGICIAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Trope: The Magician}{trope-magician}
+
+  \mysubsection{Base Stats}{magician-base-stats}
+  \HD d6 \hfill Primary Stat: \INT
+  
+  \mytable{X c c}{
+    \thead{Level} & \thead{Blood (Sorcerer)} & \thead{Knowledge (Leech)}\\
+  }{
+    1 & 1d6 \POOL & d8 \STATIC \\
+    2-3 & 2d6 \POOL & d10 \STATIC \\
+    4-5 & 4d6 \POOL & d12 \STATIC \\
+    6-7 & 6d6 \POOL & d16 \STATIC \\
+    8 & 8d6 \POOL & d20 \STATIC \\
+    9 & 10d6 \POOL & d24 \STATIC \\
+  }
+
+
+  \mysubsection{Genius}{magician-genius}
+
+  Magicians add their \LVL to any \RO or \RB  attempt they're trying that includes their \INT
+
+  \cbreak
+
+  \mysubsection{Blood and Knowledge}{magician-blood-knowledge}
+
+  Sorcerers practice the Crux of Blood. They have a \POOL of d6 can use to cast spells.  You roll any number of Blood Die in your pool to cast spells (Wizardry). If you roll any triples, the spell works but it's a Mishap. If you roll any quadruples, the spell fails and it's a Calamity. If you roll any quintuples, the spell fails and it's a Ruin (this will likely kill you).
+
+  Leeches, on the other hand, study the Crux of Knowledge.  They have Knowledge Dice, a type of \STATIC that increases with level, that they use to perform Leechcraft.
+
+  Both Leeches and Sorcerers are able to create Research Dice during longer rests.  Sorcerers use these Research Dice to practice Inscription and to create create magical staves.  Leeches use them to make potions and poison using Chymistry and cure diseases and addictions with Medicinals.  Leeches and Sorcerers are able to share these Research Dice with one another.
+
+  More details can be found in \mybold{Bell, Book, \&Candle}.
+
+  \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  SORCERER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mysection{Flavor: Sorcerer}{flavor-sorcerer}
+
+  \flavor{Holy Diver!  You've been down too long in the midnight sea … ride the tiger, you can see his stripes but you know he's clean \Tilde Dio}
+
+  You push yourself to the edge of madness and reason, riding the warp and weft of the fabric of existence to master the arcane words that are gibbered and shrieked by the creatures beyond the Void.  They seek blood in payment - the sap of  Ygg, the brine of the Six Seas, the fire inside the calderas that felled Atlantis.  Blood is Life, and they desire it more than anything.  Blood is Life.  Blood is Power.
+
+  \example{
+    Wizard.  Ritualist.  \myital{Sanrier}.  Hemomancer. \myital{Elymas Sanguis}. Elric of Melnibone, Randall Flagg, Aleister Crowley, Thoth-Amon, Thulsa Doom.  \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/sorcerer/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{sorcerer-modifications} 
+  
+  \mybold{Piercing Gaze}
+  Your Presence starts at \DCUP
+
+  \mybold{Seer}
+  Your Lore skill starts at 2-in-6.
+
+  \mysubsection{Enhancements}{sorcerer-enhancements}
+
+  \mybold{Blood Aids Great Sorcery}
+  Use Blood to evoke Wizardry*.  You have a number of d6 Blood Die in a \POOL, dependent on your \LVL (see the \mylink{Template}{trope-magician} above)
+
+
+  \mybold{Klaatu barada nikto!}
+  Read and write magical texts and inscriptions, divine words of power, and research True Names using Research Dice and Inscription*
+
+  \mybold{His staff! I told you to take the Wizard's staff!}{his staff! i told you to take the wizard's staff!}
+  Create a Magic Staff* to assist in Wizardry
+
+  \mybold{Optional: It is I - Balthazar the Breathtaking!!}
+  When it comes to arrogance, you operate on another level entirely. Your pride, sense of self, and sheer bloody-mindedness override reality. You brook no competition; there can be only one sorcerer in any given party, city, cabal, or cult. You will accept no master and believe in no law but your own. To "the Man", you are an appalling spectacle, and should be put in your place (or in the ground) before you harm anyone else.
+
+  \mysubsection{Level Bonus}{sorcerer-bonus}
+  \mybullet {
+    \item \mybold{Level 3:}   You can attempt to crossbreed and combine two spells into one new spell. Both spells need to be stored on separate scrolls or in separate books initially. This process can only be done during a Sabbatical. You can combine the spells to produce a random spell from one of the original spells' paradigms (so if one spell is Elements and the other is Force, the resulting spell will either be Elements or Force). When the process is complete, Save vs. Doom or suffer a Calamity (including the failure!). Gain a +1 bonus to Save for every 1,000 coins spent on reagents, inks, magical artifacts, incense, or other tools of your trade
+    \item \mybold{Level 5:}   You can attempt to learn any spell you choose.  The spell must be scribed into a spellbook with enough room to hold it (spellbooks can hold a maximum of 10 spells).  When the process is complete, Save vs. Doom or suffer a Calamity (including the failure!).  You gain a +1 bonus to Save for every 5,000 coins (au) spent on reagents, inks, magical artifacts, incense, or other tools of your trade.
+    \item \mybold{Level 7:}  You can attempt to create your own spell. Work out the details with the Arbiter.  It'll cost you a minimum of 10,000 coins (au). Failure means you suffer a Ruin.
+  }
+
+  \mysubsection{Professional Gear}{sorcerer-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, start with a completely full spell book containing up to 10 spells* and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  a quarterstaff, soap, length of string with fishing hook, pipe, incense, reading glasses, and mushroom field guide
+      \item \mybold{(B)}  a dagger, soap, chalk, jar of weird ink, whistle, a magnifying glass, and an empty vial (can hold about 20ml/5 drams)
+
+    }
+  }  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  LEECH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \mysection{Flavor: Leech}{flavor-leech}
+
+  \flavor{Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge, and how much happier that man is who believes his native town to be his world, than he who aspires to become greater than his nature will allow. \Tilde Mary Shelley}
+
+  Magic exists.  Undeniably.  To say otherwise would be to defy what we know.  But those who try to control \myital{arcana} are buffeted by it, controlled by it, consumed by it.  Slain by it.  Science though - that is \myital{our} creation.  It exists to serve - humble, obedient, and aloof.  Few have the discipline to seduce it; it takes a lifetime of dedication, a lifetime of asking "why?" over and over again and knowing that there will be no end to the question.  "Why?" will reverberate in the heavens when the last star winks out.  "Why?" is a quest, a calling.  It drives us to travel the heights and depths, tame the riches of the world, cheat death and defy Chance and spit in the face of Luck.  When you walk the path of "Why?", you follow in the footsteps of Gods.
+
+  \example{
+   Physicker. Golden Chiurgen Anatomist. Apothecary. Chymist. Alchemist. Sawbones. Dr. Frankenstein, Bruce Banner, Herbert West, Dr. Jekyll, John Watson, and Dr. Robert Knox (Burke \& Hare murders)  \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/golden-chiurgen-chymist/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{leech-modifications} 
+  
+  \mybold{Level Headed}
+  Your Sanity starts at \DCUP
+
+  \mybold{Well Read}
+  Pick two:  (a) Starting Lore is 2-in-6; (b) Starting Math is 2-in-6; (c) Double your starting languages.
+
+
+  \mysubsection{Enhancements}{leech-enhancements}
+
+  \mybold{Science}
+  The Leech can create potions and salves through Chymistry and heal wounds to the Flesh and spirit with Leechcraft
+  
+  \mybold{Optional: Transcendental Stimulations}
+  You start with d12 \UD of Corpse Salt, but also an addiction to Corpse Salt
+
+  \mysubsection{Level Bonus}{leech-bonus}
+  \mybullet {
+    \item \mybold{Level 3:}   You have a reputation for wisdom.  If there's a weird problem, people will go to you first. If there's a mutiny and you aren't part of the cause, you will be spared. Once per Adventure, you can give a command to someone and they must Save vs. Hexes or obey it (they have to understand you, of course)
+    \item \mybold{Level 5:}   Once per Session, you can declare something to be true because you read it in a book. The base chance of the thing actually being true is 3 in 6. There has to be a plausible way you could know about it from reading books (new discoveries, minor details, and personal secrets are unlikely). You don't know whether or not it is true right away; the Arbiter will roll when it matters. You might only be partially correct, but you will never be catastrophically wrong. If you declare that bugbears fear albino goats, they will either fear albino goats or be indifferent to albino goats. They won't be driven into a murderous rage by them. If you have access to a library of 50 books, the base chance increases to 5 in 6. 
+    \item \mybold{Level 7:}  You are immune to Madness of any kind and your Sanity is d24 if it isn't already
+  }
+
+  \mysubsection{Professional Gear}{leech-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, start with a black envelope with 3 syringes and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  a polearm; a high collared, knee length, black coat; a jar of leeches; and a small satchel with 3 books (you pick the titles)
+      \item \mybold{(B)}  two silver daggers; a set of scalpels (non-combat); a pilgrim's hat; a plague doctor mask; and a shovel
+
+    }
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  DEVOTEE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Trope: The Devotee}{trope-devotee}
+
+  \mysubsection{Base Stats}{devotee-base-stats}
+  \HD d4 \hfill Primary Stat: \FOC
+  
+  \mytable{X c r}{
+    \thead{Level} & \thead{Grace/\MAX Faith (Mystic)} & \thead{Mojo (Witch)}\\
+  }{
+    1 & 1d4 \POOL / 8 & d8 \UD \\
+    2-3 & 2d4 \POOL / 10 & d10 \UD \\
+    4-5 & 3d4 \POOL / 12 & d12 \UD \\
+    6-7 & 4d4 \POOL / 16 & d16 \UD \\
+    8 & 5d4 \POOL / 20 & d20 \UD \\
+    9 & 6d4 \POOL / 24 & d24 \UD \\
+  }
+
+  \mysubsection{Meditative}{devotee-meditative}
+  Devotees add their \LVL to any \RO or \RB attempt they're trying that includes their \FOC
+
+  \mysubsection{Faith and Mojo}{devotee-faith-and-mojo}
+
+  Mystics practice the Crux of Faith.  They have a \POOL of d4 they can use to cast spells and activate their abilities.  There are 2 pools of d4 - Grace and Faith.  Grace is steady and returns after rest, but only allows you to cast 7 spells.  Faith is malleable and is the way you tap into the power of the Small God you worship. You can earn Faith up to your {max} Faith for your level.
+
+  Witches practice the Crux of Mojo.  They have a Mojo Die, a type of \UD that increases with level, that they use to perform Charms and Necromancy.
+
+  During Sabbaticals Mystics can perform Miracles with their faith, and Witches can practice Occultism using Cunning Dice.
+
+
+  More details can be found in \mybold{Bell, Book, \& Candle}.
+
+  \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  MYSTIC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+  \mysection{Flavor: Mystic}{flavor-mystic}
+
+  \flavor{Creedsmen roll out across the dying dawn - Sacred Israel holy mountain Zion - Sun beams down on to the sandsea reigns - Caravan migrates through deep sandscape - Lungsmen unearth the creed of Hasheeshian - Procession of the weed-priests to cross the sands - Desert legion smoke-covenant is complete - Herb bales re-tied on to backs of beasts - Arise arise arise - The Son of the God of Israel - Jordan river flows on evermore - Bathe in glow of sunlight's beating rays - They feel the serpent's standard rule our day \Tilde Sleep}
+
+  None may pray to the Authority, Māna-Yood-Sushāī, the God of Having Done.  None may pray to Him lest he wake from his dream and call down THE END; it is too great a risk.  Rather, all our prayers must be rendered unto  the gods that He created, the Small Gods, the Gods of Doing - and they shall protect us, and guide us, and give us power over men in their honor.  For if the Authority should wake, and we cease to be, what is it all for?  The only true power is Faith.  In a universe that is a dream, and where nothing matters, then the greatest thing you can do is believe.
+
+  \example{
+   Freer. Cultist.  Priest. Cleric. Cenobite. Monk. Zealot. Fanatic. Thoros of Myr (Game of Thrones), Tomás de Torquemada, Prince Arthas Menethil (World of Warcraft), Rasputin, Cardinal Richelieu, Solomon Eagle, and Saint Patrick. \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/mystic/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{mystic-modifications} 
+  Your starting modifications will depend on your Small God and the Throne under which they sit.
+
+
+  \mysubsection{Enhancements}{mystic-enhancements}
+  
+  \mybold{The Seven Sacraments}
+  The Authority has bestowed the Seven Sacraments upon you (Bless, Consecrate, Create Food, Curse the Unhallowed, Heal, Sticks to Snakes, and Water Walk). Using Grace, you may invoke them*.  You get a number of Grace die depending on your \LVL (see the \mylink{Template}{trope-devotee} above)
+  
+  \mybold{The Small Gods}
+  Faith in the Small Gods gives you power. Use Faith to perform Liturgies bestowed upon you by the Small God you worship*.  You start with a \POOL of 2 d4 Faith Die, and gain 2 additional Faith die every \LVL thereafter, or when you do something to benefit your Small God.
+
+  \mybold{Mirabile dictu!}
+  You may work Miracles using your Faith*
+
+
+  \mybold{Optional: Heretic}
+  Pick a Small God other than the Small God you worship.  Mystics who worship this Small God are Heretical, and should be dealt with appropriately
+
+  \mysubsection{Level Bonus}{mystic-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   You have been indoctrinated into the mysteries of your Small God.  If any other worshipers are present in a Civilization where you are taking a Sojourn or Sabbatical, you can find them (Small: 1-in-6, Medium 4-in-6, Large 6-in-6).  These worshipers will give you information, food, and lodging for free - the amount of money you must pay to take the Sojourn or Sabbatical is reduced by half, but you still get the full XP as if you had spent the coin.   
+    \item \mybold{Level 5:}   If you witness an event that could cause a loss of Faith, you get to make a Save vs. Doom - if you make it,  you \mybold{gain} 1 die of Faith instead. You can also convert the willing by giving them 1 of your Faith die.  
+    \item \mybold{Level 7:}  2 disciples flock to your cause.  Each disciple has a single d4 Faith die and Fanatic morale, but are in all other ways like 0 level characters. During a Sojourn or Sabbatical, you can ask your disciples to make a Test of Faith - if they roll a 4 on the die, another disciple joins your cause (if they roll a 1 or a 2, they lose their Faith die).  You can never have more than 13 disciples.  If the disciples are Close to you and can see you, you may use their Faith as if it were your own.  If a disciple's Faith is ever exhausted, they will leave your service in Weeks if it is not restored.
+  }
+
+  \mysubsection{Professional Gear}{mystic-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, you start with a Holy Symbol* of your Small God and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  the starting gear (if any) of your Small God
+      \item \mybold{(B)}  a sling, shillelagh (club), prayer book, and appropriate hat (yarmulke, turban, etc)
+    }
+  }
+  Note that the Holy Symbol has a Faith die in it, but if the die is ever exhausted the symbol will crumble to dust
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  WITCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+  \mysection{Flavor: Witch}{flavor-witch}
+
+  \flavor{Silver'd in the moon's eclipse / Nose of Turk and Tartar's lips, / Finger of birth-strangled babe / Ditch-deliver'd by a drab, / Make the gruel thick and slab: / Add thereto a tiger's chaudron, / For the ingredients of our cauldron.}
+
+  True magic is not written. It is passed down, mother to daughter, since the very beginning.  It is richly colored, deeply echoing, singing in the rivers and whispering through the leaves.  The Magician seeks it in the Void or inside some book or rattling around at the edges of madness, but that is false magic, waiting to betray.  True magic is the pulling of a baby from the womb, knitting bones and purging poisons, reading the entrails and speaking with the crickets and seeing the patterns in the smoke.  This is not some power that is beyond mortal reckoning, but a power that is here for anyone - from king to mudlark - to harness for weal or woe.
+
+  \example{
+   Hagborn. Wormeater.  Plague'd One. Harbinger. Shaman.  Cunning Folk. Curandera. Ziroonderel, Baba Yaga,  Rubeus Hagrid, Vanessa Ives (Penny Dreadful), Egg Shen (Big Trouble in Little China), and Zogar Sag. \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/cunning-folk/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{witch-modifications} 
+  \mybold{Charmed}
+  Your Talent starts at \DCUP
+
+  \mybold{Naturalist}
+  Your Lore skill starts at 2-in-6. 
+
+  \mysubsection{Enhancements}{witch-enhancements}
+  \mybold{Virtus}
+  You can cast Charms using Mojo; speak to the dead and repair the flesh with Necromancy; and perform ceremonies and create Juju with Occultism.  
+
+  \mybold{Aura}
+  Wearing armor or carrying a shield interferes with your Aura, meaning you cannot cast Charms, use Necromancy, or practice Occultism while so attired.  However, you can use your Mojo as if it were Armor if you choose (if you are hit with a physical attack, roll your Mojo \UD as if it were an Armor die).
+
+
+  \mybold{Optional: Burn the Witch!}
+  Any time you stay in a Tiny Civilization, you run the risk of being accused of witchcraft.  If you stay in a Tiny thorp, dorf, etc. roll 2d6 - on a 2 (snake-eyes) you're accosted for poisoning the well water / getting the farmer's daughter pregnant (your gender is irrelevant) / making the chickens sick, etc.  However, if you roll a 12, you'll be called on to do something important - deliver a baby, heal someone's fever, etc.
+
+  \mysubsection{Level Bonus}{witch-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   The Third Eye - you can detect magic, supernatural effects, and general weirdness. 30m range for minor enchantments, charms, and sorceries; 1km range for seriously worrying magical trouble. It might be a premonition, a vision, a cold shudder, a glowing aura, or just a sense that something is "wrong". You can see ghosts and spirits, and they will know and respect you. You know if an item is magical by inspecting it for Minutes.   
+    \item \mybold{Level 5:}   Limited Immunity.  Choose one source of damage from the following list: 1. iron stabbing weapons; 2. iron chopping weapons; 3. wooden bashing weapons; 4. non-magical fire; 5. drowning. You are completely immune to it.
+    \item \mybold{Level 7:}  You attract a coven. 6 witch followers show up - they have Fanatic morale and can cast a single Charm once per Session, but are in all other ways like 0 level characters. If your coven is present during Sabbatical, each Witch can give you 1 Cunning Die, provided their Mojo is "in sync" with yours.  Synchronizing your Mojo takes a full Widdershins
+  }
+
+  \cbreak
+
+  \mysubsection{Professional Gear}{witch-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, you start with a familiar of your choosing (if you want one)* and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  an athame (dagger), a pouch of (normal) dried mushrooms, a pouch of (normal) dried herbs, 3 candles, and a pack of matches
+      \item \mybold{(B)}  a spear, a toad in a jar (non magical), a pipe, a set of tarot cards, and a rat's skull
+    }
+  }
+} %end
