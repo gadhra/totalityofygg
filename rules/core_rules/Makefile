@@ -10,9 +10,10 @@ setup:
 	mkdir -p out
 	ln -sf ../../ygg.sty out/
 	ln -sf ../../ocgx.sty out/
-	ln -sf ../title_and_toc.tex out/
 	ln -sf ../mechanics.tex out/
-	ln -sf ../allies.tex out/
+	ln -sf ../mortals.tex out/
+	ln -sf ../fae.tex out/
+
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=TotalityofYgg -output-directory out core_rules
 
 clean:
