@@ -9,6 +9,10 @@
 
 \renewcommand{\yggTemplatesText}{%
 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  SELLSWORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
   \mysection{The Sellsword}{template-sellsword}
 
   \mysubsection{Base Stats}{sellsword-base-stats}
@@ -45,6 +49,10 @@
   Sellswords have a Deed Die - a unique \UD whose result can be applied to any of their Fight checks. Roll the Deed Die and add its result to your Fight check.  If the Fight check hits, the result of the Deed Die is \mybold{also}  added to the damage for the attack. If you wish, you can roll your Deed Die  \myital{after} your initial Fight check is rolled.  You get your Deed Die back by taking a Sojourn or longer rest.  The damage for a Deed Die is applied \mybold{after}  the die explodes, if applicable.  You can only roll your Deed Die once per Moment.
 
   \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  SOLDIER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \mysection{Flavor: The Soldier }{flavor-soldier }
   \flavor{
@@ -104,6 +112,10 @@
   }
 
 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  BARBARIAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
   \mysection{Flavor: Barbarian}{flavor-barbarian}
 
@@ -111,7 +123,7 @@
 
   No Gods.  No masters.  No wizardry.  No tricks.  No illusions.  Only freedom.  This is the great gift of the Authority, but so many are afraid of what true sovereignty means that they make laws to protect them and bestow power to others over them and give up the open road to live in a cage.  Civilization is a slave's collar.  Friends are traitors.  You need only steel at your side to make your way in the world, nothing more.  There is no calvalry to save you, no Gods to protect you.  There is only you.  We all die alone.  Grapple with that fear, master it, rush headlong into the Void screaming a battle song, eat and drink your fill when you can.  We all die alone.  But you will live and die free.
 
-    \example{
+  \example{
     Savage. Ranger. Scout. Warden. Warrior. Conan, Thundarr, Fafrd, Robin Hood, Strider, Ragnar Lodbrook, Ned Kelly, Zatoichi, and One Eye (Valhalla Rising). \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Barbarian/}{Visual reference}
   }
 
@@ -157,5 +169,176 @@
     \item \mybold{(B)}  Wolf hide armor (Light), iron collar and manacles (optionally still affixed), and a leather headbandr
   }
 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  KNAVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{The Knave}{template-knave}
+
+  \mysubsection{Base Stats}{knave-base-stats}
+  \HD d8 \hfill Primary Stat: \DEX
+  
+  \mytable{X r}{
+    \thead{Level} & \thead{Luck Die} \\
+  }{
+    1 & d4 \UD \\
+    2-3 & d6 \UD \\
+    4-5 & d8 \UD \\
+    6-7 & d10 \UD \\
+    8 & d12 \UD \\
+    9 & d16 \UD \\
+  }
+
+  \mysubsection{Puissance}{knave-puissance}
+  Knaves add their \LVL to any \RO or \RB attempt they're trying that includes their \DEX.  
+
+  \mysubsection{Luck Dice}{knave-luck-die}
+  Knaves have a Luck Die - a unique \UD whose result can be applied to any \RO or \RB try that includes \DEX.  Roll the Luck Die and add its result to your \RO or \RB check.  You can only roll your Luck Die once per \RO or \RB attempt.
+
+  \mysubsection{Murder}{knave-murder}
+  If you get \mylink{The Drop}{combat-surprise} on someone, you can attempt a Murder.  Murder can only be performed at Close range with a Shortsword, Dagger, Club, or Hand Axe.  Make a Fight \RO, adding your \LVL as a modifier. If you hit, pick \mybold{one} of the following attacks:
+
+  \mybullet {
+    \item \mybold{Cautious:}  You automatically \mylink{Crit}{combat-crits-and-fumbles} (do maximum damage + \LVL).  Any weapon.
+    \item \mybold{Reckless:}  You do 3d6 damage.  Any weapon.
+    \item \mybold{Bloody:}  You roll damage normally, but the Monster is also Bleeding. Stabbing only.
+    \item \mybold{Waylaying:}  You can either roll damage and the Monster is Woozy, or do no damage and the Monster must Save or be Knocked Out.  Bashing only.
+  }
+
+   Murder is a Combat Option, so it can't be combined with other Combat Options (like Florentine). Damage bypasses any Armor or Soak, if applicable (you slip the blade between the Monster's scales / plate mail / chink in carapace).  Once you perform a Murder, you have to Skulk again before you can try it on someone else.   Note that Monsters who are Amorphous or immune to surprise cannot be Murdered. 
+   
+  \mysubsection{Knavery}{knave-knavery}
+
+  All Knaves have the following six skills:
+  \mylist {
+    \item \mybold{B\&E}  Open locks, pry doors, and untie bonds 
+    \item \mybold{Clamber} Scale impenetrable fortresses, icy cliffs, and wizard's towers
+    \item \mybold{Defuse} Figure out how traps work, take them apart ... and put them back together.  Note that Defuse doesn't help you \myital{find} a trap, though anyone can find a trap if they're looking for it with an Awareness check
+    \item \mybold{Dissemble} Disguise yourself as a castle guard or a noble's daughter.  Lie to the police.  Forge a document
+    \item \mybold{Foist} Lift pouches from belts and slip rings from fingers; palm cards and plant evidence 
+    \item \mybold{Skulk} Hide in shadows and creep silently through rooms.  A successful Skulk might let you get The Drop on someone. More details on Skulk can be found in the section on \mylink{Surprise}{combat-surprise}
+  }
+
+  Knaves skills (including Murder) cannot be used if you're wearing heavier than Light armor, or if you're using a shield. To perform Knavery, you must \RO using the following:
+
+  Your \DEX plus
+
+
+  Your Knave \STATIC.  Depending on your Flavor of Knave, your Knave \STATIC is either a d10 or a d8.  If a skill is listed as a Primary skill, your Knave Die is a d10 \STATIC; if a skill is listed as a Secondary skill, your Knave Die is a d8 \STATIC
+
+  Difficulty. The Arbiter assigns a difficulty to the task between 0 and 9, where 9 is “easy (for a thief)” and 0 is “holy shit you've got to be kidding me” (see {Knave Checks}{arbiters-resources-knave-checks} for some examples)
+
+  A \mybold{Knavery \RO}  is:
+
+  \DEX  plus \STATIC plus \mybold{Difficulty} 
+
+
+
+  \myital{Don't forget to add your \LVL after you roll - you're using \DEX for this \RO attempt, after all!}
+
   \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  BRAVO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Flavor: Bravo}{flavor-bravo}
+  
+  \flavor{No matter how subtle the wizard, a knife between the shoulder blades will seriously cramp his style. \Tilde Vlad Taltos}
+
+  Civilization was inevitable, the natural evolution of existence.  Some folks try to eschew it, pretend it's not there and run out into the heath and eat bugs and berries, but it lurks in the corner of their eye, growing like a mold across the face of the world.  Kingdoms may come and go, but civilization?  Fucking eternal.  Even in the cities folks try to pretend that their homes aren't built on blood and sweat and shit, old bones and older stones.  They push the underbelly out of sight, but it's still there, always.  Like the brother no one wants to show up at a wedding.  This is your workshop, where you ply your trade.  Sooner or later they come to you - for favors, for money, for the thing they want but they just can't seem to get.  And there you sit, right there at the center, where the true action is, where things happen that change the true course of history.  Where life is pure - the strong and the weak, the haves and the have-nots. And you won't be a have-not.  You \mybold{are}  civilization.  You \mybold{are}  history.
+
+  \example{
+    Thug.  Spy. Assassin.  Bandit.  Rowdy.  Ruffian. Brigand. Bronn, Vlad Taltos, "Brick Top" Polford, Snake Plissken, Leon (The Professional), Sparafucile, and Altair (Assassin's Creed) \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Bravo/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{bravo-modifications}
+
+  \mybold{Ears of a Fox}
+  Your Awareness starts at \DCUP
+
+  \mybold{Rat Senses}
+  Your Listen OR Eyeball skill start at 2-in-6. 
+
+  \mysubsection{Enhancements}{bravo-enhancements}
+
+  \mybold{Steady Hands}
+  You do not need to make any checks for handling poisons
+
+  \mybold{Knave Skills:}
+  Primary (d10): Dissemble, Foist, Skulk.  Secondary (d8):  B\&E, Clamber, Defuse.  See the section on \mylink{Knavery}{knave-knavery} for details
+
+  \mybold{Optional: Outstanding Contract}
+  There's an outstanding contract on your head, revenge for something you did.  Tell the Arbiter who and why they want to kill you.
+
+  \mysubsection{Level Bonus}{bravo-bonus}
+  \mybullet {
+    \item \mybold{Level 3:}   A good assassin collects information before closing in for the kill. For every fact that you know about your target, you deal an additional +2 damage when you attempt a Murder, up to a maximum of +10.  You can only use the Cautious Murder option in this case. The facts don't have to be major, but they cannot be trivial. "Drinks Earl Grey tea", "Commands the fifth cavalry", "Is named Ostruchus Poncelroy" are all good facts. "Is currently inside his tent", "Is a man", "Has two arms" are not. If you could learn it by looking at a snapshot of the current scene, it's trivial
+    \item \mybold{Level 5:}   Once per Combat, you can step into a shadow and step out of another Nearby shadow in your next Maneuver. You can use this to get the Drop on someone, but there \mybold{must} be shadows present (you couldn't do this in a sunny field, for example)
+    \item \mybold{Level 7:}  Once per Adventure, at any time, you may declare that you are walking off-screen. During any Session of the Adventure, you may reveal yourself to have been a minor NPC in the background of the scene "all along" as long as there actually are minor NPCs in the background of the scene. You can always walk back on stage at any time, even climbing in a window. This ability is limited by plausibility.
+
+  }
+
+  \mysubsection{Professional Gear}{bravo-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, start with a bandolier, 2 daggers, and either (a) or (b):
+
+  \mybullet {
+    \item \mybold{(A)}  length of flexible wire, a makeup kit, black gambeson (Light),  and an unopened contract
+    \item \mybold{(B)}  short sword x2, small black book, an iron crowbar, and a single playing card (your choice)
+  }  
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%  ARCHAEOLOGIST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \mysection{Flavor: \\ The Archaeologist}{knave-the-archaeologist}
+
+  \flavor{Fortune and glory, kid.  Fortune and glory. \Tilde Indiana Jones}
+
+
+  The world you live in is only a sliver of What Was.  There is mystery and history out there, every day buried further and further beneath the sands of the hourglass.  What we know is just a fraction of a fraction of what there \myital{is} to know.  Treasures locked deep in forgotten mines, relics in lost tombs, unremembered lore that can change the course of Time and laugh in the face of Death.  Lost things leave footprints, scraps of paper, crushed butts of smokes that tell stories.  When you think of What Was it almost drives you mad; it fills you with an ache that drives you from your seat to grab forever at the horizon.  It's up to you to rescue What Was from oblivion. What is behind the next door, beneath the next flagstone, long forgotten but still, eternally, THERE?    There's only one way to find out ...
+
+
+
+  \example{
+    Swashbuckler.  Adventurer.  Buccaneer.  Traveler. Daredevil. Pirate. Tomb Robber. The Grey Mouser, Indiana Jones, John Carter of Mars, Inigo Montoya, the Duke of Mantua (Rigoletto), Errol Flynn (in like...everything), Jack Sparrow, and Falstaff. \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/archaeologist}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{archaeologist-modifications}
+
+  \mybold{I'll Make It Up as I Go}
+  Your Talent starts at \DCUP
+
+  \mybold{Well Traveled}
+  Your Skill: Salt OR Skill: Lore start at 2-in-6. 
+
+  \mysubsection{Enhancements}{archaeologist-enhancements}
+
+  \mybold{What's that say?}
+  You can attempt to cast spells from Sorcerer's scrolls.  Instead of rolling d6 however, you roll up to your \LVL d4 (so if you were level 4, you could roll up to 4d4).  The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.
+
+  \mybold{Duelist}
+  You can use the Florentine Mighty Deed no matter what your \DEX is
+
+  \mybold{Knave Skills:}
+  Primary (d10): B\&E, Clamber, Defuse.  Secondary (8):  Dissemble, Foist, Skulk.  See the section on \mylink{Knavery}{knave-knavery} for details
+
+  \mybold{Optional: Arch-Nemesis}
+  You have an arch-nemesis who always seems to be a step ahead of you when it comes to obtaining artifacts. Tell the Arbiter a little bit about them.
+
+  \mybullet {
+    \item \mybold{Level 3:}   You're immune to the effects of cursed or supernatural items you carry as long as you intend to sell them.  If you use the item or gain any benefit from it, you suffer the negative effects
+    \item \mybold{Level 5:}   Once per Session, you can automatically escape from something that is restraining you and that you could plausibly escape from. This includes grapples, lynchings, and awkward social situations, but not sealed coffins
+    \item \mybold{Level 7:}  In a Medium or Large Civilization, you may spend any amount of money to buy an Unlabeled Package. When the package is unwrapped, you declare what it contains, provided (a) it didn't cost more than you originally paid, (b) is smaller than a 1m cube, (c) wouldn't take up more than 1 Significant Item slot (no storing 100,000au in an Unlabeled package, for example), (d) is mundane, and (e) would be available in the Civilization you came from
+  }
+
+  \mysubsection{Professional Gear}{archaeologist-gear} {
+    In addition to your \mylink{Starting Gear}{starting-gear}, you start with a bandolier with 2 daggers and either (a) or (b):
+    \mybullet {
+      \item \mybold{(A)}  A whip, a hat, a leather jacket (Light armor), and a satchel containing your "diary"
+      \item \mybold{(B)}  A shortsword, 50m of rope, a bundle of love letters, and a perfumed handkerchief
+
+    }
+  }
 }
