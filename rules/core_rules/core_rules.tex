@@ -11,9 +11,8 @@
 
 % Section Titles
 \newcommand{\yggMechanics}{}
-\newcommand{\yggAllies}{}
-\newcommand{\yggClasses}{}
-\newcommand{\yggFlavors}{}
+\newcommand{\yggMortals}{}
+\newcommand{\yggFae}{}
 \newcommand{\yggSkillsSaves}{}
 \newcommand{\yggCombat}{}
 \newcommand{\yggCivilization}{}
@@ -23,9 +22,8 @@
 
 % Body
 \newcommand{\yggMechanicsText}{}
-\newcommand{\yggAlliesText}{}
-\newcommand{\yggClassesText}{}
-\newcommand{\yggFlavorsText}{}
+\newcommand{\yggMortalsText}{}
+\newcommand{\yggFaeText}{}
 \newcommand{\yggSkillsSavesText}{}
 \newcommand{\yggCombatText}{}
 \newcommand{\yggCivilizationText}{}
@@ -34,7 +32,8 @@
 \newcommand{\yggAppendicesText}{}
 
 \input{mechanics.tex}
-\input{allies.tex}
+\input{mortals.tex}
+\input{fae.tex}
 
 
 
@@ -71,11 +70,18 @@
   \noindent\yggMechanicsText
 \end{multicols}
 \vfill\newpage
-% --- allies -----------------------------------------------------------------
-\noindent\yggAllies
+% --- mortals -----------------------------------------------------------------
+\noindent\yggMortals
 \vfill\newpage
 \begin{multicols}{2}
-  \noindent\yggAlliesText
+  \noindent\yggMortalsText
+\end{multicols}
+\vfill\newpage
+% --- fae -----------------------------------------------------------------
+\noindent\yggFae
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggFaeText
 \end{multicols}
 \vfill\newpage
 
