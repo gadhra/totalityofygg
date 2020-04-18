@@ -1,0 +1,161 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggTemplates}{%
+  \mychapter{Templates and Flavors}{templates-and-flavors}
+}
+
+\renewcommand{\yggTemplatesText}{%
+
+  \mysection{The Sellsword}{template-sellsword}
+
+  \mysubsection{Base Stats}{sellsword-base-stats}
+  \HD d10 \hfill Primary Stat: \VIG
+  
+  \mytable{X r}{
+    \thead{Level} & \thead{Deed Die} \\
+  }{
+    1 & d4 \UD \\
+    2-3 & d6 \UD \\
+    4-5 & d8 \UD \\
+    6-7 & d10 \UD \\
+    8 & d12 \UD \\
+    9 & d16 \UD \\
+  }
+
+
+  \mysubsection{Ferocity}{sellsword-ferocity}
+  
+  Sellswords add their \LVL to any \RO or \RB attempt they're trying that that includes their \VIG.  Sellswords also add their \LVL to weapon damage.  This bonus is applied \mybold{after}  the die explodes.
+
+  \cbreak
+
+  \mysubsection{Exploding Damage}{sellsword-damage}
+
+  If a Sellsword hits for \MAX damage on the die, the die explodes i.e. they roll again and add the second roll to the first.  If they roll \MAX damage again, the roll continues.  This roll must be the \myital{natural} (not modified) maximum roll on the die (though some powers and abilities can change a natural roll).  Modifiers to damage are added or subtracted to the damage \mybold{after}  the die explodes (including Deed Die).  Note this means that Sellswords don't Crit as other classes do.
+
+  \example{Charse, a level 1 Sellsword, attacks a goblin with a Shortsword (d6).  He makes his Fight check and hits, and rolls a 6 for damage. He rolls again and rolls another 6.  He rolls a 3rd time and rolls a 4.  He deals 17 points of damage(!) [6+6+4+\LVL] and the goblin is reduced to a fine pink mist.}
+
+ 
+
+  \mysubsection{Deed Dice}{sellsword-deed-dice} 
+
+  Sellswords have a Deed Die - a unique \UD whose result can be applied to any of their Fight checks. Roll the Deed Die and add its result to your Fight check.  If the Fight check hits, the result of the Deed Die is \mybold{also}  added to the damage for the attack. If you wish, you can roll your Deed Die  \myital{after} your initial Fight check is rolled.  You get your Deed Die back by taking a Sojourn or longer rest.  The damage for a Deed Die is applied \mybold{after}  the die explodes, if applicable.  You can only roll your Deed Die once per Moment.
+
+  \newpage
+
+  \mysection{Flavor: The Soldier }{flavor-soldier }
+  \flavor{
+    We few, we happy few, we band of brothers;
+    For he to-day that sheds his blood with me
+    Shall be my brother; be he ne'er so vile,
+    This day shall gentle his condition;
+    And gentlemen in England now a-bed
+    Shall think themselves accurs'd they were not here,
+    And hold their manhoods cheap whiles any speaks
+    That fought with us upon Saint Crispin's day.
+  }
+  
+  War is life. It is the natural state of humankind; we are born screaming and die fighting and everything else is details.  There is an artistry to war, a rhythm to it - and like every rhythm, it calls on you to dance.  You will not know yourself until you have placed your life on the line - for money, for fame, for glory, for triumph. You will never know the true taste of food or cold water until you make war shoulder to shoulder with your brothers and sisters.  "Blood is thicker than water," they say - but the meaning has become lost to time.  You remember, though.  Those who shed blood together know a transcendent bond.  Your purpose is war, and nothing else is relevant. 
+
+
+  \example{
+    Soldier. Legionnaire. Mercenary. Man-at-arms. Knight errant.  Brienne of Tarth, Don Quixote, Roland Deschain (Dark Tower), The Man with No Name (Clint Eastwood), Sanjuro, Solomon Kane, and Brynhildr. \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Soldier/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{soldier-modifications}
+
+  \mybold{Master and Commander}
+  You Presence starts \DCUP
+
+  \mybold{Born in the Saddle}
+  Your Skill : Travel starts at 2-in-6.
+
+  \mybold{Fighting Sense}
+  When rolling for Grit, add your \LVL to the roll.   This includes the Grit you start the game with.
+
+  \mysubsection{Enhancements}{soldier-enhancements}
+  
+  \mybold{Second Skin}
+  Your armor doesn't count as a Significant Item.  Once per Session, you can repair 1 \UD of your Armor when you Bivouac, up to its \MAX value
+
+  \mybold{Veteran}
+  You already have some experience with the hardships of a military life.  You start with d6+1 Grit (the +1 is for your \LVL, see Fighting Sense above)
+
+
+  \mybold{\myital{Optional: The Vow}}
+  You must make a vow - a short, specific, personal statement that you will not forget.  You have to Save if you want to break your Vow for up to Minutes.  Ex.  "I will protect my friend Johann", "I will never harm an unarmed person", etc.
+
+  \mysubsection{Level Bonus}{soldier-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   Choose an Ally at the start of Combat.  You must keep that Ally Close to you.   If that ally would take damage from a physical attack, you can choose to take the damage for them instead
+    \item \mybold{Level 5:}  If you have a banner in one of your hands, you can perform a Rallying Cry.  Make an \RS : Presence. If you don't roll a failure, for every Moment for the remainder of Combat you can forego a Fight check to allow all Allies to win Init.
+    \item\mybold{Level 7:}  You attract a band of warriors around you. 7 men-at-arms pledge their blades to your cause. They have Orderly morale; are armed with Light armor, shields, helmets, and spears - they are otherwise Level 0 characters.  These men-at-arms expect nominal pay, room, and board - otherwise, they will need to make periodic Morale checks at the discretion of the Arbiter.
+  }
+
+  \mysubsection{Professional Gear}{soldier-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, you start with a worn but well kept suit of Medium armor (chain, scaled, lamellar, or ring) and either (a) or (b):
+  \mybullet {
+    \item \mybold{(A)}  Strongbow and helmet, Quiver of Arrows, sealed and unopened orders, and a mirror and razor
+    \item \mybold{(B)}  Shortsword and shield, spear, a small tin flute, a letter from home, and a scrap of an enemy's banner
+  }
+
+
+
+  \mysection{Flavor: Barbarian}{flavor-barbarian}
+
+  \flavor{Hither came Conan, the Cimmerian, black-haired, sullen-eyed, sword in hand, a thief, a reaver, a slayer, with gigantic melancholies and gigantic mirth, to tread the jeweled thrones of the Earth under his sandaled feet. \Tilde R.E.H.}
+
+  No Gods.  No masters.  No wizardry.  No tricks.  No illusions.  Only freedom.  This is the great gift of the Authority, but so many are afraid of what true sovereignty means that they make laws to protect them and bestow power to others over them and give up the open road to live in a cage.  Civilization is a slave's collar.  Friends are traitors.  You need only steel at your side to make your way in the world, nothing more.  There is no calvalry to save you, no Gods to protect you.  There is only you.  We all die alone.  Grapple with that fear, master it, rush headlong into the Void screaming a battle song, eat and drink your fill when you can.  We all die alone.  But you will live and die free.
+
+    \example{
+    Savage. Ranger. Scout. Warden. Warrior. Conan, Thundarr, Fafrd, Robin Hood, Strider, Ragnar Lodbrook, Ned Kelly, Zatoichi, and One Eye (Valhalla Rising). \href{https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/Barbarian/}{Visual reference}
+  }
+
+  \mysubsection{Modifications}{barbarian-modifications}
+
+  \mybold{Crazy Ivan}
+  Your Awareness starts at \DCUP
+
+  \mybold{Into the Wilds}
+  Your Bushcraft skill starts at 2-in-6
+
+  \mybold{Tougher than a Coffin Nail}
+  Every level (including first), you can roll your \VIG and, if the result is greater than your current Flesh, replace your Flesh with this result (don't forget to add your \LVL to any \VIG die you roll)
+
+  Additionally, when you take a Bivouac, you restore \LVL x2 Flesh instead of just \LVL Flesh.
+
+  \cbreak
+
+  \mysubsection{Enhancements}{barbarian-enhancements}
+
+  \mybold{Swordarm}
+  Two handed weapons count as one Significant Item instead of two.
+
+  \mybold{3 Kills Per Stroke}
+  Treat any Brawl weapon you use as if it had Cleave.
+
+  \mybold{Optional: The Cimmerian}
+  Your appearance is so outlandish even educated and well-traveled people will stop to stare at you. People can pick you easily out of a crowd, and your reputation precedes you.
+
+  \mysubsection{Level Bonus}{barbarian-bonus}
+
+  \mybullet {
+    \item \mybold{Level 3:}   Your danger sense prevents you (alone) from being Surprised - including the Drop.
+    \item \mybold{Level 5:}  Once per Session, if you're in a wilderness setting, you can say that you know of a cache nearby hidden in a tree bole, under a cairn, etc.  The cache can contains one of: 1. d8 \UD of food and water; 2. a shortbow with d8 \UD of arrows; 3. a suit of normal sized Light Armor; 4. a war axe, spear, and set of 4 daggers; 5. a small minor item (lantern and a few flasks of oil, ok; vials of poison or a looking glass, not ok)
+    \item\mybold{Level 7:}  Once per Session, if you're in a Rage, you can use your Fight action to kill every Monster in Close range provided they have 3 {hd} or less.  If you do a good job describing this to the Arbiter, it will prompt a morale check in any Nearby Monsters if they have 5 {hd} or less.
+  }
+
+  \mysubsection{Professional Gear}{barbarian-gear}
+  In addition to your \mylink{Starting Gear}{starting-gear}, you start with a Hard weapon (and ammo if it's a Shoot weapon) and either (a) or (b):
+
+  \mybullet {
+    \item \mybold{(A)}  Two extra hand axes and a half-jar of Woad (d4 \UD)
+    \item \mybold{(B)}  Wolf hide armor (Light), iron collar and manacles (optionally still affixed), and a leather headbandr
+  }
+
+  \newpage
+}
