@@ -109,6 +109,8 @@
 \newcommand{\MAX}{{\fftext \textbf{[max] }}}
 \newcommand{\SUM}{{\fftext \textbf{[sum] }}}
 \newcommand{\FE}{{\fftext{fe}}}
+\newcommand{\AU}{{\fftext{ag}}}
+\newcommand{\AG}{{\fftext{au}}}
 
 \newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7} }}}
 \newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9} }}}
@@ -118,7 +120,7 @@
 \newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713} }}}
 \newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473} }}}
 
-\newcommand{\INT}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2666}}INT }{tangible-stats-intelligence}}
+\newcommand{\INT}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2666}}INT }{tangible-stats-intellect}}
 \newcommand{\FOC}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2665}}FOC }{tangible-stats-focus}}
 \newcommand{\VIG}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2663}}VIG }{tangible-stats-vigor}}
 \newcommand{\DEX}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2660}}DEX }{tangible-stats-dexterity}}
@@ -130,7 +132,7 @@
 \newcommand{\POOL}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{dice-pool-dice}}
 \newcommand{\DEATH}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{combat-death-die}}
 \newcommand{\KNACK}{\protect\mylink{\fftext \textbf{Knack\diceglyph}}{dice-knack-dice}}
-\newcommand{\DEED}{\protect\mylink{\fftext \textbf{Deed\diceglyph}}{dice-deed-dice}}
+\newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}}
 
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
@@ -144,7 +146,7 @@
 }
 
 % --- section headers --------------------------------------------------
-\usepackage{titlesec}
+\usepackage[compact]{titlesec}
 
 % Vertical center title page
 \usepackage{titling}
@@ -160,9 +162,9 @@
 \setcounter{tocdepth}{3}
 
 \titleformat*{\section}{\Huge\bfseries\fffancy\filcenter}
-\titleformat*{\subsection}{\Huge\bfseries\fftext}
-\titleformat*{\subsubsection}{\Large\bfseries\fftext}
-\titleformat*{\paragraph}{\large\bfseries\fftext}
+\titleformat*{\subsection}{\Huge\bfseries\raggedleft\fftext}
+\titleformat*{\subsubsection}{\Large\bfseries\raggedright\fftext}
+\titleformat*{\paragraph}{\large\bfseries\raggedright\fftext}
 
 
 \newcommand{\mychapter}[2]{
@@ -182,12 +184,10 @@
 } 
 
 \newcommand{\mysubsection}[2]{
-  \begin{flushleft}
   \hypertarget{#2}{%
     \subsubsection{#1}\zlabel{#2}
    }
    \hrule height1mm
-   \end{flushleft}
 } 
 
 \newcommand{\myhighlight}[2]{
