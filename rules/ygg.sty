@@ -103,7 +103,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 
-
+% 6-sided die
+\newcommand{\diceglyph}{\ffstixmath{\char"2685}}
 \newcommand{\LVL}{{\fftext \textbf{[lvl] }}}
 \newcommand{\MAX}{{\fftext \textbf{[max] }}}
 \newcommand{\SUM}{{\fftext \textbf{[sum] }}}
@@ -111,23 +112,25 @@
 
 \newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7} }}}
 \newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9} }}}
+\newcommand{\PLUS}{{\fftext \textbf{\ffstixmath{\char"002B} }}}
 
 \newcommand{\RB}{{\fftext \textbf{R\ffstixmath{\char"29C1} }}}
 \newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713} }}}
 \newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473} }}}
 
-\newcommand{\INT}{{\fftext \textbf{\ffstixmath{\char"2666}}INT }}
-\newcommand{\FOC}{{\fftext \textbf{\ffstixmath{\char"2665}}FOC }}
-\newcommand{\VIG}{{\fftext \textbf{\ffstixmath{\char"2663}}VIG }}
-\newcommand{\DEX}{{\fftext \textbf{\ffstixmath{\char"2660}}DEX }}
+\newcommand{\INT}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2666}}INT }{tangible-stats-intelligence}}
+\newcommand{\FOC}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2665}}FOC }{tangible-stats-focus}}
+\newcommand{\VIG}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2663}}VIG }{tangible-stats-vigor}}
+\newcommand{\DEX}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2660}}DEX }{tangible-stats-dexterity}}
 
-\newcommand{\UD}{{\fftext \textbf{U\ffstixmath{\char"2685} }}}
-\newcommand{\MD}{{\fftext \textbf{M\ffstixmath{\char"2685} }}}
-\newcommand{\HD}{{\fftext \textbf{Hit\ffstixmath{\char"2685} }}}
-\newcommand{\STATIC}{{\fftext \textbf{Static\ffstixmath{\char"2685} }}}
-\newcommand{\POOL}{{\fftext \textbf{Pool\ffstixmath{\char"2685} }}}
-\newcommand{\DEATH}{{\fftext \textbf{Death\ffstixmath{\char"2685} }}}
-\newcommand{\KNACK}{{\fftext \textbf{Knack\ffstixmath{\char"2685} }}}
+\newcommand{\UD}{\protect\mylink{\fftext \textbf{U\diceglyph}}{dice-usage-dice}}
+\newcommand{\MD}{\protect\mylink{\fftext \textbf{M\diceglyph}}{combat-move-die}}
+\newcommand{\HD}{\protect\mylink{\fftext \textbf{Hit\diceglyph}}{hit-dice}}
+\newcommand{\STATIC}{\protect\mylink{\fftext \textbf{Static\diceglyph}}{dice-static-dice}}
+\newcommand{\POOL}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{dice-pool-dice}}
+\newcommand{\DEATH}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{combat-death-die}}
+\newcommand{\KNACK}{\protect\mylink{\fftext \textbf{Knack\diceglyph}}{dice-knack-dice}}
+\newcommand{\DEED}{\protect\mylink{\fftext \textbf{Deed\diceglyph}}{dice-deed-dice}}
 
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
@@ -154,11 +157,12 @@
 \renewcommand\thesubsubsection{}
 
 % set the ToC depth
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 
 \titleformat*{\section}{\Huge\bfseries\fffancy\filcenter}
 \titleformat*{\subsection}{\Huge\bfseries\fftext}
 \titleformat*{\subsubsection}{\Large\bfseries\fftext}
+\titleformat*{\paragraph}{\large\bfseries\fftext}
 
 
 \newcommand{\mychapter}[2]{
@@ -184,6 +188,12 @@
    }
    \hrule height1mm
    \end{flushleft}
+} 
+
+\newcommand{\myhighlight}[2]{
+  \hypertarget{#2}{%
+    \paragraph{#1}\zlabel{#2} \hfill
+  }
 } 
 
 
@@ -265,6 +275,12 @@
   \begin{itemize}{
     \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
   \end{itemize}
+}
+
+\newcommand{\mynumlist}[1]{%
+  \begin{enumerate}{
+    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+  \end{enumerate}
 }
 
 % --- example block ------------------------------------------------------------
