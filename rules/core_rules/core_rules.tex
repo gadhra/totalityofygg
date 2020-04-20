@@ -3,7 +3,7 @@
 % This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 % Please do not apply other licenses one-way.
 
-\documentclass{article}
+\documentclass[10pt]{article}
 \usepackage{ygg}
 \newcommand{\yggVersion}{%
   v0.7beta
@@ -15,6 +15,7 @@
 \newcommand{\yggFae}{}
 \newcommand{\yggSkillsSaves}{}
 \newcommand{\yggCombat}{}
+
 \newcommand{\yggCivilization}{}
 \newcommand{\yggMiscellania}{}
 \newcommand{\yggArbiter}{}
@@ -26,6 +27,8 @@
 \newcommand{\yggFaeText}{}
 \newcommand{\yggSkillsSavesText}{}
 \newcommand{\yggCombatText}{}
+
+
 \newcommand{\yggCivilizationText}{}
 \newcommand{\yggMiscellaniaText}{}
 \newcommand{\yggArbiterText}{}
@@ -34,6 +37,8 @@
 \input{mechanics.tex}
 \input{mortals.tex}
 \input{fae.tex}
+\input{skills_and_saves.tex}
+\input{combat.tex}
 
 
 
@@ -84,6 +89,20 @@
   \noindent\yggFaeText
 \end{multicols}
 \vfill\newpage
+% --- skills and saves -----------------------------------------------------------------
+\noindent\yggSkillsSaves
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggSkillsSavesText
+\end{multicols}
+\vfill\newpage
 
+% --- combat -----------------------------------------------------------------
+\noindent\yggCombat
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggCombatText
+\end{multicols}
+\vfill\newpage
 
 \end{document}

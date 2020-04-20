@@ -12,6 +12,7 @@ setup:
 	ln -sf ../../ocgx.sty out/
 	ln -sf ../mechanics.tex out/
 	ln -sf ../mortals.tex out/
+	ln -sf ../skills_and_saves.tex out/
 	ln -sf ../fae.tex out/
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=TotalityofYgg -output-directory out core_rules
