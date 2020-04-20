@@ -15,8 +15,8 @@
 \newcommand{\yggFae}{}
 \newcommand{\yggSkillsSaves}{}
 \newcommand{\yggCombat}{}
-
 \newcommand{\yggCivilization}{}
+
 \newcommand{\yggMiscellania}{}
 \newcommand{\yggArbiter}{}
 \newcommand{\yggAppendices}{}
@@ -27,9 +27,9 @@
 \newcommand{\yggFaeText}{}
 \newcommand{\yggSkillsSavesText}{}
 \newcommand{\yggCombatText}{}
-
-
 \newcommand{\yggCivilizationText}{}
+
+
 \newcommand{\yggMiscellaniaText}{}
 \newcommand{\yggArbiterText}{}
 \newcommand{\yggAppendicesText}{}
@@ -39,6 +39,7 @@
 \input{fae.tex}
 \input{skills_and_saves.tex}
 \input{combat.tex}
+\input{civilization.tex}
 
 
 
@@ -56,6 +57,8 @@
 \renewcommand\contentsname{{\small\fftext Table of Contents }}
 
 \begin{document}\fftext
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
 
 % --- title page --------------------------------------------------------------------
 \begin{titlingpage}
@@ -102,6 +105,14 @@
 \vfill\newpage
 \begin{multicols}{2}
   \noindent\yggCombatText
+\end{multicols}
+\vfill\newpage
+
+% --- civilization -----------------------------------------------------------------
+\noindent\yggCivilization
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggCivilizationText
 \end{multicols}
 \vfill\newpage
 

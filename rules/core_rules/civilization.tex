@@ -1,0 +1,212 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggCivilization}{%
+  \mychapter{Civilization}{civilization}
+}
+
+\renewcommand{\yggCivilizationText}{%
+
+
+  \mysection{Weights and Measures}{civilization-weights-and-measures}
+
+
+  \mysubsection{Money}{civilization-money}
+  The Totality of Ygg subscribes to a Chartalist approach to economy.  Acheron in particular is an amalgam of multiple civilizations built on the bones of the civilizations before them, stretching back 20,000 years or more.  The rarity of certain metals (silver and gold), as well as the utility of another (iron) has created an easy way to measure credit and debt.  A 5,000 year old gold coin found in a crypt and another minted by the city of Byzantium have the same value; iron, silver, and gold are the uniform system for measuring credits and debts and have remained so for millenia.  
+
+  Thus, coins are divided into 3 types - iron (fe), silver (ag), and gold (au) - and have the following value relative to one another
+
+  \example{
+    100 fe (iron) = 10 ag (silver) = 1 au (gold)
+  }
+
+  Iron is the core of the monetary system, specifically the iron ingot (1kg of iron), which is equal to 100 iron coins.  It is not uncommon for iron coins to be smelted to forge the tools, weapons, and armor they pay for (particularly when various cities are trying to feed and arm their military).  
+
+  Ingots of each type are common, and weigh 1kg each.  Every ingot you find is worth 100 of the coin type:
+  \mybullet {
+    \item 1 iron ingot = 1kg iron = 100fe (iron pieces)
+    \item 1 silver ingot = 1 kg silver = 100ag (silver pieces)
+    \item 1 gold ingot = 1 kg gold = 100au (gold pieces)
+  }
+
+  4 1kg ingots / 400 coins count as 1 \mylink{Significant Item}{equipment-encumbrance}.
+
+  \myhighlight{Coins}{civilization-coins}
+
+  Whenever you see "coins" instead of a coin type, this means a coin appropriate to your \LVL.  Levels 1-2 are the Iron levels (fe), levels 3-5 are the Silver levels (ag), and levels 6+ are the Gold levels (au)
+
+
+  \mysection{Settlements}{settlements}
+
+  Acheron is dominated by wide, unpopulated wastes filled with ruins, dangers, and uncovered riches; the people of Acheron cluster in various settlements that dot the landscape.  These settlements are broken into 4 sizes
+
+  \mylist {
+    \item \mybold{Tiny}  Thorps, dorfs, "the boondocks" (< 100 people).  A Tiny Settlement isn't going to have anything to trade or sell - and you'll probably sleep in a hayloft for a day or two at the most before someone chases you off.  Tiny settlements only deal in trade, and \myital{maybe} a few iron pieces.  Note that \mylink{Witches}{flavor-witch} who stay in Tiny settlements might have some ... interesting times.
+
+
+    \item \mybold{Small}
+    Hamlets (~100 - 500 people).   The "iron" settlements. Small settlements generally deal in iron - if you attempt to spend silver in a Small settlement, you might meet with some strange looks and attract unwanted attention.  Trying to spend gold in a Small settlement is pretty much impossible.
+
+    \item \mybold{Medium}
+    Villages, wyches and small towns (~500 - 5,000+ people).  The "silver" settlements. Medium settlements usually deal in silver, though gold is sometimes used by the wealthy and iron used by the impoverished.  
+
+    \item \mybold{Large}
+    Big towns and cities (~5,000 to 50,000+ people).  The "gold" settlements.  Large settlements deal almost entirely in gold.  Trying to spend iron pieces in a metropolis would be met with disdain, like trying to pay your cab fare with pennies (and unlike modern civilization, no one is under any obligation to honor your tender if they don't feel like it).
+  }
+
+  The size of the settlement is important when it comes to longer rests, spending treasure, and finding \mylink{equipment}{civilization-equipment}, \mylink{services}{civilization-services}, and \mylink{hirelings}{civilization-hirelings}.
+
+
+  \mysubsection{Longer Rests}{civilization-longer-rests}
+  
+  In order to truly recuperate, you must return to Civilization and rest in a Small, Medium, or Large settlement (it's possible to stay in a Tiny settlement for a day, but unless you're working for someone there you'll be asked to push on).  Resting for Days in a settlement is a \mybold{Sojourn}; resting for Weeks or longer is a \mybold{Sabbatical}. The costs shown are for food, lodging, equipment maintenance, trope and flavor specific stuff (whetstones, lockpicks, trap kits, inks, paper, weird bones, blood tokens, esoteric pieces of art, edible moss, rats-on-sticks, guild dues, etc.) and simple diversions of all types.  However, these are only the basics for an adventurer like yourself.  With all that coin in your pocket you may want to go \mylink{Carousing}{carousing}. 
+
+  If you don't have the money, you don't get any of the benefits of the longer rest.
+
+  \mytable{X c c c}{
+    \thead{} & \thead{Small} & \thead{Medium} & \thead{Large} \\
+  }{
+    Sojourn & 100 \FE & 25 \AG & 10 \AU \\
+    Sabbatical & 400 \FE & 100 \AG & 50 \AU \\
+  }
+
+  \myhighlight{Sojourn (Days)}{civilization-resting-sojourn}
+
+  During a Sojourn, you can
+  \mybullet {
+    \item Restore all your Grit and Flesh
+    \item Heal one Wound (your choice)
+    \item Go Carousing (appropriate to your level)
+    \item Restore your Armor \UD up to its \MAX
+    \item Restore your \UD for all Intangible Stats up to their \MAX
+    \item Restore all Deed \UD (Sellswords)
+    \item Restore all Luck \UD (Knave and Pooka)
+    \item Restore all Blood \POOL (Sorcerers)
+    \item Restore all Mojo \UD and shift your Mojo (Witches)
+    \item Restore all Grace \POOL (Mystics)
+  }
+
+  Additionally you maybe able to (depending on the size of the Settlement)
+  \mybullet {
+    \item Find a Trader to buy Gear
+    \item Pay a Leatherworker to repair Light Armor
+    \item Pay a Smith to repair Medium or Heavy Armor, or to buy weapons
+    \item Worship at the shrine of a certain Small God
+    \item Buy narcotics
+    \item Visit a sanitarium or a witch or wisewoman
+  }
+
+  \myhighlight{Sabbatical (Weeks)}{civilization-resting-sabbatical}
+
+  In addition to all the effects of a Sojourn, you may
+  \mybullet {
+    \item  Gain Research Dice or Cunning Dice
+    \item  Perform Inscription to create scrolls and decrypt spellbooks
+    \item  Use Medicinals to purge Disease, Addiction, and Madness as well as repair the effects of a serious Physical wounds. Create salves and potions.
+    \item  Practice Occultism and perform Miracles
+    \item  Create Magic Swords and Wizard's Staffs 
+  }
+
+  These are all covered in Bell, Book, \& Candle.
+
+  \newpage
+
+  \mysection{Languages}{civilization-languages}
+
+  A number of dialects and idiolects are used across the surface of the Totality.
+  
+  \mysubsection{Dialects}{civilization-dialects}
+
+  \myhighlight{Acheron}{dialect-acheron}
+
+  Common language of the Totality of Ygg.  Everyone can speak this.
+
+  \myhighlight{Baroque}{dialect-baroque}
+
+  Native language of the Amaranthine Kingdoms of Byzantium
+
+  \myhighlight{Brogue}{dialect-brogue}
+
+  Language of the people of the Grim Wood in Blackmoor
+
+
+  \myhighlight{Cockney}{dialect-cockney}
+
+  Slang used by thieves, merchants, slave traders, etc - favored by residents of Ophir, Lankhmar, Ilthmar, Quarmall, etc.
+
+  \myhighlight{Kaddish}{dialect-kaddish}
+
+  Native language of the Immortal Empire of Yoon-Suin
+
+  \myhighlight{Kleshian}{dialect-kleshian}
+
+  Language of the Jungles of Klesh. There's no written component - spoken only
+
+  \myhighlight{Mingol}{dialect-mingol}
+
+  The language of the Steppe of Khitai and the Plain of Sifir
+
+  \myhighlight{Saltish}{dialect-saltish}
+
+  Native language of the Free Confederacy of Sea Princes
+
+  \myhighlight{Sibilance}{dialect-sibilance}
+
+  The language used around Elfland, the Lands of Nod, and the Weald.  All Zoological creatures can speak Sibilance by the grace of the King of Elfland (though you might not get much of an answer out of them)
+
+  \myhighlight{Skaldic}{sdialect-kaldic}
+
+  Language of the people of the Taiga, Nin, and Vornheim
+
+
+\mysubsection{Idiolects}{idiolects}
+
+\myhighlight{Archaic}{idiolect-archaic}
+
+Required to command extraplanar Archons
+
+
+\myhighlight{Birdsong}{idiolect-birdsong}
+
+The language of hearth spirits, ravens, and daytime birds.  Said to be a common language in the Ultraviolet Grasslands and the Plateau of Leng
+
+\myhighlight{Bloodspeech}{idiolect-bloodspeech}
+
+A series of cries and hand signals for communicating in the battlefield
+
+\myhighlight{Draconic}{idiolect-draconic}
+
+Language of the Night Children and intelligent reptiles (like dragons).  Said to be spoken by the folk who dwell in the Eiglophian Mountains as well.
+
+\myhighlight{Fiendish}{idiolect-fiendish}
+
+Required to command extraplanar Fiends
+
+\myhighlight{Graveborn}{idiolect-graveborn}
+
+Language of intelligent undead.   Required to speak with the dead.  Said to be a language understood by the ghosts that inhabit the Lost Cities
+
+\myhighlight{Seraphic}{idiolect-seraphic}
+
+Required to command extraplanar Seraphim
+
+\myhighlight{Sylvan}{idiolect-sylvan}
+
+Language of intelligent/magical animals and members of the court of the King of Elfland
+
+\myhighlight{Thieves Cant}{idiolect-thieves-cant}
+
+Language spoken by thieves found across the continent
+
+\myhighlight{Silent Speech}{idiolect-silent-speech}
+
+Language of the Veins of the Earth, stones, and rocks
+
+\myhighlight{Verminish}{idiolect-verminish}
+
+Language or insects, rats, and other vermin. A gift from the Rat God to Acheron
+
+
+} %end
