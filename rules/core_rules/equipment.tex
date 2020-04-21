@@ -1,0 +1,440 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggEquipment}{%
+  \mychapter{Equipment}{equipment}
+}
+
+\renewcommand{\yggEquipmentText}{%
+
+  \mysection{Encumbrance}{equipment-encumbrance}
+
+  Encumbrance is divided into 2 groups - Insignificant and Significant Items.
+
+  \myhighlight{Insignificant Items}{equipment-insignificant-items}
+  You can carry as many Insignificant Items as you want as long as you can tell the Arbiter where they are i.e. "I've got the 11 weird rocks we've found at the bottom of my backpack, the amulet is tied to my belt, and I stowed the matches in my pocket". 
+
+  \myhighlight{Significant Items}{equipment-significant-items}
+  The number of Significant Items you can carry depends on your \MAX \VIG +1.  You can carry a (for example, if you have a d12 \VIG, you can carry 13 Significant Items). Note that \mylink{Pooka}{species-pooka} and \mylink{Night Children}{species-night-child} carry -2 Significant Items.
+
+  If you try to carry more than your \MAX, you're Morbidly Encumbered and you can only shuffle around (no Fight, no Guard, etc)
+
+  \mybullet {
+    \item Some Gear counts as a Significant Item (see list below)
+    \item A weapon counts as 1.  2 handed weapons count as 2 (unless you're a \mylink{Barbarian}{flavor-barbarian}. If a weapon does d4 damage, it counts as 1/2
+    \item Light armor counts as 1. Medium armor counts as 2.  Heavy Armor counts as 3 (unless you're a \mylink{Soldier}{flavor-soldier}). Shields count as 1.
+    \item 4kg worth of coins counts as 1. A person counts as ~100kg (25 Significant Items), but Pooka and Night Children are only 15
+    \item Certain things you might try to pick up while adventuring - a carpet, an anvil, a millstone, etc. will be worth a certain number of Significant Items as determined by the Arbiter.  For example, a large carpet might have an Encumbrance of 12 - meaning that you will need 12 empty slots (collectively) to carry the carpet out of the dungeon at a shuffling pace.
+    \item Finally, certain effects on you might fill your Encumbrance slots (priests of the Corpulent One, for example, might need to be obese to be able to use their special powers, and that obesity might equal 2 or 3 Significant Items)
+  }
+
+  \example {
+    Andre Preneur, assassin for hire (Bravo), carries out his contracts with two daggers sheathed in a small poison-filled bladder on his back (1) and carries a Grappling Hook (1) and 25m of rope (1).  His Encumbrance is 3.
+    ~\\
+
+
+    Balthazar the Breathtaking (a Sorcerer) carries a knave's sword (1) with a bandolier of 4 daggers (1. The bandolier halves the value of the daggers).  He's got a bunch of shrunken heads tied to his belt and to the hilt of his sword with spell incantations written on them, but these are Insignificant Items - so his Encumbrance is 2.
+    ~\\
+
+    The Nightie Knight (a Soldier) uses a longsword (1), a shield (1), and wears Heavy armor (0 because of her flavor).  She carries a Strongbow on her back (2) with a quiver on her hip (1).  Her Encumbrance is 5.
+  }
+
+  \mysection{Gear}{equipment-gear}
+
+  \myhighlight{Cost}{gear-cost}
+
+  Equipment has different prices depending on the place where you're buying it.  Smaller locations have fewer options but lower costs, larger locations are the opposite.  The costs listed below are static - sometimes you might be able to barter for a lower price, sometimes you get ripped off - but they all average out to the costs below (i.e. if you go to buy a dagger in a small town, it will always cost you 75\FE). In the charts below, small location prices are in Iron Pieces (\FE); Medium location prices are in Silver Pieces (\AG); Large location prices are in Gold pieces (\AU).  If a dash is shown the item isn't generally available in a place that size.
+
+  \newpage
+
+  \end{multicols}
+  \mysection{Weapons}{gear-weapons}
+  \example {
+    \mybullet {
+      \item 2h weapons count as 2 Significant Items; weapons that do d4 damage count as ½ Significant Item
+      \item Hard weapons use \VIG for Fight checks
+      \item Fast weapons use \DEX for Fight checks
+      \item \myital{Brawl} can only be used Close.  \myital{Throw} can be used to attack someone Close or thrown Nearby. \myital{Shoot} can target foes Nearby to Distant (but not Close).
+    }
+  }
+
+
+
+  \myhighlight{Chopping Weapons}{gear-chopping-weapons}
+
+  \mytable{X c c c c c}{
+    \thead{} & \thead{Damage} & \thead{Hands} & \thead{Type}  & \thead{Cost (fe/ag/au)} & \thead{Notes} \\
+  }{
+    Two-Handed Sword &  d10  & 2h & Hard Brawl & -/-/35 & \mylink{Hefty}{gear-weapon-hefty} \\
+    Polearm &  d10  & 2h & Hard Brawl & -/-/30 & \mylink{Rend}{gear-weapon-rend} and \mylink{Brace}{combat-tactical-maneuver-brace} \\
+    War Axe &  d8  & 1h & Hard Brawl & -/50/10 & \mylink{Cleave}{gear-weapon-cleave}  \\
+    Longsword &  d8  & 1h & Hard Brawl & -/60/12 & \\
+    Shortsword &  d6  & 1h & Fast Brawl & -/40/8 & \\
+    Hand Axe &  d4  & 1h & Hard Throw & 60/20/4 & \\
+  }
+
+  \myhighlight{Stabbing Weapons}{gear-stabbing-weapons}
+
+  \mytable{X c c c c c}{
+    \thead{} & \thead{Damage} & \thead{Hands} & \thead{Type}  & \thead{Cost (fe/ag/au)} & \thead{Notes} \\
+  }{
+    Military Pick &  d10  & 2h & Hard Brawl &100/15/3 & \mylink{Brutal}{gear-weapon-brutal} \\
+    Spear &  d8  & 2h & Hard Throw& 40/5/1 & \mylink{Brace}{combat-tactical-maneuver-brace} \\
+    Knave's Sword &  d8  & 1h & Fast Brawl & -/-/100 &  \\
+    Bow &  d6  & 2h & Fast Shoot & -/200/35 &  \\
+    Strongbow &  d6  & 2h & Hard Shoot & -/300/50 &  \\
+    Dagger &  d4  & 1h & Fast Throw & 75/20/4 &  \\
+  }
+
+  \myhighlight{Bashing Weapons}{gear-bashing-weapons}
+
+  \mytable{X c c c c c}{
+    \thead{} & \thead{Damage} & \thead{Hands} & \thead{Type}  & \thead{Cost (fe/ag/au)} & \thead{Notes} \\
+  }{
+    War Hammer &  d10  & 2h & Hard Brawl & 150/40/5 & \mylink{Daze}{gear-weapon-daze} \\
+    Mace &  d8  & 1h & Hard Brawl & -/50/10 &  \\
+    Quarterstaff &  d6  & 2h & Fast Brawl & 10/1/- & \\
+    Club &  d4  & 1h & Hard Brawl & 20/3/1 & \\
+    Sling &  d4  & 1h & Fast Shoot & 50/8/3 & \\
+  }
+
+  \myhighlight{Special}{gear-unarmed}
+
+  \mytable{X c c c c c}{
+    \thead{} & \thead{Damage} & \thead{Hands} & \thead{Type}  & \thead{Cost (fe/ag/au)} & \thead{Notes} \\
+  }{
+    Unarmed &  \mylink{varies}{combat-damage-unarmed} & 2h & Fast Brawl & -/-/- &  \\
+  }
+
+  \example {
+  \myhighlight{Weapon Traits}{gear-weapon-traits}
+    \mylist {
+      \item \mybold{\myanchor{Brutal}{gear-weapon-brutal}}  When you roll damage, you can re-roll a 1.  If you roll a 1 again you automatically Fumble
+      \item \mybold{\myanchor{Burst}{gear-weapon-burst}}  Anyone in range has to \RO their \MD + \DEX or take damage (see \mylink{Flask of Oil}{gear-adventuring})
+      \item \mybold{\myanchor{Cleave}{gear-weapon-cleave}}  If the attack kills a Monster, you may immediately attack again
+      \item \mybold{\myanchor{Daze}{gear-weapon-daze}}  If you Crit with the weapon, the target is \mylink{Woozy}{effect-woozy} for d4 \mylink{Markovian}{effects-duration-markovian} unless they're wearing a helmet.
+      \item \mybold{\myanchor{Hefty}{gear-weapon-hefty}}  Roll twice for damage and take the best 
+      \item \mybold{\myanchor{Rend}{gear-weapon-rend}}  On a hit, optionally forgo damage and  remove 1 \UD of target armor, or reduce a Monster's Soak by 1
+    }
+  }
+  
+
+  \begin{multicols}{2}
+
+  \mylist {
+    \item \mybold{2-Handed sword}  includes the Zweihänder, Claymore, and Greatsword
+    \item \mybold{Polearm}  includes every polearm from 1e D\&D - the Halberd, Guisarme, Voulge, Bardiche, etc. - as well as the Lance.
+    \item \mybold{War Axe}  includes the Archer's Axe, Dane Axe, Pollaxe and Tomahawk with a long haft 
+    \item\mybold{Long Sword}  includes  Sabres, Scimitars, Arming Swords, Falchions, Ulfberht, and Kopis
+    \item\mybold{Short Sword}  includes the Seax, Gladius, Hunting Sword, and Xiphos
+    \item\mybold{Hand Axe}  same heads as a War-Axe, but with a short haft for throwing
+    \item\mybold{Pick}  includes both the Horseman's pick as well as a mining pick.
+    \item\mybold{Spear}    Go-to weapon to outfit an army for cheap.  Combines the thrusting and throwing spear.
+    \item\mybold{Knave's Sword}  includes the Rapier and Épée
+    \item\mybold{Bow}  includes the shortbow and reflex bow
+    \item\mybold{Strongbow}  the longbow or yumi
+    \item\mybold{Dagger}  includes the Baselard, Miséricorde, Cinquedea, and Dirk
+    \item\mybold{War Hammer}  includes the Maul, Sledgehammer, and Ice Axe
+    \item\mybold{Mace}  includes Flanged, Pernach, and Morning Star
+    \item\mybold{Club}  includes Shillelaghs, Cudgels, Bludgeons, and Batons as well as just really big, heavy sticks
+    \item\mybold{Quarterstaff}  just a length of hardwood, sometimes with a metal tip on the end
+    \item\mybold{Sling}  leather or rope with a pouch in it for throwing rocks.
+  }
+
+  \end{multicols}
+  \newpage
+
+  \mysection{Armor}{gear-armor}
+
+  \mytable{X c c c c c}{
+    \thead{Weight} & \thead{\UD} & \thead{\MD} & \thead{Fumble Die}  & \thead{Cost (fe/ag/au)} & \thead{Significant Item?} \\
+  }{
+    None  & - & d20 & - & n/a & N \\
+    Light  & d4 & d12 & d4 & 300/50/10 & Y(1) \\
+    Medium  & d8 & d8 & d8 & -/-/200 & Y(2) \\
+    Heavy  & d12 & d4 & d12 & -/-/900 & Y(3) \\
+    Shield  & - & - & +1 & -/70/10 & Y(1) \\
+    Helmet  & - & - & +1 & 150/30/5 & N \\
+  }
+
+  \begin{multicols}{2}
+
+  \example {
+    \mylist {
+      \item \mybold{None}  includes wizard's robes with stars and moons, filthy rags, and two-slat loincloths
+      \item \mybold{Light}   includes Quilted, Cuir Bouilli, Leather, Gambeson, and Hide
+      \item\mybold{Medium}  includes Chain mail,  Scaled mail, Lamellar, and Ring armorm
+      \item\mybold{Heavy}  includes  Plated Mail, Coat of Plates, Splint armor, Dendra panoply, Gothic plate, and Maximilian armor
+      \item\mybold{Shield}  includes round, kite, knight, buckler, targa, parma, rotella, and heater
+      \item\mybold{Helmet}  includes Corinthian, galea, great helms, bacinets, frog-mouth, pickelhaubes, and armets
+    }
+  }
+
+  \myhighlight{Armor \UD}{gear-armor-ud} 
+
+  The first time your armor moves \DCDOWN, reduce the Current \UD.  Every time thereafter, reduce both the Current \myital{and} \MAX \UD
+
+  \myhighlight{Repairing Armor}{gear-armor-repair}
+  
+  Repairing the \MAX \UD of your Armor requires a Leatherworker (for Light Armor) or a Blacksmith (Medium and Heavy Armor).  Not all Settlements have a Leatherworker and/or Blacksmith - see the section on \mylink{Services}{civilization-services} under Civilization.
+
+
+  \mytable{X c c }{
+    \thead{Weight} & \thead{Cost per \UD} & \thead{max \UD}  \\
+  }{
+    Light  & 30/5/1 & d4 \\
+    Medium  & -/300/20 & d8 \\
+    Heavy  & -/-/90 & d12 \\        
+  }
+
+
+  The cost is for each \MAX \UD that must be repaired i.e. if you have Heavy Armor with d8 \UD remaining, it will cost you 90au to get it to d10, and another 90au to get it back to d12.  Armor that's been totally destroyed (failed on a d2) can't be repaired.
+
+  \myhighlight{Removing Armor}{gear-armor-removal} 
+
+  Helmets, Shields, and Light Armor take Moments to remove.  Medium and Heavy Armor take Minutes to remove.
+
+  \end{multicols}
+  \mysection{Adventuring Gear}{gear-adventuring}
+
+  \mytable{X c c c }{
+    \thead{Name} & \thead{\UD} & \thead{Cost (fe/ag/au)} & \thead{Significant Item} \\
+  }{
+    25m rope &  -  &  5/3/1 & \mybold{Y}  \\
+    Bandolier &  -  &  10/5/2   &  \\
+    Blowpipe &  -  & -/-/2 &  \\
+    Chalk &  - & 3/2/1 &  \\
+    Crowbar (Iron)&  -  & 20/10/5 & \mybold{Y}  \\
+    Flask of Liquor &  d4  & 10/5/2 &  \\
+    Flask of Oil &  d6  & 20/10/5 &  \mybold{Y}  \\
+    Grappling Hook & - & -/8/3& \mybold{Y}  \\
+    Grimoire (Empty)& - & -/-/50 & \mybold{Y}  \\    
+    Hand Mirror, Copper &  -  & -/8/3 &  \\
+    Lantern &  - &  20/10/5  & \mybold{Y}  \\
+    Leather Work Gloves &  -  & 10/5/2  &  \\
+    Matches &d10& 3/2/1&  \\
+    Manacles &  -  & -/20/5 &  \\
+    Pipe &  - & varies &  \\
+    Provisions - Personal &  d6 & 20/10/5 & \mybold{Y}  \\
+    Provisions - Journey & d4 & 200/100/50 & \mybold{Y}  (25) \\
+    Quiver of Arrows/Bolts &  d10  & 50/8/3 & \mybold{Y}  \\
+    Shovel &  -  & 20/10/5 & \mybold{Y}  \\
+    Spikes and Hammer &  d6  & 10/5/2 & \mybold{Y}  \\
+    Syringe &  d3  & -/-/25 &  \\
+    Torches and Tinderbox &  d10  & 10/5/2 & \mybold{Y}  \\
+  }
+
+  \begin{multicols}{2}
+
+  \mybold{25m of rope} Holds 1 person and their gear safely (~100kg). The Arbiter will begin making x-in-6 \KNACK rolls  if the rope is put under heavier loads, impacts, or shearing (such as sawing it back and forth along a jagged lip) (the "x" can is up to the Arbiter)
+  
+  \mybold{Bandolier} You can carry 4 daggers and/or hand axes on a bandolier and it only counts as 1 Significant Item. You can't wear more than 2 bandoliers.
+  
+  \mybold{Blowpipe} Useful for blowing powders into people's noses.  Witches and Knaves are fans (so are Pooka, but for different reasons)
+  
+  \mybold{Chalk} Like school back in the day, maybe you want to play hopscotch
+  
+  \mybold{Crowbar} Turns most doors from a question to "can we open this door?" to "how long will it take us to open this door?"
+  
+  \mybold{Flask of Liquor} Just a bunch of booze. Good for rousing people and making friends. If you drink it during a Breather, you can restore 1 Grit up to your \MAX for each time you roll the \UD - but you also get 1 point of Drunk.
+  
+  \mybold{Flask of Oil} In a lantern, burns for 4 hours. As a molotov cocktail, can be used as a Thrown weapon that has  \mylink{Burst}{gear-weapon-burst}.  Oil burns for d4 damage for d4 Moments. Alternatively, can create a line of fire across a 3m hallway. Jumping over fire requires you to \RO using \MD+\DEX, and in the case of animals, a Morale check. 
+  
+  \mybold{Grappling Hook} A necessity for those hard to reach places
+  
+  \mybold{Grimoire (empty)} Holds 10 spells. Built to resist water and fire.
+  
+  \mybold{Hand Mirror,  Copper} Good for seeing around corners, and entirely anachronistic. Don't worry about it. But if you want to use a mirror to petrify a medusa,  you'll need a higher quality mirror than this little dinky shit.
+  
+  \mybold{Lantern} Holds oil and burns it so you can see.
+  
+  \mybold{Leather Work Glove} Allows Spriggan to touch iron
+  
+  \mybold{Matches} We can't all be super cool wizards who light their pipes with a snap of the fingers.  Provides a few Moments of light.
+  
+  \mybold{Manacles} For handcuffing people.  Reasons vary.
+  
+  \mybold{Provisions - Personal} The "iron rations" of the old days.  Food and water for one person
+
+  \cbreak
+  
+  \mybold{Provisions - Journey} Enough food and water to feed 5-7 people and 1 mount for 1 Leg of a Journey (5-10 Days).  Counts as 25 Significant Items (about 100kg).
+  
+  \mybold{Quiver} Filled with arrows/bolts.  Strongbows and Bows are useless without them.
+  
+  \mybold{Shovel} Camp-style shovel for digging latrines.  Or graves.
+  
+  \mybold{Pipe} Useful for smoking things (pipeweed and narcotics). Base cost gets you a crappy corncob pipe - sweet wizard's pipes are more expensive.  Sorcerers, Witches, and (surprise!) Pooka are fans.
+  
+  \mybold{Spikes and Hammer} Good for spiking doors shut or crucifixions.  Hammer can't hurt anyone unless it's driving the spike into an eye or something.
+  
+  \mybold{Syringe} Jab narcotics or sera into someone.  Leeches and Pooka are fans.
+  
+  \mybold{Torches and Tinderbox} Lasts 1 hour. If you drop torches, they continue to burn.  Tinderbox included with set.
+
+  \newpage
+
+  \mysection{Narcotics}{gear-narcotics}
+
+  You can use a narcotic up to \MAX times a Session.  If you accidentally take more than the \MAX, you immediately Overdose. 
+
+  Narcotics last for the Session unless otherwise noted.
+
+  \myhighlight{Addiction}{gear-narcotics-addiction}
+  Every Session, check for addiction (a) the first time you use the narcotic and (b) if you use the narcotic \MAX number of times.  Note that there are some narcotics with a \MAX of 1 - this means you roll for Addiction twice. The Addiction roll is:
+
+  \example {
+    \mybold{Addiction} 
+
+    \RO : \FOC + modifiers
+
+    \myital{Don't forget Mystics, Witches, and Pooka add their \LVL to this roll.}    
+
+  }
+
+  If you fail to \RO, you are addicted.  
+
+  Once you are addicted you must use the narcotic \MAX times per Session.  During a Sojourn you must buy a full \UD of the narcotic (but don't add it to your inventory, you'll use it all during your vacation).  During a Sabbatical, you must buy 3 full \UD of the narcotic (same deal, don't add them to your inventory).  Additional \UD of narcotics can be purchased on top of these before you go back out into the wilds, of course.
+
+  If you run out of narcotics you are \mylink{Sickened}{effect-sickened} until you get the drug again.  This can be mitigated by Leechcraft. The only way to cure Addiction is to take a \mylink{Sabbatical}{civilization-resting-sabbatical} and gain the help of a Leeches' Medicinals\footnotemark.  When you recover from Addiction you will have the effect listed under Recovery.
+
+
+  \myhighlight{Overdose}{gear-narcotics-overdose}
+
+  If you Overdose, you are afflicted with a d12 Toxin\footnotemark[\value{footnote}].  You will need to make 3 consecutive Saves to survive the effects.  If you survive you are addicted as above. If you Overdose you don't receive any benefit of the narcotic.
+
+  \cbreak
+
+  \myhighlight{Common Narcotics}{gear-table-common-narcotics}
+
+  \myital{Leeches can create brews, sera, powders, etc that are also narcotic.\footnotemark[\value{footnote}]}
+
+  \mytable{X c c c }{
+    \thead{Name} & \thead{\MAX} & \thead{\UD}  & \thead{Cost (fe/ag/au)} \\
+  }{
+    Adonis & 2 & d4 & -/-/50 \\
+    Black Lotus & 1  & d3 &  -/-/20 \\
+    Blackthroat & 2  & d4 & -/30/5 \\
+    Corpse Salt & 1  & d3 & -/-/20 \\
+    Locus & 2 & d4 & -/30/10 \\
+    Pipeweed & 5&  d10 & 1/1/1 \\
+    Shrooms & 1 &  d3 & -/-/10  \\
+    Smokes & 5 &  d10 & 1/1/1  \\
+    Weed of Hasheeshian & 4 &  d8  & 10/10/10  \\
+    Woad & 4 & d8 & 30/5/-  \\
+    Yellow Opium & 2 & d4 & -/-/10  \\
+}
+
+
+  \myhighlight{Adonis}{gear-narcotics-adonis}
+
+  Pheromones emitted by decaying Orchidmen, harvested by virgins and mixed with olive oil.  Makes you look and feel like a supermodel, so it's supremely expensive.  Rub the oil on your naked body and your \MAX Presence is \DCUP for the Session.
+
+  \mybold{Recovery:}  you always be haunted by your fallen beauty - your \MAX Sanity is \DCDOWN.
+
+  \myhighlight{Black Lotus}{gear-narcotics-black-lotus}
+
+  The dried petals of the Black Lotus, which grows near Chaos cracks and in the labs of magical experiments gone awry. Extremely illegal, very expensive, highly addictive.  Chewing slowly (if it's the good stuff) will allow a Sorcerer to restore d3 Blood Die.
+
+  \mybold{Recovery:}  the Lotus extracts a physical toll.  Your \MAX \VIG is \DCDOWN.
+
+  \myhighlight{Blackthroat}{gear-narcotics-blackthroat}
+
+  A tar taken from the hulls of ships that sail between the isles of the Lost Cities; rubbed on the throat. You're immune to any poison you might eat or drink. You feel pretty fucking confident and your \MAX Talent is \DCUP for the Session.
+
+  \mybold{Recovery:}   Creates black sores on the neck and throat - your voice is raspy and \MAX Presence is \DCDOWN.
+
+  \newpage
+
+  \myhighlight{Corpse Salt}{gear-narcotics-corpse-salt}
+
+  A chemical distillation of putrefying human flesh, dried to a powder and insufflated. Adds the corpse's wisdom to your own. If you are a Leech, your Knowledge \STATIC is \DCUP for the Session.
+
+  \mybold{Recovery:}   Hard to remember whose memories are whose.  Your \MAX \FOC is \DCDOWN.
+
+  \myhighlight{Locus}{gear-narcotics-locus}
+
+  The powder of a specific kind of beetle, insufflated.  Locus gives you extraordinary concentration, pushing your \MAX Awareness is \DCUP for the Session.
+
+  \mybold{Recovery:}  Turns out the beetle dust does something to your kismet.   Your \MAX Talent is \DCDOWN.
+
+
+  \myhighlight{Pipeweed}{gear-narcotics-pipeweed}
+
+  A variety of weeds, harvested, cured, and smoked (in a pipe, of course). Frequently used by Sorcerers and Witches. If you're a Witch, you do not need to roll your Mojo if you cast a Charm while smoking Pipeweed.  Additionally choose 1 every time you smoke: (1) blow out beautiful smoke rings and waft them wherever you please; (2) scare away all Nearby insects; (3) re-roll a failed attempt to recall something, or solve a puzzle; (4) re-roll a negative result for attempting to read something magical (like if you triggered a Spellbook Trap, for example)
+
+  \mybold{Recovery:}   Your teeth are badly stained and your breath smells.
+
+  \myhighlight{Shrooms}{gear-narcotics-shrooms}
+
+  Found everywhere in cow patties, corpses, and rotting logs - but look exactly like a poisonous variety.  Roll a d6: 1) bad news, it's the poisonous one, make a Save vs. Toxins or take a d6 Poison effect; 2) bad trip, roll Sanity, if you fail you gain Madness: Hallucinations; 3-6) profound insight - gain 1 Faith Die OR pick your next Carousing result.
+
+  \mybold{Recovery:}  Your nervous system really took a hit.  Your \MAX \DEX is \DCDOWN
+
+
+  \myhighlight{Smokes}{gear-narcotics-smokes}
+
+  Most common and widely used narcotic, made from a single plant, harvested and cured, rolled in smokable paper and sold in bundles.  If you smoke during a Breather, you gain 1 Grit per roll up to your \MAX.  If you smoke when you are Hung Over, \RS : d6.  If you succeed, the Hung Over effect ends.
+
+  \mybold{Recovery:}  Your teeth are badly stained and your breath smells.  
+
+  \myhighlight{Weed of Hasheeshian}{gear-narcotics-weed}
+
+  Sticky, pungent herb that gives you a minor form of telepathy.  Gain +1 to Guard \RO  and you're immune to surprise (including The Drop).  
+
+  \mybold{Recovery:}  A little slow on the uptake.  You always lose the first Init roll when you enter Combat.
+
+
+  \myhighlight{Woad}{gear-narcotics-woad}
+
+  Hallucinogenic blue paste rubbed on the face, bestows visions of the eternal battles of Valhalla, shield maidens urge you toward glory.  If you reach Death's Door, you gain +1 to your Fight \RO and damage. The Woad is highly water soluble and needs to be reapplied after every Combat (presumably during a Breather) or if you get wet.
+
+  \mybold{Recovery:}  You fear losing control again.  You can't use the Combat Maneuver : Rage without making an \RS : Sanity.
+
+  \myhighlight{Yellow Opium}{gear-narcotics-yellow-opium}
+
+  The "common" opium (there are rumored to be many more in the lands of Yoon Suin), sweet smelling, haunting blue smoke in the shape of ghosts when smoked.  They whisper the truth of the Authority to you - your \MAX Sanity is \DCUP for the Session.
+
+  \mybold{Recovery:}  Things are a little hazy now.  Your \MAX Awareness is \DCDOWN.
+
+  \mysection{Transport}{gear-transport}
+
+    \mytable{X c c }{
+      \thead{Name} & \thead{Cost (fe/ag/au)}  \\
+    }{
+      Mule &  80/10/2  \\
+      Horse &  -/200/25  \\
+      Camel &  -/-/40  \\ 
+      Push cart & 50/8/1  \\
+      Wagon &  -/150/20  \\
+      Rowboat &  300/50/8  \\     
+    }
+
+      \mylist {
+        \item \mybold{Mule}  basic beast of burden, doesn't panic easily.  Can carry about 100kg (25 \mylink{Significant Items}{equipment-significant-items})
+        \item \mybold{Horse}   good for riding, tends to bolt when scared.  Can carry about 200kg (50 \mylink{Significant Items}{equipment-significant-items})
+        \item \mybold{Camel}  never runs, generally an asshole, only found in desert terrain.  Can carry about 250kg (62 \mylink{Significant Items}{equipment-significant-items})
+        \item \mybold{Push cart}  push around all your stuff, takes 2 hands to use.  Can hold about 50kg worth of stuff (12 \mylink{Significant Items}{equipment-significant-items})
+        \item \mybold{Wagon}  can't go anywhere on its own.  Depending on the size, can carry 100 - 400kg worth of gear and people (roll a d4 to see how big the one available might be).  Needs appropriate number of mounts to pull it (100kg = 1 mule, 200kg = 2 mules or a horse, etc.)
+        \item \mybold{Rowboat}  only available near civilizations with water.  Same weight rules as wagons (100 - 400kg worth of gear and people).
+      }
+
+    \myhighlight{Mount Morale}{gear-mount-morale}
+    
+    Mounts must pass a \mylink{Morale}{miscellania-morale} check to enter dangerous situations (combat, entering a dungeon, jumping a chasm, etc). If the morale check fails the mount will take no action (though if you want to flee on your mount, that's allowed).  If your mount fails a Morale check, you can roll a \mylink{Skill:Travel}{skill-travel} check.  If you succeed, they get another morale check. You can \mylink{Bum Rush}{combat-deeds-bum-rush} while mounted.  If you or your mount take damage while mounted, you can make a Skill:Travel check and decide who takes the damage (you or the mount)
+
+  \mysection{Hirelings}{gear-hirelings}
+  TK TK TK TK TK
+
+
+  \footnotetext{See the Bell, Book, and Candle PDF}
+  \setcounter{footnote}{0}
+  \newpage
+
+
+
+
+
+} %end

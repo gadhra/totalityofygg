@@ -1,0 +1,412 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggMiscellania}{%
+  \mychapter{Miscellania}{miscellania}
+}
+
+\renewcommand{\yggMiscellaniaText}{%
+
+  \mysection{Effects}{effects}
+
+
+  \mysubsection{Afraid}{effect-afraid}
+
+  If you are Afraid of something, you must \RS : Sanity when you approach or attack the object of your fear.  Remember, if you fail a \RS : Sanity, you must roll on the \mylink{Terrifying Tables}{misc-terrifying-tables}
+
+  If you damage the object of your Fear, the Fear is immediately dispelled
+
+  If a Monster is a Afraid of something, it will try to run away.  If left to its own devices it will hide in the adjacent room / area that is most safe and return when the duration is up.  Monsters resist Fear with a morale check.
+
+  \mysubsection{Anathema}{effect-anathema}
+
+  You cannot benefit from magical healing or be the target of helpful magic (note: Leechcraft isn't magical healing).  You automatically fail any Saves against Hexes, and you cannot gain XP through Carousing.
+
+  \mysubsection{Befuddled}{effect-befuddled}
+
+  If you are Befuddled, you cannot tell any two creatures apart - everyone looks the same. Whenever you attack, you attack a random creature.  When you cast a spell, you cast a random spell at a target picked randomly from all eligible ones.  Whenever you try to run through a door, you run through a random door.  The Arbiter should feel free to dictate additional effects as necessary.
+
+  \mysubsection{Bleeding}{effect-bleeding}
+
+  If you are Bleeding, you lose 1 Flesh every Moment.  This doesn't stack (i.e. you can't Bleed for 2 damage every Moment).  If you are Bleeding while on Death's Door, it will prompt a Death Die roll every Moment. 
+
+  \mysubsection{Blinded}{effect-blinded}
+
+  You can't see.  You automatically fail \RO checks, Init rolls, and any other skills that require sight.
+
+  \mysubsection{Charmed}{effect-charmed}
+
+  You treat the person who Charmed you like a good friend, and ignore the obvious spell they just cast on you.
+
+  \mysubsection{Concussed}{effect-concussed}
+
+  You automatically lose Init and any \KNACK (including Skills and Saves) are reduced by 1 (if your Skill is 1-in-6, you can't use it while you're Concussed)
+
+  \mysubsection{Deafened}{effect-deafened}
+
+  You can't hear.  You automatically fail Listen checks, Init rolls, and any other skills that require hearing.
+
+  \mysubsection{Disgusted}{effect-disgusted}
+
+  You fight through your feelings of revulsion or horror, but all \RO, \RB, or \RS have a -4 modifier as long as you are in the presence of the object of your disgust.
+
+  \mysubsection{Disarmed}{effect-disarmed}
+
+  Can only affect things held in one hand (like 1h weapons). The item is ripped from your grasp and falls to the ground.  It will take an Action to recover it.
+
+  \mysubsection{Drunk}{effect-drunk}
+
+  You get a -1 on all \RO tries for every point of Drunk.  When you Bivouac, roll a \RS : \VIG.  If you fail, you are Hung Over at the end of the Bivouac.
+
+  \mysubsection{Enraged}{effect-enraged}
+
+  You immediately attack whatever has afflicted you. While in a rage, you have +2 Fight modifier, deal +2 Damage, and are immune to Fear. While raging, you cannot do anything defensive, curative, tactical, or cooperate with your allies. If the object of your rage isn't a living thing, you will destroy it any way you can. Spellcasting is impossible.  You cannot stop fighting until you destroy the object or all Monsters are dead.  If an Ally hurts you during your rage, they are considered a Monster.
+
+  \mysubsection{Hung Over}{effect-hung-over}
+
+  Roll a d4.  1) You are at -2 on all \RO tries.  2) You are \mylink{Sickened}{effect-sickened}.  3) You are \mylink{Concussed}{effect-concussed}. 4) You are \mylink{Woozy}{effect-woozy}.  The effect lasts until it is a) removed by Leechcraft, or b) removed with an appropriate tonic (Chymsitry) or narcotic, or c) you Bivouac, or d) you acquire enough point of Drunk to equal what you rolled on the d4.
+
+
+  \mysubsection{Invisible}{effect-invisible}
+
+  You cannot be seen as long as you don't move.  If you're invisible, you can see other invisible objects.
+
+  \mysubsection{Knocked Out}{effect-knocked-out}
+
+  You immediately drop Prone and drop any items you're holding.  Fight rolls against you hit automatically, do maximum damage (Crit) and can only be blocked by Armor.  If the effect is not Markovian, roll a \RS : \VIG at the top of each Moment; if you succeed, you awaken (but you are still Prone).  Once you awaken, the effect ends.
+
+  \mysubsection{Paralyzed}{effect-paralyzed}
+
+  You immediately grow rigid - you cannot move or act, even to defend yourself.  Guard rolls automatically fail: the attack does maximum damage (Crit) and can only be blocked by Armor.  
+
+  \mysubsection{Prone}{effect-prone}
+
+  If you are knocked Prone you must spend an action getting to your feet.  While you are in a prone position you can continue to Fight at \DCDOWN. Any Guard \RO tries are at -4.
+
+  \mysubsection{Shaken}{effect-shaken}
+
+  Synonymous with Disgusted, but usually occurs from something that terrifies you.
+
+  \mysubsection{Shocked}{effect-shocked}
+
+  Immediately drop anything you're holding.  If you are shocked as the result of a Horror you have witnessed, your hair turns snow white.
+
+  \mysubsection{Sickened}{effect-sickened}
+
+  You are overcome with nausea and being vomiting, dry-heaving, etc.  You cannot Fight and can only Guard at a -4.
+
+  \mysubsection{The Vapors}{effect-the-vapors}
+
+  You immediately pass out.  Any damage will wake you up immediately, but any attacks against you do maximum damage (Crit) and can only be blocked by Armor.
+
+  \mysubsection{Woozy}{effect-woozy}
+
+  You take a -4 modifier to \myital{every} \RO  and \RB  attempt (including Fight and Guard)
+
+
+  \mysection{Vision}{vision}
+
+  \mysubsection{Dark Sight}{vision-dark-sight}   
+
+  You can see in complete, utter darkness with no hindrance.  If you have Dark Vision you take a -4 Modifier on tests and attacks involving sight, done in daylight (or similar levels), that are further away than Close. 
+
+  \mysubsection{Day Vision}{vision-day-vision}
+
+  You see in daylight but take a -4 Modifier in darkness for any test involving sight that is further away than Close. 
+
+  \mysubsection{Low Light Vision}{vision-low-light-vision} 
+
+  You can see in normal daylight and in dim lit conditions like starlight with no hindrance. In darkness, however, you must roll -4 Modifier for any test involving sight that is further away than Nearby.
+
+
+  \mysection{Terror, Horror, and Madness}{terror-horror-madness}
+   
+  \myital{This is taken almost verbatim from \href{https://talesofthegrotesqueanddungeonesque.blogspot.com}{"Tales of the Grotesque and Dungeonesque"}}
+
+  In Gothic literature, the experience of terror is frequently described as a soul-expanding experience of awe. When one feels terror, one's mind is elevated to a new understanding of the world's terrifying possibilities; possibilities that were once repressed by the rational mind now threaten to undue the psyche's defenses. As such, terror is generally an inward experience; it is centered on psychological interiority, the ways in which a sense of self is located in relation to the outside world, and the realization of our inconsequential smallness in the face of something unthinkable.
+
+  In many ways, the experience of horror is the opposite of the experience of terror; feelings of horror are soul-shrinking impressions of disgust or revulsion. When one feels horror, one's mind contracts and attempts to shut out the horrifying possibilities of what you've just experienced or attempts to repress the horrible implications of what you've just witnessed. In Gothic literature, objects that inspire horror are generally exterior to the sense of self; they are more visceral than actively psychological.
+
+  \mysubsection{Terrifying Tables}{misc-terrifying-tables}
+
+  Depending on whether the character is affected by Terror or Horror, roll on the appropriate table below.  If they roll a 6 (Madness!), roll a d20 on the Madness chart.  Any effects other than Madness lasts until you Bivouac. Madness can only be cured by a Leech during a Sabbatical, or by a wisewoman or doctor in a Sanitarium. 
+
+  \cbreak
+
+  \mysubsection{Terror}{misc-terror-table}
+
+
+  \mytable{X c }{
+    \thead{d6} & \thead{Result} \\
+  }{
+    1 & \mylink{Shaken}{effect-shaken} \\
+    2 & \mylink{Woozy}{effect-woozy} \\
+    3 & \mylink{The Vapors}{effect-the-vapors} \\
+    4 & \mylink{Afraid}{effect-afraid} \\
+    5 & \mylink{Paralyzed}{effect-paralyzed} \\
+    6 & \mylink{Madness!}{misc-madness-table} \\
+}
+
+  \mysubsection{Horror}{misc-horror-table}
+
+  \mytable{X c }{
+    \thead{d6} & \thead{Result} \\
+  }{
+    1 & \mylink{Disgusted}{effect-disgusted} \\
+    2 & \mylink{Shocked}{effect-shocked} \\
+    3 & \mylink{Sickened}{effect-sickened} \\
+    4 & \mylink{Afraid}{effect-afraid} \\
+    5 & \mylink{Enraged}{effect-enraged} \\
+    6 & \mylink{Madness!}{misc-madness-table} \\
+}
+
+  \mysubsection{Madness!}{misc-madness-table}
+
+  \mytable{X c }{
+    \thead{d20} & \thead{Result} \\
+  }{
+    1  & The Needle \\
+    2  & Melancholy \\
+    3  & Darkfear \\
+    4  & Whisper of the Rapture \\
+    5  & Amnesia \\
+    6  & Occult Obsession \\
+    7  & Gluttony \\
+    8  & Occult Obsession \\
+    9 & Foolhardiness \\
+    10  & Blind Fury \\
+   11  & Shot Nerves \\
+   12  & Odious Quirk \\
+   13  & Night Terrors \\
+   14 & Fanaticism \\
+    15  & Hallucinations \\
+    16  & Starvation \\
+    17  & Beaten \\
+    18  & Split Personality \\
+    19 & The Voices \\
+    20  & True Madness \\
+  }
+
+  \myhighlight{Amnesia}{madness-madness-amnesia}
+
+  You forget your name, history, and background - including how to do the things detailed in your Trope, Species, or Flavor.  Put another way, you have lost the abilities that distinguish you from a peasant (though the numbers on your character sheet don't change).
+
+  \myhighlight{Beaten}{madness-beaten}
+
+  Your madness has left you periodically deaf and dumb to the world around you as you retreat within yourself to escape your fear. Your \mylink{Grit}{combat-flesh-and-grit} is 0 while under the effects of this madness and can't be healed, and you always lose Init.
+
+  \myhighlight{Blind Fury}{madness-blind-fury}
+
+  Your fear finds vent in violent rages and an uncontrollable temper. If provoked, you must roll \RS : \FOC.  If you fail you immediately become Enraged and execute a \mylink{Bum Rush}{combat-deeds-bum-rush} against your provoker.
+
+  \myhighlight{Darkfear}{madness-darkfear}
+
+  You are stuck with a permanent fear of the dark. You cannot sleep in darkness; you must have a burning candle or lamp by your side or you do not gain any of the benefits associated with a Bivouac. Additionally, whenever you are in a dark environment you take an additional -4 modifier to any \RO or \RB tries
+
+  \myhighlight{Fanaticism}{madness-fanaticism}
+
+  Your madness have given you the irrational belief that religious faith will protect you from your fear. All of your extra income must be spent tithing to a religious institution (you earn no XP for money spent in this way)
+
+  \cbreak
+
+  \myhighlight{Foolhardiness}{madness-foolhardiness}
+
+  Your continued survival in the face of the unnatural has given you the irrational belief that you are invincible. You cannot retreat or withdraw from dangerous situations by any means, and you lose 1/2 of your \mylink{Grit}{combat-flesh-and-grit}, rounded down.
+
+  \myhighlight{Gluttony}{madness-gluttony}
+
+  You are overcome by the irrational belief that if you consume you will not be consumed by your fear. You refuse to wear armor since it's "binding".  If you Bivouac, roll your Personal Provisions 3 times.  If you Sojourn or Sabbatical, your costs are increased by 100 coins (you don't receive XP for this extra money)
+
+  \myhighlight{Hallucinations}{madness-hallucinations}
+
+  Unreliable senses; the Arbiter will give you false descriptions of things if you are ever alone (without your allies to guide you). Since you are always doubting your senses, you are always \mylink{Surprised}{combat-surprise} on the first round of Combat.
+
+  \myhighlight{Melancholy}{madness-melancholy}
+
+  You are consumed by depression and ennui. You take a -2 penalty on all \RO and \RB tries.
+
+  \myhighlight{The Needle}{madness-the-needle}
+
+  Only narcotics will stave off the gnawing terror. Roll a d12 on the \mylink{Narcotics}{gear-narcotics} table - you are \mylink{Addicted}{gear-narcotics-addiction} to that substance.
+
+  \myhighlight{Night Terrors}{madness-night-terrors}
+
+  You are unable to Bivouac unless you roll a \RS : Sanity.  Note that if you fail, it forces a roll on {Terrifying Tables}{misc-terrifying-tables}
+
+  \myhighlight{Occult Obsession}{madness-occult-obsession}
+
+  You are overcome with the irrational belief that if you master the occult you can master your fear. All of your extra income must be spent pursuing occult tomes and private instruction (you earn no XP for money spent in this way)
+
+  \myhighlight{Odious Quirks}{madness-odious-quirks}
+
+  Your madness manifests itself as disturbing personality quirks such as talking to yourself, laughing like a maniac, saying and doing inappropriate things, etc. Your \MAX Presence is \DCDOWN x2 
+
+  \myhighlight{Phobia}{madness-phobia}
+
+  You are terrified of whatever thing or class of things caused this insanity.  When you encounter this trigger, you are \mylink{Afraid}{effect-afraid} for Minutes
+
+  \myhighlight{Shot Nerves}{madness-shot-nerves}
+
+  Your madness has weakened your already fragile mental state.  Whenever you enter Combat or a stressful situation (determined by the Arbiter), roll a \RS : \INT.  If you fail you can only stand gaping in horror for the rest of Combat.  You cannot Fight or Guard, but you can be pulled / moved by allies.
+
+  \myhighlight{Split Personality}{madness-split-personality}
+
+  Roll up a new level 1 character that uses your current physical stats (\VIG and \DEX), but new mental stats (\INT and \FOC). The class must be different from your current one. Each session, alternate between these two characters, each one tracking XP separately.
+
+  \myhighlight{Starvation}{madness-starvation}
+
+  Your madness has inspired the irrational belief that if you deny yourself food you can deny the extent of your fear. Whenever you Bivouac, roll a \RS : \FOC.  If you fail you are unable to consume your Personal Provisions (and thus get no benefit for resting).  If you Sojourn or Sabbatical while under the effect of this Madness, you start your next adventure with a maximum Flesh of 1.
+
+
+  \myhighlight{True Madness}{madness-true-madness}
+
+  Your madness is pervasive; roll twice on the Madness Effects Table and take both results. If the extent of your mental trauma is discovered, you run the risk of being institutionalized.
+
+  \myhighlight{The Voices}{madness-the-voices}
+
+  You are continually distracted by a number of voices that only you can hear. Whenever you roll Init, roll a \RS : \FOC.  If you fail you are \mylink{Befuddled}{effect-befuddled} for the rest of Combat. You fail all \mylink{Listen}{skill-listen} skill rolls.
+
+  \myhighlight{Whisper of the Rapture}{madness-whisper-of-the-rapture}
+
+  You are stuck with a permanent fear of enclosed spaces, tight fits, and premature burial. Whenever you find yourself in these circumstances suffer a -8 on all \RO and \RB tries
+
+
+  \newpage
+
+  \mysection{Adventurer Advancement}{misc-adventurer-advancement}
+
+  Advancing your adventurer (also known as "leveling") allows you to become more powerful.  To gain levels, you need Experiences (XP).  When you get a certain amount of XP, you go up a level.
+
+
+  \mytable{X c c }{
+    \thead{Level} & \thead{Min XP} & \thead{Coin Type} \\
+  }{
+    1 & 0 & Iron \\
+    2 & 1,000 & Iron \\
+    3 & 3,000 & Silver \\
+    4 & 6,000 & Silver \\
+    5 & 11,000 & Silver \\
+    6 & 19,000 & Gold \\
+    7 & 32,000 & Gold \\
+    8 & 53,000 & Gold \\
+    9 (max) & 87,000 & - \\    
+}
+
+There are 3 main ways to gain XP: Adventuring, Looting, and Carousing
+
+
+\mysubsection{Adventuring}{misc-adventuring}
+
+Think about the Savage Sword of Conan.  He's out there killing pteranodons and slaying an average of 3 men with one blow, but those feats of strength are all encounters in a chapter of his greater adventures.  They fit nicely in a handful of comic books ("part 3 of 3 - Escape from the Necromancer's Lair)".  The Arbiter is there to help you narrate the chapters of \mybold{your}Adventure, just like R.E.H. did for Conan.
+
+At the end of an Adventure, when you return to Civilization to eat and drink your fill, the Arbiter can award you XP.  It's completely up to her how much this is!  A good rule of thumb is if the Adventure would close a comic series or end a TV arc or finish a section of a novel, that's a good time to assign some XP (Thundarr breaks the werewolf curse; Conan escapes the Demons of the Summit; Fafhrd and the Grey Mouser return to Lankhmar with Ohmphal's fingertips, etc.)
+
+\mysubsection{Looting and Spending}{misc-looting-spending}
+
+\flavor{
+  There comes a time, thief, when the jewels cease to sparkle, when the gold loses its luster, when the throne room becomes a prison, and all that is left is a father's love for his child. ~King Osric
+}
+
+Every bit of treasure you're able to loot on the adventure can potentially count towards your advancement ("potentially" because it's useless if you don't spend it).  Note that money you obtain and spend outside of an Adventure doesn't count towards this total (so if you pickpocket some rube or setup an opium trade or steal from the King it doesn't count, unless the chapter of your Adventure is entitled "Steal Shit from the King").  This is up to the Arbiter's discretion.
+
+\mylist {
+  \item Levels 1 and 2 are the \mybold{Iron levels}.  You get 1xp for every iron piece you loot AND spend in Civilization.  These don't have to be Iron pieces per se -  if you were to loot and spend a single \AU, you would gain 100xp (but you would need to be in a larger civilization to spend it!)
+
+  \item Levels 3-5 are the \mybold{Silver levels}.  You get 1xp for every silver piece you loot AND spend in Civilization 
+
+  \item Levels 6+ are the gold levels.  You get 1xp for for every gold piece you loot AND spend in Civilization
+}
+
+Any coins you spend in Civilization are converted to XP on a 1-to-1 basis, including:
+
+\mybullet {
+  \item The amount of money you have to spend to Sojourn or Sabbatical
+  \item Any gear, narcotics, mounts, etc. you buy while in Civilization
+  \item Any money you spend on Occultism, Chymistry, Miracles, Medicinals, Staff Magic, Sword Magic, or Inscription
+  \item Any money you spend on a Carousing
+}
+
+Keep in mind the size of the Civilization you're in - you can't spend gold in Small hamlets!
+
+You'll note that it gets harder and harder to get XP with money as you go up in level.  This is by design - legendary heroes aren't getting experience taking money from orc babies, but by doing epic shit i.e. writing chapters in their Adventure.  In time, the jewels cease to sparkle...
+
+
+\mysubsection{Carousing}{misc-carousing}
+If you've spent all the money you can, Carousing is a way to convert any extra coins you've got lying around into XP on a 1-for-1 basis. Say how much money you're going to burn and roll a d20 on the chart below.  You get a +1 for every 100 coins you spend (rounded down)
+
+If you decide to go Carousing with a Pooka, you roll a d24 instead.  If a Pooka goes Carousing with you, \myital{they} get 5\% of any XP you make (this is in addition to your XP, they don't take from your XP).  They also have to roll a 20 on the table below, though.
+
+\end{multicols}   
+
+\mytable{l p{1.0\linewidth}}{
+  \thead{} & \thead{While Carousing you ...} \\
+}{
+  1  & Accidentally set the town aflame. Roll d6 twice. 1-2 burn down where you're staying; 3-4 some other house burns down; 5-6 a big chunk of town goes up in smoke. 1-2 no one knows it was you; 3-4 your fellow carousers know you did it; 5 someone else knows, perhaps a blackmailer; 6 everybody knows. \\
+  2  &  Were robbed whilst unawares. Was it that saucy wench that you swear came to your room? You lose everything of value that you are carrying (Arbiter's discretion) \\
+  3 & Talk shit and get called out. You get the XP for this Carousing, but you can't get any more until you do something really awesome designated by the Arbiter, like killing a legendary monster or stealing a legendary treasure. \\
+  4 & Get in a fight, lose d3 teeth, get a black eye, or break your nose and you'll be sore (-d3 Grit, min 0) at the start of the next dungeon or fight. \\
+  5 & Get alcohol poisoning. Roll a Save vs. Toxins. If you succeed, take 1 damage to Grit.  If you fail, take d6 damage to Grit \\
+  6 & Are inducted into a cult. It takes your friends the rest of the Sojourn to deprogram you.  Carousing earned you  -10\% XP \\
+  7 &   Break some knuckles punching a dude. No two-handed weapons/shields until you Sojourn again \\
+  8 & Hangover from Hell. Roll twice on the Hang Over effect and take \mybold{both}  effects \\
+  9 & Are mistaken for someone else, and charged with their tab. Pay 30\% more money (no xp for it) or wake up in the slammer. \\
+  10  & Wake up in stocks. Authorities let you out after a day. \\
+  11 & Gain reputation as a lecherous lush. Social interactions in this town are \myital{awkward.}  \\
+ 12 & Adapt to all the partying. Your Save vs. Toxins goes up by 1 until the next Sojourn \\
+ 13 &Gain 3 rumors about the next adventure  \\
+  14  &Totally see through the Snail Knight's disguise, but are cool about it, and he will show up when you need him most. \\
+  15 & Dice are hot. Get d100 coins  \\
+  16 &Have an epic night and end up with a sweet scar.  \MAX Presence goes up \DCUP  \\
+  17  & Win a bar bet and gain the services of two henchmen with low morale for a month. They may stay on if you pay them  \\
+  18 & Run into a long-lost relative. Maybe they want to go adventuring with you?! (henchman - high morale)  \\
+  19 &  Are mistaken for an important figure and the party gets really going. +25\% XP.  \\
+  20+ & Have a lot of fun and get plenty of relaxation \\  
+}
+
+\example {
+    Mad Tom (a Soldier), Aelfirth (a Mystic), and Stump Beefknob (a Pooka) are all level 1, returning from their first adventure laden with loot.  They make their way back to Lankhmar and elect to take a Sojourn. The Arbiter awards them all 200 xp right off the bat for surviving and killing the Thing Beneath the Stair (completing a Chapter in the Arbiter's story).  They each spend 100\FE to Sojourn and spend an additional 100\FE each on equipment. After selling a carpet and armoire they managed to secure, they each have 400\FE left.  They all decide to go Carousing together and spend their remaining iron pieces.  
+
+    Because they're Carousing with a Pooka, Mad Tom and Aelfirth both roll a d24 - Stump rolls a d20.  Tom rolls a 14 (10 + 4 for the 400\FE) and sees through the Snail Knight's disguise; now he has an ally that he notes on his character sheet.  Aelfirth rolls a 7 (3+4, bad luck!) and gets alcohol poisoning.  Stump rolls a 15 - looks like he won 43\FE gambling.  
+
+    Tom and Aelfirth get 800 xp (200 from the Arbiter, 100 from the Sojourn, 100 from equipment, and 400 from going Carousing).  Stump earns 880xp (800 xp, same as Tom and Aelfirth, plus 5\% of the 1600 Tom and Aelfirth earned collectively).
+  }
+
+
+  \begin{multicols}{2}
+
+  \mysubsection{Gaining a Level}{misc-leveling}
+
+  You made it to the next level!  Congratulations.  You can do the following:
+  
+  \mynumlist {
+    \item Roll your \FLESH twice and add the best result to your Grit.  If you're a Soldier, also add your \LVL to this roll.
+    \item Increase the \MAX of your Primary Stat \DCUP
+    \item Choose an addition (non Primary) stat and increase its \MAX \DCUP.  This can be a \mylink{Tangible}{tangible-stats} or \mylink{Intangible}{intangible-stats} Stat, but not your Primary one.
+    \item If it's an even numbered level (2,4,6, or 8) - increase your Edge or Ordinary \mylink{Save}{saves} by 1.  If it's an odd numbered level (3, 5, 7, or 9) - you can increase any Save by 1 (\mylink{Murks}{species-murk} can increase any Save at any level).
+    \item If you're a Barbarian, roll your \VIG.  If it's greater than your current Flesh, your current Flesh is this new value.
+    \item Check your Trope, Flavor, or Species and update your character sheet with any new abilities 
+  }
+
+  \example {
+    Example: Mad Tom (Soldier), Aelfirth (Mystic), and Stump (Pooka) all reach level 3.  Mad Tom has a Grit of 11, Aelfirth has a Grit of 3, and Stump has a Grit of 2.  Mad Tom has a \FLESH of d10, so he rolls 2d10 for his Grit and takes the highest. He gets a 4 and a 7.  Because he's a Soldier he adds his \myital{current} level to the highest die and ends up with a 9.  His new Grit is 20 (11+9). Tom increases his \VIG \DCUP and decides to increase his Presence \DCUP.  He moves his Save vs. Doom up by 1 and updates his sheet with his new \DEED.
+
+    ~\\
+    Aelfirth has a \FLESH of d4, so she rolls 2d4 and gets a 2 and a 1.  Her Grit goes from 3 to 5.  She increases her \FOC \DCUP and decides to increase her \DEX \DCUP to counteract her low Flesh.  She decides to move her Save vs. Hexes \DCUP, and updates her sheet with her new Grace (and adds 2 Faith Die).
+
+    ~\\
+    Stump has a \FLESH of d6, so he rolls 2d6 and gets a 4 and a 5.  His Grit is now 7. His Presence moves \DCUP, and he decides to move his Talent \DCUP as well.  He moves his Save vs. Doom up 1 also, and updates his sheet with his new Luck Die
+  }
+
+
+
+
+
+
+
+
+
+
+
+} %end

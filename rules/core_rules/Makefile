@@ -15,6 +15,8 @@ setup:
 	ln -sf ../skills_and_saves.tex out/
 	ln -sf ../fae.tex out/
 	ln -sf ../civilization.tex out/
+	ln -sf ../encumbrance.tex out/
+	ln -sf ../miscellania.tex out/
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=TotalityofYgg -output-directory out core_rules
 
