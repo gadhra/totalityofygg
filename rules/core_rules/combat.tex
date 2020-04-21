@@ -41,7 +41,7 @@
   Each type of armor has a \MD associated with it:
 
   \mytable{X r}{
-    \thead{\mylink{Armor}{civilization-armor}} & \thead{\MD} \\
+    \thead{\mylink{Armor}{gear-armor}} & \thead{\MD} \\
   }{
     None & d20 \STATIC \\
     Light & d12 \STATIC \\
@@ -81,17 +81,17 @@
 
   The Arbiter will tell you the \mybold{Monster Weakness}, a \STATIC die between d24 (weakest) and d3 (strongest).
 
-  Your Fight \RO depends on whether you're using a Hard weapon (\VIG) or a Fast weapon (\DEX).  Weapon types are found in \mylink{Equipment}{civilization-equipment-weapons}
+  Your Fight \RO depends on whether you're using a Hard weapon (\VIG) or a Fast weapon (\DEX).  Weapon types are found in \mylink{Equipment}{gear-weapons}
 
   If you succeed in your Fight \RO test, you deal damage to the Monster.
 
   \myhighlight{Dealing Damage}{combat-dealing-damage}
 
-  The damage your weapon does is a \STATIC die.  Weapon damage is found in \mylink{Equipment}{civilization-equipment-weapons}.  You roll the \STATIC and deal that much damage to the Monster.
+  The damage your weapon does is a \STATIC die.  Weapon damage is found in \mylink{Equipment}{gear-weapons}.  You roll the \STATIC and deal that much damage to the Monster.
 
   \myhighlight{Crits and Fumbles}{combat-crits-and-fumbles}
 
-  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \DEX.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}
+  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \DEX.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}.  The die you roll on that table is specified in the \mylink{Armor type}{gear-armor}.
 
   If you roll the \MAX number on the die naturally (or someone turns your die into that \MAX number), test your \RS : \VIG.  If you \mybold{don't} roll a Failure, your attack is a Crit.  Add your \LVL to the damage.
 
@@ -115,7 +115,7 @@
     d24 & 4  \\
   }
 
-  If you bring someone to 0 Flesh via Unarmed combat, they are \mylink{Knocked Out}{effects-knocked-out} for d4 \mylink{Markovian}{effects-markovian}.  Continued Unarmed attacks against Knocked Out foes prompt \DEATH rolls as you beat them to death.
+  If you bring someone to 0 Flesh via Unarmed combat, they are \mylink{Knocked Out}{effect-knocked-out} for d4 \mylink{Markovian}{effects-markovian}.  Continued Unarmed attacks against Knocked Out foes prompt \DEATH rolls as you beat them to death.
 
   Note that since this isn't a die roll there's no way to Crit or Fumble.
 
@@ -137,7 +137,7 @@
   Taking damage works in roughly the same way as dealing damage, except the Arbiter rolls for Monster damage.  \mybold{Monsters cannot Crit or Fumble.}  When taking damage, you apply it in the following order:
 
   \mynumlist {
-    \item \mybold{Shield} : If you have a shield equipped (that is, on your arm) and take \mybold{physical damage} , you can perform the \mylink{Mighty Deed of Arms: Splinter}{combat-action-splinter} (this counts as your Fight Action for the Moment; if you already took your Fight Action, you can't use this). The shield is sundered and you take no damage. Stop here.  Otherwise ...
+    \item \mybold{Shield} : If you have a shield equipped (that is, on your arm) and take \mybold{physical damage} , you can perform the \mylink{Mighty Deed of Arms: Splinter}{combat-tactical-maneuver-splinter} (this counts as your Fight Action for the Moment; if you already took your Fight Action, you can't use this). The shield is sundered and you take no damage. Stop here.  Otherwise ...
     \item \mybold{Grit} : Subtract the damage from your Grit.  If there's any damage left over, move to Armor i.e. if I have a Grit of 4 and I take 9 damage, I have 5 damage left over and I move onto to Armor.
     \item \mybold{Armor} : If you have armor, see if it will absorb the damage.  Roll the {ud} for your armor and subtract the result from the damage.  For example, if I'm wearing chain mail (Medium armor) I roll a d8; if I rolled a 5, I'd subtract 5 from the total damage.  If there's any damage left over, move onto Flesh
     \item \mybold{Flesh} : Subtract the rest of the damage from Flesh. If you go to 0 or less Flesh, you are \mylink{Dying}{combat-dying}
@@ -216,7 +216,7 @@
   If a Monster moves Close to you during its turn, you may immediately take a Combat Action \mybold{before} the Monster attacks
 
   \myhighlight{Rage}{combat-tactical-maneuver-rage}
-  You take an Action to be come \mylink{Enraged}{effects-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
+  You take an Action to be come \mylink{Enraged}{effect-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
 
   \myhighlight{Reckless}{combat-tactical-maneuver-reckless}
   \myital{Brawl weapons only}
@@ -259,7 +259,7 @@
   \myhighlight{Disarm}{combat-deeds-disarm}
   \myital{Unarmed or Fast Brawl 1H weapons only. Target must be using a 1H weapon}
 
-  Try a Fight \RO; if you succeed, your opponent is \mylink{Disarmed}{effects-disarmed}
+  Try a Fight \RO; if you succeed, your opponent is \mylink{Disarmed}{effect-disarmed}
 
   \myhighlight{Florentine}{combat-deeds-florentine}
   \myital{Fast Brawl weapons only, but see below. \DEX d12 or better}

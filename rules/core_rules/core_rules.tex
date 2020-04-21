@@ -16,8 +16,9 @@
 \newcommand{\yggSkillsSaves}{}
 \newcommand{\yggCombat}{}
 \newcommand{\yggCivilization}{}
-
+\newcommand{\yggEquipment}{}
 \newcommand{\yggMiscellania}{}
+
 \newcommand{\yggArbiter}{}
 \newcommand{\yggAppendices}{}
 
@@ -28,9 +29,9 @@
 \newcommand{\yggSkillsSavesText}{}
 \newcommand{\yggCombatText}{}
 \newcommand{\yggCivilizationText}{}
-
-
+\newcommand{\yggEquipmentText}{}
 \newcommand{\yggMiscellaniaText}{}
+
 \newcommand{\yggArbiterText}{}
 \newcommand{\yggAppendicesText}{}
 
@@ -40,6 +41,8 @@
 \input{skills_and_saves.tex}
 \input{combat.tex}
 \input{civilization.tex}
+\input{equipment.tex}
+\input{miscellania.tex}
 
 
 
@@ -115,5 +118,26 @@
   \noindent\yggCivilizationText
 \end{multicols}
 \vfill\newpage
+
+% --- equipment -----------------------------------------------------------------
+\noindent\yggEquipment
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggEquipmentText
+\end{multicols}
+\vfill\newpage
+
+% --- miscellania  -----------------------------------------------------------------
+\noindent\yggMiscellania
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggMiscellaniaText
+\end{multicols}
+\vfill\newpage
+
+% --- arbiter's resources  -----------------------------------------------------------------
+
+% --- appendices -----------------------------------------------------------------
+
 
 \end{document}
