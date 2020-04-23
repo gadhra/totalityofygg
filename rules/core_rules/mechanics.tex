@@ -42,7 +42,7 @@ In a \RB attempt you roll a single die plus modifiers and try to beat 1 or more 
   An orc attempts to push a Barbarian off a ledge.  Both the orc and the Barbarian attempt a \RB : \VIG test, highest roll wins \\ ~\\ A Sorcerer casts Battering Beam at a kobold.  The kobold fails its Save and must attempt a \RB : \VIG vs. the Sorcerer's \INT \\ ~\\ Two Allies rush toward an idol teetering on the brink of a chasm.  They each attempt a \RB : \MD+\DEX test to see who gets there first
 }
 
-When Monsters attempt a \RB, they add their {hd} as a modifier to their test i.e. a 6 {hd} Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{characters-primary-stat}.
+When Monsters attempt a \RB, they add their \HD as a modifier to their test i.e. a 6\HD Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{primary-stat}.
 
 Ties go to the Allies.  If there's a tie between Allies, roll a d6 and add its result to your \RB until there's a winner.
 
@@ -115,6 +115,8 @@ Examples: Saves, Skill Dice
 
 Tangible Stats are the physical, definable aspects of your character.  Tangible Stats are \STATIC and don't go up or down unless something really bad happens.
 
+Each Mortal Trope has a \myanchor{Primary Stat}{primary-stat} listed below.
+
 \mysubsection{VIGOR}{tangible-stats-vigor}
 
 How strong you are, how much pain and hardship you can endure, your physical essence.  \VIG is used for Hard attacks and is the Primary Stat for Sellswords (Soldiers and Barbarians)
@@ -142,12 +144,16 @@ How well you can concentrate, how patient you are, your ability to observe and c
 
 Intangible Stats are the nonphysical, abstract aspects of your character. Intangible Stats are \UD and their die will decrease with use.  You can use your Intangible Stats to modify any \RO or \RB attempt using its \myital{corresponding} Tangible Stat (see below).
 
+Each Fae Species has a \myanchor{Primary Stat}{primary-stat} listed below.
+
 
 \mysubsection{PRESENCE}{intangible-stats-presence}
 
 Confidence, attractiveness, leadership, and intimidation. The Arbiter might ask you if you'd like to roll your Presence \UD if you're trying to sweet talk someone, keep a group of peons from breaking morale, or scaring a couple of kobolds into telling you what you want to know. 
 
 You can roll your Presence die and add its result to any \RO or \RB attempt you're making that involves \VIG.  If your Presence is exhausted, your confidence ebbs: you are unable to heal Grit until you gain a Presence \UD back.
+
+Presence is the Primary Stat for Pooka.
 
 
 \mysubsection{TALENT}{intangible-stats-talent}
@@ -156,12 +162,16 @@ It always seems like you're in the right place at the right time, or that you ha
 
 You can roll your Talent die and add its result to any \RO or \RB attempt you're making that involves \DEX.  If your Talent is exhausted, your luck has run out: you automatically take a 1 in any \mylink{Luck Contests}{other-stuff-luck-contests} until you gain a Talent \UD back.
 
+Talent is the Primary Stat for Night Children
+
 
 \mysubsection{AWARENESS}{intangible-stats-awareness}
 
-Your idle perception.  The Arbiter will ask you to roll your Awareness if you're looking for traps or to  notice something that you might not be actively looking for (you can say no!).  
+Your idle perception, your "sixth sense".   The Arbiter will ask you to roll your Awareness to  notice something that you might not be actively looking for (you can say no!).  
 
 You can roll your Awareness die and add its result to any \RO or \RB attempt you're making that involves \INT.  If your Awareness is exhausted, you are mentally fogged: you always lose Init until you gain an Awareness \UD back.
+
+Awareness is the Primary Stat for Spriggan
 
 
 \mysubsection{SANITY}{intangible-stats-sanity}
@@ -169,6 +179,8 @@ You can roll your Awareness die and add its result to any \RO or \RB attempt you
 How lucid you are, and how likely you are to keep your cool.  The Arbiter might tell you to make a Sanity roll when you see something particularly heinous (you don't get to say no on this one).  
 
 You can roll your Sanity \UD and add its result to any \RO or \RB attempt you're making that involves \FOC.  If you ever Fail a Sanity roll (roll a 1 or a 2), you must roll on \mylink{Terrifying Tables}{misc-terrifying-tables} (the Arbiter will determine which table to roll on). If your Sanity is exhausted, you immediately gain the Madness "Shot Nerves" in addition to any other Madnesses until you gain a Sanity \UD back.
+
+Sanity is the Primary Stat for Murks
 
 \newpage
 
@@ -194,7 +206,7 @@ A session is any time you sit down to play for a morning/afternoon/evening.  Whe
 
 
 \mysubsection{Adventure}{time-adventure}
-Determined by the Arbiter, see the section on \mylink{Adventures}{players-resources-adventures}.
+Determined by the Arbiter, see the section on \mylink{Adventures}{misc-adventuring}.
 
 \cbreak
 
@@ -264,7 +276,7 @@ Pick your Edge, Ordinary, and Flawed \mylink{Save Die}{saves}.  Each of these is
 
 If you're Mortal, choose a \mylink{Trope and Flavor}{mortal-adventurers}.  If you're Fae, choose your {Species}{fae-adventurers}. Adjust your stats as necessary.
 
-\mybold{Step 6:  Choose your \mylink{Languages}{arbiters-resources-languages}}
+\mybold{Step 6:  Choose your \mylink{Languages}{civilization-languages}}
 
 Everyone starts with Acheron, the "common" tongue. If you are Mortal, you also can speak one Dialect of your choice as you secondary language.  If you are Fae, your secondary language is:
 \mylist {
@@ -281,7 +293,7 @@ It's up to you if you can read AND write these languages.
 
 \mybold{Step 7:  \mylink{Flesh and Grit}{combat-flesh-grit}}
 
-Your starting Flesh is the \MAX value for your \HD as listed under your Template.  For example, Sellswords have a \HD of d10, so they start with 10 Flesh.  
+Your starting Flesh is the \MAX value of your \FLESH as listed under your Template.  For example, Sellswords have a \FLESH of d10, so they start with 10 Flesh.  
 
 Roll your \VIG.  If the total is greater than your current Flesh, your Flesh is that number instead (i.e. if you roll a 6 and you have 4 Flesh, your Flesh is now 6). \mylink{Sellswords}{trope-sellsword} (Soldiers and Barbarians) can add their \LVL to this roll, but no other modifiers.
 
