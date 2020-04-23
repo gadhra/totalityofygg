@@ -116,7 +116,7 @@
       \item \mybold{\myanchor{Brutal}{gear-weapon-brutal}}  When you roll damage, you can re-roll a 1.  If you roll a 1 again you automatically Fumble
       \item \mybold{\myanchor{Burst}{gear-weapon-burst}}  Anyone in range has to \RO their \MD + \DEX or take damage (see \mylink{Flask of Oil}{gear-adventuring})
       \item \mybold{\myanchor{Cleave}{gear-weapon-cleave}}  If the attack kills a Monster, you may immediately attack again
-      \item \mybold{\myanchor{Daze}{gear-weapon-daze}}  If you Crit with the weapon, the target is \mylink{Woozy}{effect-woozy} for d4 \mylink{Markovian}{effects-duration-markovian} unless they're wearing a helmet.
+      \item \mybold{\myanchor{Daze}{gear-weapon-daze}}  If you Crit with the weapon, the target is \mylink{Woozy}{effect-woozy} for d4 \mylink{Markovian}{time-markovian} unless they're wearing a helmet.
       \item \mybold{\myanchor{Hefty}{gear-weapon-hefty}}  Roll twice for damage and take the best 
       \item \mybold{\myanchor{Rend}{gear-weapon-rend}}  On a hit, optionally forgo damage and  remove 1 \UD of target armor, or reduce a Monster's Soak by 1
     }
@@ -427,8 +427,57 @@
     
     Mounts must pass a \mylink{Morale}{monster-morale} check to enter dangerous situations (combat, entering a dungeon, jumping a chasm, etc). Random mounts have Cowardly morale; trained mounts (warhorses, etc.) have Orderly morale.  If the morale check fails the mount will take no action (though if you want to flee on your mount, that's allowed). If your mount fails a Morale check, you can roll a \mylink{Skill:Travel}{skill-travel} check.  If you succeed, they get another morale check. You can \mylink{Bum Rush}{combat-deeds-bum-rush} while mounted.  If you or your mount take damage while mounted, you can make a Skill:Travel check and decide who takes the damage (you or the mount)
 
-  \mysection{Hirelings}{gear-hirelings}
-  TK TK TK TK TK
+  \mysection{Henchmen}{gear-henchmen}
+
+    \setcounter{footnote}{0}
+    \myital{Based on Arnold Kemp's article}\footnote{\url{https://goblinpunch.blogspot.com/2020/04/dungeoncrawling-hirelings.html}{}}
+
+    \mysubsection{Loyalty Checks}{gear-henchmen-loyalty-checks}
+
+    A Loyalty Check works the same way as \mylink{Monster Morale}{monster-morale} i.e. roll 2d6, if the number is greater than (but not equal to) the henchmen's Loyalty, they'll refuse to do what you're trying to coax them into doing.  If you wish, you can roll your Presence \UD and add it to the Henchmen's Loyalty, but a) you have to do it before you roll 2d6; b) it only counts for that Loyalty check;  and c) if you roll a Failure (a 1 or a 2), the Henchman automatically refuses, and their Loyalty goes down by 1.
+
+    Asking a hireling to take more risks than the rest of the party causes them to lose 1 Loyalty, regardless of whether or not they accept or refuse. Good treatment can make their Loyalty go up (to a maximum of 11).  Poor treatment obviously can drop it.
+
+    If a henchmen ever hits 0 Loyalty, they'll try to escape as soon as possible.  Maybe with your stuff.  Maybe they'll try to kill you, too.
+
+
+    \mysubsection{Hirelings}{gear-hirelings}
+
+    Hirelings will generally work for a set rate, usually 5 coins/day.  If a fight breaks out, they run for cover. They'll refuse to do anything overtly risky, but can be coaxed into doing something with minor risk with a Loyalty check.  Overtly risky tasks might be being the first one down a hallway, or pulling an unmarked lever. Moderately risky tasks might standing watch in the hall while the party is in a room.
+
+    Hirelings have a starting Loyalty of 3.
+
+    \myhighlight{Linkboys}{gear-hirelings-linkboys}
+    Linkboys hold torches so you don't have to. They only have a 1 in 6 chance of a torch going out if they should drop one for any reason, and they are able to light a torch using one action.  Torches not included.
+
+    \myhighlight{Porters}{gear-hirelings-porters}
+    Beefy numbskulls hired to carry your stuff. They can carry 10 \mylink{Significant Items}{equipment-significant-items} worth of gear.
+
+    \myhighlight{Guides}{gear-hirelings-guides}
+    Guys who know how to get to somewhere specific. Useful if you're \mylink{Traveling}{arbiter-travel} off the beaten track. Guides have a 5-in-6 Skill:Travel, but only to a specific location.
+
+    \myhighlight{Cook}{gear-hirelings-cook}
+    Good to have on \mylink{long journeys}{arbiter-travel}.  If you ever need to roll your Party Provisions, the Cook has a Skill:Travel of 5-in-6 (but only when it comes to food).
+
+    \newpage
+    
+    \mysubsection{Mercenaries}{gear-mercenaries}
+
+    Mercenaries will work for a half share of money, or for 10 coins a day (whatever is highest).  A mercenary will try to stay as close to the person who hired them as possible.  They stand in the background when possible, but don't generally shirk from combat.
+
+    Mercenaries have a starting Loyalty of 7. They'll have to check their Loyalty if they're asked to do something overtly risky.  In combat, they'll need to check Loyalty a) when the first adventurer starts \mylink{Dying}{combat-dying}; b) when half the adventurers are incapacitated; and c) if the person their attached to becomes incapacitated.
+
+    \myhighlight{Meatshield}{gear-mercenary-meatshield}
+    A Meatshield gives you +3 to your Fight \RO, but they don't take a turn themselves.  Any physical damage you would take you can put onto the Meatshield instead.  Meatshields have 6 Flesh and 0 Grit, but you can give them Armor if you like.
+
+    \myhighlight{Trapsman}{gear-mercenary-trapsman}
+    A trapsman can be coaxed into picking locks, removing traps, and scouting rooms.  They have the Tinkering skill of 3-in-6.  They give you a +1 to your Fight \RO, but they don't take a combat turn themselves.  Any physical damage you would take you can put onto the Trapsman instead.  They have 4 Flesh, 4 Grit, and can't wear any Armor.
+
+
+
+
+
+
 
 
   \footnotetext{See the Bell, Book, and Candle PDF}
