@@ -6,9 +6,11 @@
 \ProvidesFile{ygg.sty}
 \ProvidesPackage{ygg}
 
+
+
 % --- common packages --------------------------------------------------
 
-\usepackage[cmyk,table,usenames,dvipsnames]{xcolor} % load early to avoid name clash
+\usepackage[cmyk,table,dvipsnames]{xcolor} % load early to avoid name clash
 \usepackage{verbatim}  % \begin{comment} support
 \usepackage{eso-pic}   % AddToShipoutPicture support
 \usepackage{units}   % nice fractions (like "1/2")
@@ -76,6 +78,21 @@
 
 \usepackage{fontspec}
 \ifdefined\fontsearchpath\else\newcommand{\fontsearchpath}{../fonts}\fi
+
+\makeatletter
+\let\@@scshape=\scshape
+\renewcommand{\scshape}{%
+  \ifnum\strcmp{\f@series}{bx}=\z@
+    \usefont{T1}{cmr}{bx}{sc}%
+  \else
+    \ifnum\strcmp{\f@shape}{it}=\z@
+      \fontshape{scsl}\selectfont
+    \else
+      \@@scshape
+    \fi
+  \fi}
+\makeatother
+
 
 % Free Futura font, based off of TSR's PH1e
 \newfontfamily{\fftext}[
@@ -217,7 +234,7 @@
 \newcommand{\mybold}[1]{{\textbf{#1}}}
 \newcommand{\myital}[1]{{\textit{#1}}}
 \newcommand{\mylink}[2]{
-  \hyperlink{#2}{#1}
+  \texorpdfstring{\hyperlink{#2}{#1}}{}
 }
 \newcommand{\myanchor}[2]{
   \hypertarget{#2}{#1}
@@ -326,11 +343,11 @@
     \vspace{2pt plus 6pt}%
     \noindent%
     \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{|X|X|X|X|}
+    \begin{tabularx}{\linewidth}{|l|X|l|X|}
     \hline
     \rowcolor{silver}
     \mybold{Mv} & \commandkey{MV} & \mybold{Wk} & \commandkey{WK} \\
-    \mybold{Dmg} & \commandkey{DMG} & \mybold{Hlth} & \commandkey{HD}\HD ({\commandkey{Power}}) [\commandkey{Soak}] \\
+    \mybold{Dmg} & \commandkey{DMG} & \mybold{Hlth} & \commandkey{HD} \HD ({\commandkey{Power}}) [\commandkey{Soak}] \\
     \mybold{Morale} & \commandkey{Morale} & \mybold{Save} & \commandkey{Save} \\
     \hline
     \end{tabularx}\vspace{2pt plus 6pt}
