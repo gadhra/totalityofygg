@@ -17,6 +17,10 @@ setup:
 	ln -sf ../civilization.tex out/
 	ln -sf ../encumbrance.tex out/
 	ln -sf ../miscellania.tex out/
+	ln -sf ../arbiter.tex out/
+	ln -sf ../bestiary.tex out/
+	ln -sf ../appendices.tex out/
+	ln -sf ../thanks.tex out/	
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=TotalityofYgg -output-directory out core_rules
 

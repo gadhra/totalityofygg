@@ -239,7 +239,7 @@
   Through certain signs and orisons to Ptah, Issek, and others, you can open locks and untie bonds.
 
   \myhighlight{Clockwork Sense}{knave-clockwork-sense} \\
-  You can uncover and understand the mechanisms of traps, snares, and Inscribed glyphs - and chide them into disarming themselves.
+  You can uncover and understand the mechanisms of traps, snares, and Inscribed Sigils - and chide them into disarming themselves.
 
   \myhighlight{Gloomstride}{knave-gloomstride} \\
   You step through the veil between reality and shadow; you must tread silently or be taken by the denizens that live here.  Certain admonishments allow you to silence the clink of coins in your pocket and the sound of your breath.  Gloomstriding will allow you to get \mylink{The Drop}{combat-surprise} on someone (which allows for a Murder - see below).
@@ -261,7 +261,7 @@
 
   \mysubsection{Murder}{knave-murder}
 
-  If you get \mylink{The Drop}{combat-surprise} on someone, you can attempt a Murder.  Murder can only be performed at Close range with a Shortsword, Dagger, Club, or Hand Axe (Bravos are allowed to use Bows and Strongbows, but only on targets Nearby).  Make a Fight \RO, adding your \LVL as a modifier. If you hit, pick \mybold{one} of the following attacks:
+  If you get \mylink{The Drop}{combat-surprise} on someone, you can attempt a Murder.  Murder can only be performed at Close range with a Shortsword, Dagger, Club, or Hand Axe (though \mylink{Bravos}{flavo-bravo} can use more powerful weapons).  Make a Fight \RO, adding your \LVL as a modifier. If you hit, pick \mybold{one} of the following attacks:
 
   \mybullet {
     \item \mybold{Cautious:}  You automatically \mylink{Crit}{combat-crits-and-fumbles} (do maximum damage + \LVL).  Any weapon.
@@ -275,11 +275,11 @@
   \cbreak
 
   \example {
-    Flink Lighthand and Stalwart Hamhands (a Level 3 Soldier) come around the corner and surprise a clutch of three Ghouls.  Because they are surprised, Flink has The Drop.  He tries to \RO his Fight + \LVL, and hits.  He opts to attack recklessly and rolls 3d6 and gets an 11 - the lead Ghoul gets a shortsword through the belly and drops.  Stalwart neatly beheads another, leaving a single Ghoul (who makes his morale roll).   
+    Flink Lighthand (3rd Level Bravo) and Stalwart Hamhands (a Level 3 Soldier) come around the corner and surprise a clutch of three Ghouls.  Because they are surprised, Flink has The Drop.  He tries to \RO his Fight + \LVL and makes it.  He's armed with a War Axe (because he's a Bravo) and opts to attack "Cautiously".  He deals 11 damage (8 for the axe + \LVL) and drops the first ghoul before they can react.  He takes another swing (the War Axe can \mylink{Cleave}{gear-weapon-cleave}), but since he doesn't have The Drop it's just a straight Fight \RO using his \VIG.  He misses, but Stalwart steps up behind him and guts another ghoul with his polearm.  The single remaining ghouls rolls morale and (somehow) decides to stay and fight.
 
     ~\\
 
-    Flink and Stalwart roll Init - Flink rolls well over 20, Stalwart less so (he's wearing plate mail, after all).  Flink takes the opportunity to Gloomstride.  The Arbiter gives the difficulty a 3 (2 for the Monster's \HD and 1 because the Ghoul is Close and aware Flink's there, though he's mostly focussed on the huge armored guy with a longsword). Flink rolls his d6 and gets a 5, and slips out of view.  The Ghoul attacks Stalwart and hits, but Stalwart is able to absorb the damage with his Grit.  It's Stalwart and Flink's turn - Flink steps out behind the Ghoul and opts for a "Cautious" approach, makes his Fight + \LVL \RO, and deals 9 damage with his shortsword (6 + \LVL).  Stalwart finishes the creature off with a quick thrust through the heart.
+    Flink and Stalwart roll Init - Flink rolls well over 20, Stalwart less so (he's wearing plate mail, after all).  Flink takes the opportunity to Gloomstride.  The Arbiter gives the difficulty a 3 (2 for the Monster's \HD and 1 because the Ghoul is Close and aware Flink's there, though he's mostly focussed on the huge armored guy with a polearm). Flink rolls his d6 and gets a 5, and slips out of view.  The Ghoul attacks Stalwart and hits, but Stalwart is able to absorb the damage with his Grit.  It's Stalwart and Flink's turn - Flink steps out behind the Ghoul and opts for a "Cautious" approach, makes his Fight + \LVL \RO, and deals 11 damage again (8 + \LVL), cutting the ghoul neatly in half.
   }   
 
 
@@ -312,8 +312,8 @@
   \mybold{Steady Hands}
   You do not need to make any checks for handling Toxins or Acids.
 
-  \mybold{Sniper Shot}
-  You can use a \mylink{Bow}{gear-weapons} or \mylink{Strongbow}{gear-weapons} to commit Murder. You must still get The Drop, and the target cannot be further away than Nearby (and cannot be Close)
+  \mybold{Brutal Slaying}
+  When attempting a Murder, you may use a \mylink{War Axe}{gear-weapons} or \mylink{Longsword}{gear-weapons}.  If you manage to slay the Monster, you may invoke the War Axe trait of \mylink{Cleave}{gear-weapon-cleave} to attack another Monster, but it doesn't count as a Murder (you no longer have The Drop).
 
   \mybold{Red Herring}
   You know the additional \myanchor{Whisper: Red Herring}{whisper-red-herring}.  You use minor illusions, shadows, and hypnotism to disguise yourself as someone else.
@@ -563,6 +563,8 @@
 
   \mysubsection{Meditative}{devotee-meditative}
   Devotees add their \LVL to any \RO or \RB attempt they're trying that includes their \FOC
+
+  \cbreak
 
   \mysubsection{Faith and Mojo}{devotee-faith-and-mojo}
 

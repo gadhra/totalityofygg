@@ -18,9 +18,10 @@
 \newcommand{\yggCivilization}{}
 \newcommand{\yggEquipment}{}
 \newcommand{\yggMiscellania}{}
-
 \newcommand{\yggArbiter}{}
-\newcommand{\yggAppendices}{}
+\newcommand{\yggBestiary}{}
+\newcommand{\yggAppendix}{}
+\newcommand{\yggThanks}{}
 
 % Body
 \newcommand{\yggMechanicsText}{}
@@ -31,9 +32,10 @@
 \newcommand{\yggCivilizationText}{}
 \newcommand{\yggEquipmentText}{}
 \newcommand{\yggMiscellaniaText}{}
-
 \newcommand{\yggArbiterText}{}
-\newcommand{\yggAppendicesText}{}
+\newcommand{\yggBestiaryText}{}
+\newcommand{\yggAppendixText}{}
+\newcommand{\yggThanksText}{}
 
 \input{mechanics.tex}
 \input{mortals.tex}
@@ -43,6 +45,10 @@
 \input{civilization.tex}
 \input{equipment.tex}
 \input{miscellania.tex}
+\input{arbiter.tex}
+\input{bestiary.tex}
+\input{appendices.tex}
+\input{thanks.tex}
 
 
 
@@ -136,8 +142,35 @@
 \vfill\newpage
 
 % --- arbiter's resources  -----------------------------------------------------------------
+\noindent\yggArbiter
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggArbiterText
+\end{multicols}
+\vfill\newpage
+
+% --- bestiary  -----------------------------------------------------------------
+\noindent\yggBestiary
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggBestiaryText
+\end{multicols}
+\vfill\newpage
 
 % --- appendices -----------------------------------------------------------------
+\noindent\yggAppendix
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggAppendixText
+\end{multicols}
+\vfill\newpage
 
+% --- thanks  -----------------------------------------------------------------
+\noindent\yggThanks
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggThanksText
+\end{multicols}
+\vfill\newpage
 
 \end{document}
