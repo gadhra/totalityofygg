@@ -28,7 +28,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
 
 \myhighlight{Monster Speed}{monster-speed}
 
-  \mytable{X c c c}{
+  \mytable{l X X X}{
     \thead{} & \thead{Slow} & \thead{Base} & \thead{Fast}  \\
   }{
     Speed & d20 & d16 & d12 \\
@@ -44,7 +44,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
 
 \myhighlight{Monster Power}{monster-power}
 
-  \mytable{X c c c}{
+  \mytable{l X X X}{
     \thead{} & \thead{Weak} & \thead{Average} & \thead{Strong}  \\
   }{
     Health & 3 per \HD & 5 per \HD & 7 per \HD \\
@@ -60,7 +60,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
 
 Soak is a general term to represent a damage threshold because of armor, thick scales or carapaces, or tough or rubbery bodies.  The amount of damage from a \mybold{physical attack}  is reduced by the amount of the Soak.  For example, a Monster with a Soak of 3 would ignore 3 points of damage from a physical attack (so if you roll a 4 for damage, the Monster will only take 1 point of damage).  Certain Monsters have a Soak against specific types of weapons (for example, Skeletons can Soak 1 point of Stabbing damage).  Murder bypasses Soak, and Rend reduces Soak by 1. 
 
-  \mytable{X c}{
+  \mytable{l X}{
     \thead{Rating} & \thead{Examples}  \\
   }{
     1 & Armored troops, Giant Toads, Skeletons (bashing only), etc \\
@@ -1356,19 +1356,21 @@ Unless you're Surprised, you always win Init against a Zombie. Zombies will try 
 
 \example{ Dragons are immune to the Mind paradigm, and to Elemental Damage that corresponds to their breath weapon.  They can only be struck by magical weapons.  They automatically win any \RB tries. }
 
+\begin{multicols}{2}
+
 \mysubsection{Creating a Dragon}{monster-dragon-creation}
 
 You'll need to roll 3d6 to generate a dragon.
-\mylist {
-  \item First roll is the dragon's color: 1) Red, 2) Black, 3) White, 4) Blue, 5) Green, 6) Bone
-  \item Second roll is the dragon's size: 1) Small, 2) Middling, 3) Large, 4) Huge, 5) Colossal, 6) Titanic
-  \item Third roll is the dragon's age: 1) Juvenile, 2) Adult, 3) Old, 4) Very Old, 5) Ancient, 6) Wyrm
+\mynumlist {
+  \item Roll the dragon's color: 1) Red, 2) Black, 3) White, 4) Blue, 5) Green, 6) Bone
+  \item Roll the dragon's size: 1) Small, 2) Middling, 3) Large, 4) Huge, 5) Colossal, 6) Titanic
+  \item Roll the dragon's age: 1) Juvenile, 2) Adult, 3) Old, 4) Very Old, 5) Ancient, 6) Wyrm
 }
 
 
 Next, roll on the table below a number of times equal to the dragon's size.  Results stack.
 
-  \mytable{X c}{
+  \mytable{l X}{
     \thead{d6} & \thead{Modification}  \\
   }{
     1 & Add +1 to Soak \\
@@ -1381,7 +1383,7 @@ Next, roll on the table below a number of times equal to the dragon's size.  Res
 
 Now, roll on the table below a number of times equal to the dragon's age.  Results \myital{do not} stack. If you get the same roll, roll again.  A Wyrm will have all of these abilities:
 
-  \mytable{X c}{
+  \mytable{l X}{
     \thead{d6} & \thead{Enhancement}  \\
   }{
     1 & Wing Buffet \\
@@ -1406,7 +1408,7 @@ Breath weapons have a range of Nearby.
 
 Take the [sum] of the dragon's age and size rolls.  This is the base damage for their breath weapon as well as how many times they can use it in Combat:
 
-  \mytable{X c c}{
+  \mytable{l X X}{
     \thead{sum age+size} & \thead{Damage} & \thead{Uses} \\
   }{
     2-4 & 6d6 & 1 \\
@@ -1422,6 +1424,8 @@ There are 2 ways to reduce the damage from a breath weapon:
   \item Make a Save vs. Doom. If you succeed, take half damage again.
 }
 
+\cbreak
+
 These effects stack - so making your Talent roll + Save vs. Doom will reduce the amount of damage by 75\%. Roll the check and Save before you apply damage to Armor or Flesh. 
 
 Finally, the color of the dragon also affects the breath weapon:
@@ -1436,6 +1440,8 @@ Finally, the color of the dragon also affects the breath weapon:
 }
 
 \newpage
+
+\end{multicols}
 
 \mysection{Elementals}{monster-type-elementals}
 

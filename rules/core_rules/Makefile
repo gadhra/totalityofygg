@@ -15,7 +15,6 @@ setup:
 	ln -sf ../skills_and_saves.tex out/
 	ln -sf ../fae.tex out/
 	ln -sf ../civilization.tex out/
-	ln -sf ../encumbrance.tex out/
 	ln -sf ../miscellania.tex out/
 	ln -sf ../arbiter.tex out/
 	ln -sf ../bestiary.tex out/
