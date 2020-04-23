@@ -196,6 +196,13 @@ If you see an effect that happens at the "bottom of the Moment", this is immedia
 \mysubsection{Combat}{time-combat}
 There are 2 important types of tracked time in Combat - Moments and Minutes.  Moments are fast-paced scenes of danger and Minutes encompass the entire Combat.  
 
+\mysubsection{Markovian}{time-markovian}
+
+During Combat, you may be hit with an effect or spell that has a Markovian duration.  Markovian effects happen immediately, but have a random duration over the course of Moments.  Markovian durations have a die attached to them i.e "d4 Markovian".  
+
+At the bottom of a Moment, \RS with the die associated with the duration.  If you fail (roll a 1 or a 2), the effect immediately ends.  If you don't fail, the die moves \DCDOWN.
+
+For example, if you were struck by a Ghast and paralyzed for d4 Markovian, you would roll a d4 at the bottom of the Moment.  If you rolled a 1 or a 2, the paralysis would end.  If you rolled a 3 or a 4, the die would move to a d3.
 
 \mysubsection{Out of Combat}{time-out-of-combat}
 
