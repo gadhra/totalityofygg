@@ -1,0 +1,282 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggArbiter}{%
+  \mychapter{Arbiter}{arbiter}
+}
+
+\renewcommand{\yggArbiterText}{%
+
+  \mysection{Movement}{arbiter-movement}
+
+
+  \mysubsection{Getting Chased}{arbiter-movement-getting-chased}
+
+  Both the pursuer and the pursued roll an \RB : \MD.  Unless they split up, use the lowest \MD in the group.
+
+  The loser moves their \MD \DCDOWN, the winner moves their \MD is \DCUP (track this separately, this is just for the purposes of the chase).  The chase ends when someone loses on a d4 or wins on a d20.  During a chase, any Shoot or Throw attacks suffer a penalty equal to the opponent's \MAX \MD (-4 for a d4, -8 for a d8, etc)
+
+  If someone is being chased and the pursuer rolls a Failure on their \MD, the adventurer being chased can try to do something to lose them (so in a city something like jumping onto a roof or into an alley or a random doorway or spilling a cart in front of them). If they win the next check, they lose the pursuer and the chase is over.
+
+  If a adventurer is pursuing someone and their prey rolls a Failure on their \MD, the adventurer can try to do something to stop them (like yelling at Old Bob who's always standing in front of the Bloated Cuttlefish to grab them).  If they win the next check, they catch their prey and the chase is over.
+
+
+  \mysubsection{Jumping Distances}{arbiter-movement-jumping}
+
+  If an adventurer is trying to jump over something, they must \RO using their \MD plus either \VIG or \DEX (their choice) plus a modifier for distance:
+
+  \example {
+    \RO : \MD plus \VIG or \DEX plus Modifiers
+  }
+
+  The modifier depends on whether or not they have a running start. A adventurer can't jump more than 9m (4m if standing):
+
+  \mytable{X c c}{
+    \thead{Distance(m)} & \thead{Running Bonus} & \thead{Standing Bonus} \\
+  }{
+    1 & +9 & -3 \\
+    2 & +7 & -5 \\
+    3 & +5 & -7 \\
+    4 & +3 & -9 \\  
+    5 & +0 & n/a \\
+    6 & -3 & n/a \\
+    7 & -5 & n/a \\
+    8 & -7 & n/a \\
+    9 & -9 & n/a \\
+  }
+
+  \example {
+    An unarmored person (d20) with a d12 \DEX wants to make a running jump over a 3m pit.  They have to \RO with a d20+d12+5 (about a 63\% chance)
+    ~\\
+    The Solider with Heavy armor (d4) and a d16 \VIG would need to \RO with a d20+d4+5 to jump over the same pit (about a 43\% chance).
+  }
+
+  \mysubsection{Climbing and Falling}{arbiter-movement-falling}
+  There's no damage if you fall 5m or less.  
+
+  For every meter over 5 you fall, you take 1 damage (so 6m would be 6 damage).  This damage can be absorbed by Armor but not Grit (or a shield).  
+
+  You get 2 chances to reduce damage:
+  \mynumlist {
+    \item Roll a \RS : Talent. If you succeed,  take half damage (if you fail, move your \UD \DCDOWN)
+    \item Make a Save vs. Doom.  If you succeed, take half damage again.
+  }
+
+  These effects stack - so making your Talent roll + Save vs. Doom will reduce the amount of damage by 75\%.  Roll the check and Save before you apply damage to Armor or Flesh.  If falling means you are \mylink{Dying}{combat-dying}, you also take the effects of \mylink{Bleeding}{effect-bleeding} and \mylink{Knocked Out}{effect-knocked-out}
+
+  \mysubsection{Random Encounters}{arbiter-movement-random-encounters}
+
+  The lowest \MD in the party is used for random encounter checks using a \RS : \MD.  Failure means a wandering Monster shows up. 
+
+  \mysubsection{Dangerous Terrain}{arbiter-movement-dangerous-terrain}
+
+  If the adventurers are crossing an area that is dangerous, or where time is of the essence, give the room a total number that you need to roll to cross it.  Every \MD roll takes a Moment - so crossing the room with a movement number of 12 will require at least 3 Moments for the adventurer in Heavy Plate (3d4), while the guy in a nightshirt has a 45\% 
+
+  \end{multicols}
+
+  \mysection{Knavery}{arbiter-knave}
+
+  Setting a difficulty for a Knave's \mylink{Whisper}{knave-whispers} abilities means picking a number between 1 and 9.  If you choose a "1" for a task, this means it's trivial (basically "is there a Knave in the party?").  If you set it at 9, it's really only doable by a Knave who's level 8 or 9.  The following chart shows the odds by level for a straight roll (first table) and a roll using Luck (second table).  
+
+  \begin{center}
+  \includegraphics[scale=.7]{Knavery}
+  \end{center}
+
+  \begin{multicols}{2}
+
+  \mybold{\mylink{Kate's Key}{knave-kates-key} } 
+  A common lock on a blacksmith's shop might be a 2; your hands bound with rope might be a 4; a jeweller's lockbox in a Large settlement might be a 5; slipping free of manacles might be a 6;  an item locked by the Lock spell might be a 7; the lock on the Gates of Hell would be a 9.
+
+  \mybold{\mylink{Clockwork Sense}{knave-clockwork-sense}} 
+  Give two values - the difficulty of \mybold{finding} the trap and the difficulty of \mybold{disarming} a trap.  A hunter's snare or goblin trap might be a 2 or 3; a elaborate Rube Goldeberg trap in a mummy's tomb might be a 5; an invisible tripwire that triggers an explosion might be a 7; a trap designed by an Grimtooth might be a 9.
+
+  Inscribed Sigils\footnote{See Bell, Book, and Candle} can also be disarmed with Clockwork Sense. Trivial Sigils are a 3, Minor Sigils are a 5, Major Sigils are a 7, and Primary Sigils are a 9.
+
+  \mybold{\mylink{Gloomstride}{knave-gloomstride}}
+  Assign a point of difficulty for each \HD of a Monster.  Add a point if the area is well lit; add another point if the Knave is trying to slip past guards or someone looking for them.  Subtract a point for dark areas or distractions.
+
+  A crowded room or shadowy street might be a 2 or 3; through a guarded doorway lit by torches might be a 6; hiding in someone's shadow in a well lit room might be a 9.
+
+
+  \mybold{\mylink{Monkeys' Paws}{knave-monkeys-paws}}
+  Every 20m should be a point of difficulty.  Add a point if the wall is particularly slippery, it's windy, or if the Knave is encumbered or injured; subtract a point if the Knave has rope or climbing gear, or strips off equipment to make climbing easier.
+
+  \mybold{\mylink{Foyst}{whisper-foyst}} 
+  Picking the pocket of a common yokel in a crowded street might be a 2; stealing the keys from a guard's belt might be a 5; palming a card in a game with demons might be a 7; stealing the rings from the king's finger when you kiss his hand might be a 9.
+
+  \mybold{\mylink{Red Herring}{whisper-red-herring}} 
+  Using minor details to disguise yourself as a stranger, or lying to a kid might be a 2; changing your gender or species, or forging an arrest warrant, might be a 4 or 5; pretending you're someone famous might be a 7; lying to a Sphinx, forging an Article of War, or fooling a close friend might be a 9.
+  
+
+
+
+\mysection{Travel}{arbiter-travel}
+
+\mysubsection{Journeys}{arbiter-travel-journeys}
+Journeys consist of a number of routes (called Legs) to get from one point to another.  These routes are sometimes defined ("the Iron Road", "the High Pass", etc.) but the adventurers will often make routes of their own from looking at a map.  For example, "we must bear north, following the Miskatonic River, until we reach the mouth of the bay.  From there we will follow the coast west until we reach the point where the Iron Road meets Portsmouth, then follow the road south to Erl" is a journey of 3 legs (north to the bay, west to the road, south to Erl).
+
+To figure out what happens on a Journey, you'll need a deck of cards.  Leave the Jokers in.
+
+\mysubsection{Legs}{arbiter-travel-legs}
+Roughly speaking, each leg of a journey is about 5-10 Days (50-100 leagues) (this can change at the Arbiter's discretion).  The Arbiter should assign a Danger value to each leg on a scale of 1 (the Gold Road) to 6 (trog-infested swamps).  The Arbiter should inform the adventurers of the Danger value of each Leg before they set out, in case they want to change their mind.
+
+Grab a deck of cards.  For each Leg, draw a number of cards equal to the Danger of the Leg.  You'll use the same deck of cards for the entire Journey (so don't shuffle the cards back in until the Journey is complete).
+
+If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do, first check the suit :
+
+  \mytable{X c}{
+    \thead{Suit} & \thead{Effect} \\
+  }{
+    \mybold{Clubs} & Roll your Party Provisions \UD \\
+    \mybold{Diamonds} & You hit some bad weather  \\
+    \mybold{Hearts} & You get lost or are off course \\
+    \mybold{Spades} & You run into some hostiles  \\
+    \mybold{Jokers} & You stumble on something interesting ... \\
+  }
+
+  Next, check the type of card to see when the event takes place:
+
+
+  \mytable{X c}{
+    \thead{Face} & \thead{Effect} \\
+  }{
+    \mybold{Jack} & Predawn \\
+    \mybold{Queen} & Morning  \\
+    \mybold{King} & Afternoon \\
+    \mybold{Ace} & Evening  \\
+    \mybold{Joker} & Arbiter's Choise \\
+  }     
+
+
+  \mysubsection{Party Provisions}{arbiter-travel-provisions}
+  Roll your Party Provisions if you pull a Club (rats ate the flour; the mule stumbled and dropped the bacon in a river; etc) and at the end of a Leg of your Journey.  Before this roll, someone in your party must roll their Skill: Travel.  If they succeed, the Provisions \UD only drops \DCDOWN if you roll a 1 (instead of a 1 or 2).  
+
+  \mysubsection{Bad Weather}{arbiter-travel-weather}
+  You hit appropriate bad weather (snowstorm, sandstorm, torrential downpour, etc).  Someone in your party must roll their Skill: Travel.  If they succeed, nothing happens.  If they fail, roll a d3:  1) roll your Party Provisions, 2) you're Lost, 3) you run into Hostilities.
+
+  \mysubsection{Lost}{arbiter-travel-lost}
+  This can only happen if you are \myital{not} on a road. If you're traveling by road, you can ignore this result.
+
+  Someone in your party must roll their Skill: Travel.  If they succeed, you get back on track.  If they fail, pull another card. The Arbiter will move you in a random direction (on a hex map, roll a d6 and move the party in that direction). Continue in this way until someone succeeds at their Skill: Travel roll.  
+
+  \mysubsection{Hostilities}{arbiter-travel-hostilities}
+  Roll on your random monster table for this area
+
+  \mysubsection{Something Interesting}{arbiter-travel-pointofinterest}
+  This can only happen if you are \myital{not} on a road. If you're traveling by road, ignore this result.  This is entirely up to the Arbiter, but might include : entrance to a small dungeon, weird shrine to a lost god, abandoned gnoll war camp, etc.
+
+
+  \mysubsection{We're Out of Food}{arbiter-travel-starvation}
+  If you run out of food, time switches to Game Time.  The Arbiter should determine how many Days the party is from their destination (the party can cover 10 leagues / 1 hex on a road every Day, whereas it might take 3 Days to cover 1 hex in the mountains).  The party should now follow the rules as if they were in a wilderness dungeon, including rolling Personal Provisions, using their Skill: Bushcraft, etc. 
+
+  \newpage
+
+  \mysection{The Veins}{arbiter-veins}
+
+  TK TK TK
+
+  \newpage
+  \mysection{Checklists}{arbiter-checklists}
+
+  \mysubsection{Combat Checklist}{combat-checklist}
+
+  \mybold{At the start of combat:}
+
+  \mylist {
+    \item[$\square$]  Place the adventurer and Monster tokens in the appropriate range bubbles
+    \item[$\square$]  Figure out if anyone is Surprised
+    \item[$\square$]  Check to see if anyone has any additional effects that must be rolled during Init
+    \item[$\square$]  Have everyone roll Init.  Pookas automatically win Init.
+  }
+
+
+  \mybold{During Combat:}
+
+  \mylist {
+    \item[$\square$]  Everyone rolls Init.  If there are Monsters of different speeds (Fast and Slow, for example), roll in descending order (roll Init vs. Fast, then roll Init vs Slow).  If you \RO Init, stop.
+    \item[$\square$]  Check for "top of the Moment" effects before an adventurer acts
+    \item[$\square$]  adventurers who \RO Fast Monsters go first.  Then Fast Monsters. adventurers who beat Average Monsters, then Average Monsters, etc. adventurers who failed all their \RO attempts go last.
+    \item[$\square$]  Resolve combat
+    \item[$\square$]  Check for "bottom of the Moment" effects (including \mylink{Markovian}{duration-markovian} effects)
+  }
+
+  \mybullet {
+    \item If a adventurer rolls \mybold{minimum} damage, \RS:\DEX. Failure is a \mylink{Fumble}{combat-crits-and-fumbles}
+    \item If a adventurer rolls \mybold{maximum} damage, \RS:\VIG. Success means a \mylink{Crit}{combat-crits-and-fumbles}
+    \item If a adventurer is \mylink{Dying}{combat-dying}, roll for a \mylink{Wound}{appendixa-wounds} right away - it might affect their Breather.
+  }
+
+  \mybold{After Combat:}
+
+  \mylist {
+    \item[$\square$]  Check to see if anyone has any Wounds and make note of them
+    \item[$\square$]  Ask if they want to take a Breather
+  }
+
+  \cbreak
+  
+  \mysubsection{Resting Checklist}{resting-checklist}
+
+  \mybold{Taking a Breather}
+
+  \mylist {
+    \item[$\square$]  Ask if anyone is taking any Narcotics.  Make sure no one Overdoses.
+    \item[$\square$]  Have everyone roll their Trope or Species \HD and restore that much Grit (unless a Wound prevents it)
+    \item[$\square$]  If there's a Pooka in the party, have them roll \LVL d6.   They can divvy up \SUM Grit to the party any way they want
+  }
+
+  \mybold{Taking a Bivouac}
+
+  \mylist {
+    \item[$\square$]  Collect a \UD roll against Personal Provisions for each person resting.  Anyone who doesn't make the roll gets none of the following benefits
+    \item[$\square$]  If a Wound doesn't prevent them from doing so, they can restore all Grit
+    \item[$\square$]  Each adventurer can restore \LVL Flesh. Barbarians get this effect twice
+    \item[$\square$]  Adventurers can restore 1 \UD of any Intangible Stat
+    \item[$\square$]  Adventurers restore some \POOL or \UD depending on their Flavor:
+    * Soldiers: Restore 1 \UD of Armor up to its Max, and 1 Deed 
+    * Barbarians: Restore 1 Deed \UD
+    * Knaves and Pooka: Restore 1 Luck \UD
+    * Sorcerers: Restore 1 Blood \POOL
+    * Leeches: Reset your Knowledge Die modifiers
+    * Mystics: Restore 1 Grace \POOL
+    * Witches: Restore 1 Mojo \UD
+    \item[$\square$]  Roll for Wandering Monsters if you desire (unless there's a Pooka present)
+  }
+  \mybold{Taking a Sojourn}
+
+  \mylist {
+    \item[$\square$]  Restore all Grit and Flesh to \MAX
+    \item[$\square$]  Heal one Wound
+    \item[$\square$]  Restore your Armor \UD up to its \MAX.  If they need to fix its \MAX value, they'll need a Leatherworker or Smith (see below)
+    \item[$\square$]  Restore \UD for all Intangible Stats up to \MAX
+    \item[$\square$]  Restore all \DEED (Sellswords)
+    \item[$\square$]  Restore all \LUCK (Knave and Pooka)
+    \item[$\square$]  Restore all Blood \POOL (Sorcerers)
+    \item[$\square$]  Restore all Mojo \UD
+    \item[$\square$]  Restore all Grace \POOL (Mystics)
+    \item[$\square$]  Witches should advance their Moon by 1
+    \item[$\square$]  Assign {Adventuring XP}{misc-adventuring} if appropriate
+    \item[$\square$]  Charge the appropriate number of coins (see \mylink{Longer Rests}{civilization-longer-rests}).  If they can't pay, they get no further benefit
+    \item[$\square$]  Use the {Services}{civilization-services} chart for Leatherworkers, Smiths, Traders, Narcotics, etc. if the adventurers go "shopping" or are trying to find something specific.  Let them spend their money and assign them XP as they go.
+    \item[$\square$]  Ask if anyone wants to {advance their Skills}{skills-advance}
+    \item[$\square$]  Ask if anyone is going \mylink{Carousing}{misc-carousing} (do they have a Pooka?)
+    \item[$\square$]  Check if anyone \mylink{gained a level}{misc-leveling}
+  }
+
+  \mybold{Taking a Sabattical}
+
+  As Sojourn, but see if anyone is:
+
+  \mylist {
+    \item[$\square$]  Performing a Miracle (Mystic)
+    \item[$\square$]  Practicing Occultism (Witch)
+    \item[$\square$]  Using Inscription (Sorcerer)
+    \item[$\square$]  Practicing Medicinals (Leech)
+    \item[$\square$]  Creating a Magic Staff (Sorcerer)
+    \item[$\square$]  Applying Chymistry (Leech)
+    \item[$\square$]  Creating a Magic Sword (Spriggan)
+  }\footnote{See Bell, Book, and Candle}
+
+} %end
