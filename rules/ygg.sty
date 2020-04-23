@@ -13,11 +13,17 @@
 \usepackage{eso-pic}   % AddToShipoutPicture support
 \usepackage{units}   % nice fractions (like "1/2")
 \usepackage{multicol}  % 2-columns
+\usepackage{keycommand} % pass keys and values 
 
 % --- colors -----------------------------------------------------------
 \DefineNamedColor{named}{primary}{cmyk}{0.75,0.68,0.67,0.90} % blacker than black
 \DefineNamedColor{named}{silver}{rgb}{0.75, 0.75, 0.75}
 \DefineNamedColor{named}{gainsboro}{cmyk}{ 0.00, 0.00, 0.00, 0.12}
+
+% --- graphics -----------------------------------------------------------
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
 
 % --- page & basic text setup ------------------------------------------
 
@@ -101,6 +107,8 @@
 % --- symbol macros --------------------------------------------------
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{pifont}
+\usepackage{amssymb}
 
 % 6-sided die
 \newcommand{\diceglyph}{\ffstixmath{\char"2685}}
@@ -268,22 +276,27 @@
 % --- lists ------------------------------------------------------------
 
 \newcommand{\mylist}[1]{%
+  \vspace{-0.5\topsep}
   \begin{list}{
-    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+    \color{primary}}{\leftmargin=1em\itemsep=3pt\parsep=0pt}#1
   \end{list}
 }
 
 \newcommand{\mybullet}[1]{%
+  \vspace{-0.5\topsep}
   \begin{itemize}{
-    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+    \color{primary}}{\leftmargin=1em\itemsep=3pt\parsep=0pt}#1
   \end{itemize}
 }
 
 \newcommand{\mynumlist}[1]{%
+  \vspace{-0.5\topsep}
   \begin{enumerate}{
-    \color{primary}}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+    \color{primary}}{\leftmargin=1em\itemsep=3pt\parsep=0pt}#1
   \end{enumerate}
 }
+
+
 
 % --- example block ------------------------------------------------------------
 \usepackage{tcolorbox}
@@ -303,12 +316,29 @@
 }
 
 
-% A way to produce similar looking "statblocks"
-% 1 = NSC/Monster name, e.g. "Giant rat"
-% 2 = hit die, e.g. "4"
-% 3 = action die, e.g. "6"
-% 4 = reaction die, e.g. "4"
-\newcommand{\nsc}[4]{\keyword{#1:} \HD#2 \AD#3 \RD#4}
+% --- monster block ------------------------------------------------------------
+
+\newkeycommand{\MONSTERBLOCK}[Name=,Link=,MV=Base,WK=d24,DMG=d4 1 Close,HD=1,Power=Average,Soak=0,Morale=Orderly,Save=1,Extras=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{|X|X|X|X|}
+    \hline
+    \rowcolor{silver}
+    \mybold{Mv} & \commandkey{MV} & \mybold{Wk} & \commandkey{WK} \\
+    \mybold{Dmg} & \commandkey{DMG} & \mybold{Hlth} & \commandkey{HD}\HD ({\commandkey{Power}}) [\commandkey{Soak}] \\
+    \mybold{Morale} & \commandkey{Morale} & \mybold{Save} & \commandkey{Save} \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \tcblower
+    \myital{\commandkey{Extras}}
+    \end{tcolorbox}
+  }
+}
 
 
 % some usefull default pdf settings
