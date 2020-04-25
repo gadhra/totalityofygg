@@ -1,0 +1,19 @@
+2020-04-25: Clarified the level 3 Sorcerer "spell crossing" ability (spell was supposed to be determined randomly, not be an actual cross of two spells!)  (thanks Javy!)
+2020-04-25: Clarified that a Hammerspace object cannot be put inside another Hammerspace object
+2020-04-25: Rewrote rulesets in Latex, checked in at https://github.com/gadhra/totalityofygg.  Created table of contents and thank you pages.  New layouts for pages
+2020-04-25: Added new Witch Necromancy spells: Exploding Corpse and Zombie Warrior.  Reduced the difficulty of casting Zombie Slave spell. (thanks Lou!)
+2020-04-25: Witch starting Mojo moved to d8 (thanks Lou!)
+2020-04-25: Reworked Knave Die to avoid the "picking the gates of Hell at level 5" scenario.  Reworked Knave abilities as "Whispers" or Knave magic.  Bravos and Knaves now share climb walls, sneak, open locks, and find/disarm traps.  Bravos have a disguise/forgery ability, Archaeologists have a sleight of hand ability.  Moved the Archaeologist ability to carry cursed items to level 1.  Level 3 Archaeologist can make a "bag of holding", Level 3 Bravo can create a knife from shadows.  Finally, allow Bravos to use War Axe, Mace, and Spear to backstab.  (thanks Eric!)
+2020-04-25: Moved finding traps back to Knaves.
+2020-04-25: Rewrote Charms to be less esoteric in their titles, and combined a few redundant ones. (thanks Lou!)
+2020-04-25: Spriggan restore a Remembrance die during a Bivouac.  Spriggan use Awareness for Combat (thanks Anastasia!)
+2020-04-25: Added in Init rules for fighting monsters with different init types (thanks Javy!)
+2020-04-25: Change "Hit Dice" for characters to "Flesh Dice" to avoid confusion (thanks Bobby!)
+2020-04-25: Added Chartalist explanation for money in game.
+2020-04-25: Added Veins of the Earth explanation and link
+2020-04-25: Added section on hirelings under equipment
+2020-01-24: Under the Unhallowed flavors, added: Add your [level] to any rolls involving $INTANGIBLE_STAT (though the {ud} still moves {d-} on a natural 1 or 2)
+2020-01-24: Error under Pooka, changed "Talent moves 2x up" to "Presence moves 2x up"
+2020-01-24: Dammit, forgot the ENTIRE SECTION on DIVINE FAVOR. Added to BB&C as its own page after the Seven Sacraments
+2020-01-24: Fixed some formatting issues in BB&C
+2020-01-22: Under Archaeologist, changed scrolls to: You can attempt to cast spells from Sorcerer's scrolls. Instead of rolling d6 however, you roll up to your [level]d4 (so if you were level 4, you could roll up to 4d4). The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.
