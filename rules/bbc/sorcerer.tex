@@ -1,0 +1,1788 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggSorcerer}{%
+  \mychapter{Sorcerers}{sorcerers}
+}
+
+\renewcommand{\yggSorcererText}{%
+
+\mysection{Blood}{sorcerer-blood}
+
+  \mytable{l X}{
+    \thead{Level} & \thead{Blood} \\
+  }{
+    1 & 1d6 \POOL \\
+    2-3 & 2d6 \POOL \\
+    4-5 & 4d6 \POOL \\
+    6-7 & 6d6 \POOL \\
+    8 & 8d6 \POOL \\
+    9 & 10d6 \POOL \\
+  }
+
+
+
+Sorcerers wield Wizardry through Blood, represented by a Blood Die - a
+single d6.  You get a number of Blood Die depending on your level as
+specified in the Core Rules.
+
+When you cast a spell, you can roll any number of Blood Dice.  All the dice
+have to be rolled at once when you cast the spell:
+
+\mybullet {
+  \item If you roll any triples, roll on the \mylink{Mishap
+table}{table-mishap}. The spell works.
+  \item If you roll any quadruples, roll on the \mylink{Calamity
+table}{table-calamity}. The spell fails.
+  \item If you roll any quintuples, roll on the \mylink{Ruin
+table}{table-ruin}. The spell fails.  This will most likely kill you.
+}
+
+The Blood Die is a \POOL.  If you roll a 1 or a 2 on a Blood Die, you lose
+the die. You can restore 1 Blood Die when you Bivouac, or all your Blood Die
+with a longer rest - but you can also attempt to ride the Torrent.
+
+
+\mysection{The Torrent}{sorcerer-torrent}
+
+If you have 0 Blood Die in your pool, you can still attempt to perform
+magic, though doing so is dangerous:
+
+\example {
+  \mybold{Torret}
+  \RO : \INT plus d6 plus Modifiers
+
+  ~\\
+  
+  \myital{Don't forget to add your \LVL, since this roll uses your \INT!}
+}
+
+If you succeed, you can add a Blood Die to the spell.  You can do this as
+many times as you like for each spell. If you fail any \RO attempt, the
+spell fails and you suffer a \mylink{Calamity}{table-calamity}.
+
+
+
+\mysection{Components}{sorcerer-components}
+
+You can harvest and use components to cast spells:
+
+\example {
+  \mybold{Harvest Component}
+  \RO : \INT plus d6 plus d20 plus Modifiers
+
+  ~\\
+  
+  \myital{Don't forget to add your \LVL, since this roll uses your \INT!}
+}
+
+
+If you cast a spell with a component, then you only burn a Blood die if you
+roll a 1 (instead of a 1 or 2).  Components are Insignificant items, but
+using a component consumes it in a puff of smoke / blue flame / swarm of
+gnats etc.
+
+You can say something is a component for a spell you choose.  For example,
+you could declare that kobold's eyes are a component for the spell Sleep. 
+The Arbiter will ask you to make a successful Lore check - if you make it,
+then kobold's eyes are always a component for Sleep (note it on your
+character sheet) for YOU and not for anyone else (someone else's version of
+Sleep has a different way of casting, needs boggart boogers or whatever). 
+Components are \UD 
+
+Couple of rules
+
+\mybullet {
+  \item Components can only be harvested during a Breather, and have to be
+from one of the Monsters you've (presumably) killed.  It has to be something
+you can reasonably carry (Arbiter's choice) - basilisk tongue, ok.  Green
+slime, not ok.
+  \item Monsters only provide one component.  You can't say kobold's eyes
+help Magic Missile and kobold's tongues help cast Battering Beam.
+  \item You can only try once per Monster type per Breather, so if you kill
+9 kobolds and 14 trolls then you get two shots - once on kobolds and once on
+trolls.
+  \item You can only harvest d4 \UD from a Monster no matter how many there
+are - 9 kobolds or 1, you get d4 \UD
+}
+
+
+\mysection{Learning Spells}{sorcerers-learning-spells}
+
+Your starting spells depend on your \INT:
+
+  \mytable{X l l}{
+    \thead{\INT} & \thead{Random} & \thead{Pick} \\
+  }{
+    d4 & 2 & 1 \\
+    d6 & 4 & 2 \\
+    d8 & 6 & 3 \\
+    d10 & 8 & 4 \\
+  }
+
+
+You can either roll randomly (and get more spells) or pick from the list of
+\mylink{The Mysteries}{sorcerer-mysteries}.  These are all the spells you
+understand.
+
+One of these spells (your choice) is etched on the inside of your cranium,
+"...like moth larvae burrowing through the bark of a tree."  This spell can
+be cast without speaking or moving.  If someone cuts off your head and
+scoops out your brains, they can read (and learn) the spell too.
+
+The rest of your spells are inscribed in a
+\mylink{Grimoire}{sorcerer-grimoires}.  You can copy these spells to
+\mylink{Fetishes}{sorcerer-fetishes} using
+\mylink{Inscription}{sorcerer-inscription}.
+
+If you have a spell in your skull or on a fetish in your possession, you can
+cast the spell without digging through your grimoire (meaning you can cast a
+spell in a single Maneuver). 
+
+Searching through a grimoire in your hands adds 1 Maneuver to the spell
+before you can cast it (so it would take 2 Maneuvers to find and cast a
+spell).  If the grimoire is in your backpack, you would need to dig it out
+(1 Maneuver), find the spell (1 Maneuver), and cast it (1 Maneuver).  
+
+Every time you gain a \LVL, you can etch an additional spell inside your
+cranium. This must be a spell in your possession (in a grimoire or on a
+fetish)
+
+You \mybold{do not} learn a new spell each time you gain a \LVL.  You must
+find or discover new ones.
+
+
+\mysection{Research}{sorcerer-research}
+
+Research is used to perform \mylink{Inscription}{sorcerer-inscription}, and
+can be used to help Leeches practice \mylink{Chymistry}{leech-chymistry}. 
+Your Research is equal to your maximum \INT (so if you have a d12 \INT, you
+have 12 Research). You may only perform Research in a Civilization with a
+library.
+
+If you take a Sabbatical, the number of Research Die you have is tripled (so
+12 Research becomes 36).
+
+Use your Research to "build" one or more \KNACK called Research Die. You can
+"build" as many Research Die as you choose up to your Research total. For
+example, if you have 12 Research, you could create:
+
+\mybullet {
+  \item 2 6-in-6 Research Die
+  \item 3 4-in-6 Research Die
+  \item 6 2-in-6 Research Die
+  \item etc.
+}
+
+Remember that a Research Die is a \KNACK.  If your Research Die is a 2-in-6,
+you get a success if you roll a 1 or a 2 on a d6; if the die is 6-in-6, you
+roll 2d6 and only fail on a 2 (snake eyes).  You can only roll each Research
+Die once per Sabbatical.
+
+Research Dice can be traded to \mylink{Sorcerers}{sorcerers} as well as to
+other Leeches (knowledge is shared, after all). You can give as many of your
+Research Dice to different people as you wish, but you can only accept a
+number of Research Dice up to your \LVL-1.
+
+
+\mysection{Wizards' Duel}{sorcerers-wizards-duel}
+
+Certain spells can be countered by other spells - for example,
+\mylink{Balthazar's Breathtaking
+Blast}{wizardry-balthazars-breathtaking-blast} can be countered by
+\mylink{Mighty Lungs}{wizardry-mighty-lungs}, and
+\,mylink{Invisibility}{wizardry-invisiblity} can be dispelled by the wisps
+summoned in the \mylink{Fool's Fire}{wizardry-fools-fire} spell. 
+
+If you attempt to counter a spell and the Sorcerer who cast it is not
+present (that is, not somewhere Close, Nearby, Far-Away, or Distant) you
+automatically succeed.  Otherwise, you enter into a duel with the other
+Sorcerer.
+
+Each Sorcerer must \RB : \INT, adding their \LVL and the \DICE invested in
+the spell as well as any other modifiers.  
+
+\example {
+  \mybold{A Wizards' Duel is}
+  \RB : \INT plus \LVL plus \DICE
+}
+
+
+The winner's spell stays, the loser's spell goes.  Put another way: 
+
+\mybullet{
+  \item If you are countering a spell and you win, the spell you're
+attempting to counter is dispelled and your spell takes effect
+  \item If you are countering a spell and you lose, the spell you're
+attempting counter remains and your spell fizzles with no effect.
+}
+
+If you attempt to counter a spell and you roll a
+\mylink{Calamity}{sorcerer-blood} or \mylink{Ruin}{sorcerer-ruin}, the
+counterspell doesn't work. 
+
+
+\mysection{Grimoires}{sorcerery-grimoires}
+
+Grimoires are solid, with thick vellum pages and a sturdy cover. Special
+runes and symbols trap spells inside cages of crystallized thought. Each
+book contains enought room for 10 spells. Some spells must be stored across
+several pages for safety, so the books contain more than 10 pages, and have
+plenty of room for notes, ledgers, or sketches - and curses, hexes, coded
+and cryptic entries written with poisonous and hallucinogenic inks.
+Grimoires start in a waterproof, acid- and fire-resistant bag. Outside the
+bag, they are not waterproof and are quite flammable. See the section on
+\mylink{Inscription}{sorcerer-inscription} for more details.
+
+\mysection{Fetishes}{sorcerery-fetishes}
+
+Fetishes are inscribed with a single spell from your grimoire, cranium, or
+another fetish.  All fetishes have a \UD of d4 - when the \UD is exhausted,
+the magical words disappear from the fetish.  A Sorcerer's skull counts as a
+fetish, though obviously the brain can't be in the way if you want to read
+it.  See the section on \mylink{Inscription}{sorcerer-inscription} for more
+details.
+
+You may cast the spell from the Fetish with any number of Blood you choose,
+OR you may forgo the Blood die and roll a single d6 for the effect.  
+
+\newpage
+
+\mysection{Wizardry}{sorcerer-wizardry}
+
+\SPELL[
+  Name=Acid Arrow,
+  Link=wizardry-acid-arrow,
+  Paradigm=Elements,
+  Save=N,
+  Duration=0/Markovian,
+  Counter=None,
+  Keywords=None,
+  Target=Nearby or Far-Away Monster or Object
+]
+
+You throw an acidic arrow at a Monster or object. You must make a successful
+Fight check using your \INT (instead of \VIG or \DEX).  If you succeed: 
+
+1. If the target is wearing Armor, they must make a \UD check at the start
+of every Moment for the Markovian duration of the spell.  If they are using
+a shield, they may immediately sunder it to nullify the spell; 
+2. If they are not wearing Armor, they must take \DICE additional damage at
+the start of every Moment for the Markovian duration of the spell; 
+3. If the target is an object, it will melt a \DICE x 10cm cubic area of
+wood, metal, or stone.  
+
+\SPELL[
+  Name=Arcadia's Bulwark,
+  Link=wizardry-arcadias-bulwark,
+  Paradigm=Mind,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Acid Arrow}{wizardry-acid-arrow},
+  Keywords=None,
+  Target=Self
+]
+
+
+A spectral shield with a heraldric device of your choosing appears in the
+vicinty of your non-dominant arm.  The shield moves on its own to block
+Throw and Shoot weapons, and can absorb up to \SUMDICE + \DICE damage before
+it dissipates.  You can also Sunder this shield (like the Combat ability),
+which also causes it to dissipate. You can still cast spells while this
+shield is summoned.  An Acid Arrow fired into the shield will dispel it if a
+Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Balthazar's Breathtaking Blast,
+  Link=wizardry-balthazars-breathtaking-blast,
+  Paradigm=Biomancy,
+  Save=Y (negate),
+  Duration=Markovian,
+  Counter=\mylink{Mighty Lungs}{wizardry-mighty-lungs} ,
+  Keywords=None,
+  Target=Nearby or Far-Away point
+]
+
+
+
+A marble-sized bead of poo lands at a Nearby or Far-Away point you select. 
+You can cause the sphere to detonate at any time in \DICE Hours (including
+immediately). All creatures Close or Nearby the sphere's detonation must
+Save or immediately become Sickened, and the area is filled with a thick
+green mist that lasts for \DICE Hours.  Any who enter the mist during this
+time must Save or become Sickened, though you smell it and see it before
+you're in it, so you won't stumble into it blindly.  Animals will avoid the
+area for the Markovian duration.  The spell does not affect creatures with
+no sense of smell, mindless creatures, or creatures who habitually live in
+filth (goblins, shambling mounds, etc.).  The mist can be dispelled by
+Mighty Lungs if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Bastogne's Glamping Charm,
+  Link=wizardry-bastognes-glamping-charm,
+  Paradigm=Force,
+  Save=N,
+  Duration=Bivouac,
+  Counter=\mylink{Morass}{wizardry-morass} ,
+  Keywords=None,
+  Target=Close
+]
+
+
+
+In an area you designate, a magical camp appears where you and \DICE-1
+allies can Bivouac. The camp includes a bedroll, a sleeping platform, a
+small purple and gold tent, a small table and chair, a kettle, a cookpot
+with a stew going, an iron arm to hold the kettle or cookpot over a fire, a
+book entitled "The Erotic Poems of Plumtarch" (less erotic than expected),
+and a pair of dry wool socks for up to \DICE people. Any items removed from
+the area vanish instantly. In the spell's area, the temperature is moderated
+very slightly, wind and rain are lessened, and vermin cannot enter.  The
+tents are immune to casual attack, including from wandering Monsters (anyone
+sleeping outside the tents might not be so lucky).  Up to \DICE people
+staying at the camp can forego a single Provisions \UD roll during their
+Bivouac.  The campsite can be utterly dispelled by Morass if a Wizards' Duel
+is lost.
+
+\SPELL[
+  Name=Battering Beam,
+  Link=wizardry-battering-beam,
+  Paradigm=Force,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Battering Beam}{wizardry-battering-beam},
+  Keywords=Contested,
+  Target=Close or Nearby Monster or Object
+]
+
+
+A beam of force erupts from your forehead and strikes something you can see,
+pushing it backwards. Every Moment, the creature or object is pushed 5m in
+the direction you are looking.  If it's an object, you can push up to \DICE
+x100kg.  If it's a creature, they can make a Contested roll using \VIG with
+a -\DICE penalty to fight back. If you lose the Contest, the spell
+immediately ends - otherwise, the spell lasts as long as you concentrate. 
+If the target cannot move backwards, it takes \DICE damage.  The Battering
+Beam can be dispelled by another Battering Beam if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Cacaphony,
+  Link=wizardry-cacaphony,
+  Paradigm=Entropy,
+  Save=Y (negate),
+  Duration=Varies,
+  Counter=\mylink{Negasonic Bomb}{wizardry-negasonic-bomb} ,
+  Keywords=None,
+  Target=Nearby or Far-Away point
+]
+
+
+
+You roll a small orb of Entropy to a point Nearby or Far-Away; the orb rolls
+silently and is hard to see.  At any time for the next \SUMDICE Hours, you
+can have the orb detonate into an incredibly loud clattering, wailing, and
+whistling. Creatures Close to the designated point must Save or be Stunned
+for \DICE Moments. It is audible in clear air up to a \DICE km away. You can
+designate \DICE conditions under which the orb will detonate. For example,
+you could say "now"; "if anyone steps on it"; or "if water touches it".  The
+conditions must be obvious and must occur within 1m of the orb. When the
+spell's duration expires, you can choose to have the orb detonate (as above)
+or vanish silently.  The Cacaphony can be dispelled by a Negasonic Bomb if a
+Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Charm,
+  Link=wizardry-charm,
+  Paradigm=Mind,
+  Save=Y (negate),
+  Duration=Session,
+  Counter=\mylink{Charm}{wizardry-charm} ,
+  Keywords=Contested,
+  Target=Close Monster(s)
+]
+
+
+
+Ensorcel one or more Monsters whose combined \HD is less than or equal to
+\DICE.  Save negates; otherwise, they will regard you as a good friend and
+ignore the obvious spell you just cast on them.  The effect lasts for the
+entire Session unless you ask them to do something they might think was a
+little weird: attack an ally, let you through an area they're supposed to be
+guarding, etc. (this is up to the Arbiter's discretion).  This prompts a
+Contested roll by the victim, using \FOC with a -\DICE penalty.  You must
+touch the targets' flesh (like with a handshake) to cast the spell.  The
+charmed person must stay Close, Neary, or Far-Away from you - if you ever
+move beyond this distance, the spell is ended.  The Charm can be broken and
+dispelled by another Charm if a Wizards' Duel is lost. 
+
+
+
+
+\SPELL[
+  Name=Color Spray,
+  Link=wizardry-color-spray,
+  Paradigm=Mind,
+  Save=Y (negate),
+  Duration=0 / Markovian,
+  Counter=n/a ,
+  Keywords=Splittable,
+  Target=Close or Nearby Monster(s)
+]
+
+
+
+You emit \DICE sprays of color from your fingertips that you can split among
+\DICE Monsters.  For each Monster, if the \SUMDICE of the \DICE targeting
+the Monster is twice as much (equal to or greater) as the Monster's \HD, it
+is Befuddled (the duration is Markovian and depends on the number of dice
+invested).  If \SUMDICE is three times the Monster's \HD, it is Stunned for
+a Moment, then Befuddled as above. If \SUMDICE is five times the creature's
+\HD, it is Stunned (the duration is Markovian and depends on the number of
+dice invested), then Befuddled (Markovian duration).  Save negates.
+
+
+
+
+
+\SPELL[
+  Name=Commanding Presence,
+  Link=wizardry-commanding-presence,
+  Paradigm=Mind,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=\mylink{Balthazar's Breathtaking Blast}{wizardry-balthazars-breathtaking-blast} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You grow +\DICE meters in height, and your features and voice become
+terrible and commanding.  Creatures of less than \DICE \HD must test morale
+or flee in terror.  You can use your \INT in place of any rolls where you
+would normally use \VIG.  If you enter the radius of Balthazar's
+Breathtaking Blast, or if the spell is cast Close to you, the Commanding
+Presence is dispelled if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Ego Weapon,
+  Link=wizardry-ego-weapon,
+  Paradigm=Mind,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Greaseball}{wizardry-greaseball} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You can summon a Bashing, Cutting, or Stabbing weapon of Force.  You can
+change the type of weapon by using 1 Maneuver in Combat.  The weapon does
+\DICE damage and can hit creatures only affected by magic.  Only you can
+fight with the Ego Weapon.   You can use your \INT to fight with the weapon. 
+A Helping Hand can wield an Ego Weapon, but you can only have 1 Ego Weapon
+in existence at a time.  The weapon lasts for the entire Session.  It can be
+dispelled by a Greaseball if a Wizards' Duel is lost; it will dispel an
+Illusion spell with a touch if a Wizards' Duel is won.
+
+
+
+
+
+\SPELL[
+  Name=Enervate,
+  Link=wizardry-enervate,
+  Paradigm=Entropy,
+  Save=Y (half),
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close or Nearby Magical Monster
+]
+
+
+
+
+Often used to target Sorcerers or seriously magical creatures (unicorns,
+dragons, etc).  In the case of Sorcerers, they take \DICE damage for each
+unspent Blood pool they possess; in the case of a magical Monster, they take
+\SUMDICE+\DICE.  Save for half damage, but Sorcerers who fail their Save
+must also immediately roll their remaining Blood die as if they were casting
+a spell (any rolls of a 1 or a 2 loses the die; if you roll doubles a Mishap
+occurs; etc) though no spell will actually be cast.   Non-magical creatures,
+or creatures that have no Blood die, are unaffected by this spell.
+
+
+
+\SPELL[
+  Name=Fireball,
+  Link=wizardry-fireball,
+  Paradigm=Elements,
+  Save=Y (half),
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Any point
+]
+
+
+
+Throw a ball of fire somewhere Close, Nearby, or Far Away.  Everyone Close
+to the detonation takes \SUMDICE fire damage (Save for half), and highly
+flammable things are set aflame (curtains, dry trees, and oil but not people
+or buildings).
+
+
+
+
+\SPELL[
+  Name=Fogbank,
+  Link=wizardry-fogbank,
+  Paradigm=Elements,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=\mylink{Mighty Lungs}{wizardry-mighty-lungs} ,
+  Keywords=None,
+  Target=Close
+]
+
+
+
+You summon a bank of swirling and shifting fog that exists for as long as
+you concentrate.  The fog can move with you, or you can mentally direct it
+to move Nearby (takes 1 Maneuver).  The fog will blanket \SUMDICE creatures
+or a space \DICE+\DICE meters cubed.  Missiles that are thrown or shot into
+the fog strike a random target; nothing can be thrown or shot out of the
+fog.  The fog extinguishes small flames (torches, candles, etc)  Creatures
+who attempt to Fight while inside of the fog act as if they were Befuddled;
+however, anyone attempting to Skulk and Murder someone else in the fog
+succeeds automatically.
+
+
+
+
+
+
+\SPELL[
+  Name=Fool's Fire,
+  Link=wizardry-fools-fire,
+  Paradigm=Entropy,
+  Save=Y (negate),
+  Duration=Concentration,
+  Counter=\mylink{Enervate}{wizardry-enervate} ,
+  Keywords=Splittable,
+  Target=Close or Nearby point
+]
+
+
+
+You project \DICE will-o'the-wisps into an area Close or Nearby.  The wisps
+can move one range (Close to Nearby, Nearby to Far Away, etc) each Moment
+for as long as you concentrate.  You can split the wisps up any way you like
+but they can't be more than Far-Away from you.  The wisps do not shed heat,
+do not require air, and can't be doused by water.  They shed a steady yellow
+light the brightness of a torch.  At the top of the Moment, you can command
+up to \DICE wisps to Befuddle up to \DICE Monsters.  The Monsters
+immediately get a Save to negate (one for each wisp that's targetting them),
+but a successful Save does not end the spell.  If any of the wisps are
+struck by an Enervate spell, they are all dispelled if a Wizards' Duel is
+lost.
+
+
+
+\SPELL[
+  Name=Greaseball,
+  Link=wizardry-greaseball,
+  Paradigm=Entropy,
+  Save=N,
+  Duration=Markovian,
+  Counter=\mylink{Pritchard's Gusty Belch}{wizardry-pritchards-gusty-belch} (acid) ,
+  Keywords=None,
+  Target=Close or Nearby Monster or Object
+]
+
+
+
+Toss a small ball of grease at a point on the ground Close or Nearby. If you
+would prefer to throw the ball at a person or object, make a Fight \RO using
+your \INT - if you miss, it dissapates.  If thrown at the ground, the
+surface becomes slick with a thick oil; anyone attempting to move through
+the area must \RO using \DEX+\MD with a -\DICE penalty or immediately fall
+Prone.  It requires a successful \RO to get up again.  If you throw it at a
+creature, the effect is as above, plus they can't hold anything without
+dropping it.  If you throw it at an object, the object becomes impossible to
+carry or hold until the grease is removed with a mild or strong acid. 
+Pritchard's Gusty Belch (acid variety) will dispel the grease if a Wizards'
+Duel is lost; the grease is also highly flammable.  
+
+
+
+
+
+\SPELL[
+  Name=Grimm's Electric Fingers,
+  Link=wizardry-grimms-electric-fingers,
+  Paradigm=Elements,
+  Save=Y (half),
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close or Nearby Monster or Object
+]
+
+
+
+Forks of lightning erupt from your oustretched hands, striking a Close or
+Nearby target for \SUMDICE damage (Save for half). You can cause the
+lightning to "jump" up to \DICE-1 times to another creature or object Close
+by, provided they are conductive (iron armor, metal ladders, etc).  Magic
+swords aren't conductive.  You can "ping-pong" between two objects if you
+desire. Creatures struck by this secondary lightning bolt take \DICE damage
+(no Save). Objects struck by this secondary lightning bolt will become
+momentarily electrified, and deal a shock that could cause someone to lose
+their grip unless they \RO : \VIG + \FOC with a -\DICE penalty.
+
+
+
+\SPELL[
+  Name=Hammerspace Mule,
+  Link=wizardry-hammerspace-mule,
+  Paradigm=Force,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Illusion}{wizardry-illusion} ,
+  Keywords=Hammerspace,
+  Target=Close
+]
+
+
+
+You create a spectral mule out of pure Force energy. The mule carries two
+magical saddlebags that can each hold \SUMDICE Significant Items whose
+combined weight doesn't exceed \DICE x 200kg (a reminder that a person is 25
+Significant Items, and small creatures are 15).  The mule walks at a briks
+trot.  It will stop and turn at your verbal command, but you cannot make it
+reverse or slow down. You can only give it the commands "go", "stop",
+"left", and "right". If the mule takes any damage, it immediately disappears
+and drops all the items on the ground.  The mule will obey your last command
+until the spell's duration expires.  Hammerspace Mules think that Illusions
+are real; if the Illusion would damage them in some way (a pit they would
+fall into, a spear they would run into, etc) the Mule is dispelled (dropping
+its items on the ground) if a Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Helping Hand,
+  Link=wizardry-helping-hand,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Web}{wizardry-web} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You can detach your hand from its wrist (your choice as to which one).  The
+hand floats at chest height and can hold anything you could normally hold. 
+The hand can't use any weapons except for an Ego Weapon.  It can grab
+shirts, press buttons, and shove people (but not too hard).  If anyone
+attacks the hand, you have to roll your Guard as if they were attacking you. 
+If your hand takes any damage, it disappears for the rest of the Session. 
+Additionally, if the Hand is ever caught in a Web spell, it will disappear
+if a Wizards' Duel is lost.  At the end of the Session, roll a d6.  On a 1
+or 2, the hand returns as normal next Session - otherwise, it comes back as
+something else (a claw, a tentacle, etc) at the Arbiter's discretion.
+
+
+
+\SPELL[
+  Name=Heroic Leap,
+  Link=wizardry-heroic-leap,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Self or Close Ally
+]
+
+
+
+You and up to \DICE-1 allies can leap \VIG+\SUMDICE meters high and/or
+\VIG+\SUMDICE meters forward in a straight line.  You take no damage on
+landing, provided you land on or above the level you started from. For
+example, you could leap from the ground to top of a steeple, or you could
+leap over the steeple to land on the ground, but you couldn't leap from the
+top of a steeple to the ground.  When you land, you can make a \RS : \DEX
+(\RS : \INT if you are the Sorcerer who cast the spell) and if you succeed,
+you can leap again. You can do this up to \DICE times.  You can't cast
+spells or Fight while you're jumping around.
+
+
+
+
+
+\SPELL[
+  Name=Hollow Head,
+  Link=wizardry-hollow-head,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Session,
+  Counter=n/a ,
+  Keywords=Hammerspace,
+  Target=Self
+]
+
+
+
+You brain disappears and your head has a hinge that opens like a box, but
+only you know this and only you can open it. For the rest of the Session,
+you are immune to the next \DICE spells from the Mind paradigm, and you can
+fit up to \SUMDICE Significant Items inside of your head in Hammerspace
+(pulling one of these items out takes a Maneuver).  When you resist the
+final Mind paradigm spell, the enchantment immediately ends. If the spell
+ends while items are stored in your head they will mix with your
+brain-matter. Usually this is fatal, though ambitious Sorcerers sometimes
+add drugs.  While your head is hollow, another Sorcerer could read the
+spell(s) inscribed on the inside.
+
+
+
+
+\SPELL[
+  Name=Ice Bridge Step,
+  Link=wizardry-ice-bridge-step,
+  Paradigm=Elements,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Greaseball}{wizardry-greaseball} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You and up to \DICE-1 allies can run over liquids as if they were land.  Ice
+forms beneath your feet with each step. If you slow down (to walk, fight,
+etc), you'll sink. Very wavy seas may require you to \RS : \DEX.  Very hot
+liquids (like lava) may require you to \RS : \INT.  The ability is dispelled
+if you are struck by a Greaseball spell and you fail a Wizards' Duel.
+
+
+
+
+
+\SPELL[
+  Name=Icebolt,
+  Link=wizardry-icebolt,
+  Paradigm=Elements,
+  Save=Y (half),
+  Duration=0 / Markovian,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close or Nearby point (straight line)
+]
+
+
+
+Throw a bolt of ice at a target Close or Nearby.  The bolt will travel in a
+straight line from your fingers.  Anything touched by the bolt takes
+\SUMDICE damage, Save for half.  Additionally, everything that fails its
+Save is frozen to whatever surfaces they are touching.Keys are frozen in
+their locks; swords are frozen to hands; boots are frozen to the ground
+(creatures are usually immobilized from the boots down unless they were
+playing in a fountain or something).  The objects are stuck until the
+duration expires.  
+
+
+
+
+\SPELL[
+  Name=Illusion,
+  Link=wizardry-illusion,
+  Paradigm=Mind,
+  Save=N,
+  Duration=Varies,
+  Counter=\mylink{Ego Weapon}{wizardry-ego-weapon} ,
+  Keywords=None,
+  Target=Varies
+]
+
+
+
+You create an illusion of anything you desire. If anything touches the
+illusion, it will pass through it with no effect.  The illusion cannot be
+greater than \DICE x \DICE meters in size.  Think of the illusion as a
+perfectly accurate hologram that you are creating - the illusion can be
+heard in addition to being seen, can perform the same action over and over
+again, and can deliver messages, but it can't interact in a meaningful way
+or perform complex actions based on external forces. 
+
+Each aspect of the illusion requires one or more Blood die to cast:
+
+\mylist {
+  \item You want the illusion to say up to \DICE + \DICE words or make \DICE
++ \DICE sounds (wailing, shouting, etc)
+  \item You want the illusion to be a physical thing (hole in the ground,
+stone wall, orc guard, etc)
+  \item You want the illusion to be able to move up to \DICE meters
+  \item You want to cast the illusion on a living creature (disguise them as
+a beggar or a lamp post)
+}
+
+Note that there is some Arbiter's discretion here.  A guard pacing in front
+of a door might cost 2 \DICE (a physical thing moving back and forth 2
+meters), but if you want the illusion of acrobats or pouncing lions it will
+be more costly.  A disguise cast on someone to appear to be a beggar might
+cost 1 [die] (a living creature wearing the face and clothing of a random
+beggar), but disguising yourself as the king will be significantly harder.
+
+The Illusion will last for \DICE Hours.  Anyone touching the illusion will
+immediately know it to be fake, but this doesn't cause the illusion to
+disappear.  However, if the illusion is touched with an Ego Weapon, it will
+disappear if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Invisibility,
+  Link=wizardry-invisibility,
+  Paradigm=Entropy,
+  Save=N,
+  Duration=Varies,
+  Counter=\mylink{Fool's Fire}{wizardry-fools-fire} ,
+  Keywords=None,
+  Target=Self or Close Allies or Objects
+]
+
+
+
+Up to \DICE objects or creatures can be made invisible (including yourself),
+and will remain that way as long as they don't move.  As soon as the
+creature or object moves (or is moved), the charm is broken.  Invisible
+creatures can see other invisible and hidden objects (including Skulking
+Knaves).  If this spell is cast on something Invisible, it will force the
+object to become seen.  The duration of the charm depends on the dice
+invested.  1 [die]: \SUMDICE Moments; 2 \DICE: Minutes; 3 \DICE: Hours; 4
+\DICE Days; 5 \DICE: Weeks; 6+ \DICE: Forever.  The wisps from a Fool's Fire
+can dispel the Invisibility of a Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Kelsier's Swarm of Irritating Vermin,
+  Link=wizardry-kelsiers-swarm-of-irritating-vermin,
+  Paradigm=Force,
+  Save=N,
+  Duration=Markovian,
+  Counter=\mylink{Mighty Lungs}{wizardry-mighty-lungs} ,
+  Keywords=None,
+  Target=Close; Nearby; Far Away
+]
+
+
+
+You summon a cloud of tiny, magical, irritating vermin to an area Close,
+Nearby, or Far-Away.  The vermin deal \DICE damage per Moment to every
+living creature Close to them, but no damage to nonliving creatures or
+objects. At the top of each Moment they are in the cloud, a non-mindless
+creature must Save or take a -\DICE penalty on their Fight roll.  The vermin
+won't move from the spot where they are summoned, and will remain until the
+spell expires.  If the target is an object, the vermin will do minor
+cosmetic damage, such as chewing holes in paper, gnawing wood, chipping
+paint, and scratching glass.  Mighty Lungs will dispel the swarm if a
+Wizards' Duel is lost.
+
+
+
+\SPELL[
+  Name=Knife Trick,
+  Link=wizardry-knife-trick,
+  Paradigm=Force,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Grimm's Electric Fingers}{wizardry-grimms-electric-fingers} ,
+  Keywords=Splittable,
+  Target=Close; Nearby; Far Away
+]
+
+
+
+Up to \DICE daggers orbit your head like a halo or crown.  These must be
+daggers in your possession.  Magic and silver daggers are OK, as are other
+"dagger-like" items (icicles, shards of glass, etc) at the Arbiter's
+discretion.  At any time during the Session, you can mentally "throw" one or
+more of these daggers at things that are Close, Nearby, or Far-Away with
+unerring accuracy.  This could be used to sever a rope or pin something to a
+wall (or stick into someone's chest) - but no Gambits, that wouldn't be
+fair.  Each dagger does \SUMDICE+\DICE damage i.e. if you were to throw 1
+dagger at someone, it would do d6+1, two daggers 2d6+2, etc.  Grimm's
+Electric Fingers will dispel the magic and cause the daggers to fall to the
+ground if a Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Knock,
+  Link=wizardry-knock,
+  Paradigm=Entropy,
+  Save=N,
+  Duration=0,
+  Counter=\mylink{Lock}{wizardry-lock} ,
+  Keywords=None,
+  Target=Close or Nearby Objects
+]
+
+
+
+\DICE Close or Nearby object(s) is/are opened. Doors are flung wide, locks
+are broken, shackles are bent open, belts come undone.  Ideas or thoughts
+can be unlocked from a mind if a \RB : \INT contest is lost. Objects locked
+by the Lock spell are opened if a Wizards' Duel is won.
+
+
+
+
+\SPELL[
+  Name=Levitating Disc,
+  Link=wizardry-levitating-disc,
+  Paradigm=Force,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Suspend Objects}{wizardry-suspend-objects} ,
+  Keywords=None,
+  Target=Close or Nearby point in space
+]
+
+
+
+You draw a circle \DICE meters in radius in the air. The inside of the
+circle is made of Force, as solid as iron. You can cause the circle to
+raise, lower, or hover in place.  You can only move up and down (never
+side-to-side).  Up to \DICE people could stand under it and be completely
+covered, or on it and be moved provided they don't weigh more than \DICE
+x200kg.  If you lower the circle on top of someone, they take \DICE damage
+per Moment. The circle moves 10 meters a minute (about 3m per Moment).  You
+can draw the circle in any orientation, and you can change its orientation
+at any time.  If the Levitating Disc is targeted with Suspend Objects, the
+disc will be dispelled if a Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Lipby Chonk's Viscous Form,
+  Link=wizardry-lipby-chonks-viscous-form,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+Your flesh becomes gelatinous. You can squeeze through gaps as small as
+keyhole with a great deal of effort. You take no damage from Crushing
+attacks for the duration of the spell. The spell only affects your flesh,
+not anything you're wearing or carrying.
+
+
+
+
+\SPELL[
+  Name=Lock,
+  Link=wizardry-lock,
+  Paradigm=Mind,
+  Save=Y (negate),
+  Duration=Markovian,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close and Nearby Objects
+]
+
+
+
+Up to \DICE non-living thing slam shut and can't be opened. If the object is
+a door, chest, or something like it, it will slam shut forcefully and
+loudly. This spell can work on things that aren't portals (a sword could be
+locked in its scabbard). You can also use this spell to lock a specific
+memory or thought, making it immune to mind reading or scrying without a \RB
+: \INT contest.  The duration is Markovian and depends on the number of
+\DICE invested.  The Lock can be dispelled by the Knock spell if a Wizards'
+Duel is lost.
+
+
+\SPELL[
+  Name=Meat Shield,
+  Link=wizardry-meat-shield,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes ,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close and Nearby
+]
+
+You summon a giant slab of meat.  The meat has \SUMDICE+\DICE Health, and
+can fill an area \DICE meters cubed.  The meat weighs \DICE x100kg and lasts
+for \DICE Hours.  Zoological creatures will attack the Meat Shield first. 
+Up to \DICE other creatures can eat the Meat Shield in lieu of rolling their
+Provisions, but the provenance of the meat is ... unknown.  If a Scything
+Disc of Nog is used on a Meat Shield, the shield will be dispelled if a
+Wizards' Duel is lost (otherwise, it will take damage as normal).
+
+
+
+
+
+\SPELL[
+  Name=Mighty Lungs,
+  Link=wizardry-mighty-lungs,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Until exhalation,
+  Counter=n/a ,
+  Keywords=Contested,
+  Target=Self
+]
+
+Your next inhalation allows you inhale 10x the normal amount of air. Not
+only does this allow you to hold your breath for 10x as long, but if you
+exhale forcefully it will release a blast of air strong enough to knock
+pigeons out of air and polish your teeth. A human-sized creature is knocked
+Prone and pushed Nearby unless they make a Contested roll using \DEX or \VIG
+(their choice) with a -\DICE penalty.  This spell will also blow open all
+the closed but unlocked doors in a room, shatter all the windows in a
+building, or knock the thatched roof off a peasant's shack. If you cast this
+spell with 3 or more \DICE, Save or your teeth shatter.
+
+
+
+
+\SPELL[
+  Name=Mirror Image,
+  Link=wizardry-mirror-image,
+  Paradigm=Entropy,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You create \DICE illusory images of yourself, which move as you move and
+always stay Close to you. They are constantly stepping through each other,
+so that it is impossible to tell which is which. When an enemy attacks you,
+they'll always hit an image first.  An image vanishes as soon as it suffers
+a solid impact (a blow from a mace, but also a slap). Area effects such as a
+dragon's breath will cause all images to instantly vanish (and you take the
+damage, naturally).
+
+
+
+
+
+\SPELL[
+  Name=Morass,
+  Link=wizardry-morass,
+  Paradigm=Elements,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Bastogne's Glamping Charm}{wizardry-bastognes-glamping-charm} ,
+  Keywords=Contested,
+  Target=Nearby or Far-Away Area
+]
+
+
+
+The ground \SUMDICE meters in radius and \DICE meters deep turns to black
+muck.  Monsters and objects in the mud sink 1 meter a Moment.  At the top of
+the Moment, a creature can make a Contested roll using \VIG with a -\DICE
+penalty to pull themselves out 1 meter (if they were only 1 meter deep to
+begin with, they escape).  If someone's head dips below the mud (2m for
+people, 1m for Pooka, 4m or more for giants), they are immediately placed on
+Death's Door, and have to roll their Death Die every turn they are under the
+mud (they can still claw their way up 1m with a successful Contested roll,
+as above).  If they don't have a Death Die, they die in \HD Moments.
+
+The spell lasts for as long as you concentrate.  When you break your
+concentration, everything that sunk in the mud is immediately thrown back to
+the surface.   If the area covered by the Morass is targeted by Bastogne's
+Glamping Charm, the Morass will be dispelled (and the objects brought to the
+surface) if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Negasonic Bomb,
+  Link=wizardry-negasonic-bomb,
+  Paradigm=Mind,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Cacaphony}{wizardry-cacaphony} ,
+  Keywords=None,
+  Target=Nearby or Far Away Area
+]
+
+
+
+You roll a small orb of Mind to a point Close, Nearby or Far-Away; the orb
+rolls silently and is hard to see.  When the orb stops rolling it
+immediately and silently detonates.  Creatures Close to the designated point
+are Deafened until they leave the area of effect.  Likewise, no spells can
+be cast while Close to the Negasonic Bomb.  Skulking effects (including
+Murder) succeed automatically while in range.  The spell lasts as long as
+you concentrate.  The bomb can be dispelled by Cacaphony if a Wizards' Duel
+is lost.
+
+
+
+
+
+\SPELL[
+  Name=Prismatic Ray,
+  Link=wizardry-prismatic-ray,
+  Paradigm=Entropy,
+  Save=Y (half),
+  Duration=0,
+  Counter=n/a ,
+  Keywords=Splittable,
+  Target=Nearby or Far-Away
+]
+
+
+
+A brilliant white light emanates from your forehead to a point Nearby or
+Far-Away, where it splits into a prism of \DICE beams.  Each beam strikes a
+random Ally or Monster Close to the prism.  Roll a d8 on the table below for
+each beam and apply its results.
+
+1. Red  Target takes \DICE fire damage, Save for half. Highly flammable
+things catch fire.
+2. Orange.  Target takes \DICE bashing damage, Save for half. 
+3. Yellow. Target takes \DICE lightning damage, Save for half.  If you fail
+your Save, you drop what you're holding.
+4. Green. Target takes \DICE acid damage, Save for half. Roll your Armor \UD
+if applicable.
+5. Blue. Target takes \DICE ice damage, Save for half. If you fail your
+Save, you fall Prone.
+6. Indigo. Target takes \DICE stabbing damage, Save for half.
+7. Violet. Target takes \DICE chopping damage, Save for half.
+8. Roll again.  Instead of \DICE damage, the effect deals \SUMDICE damage.
+If you get this result again, the beam splits and the target takes an
+additional effect (roll again and apply the result).  Continue in this way
+until you don't roll an 8.
+
+
+
+
+
+\SPELL[
+  Name=Pritchard's Gusty Belch,
+  Link=wizardry-pritchards-gusty-belch,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close and Nearby Area
+]
+
+
+
+You can breathe up to \DICE elements (fire, acid, water, wind, steam, etc)
+immediately in front of you for a Moment.  The elements don't interact with
+one another and act independently, so if you were to belch out fire and
+water, you would get the effects of both.  If the order matters (set
+something on fire and immediately douse it with water), you pick the order
+of effects.  Water breath is enough to extinguish fires smaller than a big
+bonfire, or wash off acid; wind breath could push a small sailboat or blow
+swarming insects out of an area; acid breath bleaches the color from objects
+and irritates the eyes; fire breath would cause paper and flammable objects
+(but not people, unless they were doused in oil) to catch fire, etc.
+
+
+
+
+\SPELL[
+  Name=Protection from Element,
+  Link=wizardry-protection-from-element,
+  Paradigm=Elements,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Prismatic Ray}{wizardry-prismatic-ray} ,
+  Keywords=None,
+  Target=Self or Close Ally
+]
+
+
+
+Reduce all damage of a single chosen element (acid, cold, fire, lightning,
+etc) by -\DICE.  The spell protects its targets from the negative effects of
+the natural elements (desert heat, arctic chill) as well.  If you are struck
+by a Prismatic Ray of the same elemental type, the protection is dispelled
+if a Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Rhea's Efficacious Plow,
+  Link=wizardry-rheas-efficacious-plow,
+  Paradigm=Force,
+  Save=N,
+  Duration=Moments,
+  Counter=n/a ,
+  Keywords=None,
+  Target=See description
+]
+
+
+
+You send an invisible wedge of Force along the ground in a straight line up
+to a Distant point.  The wedge can take up to \DICE turns ("left" or
+"right") at your command.  Any light debris on the path (snow, small stones,
+leaves, grass) is pushed to the side; fields can be tilled. Any pressure
+plates or tripwires are activated. You do not have to be able to see the
+entire path, but you do need to know the approximate route the wedge will
+take. The wedge can't move through solid objects, and it can't hurt anyone.
+The path cleared is \DICE meters wide. If you cast this spell with 3 \DICE
+or more, the width becomes \SUMDICE meters wide.
+
+
+
+
+\SPELL[
+  Name=Sandstorm,
+  Link=wizardry-sandstorm,
+  Paradigm=Elements,
+  Save=N,
+  Duration=Concentration,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close
+]
+
+
+
+You cough up a swirling spiral of sand.  Small flying creatures (bug-sized),
+arrows, and spears cannot enter or leave the sandstorm.  Up to \DICE-1 other
+people can hide in the sandstorm with you.  The sand moves with you and
+lasts as long as you concentrate.
+
+
+
+\SPELL[
+  Name=Sanguine Mail,
+  Link=wizardry-sanguine-mail,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Session,
+  Counter=\mylink{Enervate}{wizardry-enervate} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You become encased in elaborate plate mail that seems to be made from
+constantly congealing blood.  You definitely stand out in a crowd. Your \MD
+drops to d4, but you can still cast spells.  The \UD for the Armor depends
+on the number of \DICE invested: 1 d3; 2 d4; 3 d6; 4 d8; 5 d10; 6+ d12.  If
+you are struck with an Enervate spell, the Sanguine Mail is dispelled if a
+Wizards' Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Scuttle,
+  Link=wizardry-scuttle,
+  Paradigm=Biomancy,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=\mylink{Greaseball}{wizardry-greaseball} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+Your clothes and hair animate to carry you around. You can move at full
+speed in any orientation, and you can freely rotate as you move. For
+instance, you could run while standing on your head, holding a torch, and
+turning counterclockwise. You can lie on your side and, while flipping end
+over end, move backwards. This effect does not allow you to climb up walls,
+but ladders and ropes are no problem (you could suspend yourself from a rope
+and cast spells, for example).  If you are struck with a Greaseball, or
+attempt to climb something affected by Greaseball, the Scuttle is dispelled
+if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Scything Disc of Nog,
+  Link=wizardry-scything-disc-of-nog,
+  Paradigm=Force,
+  Save=Y (half),
+  Duration=0,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Nearby or Far Away Area
+]
+
+
+
+You hurl a whirling disc of Force and light from your fingertip. The disc
+screeches like a sawblade. It deals \SUMDICE damage to its target, Save for
+half. If it deals more than 6 damage, it bounces towards a random creature
+(friend, foe, or the Sorcerer herself) Close or Nearby, dealing \SUMDICE-2
+damage, Save for half. If it deals more than 6 damage, it bounces towards
+another random creature Close or Nearby, dealing \SUMDICE-4 damage, Save for
+half. This continues, losing 2 damage with each bounce, until there are no
+valid targets or the spell deals 6 or less damage to a creature.
+
+
+
+
+
+\SPELL[
+  Name=Sleep,
+  Link=wizardry-sleep,
+  Paradigm=Mind,
+  Save=Y (negate),
+  Duration=Markovian,
+  Counter=\mylink{Cacaphony}{wizardry-cacaphony} ,
+  Keywords=None,
+  Target=Close or Nearby Area
+]
+
+
+
+You summon a cloud of somnomulent dust to a point Close or Nearby. 
+\SUMDICE creatures Close to the cloud, who have no more than \DICE \HD, must
+immediately Save or fall into a magical slumber.   They can't be awakened by
+anything less than a vigorous slap (counts as a Maneuver).  You don't have
+control over who falls asleep, it's entirely random and will be as many
+creatures as possible (up to \SUMDICE).  You are immune to your own Sleep
+spell (so you could cast it Close to yourself).  Creatures who fall asleep
+immediately fall Prone and drop any items they're holding.  Fight rolls
+agains them will hit automatically and do maximum damage, and can only be
+blocked by Armor.  This will wake the creature up, of course.  If an orb of
+Cacaphony is detonated Nearby, the creatures will awaken if a Wizards' Duel
+is lost.  Otherwise, creatures who fall asleep will remain asleep for the
+Markovian duration.   
+
+
+
+
+\SPELL[
+  Name=Summon Candles,
+  Link=wizardry-summon-candles,
+  Paradigm=Force,
+  Save=N,
+  Duration=Varies,
+  Counter=\mylink{Fogbank}{wizardry-fogbank} ,
+  Keywords=None,
+  Target=Close
+]
+
+
+
+\SUMDICE dribbling candles appear on objects you touch. You can walk around
+placing candles as required for Minutes. The candles are lit and burn for
+Hours. They can be detached, but will fade from existence within Minutes. 
+For every 6 candles placed Close to one another, the Sorcerer close to the
+candles gains 1 of the following (your choice): Safe Casting: Replace one of
+your rolled Blood Die with a natural 1; Power Casting: Replace one of your
+rolled Blood Die with a natural 6; Natural Casting: add a natural +1 to any
+Blood Die you've rolled.  When a Sorcerer uses 1 of these powers, the 6
+candles immediately disappear.  Note that *any* Sorcerer can use these
+abilities, friend or foe.  A Sorcerer will immediately know if they are in
+an area of candles, and what powers it can bestow on them.  If the candles
+are encased in a Fogbank, they are snuffed out and dispelled if a Wizards'
+Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Suspend Objects,
+  Link=wizardry-suspend-objects,
+  Paradigm=Force,
+  Save=Y (negate),
+  Duration=Concentration,
+  Counter=\mylink{Levitating Disc}{wizardry-levitating-disc} ,
+  Keywords=None,
+  Target=Any Distance
+]
+
+
+
+You can hold up to \DICE objects in the air, weighing no more than \DICE
+x200kg.  You can allow these objects to descend at 3m per Moment at your
+discretion. Creatures who are brought to ground in this way take no falling
+damage.  Unwilling creatures (flying Monsters, for example) get a Save to
+negate.  If a Levitating Disc is summoned in the midst of the held
+creatures, the Suspend Objects spell will be dispelled (and the objects will
+fall) if a Wizards' Duel is lost.
+
+
+
+
+\SPELL[
+  Name=Tempestuous Chariot,
+  Link=wizardry-tempestuous-chariot,
+  Paradigm=Elements,
+  Save=N,
+  Duration=One trip,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Close
+]
+
+
+
+A tumult of air elementals lifts you and \DICE-1 others and takes you in any
+direction the you desire, up to \SUMDICE km away.   One catch - the
+elementals can only travel in a straight line, and you have to choose
+beforehand the way to go ("up", "east", "that way", etc).  While you are in
+the tempest you are buffeted horribly and can neither talk nor act.  The
+winds refuse to travel without you, and will immediately dispel if you lose
+contact
+
+
+
+
+\SPELL[
+  Name=Vertigo,
+  Link=wizardry-vertigo,
+  Paradigm=Mind,
+  Save=Y (negate),
+  Duration=Markovian,
+  Counter=\mylink{Suspend Objects}{wizardry-suspend-objects} ,
+  Keywords=None,
+  Target= Any Distance
+]
+
+
+
+You can cause up to \DICE Close, Nearby, Far-Away, or Distant creatures to
+suffer severe vertigo unless they Save.  Creatures that are climbing or
+flying immediately fall; creatures who are Close to the edge of something (a
+cliff, a wall, the guardrails of a ship, etc) need to \RS : \FOC or fall.
+Creatures already on the ground will fall Prone.  If the creatures are
+struck with a Suspend Objects spell, the Vertigo is dispelled if a Wizards'
+Duel is lost.
+
+
+
+
+
+\SPELL[
+  Name=Web,
+  Link=wizardry-web,
+  Paradigm=Entropy,
+  Save=Y (negate),
+  Duration=Markovian,
+  Counter=n/a ,
+  Keywords=None,
+  Target=Nearby or Far Away Area
+]
+
+
+
+You can anchor a giant web between three or more solid points up to \DICE
+meters in radius (for example: the 4 points of a door, two trees and the
+ground, across a hallway, etc).  Objects that touch the web immediately
+become stuck; arrows and spears can't be fired through it.  Creatures that
+enter the web (or are caught in it when cast) must Save or become ensnared
+for the Markovian duration (each creature should roll their Markovian die
+separately). Fight rolls against them hit automatically and can only be
+blocked by Armor.  The web is extremely flammable and will be consumed in
+\DICE Moments.
+
+
+
+\SPELL[
+  Name=Whirling Blades,
+  Link=wizardry-whirling-blades,
+  Paradigm=Entropy,
+  Save=N,
+  Duration=Concentration,
+  Counter=\mylink{Suspend Objects}{wizardry-suspend-objects} ,
+  Keywords=None,
+  Target=Self
+]
+
+
+
+You summon a number of invisible blades of Force that spin around your
+waist, with you in the center.  Every creature Close to you takes \DICE
+damage for each Moment the spell is maintained.  The blades will cut or
+damage fragile objects.  If the creature or object sits above or below your
+waist, they take no effect.  If the blades are struck by a Suspend Objects
+spell, they will be dispelled if a Wizards' Duel is lost.
+
+\newpage
+
+\mysection{Inscription}{sorcerer-inscription}
+
+Inscription requires \mylink{Research Dice}{sorcerer-research} to practice.  There are 4 ways of practicing Inscription:
+
+\mybullet{
+  \item \mylink{Transcription}{sorcerer-inscription-transcription}: Writing magical texts to fetishes and grimoires
+  \item \mylink{Indagation}{sorcerer-inscription-indagation}: Researching information, including the true names of the \mylink{Forgotten}{spriggan-forgotten}
+  \item \mylink{Tattoo}{sorcerer-inscription-tattoo}: Branding and marking the flesh of living things with magical symbols
+  \item \mylink{Sigils}{sorcerer-inscription-sigils}: Etching and scribing runes and powerful names 
+}
+
+
+\mysubsection{Transcription}{sorcerer-inscription-transcription}
+
+Transcription is used to: 
+\mybullet {
+  \item prepare a new Grimoire so that it "belongs" to you; or
+  \item defuse a Grimoire you've stolen from another wizard; or
+  \item scribe a spell from a scroll or item into a Grimoire; or
+  \item scribe a spell from your Grimoire to a scroll or item
+}
+
+\myhighlight{Preparing Grimoires}{inscription-preparing-grimoires}
+
+By purchasing a blank grimoire and placing one or more Wizard Sigils on it, the grimoire becomes yours and can now have spells written into it.  It is also trapped and needs to be defused in order to be read by another.   You can place up to \LVL Wizard Sigils on your grimoire(s),, making them harder to defuse.
+
+\myhighlight{Defusing Grimoires}{inscription-defusing-grimoires}
+
+In order to read another Sorcerer's grimoire, you must defuse the traps inside.  You must roll Research Dice for every Wizard Sigil on the grimoire.  
+
+When rolling the Research Dice, if the number of failures exceed the number of successes, you fail (you win on a tie).  If you fail, you trigger one of the traps - roll on the "Grimoire Traps" table (good news is that setting off a trap removes it).
+
+\myhighlight{Scribing: Fetish to Grimoire}{inscription-scribing-fetish-to-grimoire}
+
+You can write a spell from a fetish (including a Sorcerer's skull) to your grimoire.  Doing so erases the spell from the fetish or skull no matter how many \UD it had remaining.  You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie).  The spell still disappears from the fetish.
+
+\myhighlight{Scribing: Grimoire to Fetish}{inscription-scribing-grimoire-to-fetish}
+
+A fetish can be a papyrus, set of mouse skulls, handle of an axe, roll of snakeskin, etc. etc.  The item can't be living (that would be a Tattoo) but can be anything you desire.  The cost of exotic materials is up to the Arbiter. A fetish can only have a single spell on it.  All fetishes have a \UD of d4 - when the \UD is exhausted, the magical words disappear from the fetish. 
+
+You may cast the spell inscribed on the fetish with any number of Blood you choose, OR you may forgo the Blood die and roll a single d6 for the effect.  You still roll the \UD for the fetish either way.
+
+You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie) and the fetish is destroyed 
+
+
+\mysubsection{Indagation}{sorcerer-inscription-indagation}
+
+Indagation is the process of researching information, including the true names of the Forgotten.
+
+\myhighlight{True Name}{inscription-true-name}
+
+
+You may learn the True Name of one of the \mylink{Forgotten}{spriggan-forgotten} on behalf of a Spriggan.  You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie).
+
+\myhighlight{Magical History}{inscription-magical-history}
+
+By researching the magical history of an item, you can learn about its powers, creator, and command words.  The Arbiter will assign a number to different things to learn about something, and for each successful roll of your Research Die, you uncover something new. You always know if there's more to learn or if you've learned all you can.
+
+Note that this won't tell you if something is magical per se (you'll need a Witch or Spriggan for that), so it's possible for you to waste your Research Dice on something completely mundane.
+
+
+\mysubsection{Tattoo}{sorcerer-inscription-tattoo}
+
+Tattoos can be inscribed on the body as specified below.  Each tattoo costs 100 coins in materials. You can't move a tattoo from yourself to someone else - the tattoo stays with the person.  The tattoos below are the most common, work out with the Arbiter if you want something more esoteric ...
+
+To scribe a tattoo you can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie) and the materials are consumed.
+
+
+
+\myhighlight{Dagger (Limb)}{sorcerer-tattoo-dagger}
+
+Touching the dagger immediately brings it into your hand.  Place the dagger back on the limb returns it to being a tattoo.  The dagger is normal in all ways.
+
+
+\myhighlight{Torch (Limb)}{sorcerer-tattoo-torch}
+
+As dagger above.  The torch never goes out.
+
+\myhighlight{Compass (Limb)}{sorcerer-tattoo-compass}
+
+Always points towards true north.  
+
+\myhighlight{Quill and Scroll (Back)}{sorcerer-tattoo-quill-scroll}
+
+The quill can be removed as the Dagger, above - and given to someone else.  Anything that the other person writes with the quill will appear on the scroll ... painfully.  The writing disappears in Minutes.
+
+\myhighlight{Eye (Palm)}{sorcerer-tattoo-eye}
+
+The tattooed can see through the eye as if it were one of their normal eyes
+
+\myhighlight{Rope (Neck, Arms, Legs, Torso}{sorcerer-tattoo-rope}
+
+As Dagger above, 25m of rope. Needs to be completely rewound around the person to return to being a tattoo.
+
+
+\myhighlight{Mermaid (chest or neck)}{sorcerer-tattoo-mermaid}
+
+The Sorcerer inscribes this tattoo on you and a \mylink{Wizard Sigil}{sorcerer-sigil-wizard} on a different object (usually a ship in a bottle or a scrimshawed whale bone).  You do not need to breathe to stay alive - you draw breath instead from the area immediately around the object.  This means that if the object is immersed in water, or sealed in an airtight container, you will suffocate.
+
+
+
+\mysubsection{Sigils}{sorcerer-inscription-sigils}
+
+Sigils are runes etched into surfaces.  Sigils glow slightly and exude arcane mystery, and are really obvious to everyone Nearby - but what the rune does is only interpretable by other Sorcerers.  The creation of a new Sigil causes any previous Sigils of the same type created by the Sorcerer to vanish.
+
+A Sigil you encounter may be lifeless.  Sigils remain even after their magic is exhausted; only the Sorcerer who created the Sigil can erase it from existence by placing a finger on it and reading its name aloud (note: the finger does not need to be attached to the hand, and the finger doesn't have to have flesh on it).  A Sigil's power will manifest a number of times equal to the [dice] of Research Dice used to create it.  When a Sigil manifests, it will be Minutes before it can manifest again.
+
+\example {
+  Craps Bastogne inscribes a Talking Sigil using 3 Research Dice.  Some haphazard party comes down the hallway, and the glyph is triggered (screaming out "I'M BEING REPRESSED!" 3 times before falling quiet).  The Talking Sigil will manifest 2 more times before it's exhausted
+}
+
+The duration of the Sigil depends on the number of Research Dice being spent (the Talking Sigil above would last for Years, for example):
+
+  \mytable{l X}{
+    \thead{Research Dice} & \thead{Duration} \\
+  }{
+    1 & Weeks \\
+    2-3 & Months \\
+    4-5 & Years \\
+    6-7 & Permanent \\
+  }
+
+The Sigil you can etch depends on the number of successes you get on your Research Dice roll(s) and has a monetary cost in materials as well.  You must say which Sigil(s) you're inscribing and spend the money before you roll.  Unless otherwise specified, a Sigil can only be placed on something that is generally immobile and not alive - a door, a wall, the floor, a statue, etc.  
+
+Sorcerer's are immune to their own Sigil's effects where appropriate
+
+
+\myhighlight{Trivial Sigils}{sorcerer-sigils-trivial}
+
+\mybold{Successes: 1}
+\mybold{\COST 50\FE}
+
+\myanchor{\mybold{Chaining Sigil}{sigil-chaining}}  A Chaining Sigil can be scribed and "marrieD" to another Sigil.  The Chaining Sigil must be created at the same time as its partner Sigil.  If a Chaining Sigil is erased by the Sorcerer who inscribed it, the Sigil it is partnered with will immediately manifest.
+
+\myanchor{\mybold{Talking Sigil}{sigil-talking}} When anyone comes Close to an object with a Talking Sigil on it, it will yell out up to [dice] words at ear-splitting top volume [dice] times.
+
+
+\mylink{\mybold{Wizard Sigil}}{sigil-wizard}
+
+The most basic Sigil, essentially just the Sorcerer's name - but necessary to allow a weapon, object, or person to be a receptacle for magic.  A Wizard Sigil is always permanent, no matter how many Research Dice are used.  Other Sorcerers can identify the owner of a Wizard Sigil using "Magical History" above.
+
+\myhighlight{Minor Sigils}{sorcerer-sigils-minor}
+
+\mybold{Successes: 2}
+\mybold{\COST 50\AG}
+
+
+\mylink{\mybold{ Elemental Sigil}}{sigil-elemental}
+
+When anyone comes Close to an object with an Elemental Sigil on it, they are dealt \SUMDICE damage.  The inscriber chooses the elemental type (lightning, fire, etc).  Save for half damage.
+
+\mylink{\mybold{ Warding Sigil}}{sigil-warding}
+
+This glyph can only be placed on something that is closed : a book, a lock, a chest but not a sword in a scabbard or someone's mouth (Arbiter's discretion).  If the warded item is opened, the Sigil immediately becomes lifeless.
+
+When anyone comes Close to an item with a Warding Sigil on it, they must Save or move somewhere Nearby, back the way they came. 
+
+
+
+\myhighlight{Major Sigils}{sorcerer-sigils-major}
+
+\mybold{Successes: 3}
+\mybold{\COST 10\AU}
+
+
+\mylink{\mybold{ Cursing Sigil}}{sigil-cursing}
+
+This Sigil can only be created with the help of a Witch's \mylink{Malison}{occultism-malison}, or a \mylink{Mystic of Vecna}{small-gods-vecna}.  The Curse is placed within the Sigil.  When anyone comes Close to an object with the Sigil on it, they must Save vs. Hexes or fall victim to the curse.  If there is more than 1 target, they should hold a Luck contest. 
+
+\mylink{\mybold{ Petrifying Sigil}}{sigil-petrifying}
+
+When anyone comes Close to a Petrifying Sigil, they must Save or become Paralyzed.  The duration of the paralysis lasts until the Sigil becomes lifeless. You age while you are paralyzed.
+
+\mylink{\mybold{Portal Sigil}}{sigil-portal}
+
+These must be placed on doors, gates, or entrances.  A Portal Sigil is placed on the threshold or top of one doorway and a Wizard Sigil is placed on another; the two doors are connected as if they are the same door.  Someone stepping through the Portal Sigil side will exit through the \mylink{Wizard Sigil}{sigil-wizard} side (but not vice-versa).  Erasing either Sigil closes the doorway.
+
+\myhighlight{Primary Sigils}{sorcerer-sigils-primary}
+
+\mybold{Successes: 4}
+\mybold{\COST 100\AU}
+
+
+\mylink{\mybold{ Erasing Sigil }}{sigil-erasing}
+
+When anyone comes close to an Erasing Sigil, they must Save or suffer one of the effects below (roll a d6):
+
+\mynumlist {
+  \item Erases the spells etched in a Sorcerer's mind
+  \item Erases everything in a person's backpack
+  \item Erases a person's armor and weapons (magic items get an additional Save)
+  \item Erases all coins a person is carrying
+  \item Erases a person's Grit, bringing it to zero
+  \item Erases a person's Flesh and they are Dying
+}
+
+
+
+
+\mylink{\mybold{Remembrance Sigil}}{sigil-remembrance}
+
+When created with a Spriggan present, they can place one of the \mylink{Obliterated}{spriggan-obliterated} inside of the Sigil.  The summoning of the Obliterated does not "lock" the \mylink{Remembrance Dice}{spriggan-remembrance} of the Spriggan.  The Spriggan cannot use more Remembrance Dice than the Research Dice you used to create the Sigil (though they can use the same amount).  
+
+Anyone other than the Sorcerer or Spriggan who comes Close to the Remembrance Sigil will cause the Obliterated to come forth - very pissed off - and immediately attack.  If the Obliterated is slain, it will return to the Sigil over and over until the Sigil becomes lifeless.
+
+
+
+
+\mylink{\mybold{Revisitation Sigil}}{sigil-revisitation}
+
+The Revisitation Sigil is scribed as normal (usually on a floor in the Sorcerer's laboratory) and a \mylink{Chaining Sigil}{sigil-chaining} is placed on another portable item.  When the Chaining Sigil is erased, the Sorcerer and up to [dice] others can be transported to the location of the Revisitation Sigil.  
+
+
+
+
+
+
+
+} %end
