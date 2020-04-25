@@ -235,23 +235,49 @@
 
   All Knaves know the following Whispers:
 
-  \myhighlight{Kate's Key}{knave-kates-key} \\
+  \myhighlight{Kate's Key}{knave-whisper-kates-key} \\
   Through certain signs and orisons to Ptah, Issek, and others, you can open locks and untie bonds.
 
-  \myhighlight{Clockwork Sense}{knave-clockwork-sense} \\
+  \myhighlight{Clockwork Sense}{knave-whisper-clockwork-sense} \\
   You can uncover and understand the mechanisms of traps, snares, and Inscribed Sigils - and chide them into disarming themselves.
 
-  \myhighlight{Gloomstride}{knave-gloomstride} \\
+  \myhighlight{Gloomstride}{knave-whisper-gloomstride} \\
   You step through the veil between reality and shadow; you must tread silently or be taken by the denizens that live here.  Certain admonishments allow you to silence the clink of coins in your pocket and the sound of your breath.  Gloomstriding will allow you to get \mylink{The Drop}{combat-surprise} on someone (which allows for a Murder - see below).
 
-  \myhighlight{Monkeys' Paws}{knave-monkeys-paws} \\
+  \myhighlight{Monkeys' Paws}{knave-whisper-monkeys-paws} \\
   A sure grip and lightning reflexes allow you to scale impenetrable fortresses, icy cliffs, and wizard's towers - and swing from ropes and vines.
+
+  \example {
+    Additionally, \mylink{Bravos}{flavor-bravo} know the following Whispers:
+  }
+  \myhighlight{Red Herring}{knave-whisper-red-herring}.  
+
+  You use minor illusions, shadows, and hypnotism to disguise yourself as someone else, or convince someone that the forgery you've handed them is legitimate.
+
+  \myhighlight{Shadow Blade}{knave-whisper-shadow-blade}.  
+
+  \mybold{You learn this at 3rd level}. You can reach into a shadow and pull out a dagger.  You don't need to roll your \KNAVE, it automatically works. The dagger exists for as long as it is not exposed to sunlight.  The dagger is magical, and can have Toxins applied to it.  If the dagger takes a life it immediately dissapates.
+
+  \example {
+    And \mylink{Archaeologists}{flavor-archaeologist} know the following Whispers:
+  }
+
+  \myhighlight{Foyst}{knave-whisper-foyst}
+
+  You use minor illusions and tricks of the eye to misdirect, allowing you to pick pockets or palm trinkets. 
+
+  \myhighlight{Hammerspace Bag}{knave-whisper-hammerspace-bag}. 
+
+   \mybold{You learn this at 3rd level}. Use this Whisper on a sack, bag, or satchel. You don't need to roll your \KNAVE, it automatically works. The Hammerspace Bag can contain up to 12 Significant Items.  Searching for a Significant Item is a 1-in-(number of items) chance of finding it per Moment i.e. if you have 6 Significant Items in the bag, you have a 1-in-6 chance of pulling it out in a Moment.  You can pull out Insignificant Items stored in the bag immediately.  The effect is permanent until you die, but you can only have one Hammerspace Bag at a time.  If you die, all of the contents of the bag are immediately ejected. 
+
 
   You must be unarmored or wearing \mylink{Light Armor}{gear-armor} to use your Whispers.  You cannot perform Whispers while using a shield.   Using a Whisper in combat is a \mylink{Basic Maneuver}{combat-basic-maneuver}.
 
   In order to use a Whisper, you must roll your \KNAVE against a difficulty set by the Arbiter (details on difficulty are found in the Arbiter's section).  If your roll ties or beats this difficulty, you succeed.  
 
-  You may also use your \LUCK to affect this result, but \mybold{the difficulty is subtracted from your Luck roll}.  You cannot go below 0 in this way.
+  You may also use your \LUCK to affect this result, but \mybold{the difficulty is subtracted from your Luck roll}.  You cannot go below 0 in this way.  See the section on \mylink{Knavery}{arbiter-knave} in the Arbiter's section to get a sense of your odds of success.
+
+  \cbreak
 
   \example {
     Flink Lighthand, a level 3 Bravo (d6 \KNAVE and d6 \LUCK) ,  opens the door to a room.  His sixth sense tingles and he invokes his Clockwork Sense.  The Arbiter knows there's a cunning poisoned spear trap in the room and assigns a difficulty of 4/2 to it (4 to find it and 2 to disarm it).  Flink rolls his \KNAVE and gets a 4 - he smells the tarantuala venom on the edge of the spear, and proceeds cautiously into the room.  Bending close to the pressure plate that would release the trap, Flink whispers to it and asks it to lock in place.  He rolls again ... and gets a 1!  Thinking quickly, Flink rolls his \LUCK and rolls a 4.  He has to subtract the 2 difficulty from this roll and gets a total of 3 (1 + 4 - 2).  Lucky break, he's able to recover, and the trap mechanism disarms.
@@ -313,17 +339,17 @@
   You do not need to make any checks for handling Toxins or Acids.
 
   \mybold{Brutal Slaying}
-  When attempting a Murder, you may use a \mylink{War Axe}{gear-weapons}, \mylink{Spear}{gear-weapons}, or \mylink{Mace}{gear-weapons}. You still must be Close to the Monster.  If you are using a War Axe and manage to slay the Monster, you may invoke the War Axe's \mylink{Cleave}{gear-weapon-cleave} ability to attack another Monster, but it doesn't count as a Murder, as you no longer have The Drop.
+  When attempting a Murder, you may use a \mylink{War Axe}{gear-weapons}, \mylink{Spear}{gear-weapons}, or \mylink{Mace}{gear-weapons} in addition to the other weapons allowed. You still must be Close to the Monster.  If you are using a War Axe and manage to slay the Monster, you may invoke the War Axe's \mylink{Cleave}{gear-weapon-cleave} ability to attack another Monster, but it doesn't count as a Murder, as you no longer have The Drop.
 
   \mybold{Red Herring}
-  You know the additional \myanchor{Whisper: Red Herring}{whisper-red-herring}.  You use minor illusions, shadows, and hypnotism to disguise yourself as someone else, or convince someone that the forgery you've handed them is legitimate.
+  You know the additional \mylink{Whisper: Red Herring}{knave-whisper-red-herring}.
 
   \mybold{Optional: Outstanding Contract}
   There's an outstanding contract on your head, revenge for something you did.  Tell the Arbiter who and why they want to kill you.
 
   \mysubsection{Level Bonus}{bravo-bonus}
   \mybullet {
-    \item \mybold{Level 3:}   A good assassin collects information before closing in for the kill. For every fact that you know about your target, you deal an additional +2 damage when you attempt a Murder, up to a maximum of +10.  You can only use the Cautious Murder option in this case. The facts don't have to be major, but they cannot be trivial. "Drinks Earl Grey tea", "Commands the fifth cavalry", "Is named Ostruchus Poncelroy" are all good facts. "Is currently inside his tent", "Is a man", "Has two arms" are not. If you could learn it by looking at a snapshot of the current scene, it's trivial
+    \item \mybold{Level 3:}   You know the additional \mylink{Whisper: Shadow Blade}{knave-whisper-shadow-blade}
     \item \mybold{Level 5:}   Once per Session, you can step into a shadow and become \mylink{Invisible}{effect-invisible}.  You can use this to get the Drop on someone, but there must be a shadow present (you couldn't do this in the middle of a sunny field, for example).  
     \item \mybold{Level 7:}  Once per Adventure, at any time, you may declare that you are walking off-screen. During any Session of the Adventure, you may reveal yourself to have been a minor NPC in the background of the scene "all along" as long as there actually are minor NPCs in the background of the scene. You can always walk back on stage at any time, even climbing in a window. This ability is limited by plausibility.
 
@@ -375,17 +401,18 @@
   You can use the Florentine Mighty Deed no matter what your \DEX is
 
   \mybold{Foyst}
-  You know the additional \myanchor{Whisper: Foyst}{whisper-foyst}.  You use minor illusions and tricks of the eye to misdirect, allowing you to pick pockets or palm trinkets. 
+  You know the additional \mylink{Whisper: Foyst}{knave-whisper-foyst}
 
   \mybold{Optional: Arch-Nemesis}
   You have an arch-nemesis who always seems to be a step ahead of you when it comes to obtaining artifacts. Tell the Arbiter a little bit about them.
 
   \mysubsection{Level Bonus}{archaeologist-bonus}
   \mybullet {
-    \item \mybold{Level 3:}  Once per Session, you can automatically escape from something that is restraining you and that you could plausibly escape from. This includes grapples, lynchings, and awkward social situations, but not sealed coffins 
-    \item \mybold{Level 5:}  You always get two rolls on your \DEATH (pick the one you want to use).
+    \item \mybold{Level 3:}  You learn the additional \mylink{Whisper: Hammerspace Bag}{knave-whisper-hammerspace-bag}. 
+    \item \mybold{Level 5:}  Once per Session, you can automatically escape from something that is restraining you and that you could plausibly escape from. This includes grapples, lynchings, and awkward social situations, but not sealed coffins 
     \item \mybold{Level 7:}  In a Medium or Large Civilization, you may spend any amount of money to buy an Unlabeled Package. When the package is unwrapped, you declare what it contains, provided (a) it didn't cost more than you originally paid, (b) is smaller than a 1m cube, (c) wouldn't take up more than 1 Significant Item slot (no storing 100,000au in an Unlabeled package, for example), (d) is mundane, and (e) would be available in the Civilization you came from
   }
+
 
   \mysubsection{Professional Gear}{archaeologist-gear} {
     In addition to your \mylink{Starting Gear}{starting-gear}, you start with a bandolier with 2 daggers and either (a) or (b):
