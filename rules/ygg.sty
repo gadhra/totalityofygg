@@ -49,6 +49,15 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{3mm}
 
+% Add a space
+\newcommand{\smspace}{
+  \quad
+}
+
+\newcommand{\bgspace}{
+  \qquad
+}
+
 
 % --- header and footer ------------------------------------------------
 
@@ -78,20 +87,6 @@
 
 \usepackage{fontspec}
 \ifdefined\fontsearchpath\else\newcommand{\fontsearchpath}{../fonts}\fi
-
-\makeatletter
-\let\@@scshape=\scshape
-\renewcommand{\scshape}{%
-  \ifnum\strcmp{\f@series}{bx}=\z@
-    \usefont{T1}{cmr}{bx}{sc}%
-  \else
-    \ifnum\strcmp{\f@shape}{it}=\z@
-      \fontshape{scsl}\selectfont
-    \else
-      \@@scshape
-    \fi
-  \fi}
-\makeatother
 
 
 % Free Futura font, based off of TSR's PH1e
@@ -129,6 +124,27 @@
 
 % 6-sided die
 \newcommand{\diceglyph}{\ffstixmath{\char"2685}}
+% coin
+\newcommand{\coinglyph}{\ffstixmath{[\char"0023\char"20AC}]}
+% num successes
+\newcommand{\successglyph}{\ffstixmath{[\char"0023\char"2713}]}
+% sum
+\newcommand{\sumglyph}{\ffstixmath{[\char"03A3\char"2685}]}
+% duration
+\newcommand{\durationglyph}{\ffstixmath{[\char"231A~D}]}
+% length
+\newcommand{\lengthglyph}{\ffstixmath{[\char"21E2}~L]}
+%num dice
+\newcommand{\numdiceglyph}{\ffstixmath{[\char"0023\char"2685}]}
+%mod
+\newcommand{\moddiceglyph}{\ffstixmath{[\char"00B1~M]}}
+%target
+\newcommand{\targetglyph}{\ffstixmath{[\char"25CE~T]}}
+%counterspell
+\newcommand{\counterglyph}{\ffstixmath{[\char"2932~C}]}
+
+
+%text abbreviations
 \newcommand{\LVL}{{\fftext \textbf{[lvl] }}}
 \newcommand{\MAX}{{\fftext \textbf{[max] }}}
 \newcommand{\SUM}{{\fftext \textbf{[sum] }}}
@@ -136,34 +152,53 @@
 \newcommand{\AU}{{\fftext{ag}}}
 \newcommand{\AG}{{\fftext{au}}}
 
-\newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7} }}}
-\newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9} }}}
-\newcommand{\PLUS}{{\fftext \textbf{\ffstixmath{\char"002B} }}}
 
-\newcommand{\RB}{{\fftext \textbf{R\ffstixmath{\char"29C1} }}}
-\newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713} }}}
-\newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473} }}}
+% Dice
+\newcommand{\DCUP}{{\fftext \textbf{DC\ffstixmath{\char"21E7}}}}
+\newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9}}}}
+\newcommand{\PLUS}{{\fftext \textbf{\ffstixmath{\char"002B}}~}}
+\newcommand{\RB}{{\fftext \textbf{R\ffstixmath{\char"29C1}}~}}
+\newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713}}~}}
+\newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473}}~}}
 
-\newcommand{\INT}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2666}}INT }{tangible-stats-intellect}}
-\newcommand{\FOC}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2665}}FOC }{tangible-stats-focus}}
-\newcommand{\VIG}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2663}}VIG }{tangible-stats-vigor}}
-\newcommand{\DEX}{\protect\mylink{\fftext \textbf{\ffstixmath{\char"2660}}DEX }{tangible-stats-dexterity}}
+%Stats
+\newcommand{\INT}{\fftext \textbf{\ffstixmath{\char"2666}}INT~}
+\newcommand{\FOC}{\fftext \textbf{\ffstixmath{\char"2665}}FOC~}
+\newcommand{\VIG}{\fftext \textbf{\ffstixmath{\char"2663}}VIG~}
+\newcommand{\DEX}{\fftext \textbf{\ffstixmath{\char"2660}}DEX~}
 
-\newcommand{\UD}{\protect\mylink{\fftext \textbf{U\diceglyph}}{dice-usage-dice}}
-\newcommand{\MD}{\protect\mylink{\fftext \textbf{M\diceglyph}}{combat-move-die}}
-\newcommand{\HD}{\fftext \textbf{HD\diceglyph}}
-\newcommand{\STATIC}{\protect\mylink{\fftext \textbf{Static\diceglyph}}{dice-static-dice}}
-\newcommand{\POOL}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{dice-pool-dice}}
-\newcommand{\DEATH}{\protect\mylink{\fftext \textbf{Pool\diceglyph}}{combat-death-die}}
-\newcommand{\KNACK}{\protect\mylink{\fftext \textbf{Knack\diceglyph}}{dice-knack-dice}}
-\newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}}
-\newcommand{\FLESH}{\fftext \textbf{Flesh\diceglyph}}
-\newcommand{\LUCK}{\fftext \textbf{Luck\diceglyph}}
-\newcommand{\KNAVE}{\fftext \textbf{Knave\diceglyph}}
+%Dice Types
+\newcommand{\UD}{\protect\mylink{\fftext \textbf{U\diceglyph}~}{dice-usage-dice}}
+\newcommand{\MD}{\protect\mylink{\fftext \textbf{M\diceglyph}~}{combat-move-die}}
+\newcommand{\HD}{\fftext \textbf{HD\diceglyph}~}
+\newcommand{\STATIC}{\protect\mylink{\fftext \textbf{Static\diceglyph}~}{dice-static-dice}}
+\newcommand{\POOL}{\protect\mylink{\fftext \textbf{Pool\diceglyph}~}{dice-pool-dice}}
+\newcommand{\DEATH}{\protect\mylink{\fftext \textbf{Pool\diceglyph}~}{combat-death-die}}
+\newcommand{\KNACK}{\protect\mylink{\fftext \textbf{Knack\diceglyph}~}{dice-knack-dice}}
+\newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}~}
+\newcommand{\FLESH}{\fftext \textbf{Flesh\diceglyph}~}
+\newcommand{\LUCK}{\fftext \textbf{Luck\diceglyph}~}
+\newcommand{\KNAVE}{\fftext \textbf{Knave\diceglyph}~}
+
+%Magic
+\newcommand{\DICE}{\fftext \textbf{\numdiceglyph}~}
+\newcommand{\SUMDICE}{\fftext \textbf{\sumglyph }~}
+\newcommand{\MOD}{\fftext \textbf{\moddiceglyph }~}
+\newcommand{\DURATION}{\fftext \textbf{\durationglyph}~}
+\newcommand{\LENGTH}{\fftext \textbf{\lengthglyph}~}
+\newcommand{\COST}{\fftext \textbf{\coinglyph}~}
+\newcommand{\SUCCESS}{\fftext \textbf{\successglyph}~}
+\newcommand{\TARGET}{\fftext \textbf{\targetglyph}~}
+\newcommand{\COUNTER}{\fftext \textbf{\counterglyph}~}
+
+\newcommand{\PARADIGM}{\fftext \textbf{[P]}~}
+\newcommand{\KEYWORD}{\fftext \textbf{[K]}~}
+\newcommand{\SAVE}{\fftext \textbf{[S]}~}
 
 
-\newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4} }}}
-\newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C} }}}
+
+\newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4}}~}}
+\newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C}}~}}
 \newcommand{\TheAuthority}{
   {
     \fontfamily{lmr}\selectfont {
@@ -204,24 +239,9 @@
 }
 
 
-\newcommand{\mysection}[2]{
-  \hypertarget{#2}{%
-    \subsection{#1}\zlabel{#2}
-  }
-} 
-
-\newcommand{\mysubsection}[2]{
-  \hypertarget{#2}{%
-    \subsubsection{#1}\zlabel{#2}
-   }
-   \hrule height1mm
-} 
-
-\newcommand{\myhighlight}[2]{
-  \hypertarget{#2}{%
-    \paragraph{#1}\zlabel{#2} \hfill
-  }
-} 
+\newcommand{\mysection}[2]{\hypertarget{#2}{\subsection{#1}\zlabel{#2}}} 
+\newcommand{\mysubsection}[2]{\hypertarget{#2}{\subsubsection{#1}\zlabel{#2}}\hrule height1mm} 
+\newcommand{\myhighlight}[2]{\hypertarget{#2}{\paragraph{#1}\zlabel{#2} \hfill}} 
 
 
 % --- page references --------------------------------------------------
@@ -233,12 +253,8 @@
 
 \newcommand{\mybold}[1]{{\textbf{#1}}}
 \newcommand{\myital}[1]{{\textit{#1}}}
-\newcommand{\mylink}[2]{
-  \texorpdfstring{\hyperlink{#2}{#1}}{}
-}
-\newcommand{\myanchor}[2]{
-  \hypertarget{#2}{#1}
-}
+\newcommand{\mylink}[2]{\hyperlink{#2}{#1}}
+\newcommand{\myanchor}[2]{\hypertarget{#2}{#1}}
 
 
 % --- tables -----------------------------------------------------------
@@ -356,6 +372,118 @@
     \end{tcolorbox}
   }
 }
+
+\newkeycommand{\LEECHCRAFT}[Name=,Link=,Mod=,Length=,Keywords=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{|l|X|l|X|}
+    \hline
+    \rowcolor{silver}
+    \MOD & \commandkey{Mod} & \LENGTH & \commandkey{Length} \\
+    \KEYWORD & \commandkey{Keywords} & ~ \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \end{tcolorbox}
+  }
+}
+
+\newkeycommand{\CHYMISTRY}[Name=,Link=,Cost=,Duration=,Toxin=,Narcotic=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{|l|X|l|X|}
+    \hline
+    \rowcolor{silver}
+    \COST & \commandkey{Cost} & \DURATION & \commandkey{Duration} \\
+    Toxin? & \commandkey{Toxin} & Narcotic? & \commandkey{Narcotic} \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \end{tcolorbox}
+  }
+}
+
+
+\newkeycommand{\NECRO}[Name=,Link=,Paradigm=,Save=,Duration=,Mod=,Keywords=,Target=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+,sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{XXXX|l}
+    \hline
+    \rowcolor{silver}
+    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
+    \multicolumn{4}{l}{\mybold{\DURATION} \commandkey{Duration}} \\
+    \mybold{\MOD} & \commandkey{Mod} & \mybold{\KEYWORD} & \commandkey{Keywords}  \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \tcblower
+    \TARGET : \commandkey{Target}
+    \end{tcolorbox}
+  }
+}
+
+
+
+
+\newkeycommand{\SPELL}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+,sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{lXXX|ll}
+    \hline
+    \rowcolor{silver}
+    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
+    \mybold{\DURATION} & \commandkey{Duration} & ~ \\
+    \mybold{\COUNTER} & \multicolumn{3}{l}{ \commandkey{Counter}} \\
+    \mybold{\KEYWORD} & \multicolumn{3}{l}{ \commandkey{Keywords}} \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \tcblower
+    \TARGET : \commandkey{Target}
+    \end{tcolorbox}
+  }
+}
+
+\newkeycommand{\OCCULT}[Name=,Link=,Success=,Cost=,Widdershins=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+,sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{lXlX|c}
+    \hline
+    \rowcolor{silver}
+    \SUCCESS & \commandkey{Success} & \COST & \commandkey{Cost} \\
+    \multicolumn{4}{c}{\mybold{Widdershins} \commandkey{Widdershins}} \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \end{tcolorbox}
+  }
+}
+
+
+%\newkeycommand{\MIRACLE}
 
 
 % some usefull default pdf settings
