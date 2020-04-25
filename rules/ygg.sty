@@ -168,13 +168,13 @@
 \newcommand{\DEX}{\fftext \textbf{\ffstixmath{\char"2660}}DEX~}
 
 %Dice Types
-\newcommand{\UD}{\protect\mylink{\fftext \textbf{U\diceglyph}~}{dice-usage-dice}}
-\newcommand{\MD}{\protect\mylink{\fftext \textbf{M\diceglyph}~}{combat-move-die}}
+\newcommand{\UD}{\fftext \textbf{U\diceglyph}~}
+\newcommand{\MD}{\fftext \textbf{M\diceglyph}~}
 \newcommand{\HD}{\fftext \textbf{HD\diceglyph}~}
-\newcommand{\STATIC}{\protect\mylink{\fftext \textbf{Static\diceglyph}~}{dice-static-dice}}
-\newcommand{\POOL}{\protect\mylink{\fftext \textbf{Pool\diceglyph}~}{dice-pool-dice}}
-\newcommand{\DEATH}{\protect\mylink{\fftext \textbf{Pool\diceglyph}~}{combat-death-die}}
-\newcommand{\KNACK}{\protect\mylink{\fftext \textbf{Knack\diceglyph}~}{dice-knack-dice}}
+\newcommand{\STATIC}{\fftext \textbf{Static\diceglyph}~}
+\newcommand{\POOL}{\fftext \textbf{Pool\diceglyph}~}
+\newcommand{\DEATH}{\fftext \textbf{Pool\diceglyph}~}
+\newcommand{\KNACK}{\fftext \textbf{Knack\diceglyph}~}
 \newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}~}
 \newcommand{\FLESH}{\fftext \textbf{Flesh\diceglyph}~}
 \newcommand{\LUCK}{\fftext \textbf{Luck\diceglyph}~}
@@ -199,13 +199,7 @@
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4}}~}}
 \newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C}}~}}
-\newcommand{\TheAuthority}{
-  {
-    \fontfamily{lmr}\selectfont {
-      M\={a}na-Yood-Sush\={a}\={i}
-    }
-  }
-}
+\newcommand{\TheAuthority}{{\fontfamily{lmr}\selectfont {M\={a}na-Yood-Sush\={a}\={i}~}}}
 
 % --- section headers --------------------------------------------------
 \usepackage[compact]{titlesec}
@@ -435,9 +429,6 @@
   }
 }
 
-
-
-
 \newkeycommand{\SPELL}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
 {%
   \setlength{\arrayrulewidth}{0mm}
@@ -451,7 +442,30 @@
     \hline
     \rowcolor{silver}
     \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
-    \mybold{\DURATION} & \commandkey{Duration} & ~ \\
+    \mybold{\DURATION} & \multicolumn{3}{l}{\commandkey{Duration}} \\
+    \mybold{\COUNTER} & \multicolumn{3}{l}{ \commandkey{Counter}} \\
+    \mybold{\KEYWORD} & \multicolumn{3}{l}{ \commandkey{Keywords}} \\
+    \hline
+    \end{tabularx}\vspace{2pt plus 6pt}
+    \tcblower
+    \TARGET : \commandkey{Target}
+    \end{tcolorbox}
+  }
+}
+
+\newkeycommand{\LITURGY}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \rowcolors[]{1}{silver}{}%
+    \begin{tabularx}{\linewidth}{lXXX|ll}
+    \hline
+    \rowcolor{silver}
+    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
+    \mybold{\DURATION} & \multicolumn{3}{l}{\commandkey{Duration}} \\
     \mybold{\COUNTER} & \multicolumn{3}{l}{ \commandkey{Counter}} \\
     \mybold{\KEYWORD} & \multicolumn{3}{l}{ \commandkey{Keywords}} \\
     \hline
@@ -481,6 +495,21 @@
     \end{tcolorbox}
   }
 }
+
+\newkeycommand{\GOD}[Name=,Link=,GodOf=,Holy=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}]
+    \begin{center}
+    \myital{\commandkey{GodOf}}
+    \end{center}
+    \tcblower
+    The Holy Symbol of \commandkey{Name} is \commandkey{Holy}
+    \end{tcolorbox}
+  }
+}
+
 
 
 %\newkeycommand{\MIRACLE}
