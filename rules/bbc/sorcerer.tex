@@ -36,7 +36,7 @@ have to be rolled at once when you cast the spell:
   \item If you roll any triples, roll on the \mylink{Mishap
 table}{table-mishap}. The spell works.
   \item If you roll any quadruples, roll on the \mylink{Calamity
-table}{table-calamity}. The spell fails.
+table}{table-calamities}. The spell fails.
   \item If you roll any quintuples, roll on the \mylink{Ruin
 table}{table-ruin}. The spell fails.  This will most likely kill you.
 }
@@ -62,7 +62,7 @@ magic, though doing so is dangerous:
 
 If you succeed, you can add a Blood Die to the spell.  You can do this as
 many times as you like for each spell. If you fail any \RO attempt, the
-spell fails and you suffer a \mylink{Calamity}{table-calamity}.
+spell fails and you suffer a \mylink{Calamity}{table-calamities}.
 
 
 
@@ -125,7 +125,7 @@ Your starting spells depend on your \INT:
 
 
 You can either roll randomly (and get more spells) or pick from the list of
-\mylink{The Mysteries}{sorcerer-mysteries}.  These are all the spells you
+\mylink{Wizardry}{sorcerer-wizardry}.  These are all the spells you
 understand.
 
 One of these spells (your choice) is etched on the inside of your cranium,
@@ -187,8 +187,7 @@ other Leeches (knowledge is shared, after all). You can give as many of your
 Research Dice to different people as you wish, but you can only accept a
 number of Research Dice up to your \LVL-1.
 
-
-\mysection{Wizards' Duel}{sorcerers-wizards-duel}
+\mysection{Wizards' Duel}{sorcerer-wizards-duel}
 
 Certain spells can be countered by other spells - for example,
 \mylink{Balthazar's Breathtaking
@@ -221,11 +220,11 @@ attempting counter remains and your spell fizzles with no effect.
 }
 
 If you attempt to counter a spell and you roll a
-\mylink{Calamity}{sorcerer-blood} or \mylink{Ruin}{sorcerer-ruin}, the
+\mylink{Calamity}{sorcerer-blood} or \mylink{Ruin}{table-ruin}, the
 counterspell doesn't work. 
 
 
-\mysection{Grimoires}{sorcerery-grimoires}
+\mysection{Grimoires}{sorcerer-grimoires}
 
 Grimoires are solid, with thick vellum pages and a sturdy cover. Special
 runes and symbols trap spells inside cages of crystallized thought. Each
@@ -237,7 +236,9 @@ Grimoires start in a waterproof, acid- and fire-resistant bag. Outside the
 bag, they are not waterproof and are quite flammable. See the section on
 \mylink{Inscription}{sorcerer-inscription} for more details.
 
-\mysection{Fetishes}{sorcerery-fetishes}
+\cbreak
+
+\mysection{Fetishes}{sorcerer-fetishes}
 
 Fetishes are inscribed with a single spell from your grimoire, cranium, or
 another fetish.  All fetishes have a \UD of d4 - when the \UD is exhausted,
@@ -267,13 +268,11 @@ OR you may forgo the Blood die and roll a single d6 for the effect.
 You throw an acidic arrow at a Monster or object. You must make a successful
 Fight check using your \INT (instead of \VIG or \DEX).  If you succeed: 
 
-1. If the target is wearing Armor, they must make a \UD check at the start
-of every Moment for the Markovian duration of the spell.  If they are using
-a shield, they may immediately sunder it to nullify the spell; 
-2. If they are not wearing Armor, they must take \DICE additional damage at
-the start of every Moment for the Markovian duration of the spell; 
-3. If the target is an object, it will melt a \DICE x 10cm cubic area of
-wood, metal, or stone.  
+\mynumlist {
+  \item If the target is wearing Armor, they must make a \UD check at the start of every Moment for the Markovian duration of the spell.  If they are using a shield, they may immediately sunder it to nullify the spell; 
+  \item If they are not wearing Armor, they must take \DICE additional damage at the start of every Moment for the Markovian duration of the spell; 
+  \item If the target is an object, it will melt a \DICE x 10cm cubic area of wood, metal, or stone.  
+}
 
 \SPELL[
   Name=Arcadia's Bulwark,
@@ -1194,21 +1193,16 @@ Far-Away, where it splits into a prism of \DICE beams.  Each beam strikes a
 random Ally or Monster Close to the prism.  Roll a d8 on the table below for
 each beam and apply its results.
 
-1. Red  Target takes \DICE fire damage, Save for half. Highly flammable
-things catch fire.
-2. Orange.  Target takes \DICE bashing damage, Save for half. 
-3. Yellow. Target takes \DICE lightning damage, Save for half.  If you fail
-your Save, you drop what you're holding.
-4. Green. Target takes \DICE acid damage, Save for half. Roll your Armor \UD
-if applicable.
-5. Blue. Target takes \DICE ice damage, Save for half. If you fail your
-Save, you fall Prone.
-6. Indigo. Target takes \DICE stabbing damage, Save for half.
-7. Violet. Target takes \DICE chopping damage, Save for half.
-8. Roll again.  Instead of \DICE damage, the effect deals \SUMDICE damage.
-If you get this result again, the beam splits and the target takes an
-additional effect (roll again and apply the result).  Continue in this way
-until you don't roll an 8.
+\mynumlist {
+  \item \mybold{Red} Target takes \DICE fire damage, Save for half. Highly flammable things catch fire.
+  \item \mybold{Orange}  Target takes \DICE bashing damage, Save for half. 
+  \item \mybold{Yellow} Target takes \DICE lightning damage, Save for half.  If you fail your Save, you drop what you're holding.
+  \item \mybold{Green} Target takes \DICE acid damage, Save for half. Roll your Armor \UD if applicable.
+  \item \mybold{Blue} Target takes \DICE ice damage, Save for half. If you fail your Save, you fall Prone.
+  \item \mybold{Indigo} Target takes \DICE stabbing damage, Save for half.
+  \item \mybold{Violet} Target takes \DICE chopping damage, Save for half.
+  \item \mybold{Roll} again.  Instead of \DICE damage, the effect deals \SUMDICE damage.. If you get this result again, the beam splits and the target takes an additional effect (roll again and apply the result).  Continue in this wayuntil you don't roll an 8.
+}
 
 
 
@@ -1664,7 +1658,7 @@ As Dagger above, 25m of rope. Needs to be completely rewound around the person t
 
 \myhighlight{Mermaid (chest or neck)}{sorcerer-tattoo-mermaid}
 
-The Sorcerer inscribes this tattoo on you and a \mylink{Wizard Sigil}{sorcerer-sigil-wizard} on a different object (usually a ship in a bottle or a scrimshawed whale bone).  You do not need to breathe to stay alive - you draw breath instead from the area immediately around the object.  This means that if the object is immersed in water, or sealed in an airtight container, you will suffocate.
+The Sorcerer inscribes this tattoo on you and a \mylink{Wizard Sigil}{sigil-wizard} on a different object (usually a ship in a bottle or a scrimshawed whale bone).  You do not need to breathe to stay alive - you draw breath instead from the area immediately around the object.  This means that if the object is immersed in water, or sealed in an airtight container, you will suffocate.
 
 
 
@@ -1696,29 +1690,35 @@ Sorcerer's are immune to their own Sigil's effects where appropriate
 
 \myhighlight{Trivial Sigils}{sorcerer-sigils-trivial}
 
-\mybold{Successes: 1}
-\mybold{\COST 50\FE}
+\example { 
+  \mybold{Successes: 1}
+  ~\\
+  \mybold{\COST 50\FE}
+}
 
-\myanchor{\mybold{Chaining Sigil}{sigil-chaining}}  A Chaining Sigil can be scribed and "marrieD" to another Sigil.  The Chaining Sigil must be created at the same time as its partner Sigil.  If a Chaining Sigil is erased by the Sorcerer who inscribed it, the Sigil it is partnered with will immediately manifest.
+\myanchor{\mybold{Chaining Sigil}}{sigil-chaining}  A Chaining Sigil can be scribed and "marrieD" to another Sigil.  The Chaining Sigil must be created at the same time as its partner Sigil.  If a Chaining Sigil is erased by the Sorcerer who inscribed it, the Sigil it is partnered with will immediately manifest.
 
-\myanchor{\mybold{Talking Sigil}{sigil-talking}} When anyone comes Close to an object with a Talking Sigil on it, it will yell out up to [dice] words at ear-splitting top volume [dice] times.
+\myanchor{\mybold{Talking Sigil}}{sigil-talking} When anyone comes Close to an object with a Talking Sigil on it, it will yell out up to [dice] words at ear-splitting top volume [dice] times.
 
 
-\mylink{\mybold{Wizard Sigil}}{sigil-wizard}
+\myanchor{\mybold{Wizard Sigil}}{sigil-wizard}
 
 The most basic Sigil, essentially just the Sorcerer's name - but necessary to allow a weapon, object, or person to be a receptacle for magic.  A Wizard Sigil is always permanent, no matter how many Research Dice are used.  Other Sorcerers can identify the owner of a Wizard Sigil using "Magical History" above.
 
 \myhighlight{Minor Sigils}{sorcerer-sigils-minor}
 
-\mybold{Successes: 2}
-\mybold{\COST 50\AG}
+\example { 
+  \mybold{Successes: 2}
+  ~\\
+  \mybold{\COST 50\AG}
+}
 
 
-\mylink{\mybold{ Elemental Sigil}}{sigil-elemental}
+\myanchor{\mybold{ Elemental Sigil}}{sigil-elemental}
 
 When anyone comes Close to an object with an Elemental Sigil on it, they are dealt \SUMDICE damage.  The inscriber chooses the elemental type (lightning, fire, etc).  Save for half damage.
 
-\mylink{\mybold{ Warding Sigil}}{sigil-warding}
+\myanchor{\mybold{ Warding Sigil}}{sigil-warding}
 
 This glyph can only be placed on something that is closed : a book, a lock, a chest but not a sword in a scabbard or someone's mouth (Arbiter's discretion).  If the warded item is opened, the Sigil immediately becomes lifeless.
 
@@ -1728,29 +1728,34 @@ When anyone comes Close to an item with a Warding Sigil on it, they must Save or
 
 \myhighlight{Major Sigils}{sorcerer-sigils-major}
 
-\mybold{Successes: 3}
-\mybold{\COST 10\AU}
+\example { 
+  \mybold{Successes: 3}
+  ~\\
+  \mybold{\COST 10\AU}
+}
 
+\myanchor{\mybold{ Cursing Sigil}}{sigil-cursing}
 
-\mylink{\mybold{ Cursing Sigil}}{sigil-cursing}
+This Sigil can only be created with the help of a Witch's \mylink{Malison}{occultism-malison}, or a \mylink{Mystic of Vecna}{small-god-vecna}.  The Curse is placed within the Sigil.  When anyone comes Close to an object with the Sigil on it, they must Save vs. Hexes or fall victim to the curse.  If there is more than 1 target, they should hold a Luck contest. 
 
-This Sigil can only be created with the help of a Witch's \mylink{Malison}{occultism-malison}, or a \mylink{Mystic of Vecna}{small-gods-vecna}.  The Curse is placed within the Sigil.  When anyone comes Close to an object with the Sigil on it, they must Save vs. Hexes or fall victim to the curse.  If there is more than 1 target, they should hold a Luck contest. 
-
-\mylink{\mybold{ Petrifying Sigil}}{sigil-petrifying}
+\myanchor{\mybold{ Petrifying Sigil}}{sigil-petrifying}
 
 When anyone comes Close to a Petrifying Sigil, they must Save or become Paralyzed.  The duration of the paralysis lasts until the Sigil becomes lifeless. You age while you are paralyzed.
 
-\mylink{\mybold{Portal Sigil}}{sigil-portal}
+\myanchor{\mybold{Portal Sigil}}{sigil-portal}
 
 These must be placed on doors, gates, or entrances.  A Portal Sigil is placed on the threshold or top of one doorway and a Wizard Sigil is placed on another; the two doors are connected as if they are the same door.  Someone stepping through the Portal Sigil side will exit through the \mylink{Wizard Sigil}{sigil-wizard} side (but not vice-versa).  Erasing either Sigil closes the doorway.
 
 \myhighlight{Primary Sigils}{sorcerer-sigils-primary}
 
-\mybold{Successes: 4}
-\mybold{\COST 100\AU}
+\example { 
+  \mybold{Successes: 4}
+  ~\\
+  \mybold{\COST 100\AU}
+}
 
 
-\mylink{\mybold{ Erasing Sigil }}{sigil-erasing}
+\myanchor{\mybold{ Erasing Sigil }}{sigil-erasing}
 
 When anyone comes close to an Erasing Sigil, they must Save or suffer one of the effects below (roll a d6):
 
@@ -1764,23 +1769,130 @@ When anyone comes close to an Erasing Sigil, they must Save or suffer one of the
 }
 
 
+\newpage
 
 
-\mylink{\mybold{Remembrance Sigil}}{sigil-remembrance}
+\myanchor{\mybold{Remembrance Sigil}}{sigil-remembrance}
 
-When created with a Spriggan present, they can place one of the \mylink{Obliterated}{spriggan-obliterated} inside of the Sigil.  The summoning of the Obliterated does not "lock" the \mylink{Remembrance Dice}{spriggan-remembrance} of the Spriggan.  The Spriggan cannot use more Remembrance Dice than the Research Dice you used to create the Sigil (though they can use the same amount).  
+When created with a Spriggan present, they can place one of the \mylink{Obliterated}{forgotten-obliterated} inside of the Sigil.  The summoning of the Obliterated does not "lock" the \mylink{Remembrance Dice}{spriggan-remembrance} of the Spriggan.  The Spriggan cannot use more Remembrance Dice than the Research Dice you used to create the Sigil (though they can use the same amount).  
 
 Anyone other than the Sorcerer or Spriggan who comes Close to the Remembrance Sigil will cause the Obliterated to come forth - very pissed off - and immediately attack.  If the Obliterated is slain, it will return to the Sigil over and over until the Sigil becomes lifeless.
 
 
 
 
-\mylink{\mybold{Revisitation Sigil}}{sigil-revisitation}
+\myanchor{\mybold{Revisitation Sigil}}{sigil-revisitation}
 
 The Revisitation Sigil is scribed as normal (usually on a floor in the Sorcerer's laboratory) and a \mylink{Chaining Sigil}{sigil-chaining} is placed on another portable item.  When the Chaining Sigil is erased, the Sorcerer and up to [dice] others can be transported to the location of the Revisitation Sigil.  
 
 
+\newpage
 
+
+\mysection{Staff Magic}{sorcerer-staff-magic}
+
+A magical staff is a necessity for a Sorcerer to control more complex wizardry and mysteries.  A staff must be made out of a special material that should be worked out between you and the Arbiter.  The more powerful the staff, the better the material must be.  If you're making a low level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a high level staff, it might need to be the femur of the Great Wyrm Vermithrax.  
+
+All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will  prompt a \mylink{Wizards' Duel}{sorcerer-wizards-duel} if the opposing Sorcerer is present).
+
+The staff must have a \mylink{Wizard Sigil}{sigil-wizard} inscribed upon it, at which point the staff is bound to the Sorcerer. The staff in the hands of anyone else is just a normal quarterstaff (though obviously the staff will be of special material that can be made into a new staff). 
+
+You can "mix and match" from either group as you wish (so the staff could have 2 "level 1" powers and 1 "level 2" power). These are just the most common abilities; you're encouraged to work out additional abilities with the Arbiter.
+
+The second column of each table indicates if the ability can be bought more than once.
+
+
+
+
+\mysubsection{Iron Powers}{staff-magic-iron-powers}
+
+\example { 
+  \mybold{Successes: 1}
+  ~\\
+  \mybold{\COST 500\FE}
+}
+
+  \mytable{X r}{
+    \thead{Effect} & \thead{Stackable} \\
+  }{
+    +1 to attack \RO and -1 to Guard & No \\
+    +1 to damage & Yes \\
+     Safe Casting& Yes \\
+     Daze & No \\
+     All Saves +1 & No \\
+     Mitigation: Mishap to nothing & Yes \\
+     Anchor: d8 & No \\
+     Burn: 1 & No \\
+  }
+
+
+
+
+\mysubsection{Silver Powers}{staff-magic-silver-powers}
+\example { 
+  \mybold{Successes: 1}
+  ~\\
+  \mybold{\COST 1000\AG}
+}
+
+  \mytable{X r}{
+    \thead{Effect} & \thead{Stackable} \\
+  }{
+    +3 to attack \RO and -3 to Guard & No \\
+     Damage \DCUP &No \\
+     Power Casting & Yes \\
+     Rend & No \\
+     All Saves +3 & No \\
+     Mitigation: Calamity to Mishap & Yes \\
+     Anchor: d10 & No \\
+     Burn: 2 & No \\
+  }
+
+
+\mysubsection{Gold Powers}{staff-magic-gold-powers}
+\example { 
+  \mybold{Successes: 3}
+  ~\\
+  \mybold{\COST 2500\AU}
+}
+
+  \mytable{X r}{
+    \thead{Effect} & \thead{Stackable} \\
+  }{
+    +5 to attack \RO and -5 to Guard & No \\
+     Damage \DCUP & Yes \\
+     Natural Casting & Yes \\
+     Cleave & No \\
+     All Saves 6-in-6 & No \\
+     Mitigation: Ruin to Calamity & Yes \\
+     Anchor: d12 & No \\
+     Burn: 3 & No \\
+  }
+
+\myhighlight{Anchor}{staff-magic-anchor}
+
+Changes the die you roll with your \INT when rolling a Torrent. 
+
+\myhighlight{Burn}{staff-magic-burn}
+
+You can ignore a Failure when rolling Spellburn. You can do this *n* number of times per Session, where *n* is the number next to the
+colon i.e. Burn: 3 means 3 times per Session.
+
+\myhighlight{Mitigation}{staff-magic-mitigation}
+
+Mitigation reduces the effect of a Ruin to a Calamity; a Calamity to a Mishap; and eliminates the effect of a Mishap.  You can do this once for each time you buy the ability.
+
+\myhighlight{Power Casting}{staff-magic-power casting}
+
+You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) [num]  times per Session.  
+
+\myhighlight{Natural Casting}{staff-magic-natural casting}
+
+Your Blood Dice are only depleted on a natural 1 (instead of a 1 or 2). 
+
+\myhighlight{Safe Casting}{staff-magic-safe casting}
+
+You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) [num] times per Session.
 
 
 

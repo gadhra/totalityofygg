@@ -1,325 +1,334 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggSpriggan}{%
+  \mychapter{Spriggan}{Spriggan}
+}
+
+\renewcommand{\yggSprigganText}{%
 
 
+  \mysection{Remembrance}{spriggan-remembrance}
 
-# Spriggan
-
-
-
-
-
-\mysection{Remembrance}{remembrance}
-
-
-
-Where do the dead gods lie, when there are none left to worship them? How long do they sit in their mouldering crypts and dusty reliquaries, in broken churches and salted earth, waiting for their faithful to return like wayward hounds?  In time they fade away, their True Names receding like the tide, until the Spriggan Remember them, and command them forth from the edge of the Void to serve.
-
-
-Spriggan use a Remembrance Die, represented by a single d6 {pool}. The number of Remembrance Die you have depends on your level, and is specified in the core rules.  You may use these Remembrance Die to summon the Forgotten to serve you. The Forgotten are divided into 2 types - the Obliterated, and the Abandoned.
-
-When summoning the Obliterated, you must use a number of dice equal to the *total* number of HD of creatures you wish to summon.  For example, if you have 3 Remembrance Die, you could summon up to : one 3 {hd} creature; one 2 {hd} creature and one 1 {hd} creature;  or three 1 {hd} creatures.  When summoning the Abandoned, you say how many Remembrance Die you are using to summon the fallen God.  
-
-Once the Remembrance Die are specified, the die are "locked" with the creature(s) they have been used to summon.  They cannot be used for any other purpose, until they are "freed" by the Forgotten Adjourning.
+    \mytable{X r}{
+    \thead{Level} & \thead{Remembrance Die} \\
+  }{
+    1 & 1d6 \POOL \\
+    2-3 & 3d6 \POOL \\
+    4-5 & 5d6 \POOL \\
+    6-7 & 7d6 \POOL \\
+    8 & 19d6 \POOL \\
+    9 & 12d6 \POOL \\
+  }
 
 
+\flavor{
+  Where do the dead gods lie, when there are none left to worship them? How long do they sit in their mouldering crypts and dusty reliquaries, in broken churches and salted earth, waiting for their faithful to return like wayward hounds?  In time they fade away, their True Names receding like the tide, until the Spriggan Remember them, and command them forth from the edge of the Void to serve.
+}
 
-Once these Remembrance Die are "freed" (the Forgotten Adjourns), immediately roll all of the dice "locked" with that creature.  Any die that Fails is lost (like a normal {pool}).  For every 3 Failures you roll in this way, you suffer a Curse.
+Spriggan use a Remembrance Die, represented by a single d6 \POOL. The number of Remembrance Die you have depends on your \LVL, and is specified in the Core Rules.  You may use these Remembrance Die to summon the Forgotten to serve you. The Forgotten are divided into 2 types - \mylink{the Obliterated}{forgotten-obliterated}, and \mylink{the Abandoned}{forgotten-abandoned}.
+
+When summoning \mylink{the Obliterated}{forgotten-obliterated}, you must use a number of dice equal to the \mybold{total} number of HD of creatures you wish to summon.  For example, if you have 3 Remembrance Die, you could summon up to : one 3 \HD creature; one 2 \HD creature and one 1 \HD creature;  or three 1 \HD creatures.  When summoning the Abandoned, you say how many Remembrance Die you are using to summon the fallen God.  
+
+Once the Remembrance Die are specified, the die are "locked" with the creature(s) they have been used to summon.  They cannot be used for any other purpose, until they are "freed" by the Forgotten \mylink{Adjourning}{forgotten-keywords}.
+
+Once these Remembrance Die are "freed" (the Forgotten Adjourns), immediately roll all of the dice "locked" with that creature.  Any die that Fails is lost (like a normal \POOL).  For every 3 Failures you roll in this way, you suffer a Curse.
 
 The Forgotten will obey you and only you (though some Demons or Abandoned may try to twist your words or intent), but if you are Knocked Out, catch the Vapors, or are otherwise incapacitated, effects may vary (Arbiter's choice) ...
 
 Finally, the Forgotten do not speak Acheron - knowledge of their "native" language is necessary to command them.  You may not summon a creature whose language you cannot speak.  
 
+\example {
+  Gotlieb Walks-on-air is a level 6 Spriggan, with 7 Remembrance Die.  A fight breaks out with some ghouls, and Gotlieb decides to call forth a 2 Vrocks (3 \HD Demons) to fight for him.  He "locks" 3 Remembrance die with each Vrock.  The Vrocks make short work of the ghouls, and Gotlieb dismisses them.  The moment the Vrocks Adjourn, he rolls the locked dice for each Vrock separately.  First roll is 4, 3, 3; second roll is 1, 2, 4 (bad luck!).  He loses 2 Remembrance dice and goes down to 5.  Luckily, he didn't roll an additional Failure on his second roll, or he would have been cursed!
+}
 
 
-**Example:** Gotlieb Walks-on-air is a level 6 Spriggan, with 7 Remembrance Die.  A fight breaks out with some ghouls, and Gotlieb decides to call forth a 2 Vrocks (3 {hd} Demons) to fight for him.  He "locks" 3 Remembrance die with each Vrock.  The Vrocks make short work of the ghouls, and Gotlieb dismisses them.  The moment the Vrocks Adjourn, he rolls the locked dice for each Vrock separately.  First roll is 4, 3, 3; second roll is 1, 2, 4 (bad luck!).  He loses 2 Remembrance dice and goes down to 5.  Luckily, he didn't roll an additional Failure on his second roll, or he would have been cursed!
-
-
-
-
-
-
-
-
-
-\mysection{The Forgotten}{the forgotten}
+\mysection{The Forgotten}{spriggan-forgotten}
 
 When a Forgotten's name is finally lost, they become the Obliterated - totems and symbols of what they once were, raw power in the form of beasts, elements, and devils.  If their name is remembered - even by a single person, even a single line in a book buried in the sands of the desert - they are simply the Abandoned.
 
 
 
-### Keywords
+\mysubsection{Keywords}{forgotten-keywords}
 
-- **Adjourn:**  The act of being "unsummoned".  When the Forgotten Adjourn the Remembrance Dice locked with them are freed.  Unless a summoned creature is Obedient, they will refuse to Adjourn until a certain amount of time has passed.  If the summoned being dies, it immediately Adjourns.
-- **Belligerent:** Belligerent Forgotten will fight for you.  If there's nothing to Fight, they may start attacking others ...
-- **Obedient:** Obedient Forgotten can be told to Adjourn at the request of the Spriggan.
-- **Peaceful:** Peaceful Forgotten can't (or won't) fight for you
-- **Venal:** Venal Fogotten require a sacrifice when summoned to maintain control (the sacrifice is outlined in their description).  If they do not receive it within d3 Minutes, they will attack the Summoner.
+\mylist {
+  \item \mybold{Adjourn:}  The act of being "unsummoned".  When the Forgotten Adjourn the Remembrance Dice locked with them are freed.  Unless a summoned creature is Obedient, they will refuse to Adjourn until a certain amount of time has passed.  If the summoned being dies, it immediately Adjourns.
+  \item \mybold{Belligerent:} Belligerent Forgotten will fight for you.  If there's nothing to Fight, they may start attacking others ...
+  \item \mybold{Obedient:} Obedient Forgotten can be told to Adjourn at the request of the Spriggan.
+  \item \mybold{Peaceful:} Peaceful Forgotten can't (or won't) fight for you
+  \item \mybold{Venal:} Venal Fogotten require a sacrifice when summoned to maintain control (the sacrifice is outlined in their description).  If they do not receive it within d3 Minutes, they will attack the Summoner.
+}
 
+\mysubsection{The Obliterated}{forgotten-obliterated}
 
-### The Obliterated
+The Obliterated can be summoned without knowing their true name - they are shadows of their former selves.  Beasts appear as ghostly apparitions; Elementals and Demons appear as described in the Core Rules.  The Obliterated are \mybold{Obedient} and \mybold{Belligerent}.
 
-The Obliterated can be summoned without knowing their true name - they are shadows of their former selves.  Beasts appear as ghostly apparitions; Elementals and Demons appear as described in the core rules.  The Obliterated are **Obedient** and **Belligerent**.
-
-#### Beasts
-
-You may summon up to [dice] Zoological creatures (Amphibian, Arthropod, Dinosaur, Dire Beast, or Reptile) whose combined HD do not exceed [dice].  Zoological creatures can speak and understand Seraph as well as their "native" tongue where appropriate (Birdsong for avians, Draconic for lizards, etc).  They exist for [sum] Hours. 
-
-
-#### Elementals
-
-You may summon up to [dice] Elementals whose combined HD do not exceed [dice]. Elementals can only speak and understand Archaic and exist for [sum] Minutes. 
+\mybold{The Obliterated use the Spriggan's Awareness \UD to Fight and Guard}
 
 
 
-#### Demons
+\myhighlight{Beasts}{obliterated-beasts}
 
-You may summon up to [dice] Demons whose combined HD do not exceed [dice].  Demons can only speak and understand Fiendish and exist for [sum] Moments.
-
-
+You may summon up to \DICE Zoological creatures (Amphibian, Arthropod, Dinosaur, Dire Beast, or Reptile) whose combined HD do not exceed \DICE.  Zoological creatures can speak and understand Seraph as well as their "native" tongue where appropriate (Birdsong for avians, Draconic for lizards, etc).  They exist for \SUMDICE Hours. 
 
 
+\myhighlight{Elementals}{obliterated-elementals}
+
+You may summon up to \DICE Elementals whose combined HD do not exceed \DICE. Elementals can only speak and understand Archaic and exist for \SUMDICE Minutes. 
 
 
-### The Abandoned
+\myhighlight{Demons}{obliterated-demons}
 
+You may summon up to \DICE Demons whose combined HD do not exceed \DICE.  Demons can only speak and understand Fiendish and exist for \SUMDICE Moments.
+
+
+
+
+
+\mysubsection{The Abandoned}{forgotten-abandoned}
 In order to summon the Abandoned, you must know their True Name.  You learn a True Name at every level (including the first), and can also discover a True Name with the help of a Sorcerer's Inscription (Indagation, specifically)
 
-The Abandoned are summoned for [sum] Days.  However, while Archons are Obedient (and can be forced to Adjourn at will), Seraphim and Fiends cannot be forced to Adjourn unless their description says otherwise.
+The Abandoned are summoned for \SUMDICE Days.  However, while Archons are Obedient (and can be forced to Adjourn at will), Seraphim and Fiends cannot be forced to Adjourn unless their description says otherwise.
 
-For Combat purposes, the Abandoned have HD equal to the number of [dice] used (maximum 9):
+For Combat purposes, the Abandoned have HD equal to the number of \DICE used (maximum 9):
 
-| {hd} | Damage |  Weakness | Base Save <br />(x-in-6) | 
-|:---:|:---:|:---:|:---:|:---:|
-| 1 | d4 |  d20 | 2 |
-| 2 | d6 |  d16 | 2 |
-| 3 | 2d4 |  d16 | 3 |
-| 4 | d10 |  d12 | 3 |
-| 5 | d12 |  d12 | 4 |
-| 6 | d6+d8 |  d10 | 4 |
-| 7 | 2d8 |  d8 | 5 |
-| 8 | 2d10 |  d6 | 5 |
-| 9 | d10+d12 |  d4 | 6 |
+\mytable{l X X X} {
+  \thead{\HD} & \thead{Damage} & \thead{Weakness} & \thead {Save} \\
+} {
+  1 & d4 &  d20 & 2 \\
+  2 & d6 &  d16 & 2 \\
+  3 & 2d4 &  d16 & 3 \\
+  4 & d10 &  d12 & 3 \\
+  5 & d12 &  d12 & 4 \\
+  6 & d6+d8 &  d10 & 4 \\
+  7 & 2d8 &  d8 & 5 \\
+  8 & 2d10 &  d6 & 5 \\
+  9 & d10+d12 &  d4 & 6 \\
+}
 
-Archons, Seraphim, and Fiends who are brought to 0 Hit Points immediately Adjourn.  If they Adjourn in this way, they deal [sum] damage to the Spriggan and cannot be summoned for [dice] Days.
+Archons, Seraphim, and Fiends who are brought to 0 Hit Points immediately Adjourn.  If they Adjourn in this way, they deal \SUMDICE damage to the Spriggan and cannot be summoned for \DICE Days.
 
-#### Archons
+\myhighlight{Archons}{abandoned-archons}
 
-Archons can only speak Archaic.  They are **Obedient** (they will Adjourn at the command of the Spriggan.)
+Archons can only speak Archaic.  They are \mybold{Obedient} (they will Adjourn at the command of the Spriggan.)
 
-#### Seraphim
+\myhighlight{Archons}{abandoned-seraphim}
 
-Seraphim can only speak Seraph.  They are **Peaceful** (they cannot enter Combat or fight for you)
+Seraphim can only speak Seraph.  They are \mybold{Peaceful} (they cannot enter Combat or fight for you)
 
-#### Fiends
+\myhighlight{Fiends}{abandoned-fiends}
 
-Fiends can only speak Fiendish.  They are **Venal** (they need a sacrifice to be summoned)
+Fiends can only speak Fiendish.  They are \mybold{Venal} (they need a sacrifice to be summoned)
 
-Below are the 15 Archons, Seraphs, and Demons who can be summoned via their true name.  This is by no means a complete list - feel free to work with an Arbiter to create different Abandoned.  Researching a True Name not listed below will require the help of a Sorcerer using Inscription.  
+Below are the 15 Archons, Seraphs, and Demons who can be summoned via their true name.  This is by no means a complete list - feel free to work with an Arbiter to create different Abandoned.  Researching a True Name not listed below will require the help of a Sorcerer using \mylink{Inscription}{sorcerer-inscription}.  
 
+\newpage
 
-
-
-
-
-### The Abandoned, cont.
-
-*These are pretty much verbatim from Skerple's mind-blowing <a href="https://coinsandscrolls.blogspot.com/2019/10/osr-glog-based-homebrew-v2-many-rats-on.html">GLOG Homebrew v.2*
+\mybold{These are pretty much verbatim from Skerple's mind-blowing \href{https://coinsandscrolls.blogspot.com/2019/10/osr-glog-based-homebrew-v2-many-rats-on.html}{GLOG Homebrew v.2}}
 
 
 
-####  Alifane, the Hat of Marvels (Archon)
-Enters with a brief burst of light on a person's head up to a distance of Far Away.  Alifane appears as a magnificent hat, crown, turban, etc. appropriate to the wearer's desired social status and Alifane's whimsy.  Anyone who wears the Hat of Marvels enjoys [dice] {d+} to their Presence (i.e. 2 dice would move their Presence {d+} twice).  If the wearer is under the effect of a Mind spell when Alifane is placed on their head, they get an additional Save against the spell's effects (even if they normally wouldn't).  If someone attempts to cast a Mind spell against the wearer, they receive +[dice] to their Save OR a Save vs. Hex if the spell wouldn't normally allow it.
+
+
+
+
+\myhighlight{Alifane, the Hat of Marvels (Archon)}{abandoned-alifane}
+Enters with a brief burst of light on a person's head up to a distance of Far Away.  Alifane appears as a magnificent hat, crown, turban, etc. appropriate to the wearer's desired social status and Alifane's whimsy.  Anyone who wears the Hat of Marvels enjoys \DICE \DCUP to their Presence (i.e. 2 dice would move their Presence \DCUP twice).  If the wearer is under the effect of a Mind spell when Alifane is placed on their head, they get an additional Save against the spell's effects (even if they normally wouldn't).  If someone attempts to cast a Mind spell against the wearer, they receive +\DICE to their Save OR a Save vs. Hex if the spell wouldn't normally allow it.
 
 Alifane can hear the wearer's thoughts. It despises murderous intentions or cruel behaviour and will shout warnings (in a nasal, peeved voice) to anyone the wearer is thinking of attacking. It will also judge fashion shows or evaluate the worth of clothing.
 
 
-####  Astokepolos, Diagnosticator (Archon)
-Enters in a stream of leaves and smoke. Appears as a gnarled walking stick with a serpent wrapped around it. Astokepolos has a [dice]-in-6 chance of diagnosing [dice] Diseases or Toxins per summoning.  Astokepolos can also speak to and translate for serpents. Once he has reached the limit of his healing, he will follow too closely and blunder into trouble.
+\myhighlight{Astokepolos, Diagnosticator (Archon)}{abandoned-astokepolos}
+Enters in a stream of leaves and smoke. Appears as a gnarled walking stick with a serpent wrapped around it. Astokepolos has a \DICE-in-6 chance of diagnosing \DICE Diseases or Toxins per summoning.  Astokepolos can also speak to and translate for serpents. Once he has reached the limit of his healing, he will follow too closely and blunder into trouble.
 
 
-####  Cantopas, the Grey Mirage (Archon)
-Enters and moves like smoke. Appears as a rippling cloud of grey-white fabric. Sheds light like a candle. A message of [sum] words or less (in Archaic, of course), or an object smaller than an apple given to Cantopas will vanish. Cantopas moves as quickly as an arrow (325km miles per hour), and will bring the message or object to the location or person you designate, provided it can reach them before vanishing. If it cannot, it will try and drop the item somewhere along the quickest path. 
-
-
-
-####  Caperlin, Avatar of Debauchery (Archon)
-Enters with a cheerful roar and a drunken hug. Appears as a portly monk with brown robes, a tankard full of beer, and a rosy complexion. Caperlin is absolutely smashed and very cheerful. Unless provided with a party (at minimum, snacks and two happy people), Caperlin will fall asleep in [dice] hours and Adjourn. If a party is provided he will continue to drink from his ever-full tankard, tell wild tales, propose mad schemes, sing songs in all languages, give very solemn yet very shallow advice, and occasionally vomit. He cheers up any low-class social event and scandalizes anyone tasteful. Caperlin can locate up to [dice] things per summon, provided they are party related and can be reached within the duration of the summon. Examples: more beer, a safe place to crash, a person of negotiable virtue, Pooka, narcotics, musicians.  He can remove any Toxin or Drunkenness from [dice] people so afflicted.
+\myhighlight{Cantopas, the Grey Mirage (Archon)}{abandoned-cantopas}
+Enters and moves like smoke. Appears as a rippling cloud of grey-white fabric. Sheds light like a candle. A message of \SUMDICE words or less (in Archaic, of course), or an object smaller than an apple given to Cantopas will vanish. Cantopas moves as quickly as an arrow (325km miles per hour), and will bring the message or object to the location or person you designate, provided it can reach them before vanishing. If it cannot, it will try and drop the item somewhere along the quickest path. 
 
 
 
-
-####  Creston, who Adjudicates (Archon)
-Enters by floating down from above. Appears as a floating stone sphere the size of a cabbage, carved to resemble a stylized human head. Speaks in a booming tone. If two objects, items, values, or issues are presented to Creston, along with a criteria, Creston will judge them. For example, you could ask "Which of these gems is most valuable?", "Which of my friends is most cowardly?" or "Which of these two wines would I enjoy most?" Creston cannot answer questions that are not local and immediate. It cannot answer "Which country will win the war?" or "Which hallway did the King run down?".  If Creston is presented with a paradox, he will immediately Adjourn in a logic bomb for [sum] points of damage to everyone Close by (Save for half).  Creston enjoys finely made handicrafts and loathes cheats and pretenders. 
-
-
-####  Esilan, the Keeper of Hours (Archon)
-Enters in a shower of feathers. Appears as a floating hourglass orbited by wings. Can accurately and precisely measure any time interval it sees, or tell you how old something is.  Up to [dice] times per summon, can demand a single creature it can see "AGE". Target creature's age mirrors for [sum] rounds. A 20-year-old creature becomes 2 years old. A 92-year-old creature becomes 29. A 106 year old dragon becomes 601. This cannot directly cause a creature to die or suffer any damage, but it may affect HP/HD or stats.  The effect ends when Esilan Adjourns. If confronted by blasphemies, glows as bright as a torch.
+\myhighlight{Caperlin, Avatar of Debauchery (Archon)}{abandoned-caperlin}
+Enters with a cheerful roar and a drunken hug. Appears as a portly monk with brown robes, a tankard full of beer, and a rosy complexion. Caperlin is absolutely smashed and very cheerful. Unless provided with a party (at minimum, snacks and two happy people), Caperlin will fall asleep in \DICE hours and Adjourn. If a party is provided he will continue to drink from his ever-full tankard, tell wild tales, propose mad schemes, sing songs in all languages, give very solemn yet very shallow advice, and occasionally vomit. He cheers up any low-class social event and scandalizes anyone tasteful. Caperlin can locate up to \DICE things per summon, provided they are party related and can be reached within the duration of the summon. Examples: more beer, a safe place to crash, a person of negotiable virtue, Pooka, narcotics, musicians.  He can remove any Toxin or Drunkenness from \DICE people so afflicted.
 
 
 
-####  Fensington, the Consolation of Conscience (Archon)
+
+\myhighlight{Creston, who Adjudicates (Archon)}{abandoned-creston}
+Enters by floating down from above. Appears as a floating stone sphere the size of a cabbage, carved to resemble a stylized human head. Speaks in a booming tone. If two objects, items, values, or issues are presented to Creston, along with a criteria, Creston will judge them. For example, you could ask "Which of these gems is most valuable?", "Which of my friends is most cowardly?" or "Which of these two wines would I enjoy most?" Creston cannot answer questions that are not local and immediate. It cannot answer "Which country will win the war?" or "Which hallway did the King run down?".  If Creston is presented with a paradox, he will immediately Adjourn in a logic bomb for \SUMDICE points of damage to everyone Close by (Save for half).  Creston enjoys finely made handicrafts and loathes cheats and pretenders. 
+
+
+\myhighlight{Esilan, the Keeper of Hours (Archon)}{abandoned-esilan}
+Enters in a shower of feathers. Appears as a floating hourglass orbited by wings. Can accurately and precisely measure any time interval it sees, or tell you how old something is.  Up to \DICE times per summon, can demand a single creature it can see "AGE". Target creature's age mirrors for \SUMDICE rounds. A 20-year-old creature becomes 2 years old. A 92-year-old creature becomes 29. A 106 year old dragon becomes 601. This cannot directly cause a creature to die or suffer any damage, but it may affect HP/HD or stats.  The effect ends when Esilan Adjourns. If confronted by blasphemies, glows as bright as a torch.
+
+
+
+\myhighlight{Fensington, the Consolation of Conscience (Archon)}{abandoned-fensington}
 Enter with a shuffle. Appears as a middle-aged, bland, faintly concerned human. Further descriptions are impossible; Fensington's appearance evades memory. Fensington's voice is low and soothing. Fensington will assist anyone in justifying any behavior, plan, or crime. People who engage Fensington in conversation must Save vs. Hex or be calmed and freed from guilt or doubt. Fensington has no secret knowledge but may hint vaguely at schemes, accusations, religious authority, etc. Any arrows or projectiles aimed at Fensington or anyone Close to him automatically miss (whether they are friendly or not)
 
 
-####  Gundobart, Vision-Keeper (Archon)
-Enters by hopping. Appears as a fat green toad the size of a housecat. Surly yellow eyes, many warts. Gundobart speaks with a hoarse, deep voice. Anyone who licks Gundobart must make a Sanity check, if they succeed they can a) restore [dice] points of Stat damage, or b) heal [dice] Flesh  or c) restore [sum] Grit.  Gundobart does not particularly enjoy being licked - there is a cumulative 1 in 6 chance that any person other than the summoner that licks him will gain no positive effect (i.,e.  if a 2nd person licks him after the summoner, there is a 2-in-6 chance it will have no positive effect, a 3rd 3-in-6, etc).  Gundobart can only be licked [dice] times per summoning.
+\myhighlight{Gundobart, Vision-Keeper (Archon)}{abandoned-gundobart}
+Enters by hopping. Appears as a fat green toad the size of a housecat. Surly yellow eyes, many warts. Gundobart speaks with a hoarse, deep voice. Anyone who licks Gundobart must make a Sanity check, if they succeed they can a) restore \DICE points of Stat damage, or b) heal \DICE Flesh  or c) restore \SUMDICE Grit.  Gundobart does not particularly enjoy being licked - there is a cumulative 1 in 6 chance that any person other than the summoner that licks him will gain no positive effect (i.,e.  if a 2nd person licks him after the summoner, there is a 2-in-6 chance it will have no positive effect, a 3rd 3-in-6, etc).  Gundobart can only be licked \DICE times per summoning.
 
 Objects swallowed by Gundobart effectively cease to exist for the duration of the summon. He spits them back out before he Adjourns. He will only swallow things that look delicious but he is easily tricked.
 
-####  Koilcren, who is Lost (Archon)
-Enters with a polite shuffle. Appears as ragged and tired middle-aged man or woman with bright blue eyes. Anyone who engages Koilcren in conversation must Save vs Hex or give them directions to a location Koilcren names. The summoner can designate up to [dice] locations at the time of the summon. Directions given will be to the best of the target's knowledge, and may include the location of locked doors and keys, traps, hazards, patrols, supernatural effects, etc. Ask a peasant how to get to the moon and he'll shrug and suggest a mountain. Ask the Grand Archmage of the Isle of Carcosa and you might get a very different answer.  
+\myhighlight{Koilcren, who is Lost (Archon)}{abandoned-koilcren}
+Enters with a polite shuffle. Appears as ragged and tired middle-aged man or woman with bright blue eyes. Anyone who engages Koilcren in conversation must Save vs Hex or give them directions to a location Koilcren names. The summoner can designate up to \DICE locations at the time of the summon. Directions given will be to the best of the target's knowledge, and may include the location of locked doors and keys, traps, hazards, patrols, supernatural effects, etc. Ask a peasant how to get to the moon and he'll shrug and suggest a mountain. Ask the Grand Archmage of the Isle of Carcosa and you might get a very different answer.  
 
 
 
-####  Kwis Bizmac, Swift Sustenance (Archon)
-Enters with the patter of running feet. Appears as a scruffy-looking person in an off-white, stained, and ragged uniform. Kwis Bizmac will hand the summoner a package containing [dice] Provisions (d4 \UD), bow politely, and run off. The Provisions are bizarre and inconsistent. They are usually warm, highly spiced, and very salty. Seafood, strange cured meats, sweet sauces, unusual vegetables. The rations have all normal effects. Any Significant Item or smaller handed to Kwis Bizmac will be returned (contemptuously) the next time it is summoned as if no time has passed.
+\myhighlight{Kwis Bizmac, Swift Sustenance (Archon)}{abandoned-kwis-bizmac}
+Enters with the patter of running feet. Appears as a scruffy-looking person in an off-white, stained, and ragged uniform. Kwis Bizmac will hand the summoner a package containing \DICE Provisions (d4 \UD), bow politely, and run off. The Provisions are bizarre and inconsistent. They are usually warm, highly spiced, and very salty. Seafood, strange cured meats, sweet sauces, unusual vegetables. The rations have all normal effects. Any Significant Item or smaller handed to Kwis Bizmac will be returned (contemptuously) the next time it is summoned as if no time has passed.
 
 
-####  M'tubana, the Wobbling Stone (Archon)
+\myhighlight{M'tubana, the Wobbling Stone (Archon)}{abandoned-mtubana}
 Enters in the summoner's hand. Appears as a stone idol of a round, stylized, humanoid figure with a cheerful grin. Anyone holding M'tubana cannot be knocked Prone or Stunned.  If you would fall into a pit or off a cliff, M'tubana wobbles you back to safety at the last possible moment. It won't help if the building collapses, your airship explodes, your broomstick fails, etc. Additionally, any soups made with M'tubana in the pot are never poisonous or toxic.
 
 
-####  Malrane, the Scholar's Aide (Archon)
+\myhighlight{Malrane, the Scholar's Aide (Archon)}{abandoned-malrane}
 Enters from somewhere not observed by the summoner. Appears as a thin, tired young man or woman with wiry hair. Can speak and translate any language, living or dead.  Can translate for you in real time. Will not speak or translate blasphemies, including the language of Fiends or Seraphs.  Can only offer a literal translation unless reading by the light of the noonday sun, in which case, a full allegorical and contextual translation is prepared. Cannot, or refuses to, write.  While Close to the summoner, the summoner can't be Befuddled.
 
 
-####  Raspalan, the Urgent Guide (Archon)
+\myhighlight{Raspalan, the Urgent Guide (Archon)}{abandoned-raspalan}
 Enters by running in via a door or window. Appears as a thin human with a scraggly beard and no clothes other than sandals. Cannot stop running. Will lead the summoner to any destination they name, provided it can be reached by running at a breakneck pace and leaping over obstacles. Will attempt to warn the summoner of traps, monsters, jumps, spikes, and other hazards in time to allow a Save vs. Doom. If the summoner does not follow or falls behind, Raspalan will still run to the destination and then vanish when not observed. If trapped, manacled, or cornered, will come up with some means of escape that may also benefit the summoner. Cannot be persuaded to run into a battle, but often runs through them accidentally.
 
 
 
 
-#### Randy (Archon)
-Enters with a leaden thump, a brief fall, and a short scream. Appears as a bedraggled teenage human with brown hair and a dull brown robe. Randy was once a wizard's apprentice. A botched spell trapped him in a pocket dimension. Randy lives on, immortal and extremely confused. He is perpetually being dragged into combat, danger, dismemberment, and extremely awkward situations. Randy will sort-of obey you for the duration of the summon, but he is only an immortal teenager. He's awful at everything. Randy only lasts for [sum] minutes instead of [sum] hours.  If you wish, you can use Randy as a "Sunder Shield", directing any physical attack against you to Randy instead (this kills Randy).  If you summon Randy with 3 or more [dice], Randy's efforts are accompanied by appropriately dismal music.  Randy insists on an honorific i.e. "Randy the Magnificent", "Randy the Stupendous", etc. but no one ever calls him that.
+\myhighlight{Randy (Archon)}{abandoned-randy}
+Enters with a leaden thump, a brief fall, and a short scream. Appears as a bedraggled teenage human with brown hair and a dull brown robe. Randy was once a wizard's apprentice. A botched spell trapped him in a pocket dimension. Randy lives on, immortal and extremely confused. He is perpetually being dragged into combat, danger, dismemberment, and extremely awkward situations. Randy will sort-of obey you for the duration of the summon, but he is only an immortal teenager. He's awful at everything. Randy only lasts for \SUMDICE minutes instead of \SUMDICE hours.  If you wish, you can use Randy as a "Sunder Shield", directing any physical attack against you to Randy instead (this kills Randy).  If you summon Randy with 3 or more \DICE, Randy's efforts are accompanied by appropriately dismal music.  Randy insists on an honorific i.e. "Randy the Magnificent", "Randy the Stupendous", etc. but no one ever calls him that.
 
 
-#### Vululupus, the Snare Finder (Archon)
-Enters with the sound of a trap snapping shut. Appears as a blind and starving wolf with three legs, fur matted with blood.  Vululupus can detect any traps Nearby for the duration of its summoning.  Zoological animals feel affinity with Vululupus - provided combat has not been initiated, there is a [dice] in 6 chance that an animal will not attack if Vululupus is close at hand.  Vululupus is able to communicate with animals and ask simple questions (and receive basic answers).  Vululupus will immediately Adjourn if anyone Nearby exhibits cruelty towards any animal.
+\myhighlight{Vululupus, the Snare Finder (Archon)}{abandoned-vululupus}
+Enters with the sound of a trap snapping shut. Appears as a blind and starving wolf with three legs, fur matted with blood.  Vululupus can detect any traps Nearby for the duration of its summoning.  Zoological animals feel affinity with Vululupus - provided combat has not been initiated, there is a \DICE in 6 chance that an animal will not attack if Vululupus is close at hand.  Vululupus is able to communicate with animals and ask simple questions (and receive basic answers).  Vululupus will immediately Adjourn if anyone Nearby exhibits cruelty towards any animal.
 
-####  Banalor, the Light of Creation (Seraph)
-Enters with a shimmer of golden light. Appears as floating sphere of golden flame. The sphere sheds light as a torch. Up to [dice] times per summon, Banalor can flare and illuminate, briefly, an area from Close to Far Away. Sighted creatures in the area who are not aware of Banalor's flare must Save or be blinded for d6 Markovian. The flare temporarily cancels magical darkness, which will re-emerge at 3m per round from its source. Banalor's flare does not have the properties of sunlight, but Unhallowed creatures will instinctively flinch from it. Banalor knows a great deal about scripture, hymns, and glassworking.
+\myhighlight{Banalor, the Light of Creation (Seraph)}{abandoned-banalor}
+Enters with a shimmer of golden light. Appears as floating sphere of golden flame. The sphere sheds light as a torch. Up to \DICE times per summon, Banalor can flare and illuminate, briefly, an area from Close to Far Away. Sighted creatures in the area who are not aware of Banalor's flare must Save or be blinded for d6 Markovian. The flare temporarily cancels magical darkness, which will re-emerge at 3m per round from its source. Banalor's flare does not have the properties of sunlight, but Unhallowed creatures will instinctively flinch from it. Banalor knows a great deal about scripture, hymns, and glassworking.
 
 
-####  Doron, the Shield of the Righteous (Seraph)
+\myhighlight{Doron, the Shield of the Righteous (Seraph)}{abandoned-doron}
 Enters with a small thunderclap. Appears as a round shield of brass engraved with tightly packed combatants. If you are attacked by an agent of the Authority (a paladin, another Seraph, etc.), Doron reveals one of your sins or failings to all present in a disgusted tone every round.  It will present your sins in the least charitable way possible.
 
 
 
-####  Iplimble, She Who Denounces (Seraph)
-Enters with a roar and a shouted accusation, 10-[sum] Hours after the summon is initiated (minimum 0, which means "immediately"). Appears as a middle-aged woman of a suitable race and appearance for the area and situation. Iplimble will denounce the summoner in general terms (Coward! Thief! Adulterer! Poisoner!) and drag the summoner away. Iplimble's appearance may be enough to convince guards or authority figures of her right to take the summoner prisoner. If that fails, she can produce false documents, seals, food, and even bribes. She will drag the summoner out of sight and then vanish. Her {vig} and \MD are both d24. She will not rescue anyone else, return for dropped equipment, or heal the summoner . No barriers, magical or otherwise, can hinder Iplimble, but she will only take the summoner to the next unlocked and unobserved area and then Adjourn.
+\myhighlight{Iplimble, She Who Denounces (Seraph)}{abandoned-iplimble}
+Enters with a roar and a shouted accusation, 10-\SUMDICE Hours after the summon is initiated (minimum 0, which means "immediately"). Appears as a middle-aged woman of a suitable race and appearance for the area and situation. Iplimble will denounce the summoner in general terms (Coward! Thief! Adulterer! Poisoner!) and drag the summoner away. Iplimble's appearance may be enough to convince guards or authority figures of her right to take the summoner prisoner. If that fails, she can produce false documents, seals, food, and even bribes. She will drag the summoner out of sight and then vanish. Her \VIG and \MD are both d24. She will not rescue anyone else, return for dropped equipment, or heal the summoner . No barriers, magical or otherwise, can hinder Iplimble, but she will only take the summoner to the next unlocked and unobserved area and then Adjourn.
 
 
-####  Koskalbanodan, First Among Horses (Seraph)
-Enters with a clatter of hooves. Appears as an ordinary-looking but very tidy grey mare. Koskalbanodan can speak to horses and will translate contemptuously. She will permit one person to ride her, but will travel at a slow trot, sighing with boredom, unless racing another creature. She will win all races over any terrain, no matter how terrifying or improbable. The race can be to a destination or to exhaustion. If you invest 3 or more [dice], Koskalbanodan will consider racing inanimate objects, spells, the weather, etc.
+\myhighlight{Koskalbanodan, First Among Horses (Seraph)}{abandoned-koskalbanodan}
+Enters with a clatter of hooves. Appears as an ordinary-looking but very tidy grey mare. Koskalbanodan can speak to horses and will translate contemptuously. She will permit one person to ride her, but will travel at a slow trot, sighing with boredom, unless racing another creature. She will win all races over any terrain, no matter how terrifying or improbable. The race can be to a destination or to exhaustion. If you invest 3 or more \DICE, Koskalbanodan will consider racing inanimate objects, spells, the weather, etc.
 
 
-####  Melchior, of Eyes Unblinded (Seraph)
+\myhighlight{Melchior, of Eyes Unblinded (Seraph)}{abandoned-melchior}
 Enters from somewhere not observed by the summoner. Appears as a withered old man in fine robes, or a beautiful young woman with no hair. In either form, Melchior will mutter constantly, repeating meaningless phrases or snippets of conversation. As long as Melchior can see the tongue of a creature, it can tell if the creature is lying. It will hiss and lunge at anyone who lies for purely selfish reasons, and will seek to remove their tongue. Melchior can carry up to 8 Significant Items for you and will provide banal and useless advice if asked.
 
 
-####  Moriana, whose Word is Peace (Seraph)
+\myhighlight{Moriana, whose Word is Peace (Seraph)}{abandoned-moriana}
 Enters with a polite knock on a door or a quiet shuffle. Appears as an old woman in very clean black traveling clothes. Carries an empty scabbard but no sword. Moriana appreciates well-crafted books and well-told stories. She speaks and reads all languages, but won't read tales without artistic or moral merit. If a fight breaks out with Moriana present, she will pull out a book and begin reading. Allies and Monsters alike must Save each Moment or fall under the sway of Moriana, sitting at her feet to listen to her story.
 
 
 
 
-####  Rone, the Blade of Love (Seraph)
-Enters silently, in the summoner's hand. Appears as a black dagger of stone and grey leather. Cannot speak or see, but can hear very, very well. Creatures injured by Rone feel no pain, only a curious sensation of pressure. If you hold it like a pen and use blood as ink, Rone will write the answers to any questions you ask, provided it has overheard the answers since you summoned it. It could transcribe a conversation in perfect detail or tell you how many people entered a room, what they said, and when they left. If anyone holds Rone against the summoner's will, they must Save or take [sum] damage, and Rone Adjourns. If anyone holds Rone with the summoner's permission, they must Save. If they fail, they are Charmed
+\myhighlight{Rone, the Blade of Love (Seraph)}{abandoned-rone}
+Enters silently, in the summoner's hand. Appears as a black dagger of stone and grey leather. Cannot speak or see, but can hear very, very well. Creatures injured by Rone feel no pain, only a curious sensation of pressure. If you hold it like a pen and use blood as ink, Rone will write the answers to any questions you ask, provided it has overheard the answers since you summoned it. It could transcribe a conversation in perfect detail or tell you how many people entered a room, what they said, and when they left. If anyone holds Rone against the summoner's will, they must Save or take \SUMDICE damage, and Rone Adjourns. If anyone holds Rone with the summoner's permission, they must Save. If they fail, they are Charmed
 
-####  Subansu, the Rose of Luck (Seraph)
+\myhighlight{Subansu, the Rose of Luck (Seraph)}{abandoned-subansu}
 Enters with a shimmer in the summoner's hand. Appears as a red rose with a silver stem. Subansu induces confidence. Anyone wearing it must Save when presented with a risky but thrilling plan or accept it. 
 
 
-####  Valsbur, the Throne of Power (Seraph)
+\myhighlight{Valsbur, the Throne of Power (Seraph)}{abandoned-valsbur}
 Enters with a trumpet blast. Appears as a chipped wooden throne with eight wooden legs. All the gold has been chipped off, taking most of the red paint with it. Anyone sitting in the throne can project their voice clearly up to 200m.  If threatened with fire, Halsbur can run as fast as a horse, though it will try and toss anyone sitting on it into water.
 
 
-####  Weeblen, the Quartermaster (Seraph)
+\myhighlight{Weeblen, the Quartermaster (Seraph)}{abandoned-weeblen}
 Enters from somewhere not observed by the summoner. Appears as a portly man with grey eyes and slightly stained traveling clothes. Weeblen can create a spear for as many people Close or Nearby as the Spriggan desires - when Weeblen Adjourns, the weapons disappear.   He can identify who forged a weapon and when, and identify when a weapon was last used. 
 
 
-#### Ada, Who Measures (Seraph)
+\myhighlight{Ada, Who Measures (Seraph)}{abandoned-ada}
 Appears from a spot not observed by the Spriggan.  Ada appears as a young woman with black hair and expensive Victorian garb.  She can measure an exact distance between two points (provided one of them is within sight) and immediately know the direction of true north no matter where she is. 
 
 
 
-#### Khufu, Who Digs (Seraph)
-Enters with a whiff of stale air.  Khufu appears as a mummy in tattered bandages.  Khufu can be commanded to raise Nearby buried or covered objects to the surface.  If the surface is the ground, coins, stones, and roots are pulled to the surface; if water, sunken objects will rise to the surface.  The total weight of the items cannot exceed [sum]x10kg and cannot be buried more than [dice]x10m below the surface.  Khufu can also use his ability on a single sentient creature up to [dice] times.  The creature must Save (if unwilling) or recall a memory in perfect detail.  The Spriggan designates the memory ("the first time you met your wife", "where you buried the treasure", etc.)  The creature will be lost in reverie for [sum] Minutes.  This reverie ends if the creature is attacked, threatened, or has to perform any action. This memory may induce a Fear or Morale test. It must be specific. "The scariest thing you have ever seen" would not work, but "the night your village burned" would.  Once he Adjourns, the sunken objects sink back to their resting place (unless they're moved)
+\myhighlight{Khufu, Who Digs (Seraph)}{abandoned-khufu}
+Enters with a whiff of stale air.  Khufu appears as a mummy in tattered bandages.  Khufu can be commanded to raise Nearby buried or covered objects to the surface.  If the surface is the ground, coins, stones, and roots are pulled to the surface; if water, sunken objects will rise to the surface.  The total weight of the items cannot exceed \SUMDICE X10kg and cannot be buried more than \DICE X10m below the surface.  Khufu can also use his ability on a single sentient creature up to \DICE times.  The creature must Save (if unwilling) or recall a memory in perfect detail.  The Spriggan designates the memory ("the first time you met your wife", "where you buried the treasure", etc.)  The creature will be lost in reverie for \SUMDICE Minutes.  This reverie ends if the creature is attacked, threatened, or has to perform any action. This memory may induce a Fear or Morale test. It must be specific. "The scariest thing you have ever seen" would not work, but "the night your village burned" would.  Once he Adjourns, the sunken objects sink back to their resting place (unless they're moved)
 
 
-#### Orizuru, the Paper Crane (Seraph)
-Appears with a sound of ripping paper.  Orizuru's size depends on the number of [dice] invested in the summoning: 1 [dice]: mouse 2 [dice]: dog, 3 [dice]: person, 4 [dice], elephant.  It can appear as any animal the Spriggan desires.  In darkness its silhouette is indistinguishable from the "real thing".   It can lift nothing heavier than a single coin. Orizuru moves by floating a few cm off the ground, and can move as fast as the animal it represents. 
+\myhighlight{Orizuru, the Paper Crane (Seraph)}{abandoned-orizuru}
+Appears with a sound of ripping paper.  Orizuru's size depends on the number of \DICE invested in the summoning: 1 \DICE: mouse 2 \DICE: dog, 3 \DICE: person, 4 \DICE, elephant.  It can appear as any animal the Spriggan desires.  In darkness its silhouette is indistinguishable from the "real thing".   It can lift nothing heavier than a single coin. Orizuru moves by floating a few cm off the ground, and can move as fast as the animal it represents. 
 
 
-#### Sir Ector de Mares, First of the Snail Knights (Seraph)
+\myhighlight{Sir Ector de Mares, First of the Snail Knights (Seraph)}{abandoned-sir-ector}
 Enters through a door or window.  Appears as a stooped man in a visored helmet wearing antiquated armor that creaks when he walks.  Sir Ector can tell true kings and knights from false ones.  If called upon as a second in a duel, Sir Ector grants the duelist winning Init every Moment, and the duelist cannot be disarmed.
 
 
 
-#### Song Uttering Choirs (Seraph)
+\myhighlight{Song Uttering Choirs (Seraph)}{abandoned-song-uttering-choirs}
 The Song Uttering Choirs materialize as a cube-shaped shimmering haze over the head of the Spriggan.  The Choir emits a long Gregorian chant that can be heard Nearby unless struck with a spell, when they erupt into a chorus of triumphant fanfare.  Any creatures Nearby the Song Uttering Choirs have a Fanatic Morale (friend and foe alike)
 
 
 
-####  Bantos, Life-Leech (Fiend)
+\myhighlight{Bantos, Life-Leech (Fiend)}{abandoned-bantos}
 Enters by squirming up from cracks in the ground. Appears as a smiling man who vaguely resembles the summoner. Creatures touched by Bantos take d6 damage by touch (successful Fight roll required using the Spriggan's chance to roll over). Damage inflicted in this way heals the Spriggan (Flesh and/or Grit).  Bantos does not need to breathe.  Curse the Unhallowed will cause him to immediately Adjourn. 
 
-####  Eb, the Tasting Lizard (Fiend)
+\myhighlight{Eb, the Tasting Lizard (Fiend)}{abandoned-eb}
 Enters around the summoner's neck. Appears as a sleek yellow lizard with a bright blue tongue. Eb can taste poison gas on the air, and provide information about the source of odours, smoke, or fog. Eb always knows the local tides, and will tell you which hour in the day will be most propitious for sailing, fishing, or conceiving children. If you give Eb a taste of food or water, Eb can tell you whether or not it is safe to eat or drink.  While wearing Eb, you can breathe underwater effortlessly and you are immune to inhaled Toxins.  Eb desires warm stones.
 
 
-####  Gornim, Lord of Vermin (Fiend)
-Enters on a cloud of flies and biting insects. Appears as statue of a child made of clay. Crude. Gluttonous. Can command vermin to move, assemble, or bring tribute (food). Any other requests are met with suspicion and peevish demands. If provided with sufficient food (a larder or storeroom), Gormin will call all vermin within [dice] km to him for a grand feast - the size of the Swarm is [dice] {hd}.  Gornim can speak to vermin on the Spriggan's behalf, including vermin summoned by Mystics (followers of the Rat God, etc).  
+\myhighlight{Gornim, Lord of Vermin (Fiend)}{abandoned-gornim}
+Enters on a cloud of flies and biting insects. Appears as statue of a child made of clay. Crude. Gluttonous. Can command vermin to move, assemble, or bring tribute (food). Any other requests are met with suspicion and peevish demands. If provided with sufficient food (a larder or storeroom), Gormin will call all vermin within \DICE km to him for a grand feast - the size of the Swarm is \DICE \HD.  Gornim can speak to vermin on the Spriggan's behalf, including vermin summoned by Mystics (followers of the Rat God, etc).  
 
 
-####  Grenchan, Roving Limb (Fiend)
-Enters with a wet thud. Appears as a blue-green arm and hand. If the shoulder is attached to a person (it sticks to skin), Grenchan will act as an extra limb. On a willing person, it grants an additional Unarmed attack each Moment for d4 damage. It can carry a shield or a lantern, or assist with climbing, but cannot wield a weapon.  If attached to an unwilling creature, Grenchan will punch them in the nearest vulnerable spot, dealing d4 damage. If detached, it can be stuck to [dice] additional creatures per summon. 
+\myhighlight{Grenchan, Roving Limb (Fiend)}{abandoned-grenchan}
+Enters with a wet thud. Appears as a blue-green arm and hand. If the shoulder is attached to a person (it sticks to skin), Grenchan will act as an extra limb. On a willing person, it grants an additional Unarmed attack each Moment for d4 damage. It can carry a shield or a lantern, or assist with climbing, but cannot wield a weapon.  If attached to an unwilling creature, Grenchan will punch them in the nearest vulnerable spot, dealing d4 damage. If detached, it can be stuck to \DICE additional creatures per summon. 
 
 
 
-####  Hisbic, the Coin Counter (Fiend)
+\myhighlight{Hisbic, the Coin Counter (Fiend)}{abandoned-hisbic}
 Enters in a puff of greasy smoke. Appears as a squashed and twisted humanoid, with a huge mouth and gut, no neck or eyes, and tiny limbs. Floats and tumbles through the air like a leaf. Will devour any coins given to it. Will regurgitate the coins at the summoner's request, at any point, even if summoned years later. Loves the taste of rare or unusual coins. Will only swallow metal coins, not jewelry, shells, or promissory notes. Can accurately guess the amount of currency a person is carrying at any given time, or the number of coins (and types) in a pile. Loathes counterfeiters. 
 
 
-####  Jentro, the Mirror of Life (Fiend)
+\myhighlight{Jentro, the Mirror of Life (Fiend)}{abandoned-jentro}
 Enters by stepping up from the Spriggan's shadow. Appears as an identical duplicate of the summoner, save for some subtle detail, such as eye colour or a missing scar. Will act as directed for the spell's duration using the Summoner's Tangible and Intangible Stats.  Is intelligent enough to carry out very complex tasks, but has trouble improvising. Cannot deal damage or cast spells, but can appear to do so via illusions. The illusions are always minor and short-lived.  Jentro cannot speak.
 
 
-####  Lisnan, Solemn Guardian (Fiend)
-Enters with a warp and ripple of flesh. Appears as a bulky, ogre-like humanoid with blue flesh and no head. Its face, small and crude and cruel, is sunk into its chest. Lisnan has a {vig} of d24 and will carry things or lift heavy objects. Lisnan wants to drop beautiful and expensive things from a very great height and watch them smash.
+\myhighlight{Lisnan, Solemn Guardian (Fiend)}{abandoned-lisnan}
+Enters with a warp and ripple of flesh. Appears as a bulky, ogre-like humanoid with blue flesh and no head. Its face, small and crude and cruel, is sunk into its chest. Lisnan has a \VIG of d24 and will carry things or lift heavy objects. Lisnan wants to drop beautiful and expensive things from a very great height and watch them smash.
 
 
-####  Loswach, the Universal Chisel (Fiend)
+\myhighlight{Loswach, the Universal Chisel (Fiend)}{abandoned-loswach}
 Enters in the summoner's hand. Appears as an iron chisel with a wooden handle. Loswach can separate any two layers. You can use it too separate skin from muscle, gold foil from wood, rust from iron, or bark from a tree. You can't separate things that are not fused, so Loswach couldn't chisel the armour off a warrior or the nose off a statue (at least, not any more than a normal chisel could). Loswach can separate things joined by Brahe's Efficacious Sealant.  In combat, Loswach counts as a dagger. Loswach cannot speak, but it will carve answers to simple questions into stone, if guided by an idle hand.
 
 
 
-####  Malofin, Cursed Instigator (Fiend)
-Enters with a low whistle. Appears as a stick-thin monkey-like figure in ragged blue robes. Has a huge toothy grin and tiny red eyes. Up to [dice] times per summon, Malofin will taunt a target you designate. Malofin's taunts, capers, jeers, gestures, and wails are extremely distracting. Targets must Save or attack Malofin first. If they were previously neutral or friendly, they may need to Save or become hostile. Malofin is extremely annoying. It has armour as plate. It will run away from any fight to taunt again from a safe distance. Malofin can also climb and perform simple tasks with a monkey's patience and skill.
+\myhighlight{Malofin, Cursed Instigator (Fiend)}{abandoned-malofin}
+Enters with a low whistle. Appears as a stick-thin monkey-like figure in ragged blue robes. Has a huge toothy grin and tiny red eyes. Up to \DICE times per summon, Malofin will taunt a target you designate. Malofin's taunts, capers, jeers, gestures, and wails are extremely distracting. Targets must Save or attack Malofin first. If they were previously neutral or friendly, they may need to Save or become hostile. Malofin is extremely annoying. It has armour as plate. It will run away from any fight to taunt again from a safe distance. Malofin can also climb and perform simple tasks with a monkey's patience and skill.
 
-####  Murlspeth, Slaughtercaller (Fiend)
+\myhighlight{Murlspeth, Slaughtercaller (Fiend)}{abandoned-murlspeth}
 Enters with a sizzle in the summoner's hand. Appears as a red stone the size of an apple, carved to resemble a snarling tiger biting its own tail. All damage dealt within a Nearby radius of Murlspeth is doubled. If Murlspeth is thrown (as a dagger) or dropped it returns to the Spriggan's hand in one round. Murlspeth is warm enough to melt wax. It growls just before ambushes, making the Spriggan immune to surprise.
 
 
-####  Pentornax, Traitor's Friend (Fiend)
-Enters silently with a slight drop in temperature. Appears as a faint humanoid shadow on a wall. Up to [dice] times per summon, Pentornax can step away from the wall and strike a creature with a concealed shadow dagger, dealing [sum] damage. Creatures targeted must be friends of the summoner or have pledged loyalty to the summoner. Pentornax only betrays. Dogs can sense Pentornax but must make a morale check to approach it. Pentornax does not speak but it does obey commands, no matter how complex. It can move as fast as an arrow.
+\myhighlight{Pentornax, Traitor's Friend (Fiend)}{abandoned-pentornax}
+Enters silently with a slight drop in temperature. Appears as a faint humanoid shadow on a wall. Up to \DICE times per summon, Pentornax can step away from the wall and strike a creature with a concealed shadow dagger, dealing \SUMDICE damage. Creatures targeted must be friends of the summoner or have pledged loyalty to the summoner. Pentornax only betrays. Dogs can sense Pentornax but must make a morale check to approach it. Pentornax does not speak but it does obey commands, no matter how complex. It can move as fast as an arrow.
 
 
-####  Uziam, the Creeping Death (Fiend)
-Enters as a black stain on a surface. The summoner has [sum] minutes to flee the area. After [sum] minutes, a white figure with tar-like hand and footprints will crawl from the stained surface. Uziam will stalk and strangle any sentient living creatures in the area, starting with those closest to the summoning point. Serious opposition will cause Uziam to vanish and select a new target. Uziam can pass through walls and turn invisible if required. It only targets the fearful, the isolated, and the weak. Uziam cannot enter areas of direct sunlight, but it can extinguish non-magical flames at will, provided it is hunting a target. It will happily hunt and strangle the Summoner.
-
-
-
-####  Xrim, He Who Desecrates (Fiend)
-Requires d3 Stat damage in blood (as Sorcerer), or the sacrifice of a creature the size of a cat or larger.  Enters as a pool of blood. The summoner has [sum] minutes to flee the area. After [sum] minutes, an alligator-like beast made of bone and congealing blood will emerge from the pool. Xrim will try to destroy any artwork, carvings, decoration, or written works it can see. It will not attack any living creatures (unless they are decorated) except for the summoner, who it particularly loathes, and to defend itself. It is intelligent enough to use fire, sabotage, and threats to destroy artwork, and will progress from area to area smashing things and wreaking havoc until the summon ends.
+\myhighlight{Uziam, the Creeping Death (Fiend)}{abandoned-uziam}
+Enters as a black stain on a surface. The summoner has \SUMDICE minutes to flee the area. After \SUMDICE minutes, a white figure with tar-like hand and footprints will crawl from the stained surface. Uziam will stalk and strangle any sentient living creatures in the area, starting with those closest to the summoning point. Serious opposition will cause Uziam to vanish and select a new target. Uziam can pass through walls and turn invisible if required. It only targets the fearful, the isolated, and the weak. Uziam cannot enter areas of direct sunlight, but it can extinguish non-magical flames at will, provided it is hunting a target. It will happily hunt and strangle the Summoner.
 
 
 
-####  Yigmarial, the Soul Cache (Fiend)
+\myhighlight{Xrim, He Who Desecrates (Fiend)}{abandoned-xrim}
+Requires d3 Stat damage in blood (as Sorcerer), or the sacrifice of a creature the size of a cat or larger.  Enters as a pool of blood. The summoner has \SUMDICE minutes to flee the area. After \SUMDICE minutes, an alligator-like beast made of bone and congealing blood will emerge from the pool. Xrim will try to destroy any artwork, carvings, decoration, or written works it can see. It will not attack any living creatures (unless they are decorated) except for the summoner, who it particularly loathes, and to defend itself. It is intelligent enough to use fire, sabotage, and threats to destroy artwork, and will progress from area to area smashing things and wreaking havoc until the summon ends.
+
+
+
+\myhighlight{Yigmarial, the Soul Cache (Fiend)}{abandoned-yigmarial}
 Enters with a glimmer of light. Appears as a tiny grey cloth effigy of the summoner, with strange wet-looking eyes. For the duration of the summon, the summoner automatically passes all Saves vs Doom. If the effigy Adjourns by taking damage, the summoner must Save vs. Doom which is not automatically passed (of course) or immediately fall to Death's Door and roll a Death Die.
 
 
-#### Ben Sidhe, Singer of Dooms (Fiend)
-Enters as a white mist boiling up from the floor.  Ben Sidhe appears as a spectral woman with long streaming hair, wearing a grey cloak over a green dress.  Her eyes are red from continual weeping.  Ben Sidhe immediately begins wailing.  All creatures Nearby except the Spriggan take [dice] damage.  The damage increases by +1 and repeats (this stacks) each Moment after the first unless a Save vs. Doom is made.  Ben Sidhe cannot be silenced and will not stop weeping until she Adjourns.  She will always remain Close to the Spriggan.
+\myhighlight{Ben Sidhe, Singer of Dooms (Fiend)}{abandoned-ben-sidhe}
+Enters as a white mist boiling up from the floor.  Ben Sidhe appears as a spectral woman with long streaming hair, wearing a grey cloak over a green dress.  Her eyes are red from continual weeping.  Ben Sidhe immediately begins wailing.  All creatures Nearby except the Spriggan take \DICE damage.  The damage increases by +1 and repeats (this stacks) each Moment after the first unless a Save vs. Doom is made.  Ben Sidhe cannot be silenced and will not stop weeping until she Adjourns.  She will always remain Close to the Spriggan.
 
 
 
@@ -327,121 +336,146 @@ Enters as a white mist boiling up from the floor.  Ben Sidhe appears as a spectr
 
 
 
-\mysection{Sword Magic}{sword magic}
+\mysection{Sword Magic}{spriggan-sword-magic}
 
 
 
-*As the green flames, stung by her runes, leaped up, and the heat of the fire grew intenser, she stepped backwards further and further, and merely uttered her runes a little louder the further she got from the fire. She bade Alveric pile on logs, dark logs of oak that lay there cumbering the heath; and at once, as he dropped them on, the heat licked them up; and the witch went on pronouncing her louder runes, and the flames danced wild and green; and down in the embers the seventeen, whose paths had once crossed Earth's when they wandered free, knew heat again as great as they had known, even on that desperate ride that had brought them here. And when Alveric could no longer come near the fire, and the witch was some yards from it shouting her runes, the magical flames burned all the ashes away and that portent that flared on the hill as suddenly ceased, leaving only a circle that sullenly glowed on the ground, like the evil pool that glares where thermite has burst. And flat in the glow, all liquid still, lay the sword. ~ The King of Elfland's Daughter*
+\flavor{
+  As the green flames, stung by her runes, leaped up, and the heat of the fire grew intenser, she stepped backwards further and further, and merely uttered her runes a little louder the further she got from the fire. She bade Alveric pile on logs, dark logs of oak that lay there cumbering the heath; and at once, as he dropped them on, the heat licked them up; and the witch went on pronouncing her louder runes, and the flames danced wild and green; and down in the embers the seventeen, whose paths had once crossed Earth's when they wandered free, knew heat again as great as they had known, even on that desperate ride that had brought them here. And when Alveric could no longer come near the fire, and the witch was some yards from it shouting her runes, the magical flames burned all the ashes away and that portent that flared on the hill as suddenly ceased, leaving only a circle that sullenly glowed on the ground, like the evil pool that glares where thermite has burst. And flat in the glow, all liquid still, lay the sword. \Tilde The King of Elfland's Daughter
+}
 
 
 
 The Rom who have turned their backs on Elfland still have some skill in writing the runes and glyphs of the Abandoned onto Mortal weapons: longswords, shortswords, daggers, and spears. 
 
-### Magic Weapons
+\mysubsection{Magic Weapons}{spriggan-magic-weapons}
 
 Enchanted weapons can all strike creatures that require magical weapons to hit, and can emit a small circle of bluish or greenish light at will (similar to the light cast by a few candles).
 
 Weapons are often named after their wielder or maker, and the powers of the runes on the blade.  Some examples:
 
-- The Hallowed and Indestructible Spear of Yoon-Suin
-- The Thrice Deadly Dagger of Kos
-- The Flaming and Twice Accurate Sword of Magnuss
-- etc.
+\mybullet {
+  \item The Hallowed and Indestructible Spear of Yoon-Suin
+  \item The Thrice Deadly Dagger of Kos
+  \item The Flaming and Twice Accurate Sword of Magnuss
+}
+
+\mysubsection{The Runes of Elfland}{spriggan-elfland-runes}
+
+\mylist {
+
+  \item Because Spriggan cannot handle iron, the material of the weapon must be exotic (silver, gold, etc) or otherworldly (adamantium, meteorite).  The material needs to be available and should be worked out with the Arbiter.  Only daggers, swords (long and short), and spears can be enchanted
+
+  \item In order to accept an enchantment, the weapon must have a Mortal sigil, mark, or writ etched onto the blade, once for each Elfland Rune.  Archaic runes require a \mylink{Wizard Sigil}{sigil-wizard}, Fiendish runes require a \mylink{Witch Mark}{occultism-witch-mark}, and Seraphic runes require a \mylink{Holy Writ}{miracle-holy-writ}.
+
+  \item The weapons is enchanted with the help of the Abandoned.  You must use 4 Remembrance Die to summon one of the Abandoned whose True Name you know.  Each Abandoned can write a single Elfland Rune on the weapon.  The Abandoned can only write in the language that they know:  Archons can only write Archaic Runes, Fiends can only write Fiendish Runes, and Seraphs can only write Seraphic Runes.
+
+  \item  Aside from the cost of the weapon itself, you must pay for the materials necessary to perform the magic.  The 
+  The first Rune costs 5,000fe in materials.  The second Rune costs 5,000ag in materials.  The third (or more) Rune(s) cost 5,000au in materials.
 
 
-
-
-### The Runes of Elfland
-
-- Because Spriggan cannot handle iron, the material of the weapon must be exotic (silver, gold, etc) or otherworldly (adamantium, meteorite).  The material needs to be available and should be worked out with the Arbiter.  Only daggers, swords (long and short), and spears can be enchanted
-
-- In order to accept an enchantment, the weapon must have a Mortal sigil, mark, or writ etched onto the blade, once for each Elfland Rune.  Archaic runes require a Wizard Sigil, Fiendish runes require a Witch Mark, and Seraphic runes require a Holy Writ.
-
-- The weapons is enchanted with the help of the Abandoned.  You must use 4 Remembrance Die to summon one of the Abandoned whose True Name you know.  Each Abandoned can write a single Elfland Rune on the weapon.  The Abandoned can only write in the language that they know:  Archons can only write Archaic Runes, Fiends can only write Fiendish Runes, and Seraphs can only write Seraphic Runes.
-
--  Aside from the cost of the weapon itself, you must pay for the materials necessary to perform the magic.  The 
-The first Rune costs 5,000fe in materials.  The second Rune costs 5,000ag in materials.  The third (or more) Rune(s) cost 5,000au in materials.
-
-- Unless otherwise noted, there can only be one of each Rune on the weapon
+}
  
 The runes on the next page will get you started.  Feel free to work with the Arbiter for additional powers.  
 
 
 
-#### Archaic Runes
+\mysubsection{Archaic Runes}{spriggan-archaic-runes}
 
-##### Cleaving
+\mybold{ Cleaving}
+
 The weapon has the Weapon Trait: Cleave
 
-##### Dazing
+\mybold{ Dazing}
+
 The weapon has the Weapon Trait: Daze
 
-##### Hefty
+\mybold{ Hefty}
+
 The weapon has the Weapon Trait: Hefty
 
-##### Rending
+\mybold{ Rending}
+
 The weapon has the Weapon Trait: Rend
 
-##### Brutal
+\mybold{ Brutal}
+
 The weapon has the Weapon Trait: Brutal
 
-##### Lucky
-When in your hands, the weapon has a d4 \UD that can be used to add to any {ro} attempt you're making. You can use this \UD to add to any {ro} attempt you're making (including Fight and Guard).  The \UD is restored at the start of the next Session.
+\mybold{ Lucky}
 
-#### Fiendish Runes
+When in your hands, the weapon has a d4 \UD that can be used to add to any \RO attempt you're making. You can use this \UD to add to any \RO attempt you're making (including Fight and Guard).  The \UD is restored at the start of the next Session.
 
-##### Accurate
+\mysubsection{Fiendish Runes}{spriggan-fiendish-runes}
 
-Adds +1 to your Fight {ro} when using this weapon.  This Rune can be written more than once.
 
-##### Shielding
+\mybold{ Accurate}
 
-Add +1 to your Guard {ro} when using this weapon.  This Rune can be written more than once
 
-##### Deadly
+Adds +1 to your Fight \RO when using this weapon.  This Rune can be written more than once.
 
-The weapon's damage is {d+}.  This Rune can be written more than once.
+\mybold{ Shielding}
 
-##### Flaming
+
+Add +1 to your Guard \RO when using this weapon.  This Rune can be written more than once
+
+\mybold{ Deadly}
+
+
+The weapon's damage is \DCUP.  This Rune can be written more than once.
+
+\mybold{ Flaming}
+
 
 In addition to its normal damage, the weapon deals +d4 fire damage.  On a Crit, the victim must make a Save vs. Doom or be lit on fire for d4 Markovian (+d3 damage at the start of every Moment).
 
-##### Icy
+\mybold{ Icy}
+
 
 In addition to its normal damage, the weapon deals +d4 ice damage.  On a Crit, the victim must make a Save vs. Doom or be paralyzed for d4 Markovian.
 
-##### Bloodletting
+\mybold{ Bloodletting}
+
 
 In addition to its normal damage, the weapon inflicts Bleeding when it hits Flesh.
 
 
 
 
-#### Seraphic Runes
+\mysubsection{Seraphic Runes}{spriggan-seraphic-runes}
 
 
-##### Hallowed
+\mybold{ Hallowed}
+
 
 In addition to its normal damage, the weapon deals +d6 extra damage to the Unhallowed.  This Rune can be written more than once.
 
-##### Indestructible
+\mybold{ Indestructible}
+
 
 The weapon cannot be destroyed by non-magical means (acid, rust, etc.), and it gets a 6-in-6 Save against being destroyed by magical means (if it would normally not get a Save).
 
-##### Tenacious
+\mybold{ Tenacious}
+
 When in your hands, the weapon cannot be dropped unless you will it so.  If you are struck down, there is no way to remove the weapon from your hand short of cutting the hand off (which breaks the enchantment)
 
 
-##### Infamous
+\mybold{ Infamous}
+
 When you deal a killing blow with this weapon, the victim's noumenon is briefly revealed (for most creatures, it appears as a small, vaporous homunculus which vanishes after a few moments).  This immediately forces a morale check for all enemies that are Close.
 
-##### Vigilant
+\mybold{ Vigilant}
+
 
 When in your hands, you can see invisible creatures, and you have both Day Vision and Dark Vision (and you can switch between them at will).  You cannot be surprised while the weapon is in your hands.
 
-##### Rallying
+\mybold{ Rallying}
+
 
 When you deal a killing blow with this weapon, your allies automatically win Init in the next Moment.
 
 
+
+
+}%
 

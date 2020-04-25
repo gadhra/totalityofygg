@@ -1,0 +1,131 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\documentclass[10pt]{article}
+\usepackage{ygg}
+\newcommand{\yggVersion}{%
+  v0.7beta
+}
+
+% Section Titles
+\newcommand{\yggMechanics}{}
+\newcommand{\yggLeech}{}
+\newcommand{\yggWitch}{}
+\newcommand{\yggSorcerer}{}
+\newcommand{\yggMystic}{}
+\newcommand{\yggSpriggan}{}
+\newcommand{\yggAppendices}{}
+\newcommand{\yggThanks}{}
+
+
+% Body
+\newcommand{\yggMechanicsText}{}
+\newcommand{\yggLeechText}{}
+\newcommand{\yggWitchText}{}
+\newcommand{\yggSorcererText}{}
+\newcommand{\yggMysticText}{}
+\newcommand{\yggSprigganText}{}
+\newcommand{\yggAppendicesText}{}
+\newcommand{\yggThanksText}{}
+
+
+\input{mechanics.tex}
+\input{leech.tex}
+\input{witch.tex}
+\input{sorcerer.tex}
+\input{mystic.tex}
+\input{spriggan.tex}
+\input{appendices.tex}
+\input{thanks.tex}
+
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\title{{\Huge\fffancy Bell, Book, \& Candle}}
+\author{by Stefan Antonowicz}
+\date{}
+
+% table of contents
+\renewcommand\contentsname{{\small\fftext Table of Contents }}
+
+\begin{document}\fftext
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+% --- title page --------------------------------------------------------------------
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+
+\begin{multicols*}{2}
+  \let\clearpage\relax
+  \vspace{-5cm}
+  \small\fftext\tableofcontents
+\end{multicols*}
+\vfill\newpage
+% --- core mechanics -----------------------------------------------------------------
+\noindent\yggMechanics
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggMechanicsText
+\end{multicols}
+\vfill\newpage
+% --- leech -----------------------------------------------------------------
+\noindent\yggLeech
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggLeechText
+\end{multicols}
+\vfill\newpage
+% --- witch -----------------------------------------------------------------
+\noindent\yggWitch
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggWitchText
+\end{multicols}
+\vfill\newpage
+% --- sorcerer -----------------------------------------------------------------
+\noindent\yggSorcerer
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggSorcererText
+\end{multicols}
+\vfill\newpage
+% --- mystic -----------------------------------------------------------------
+\noindent\yggMystic
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggMysticText
+\end{multicols}
+\vfill\newpage
+
+% --- spriggan -----------------------------------------------------------------
+\noindent\yggSpriggan
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggSprigganText
+\end{multicols}
+\vfill\newpage
+
+% --- appendices -----------------------------------------------------------------
+\noindent\yggAppendices
+\vfill\newpage
+\noindent\yggAppendicesText
+\vfill\newpage
+
+% --- thanks  -----------------------------------------------------------------
+\noindent\yggThanks
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggThanksText
+\end{multicols}
+\vfill\newpage
+
+
+\end{document}

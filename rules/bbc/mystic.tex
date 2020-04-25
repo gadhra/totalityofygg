@@ -1,375 +1,407 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggMystic}{%
+  \mychapter{Mystics}{mystics}
+}
+
+\renewcommand{\yggMysticText}{%
 
 
+\mysection{Faith and Grace}{faith-and-grace}
 
-# Mystics
+\flavor{ 
+  And it has been said of old that all things that have been were wrought by the small gods, excepting only \TheAuthority, the Authority, the God of Having Done, who made the gods, and hath thereafter rested.  And none may pray to \TheAuthority but only to the gods whom he hath made.
+}
+
+  \mytable{X c}{
+    \thead{Level} & \thead{Grace/\MAX Faith} \\
+  }{
+    1 & 1d4 \POOL / 8 \\
+    2-3 & 2d4 \POOL / 10  \\
+    4-5 & 3d4 \POOL / 12 \\
+    6-7 & 4d4 \POOL / 16 \\
+    8 & 5d4 \POOL / 20  \\
+    9 & 6d4 \POOL / 24 \\
+  }
+
+Grace belongs to the Authority, and is represented by a single \UD.  Since it is forbidden to pray to the Authority directly, it falls to the Small Gods to help Mortals instead.  Faith in these \mylink{Small Gods}{mystics-small-gods} allows Mystics to practice \mylink{Liturgies and Invocations}{mystic-liturgies-invocations}.
 
 
+\mysubsection{Grace}{mystic-grace}
 
+Grace allows you to perform the \mylink{Seven Sacraments}{mystic-seven-sacraments}.  You get a number of Grace die (which are all d4) depending on your level (see the core rules).  
 
+Grace Die are \POOL, meaning if you roll a Failure (a 1 or a 2) you lose the die until you rest.  You can restore 1 Grace \POOL whenever you Bivouac. You can never use Grace to perform something that requires Faith, but you can sometimes use your Faith to affect Grace, depending on the Small God you worship.  You do not need your \mylink{Holy Symbol}{mystic-holy-symbol} to invoke the Seven Sacraments, but you cannot do so on Unhallowed Earth.  
 
-\mysection{Faith and Grace}{faith and grace}
+\mysubsection{Faith}{mystic-faith}
 
-
-  
-*And it has been said of old that all things that have been were wrought by the small gods, excepting only Māna-Yood-Sushāī, the Authority, the God of Having Done, who made the gods, and hath thereafter rested.  And none may pray to Māna-Yood-Sushāī but only to the gods whom he hath made.*
-
-
-
-Grace belongs to the Authority, and is represented by a single \UD.  Since it is forbidden to pray to the Authority directly, it falls to the Small Gods to help Mortals instead.  Faith in these Small Gods allows Mystics to practice Invocations and Liturgies.
-The Small Gods are broken into 10 Thrones, each containing 7 Small Gods.  More Thrones and Gods may exist than these.
-
-
-### Grace
-
-Grace allows you to perform the Seven Sacraments.  You get a number of Grace die (which are all d4) depending on your level (see the core rules).  
-
-Grace Die are {pool}, meaning if you roll a Failure (a 1 or a 2) you lose the die until you rest.  You can restore 1 Grace {pool} whenever you Bivouac. You can never use Grace to perform something that requires Faith, but you can sometimes use your Faith to affect Grace, depending on the Small God you worship.  You do not need your Holy Symbol to invoke the Seven Sacraments, but you cannot do so on Unhallowed Earth.  
-
-### Faith
-
-Since it is forbidden to worship the Authority directly, you must worship one of the Small Gods, the Gods of Doing. Each Throne and Power has its own set of Liturgies and Invocations independent of the Seven Sacraments.  Your belief in your Small God is measured using Faith Dice. 
+Since it is forbidden to worship the Authority directly, you must worship one of the \mylink{Small Gods}{mystics-small-gods}, the Gods of Doing. Each Throne and Power has its own set of \mylink{Liturgies and Invocations}{mystic-liturgies-invocations} independent of the \mylink{Seven Sacraments}{mystic-seven-sacraments}.  Your belief in your Small God is measured using Faith Dice. 
 
 The Throne your Small God sits beneath grants you certain abilities and dictates what weapons and armor you are permitted to use. 
 
-Each Small God has a set of four Invocations that manifest their power on Acheron, and a set of four Liturgies that grant boons for allies and bane for enemies.  You must be wearing the Holy Symbol of your Small God to solicit Invocations or perform Liturgies.  You may perform Invocations or Liturgies on Hallowed or Unhallowed Earth.
+Each Small God has a set of four Invocations that manifest their power on Acheron, and a set of four Liturgies that grant boons for allies and bane for enemies.  You must be wearing the \mylink{Holy Symbol}{mystic-holy-symbol} of your Small God to solicit \mylink{Invocations or perform Liturgies}{mystic-liturgies-invocations}.  You may perform \mylink{Liturgies and Invocations}{mystic-liturgies-invocations}. on Hallowed or Unhallowed Earth.
 
-The Faith Die is a single d4 {pool}.  You start with 2 Faith Die, and gain 2 Faith Die every time you go up in level.  If you roll a 1 or a 2 on a Faith Die, you lose the die.  You cannot use your Faith Die to cast any of the Seven Sacraments unless your Small God explicitly allows it.
+The Faith Die is a single d4 \POOL.  You start with 2 Faith Die, and gain 2 Faith Die every time you go up in level.  If you roll a 1 or a 2 on a Faith Die, you lose the die.  You cannot use your Faith Die to cast any of the Seven Sacraments unless your Small God explicitly allows it.
 
 Unlike Grace, Faith does not come back when you rest.  You can gain or regain Faith up to your Maximum by:
-- worshipping at a church or shrine during a Sojourn (+1 Faith) or Sabattical (+2 Faith)
-- witnessing divine intervention or proof of your Small God (Arbiter's discretion)
-- actively achieving things in your Small God's name (Arbiter's discretion)
+\mylist {
+  \item worshipping at a church or shrine during a Sojourn (+1 Faith) or Sabattical (+2 Faith)
+  \item witnessing divine intervention or proof of your Small God (Arbiter's discretion)
+  \item actively achieving things in your Small God's name (Arbiter's discretion)
+}
 
 Some examples of things that might gain you Faith: slaughtering the priest of a rival cult; converting a crowd of listeners; invoking your God and succeeding; eating hallucinogenic mushrooms and your God copulates with you while proclaiming your destiny, etc.
 
 It's possible to lose Faith through your actions, as well.  When you do something your Small God doesn't approve of or witnesses something which would shake your belief: a commune of the converted found diseased deformed and starved, a call for help which goes unanswered, a nocturnal visit by a creeping hulking thing which whispers terrible secrets of the endless sky into the your ear heedless to the invocation of your God, you lose Faith Die.
 
-If your Faith Die reach 0, you must immediately roll a d4 - on a Failure (a 1 or a 2) you suffer a Crisis of Faith.  If you pass you may continue to use Faith, though you are limited to 1 d4 at a time.  If you ever Fail your roll while out of Faith, you immediately suffer a Crisis of Faith. 
+If your Faith Die reach 0, you must immediately roll a d4 - on a Failure (a 1 or a 2) you suffer a \mylink{Crisis of Faith}{table-crisis-of-faith}.  If you pass you may continue to use Faith, though you are limited to 1 d4 at a time.  If you ever Fail your roll while out of Faith, you immediately suffer a Crisis of Faith. 
 
-You cannot gain more Faith die then your Maximum Faith, as specified in the Core Rules.
+You cannot gain more Faith die then your \MAX Faith for your \LVL.
 
-
-
-
-
-
-\mysection{The Seven Sacraments}{the seven sacraments}
-
-
+\mysection{The Seven Sacraments}{mystic-seven-sacraments}
 
 You may only use Grace to perform the Seven Sacraments, unless otherwise allowed by the Small God you worship
 
-
-
-
-
-
-### Bless
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| Splittable | |
-
-
-***T:**   Close Ally or object*
+\LITURGY [
+  Name=Bless,
+  Link=mystic-sacrament-bless,
+  Paradigm=Grace,
+  Save=N,
+  Duration=Session,
+  Counter=n/a,
+  Keywords=Splittable,
+  Target=Close Ally or object
+]
 
 
 
 Choose one effect per Faith invested: 
 1. The Ally can make a Save at a 6-in-6; 
-2. The Ally's can automatically succeed on a {ro} or {rs} check;
+2. The Ally's can automatically succeed on a \RO or \RS check;
 3. The Ally can immediately end a Markovian duration affecting them;
 4. The Ally or object is Hallowed for the remainder of the Session (this negates the detriment Unhallowed)
 
 Once an effect is used, it disappears (though the Blessing can be recast)
 
 
-
-
-### Consecrate
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| Concentration |**X** |  n/a  |
-|**K**| None | |
-
-
-***T:**   Close radius*
-
-
-
-You exude a [dice]x10m radius area of [Hallowed Ground](#mystics-miracle-working-hallowed-ground) around yourself, with the same benefits (see the [Miracle](#mystics-miracle-working-hallowed-ground) for details).  You can't move while concentrating on this Sacrament.
-
-Note that the area of Consecrated Ground will temporarily cancel out the effects of Unhallowed Earth (making it "normal"), but that Sacraments cannot be performed while you are on Unhallowed Ground.
-
-
-
-
-
-### Create Food
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None | |
-
-
-***T:**   Close radius*
-
-
-
-You create enough food to feed [sum] people for one meal, along with clean water to fill one mug per person. Mugs, utensils, and condiments are not provided.  Those that participate in the meal do not need to roll Provisions for a Bivouac.  
-
-
-
-### Curse the Unhallowed
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  Y |
-|**D**| 0  |**X** |  n/a  |
-|**K**| Splittable | |
-
-
-***T:**   [dice] Nearby Unhallowed*
-
-
-
-[dice] Unhallowed creatures take [sum]+[dice] damage, Save for half.
-
-
-
-### Lay on Hands
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| Concentration |**X** |  n/a  |
-|**K**| None | |
-
-
-***T:**   Close (touch) Allies*
-
-
-
-Heal up to [sum] points of Flesh by touch. You may distribute healing among as many creatures as you would like, as long as the total Flesh healed does not exceed [sum] and you maintain concentration. If you invest 4 [dice] or more, you may instead heal a single target's Flesh fully
-
-
-
-
-
-### Sticks to Snakes
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| Combat / [sum] Minutes |**X** |  n/a  |
-|**K**| Splittable | |
-
-
-***T:**   Close (touch) stick*
-
-
-
-[dice] sticks become snakes.  They owe you no favors and won't heed your commands unless you can speak to snakes.  Each snake has a [dice]-in-6 chance of having an Iron venom.  The stick must be small enough to lift with one hand. 
-
-
-
-
-
-### Walk on Water
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Grace |**S**|  N |
-|**D**| Concentration |**X** |  n/a  |
-|**K**| Splittable | |
-
-
-***T:**  self and [dice]-1 Close (touch) creatures*
-
-
-
-You and up to [dice]-1 Allies can slowly walk over water for as long as you maintain Concentration. 
-
-
-
-
-
-\mysection{DIVINE FAVOR}{divine favor}
-
-
-
-You may call upon your Small God to directly intercede on your behalf.  To do this, you must roll *all* of your Faith dice, the [sum] of the roll must be 60 or better.
+\LITURGY [
+  Name=Consecrate,
+  Link=mystic-sacrament-consecrate,
+  Paradigm=Grace,
+  Save=N,
+  Duration=Concentration,
+  Counter=n/a,
+  Keywords=None,
+  Target=Close radius
+]
+
+You exude a \DICE x10m radius area of \mylink{Hallowed Ground}{miracle-hallowed-ground} around yourself, with the same benefits.  You can't move while concentrating on this Sacrament.
+
+Note that the area of Consecrated Ground will temporarily cancel out the effects of \mylink{Unhallowed Earth}{occultism-unhallowed-earth} (making it "normal"), but that Sacraments cannot be performed while you are on Unhallowed Ground.
+
+\LITURGY [
+  Name=Create Food,
+  Link=mystic-sacrament-create-food,
+  Paradigm=Grace,
+  Save=N,
+  Duration=0,
+  Counter=n/a,
+  Keywords=None,
+  Target=Close radius
+]
+
+
+You create enough food to feed \SUMDICE people for one meal, along with clean water to fill one mug per person. Mugs, utensils, and condiments are not provided.  Those that participate in the meal do not need to roll Provisions for a Bivouac.  
+
+\LITURGY [
+  Name=Curse the Unhallowed,
+  Link=mystic-sacrament-curse-the-unhallowed,
+  Paradigm=Grace,
+  Save=Y,
+  Duration=0,
+  Counter=n/a,
+  Keywords=Splittable,
+  Target=\DICE Nearby Unhallowed
+]
+
+
+\DICE Unhallowed creatures take \SUMDICE + \DICE damage, Save for half.
+
+
+\LITURGY [
+  Name=Lay on Hands,
+  Link=mystic-sacrament-lay-on-hands,
+  Paradigm=Grace,
+  Save=N,
+  Duration=Concentration,
+  Counter=n/a,
+  Keywords=None,
+  Target=Close (touch) Allies
+]
+
+Heal up to \SUMDICE points of Flesh by touch. You may distribute healing among as many creatures as you would like, as long as the total Flesh healed does not exceed \SUMDICE and you maintain concentration. If you invest 4 \DICE or more, you may instead heal a single target's Flesh fully
+
+\LITURGY [
+  Name=Sticks to Snakes,
+  Link=mystic-sacrament-sticks-snakes,
+  Paradigm=Grace,
+  Save=N,
+  Duration=Combat or \SUMDICE Minutes,
+  Counter=n/a,
+  Keywords=Splittable,
+  Target=Close (touch) stick
+]
+
+\DICE sticks become snakes.  They owe you no favors and won't heed your commands unless you can speak to snakes.  Each snake has a \DICE-in-6 chance of having an Iron venom.  The stick must be small enough to lift with one hand. 
+
+
+
+\LITURGY [
+  Name=Walk on Water,
+  Link=mystic-sacrament-walk-water,
+  Paradigm=Grace,
+  Save=N,
+  Duration=Concentration,
+  Counter=n/a,
+  Keywords=Splittable,
+  Target=Self and \DICE-1 Close (touch) Allies
+]
+
+You and up to \DICE-1 Allies can slowly walk over water for as long as you maintain Concentration. 
+
+
+\cbreak
+
+\mysection{Divine Favor}{mystic-divine-favor}
+
+You may call upon your Small God to directly intercede on your behalf.  To do this, you must roll \mybold{all} of your Faith dice, the \SUMDICE of the roll must be 60 or better.
 
 The divine favor must be something in the sphere of your Small God (Arbiter's Discretion).  The Small Gods cannot violate the basic laws of the Authority:
 
-1. Matter and energy can neither be created nor destroyed, as this is the demense of the Authority; they can only be transformed or changed from one form to another.  Once a spirit has departed for the Isle of the Dead, it is beyond the reach of the Small Gods forever. 
+\mybullet {
+  \item Matter and energy can neither be created nor destroyed, as this is the demense of the Authority; they can only be transformed or changed from one form to another.  Once a spirit has departed for the Isle of the Dead, it is beyond the reach of the Small Gods forever. 
 
-2. Entropy always increases.  Time cannot flow backward; sword strikes cannot heal; you cannot "fall" against the direction of gravity. It is possible to suspend this Law (to roll back time, for instance), but only for a few Moments before it reverts to entropy again.
+  \item Entropy always increases.  Time cannot flow backward; sword strikes cannot heal; you cannot "fall" against the direction of gravity. It is possible to suspend this Law (to roll back time, for instance), but only for a few Moments before it reverts to entropy again.
 
-3. A *noumenon* cannot be removed by a Small God. A Small God cannot directly slay something on the Mortal plane.
+  \item A \myital{noumenon} cannot be removed by a Small God. A Small God cannot directly slay something on the Mortal plane.
 
-4. All matter and energy has a destiny in the dream of the Authority.  A Small God cannot cause matter or energy to do something that violates this destiny, and the ultimate destiny is only known to the Authority. (Practically, this means the effects of a Divine Favor are up to the Arbiter's discretion in the end!)
-
+  \item All matter and energy has a destiny in the dream of the Authority.  A Small God cannot cause matter or energy to do something that violates this destiny, and the ultimate destiny is only known to the Authority. (Practically, this means the effects of a Divine Favor are up to the Arbiter's discretion in the end!)
+}
 
 The Small God may also demand a sacrifice of some kind, or expect payment later ...
 
+\example {
+  \mylist {
+    \item Time rolls back for a few seconds to stop a killing blow from falling, or to reroll a missed Save.
 
+    \item A powerful magical item or artifact needs to be sundered
 
+    \item A sea must be parted, a tunnel opened through a mountain, or a boulder pushed to seal an entrance
 
+    \item Stones and trees, or sand and ice, assemble themselves into a fortress to protect the faithful
+  }
+}
 
-*Examples:*
+\newpage
 
-*- Time rolls back for a few seconds to stop a killing blow from falling, or to reroll a missed Save.*
-
-*- A powerful magical item or artifact needs to be sundered*
-
-*- A sea must be parted, a tunnel opened through a mountain, or a boulder pushed to seal an entrance*
-
-*- Stones and trees, or sand and ice, assemble themselves into a castle*
-
-
-
-
-
-
-
-\mysection{Liturgies and Invocations}{liturgies and invocations}
+\mysection{Liturgies and Invocations}{mystic-liturgies-invocations}
 
 Each Small God has a set of four Invocations that manifest their power on Acheron, and a set of four Liturgies that grant boons for allies and bane for enemies.  Only the First Liturgy and Invocation for each Small God are listed below. Additional Liturgies must be discovered - etched on bronze tablets hidden by fearful priests in stinking swamps, forgotten in reliquaries lying in pawn shops, or written by the slime of snails tripping balls on Shrooms.
 
-###  The Holy Symbol
 
-You must be wearing the Holy Symbol of your Small God to solicit Invocations or perform Liturgies.  You may perform Invocations or Liturgies on Hallowed or Unhallowed Earth.  If your Holy Symbol is removed, you cannot perform Liturgies or Sacraments (though you may still perform acts of Grace).  
+\mysubsection{The Holy Symbol}{mystic-holy-symbol}
 
-Your Holy Symbol is defined beneath the description of your Small God.  If you lose your holy symbol, or it's destroyed, you must perform the Miracle of Holy Relic to create a new one.  Remember that your Holy Symbol contains a single Faith die that you can use in a pinch.  If you use this Faith Die and roll a Failure, the Faith Die is lost and the Holy Symbol becomes a normal item (and can't be used to perform Liturgies or Invocations anymore)
+You must be wearing removed, you cannot perform Liturgies or Sacraments (though you may still perform acts of Grace).  
 
-\mysection{The Small Gods}{the small gods}
+Your Holy Symbol is defined beneath the description of your Small God.  If you lose your holy symbol, or it's destroyed, you must perform the Miracle of \mylink{Holy Relic}{miracle-holy-relic} to create a new one.  Remember that your Holy Symbol contains a single Faith die that you can use in a pinch.  If you use this Faith Die and roll a Failure, the Faith Die is lost and the Holy Symbol becomes a normal item (and can't be used to perform Liturgies or Invocations anymore)
 
+\newpage
 
-### Civilized
+\mysection{The Small Gods}{mystics-small-gods}
 
-
-
-Beauty; Gems; Cities; Trade; Commerce; Filth; Pollution; Art; Music; Fermentation; Builders; Forges
+The Small Gods are broken into 10 Thrones, each containing 7 Small Gods.  Certain heresies say that there are more gods and thrones than even these.
 
 
 
-#### Blessings
-
-Those who serve the Small Gods of the Civilized Throne gain {d+} Awareness and +1 to their Save vs. Toxins at character creation
-
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Light |
-| Helmet | Yes |
-| Shield | Yes |
-| Weapon | Stabbing or Thrown weapons only |
-
-<hr class="main-break" />
+\mysection{The Civilized Throne}{throne-civilized}
+\flavor {
+  Beauty; Gems; Cities; Trade; Commerce; Filth; Pollution; Art; Music; Fermentation; Builders; Forges
+}
 
 
+\mybold{Blessings}
 
-#### Balder
-*Seraph of Beauty and Gems*
+Those who serve the Small Gods of the Civilized Throne gain \DCUP Awareness and +1 to their Save vs. Toxins at character creation
 
----
-The Holy Symbol of Balder is a silver mirror
+\mybold{Interdictions}
 
-##### First Invocation
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+    Armor &  Light  \\
+    Helmet &  Yes  \\
+    Shield &  Yes  \\
+    Weapon &  Stabbing or Thrown weapons only  \\
+}
+
+
+\GOD[
+  Name=Balder,
+  Link=small-god-balder,
+  GodOf=Seraph of Beauty and Gems,
+  Holy=a silver mirror
+]
+
+
+\mybold{First Invocation}
 
 You know the exact worth of any gem or piece of art you can examine for uninterrupted Minutes
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Charm (as Sorcerer spell); Mirror Image (as Sorcerer spell); Sleep (as Sorcerer spell);  Balder's Twin
 
+\LITURGY [
+  Name= Balder's Twin,
+  Link= balder-liturgy-balders-twin,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch) mirror
+]
 
 
 
-#### Gomorrah
-*Archfiend of Cities*
+You reach into a mirror-like surface and pull out a copy of yourself.  The mirror has to be big enough for you to walk through - same height and same width, at least.  The copy behaves just like you, but it's illusory - anything that touches it will pass right through it, and it can't pick anything up or hold anything.  You can switch places with your mirror-self by stepping through the mirror - this dispels the illusion.
 
----
-The Holy Symbol of Gomorrah is a single iron nail, often driven into the hand or wrist
 
-##### First Invocation
+
+
+\GOD[
+Name=Gomorrah,
+Link=small-god-gomorrah,
+GodOf=Archfiend of Cities,
+Holy=a single iron nail driven into the hand or wrist
+]
+
+\mybold{First Invocation}
 
 When taking a Montage, roll twice and pick the roll you want to use
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacraments of Consecrate. This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Minerva
-*Archon of Trade and Commerce*
+\GOD[
+Name=Minerva,
+Link=small-god-minerva,
+GodOf=Archon of Trade and Commerce,
+Holy=a knotted string hung from the belt - useful for counting (like an abacus)
+]
 
----
-The Holy Symbol of Minerva is a knotted string, hung from the belt, useful for counting (like an abacus)
-
-##### First Invocation
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Listen
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Hammerspace Mule (as Sorcerer spell); Hollow Head (as Sorcerer Spell); Package Neatly; Minerva's Exchequer
 
 
+\LITURGY [
+  Name= Minerva's Exchequer,
+  Link= minerva-liturgy-minervas-exchequer,
+  Paradigm= Entropy ,
+  Save=  N ,
+  Duration= n/a ,
+  Counter=  n/a  ,
+  Keywords= Hammerspace ,
+  Target=   Close coins
+]
 
 
 
-#### Nimlurun
-*Fiend of Filth and Pollution*
+You can convert up to \SUMDICE kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item).
+For example, if the \SUMDICE of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces.
+Additionally, you can place up to \DICE X100kg of coins into "hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Encumbrance, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
+You can combine the effects above (so you could convert money and store it in hammerspace if you'd like).  You must cast this spell each time you want to put more coins into hammerspace, but everything that's in hammerspace is released upon your death.
 
----
-The Holy Symbol of Nimlurun is an iron vial of sewer water
+\LITURGY [
+  Name= Package Neatly,
+  Link=minerva-liturgy-package neatly,
+  Paradigm= Entropy ,
+  Save=  0 ,
+  Duration= Concentration / Permanent ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Nearby objects
+]
 
-##### First Invocation
+
+
+ Up to \DICE X250kg of nonliving objects, as you designate, are packed neatly. You must name the objects or their general category when you cast the spell ("those coins", "the contents of that room") If no packing materials are provided, the objects will be stacked into compact cubes, with the largest and most stable objects at the bottom. If chests, paper and twine, sacks, carts, etc. are provided, the spell will use them as you direct. The packages created will take up the minimum space possible, and will be remarkably sturdy. The spell will continue to pack objects for as long as you maintain concentration. The objects must be able to move freely. You could not use this spells to pack clothes someone was wearing. The objects will not lift more than 3m off the ground during the packing process.
+
+
+
+
+
+\GOD[
+Name=Nimlurun,
+Link=small-god-nimlurun,
+GodOf=Fiend of Filth and Pollution,
+Holy=an iron vial of sewer water
+]
+
+\mybold{First Invocation}
 
 You can enter Unhallowed Earth without penalty.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-In addition to the ritual for Hallowed Ground, you can create Unhallowed Earth as if you were a Witch.  The size of the Unhallowed Earth will be [dice] meters in radius.  In order to desecrate Hallowed Ground, this radius must equal or exceed the Hallowed ground you are trying to destroy.
-
-
+In addition to the ritual for Hallowed Ground, you can create Unhallowed Earth as if you were a Witch.  The size of the Unhallowed Earth will be \DICE meters in radius.  In order to desecrate Hallowed Ground, this radius must equal or exceed the Hallowed ground you are trying to destroy.
 
 
-#### Ninkasi
-*Seraph of Art, Music and Fermentation*
 
----
-The Holy Symbol of Ninkasi is an iron amulet hung from a necklace in the exact size and shape of a modern bottle opener
 
-##### First Invocation
+\GOD[
+Name=Ninkasi,
+Link=small-god-ninkasi,
+GodOf=Seraph of Art; Music; and Fermentation,
+Holy=an iron amulet hung from a necklace in the exact size and shape of a modern bottle opener
+]
+
+\mybold{First Invocation}
 
 You are immune to the negative effects of being Drunk, and you can never be Hung Over
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacrament of Lay on Hands.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Ptah
-*God of Builders*
+\GOD[
+Name=Ptah,
+Link=small-god-ptah,
+GodOf=God of Builders,
+Holy=an amulet in the shape of an ankh
+]
 
----
-The Holy Symbol of Ptah is an amulet in the shape of an ankh
-
-##### First Invocation
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Math
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Millworks of Ptah; Gaze of the Void; Ptah's Compartmentalization; Sandstone Bridge
 
@@ -379,2702 +411,2387 @@ You may use your Faith to cast the following spells: Millworks of Ptah; Gaze of 
 
 
 
-#### Vulcan
-*Seraph of the Forge*
+\GOD[
+Name=Vulcan,
+Link=small-god-vulcan,
+GodOf=Seraph of the Forge,
+Holy=a small crude homonculous hammered from iron
+]
 
----
-The Holy Symbol of Vulcan is a small crude homonculous, hammered from iron
-
-##### First Invocation
+\mybold{First Invocation}
 
 You gain the Skill: Tinker at 1.  Once per Bivouac, you can restore 1 \UD of Armor up to the Max 
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Clamp; Hone; Vulcan Plate; Hammer of the Forge
 
+\LITURGY [
+  Name= Clamp,
+  Link= vulcan-liturgy-clamp,
+  Paradigm= Force ,
+  Save=  Y (negates) ,
+  Duration= varies ,
+  Counter=  n/a  ,
+  Keywords= Contested ,
+  Target=   Nearby object or Monster
+]
 
 
-### Cthonic
+
+A clamp of red light appears over \DICE Monsters or objects you designate. The maximum width of the clamp is \DICE meters, and the clamp must be able to fit around the objects (so you wouldn't be able to clamp something to a floor or a wall).  The clamp will push the objects together until they are held securely, but it will not damage either object.  For example, you could clamp an orc to a chair or a sword to a table.  If one of the things clamped is a living thing, the creature can break free if they \RB : \VIG with a -\DICE penalty; otherwise, the duration depends on the number of dice spent:  1 [die]: Minutes; 2 \DICE: Days; 3 \DICE: Weeks; 4 \DICE: Months; 5 \DICE: Years; 6+ \DICE: Permanent.  Save negates.
+
+\LITURGY [
+  Name= Hammer of the Forge,
+  Link=vulcan-liturgy-hammer,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
 
 
-Murder; Betrayal; Shadows; Thieves; The Abyss; Death; Blood; Wyrms
+A magical blacksmith's hammer appears in your hand that only you can wield.  The hammer deals \DICE damage up to a maximum of 8.  You can also repair the Max \UD of an Ally's armor during a Bivouac.  For every \DCUP you repair in this way, the damage of the hammer goes down by 1.  The hammer can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
+
+\LITURGY [
+  Name= Hone,
+  Link=vulcan-liturgy-hone,
+  Paradigm= Force ,
+  Save=  0 ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close objects
+]
 
 
 
-#### Blessings
+You run your hands over \DICE metal, stone, or wooden edges and hone them to a razor sharpness. If the object is a Bashing weapon, it deals +\DICE damage; if the object is a Stabbing or Chopping weapon, it deals +\DICE X2 damage. The edge must be smaller than your outstretched arms.
 
-Those who serve the Small Gods of the Cthonic Throne gain {d+} {dex} at character creation.
+\LITURGY [
+  Name= Vulcan Plate,
+  Link=vulcan-liturgy-plate,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Light |
-| Helmet | Yes |
-| Shield | No |
-| Weapon | Stabbing weapons only |
 
-<hr class="main-break" />
 
-#### Arioch
-*Fiend of Murder and Betrayal*
+You cannot wear any other armor while you're wearing Vulcan Plate.  You appear to wear simple and brutal plate mail of welded black iron.  You definitely stand out in a crowd.  Your \MD drops to d4 when you invoke this liturgy.  The \UD for the Armor depends on the number of \DICE invested: 1 d4; 2-3 d6; 4-6 d8; 7-9 d10; 10+ d12.
 
----
-The Holy Symbol of Arioch is a silver coin with a face on each side
+\newpage
 
-##### First Invocation
+
+\mysection{The Cthonic Throne}{throne-cthonic}
+
+\flavor {
+  Murder; Betrayal; Shadows; Thieves; The Abyss; Death; Blood; Wyrms
+}
+
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Cthonic Throne gain \DCUP \DEX at character creation.
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Light  \\
+Helmet &  Yes  \\
+Shield &  No  \\
+Weapon &  Stabbing weapons only  \\
+}
+
+
+
+\GOD[
+Name=Arioch,
+Link=small-god-arioch,
+GodOf=Fiend of Murder and Betrayal,
+Holy=a silver coin with a face on each side
+]
+
+\mybold{First Invocation}
 
 No one can tell if you're lying
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you get Surprise, you can use up to {lvl} Faith to add +[sum] damage
-
-
+If you get Surprise, you can use up to \LVL Faith to add +\SUMDICE damage
 
 
 
-#### Erebus
-*Lord of Shadows*
 
----
-The Holy Symbol of Erebus is a piece of black gauze covering the mouth
 
-##### First Invocation
+\GOD[
+Name=Erebus,
+Link=small-god-erebus,
+GodOf=Lord of Shadows,
+Holy=a piece of black gauze covering the mouth
+]
+
+\mybold{First Invocation}
 
 You have Low Light Vision
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If there are shadows present in a room, doorway, etc. you can turn invisible for [sum] Minutes (can't move, etc)
-
-
+If there are shadows present in a room, doorway, etc. you can turn invisible for \SUMDICE Minutes (can't move, etc)
 
 
-#### Ik'tik'buboe
-*The Drowned Sultan*
 
----
-The Holy Symbol of Ik'tik'buboe is a necklace made from crab's claws and nautical rope, tied in elaborate knots
 
-##### First Invocation
+\GOD[
+Name=Ik'tik'buboe,
+Link=small-god-ik'tik'buboe,
+GodOf=The Drowned Sultan,
+Holy=a necklace made from crab's claws and nautical rope tied in elaborate knots
+]
+
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Salt
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Davy Jones's Locker; Trident of Ik'tik'buboe; Mermaid's Breath; Iron Anchor
 
+\LITURGY [
+  Name= Davy Jones-Locker,
+  Link= ikitikbubuoe-liturgy-davy-jones-locker,
+  Paradigm= Prophesy ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close body of water
+]
 
 
 
-#### Loki
-*King of Thieves*
+You must be near a body of water to use this liturgy (a river is OK, a puddle isn't).  You summon a lock up to \DICE meters in length, width, and height.  The box can hold up to \DICE X100kg in weight, or about 25 Significant Items (provided the box is big enough in terms of height, width, and depth i.e. you could put a 2 meter long pole in a 1 [die] locker).  Once you seal the box and carve your name onto it, the waters will take the locker back beneath the surface, where it will disappear.  At any time, you can return to the same body of water and bring the locker back from the depths. Nothing else can bring the locker back from the deeps (not even the liturgy of Dredge) except your death.  When you die, the locker will wash up on shore within a few days for some lucky (or unlucky) soul to find.
+If you place a living thing inside, it can breathe - but it will starve or die of thirst without food or water (incidentally, this is a great way to make vodyanoi)
+\LITURGY [
+  Name= Iron Anchor,
+  Link=ikitikbubuoe-liturgy-liturgy-iron-anchor,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch)
+]
 
----
-The Holy Symbol of Loki is an image of two snakes, circling one another to form an 'S' shape, and biting the tail of the other
 
-##### First Invocation
+
+You summon an immensely heavy iron anchor weighing \DICE X100kg.  You have to summon it onto a stable surface - for example, you couldn't summon it by touching water or sand, but you could summon it on top of a flimsy wooden railing.  The anchor will disappear at the end of the liturgy's duration.
+\LITURGY [
+  Name= Mermaid's Breath,
+  Link=ikitikbubuoe-liturgy-liturgy-mermaids-breath,
+  Paradigm= Biomancy ,
+  Save=  Y (negates) ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Self / Close (touch)
+]
+
+
+
+For \SUMDICE Minutes, up to \DICE+1 Allies or Monsters (including yourself) can breathe water as if it were air.  They can only breathe water, however - breathing air will cause them to drown. Unwilling creatures get a Save to negate.  You must touch the Creature to bestow this liturgy upon them. 
+\LITURGY [
+  Name= Trident of Ik'tik'buboe,
+  Link=ikitikbubuoe-liturgy-trident,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+A magical trident appears in your hand that only you can wield.  The trident is a 2-handed weapon that deals \DICE+\DICE damage up to a maximum of 12. Every time the trident strikes a creature, its damage goes down by 1.  When it hits 0, the trident disappears.  The trident can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
+
+
+
+\GOD[
+Name=Loki,
+Link=small-god-loki,
+GodOf=King of Thieves,
+Holy=an image of two snakes circling one another to form an 'S' shape and biting the tail of the other
+]
+
+\mybold{First Invocation}
 
 you can hide something on your person roughly the size of a dagger. It cannot be found except by scrying, even if you are stripped naked
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You use up to 2 Faith Dice as if they were Knave {stat} to perform Knavery.
 
 
 
 
-#### Nyx
-*Cousin of Death*
+\GOD[
+Name=Nyx,
+Link=small-god-nyx,
+GodOf=Cousin of Death,
+Holy=a black lace shroud
+]
 
----
-The Holy Symbol of Nyx is a black lace shroud
-
-##### First Invocation
+\mybold{First Invocation}
 
 You can appear dead for Hours
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Sleep (as Sorcerer spell); Lock (as Sorcerer spell); Fade; Paralysis
 
+\LITURGY [
+  Name= Fade,
+  Link= nyx-liturgy-fade,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Nearby creature or object
+]
 
 
 
-#### Shezmu
-*Prince of Blood*
+You can cause a Ally, Monster, or object to fade out of existence.  You can still see them, though they're insubstantial (like a ghost).  The target can't move, talk, or interact with the world in any way.  Not even magic can affect the target.  If the target is unwilling, it gets a Save to negate.  The duration is Markovian and depends on the number of \DICE invested.
 
----
-The Holy Symbol of Shezmu is a vial of blood other than your own (preferably the blood of the one who indoctrinated you into the faith)
+\LITURGY [
+  Name= Paralysis,
+  Link=nyx-liturgy-paralysis,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby Creature
+]
 
-##### First Invocation
+
+
+Up to \DICE creatures of \DICE \HD or less must Save or be Paralyzed.  Sleeping creatures do not get a Save. The duration is Markovian and depends on the number of \DICE invested
+
+
+
+\GOD[
+Name=Shezmu,
+Link=small-god-shezmu,
+GodOf=Prince of Blood,
+Holy=a vial of blood other than your own (preferably the blood of the one who indoctrinated you into the faith)
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can drink the blood of a friend or enemy and heal to Max Flesh
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If a creature is Bleeding, you can add +[dice]x2 damage to any of your attacks, for as long as you have Faith.  You can perform this Liturgy even after you have rolled your damage die.
-
-
+If a creature is Bleeding, you can add +\DICE X2 damage to any of your attacks, for as long as you have Faith.  You can perform this Liturgy even after you have rolled your damage die.
 
 
-#### The King in Yellow
-*Fiend of Illusion and Disguises*
 
----
-The Holy Symbol of The King in Yellow is a yellow cowl and mask
 
-##### First Invocation
+\GOD[
+Name=The King in Yellow,
+Link=small-god-the king in yellow,
+GodOf=Fiend of Illusion and Disguises,
+Holy=a yellow cowl and mask
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can appear as someone you're not for a few Moments (enough time to walk past a guard, disappear in a crowd, or destroy an alibi).  The illusion would survive a casual glance but not deep inspection
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Illusion (as Sorcerer spell); Mirror Image (as Sorcerer spell); Strange Copy; Tattered Robe
 
-
-
-### Cunning
-
-
-
-Mysteries; Riddles; Wizards; Tricksters; Runes; Diplomacy; Inspiration; Knowledge
-
-
-
-#### Blessings
-
-Those who serve the Small Gods of the Cunning Throne gain {d+} {int} at character creation.
-
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | None |
-| Helmet | No |
-| Shield | No |
-| Weapon | Fast weapons only |
-
-<hr class="main-break" />
+\LITURGY [
+  Name= Strange Copy,
+  Link= king-in-yellow-liturgy-strange-copy,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch) mirror
+]
 
 
 
-#### Cthulhu
-*Arbiter of Mysteries and Riddles*
+You reach into a mirror-like surface and pull out a copy of an object reflected in the mirror. The object that you pull out must be within reach of the mirror (as if it were a window), small enough to fit through the mirror (as if it were a window) and can't weigh more than \DICE X10kg. The mirror object looks and feels exactly like the object it copied, though it is a mirror image (so if you were to copy a book, the text would be backwards).  You can't copy any magical properties of the object, and you can only duplicate objects, not living things.  The object exists for \SUMDICE Minutes.  If the object suffers a solid blow, it pops like a bubble.
 
----
-The Holy Symbol of Cthulhu is A piece of jewelry depicting an octopus
+\LITURGY [
+  Name= Tattered Robe,
+  Link=king-in-yellow-liturgy-tattered-robe,
+  Paradigm= Entropy ,
+  Save=  Y (negates Bleeding) ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
-##### First Invocation
+
+
+You must be wearing robes without armor to use this liturgy.  The edges of your robes form into \DICE tatters, each of which can be used as a weapon in combat in addition to your regular attack. The tatters deal no damage and each of their attacks must be rolled separately using your \FOC instead of your \VIG or \DEX - but if you hit the target begins Bleeding unless they make a Save.  You can split these attacks among as many Close opponents as you desire.
+The tatters can also be used to hold small objects, as if they were each a prehensile tail.  Each tatter can hold up to 50kg of weight, but cannot attack if they are holding something.
+
+\newpage
+
+
+\mysection{The Cunning Throne}{throne-cunning}
+
+\flavor {
+  Mysteries; Riddles; Wizards; Tricksters; Runes; Diplomacy; Inspiration; Knowledge
+}
+
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Cunning Throne gain \DCUP \INT at character creation.
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  None  \\
+Helmet &  No  \\
+Shield &  No  \\
+Weapon &  Fast weapons only  \\
+}
+
+
+
+
+
+\GOD[
+Name=Cthulhu,
+Link=small-god-cthulhu,
+GodOf=Arbiter of Mysteries and Riddles,
+Holy=A piece of jewelry depicting an octopus
+]
+
+\mybold{First Invocation}
 
 once per Session, you can correctly guess the answer to any non-magical riddle; you speak (but can't read) Fiendish fluently
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may use up to {lvl} Faith die as if they were Remembrance Die (see Spriggan) to summon Demon creature types (see core rules)
-
-
+You may use up to \LVL Faith die as if they were Remembrance Die (see Spriggan) to summon Demon creature types (see core rules)
 
 
-#### Hecate
-*Archfiend of Wizardry*
 
----
-The Holy Symbol of Hecate is your Grimoire
 
-##### First Invocation
+\GOD[
+Name=Hecate,
+Link=small-god-hecate,
+GodOf=Archfiend of Wizardry,
+Holy=your Grimoire
+]
+
+\mybold{First Invocation}
 
 You may use your Faith to Scribe spells into your Grimoire. If you successfully scribe a spell into your Grimoire or a scroll, gain that many Faith
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-At character creation, you may choose a number of Sorcerer spells of any Paradigm based on your {int}:  d8, 1; d10, 2; d12 3.  You may learn additional spells by scribing them in your Grimoire (using the rules under Inscription).  Note that these spells become Liturgies by this process, meaning you can cast them using Faith and do not need to "memorize" them
-
-
+At character creation, you may choose a number of Sorcerer spells of any Paradigm based on your \INT:  d8, 1; d10, 2; d12 3.  You may learn additional spells by scribing them in your Grimoire (using the rules under Inscription).  Note that these spells become Liturgies by this process, meaning you can cast them using Faith and do not need to "memorize" them
 
 
-#### Iktomi
-*God of Tricksters*
 
----
-The Holy Symbol of Iktomi is a small puppet, worn from the belt or neck
 
-##### First Invocation
+\GOD[
+Name=Iktomi,
+Link=small-god-iktomi,
+GodOf=God of Tricksters,
+Holy=a small puppet worn from the belt or neck
+]
+
+\mybold{First Invocation}
 
 You can palm any object the size of your fist, and will be noticed only on a 6-in-6
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Illusion (as Sorcerer spell); Spidertongue; Iktomi's Suggestion; Memory Lane
 
+\LITURGY [
+  Name= Iktomi's Suggestion,
+  Link= iktomi-liturgy-iktomis-suggestion,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close; Nearby; or Far-Away creature
+]
+
+
+
+You whisper a word on the wind which travels to a Close, Nearby, or Far-Away target of \DICE X2 \HD or less. The target must be able to understand you.  Once the word reaches the ear of the victim, they must Save or become Befuddled.  The duration is Markovian and depends on the number of \DICE invested.
+\LITURGY [
+  Name= Memory Lane,
+  Link=iktomi-liturgy-memory-lane,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Varies ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close creature(s)
+]
+
+
+
+You can create a memory (real or not) and embed it in the head(s) of up to \DICE creatures by touch.  Unwilling creatures may Save to negate the spell.  The memory must be short and distinct.  The memory will start to fade in a few days, but if you win a \RB : \FOC attempt against the victim (the victim has a -\DICE penalty) when you invoke the liturgy, the memory will never fade, even if they lose all other memories (incidentally, this is is a really great way to create a ghost or poltergeist).
+
+\LITURGY [
+  Name= Spidertongue,
+  Link=iktomi-liturgy-spidertongue,
+  Paradigm= Biomancy ,
+  Save=  Y (negates) ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+You can speak with spiders (and they can speak with you).  Small spiders know about water, wind, and bugs.  Larger spiders know about people (maybe they can tell them apart).  Big, dangerous spiders know all kinds of things.  Spiders will be friendly towards you, but if you attack them they'll fight back.  Additionally, your spittle becomes a Toxin whose power depends on the number of \DICE spent: 1 [die] Iron Toxin; 3 \DICE Silver Toxin; 6 \DICE Gold Toxin.  Your spittle is enough to poison a drink, a needle or syringe, or infect someone you might bite, but not enough to poison a knife or dagger.  The spittle becomes normal when the duration ends.
 
 
 
 
 
-#### Mímir
-*God of Runes*
+\GOD[
+Name=Mímir,
+Link=small-god-mímir,
+GodOf=God of Runes,
+Holy=a necklace of runes scribed on tiles
+]
 
----
-The Holy Symbol of Mímir is a necklace of runes scribed on tiles
-
-##### First Invocation
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Linguistics
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 During a Sabbatical, you can create Sigils as a Sorcerer using Inscription.  Instead of Research Dice, use your Faith Dice in the same way.  
 
 
 
 
-#### The Grey Lords
-*Archons of Diplomacy*
+\GOD[
+Name=The Grey Lords,
+Link=small-god-the grey lords,
+GodOf=Archons of Diplomacy,
+Holy=a choker of dove feathers
+]
 
----
-The Holy Symbol of The Grey Lords is a choker of dove feathers
-
-##### First Invocation
+\mybold{First Invocation}
 
 You cannot be Charmed
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Conflicting Command; Resonating Command; Duelist's Wings; Becalm
 
+\LITURGY [
+  Name= Becalm,
+  Link= grey-lords-liturgy-becalm,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby Monsters
+]
 
 
 
-#### The Muses
-*Gods of Inspiration*
+You can invoke this liturgy to prevent bloodshed among up to \DICE creatures who have not yet begun Combat.  They must be able to speak the same language as you.  The creatures must roll their morale with a -\DICE penalty; if they fail, they will lower any weapons and regard you with wary suspicion.  If used against Allies, the ally must win a \RB : \FOC against you with a -\DICE penalty.  Weaker Monsters will usually follow the lead of stronger Monsters.  Once Combat has begun, the liturgy immediately ends.  If you attack a group of Monsters who are under the effects of Becalm, you will win Surprise.
 
----
-The Holy Symbol of The Muses is a nine-pointed star, worn as an amulet or inscribed on a headband
-
-##### First Invocation
-
-Once per Session you may ask the Arbiter for a hint to a problem you're facing. It might be which way to go when lost in a dungeon, a push in the right direction for a riddle, or a sense of what some clue might mean (or if it's even a clue at all). It can't be the specific location of something or someone. The resolution of this is *entirely* up to the Arbiter's discretion (including denying the request, though the Invocation is not lost in this case)
-
-##### First Liturgy
-
-You can add the [sum] of a single Faith Die to anyone's {ro} or {rb} attempt (including your own), or to grant a 6-in-6 on a single Skill check
-
+\LITURGY [
+  Name= Conflicting Command,
+  Link=grey-lords-liturgy-conflicting command,
+  Paradigm= Mind ,
+  Save=  Y (negate Knocked Out effect) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby Monsters
+]
 
 
 
+You shout this liturgy at up to \DICE Monsters.  To you and to anyone else, the words you've shouted are incomprehensible - but the Monsters interpret it as a magical command that is impossible to fulfill.  "Fall down and jump up at the same time" is a possible translation, but the conflict is more fundamental.  The target(s) take \DICE damage depending on the number of dice targeting them, and must Save or be Knocked Out.  The duration is Markovian and depends on the number of \DICE invested.  The Monster must speak the same language as you.
 
-#### Thoth
-*God of Knowledge*
+\LITURGY [
+  Name= Duelists' Wings,
+  Link=grey-lords-liturgy-duelists-wings,
+  Paradigm= Biomancy ,
+  Save=  0 ,
+  Duration= Combat / \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close (touch) Allies or Self
+]
 
----
-The Holy Symbol of Thoth is a small book of scripture
 
-##### First Invocation
+
+Tiny white wings sprout from the ankles and wrists of up to \DICE Allies.  They always win Init in Combat, and any falling damage is reduced by -\DICE per die.
+
+\LITURGY [
+  Name= Resonating Command,
+  Link=grey-lords-liturgy-resonating command,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Nearby creatures
+]
+
+
+
+You shout a one word command at up to \DICE Close or Nearby target, who must obey (Save negates).  The target(s) must be able to understand your language.  The command resonates for a Markovian duration - if the Markovian die is not a 1 or a 2, they must Save again.  Each Moment after the first the target(s) gain an additional +1 to their Save.  The command cannot directly cause the target(s) harm or force them to commit a harmful action.  You could cause them to run into a trap they didn't know was there, or into a tactically disadvantageous position, but not off a cliff.
+
+
+\GOD[
+Name=The Muses,
+Link=small-god-the muses,
+GodOf=Gods of Inspiration,
+Holy=a nine-pointed star worn as an amulet or inscribed on a headband
+]
+
+\mybold{First Invocation}
+
+Once per Session you may ask the Arbiter for a hint to a problem you're facing. It might be which way to go when lost in a dungeon, a push in the right direction for a riddle, or a sense of what some clue might mean (or if it's even a clue at all). It can't be the specific location of something or someone. The resolution of this is \myital{entirely} up to the Arbiter's discretion (including denying the request, though the Invocation is not lost in this case)
+
+\mybold{First Liturgy}
+
+You can add the \SUMDICE of a single Faith Die to anyone's \RO or \RB attempt (including your own), or to grant a 6-in-6 on a single Skill check
+
+
+
+
+
+\GOD[
+Name=Thoth,
+Link=small-god-thoth,
+GodOf=God of Knowledge,
+Holy=a small book of scripture
+]
+
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Lore
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Scry; Expertise; Reveal Ownership; Labyrinth
 
+\LITURGY [
+  Name= Expertise,
+  Link= thoth-liturgy-expertise,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
 
-### Empyrean
+
+Name a Skill - it can be one of the 7 basic skills, or any other skill you choose (though you can't learn things that would not be contained in a well stocked library, or that are so rare that only a few people could teach them to you).  Gain a \DICE-in-6 {knack} in that Skill for the spell's duration.  If you already know the Skill, add \DICE to the {knack} instead (so if you have a 3-in-6 and spend 2 Faith, you would have a 5-in-6).
+
+\LITURGY [
+  Name= Labyrinth,
+  Link=thoth-liturgy-labyrinth,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
 
 
-Sunlight; Mountaintops; Heavens; Moonlight; Lightning; Tempests; Rains
+You create a spiraling labyrinth of thought in your mind.  Anyone targeting you with Charm, Sleep, or any magical effect whereby the caster tries to read your mind or alter your memories must enter into a \RB : \FOC contest with you at a -\DICE penalty.  If they fail, they will be caught in your mind for the duration of the liturgy.  If you win, the creature is trapped inside your mind - they immediately catch the Vapors, and you can hear all their thoughts.
+
+\LITURGY [
+  Name= Reveal Ownership,
+  Link=thoth-liturgy-reveal-ownership,
+  Paradigm= Prophesy ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close objects
+]
 
 
 
-#### Blessings
+Touch up to \DICE objects; letters appear over the objects, spelling out the name of the owner or owners.  The name shown will be the name the owner used when they purchased or acquired the objects (so if they were obtained under an alias, it will just show the alias). 
+If you use 2 \DICE, the liturgy will also show if the ownership is disputed (the dead cannot dispute ownership).  If you use 3 \DICE, arrows will appear pointing in the direction of the owner, or a skull will appear if they are deceased.  If you use 4 \DICE, true names will appear alongside the alias as long as the owner is mortal.
+The liturgy works on slaves (including those under the effect of Charm Person) and domesticated animals.  If the object has no owner, nothing happens.
 
-Those who serve the Small Gods of the Empyrean Throne gain {d+} {foc} at character creation.
+\LITURGY [
+  Name= Scry,
+  Link=thoth-liturgy-scry,
+  Paradigm= Prophesy ,
+  Save=  N ,
+  Duration= Concentration ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Something up to \DICE km away
+]
 
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Light |
-| Helmet | Yes |
-| Shield | Yes |
-| Weapon | Stabbing or Chopping weapons only |
 
-<hr class="main-break" />
 
-#### Asura
-*Seraph of Sunlight*
+This spell requires something to scry through - a mirror, a quiet pool, clouds, a bonfire, etc.  You create an invisible eye that can travel up to \DICE km away at a speed of 10km/hour.  Because the eye is invisible, it can see and be seen by invisible things.  For as long as you maintain concentration, everything the eye sees is reflected in the thing you're scrying through.  Other people can see what the eye sees if they're looking into the mirror, pool, clouds, bonfire, etc.  as well. 
+If you use 3 or more Faith, the eye is joined by an invisible ear that can hear for you as well; if you use 5 or more Faith, the eye and ear are joined by a mouth you can speak through.  You can't separate the eye, ear, and mouth - they have to remain together.  The eye, ear, and mouth can fit through a space that you could reasonably pass the real thing through (a mouse hole, but not under a door)
 
----
-The Holy Symbol of Asura is polished mirrors or brass, hung from the neck or belt
 
-##### First Invocation
+\newpage
+
+\mysection{The Empyrean Throne}{throne-empyrean}
+
+\flavor {
+  Sunlight; Mountaintops; Heavens; Moonlight; Lightning; Tempests; Rains
+}
+
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Empyrean Throne gain \DCUP \FOC at character creation.
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Light  \\
+Helmet &  Yes  \\
+Shield &  Yes  \\
+Weapon &  Stabbing or Chopping weapons only  \\
+}
+
+
+
+\GOD[
+Name=Asura,
+Link=small-god-asura,
+GodOf=Seraph of Sunlight,
+Holy=polished mirrors or brass hung from the neck or belt
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can project a beam of sunlight from your holy symbol for Minutes
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Fool's Fire (as Sorcerer spell); Fireball (as Sorcerer spell); Glorious Sunburst; Sonorous Seeker
 
+\LITURGY [
+  Name= Glorious Sunburst,
+  Link= asura-liturgy-glorious-sunburst,
+  Paradigm= Elements ,
+  Save=  Y (half) ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Up to 50m straight up
+]
+
+
+
+You raise your hands to the heavens and fire a flare up to 50m upwards, where it hovers providing bright sunlight to all areas Close, Nearby, and Far-Away.  You can command the sunburst to change color, move horizontally, or explode.  No shadows can be cast beneath the sunlight (meaning Skulking is impossible), and all invisible creatures and objects appear with a thin halo around them the color of the sun.  Anyone who performs the sacrament Curse the Unhallowed while under the Glorious Sunburst adds an additional +\DICE to their damage, and anyone Close to the sunburst if it explodes takes \SUMDICE+\DICE damage, Save for half.
+
+\LITURGY [
+  Name= Sonorous Seeker,
+  Link=asura-liturgy-sonorous seeker,
+  Paradigm= Prophesy ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Object up to \DICE km away
+]
+
+
+
+You create a fluttering star of light that twitters like a bird.  Name an object using up to \DICE words - it can be a person ("the Stygian witch") or a thing ("the nearest body of water" or "the cask of Amontillado").  It has to be something you've seen clearly before.  Once named, the seeker will fly to it at the speed of an arrow and hover near it, chiming as loud as a bell.  If the object is not within the spell's range, it will have a \DICE-in-6 chance of finding a similar object; otherwise, it disappears.
 
 
 
 
+\GOD[
+Name=Empress Wa,
+Link=small-god-empress wa,
+GodOf=God of the Heavens,
+Holy=a jade diadem
+]
 
-#### Empress Wa
-*God of the Heavens*
+\mybold{First Invocation}
 
----
-The Holy Symbol of Empress Wa is a jade diadem
+The range you can safely fall is increased by +\LVL x2 meters i.e. at level 1 you could fall an additional 2 meters, at level 9 you could fall an additional 18 meters.  The distance is deducted from the fall - so a fall of 30m at level 9 would be the equivalent to a fall of 12m, and a fall of 23m would deal no damage (23 - 18 = 5m, the maximum distance you can fall without taking damage)
 
-##### First Invocation
-
-The range you can safely fall is increased by +{lvl}x2 meters i.e. at level 1 you could fall an additional 2 meters, at level 9 you could fall an additional 18 meters.  The distance is deducted from the fall - so a fall of 30m at level 9 would be the equivalent to a fall of 12m, and a fall of 23m would deal no damage (23 - 18 = 5m, the maximum distance you can fall without taking damage)
-
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacraments of Curse the Unhallowed.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Raiden
-*Lord of Lightning*
+\GOD[
+Name=Raiden,
+Link=small-god-raiden,
+GodOf=Lord of Lightning,
+Holy=two iron bracers with lightning bolts etched on them
+]
 
----
-The Holy Symbol of Raiden is two iron bracers with lightning bolts etched on them
-
-##### First Invocation
+\mybold{First Invocation}
 
 Any damage from lightning or electricity is reduced by 1 point per die
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you are not wearing iron armor (including a helm or shield) you may throw lightning bolts.  The bolts are treated as Thrown weapons, and do [dice]x2 damage on a hit.
-
-
+If you are not wearing iron armor (including a helm or shield) you may throw lightning bolts.  The bolts are treated as Thrown weapons, and do \DICE X2 damage on a hit.
 
 
-#### Raimonds Mountainhand
-*Seraph of the Mountaintops*
 
----
-The Holy Symbol of Raimonds Mountainhand is 3 iron spikes in the shape of icicles or teeth, hung from the neck
 
-##### First Invocation
+\GOD[
+Name=Raimonds Mountainhand,
+Link=small-god-raimonds mountainhand,
+GodOf=Seraph of the Mountaintops,
+Holy=3 iron spikes in the shape of icicles or teeth hung from the neck
+]
+
+\mybold{First Invocation}
 
 If you choose, your feet cannot be moved from the spot you are standing, provided you are in contact with stone or earth. This effect ends if you are knocked unconscious, struck dead, etc.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Pet Rock; Terrestrial Shackle; Stoneskin; Tremor
 
+\LITURGY [
+  Name= Pet Rock,
+  Link= raimonds-liturgy-pet-rock,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch) Stone
+]
 
 
 
+You may invoke this liturgy on a stone small enough to fit into the palm of your hand.  You may give the stone a command of up to \DICE words; it will attempt to follow your commands to the best of its ability.  It can be asked to trip targets when they run past, jump off a shelf when a certain person enters a room, etc.  The stone can launch itself into the air at your command and strike a target Close, Nearby, or Far-Away for up to \DICE damage (you can make this damage 0 if you'd like, in order to get someone's attention), and can do this once every Moment for the duration.
 
-#### Shul
-*Seraph of Moonlight*
+\LITURGY [
+  Name= Stoneskin,
+  Link=raimonds-liturgy-stoneskin,
+  Paradigm= Biomancy ,
+  Save=  Y (negates) ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self or Close creature
+]
 
----
-The Holy Symbol of Shul is 3 pearl earrings, hung from either ear
 
-##### First Invocation
+
+You or a creature you target has their skin turned to stone.  Weight is increased by \DICE X100kg and all physical damage is reduced by -\DICE for the duration of the spell.  The target cannot swim, jump, or run however. If invoked on something already in deep water, mud, etc. the target will immediately sink at x\DICE+1 the normal rate. Unwilling creatures get a Save to negate. 
+
+\LITURGY [
+  Name= Terrestrial Shackle,
+  Link=raimonds-liturgy-terrestrial-shackle,
+  Paradigm= Elements ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close; Nearby; or Far-Away creatures
+]
+
+
+
+By invoking this liturgy, you shackle up to \DICE creatures to the ground.  They must be touching the ground already when you make the invocation.  The creatures must keep at least one limb touching the ground at all times.  If they attempt to run, they must \RB : \DEX with a -\DICE penalty.  If they are knocked Prone, they must \RB : \VIG with a -\DICE penalty to stand up.  Save negates.
+
+\LITURGY [
+  Name= Tremor,
+  Link=raimonds-liturgy-tremor,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= Contested ,
+  Target=   Nearby or Far Away point
+]
+
+
+
+You create a small tremor somewhere Nearby or Far-Away.  Everything Close to the tremor must \RB : \DEX with a -\DICE penalty or fall Prone.  The tremor is enough to knock objects off shelves and upset balanced objects, but not enough to crack masonry or break walls.
+
+
+
+\GOD[
+Name=Shul,
+Link=small-god-shul,
+GodOf=Seraph of Moonlight,
+Holy=3 pearl earrings hung from either ear
+]
+
+\mybold{First Invocation}
 
 You have Darkvision that you can "activate" at will
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Astronomer's Helper; Children of Shul; Claws of the Lycanthrope; Lunacy
 
+\LITURGY [
+  Name= Astrologer's Helper,
+  Link= shul-liturgy-astrologers-helper,
+  Paradigm= Prophesy ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Self / Close creature(s)
+]
 
 
 
-#### Tiamat
-*Fiendish Prince of Tempests*
+Outlines of the planets, major stars, sun, and moon appear around you. You can use them to determine the time of day, true north, and your approximate position on the globe. You can also affect the futures of \DICE Allies per casting (casting it on yourself counts towards this number). Choose 1 of the following:  1)  the Ally can change any natural 1 they roll to a natural 6; 2) the Ally can change any natural 1 they roll to a natural 20; 3) the Ally can change any attack that would hit them to a miss; 4) the Ally can change any attack they make that would have missed into a hit.  An Ally can only have their future determined once per Session.
 
----
-The Holy Symbol of Tiamat is a five pointed star, worn from a necklace
+\LITURGY [
+  Name= Children of Shul,
+  Link=shul-liturgy-children-of-shul,
+  Paradigm= Prophesy ,
+  Save=  Y (half) ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
-##### First Invocation
+
+
+You create \DICE small moons that circle the top of your head, casting moonlight Close and Nearby.  The shadows thrown by this moonlight give a +\DICE bonus to Skulking rolls and give everyone in range a +\DICE-in-6 chance to find secret doors and hidden writing (so if you have a 2-in-6 Math skill and spend 2 dice, your chance of finding secret doors will go to 4-in-6). The moonlight will activate abilities and powers that manifest in lunar rays (like lycanthropy).  The moons throw light equivalent to \DICE candles.
+You can pluck one or more of these orbs from around your head and throw it at a Monster Nearby using your \FOC to attack; on a successful hit, the moon(s) deal \SUMDICE+\DICE damage, Save for half.  When you have no moons left, the spell ends.
+The moons can be dispelled at any time, but can only be summoned once a Session.
+
+\LITURGY [
+  Name= Claws of the Lycanthrope,
+  Link=shul-liturgy-claws-lycanthrope,
+  Paradigm= Biomancy ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+You grow claws from your hands as if you were a werewolf.  The claws cannot curse someone with lycanthropy.  The claws deal \DICE damage up to a maximum of 6. Because there is no die to roll when dealing damage, they cannot Crit or be Fumbled. 
+
+\LITURGY [
+  Name= Lunacy,
+  Link=shul-liturgy-lunacy,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   \DICE Close or Nearby creatures
+]
+
+
+
+You invoke the madness of the moon.  \DICE creatures must immediately make a Sanity roll; if they do not have Sanity (Monsters, for instance) the creatures are permitted a Save.
+The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the Monster becomes Enraged; 2) the Monster becomes Afraid; 3) the Monster is Knocked Out; 4) the Monster suffers Anathema.  The duration is Markovian and depends on the number of \DICE used.
+
+
+\GOD[
+Name=Tiamat,
+Link=small-god-tiamat,
+GodOf=Fiendish Prince of Tempests,
+Holy=a five pointed star worn from a necklace
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can ignore any Elemental damage
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Breath of Elements (as Sorcerer spell); Prismatic Ray (as Sorcerer Spell); Color Spray (as Sorcerer Spell); Multielemental Spray
 
 
+\LITURGY [
+  Name= Multielemental Spray,
+  Link= tiamat-liturgy-multielemental-spray,
+  Paradigm= Elements ,
+  Save=  Y (half) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby Monster(s)
+]
 
 
-#### Tlaloc
-*Archon of the Rains*
 
----
-The Holy Symbol of Tlaloc is a wreath of ferns and mosses
+You emit \DICE sprays of elements from your fingertips that you can split among \DICE Monsters.  For each Monster, if the \SUMDICE of the \DICE targeting the Monster is greater than the Monster's \HD, they take \DICE+\DICE fire damage.  If the \SUMDICE is twice the Monster's \HD or more, they also take \DICE+\DICE cold damage.  If the \SUMDICE is three times the Monster's \HD or more, they also take \DICE+\DICE lightning damage.  If the \SUMDICE is four times the Monster's \HD or more, they also take \DICE+\DICE acid damage.  Save for half.
 
-##### First Invocation
+
+\GOD[
+Name=Tlaloc,
+Link=small-god-tlaloc,
+GodOf=Archon of the Rains,
+Holy=a wreath of ferns and mosses
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can summon rainclouds over an area of a few km.  The rain will last Hours, and can be anything from a gentle mist or fog to a fierce thunderstorm
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacrament of Lay on Hands.  This is in addition to the Grace that allows you to do so.
 
+\newpage
 
 
+\mysection{The Errant Throne}{throne-errant}
+
+\flavor {
+  Games; Songs; Strength; Valor; Suffering; Freedom; Journeys; Homecomings; Treasures; Trials
+}
 
 
-### Errant
-
-
-
-Games; Songs; Strength; Valor; Suffering; Freedom; Journeys; Homecomings; Treasures; Trials
-
-
-
-#### Blessings
+\mybold{Blessings}
 
 Those who serve the Small Gods of the Errant throne start with d6 Grit at character creation
 
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Medium |
-| Helmet | Yes |
-| Shield | Yes |
-| Weapon | Any weapon |
+\mybold{Interdictions}
 
-<hr class="main-break" />
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Medium  \\
+Helmet &  Yes  \\
+Shield &  Yes  \\
+Weapon &  Any weapon  \\
+}
 
-#### Balo
-*Archon of Games and Contests*
 
----
-The Holy Symbol of Balo is a leather bag of bone dice, hung from the neck or belt
 
-##### First Invocation
+\GOD[
+Name=Balo,
+Link=small-god-balo,
+GodOf=Archon of Games and Contests,
+Holy=a leather bag of bone dice hung from the neck or belt
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can reroll any die you have rolled, and use the new value.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacrament of Bless.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Gilgamesh
-*Lord of Strength and Valor*
+\GOD[
+Name=Gilgamesh,
+Link=small-god-gilgamesh,
+GodOf=Lord of Strength and Valor,
+Holy=a pair of bull's horns hung from the neck or worn as a helmet
+]
 
----
-The Holy Symbol of Gilgamesh is a pair of bull's horns, hung from the neck or worn as a helmet
-
-##### First Invocation
+\mybold{First Invocation}
 
 You cannot be coerced to leave Combat once it has joined (though you can leave of your own free will).
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you are fighting while Unarmed, you may use to up {lvl} Faith per Moment to add +[sum] to your Fight {ro}, and deal +[dice] damage when you hit.  If you are Guarding while unarmored (including shield, but helmet is OK), you may use up to {lvl} Faith to add +[sum] to your Guard {ro}.
-
-
+If you are fighting while Unarmed, you may use to up \LVL Faith per Moment to add +\SUMDICE to your Fight \RO, and deal +\DICE damage when you hit.  If you are Guarding while unarmored (including shield, but helmet is OK), you may use up to \LVL Faith to add +\SUMDICE to your Guard \RO.
 
 
 
-#### Issek of the Jug
-*Seraph of Suffering and Freedom*
 
----
-The Holy Symbol of Issek of the Jug is a broken pair of manacles
 
-##### First Invocation
+\GOD[
+Name=Issek of the Jug,
+Link=small-god-issek of the jug,
+GodOf=Seraph of Suffering and Freedom,
+Holy=a broken pair of manacles
+]
+
+\mybold{First Invocation}
 
 Once per session, you can free all Nearby imprisoned creature. You cannot control who is freed - it's everyone or no-one. Bonds break, cell doors open, manacles rust and fall away, and demons may pass through magic circles
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-During a Bivouac, you can enchant [dice] jugs of water to relieve pain and ease suffering.  Any who drink the jug in its entirety gainl d4 Grit.  A person can't drink more than 2 jugs in a single Bivouac.  Each jug counts as a Significant Item.  The power of the waters fade at the *end* of the next Bivouac you take.
-
-
+During a Bivouac, you can enchant \DICE jugs of water to relieve pain and ease suffering.  Any who drink the jug in its entirety gainl d4 Grit.  A person can't drink more than 2 jugs in a single Bivouac.  Each jug counts as a Significant Item.  The power of the waters fade at the \myital{end} of the next Bivouac you take.
 
 
-#### Kismet
-*Arbiter of Journeys*
 
----
-The Holy Symbol of Kismet is a carved walking stick
 
-##### First Invocation
+\GOD[
+Name=Kismet,
+Link=small-god-kismet,
+GodOf=Arbiter of Journeys,
+Holy=a carved walking stick
+]
+
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Travel
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Protection from Element (as Sorcerer spell); Capture Wind; Ropework; Vaulting Step
 
+\LITURGY [
+  Name= Capture Wind,
+  Link= kismet-liturgy-capture-wind,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= Concentration/Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Point in front of you
+]
 
 
 
-#### Odysseus
-*God of Homecomings*
+A magical circle \DICE meters in radius extends from your fingertip in front of you. As long as you maintain concentration, you can absorb any wind passing through the circle. You can then collapse the spell. 
+At any time during the Session, you can reactivate the circle (no \DICE are needed) to release the wind you absorbed.  The wind flows out at the same rate it entered. If you activate this spell in a light breeze for 5 minutes, the spell will release a light breeze over 5 minutes. The wind only flows from the circle, so anyone standing behind it is not affected (unless you release hurricane-force winds indoors). You can cancel the release at any time, which expends the spell as usual. If you enter Death's Door while the spell is still "reserved", it immediately activates facing a random direction.  
+If the wind is a magical breath that would do damage (dragon's breath, etc.) your \SUMDICE must be equal to or greater than the sum of the damage, or the circle immediately collapses.  
 
----
-The Holy Symbol of Odysseus is an iron wheel hanging from a bowstring necklace
+\LITURGY [
+  Name= Ropework,
+  Link=kismet-liturgy-ropework,
+  Paradigm= Entropy ,
+  Save=  N ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close object
+]
 
-##### First Invocation
+
+
+You summon a rope \DICE X50m in length.  You can command the rope to arrange itself into any shape and rise into the air in any orientation.  It can be climbed like a normal rope, and can support \DICE X100kg of weight.  Its ends do not need to be anchored to anything.
+
+\LITURGY [
+  Name= Vaulting Step,
+  Link=kismet-liturgy-vaulting step,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+Your next \DICE+\DICE strides (about 1m each stride) land on a plane of Force the size of your foot.  The step can be taken in any direction up, down, sideways, or across (though you cannot pass through physical objects).  You can combine these in any way you want - stride 45 degrees into the air, take another step up, and a final step down (for example).  Your final step must be on a solid surface, or you fall. 
+
+
+
+\GOD[
+Name=Odysseus,
+Link=small-god-odysseus,
+GodOf=God of Homecomings,
+Holy=an iron wheel hanging from a bowstring necklace
+]
+
+\mybold{First Invocation}
 
 You always know how to get back to your ancestral home. This allows you to determine cardinal directions, even underground.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you are attacking with a Bow or Strongbow, you can use up to {lvl} Faith to add +[sum] to your Fight {ro}.  If you hit, deal +[dice]x2 extra damage.
-
-
+If you are attacking with a Bow or Strongbow, you can use up to \LVL Faith to add +\SUMDICE to your Fight \RO.  If you hit, deal +\DICE X2 extra damage.
 
 
-#### Umwansh
-*Lord of Many Treasures*
 
----
-The Holy Symbol of Umwansh is a coin (gold is best) with a hole through the center, worn on a chain
 
-##### First Invocation
+\GOD[
+Name=Umwansh,
+Link=small-god-umwansh,
+GodOf=Lord of Many Treasures,
+Holy=a coin (gold is best) with a hole through the center worn on a chain
+]
+
+\mybold{First Invocation}
 
 You can smell gold up to 1 meter away
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells:  Knock (as Sorcerer spell); Dredge; Sound the Deeps; Excavate
 
+\LITURGY [
+  Name= Dredge,
+  Link= umwansh-liturgy-dredge,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= Concentration ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close or Nearby area
+]
 
 
 
-#### Xbalanque and Hunahpu
-*Twin Gods of Trials*
+Choose an area \DICE meters in radius.  Buried or covered objects rise \DICE X10 meters to the surface.  If you cast this spell on the ground, coins, stones, and roots will be pulled to the surface; if you cast it on water, sunken objects will rise to the surface and remain as long as you concentrate.  The objects cannot weigh more than \DICE X100kg. 
 
----
-The Holy Symbol of Xbalanque and Hunahpu is two ears of dried corn (hung from a belt, around the neck, etc.)
+\LITURGY [
+  Name= Excavate,
+  Link=umwansh-liturgy-excavate,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close or Nearby area
+]
 
-##### First Invocation
+
+
+You can remove up to \DICE inorganic materials from a \DICE X5 meter cube just in front of your feet.  The materials could be "stone", "water", "dirt", etc. The materials disappear permanently. Objects that would be suspended in the material removed will obey the laws of physics - removing water will cause the surrounding water to rush in, removing dirt from around a chest will cause the chest to fall, etc.
+
+\LITURGY [
+  Name= Sound the Deeps,
+  Link=umwansh-liturgy-sound the deeps,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (ground or water)
+]
+
+
+
+You slap your hand on the ground or the surface of the water.  The echoes of the tremor allow you to precisely know how deep and the approximate shape of bodies of water, chasms, shafts, clefts, mountain peaks, caverns, passages, etc.  up to a distance of \DICE X100m meters.  Additionally, you may use this to rouse up to \DICE Allies Close, Nearby, Far Away, or Distant who are Sleeping, Knocked Out, etc. 
+
+
+\GOD[
+Name=Xbalanque and Hunahpu,
+Link=small-god-xbalanque and hunahpu,
+GodOf=Twin Gods of Trials,
+Holy=two ears of dried corn (hung from a belt or around the neck)
+]
+
+\mybold{First Invocation}
 
 You never tire from running or swimming.  
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you may expend your Faith to perform Feats of Strength.  You can use up to {lvl} Faith to add +[sum] to any {ro} or {rb} attempt requiring you to do something physical.  This includes attacking, jumping, running, picking up something heavy, etc.
-
-
-
-### Heathen
+Once per Session, you may expend your Faith to perform Feats of Strength.  You can use up to \LVL Faith to add +\SUMDICE to any \RO or \RB attempt requiring you to do something physical.  This includes attacking, jumping, running, picking up something heavy, etc.
 
 
+\newpage
 
-Hearths; Gardens; Hunting; Glades; Fertility; Agriculture; Narcotics; "The Green Man"; Ancestors
+\mysection{The Heathen Throne}{throne-heathen}
 
 
+\flavor {
+  Hearths; Gardens; Hunting; Glades; Fertility; Agriculture; Narcotics; "The Green Man"; Ancestors
+}
 
-#### Blessings
+
+\mybold{Blessings}
 
 Those who serve the Small Gods of the Heathen Throne start with a single d6 Summoning Die.  This die works in all ways like the Spriggan ability to summon the Forgotten, but can only be used to summon Beasts
 
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Light |
-| Helmet | Yes |
-| Shield | No |
-| Weapon | Shoot or Throw weapons only |
+\mybold{Interdictions}
 
-<hr class="main-break" />
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Light  \\
+Helmet &  Yes  \\
+Shield &  No  \\
+Weapon &  Shoot or Throw weapons only  \\
+}
 
 
 
-#### Brigid
-*Seraph of Hearth and Gardens*
 
----
-The Holy Symbol of Brigid is a shillelagh
 
-##### First Invocation
+\GOD[
+Name=Brigid,
+Link=small-god-brigid,
+GodOf=Seraph of Hearth and Gardens,
+Holy=a shillelagh
+]
+
+\mybold{First Invocation}
 
 Any place where you lay your head to sleep will be immune to curses and wandering monsters until you awaken
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacraments of Consecrate. This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Cernunnos
-*Archon of the Hunt*
+\GOD[
+Name=Cernunnos,
+Link=small-god-cernunnos,
+GodOf=Archon of the Hunt,
+Holy=a tine of the antler of a game animal
+]
 
----
-The Holy Symbol of Cernunnos is a tine of the antler of a game animal
-
-##### First Invocation
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Bushcraft
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you are fighting a Monster who is a Beast, you can use up to {lvl} Faith to add +[sum] damage.
-
-
+If you are fighting a Monster who is a Beast, you can use up to \LVL Faith to add +\SUMDICE damage.
 
 
-#### Ildavir
-*Lady of the Glade*
 
----
-The Holy Symbol of Ildavir is a vial of clear water
 
-##### First Invocation
+\GOD[
+Name=Ildavir,
+Link=small-god-ildavir,
+GodOf=Lady of the Glade,
+Holy=a vial of clear water
+]
+
+\mybold{First Invocation}
 
 You may use your Holy Symbol as a 1d4 Holy Water. The water automatically refills at the end of the Session.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacrament of Lay on Hands.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Ishtar
-*Lady of Fertility and Agriculture*
+\GOD[
+Name=Ishtar,
+Link=small-god-ishtar,
+GodOf=Lady of Fertility and Agriculture,
+Holy=an eight pointed star usually worn as an amulet
+]
 
----
-The Holy Symbol of Ishtar is an eight pointed star, usually worn as an amulet
-
-##### First Invocation
+\mybold{First Invocation}
 
 You may roll your Faith instead of Provisions
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacraments of Bless.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Pilzesser
-*Seraph of Hallucinogenic Plants and Fungi*
+\GOD[
+Name=Pilzesser,
+Link=small-god-pilzesser,
+GodOf=Seraph of Hallucinogenic Plants and Fungi,
+Holy=a symbol of a pyramid with an eye at the top and the letters "FNORD" along its base.  Worn as a necklace or headband
+]
 
----
-The Holy Symbol of Pilzesser is a symbol of a pyramid with an eye at the top, and the letters "FNORD" along its base.  Worn as a necklace or headband
-
-##### First Invocation
+\mybold{First Invocation}
 
 You cannot suffer Anathema
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Scuttle (as Sorcerer spell); Mighty Lungs (as Sorcerer spell); Butterfly Hurricane; Entangling Smoke
 
+\LITURGY [
+  Name= Butterfly Hurricane,
+  Link= pilzesser-liturgy-butterfly hurricane,
+  Paradigm= Biomancy ,
+  Save=  Y (negate) ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
 
 
 
-#### The Green Man
-*Lord of the Wood*
+A whirling brightly colored mass of butterflies springs into being around you, cloaking you and anyone else Close to you.  Any ranged attacks fired into or out of the hurricane automatically miss (AoE effects like dragon's fire aren't affected).  Anyone inside of the hurricane must Save or become Befuddled for as long as they remain inside - you and up to \DICE Allies are immune.
 
----
-The Holy Symbol of The Green Man is a crown of ivy or holly
+\LITURGY [
+  Name= Entangling Smoke ,
+  Link=pilzesser-liturgy-entangling-smoke ,
+  Paradigm= Elements ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   \DICE Close or Nearby objects or creatures
+]
 
-##### First Invocation
+
+
+This spell requires pipeweed.  You breathe out a plume of smoke; up to \DICE creatures or objects are grabbed by tendrils of this smoke unless they Save.  Those who fail move at half speed (meaning it takes 2 Maneuvers to move somewhere Nearby; for Monsters, it means their speed is Slow if it isn't already.  Any Ally fighting this Monster gains a +\DICE bonus to Fight and Guard. ). The duration is Markovian and depends on the number of \DICE invested.
+
+
+
+\GOD[
+Name=The Green Man,
+Link=small-god-the green man,
+GodOf=Lord of the Wood,
+Holy=a crown of ivy or holly
+]
+
+\mybold{First Invocation}
 
 You can speak to any plant or tree, and they'll answer you truthfully about what has passed by them over the last Days, and hide your movement for you
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Web (as Sorcerer spell); Bloodvine; Tasty; Uproot
 
 
+\LITURGY [
+  Name= Bloodvine,
+  Link= green-man-liturgy-bloodvine,
+  Paradigm= Biomancy ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close or Nearby Monster
+]
 
 
-#### Yan Oshoth
-*Lady of Songs and Poetry (Ancestors)*
 
----
-The Holy Symbol of Yan Oshoth is a small musical instrument
+This spell can only be used on a Monster who is Bleeding.  Vines erupt from the Monster's wounds, dealing \SUMDICE+\DICE damage (no Save).  If the damage kills the Monster, their corpse is entirely consumed by in a bramble of vines
 
-##### First Invocation
+\LITURGY [
+  Name= Tasty,
+  Link=green-man-liturgy-tasty,
+  Paradigm= Biomancy ,
+  Save=  N ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch) Monster or object
+]
+
+
+
+The target object or Monster (alive or dead) smells delicious for the spell's duration.  The smell radiates Nearby in calm air, but can spread on the wind, or leave a trail.  Non-intelligent zoological creatures and swarms will be attracted to and attempt to eat the object or Monster (even if they are supposed to be allies); intelligent creatures have a \DICE-in-6 chance of being affected.  
+
+\LITURGY [
+  Name= Uproot,
+  Link=green-man-liturgy-uproot,
+  Paradigm= Biomancy ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close (touch) tree
+]
+
+
+
+You touch \DICE X10 trees or \SUMDICE X10 smaller plants, and they uproot and march to a new location you specify up to \DICE km away. They root themselves once they arrive.
+
+
+\GOD[
+Name=Yan Oshoth,
+Link=small-god-yan oshoth,
+GodOf=Lady of Songs and Poetry (Ancestors),
+Holy=a small musical instrument
+]
+
+\mybold{First Invocation}
 
 If you play your instrument when you take a Breather or Bivouac, you double any beneficial effects of Leeches or Pooka
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you can use up to {lvl} Faith to add +[sum] to anyone's {ro} or {rb} attempt.
+Once per Session, you can use up to \LVL Faith to add +\SUMDICE to anyone's \RO or \RB attempt.
 
+\newpage
 
-
-
-
-### Jötnar
+\mysection{The Jötnar Throne}{throne-jötnar}
 
 
+\flavor {
+  Honorable Death; Battle Frenzy; Vengeance; Mercs And Assassins; Strategy And Combat; The Fire Of War; Ice And Snow
+}
 
-Honorable Death; Battle Frenzy; Vengeance; Mercs And Assassins; Strategy And Combat; The Fire Of War; Ice And Snow
 
-
-
-#### Blessings
+\mybold{Blessings}
 
 Those who serve the Small Gods of the Jötnar Throne roll d10 Flesh (instead of d4) at character creation.
 
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Medium |
-| Helmet | Yes |
-| Shield | Yes |
-| Weapon | Brawl weapons only |
+\mybold{Interdictions}
 
-<hr class="main-break" />
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Medium  \\
+Helmet &  Yes  \\
+Shield &  Yes  \\
+Weapon &  Brawl weapons only  \\
+}
 
-#### Crom
-*Arbiter of Honorable Death*
 
----
-The Holy Symbol of Crom is The Devotee must name one of their weapons; this weapon will be used as their holy symbol
 
-##### First Invocation
+\GOD[
+Name=Crom,
+Link=small-god-crom,
+GodOf=Arbiter of Honorable Death,
+Holy=The Devotee must name one of their weapons; this weapon will be used as their holy symbol
+]
+
+\mybold{First Invocation}
 
 If you survive Combat while on Death's Door, you gain 1 Faith
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you're rolling your Death Die and fail, you may roll up to {lvl} Faith Dice for as long as you have Faith.  If you get any successes, you don't perish (but your Death Die still drops {d-})
-
-
+If you're rolling your Death Die and fail, you may roll up to \LVL Faith Dice for as long as you have Faith.  If you get any successes, you don't perish (but your Death Die still drops \DCDOWN)
 
 
-#### Cú Chulainn
-*God of the Battle Frenzy*
 
----
-The Holy Symbol of Cú Chulainn is A headdress of raven or crow feathers
 
-##### First Invocation
+\GOD[
+Name=Cú Chulainn,
+Link=small-god-cú chulainn,
+GodOf=God of the Battle Frenzy,
+Holy=A headdress of raven or crow feathers
+]
+
+\mybold{First Invocation}
 
 You cannot be Knocked Out
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-If you enter a Rage in Combat, you don't get the +2 Fight and damage modifier.  Instead, you may use your Faith to add +[dice] to your Fight {ro}, and add +[dice] damage when you hit.  In the first Moment of Combat you may use 1 Faith die, the second up to 2 Faith, the third 3, etc. All other effects of the Rage apply.
-
-
+If you enter a Rage in Combat, you don't get the +2 Fight and damage modifier.  Instead, you may use your Faith to add +\DICE to your Fight \RO, and add +\DICE damage when you hit.  In the first Moment of Combat you may use 1 Faith die, the second up to 2 Faith, the third 3, etc. All other effects of the Rage apply.
 
 
-#### Justicia
-*Seraph of Vengeance*
 
----
-The Holy Symbol of Justicia is An image or symbol of something the Devotee wants vengeance against
 
-##### First Invocation
+\GOD[
+Name=Justicia,
+Link=small-god-justicia,
+GodOf=Seraph of Vengeance,
+Holy=An image or symbol of something the Devotee wants vengeance against
+]
+
+\mybold{First Invocation}
 
 You cannot be Charmed in such a way that your actions would benefit your hated archnemesis (Arbiter's discretion)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Choose an archnemesis.  It can be an individual person or group of people  - "The Black Knight of Yoon Suin" or "The Band of the Big Toe" are OK,  "Night Children" or "The King's army" aren't.   When fighting your hated foe or foe(s), you always win Init and can use up to {lvl} Faith to add +[sum] damage to every successful strike. 
-
-
-
-
-#### Kos
-*Archon of Mercenaries and Assassins*
-
----
-The Holy Symbol of Kos is 3 rusted iron coins, sewn or welded to a bracelet on the dominant hand
-
-##### First Invocation
-
-You never need to make a {dex} roll to handle acids or toxins
-
-##### First Liturgy
-
-At the start of each Session, choose a target.  This must be a specific person ("the Oracle of Legiolum Corvus") or Monster ("the ghost that haunts the cabin in the woods").  Arbiter's discretion. If you are ever in Combat with this creature, you can use up to {lvl} Faith to add +[sum] damage.  If you slay the creature (deal the killing blow), gain 1 Faith and, when you return to Civilization, you may roll your Faith to gain [dice]x50 coins
+Choose an archnemesis.  It can be an individual person or group of people  - "The Black Knight of Yoon Suin" or "The Band of the Big Toe" are OK,  "Night Children" or "The King's army" aren't.   When fighting your hated foe or foe(s), you always win Init and can use up to \LVL Faith to add +\SUMDICE damage to every successful strike. 
 
 
 
 
-#### Odin
-*Archon of Strategy and Combat*
+\GOD[
+Name=Kos,
+Link=small-god-kos,
+GodOf=Archon of Mercenaries and Assassins,
+Holy=3 rusted iron coins sewn or welded to a bracelet on the dominant hand
+]
 
----
-The Holy Symbol of Odin is 3 interlocking triangles, worn as a necklace from a chain
+\mybold{First Invocation}
 
-##### First Invocation
+You never need to make a \DEX roll to handle acids or toxins
+
+\mybold{First Liturgy}
+
+At the start of each Session, choose a target.  This must be a specific person ("the Oracle of Legiolum Corvus") or Monster ("the ghost that haunts the cabin in the woods").  Arbiter's discretion. If you are ever in Combat with this creature, you can use up to \LVL Faith to add +\SUMDICE damage.  If you slay the creature (deal the killing blow), gain 1 Faith and, when you return to Civilization, you may roll your Faith to gain \DICE X50 coins
+
+
+
+
+\GOD[
+Name=Odin,
+Link=small-god-odin,
+GodOf=Archon of Strategy and Combat,
+Holy=3 interlocking triangles worn as a necklace from a chain
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can cause yourself and every ally to win Init for the round
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may add up to 2 Faith Die to any Close ally's Fight {ro} or Guard {ro} attempt, once per Moment
-
-
+You may add up to 2 Faith Die to any Close ally's Fight \RO or Guard \RO attempt, once per Moment
 
 
 
 
-#### Xotli
-*Fiendish Prince of Fire*
 
----
-The Holy Symbol of Xotli is A red stone (agate, garnet, carnelian, red cinnabar, etc) worn on a choker.
 
-##### First Invocation
+\GOD[
+Name=Xotli,
+Link=small-god-xotli,
+GodOf=Fiendish Prince of Fire,
+Holy=A red stone (agate; garnet; carnelian; red cinnabar; etc) worn on a choker.
+]
+
+\mybold{First Invocation}
 
 You are immune to the effects of non-magical fire. When you exhale, thin wisps of smoke escape your nostrils
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Fireball (as Sorcerer spell); Roaring Flames; Incinerate; Ray of Fire
 
+\LITURGY [
+  Name= Incinerate,
+  Link= xotli-liturgy-incinerate,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= See spell ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close objects
+]
 
 
 
-#### Ymir
-*Archon of Ice and Snow*
+This liturgy requires you to create a bonfire.  You can place up to \DICE objects into the fire weighing no more than \SUMDICE kg.  The objects are burned to a pile of enchanted ash, which can be harvested and stored as an Insignificant item.  When you wish the objects to become whole again, you must build a fire and sprinkle the ash inside of it; you can reach into the fire unharmed to pull the objects from the flames as they were when you placed them into the fire.  If you perish before the objects are retrieved, the ash reverts to normal, unenchanted ash and the objects are destroyed.
 
----
-The Holy Symbol of Ymir is Quartz stones affixed to a pair of leather or iron bracers
+\LITURGY [
+  Name= Ray of Fire,
+  Link=xotli-liturgy-ray of fire,
+  Paradigm= Elements ,
+  Save=  Y (negates) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Nearby or Far-Away target
+]
 
-##### First Invocation
+
+
+A narrow beam of fire shoots from your outstretched finger.  Make a Fight roll using your \FOC+\DICE; if you hit, the target catches fire for a Markovian duration if they fail a Save.  They are only allowed 1 Save.  They damage taken by the target is whatever is rolled on the Markovian die each Moment.  The beam of fire will also light flammable things alight.
+
+\LITURGY [
+  Name= Roaring Flames,
+  Link=xotli-liturgy-roaring flames,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close or Nearby flames
+]
+
+
+
+\DICE light sources Close or Nearby suddenly flare, potentially doing damage and lighting things on fire that are Close to them.  Candles and matches deal no damage; torches and lanterns will deal \DICE damage; bonfires will deal [sum damage].  Extremely flammable things will catch alight (but not creatures or normal objects).  If you invest 3 or more \DICE in the liturgy, the light is snuffed out after it flares. 
+
+
+\GOD[
+Name=Ymir,
+Link=small-god-ymir,
+GodOf=Archon of Ice and Snow,
+Holy=Quartz stones affixed to a pair of leather or iron bracers
+]
+
+\mybold{First Invocation}
 
 You are immune to the effects of non-magical cold. your breath puffs out in front of you no matter what the temperature is
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Icebolt (as Sorcerer spell); Ice Bridge Step (as Sorcerer spell); Extinguish; Preserve
 
+\LITURGY [
+  Name= Extinguish,
+  Link= ymir-liturgy-extinguish,
+  Paradigm= Elements ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby target(s)
+]
 
 
-### Monstrous
+
+Beams of slushy ice shoot from your outstretched hands and strike up to \DICE targets.  If the target is on fire, the flame is immediately extinguished.  Flames the size of torches only require 1 [die]; people or animals would require 2 \DICE; bonfires and the like require 3+ \DICE at the Arbiter's discretion.
+
+\LITURGY [
+  Name= Preserve,
+  Link=ymir-liturgy-preserve,
+  Paradigm= Elements ,
+  Save=  Y (negates) ,
+  Duration= varies ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close object or creature (touch)
+]
 
 
 
+By touching an object, you are able to freeze it for a period of time in order to preserve it.  If the object is an Ally or Monster, they must be lying completely still in order to use the liturgy.  Unwilling creatures get a Save.  While frozen, any toxins, diseases, bleeding, or negative effects are stopped for a period of time, depending on the number of dice spent.  You cannot end this liturgy willingly once it has begun, though it could be ended prematurely by great heat (a very large bonfire, for example) or by taking more than \SUMDICE points of damage, which will cause the object to shatter into many pieces.  
+1 [die]: Minutes; 3 \DICE: Days; 5 \DICE: Weeks; 7 \DICE: Months; 9 \DICE: Years; 11+ \DICE: Permanent. 
+
+
+\newpage
+
+
+\mysection{The Monstrous Throne}{throne-monstrous}
+
+\flavor {
 Cats; Toads; Reptiles; Arachnids; Monsters; Rats; Vermin; Birds
+}
+
+
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Monstrous Throne gain \DCUP \VIG at character creation.
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Medium  \\
+Helmet &  No  \\
+Shield &  Yes  \\
+Weapon &  Any weapon  \\
+}
 
 
 
-#### Blessings
-
-Those who serve the Small Gods of the Monstrous Throne gain {d+} {vig} at character creation.
-
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Medium |
-| Helmet | No |
-| Shield | Yes |
-| Weapon | Any weapon |
-
-<hr class="main-break" />
 
 
 
+\GOD[
+Name=Bast,
+Link=small-god-bast,
+GodOf=Archon of Cats,
+Holy=a small bell without a clapper worn on a choker
+]
 
-#### Bast
-*Archon of Cats*
-
----
-The Holy Symbol of Bast is a small bell without a clapper, worn on a choker
-
-##### First Invocation
+\mybold{First Invocation}
 
 You get a d8 Knave Die in Skulk
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You can polymorph yourself into a housecat.  You have the same Flesh and Grit as you do in your Mortal form, but cannot attack or defend.  The length of the polymorph depends on the number of Faith Die you invest:  1) Moments; 2) Minutes; 3) Hours; 4) Days; 5) Weeks; 6) However long you want
 
 
 
 
-#### Bobugbubilz
-*the Croaking Fane*
+\GOD[
+Name=Bobugbubilz,
+Link=small-god-bobugbubilz,
+GodOf=the Croaking Fane,
+Holy=3 dessicated frogs worn from the belt or neck
+]
 
----
-The Holy Symbol of Bobugbubilz is 3 dessicated frogs, worn from the belt or neck
+\mybold{First Invocation}
 
-##### First Invocation
+Once per Session, you can leap up to 4m (standing) or 9m (with a running start) without needing to make a \VIG or \DEX check; you can speak to all amphibians, and they understand you
 
-Once per Session, you can leap up to 4m (standing) or 9m (with a running start) without needing to make a {vig} or {dex} check; you can speak to all amphibians, and they understand you
+\mybold{First Liturgy}
 
-##### First Liturgy
-
-You may use up to {lvl} Faith die as if they were Remembrance Die (see Spriggan) to summon Amphibian creature types (see core rules)
+You may use up to \LVL Faith die as if they were Remembrance Die (see Spriggan) to summon Amphibian creature types (see core rules)
 
 
 
 
-#### Hhaaashh-Lusss
-*Princess of Reptiles*
+\GOD[
+Name=Hhaaashh-Lusss,
+Link=small-god-hhaaashh-lusss,
+GodOf=Princess of Reptiles,
+Holy=snakeskin bracers
+]
 
----
-The Holy Symbol of Hhaaashh-Lusss is snakeskin bracers
-
-##### First Invocation
+\mybold{First Invocation}
 
 Once per Session, you can spit out a glob of an Ungeant Toxin (1d6); you can speak to all reptiles, and they understand you
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may use up to {lvl} Faith die as if they were Remembrance Die (see Spriggan) to summon Reptile creature types (see core rules)
-
-
+You may use up to \LVL Faith die as if they were Remembrance Die (see Spriggan) to summon Reptile creature types (see core rules)
 
 
 
-#### Mog
-*Princess of Arachnids*
 
----
-The Holy Symbol of Mog is a gossamer veil
 
-##### First Invocation
+\GOD[
+Name=Mog,
+Link=small-god-mog,
+GodOf=Princess of Arachnids,
+Holy=a gossamer veil
+]
+
+\mybold{First Invocation}
 
 You gain a +1 to Saves vs Toxins, and do not need to roll to handle poisons; you can speak to all arthropods,  and they understand you
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may use up to {lvl}  Faith die as if they were Remembrance Die (see Spriggan) to summon Arthropod creature types (see core rules)
-
-
+You may use up to \LVL  Faith die as if they were Remembrance Die (see Spriggan) to summon Arthropod creature types (see core rules)
 
 
-#### Ptah-Ungurath
-*Archfiend of Monsters*
 
----
-The Holy Symbol of Ptah-Ungurath is an amulet in the shape of an upside-down ankh
 
-##### First Invocation
+\GOD[
+Name=Ptah-Ungurath,
+Link=small-god-ptah-ungurath,
+GodOf=Archfiend of Monsters,
+Holy=an amulet in the shape of an upside-down ankh
+]
+
+\mybold{First Invocation}
 
 Once per Session, a Monster's attack that would hit you hits another ally instead (your choice)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may use up to {lvl} Faith die as if they were Remembrance Die (see Spriggan) to summon Aberration creature types (see core rules)
+You may use up to \LVL Faith die as if they were Remembrance Die (see Spriggan) to summon Aberration creature types (see core rules)
+
+\LITURGY [
+  Name= Gaze of the Void,
+  Link= ptah-liturgy-gaze-of-the-void,
+  Paradigm= Entropy ,
+  Save=  Y (negates) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Nearby or Far-Away Object or Creature
+]
 
 
 
+Target creature with less than (but not equal to) \DICE \HD, or an object weighing less than \DICE x 50kg, disintegrates into nothingness.  Monsters get a +1 to their Save; magical objects and magical monsters (dragons, unicorns, etc) get a +3 to their Save.
 
-#### The Rat God
-*Prince of Rats and Vermin*
+\LITURGY [
+  Name= Millworks of Ptah,
+  Link=ptah-liturgy-millworks-of-ptah,
+  Paradigm= Entropy ,
+  Save=  N ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close (touch) tree
+]
 
----
-The Holy Symbol of The Rat God is a mouse-skin glove worn on the dominant hand
 
-##### First Invocation
+
+A tree no larger than \DICE X 5m tall and \DICE meters in diameter topples over, as if neatly cut. The result depends on the dice you invest. 1 \DICE: cut and broadly de-limbed, 2 \DICE: cut, de-limbed, debarked, 3 \DICE: cut, de-limbed, debarked, cut into planks as per your specifications, stacked, 4 \DICE cut, planed, de-limbed, debarked, cut into planks, stacked, sanded, and finished. Small limbs and offcuts will be piled for kindling. Alternatively, you can reduce the tree to sawdust or wood chips in 20-\SUMDICE minutes
+
+\LITURGY [
+  Name= Ptah's Compartmentalization,
+  Link=ptah-liturgy-ptahs-compartmentalization,
+  Paradigm= Entropy ,
+  Save=  0 ,
+  Duration= permanent ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close object
+]
+
+
+
+You can command something that's a mixture of different types (soup, coins, etc.) weighing no more than \DICE X50kg to separate into \DICE+1 categories.  The categories have to be clear and easily identifiable by inspecting them, and they have to be able to flow freely.  For example, you could split a soup into "vegetables" "broth" and "poison", or a pile of coins into "minted during the last century" and "older". You could not, however, split a pile of coins into "handled by Xerphion the Tyrant" and "not handled by Xerphion the Tyrant", as there's no way to tell just by inspecting them. You could not separate "a locked chest" and "its contents", because the items could not flow freely into separate piles.
+
+\LITURGY [
+  Name= Sandstone Bridge,
+  Link=ptah-liturgy-sandstone-bridge,
+  Paradigm= Entropy ,
+  Save=  0 ,
+  Duration= \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Close point
+]
+
+
+
+At a point you touch, a perfectly level sandstone bridge is created.  The bridge is perfectly straight, perfectly level, \DICE meters wide and \DICE x 50m long.  The bridge lasts for \SUMDICE Minutes and disappears abruptly when the spell ends.
+
+
+
+\GOD[
+Name=The Rat God,
+Link=small-god-the rat god,
+GodOf=Prince of Rats and Vermin,
+Holy=a mouse-skin glove worn on the dominant hand
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can slip through a crack roughly 1/4 your size (so a 2m tall person could slip through a crack 500mm tall)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may use up to {lvl}  Faith die as if they were Remembrance Die (see Spriggan) to summon Swarm creature types (see core rules)
-
-
+You may use up to \LVL  Faith die as if they were Remembrance Die (see Spriggan) to summon Swarm creature types (see core rules)
 
 
 
 
-#### Tyaa
-*Archon of Birds*
 
----
-The Holy Symbol of Tyaa is a short cloak of feathers
 
-##### First Invocation
+\GOD[
+Name=Tyaa,
+Link=small-god-tyaa,
+GodOf=Archon of Birds,
+Holy=a short cloak of feathers
+]
+
+\mybold{First Invocation}
 
 You gain +2 to your Skill: Eyeball
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You can polymorph yourself into a raven, owl, or sparrow.  You have the same Flesh and Grit as you do in your Mortal form, but cannot attack or defend (but you can fly).  The length of the polymorph depends on the number of Faith Die you invest:  1) Moments; 2) Minutes; 3) Hours; 4) Days; 5) Weeks; 6) However long you want.
 
+\newpage
 
 
-### Righteous
+\mysection{The Righteous Throne}{throne-righteous}
+
+\flavor {
+  Judgement; Punishment; Truth; Light; Time; Order; Law; Obedience; Protection; Oaths; Agreements
+}
+
+
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Righteous Throne gain \DCUP Presence and +1 to their Save vs. Hexes at character creation
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Heavy  \\
+Helmet &  Yes  \\
+Shield &  Yes  \\
+Weapon &  Bashing weapons only  \\
+}
 
 
 
-Judgement; Punishment; Truth; Light; Time; Order; Law; Obedience; Protection; Oaths; Agreements
+\GOD[
+Name=Anubis,
+Link=small-god-anubis,
+GodOf=Fiend of Judgement and Punishment,
+Holy=a set of scales hung from a chain
+]
 
-
-
-#### Blessings
-
-Those who serve the Small Gods of the Righteous Throne gain {d+} Presence and +1 to their Save vs. Hexes at character creation
-
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Heavy |
-| Helmet | Yes |
-| Shield | Yes |
-| Weapon | Bashing weapons only |
-
-<hr class="main-break" />
-
-#### Anubis
-*Fiend of Judgement and Punishment*
-
----
-The Holy Symbol of Anubis is a set of scales hung from a chain
-
-##### First Invocation
+\mybold{First Invocation}
 
 You can tell if a person is lying to you (Mystics of Arioch get a Save)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you can declare that an individual must be punished by the Law of the Authority (you must describe how they have broken the Law in a way that convinces the Arbiter).  When in Combat with this individual, you can use up to {lvl} Faith to add +[sum] to your Fight {ro} and deal +[dice]x2 extra damage.
-
-
+Once per Session, you can declare that an individual must be punished by the Law of the Authority (you must describe how they have broken the Law in a way that convinces the Arbiter).  When in Combat with this individual, you can use up to \LVL Faith to add +\SUMDICE to your Fight \RO and deal +\DICE X2 extra damage.
 
 
 
-#### Bahamut
-*Lord of Truth and Light*
 
----
-The Holy Symbol of Bahamut is an iron or silver circlet, embossed with an arrow pointing upwards
 
-##### First Invocation
+\GOD[
+Name=Bahamut,
+Link=small-god-bahamut,
+GodOf=Lord of Truth and Light,
+Holy=an iron or silver circlet embossed with an arrow pointing upwards
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can convince someone to tell you the truth to any question you ask (Mystics of Arioch get a Save)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to perform the Sacraments of Curse the Unhallowed.  This is in addition to the Grace that allows you to do so.
 
 
 
 
-#### Chrontics
-*Lord of Time*
+\GOD[
+Name=Chrontics,
+Link=small-god-chrontics,
+GodOf=Lord of Time,
+Holy=an amulet (silver preferred) embossed with a hammered hourglass
+]
 
----
-The Holy Symbol of Chrontics is an amulet (silver preferred) embossed with a hammered hourglass
-
-##### First Invocation
+\mybold{First Invocation}
 
 Once per Combat, you can switch places with an ally who has either won or lost Init i.e.  if an ally won Init and you lost, you could make it so you won and they lost (and vice versa)  
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Combat, you may subtract up to [sum] damage from a single attack (minimum 0) as if the strike had never happened, or was only a glancing rather than a mortal blow.  You can do this for yourself or for anyone Close to you.
-
-
+Once per Combat, you may subtract up to \SUMDICE damage from a single attack (minimum 0) as if the strike had never happened, or was only a glancing rather than a mortal blow.  You can do this for yourself or for anyone Close to you.
 
 
-#### Marduk
-*God of Law*
 
----
-The Holy Symbol of Marduk is an unblinking eye worn on a linen headband
 
-##### First Invocation
+\GOD[
+Name=Marduk,
+Link=small-god-marduk,
+GodOf=God of Law,
+Holy=an unblinking eye worn on a linen headband
+]
+
+\mybold{First Invocation}
 
 Unless you choose otherwise, you can never be Blinded
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you may proclaim the Law of the Authority.  Your lips will rip and bleed from the shockwave. You will be partially deaf for two days afterwards. Each Moment, you deal [sum] Force damage (Save for half) to all creatures in a Nearby cone in front of you, and take [dice] damage. While shouting, you cannot move or be moved, but can still fall.
-
-
+Once per Session, you may proclaim the Law of the Authority.  Your lips will rip and bleed from the shockwave. You will be partially deaf for two days afterwards. Each Moment, you deal \SUMDICE Force damage (Save for half) to all creatures in a Nearby cone in front of you, and take \DICE damage. While shouting, you cannot move or be moved, but can still fall.
 
 
 
-#### Mitra
-*Seraph of Obedience and Protection*
 
----
-The Holy Symbol of Mitra is an iron thorn, coincidentally in the shape of a modern bullet, suspended from a chain around the neck
 
-##### First Invocation
+\GOD[
+Name=Mitra,
+Link=small-god-mitra,
+GodOf=Seraph of Obedience and Protection,
+Holy=an iron thorn (coincidentally in the shape of a modern bullet) suspended from a chain around the neck
+]
+
+\mybold{First Invocation}
 
 Swear allegiance to, or swear to protect, a single individual.  You cannot be Charmed, Geased, or otherwise "mind controlled" in such a way that your actions would directly harm this person.  This individual must the same as the one in the First Liturgy.  You may change your allegiance after a Bivouac or longer.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 Swear allegiance to, or swear to protect, a single individual.  You may heal all damage to this individual's Flesh by using 2 Faith Dice, as the Sacrament "Lay on Hands",  This individual must the same as the one in the First Invocation.  You may change your allegiance after a Bivouac or longer.
 
 
 
 
-#### Týr
-*Seraph of Order*
+\GOD[
+Name=Týr,
+Link=small-god-týr,
+GodOf=Seraph of Order,
+Holy=an iron sleeve worn over the non-dominant hand (the hand is unable to hold anything)
+]
 
----
-The Holy Symbol of Týr is an iron sleeve worn over the non-dominant hand (the hand is unable to hold anything)
-
-##### First Invocation
+\mybold{First Invocation}
 
 Unless you choose otherwise, you can never be Disarmed
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you can declare that an individual has broken the Law of the Authority (you must describe how they have broken the Law in a way that convinces the Arbiter).  You may add the [sum] of up to {lvl} Faith Dice to any Guard rolls you might make while fighting that individual.
-
-
+Once per Session, you can declare that an individual has broken the Law of the Authority (you must describe how they have broken the Law in a way that convinces the Arbiter).  You may add the \SUMDICE of up to \LVL Faith Dice to any Guard rolls you might make while fighting that individual.
 
 
 
 
-#### Vár
-*Seraph of Oaths and Agreements*
 
----
-The Holy Symbol of Vár is a crystal vial containing the blood and spit of two Mortals who have struck a deal with one another
 
-##### First Invocation
+\GOD[
+Name=Vár,
+Link=small-god-vár,
+GodOf=Seraph of Oaths and Agreements,
+Holy=a crystal vial containing the blood and spit of two Mortals who have struck a deal with one another
+]
+
+\mybold{First Invocation}
 
 You can witness an oath and bind the word between two parties.  If either party breaks their oath (Arbiter's discretion), the party that made the false oath is inflicted with a random curse (or curses).  If the oath is upheld (Arbiter's discretion), gain 1 Faith.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You may swear an Oath of Protection with an ally. During Combat, if the ally is Close to you, you may add +[sum] to any Guard {ro} attempt they are making. Using this Oath counts as a Fight action.
+You may swear an Oath of Protection with an ally. During Combat, if the ally is Close to you, you may add +\SUMDICE to any Guard \RO attempt they are making. Using this Oath counts as a Fight action.
 
-
-
-### Ruinous
+\newpage
 
 
-
-Luck; Doom; Destruction; Hunger; Fate; Curses; Plagues
-
+\mysection{The Ruinous Throne}{throne-ruinous}
 
 
-#### Blessings
-
-Those who serve the Small Gods of the Ruinous Throne gain {d+} Talent and +1 to their Save vs. Doom at character creation
-
-#### Interdictions
-| | |
-|:--:|:---------------:|
-| Armor | Medium |
-| Helmet | Yes |
-| Shield | No |
-| Weapon | Any weapon |
-
-<hr class="main-break" />
+\flavor{
+  Luck; Doom; Destruction; Hunger; Fate; Curses; Plagues
+}
 
 
+\mybold{Blessings}
+
+Those who serve the Small Gods of the Ruinous Throne gain \DCUP Talent and +1 to their Save vs. Doom at character creation
+
+\mybold{Interdictions}
+
+  \mytable{X X}{
+    \thead{} & \thead{} \\
+  }{
+Armor &  Medium  \\
+Helmet &  Yes  \\
+Shield &  No  \\
+Weapon &  Any weapon  \\
+}
 
 
-#### Fortuna
-*Seraph of Luck*
 
----
-The Holy Symbol of Fortuna is A deck of cards
 
-##### First Invocation
+
+
+\GOD[
+Name=Fortuna,
+Link=small-god-fortuna,
+GodOf=Seraph of Luck,
+Holy=a deck of cards
+]
+
+\mybold{First Invocation}
 
 You must have a deck of cards to use your ability.  Once per Session, you may draw a card and use its effect on yourself, Allies, or Monsters. You must use its effect in Moments (before your next turn in Combat). Spades: if someone or something succeeds, they fail instead. Clubs: if someone or something fails, they succeed instead; Hearts: if someone or something is damaged by something, they are healed instead (same die roll i.e. 5 damage becomes 5 healing ); Diamonds: if someone or something is healed by something, they are damaged instead (same die roll i.e. 5 healing becomes 5 damage)
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You must have a deck of cards to use your ability.  Roll any number of Faith dice at any time.  1 is a spade, 2 is a club, 3 is a diamond, 4 is a heart.  Draw the top card off your deck.  If a card's suit matches one or more of the Faith die, you can add the card's face value to any {ro} or {rb} attempt made by you or an Ally (J, Q, and K are +10, Ace is +1).
-
-
+You must have a deck of cards to use your ability.  Roll any number of Faith dice at any time.  1 is a spade, 2 is a club, 3 is a diamond, 4 is a heart.  Draw the top card off your deck.  If a card's suit matches one or more of the Faith die, you can add the card's face value to any \RO or \RB attempt made by you or an Ally (J, Q, and K are +10, Ace is +1).
 
 
-#### Nergal
-*God of Dooms*
 
----
-The Holy Symbol of Nergal is an iron mask
 
-##### First Invocation
+\GOD[
+Name=Nergal,
+Link=small-god-nergal,
+GodOf=God of Dooms,
+Holy=an iron mask
+]
+
+\mybold{First Invocation}
 
 You get +1 to your Saves vs. Doom
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Shrikeblast; Doomhammer; Limbbreaker; Doombolt
 
+\LITURGY [
+  Name= Doombolt,
+  Link= nergal-liturgy-doombolt,
+  Paradigm= Force ,
+  Save=  Y (half) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Far-Away Monster
+]
 
 
 
-#### Set-Utekh
-*Archfiend of Destruction*
+Target takes \SUMDICE+\DICE damage, Save for half. You do not need to see the target, but you do need to know their approximate location (within 1m), and there must be a clear path a bolt could trace to reach them. The path can be as convoluted as required. The bolt can pass through gaps as small as a fist.  Note that this spell can only target Far-Away creatures.
+\LITURGY [
+  Name= Doomhammer,
+  Link=nergal-liturgy-doomhammer,
+  Paradigm= Force ,
+  Save=  Y (half) ,
+  Duration= Concetration ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Far-Away Monster
+]
 
----
-The Holy Symbol of Set-Utekh is a ceramic circle broken in half, worn on the belt or a necklace
 
-##### First Invocation
+
+Invisible hammers of Force strike up to \DICE Monsters from every direction.  Target Monsters take \DICE Bashing damage each, depending on how you split the die (Save for half).  The liturgy lasts for as long as you Concentrate.  Concentration and spell-casting is impossible while being struck by these hammers. Note that this spell can only target Far-Away creatures.
+
+\LITURGY [
+  Name= Limbbreaker,
+  Link=nergal-liturgy-limbbreaker,
+  Paradigm= Biomancy ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Far-Away creature of \DICE+\DICE HD or less
+]
+
+
+
+The target of this spell must have limbs.  With a snap of the fingers, \DICE of the target's limbs bend, crack, and break.  If an arm is broken, anything held in the hand is immediately dropped; if a leg is broken, the creature falls Prone; if both arms are broken, nothing can be picked up (and no spells can be cast); if both legs are broken, the Monster can only crawl.  The limbs remain broken for the Markovian duration, after which they immediately heal with no ill effects. Save negates.  Note that this spell can only target Far-Away creatures.
+
+\LITURGY [
+  Name= Shrikeblast,
+  Link=nergal-liturgy-shrikeblast,
+  Paradigm= Force ,
+  Save=  Y (half) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Far-Away Monster
+]
+
+
+
+You let out a scream which shatters into shards of force.  The shards can lacerate up to \DICE  Far-Away Monsters and deal \SUMDICE+\DICE damage depending on how you split the dice up, Save for half. If a creature is killed by this spell, it will be suspended in the position it was killed for \SUMDICE Minutes by by the shards. A suspended creature is capable of bearing up to its own body weight in additional pressure before falling.  Note that this spell can only target Far-Away creatures.
+
+
+
+\GOD[
+Name=Set-Utekh,
+Link=small-god-set-utekh,
+GodOf=Archfiend of Destruction,
+Holy=a ceramic circle broken in half and worn on the belt or a necklace
+]
+
+\mybold{First Invocation}
 
 Once per Session, you may sunder any mundane (non-magical) item approximately 1m in length by holding it and concentrating for Minutes. Examples might be a sword, a metal bar, or an arm.
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-For as long as you have Faith, you may add +[dice] damage to any of your successful attacks. You can perform this Liturgy before or immediately after rolling your damage.
-
-
+For as long as you have Faith, you may add +\DICE damage to any of your successful attacks. You can perform this Liturgy before or immediately after rolling your damage.
 
 
 
 
-#### The Corpulent One
-*God of Hunger*
 
----
-The Holy Symbol of The Corpulent One is a necklace of teeth
 
-##### First Invocation
+\GOD[
+Name=The Corpulent One,
+Link=small-god-the corpulent one,
+GodOf=God of Hunger,
+Holy=a necklace of teeth
+]
+
+\mybold{First Invocation}
 
 Unless you choose otherwise, you will not become Disgusted or Shaken
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-During a Bivouac, you may gorge yourself to increase your Max Flesh by +[dice]x2.  Each Faith Die you roll is a Significant Item (it's hard to carry around all that weight) and requires you to roll 1 \UD of Personal Provisions. The bonus to Flesh lasts until your next Bivouac.
-
-
+During a Bivouac, you may gorge yourself to increase your Max Flesh by +\DICE X2.  Each Faith Die you roll is a Significant Item (it's hard to carry around all that weight) and requires you to roll 1 \UD of Personal Provisions. The bonus to Flesh lasts until your next Bivouac.
 
 
-#### The Morrigan
-*Archon(s) of Fate*
 
----
-The Holy Symbol of The Morrigan is a triangle whose points extend into counterclockwise swirls, usually worn on a headband or scarf
 
-##### First Invocation
+\GOD[
+Name=The Morrigan,
+Link=small-god-the-morrigan,
+GodOf=Archon(s) of Fate,
+Holy=a triangle whose points extend into counterclockwise swirls usually worn on a headband or scarf
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can say what the next die roll will be. You must make the declaration before the die is rolled
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-Once per Session, you may add *or subtract* the [sum] of up to {lvl} Faith dice on any {ro} or {rb} attempt made by yourself or someone Close to you.
-
-
+Once per Session, you may add \myital{or subtract} the \SUMDICE of up to \LVL Faith dice on any \RO or \RB attempt made by yourself or someone Close to you.
 
 
 
-#### Vecna
-*Archfiend of Curses*
 
----
-The Holy Symbol of Vecna is a severed hand hung from the neck or belt
 
-##### First Invocation
+\GOD[
+Name=Vecna,
+Link=small-god-vecna,
+GodOf=Archfiend of Curses,
+Holy=a severed hand hung from the neck or belt
+]
+
+\mybold{First Invocation}
 
 Once per Session, you can perform the Malocchio as the Witch Charm of the same name.
 
 
-##### First Liturgy
+\mybold{First Liturgy}
 
-You can curse those who displease you.  Declare how many Faith Dice you are committing to the Curse and roll them, then roll a d24 and consult the Curse table.  If the [sum]+{lvl} of your Faith roll is greater than or equal to the result of the d24, the victim is inflicted with the Curse indicated by the d24 (otherwise the Liturgy fails).
-
-
+You can curse those who displease you.  Declare how many Faith Dice you are committing to the Curse and roll them, then roll a d24 and consult the Curse table.  If the \SUMDICE+\LVL of your Faith roll is greater than or equal to the result of the d24, the victim is inflicted with the Curse indicated by the d24 (otherwise the Liturgy fails).
 
 
-#### Xibalba
-*Fiendish Prince of Fear*
 
----
-The Holy Symbol of Xibalba is a white cowl and blank mask
 
-##### First Invocation
+\GOD[
+Name=Xibalba,
+Link=small-god-xibalba,
+GodOf=Fiendish Prince of Fear,
+Holy=a white cowl and blank mask
+]
+
+\mybold{First Invocation}
 
 Unless you choose otherwise, you will not become Afraid
 
-##### First Liturgy
+\mybold{First Liturgy}
 
 You may use your Faith to cast the following spells: Scare; Thunderclap; Zone of Sinister Stillness; Wall of Gloom
 
+\LITURGY [
+  Name= Scare,
+  Link= xibalba-liturgy-scare,
+  Paradigm= Mind ,
+  Save=  Y (negates) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close or Nearby Monsters
+]
 
 
 
+Up to \DICE Close or Nearby Monsters with combined \HD equal to or less than \DICE must Save or become Afraid.  The duration is Markovian and depends on the number of \DICE invested.
 
+\LITURGY [
+  Name= Sinister Stillness,
+  Link=xibalba-liturgy-sinister stillness,
+  Paradigm= Mind ,
+  Save=  N ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=Any Area
+]
 
 
-\mysection{Liturgies cont.}{liturgies cont.}
 
+You can invoke this liturgy in an area  Close, Nearby, Far-Away, or Distant from yourself.  The air Close to the area takes on an unsettling air of silence.  Sound is not magically suppressed, but Monsters and creatures within its bounds feel that any sound they make will disturb something better left undisturbed.  Non-intelligent animals will not enter the area, and Monsters inside must make an immediate morale check. Thereafter, Saves against fear effects have a -\DICE penalty (minimum 1), and morale rolls suffer a -\DICE penalty.  A morale check is needed to enter or pass through the area of the spell.
 
+\LITURGY [
+  Name= Thunderclap,
+  Link=xibalba-liturgy-thunderclap,
+  Paradigm= Elements ,
+  Save=  Y (negates Deafness) ,
+  Duration= 0 ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Far-Away or Distant area
+]
 
-### Asura
 
 
+Invoke this liturgy somewhere Far-Away or Distant from yourself.  Monsters Close to the Thunderclap must immediately make a morale check with a -\DICE penalty, or become Afraid.  Additionally, Monsters become Deafened for \DICE Moments unless they make a Save
 
+\LITURGY [
+  Name= Wall of Gloom,
+  Link=xibalba-liturgy-wall of gloom,
+  Paradigm= Mind ,
+  Save=  Y (see description) ,
+  Duration= Markovian ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Nearby or Far-Away area
+]
 
 
-#### Glorious Sunburst
 
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (half) |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
+You can anchor a barrier of pure darkness between three or more solid points up to \DICE meters in radius (for example: the 4 points of a door, two trees and the ground, across a hallway, etc).  Monsters that touch the blackness must immediately make a morale check with a -\DICE penalty or become Afraid for a Markovian duration.  Creatures that make their morale check that then continue through the wall must make a second Save; if they fail, they exit the wall the same way they came in (they will need to make a morale check again to touch the wall if they wish to try to move through it again).   
 
-***T:**   Up to 50m straight up*
+\newpage
 
 
+\mysection{Miracle Working}{mystic-miracle-working}
 
-You raise your hands to the heavens and fire a flare up to 50m upwards, where it hovers providing bright sunlight to all areas Close, Nearby, and Far-Away.  You can command the sunburst to change color, move horizontally, or explode.  No shadows can be cast beneath the sunlight (meaning Skulking is impossible), and all invisible creatures and objects appear with a thin halo around them the color of the sun.  Anyone who performs the sacrament Curse the Unhallowed while under the Glorious Sunburst adds an additional +[dice] to their damage, and anyone Close to the sunburst if it explodes takes [sum]+[dice] damage, Save for half.
+\mybold{Use Faith Dice to perform Miracles.  No Miracles can take place on Unhallowed Earth}
 
 
 
+\mysubsection{Ambrosia}{miracle-ambrosia}
 
-#### Sonorous Seeker
+You can create \DICE d4 \UD of Provisions.  These \UD can be combined into a single \UD (so 3 d4 \UD could be combined into a \UD of d12) up to a d24 \UD.  These Provisions can be stored for use later, but it also particularly nourishes the faithful.  During the working of the Miracle, up to \DICE Disciples of the Small God can partake of the Ambrosia and gain +1 Faith Die (the miracle worker cannot gain this benefit). Disciples partaking of the meal do not affect the \UD produced in any way.
 
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Object up to [dice] km away*
-
-
-
-You create a fluttering star of light that twitters like a bird.  Name an object using up to [dice] words - it can be a person ("the Stygian witch") or a thing ("the nearest body of water" or "the cask of Amontillado").  It has to be something you've seen clearly before.  Once named, the seeker will fly to it at the speed of an arrow and hover near it, chiming as loud as a bell.  If the object is not within the spell's range, it will have a [dice]-in-6 chance of finding a similar object; otherwise, it disappears.
-
-
-
-
-### Balder
-
-
-
-
-
-#### Balder's Twin
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch) mirror*
-
-
-
-You reach into a mirror-like surface and pull out a copy of yourself.  The mirror has to be big enough for you to walk through - same height and same width, at least.  The copy behaves just like you, but it's illusory - anything that touches it will pass right through it, and it can't pick anything up or hold anything.  You can switch places with your mirror-self by stepping through the mirror - this dispels the illusion.
-
-
-### Ik'tik'buboe
-
-
-
-
-
-#### Davy Jones's Locker
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close body of water*
-
-
-
-You must be near a body of water to use this liturgy (a river is OK, a puddle isn't).  You summon a lock up to [dice] meters in length, width, and height.  The box can hold up to [dice]x100kg in weight, or about 25 Significant Items (provided the box is big enough in terms of height, width, and depth i.e. you could put a 2 meter long pole in a 1 [die] locker).  Once you seal the box and carve your name onto it, the waters will take the locker back beneath the surface, where it will disappear.  At any time, you can return to the same body of water and bring the locker back from the depths. Nothing else can bring the locker back from the deeps (not even the liturgy of Dredge) except your death.  When you die, the locker will wash up on shore within a few days for some lucky (or unlucky) soul to find.
-
-
-If you place a living thing inside, it can breathe - but it will starve or die of thirst without food or water (incidentally, this is a great way to make vodyanoi)
-
-
-
-
-
-#### Iron Anchor
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch)*
-
-
-
-You summon an immensely heavy iron anchor weighing [dice]x100kg.  You have to summon it onto a stable surface - for example, you couldn't summon it by touching water or sand, but you could summon it on top of a flimsy wooden railing.  The anchor will disappear at the end of the liturgy's duration.
-
-
-
-
-#### Mermaid's Breath
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  Y (negates) |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| Splittable |
-
-***T:**   Self / Close (touch)*
-
-
-
-For [sum] Minutes, up to [dice]+1 Allies or Monsters (including yourself) can breathe water as if it were air.  They can only breathe water, however - breathing air will cause them to drown. Unwilling creatures get a Save to negate.  You must touch the Creature to bestow this liturgy upon them. 
-
-
-
-
-#### Trident of Ik'tik'buboe
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-A magical trident appears in your hand that only you can wield.  The trident is a 2-handed weapon that deals [dice]+[dice] damage up to a maximum of 12. Every time the trident strikes a creature, its damage goes down by 1.  When it hits 0, the trident disappears.  The trident can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
-
-
-
-### Iktomi
-
-
-
-
-
-#### Iktomi's Suggestion
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close, Nearby, or Far-Away creature*
-
-
-
-You whisper a word on the wind which travels to a Close, Nearby, or Far-Away target of [dice]x2 {hd} or less. The target must be able to understand you.  Once the word reaches the ear of the victim, they must Save or become Befuddled.  The duration is Markovian and depends on the number of [dice] invested.
-
-
-
-
-#### Memory Lane
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Varies |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close creature(s)*
-
-
-
-You can create a memory (real or not) and embed it in the head(s) of up to [dice] creatures by touch.  Unwilling creatures may Save to negate the spell.  The memory must be short and distinct.  The memory will start to fade in a few days, but if you win a {rb} : {foc} attempt against the victim (the victim has a -[dice] penalty) when you invoke the liturgy, the memory will never fade, even if they lose all other memories (incidentally, this is is a really great way to create a ghost or poltergeist).
-
-
-
-
-
-#### Spidertongue
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  Y (negates) |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You can speak with spiders (and they can speak with you).  Small spiders know about water, wind, and bugs.  Larger spiders know about people (maybe they can tell them apart).  Big, dangerous spiders know all kinds of things.  Spiders will be friendly towards you, but if you attack them they'll fight back.  Additionally, your spittle becomes a Toxin whose power depends on the number of [dice] spent: 1 [die] Iron Toxin; 3 [dice] Silver Toxin; 6 [dice] Gold Toxin.  Your spittle is enough to poison a drink, a needle or syringe, or infect someone you might bite, but not enough to poison a knife or dagger.  The spittle becomes normal when the duration ends.
-
-### Kismet
-
-
-
-#### Capture Wind
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| Concentration/Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Point in front of you*
-
-
-
-A magical circle [dice] meters in radius extends from your fingertip in front of you. As long as you maintain concentration, you can absorb any wind passing through the circle. You can then collapse the spell. 
-
-At any time during the Session, you can reactivate the circle (no [dice] are needed) to release the wind you absorbed.  The wind flows out at the same rate it entered. If you activate this spell in a light breeze for 5 minutes, the spell will release a light breeze over 5 minutes. The wind only flows from the circle, so anyone standing behind it is not affected (unless you release hurricane-force winds indoors). You can cancel the release at any time, which expends the spell as usual. If you enter Death's Door while the spell is still "reserved", it immediately activates facing a random direction.  
-
-If the wind is a magical breath that would do damage (dragon's breath, etc.) your [sum] must be equal to or greater than the sum of the damage, or the circle immediately collapses.  
-
-
-
-
-#### Ropework
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close object*
-
-
-
-You summon a rope [dice]x50m in length.  You can command the rope to arrange itself into any shape and rise into the air in any orientation.  It can be climbed like a normal rope, and can support [dice]x100kg of weight.  Its ends do not need to be anchored to anything.
-
-
-
-
-#### Vaulting Step
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-Your next [dice]+[dice] strides (about 1m each stride) land on a plane of Force the size of your foot.  The step can be taken in any direction up, down, sideways, or across (though you cannot pass through physical objects).  You can combine these in any way you want - stride 45 degrees into the air, take another step up, and a final step down (for example).  Your final step must be on a solid surface, or you fall. 
-
-
-### Minerva
-
-
-
-
-
-#### Minerva's Exchequer
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  N |
-|**D**| n/a |**X** |  n/a  |
-|**K**| Hammerspace |
-
-
-***T:**   Close coins*
-
-
-
-You can convert up to [sum]kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item).
-
-For example, if the [sum] of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces.
-
-
-
-Additionally, you can place up to [dice]x100kg of coins into "hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Encumbrance, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
-
-You can combine the effects above (so you could convert money and store it in hammerspace if you'd like).  You must cast this spell each time you want to put more coins into hammerspace, but everything that's in hammerspace is released upon your death.
-
-
-
-#### Package Neatly
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  0 |
-|**D**| Concentration / Permanent |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Nearby objects*
-
-
-
- Up to [dice]x250kg of nonliving objects, as you designate, are packed neatly. You must name the objects or their general category when you cast the spell ("those coins", "the contents of that room") If no packing materials are provided, the objects will be stacked into compact cubes, with the largest and most stable objects at the bottom. If chests, paper and twine, sacks, carts, etc. are provided, the spell will use them as you direct. The packages created will take up the minimum space possible, and will be remarkably sturdy. The spell will continue to pack objects for as long as you maintain concentration. The objects must be able to move freely. You could not use this spells to pack clothes someone was wearing. The objects will not lift more than 3m off the ground during the packing process.
-
-
-
-### Nergal
-
-
-
-
-
-#### Doombolt
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  Y (half) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Far-Away Monster*
-
-
-
-Target takes [sum]+[dice] damage, Save for half. You do not need to see the target, but you do need to know their approximate location (within 1m), and there must be a clear path a bolt could trace to reach them. The path can be as convoluted as required. The bolt can pass through gaps as small as a fist.  Note that this spell can only target Far-Away creatures.
-
-
-
-
-#### Doomhammer
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  Y (half) |
-|**D**| Concetration |**X** |  n/a  |
-|**K**| Splittable |
-
-***T:**   Far-Away Monster*
-
-
-
-Invisible hammers of Force strike up to [dice] Monsters from every direction.  Target Monsters take [dice] Bashing damage each, depending on how you split the die (Save for half).  The liturgy lasts for as long as you Concentrate.  Concentration and spell-casting is impossible while being struck by these hammers. Note that this spell can only target Far-Away creatures.
-
-
-
-
-#### Limbbreaker
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Far-Away creature of [dice]+[dice] HD or less*
-
-
-
-The target of this spell must have limbs.  With a snap of the fingers, [dice] of the target's limbs bend, crack, and break.  If an arm is broken, anything held in the hand is immediately dropped; if a leg is broken, the creature falls Prone; if both arms are broken, nothing can be picked up (and no spells can be cast); if both legs are broken, the Monster can only crawl.  The limbs remain broken for the Markovian duration, after which they immediately heal with no ill effects. Save negates.  Note that this spell can only target Far-Away creatures.
-
-
-
-
-
-
-#### Shrikeblast
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  Y (half) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Far-Away Monster*
-
-
-
-You let out a scream which shatters into shards of force.  The shards can lacerate up to [dice]  Far-Away Monsters and deal [sum]+[dice] damage depending on how you split the dice up, Save for half. If a creature is killed by this spell, it will be suspended in the position it was killed for [sum] Minutes by by the shards. A suspended creature is capable of bearing up to its own body weight in additional pressure before falling.  Note that this spell can only target Far-Away creatures.
-
-
-### Nyx
-
-
-
-
-
-#### Fade
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Nearby creature or object*
-
-
-
-You can cause a Ally, Monster, or object to fade out of existence.  You can still see them, though they're insubstantial (like a ghost).  The target can't move, talk, or interact with the world in any way.  Not even magic can affect the target.  If the target is unwilling, it gets a Save to negate.  The duration is Markovian and depends on the number of [dice] invested.
-
-
-
-#### Paralysis
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close or Nearby Creature*
-
-
-
-Up to [dice] creatures of [dice] {hd} or less must Save or be Paralyzed.  Sleeping creatures do not get a Save. The duration is Markovian and depends on the number of [dice] invested
-
-
-
-### Pilzesser
-
-
-
-
-
-#### Butterfly Hurricane
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  Y (negate) |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-A whirling brightly colored mass of butterflies springs into being around you, cloaking you and anyone else Close to you.  Any ranged attacks fired into or out of the hurricane automatically miss (AoE effects like dragon's fire aren't affected).  Anyone inside of the hurricane must Save or become Befuddled for as long as they remain inside - you and up to [dice] Allies are immune.
-
-
-
-
-#### Entangling Smoke 
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   [dice] Close or Nearby objects or creatures*
-
-
-
-This spell requires pipeweed.  You breathe out a plume of smoke; up to [dice] creatures or objects are grabbed by tendrils of this smoke unless they Save.  Those who fail move at half speed (meaning it takes 2 Maneuvers to move somewhere Nearby; for Monsters, it means their speed is Slow if it isn't already.  Any Ally fighting this Monster gains a +[dice] bonus to Fight and Guard. ). The duration is Markovian and depends on the number of [dice] invested.
-
-### Ptah
-
-
-
-
-
-#### Gaze of the Void
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  Y (negates) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Nearby or Far-Away Object or Creature*
-
-
-
-Target creature with less than (but not equal to) [dice] {hd}, or an object weighing less than [dice] x 50kg, disintegrates into nothingness.  Monsters get a +1 to their Save; magical objects and magical monsters (dragons, unicorns, etc) get a +3 to their Save.
-
-
-
-
-
-
-#### Millworks of Ptah
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch) tree*
-
-
-
-A tree no larger than [dice]x 5m tall and [dice] meters in diameter topples over, as if neatly cut. The result depends on the dice you invest. 1 [dice]: cut and broadly de-limbed, 2 [dice]: cut, de-limbed, debarked, 3 [dice]: cut, de-limbed, debarked, cut into planks as per your specifications, stacked, 4 [dice] cut, planed, de-limbed, debarked, cut into planks, stacked, sanded, and finished. Small limbs and offcuts will be piled for kindling. Alternatively, you can reduce the tree to sawdust or wood chips in 20-[sum] minutes
-
-
-
-
-#### Ptah's Compartmentalization
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  0 |
-|**D**| permanent |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close object*
-
-
-
-You can command something that's a mixture of different types (soup, coins, etc.) weighing no more than [dice]x50kg to separate into [dice]+1 categories.  The categories have to be clear and easily identifiable by inspecting them, and they have to be able to flow freely.  For example, you could split a soup into "vegetables" "broth" and "poison", or a pile of coins into "minted during the last century" and "older". You could not, however, split a pile of coins into "handled by Xerphion the Tyrant" and "not handled by Xerphion the Tyrant", as there's no way to tell just by inspecting them. You could not separate "a locked chest" and "its contents", because the items could not flow freely into separate piles.
-
-
-
-
-#### Sandstone Bridge
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  0 |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close point*
-
-
-
-At a point you touch, a perfectly level sandstone bridge is created.  The bridge is perfectly straight, perfectly level, [dice] meters wide and [dice] x 50m long.  The bridge lasts for [sum] Minutes and disappears abruptly when the spell ends.
-
-
-### Raimonds Mountainhand
-
-
-
-
-
-#### Pet Rock
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch) Stone*
-
-
-
-You may invoke this liturgy on a stone small enough to fit into the palm of your hand.  You may give the stone a command of up to [dice] words; it will attempt to follow your commands to the best of its ability.  It can be asked to trip targets when they run past, jump off a shelf when a certain person enters a room, etc.  The stone can launch itself into the air at your command and strike a target Close, Nearby, or Far-Away for up to [dice] damage (you can make this damage 0 if you'd like, in order to get someone's attention), and can do this once every Moment for the duration.
-
-
-
-
-#### Stoneskin
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  Y (negates) |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self or Close creature*
-
-
-
-You or a creature you target has their skin turned to stone.  Weight is increased by [dice]x100kg and all physical damage is reduced by -[dice] for the duration of the spell.  The target cannot swim, jump, or run however. If invoked on something already in deep water, mud, etc. the target will immediately sink at x[dice]+1 the normal rate. Unwilling creatures get a Save to negate. 
-
-
-
-
-
-#### Terrestrial Shackle
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close, Nearby, or Far-Away creatures*
-
-
-
-By invoking this liturgy, you shackle up to [dice] creatures to the ground.  They must be touching the ground already when you make the invocation.  The creatures must keep at least one limb touching the ground at all times.  If they attempt to run, they must {rb} : {dex} with a -[dice] penalty.  If they are knocked Prone, they must {rb} : {vig} with a -[dice] penalty to stand up.  Save negates.
-
-
-
-
-#### Tremor
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| Contested |
-
-
-***T:**   Nearby or Far Away point*
-
-
-
-You create a small tremor somewhere Nearby or Far-Away.  Everything Close to the tremor must {rb} : {dex} with a -[dice] penalty or fall Prone.  The tremor is enough to knock objects off shelves and upset balanced objects, but not enough to crack masonry or break walls.
-
-
-### Shul
-
-
-
-
-
-#### Astrologer's Helper
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Self / Close creature(s)*
-
-
-
-Outlines of the planets, major stars, sun, and moon appear around you. You can use them to determine the time of day, true north, and your approximate position on the globe. You can also affect the futures of [dice] Allies per casting (casting it on yourself counts towards this number). Choose 1 of the following:  1)  the Ally can change any natural 1 they roll to a natural 6; 2) the Ally can change any natural 1 they roll to a natural 20; 3) the Ally can change any attack that would hit them to a miss; 4) the Ally can change any attack they make that would have missed into a hit.  An Ally can only have their future determined once per Session.
-
-
-
-
-
-
-#### Children of Shul
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  Y (half) |
-|**D**| Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You create [dice] small moons that circle the top of your head, casting moonlight Close and Nearby.  The shadows thrown by this moonlight give a +[dice] bonus to Skulking rolls and give everyone in range a +[dice]-in-6 chance to find secret doors and hidden writing (so if you have a 2-in-6 Math skill and spend 2 dice, your chance of finding secret doors will go to 4-in-6). The moonlight will activate abilities and powers that manifest in lunar rays (like lycanthropy).  The moons throw light equivalent to [dice] candles.
-
-You can pluck one or more of these orbs from around your head and throw it at a Monster Nearby using your {foc} to attack; on a successful hit, the moon(s) deal [sum]+[dice] damage, Save for half.  When you have no moons left, the spell ends.
-
-The moons can be dispelled at any time, but can only be summoned once a Session.
-
-
-
-
-#### Claws of the Lycanthrope
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You grow claws from your hands as if you were a werewolf.  The claws cannot curse someone with lycanthropy.  The claws deal [dice] damage up to a maximum of 6. Because there is no die to roll when dealing damage, they cannot Crit or be Fumbled. 
-
-
-
-
-
-#### Lunacy
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   [dice] Close or Nearby creatures*
-
-
-
-You invoke the madness of the moon.  [dice] creatures must immediately make a Sanity roll; if they do not have Sanity (Monsters, for instance) the creatures are permitted a Save.
-
-The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the Monster becomes Enraged; 2) the Monster becomes Afraid; 3) the Monster is Knocked Out; 4) the Monster suffers Anathema.  The duration is Markovian and depends on the number of [dice] used.
-
-
-### The Green Man
-
-
-
-
-
-#### Bloodvine
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close or Nearby Monster*
-
-
-
-This spell can only be used on a Monster who is Bleeding.  Vines erupt from the Monster's wounds, dealing [sum]+[dice] damage (no Save).  If the damage kills the Monster, their corpse is entirely consumed by in a bramble of vines
-
-
-
-
-#### Tasty
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  N |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch) Monster or object*
-
-
-
-The target object or Monster (alive or dead) smells delicious for the spell's duration.  The smell radiates Nearby in calm air, but can spread on the wind, or leave a trail.  Non-intelligent zoological creatures and swarms will be attracted to and attempt to eat the object or Monster (even if they are supposed to be allies); intelligent creatures have a [dice]-in-6 chance of being affected.  
-
-
-
-
-
-#### Uproot
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close (touch) tree*
-
-
-
-You touch [dice]x10 trees or [sum]x10 smaller plants, and they uproot and march to a new location you specify up to [dice] km away. They root themselves once they arrive.
-
-
-### The Grey Lords
-
-
-
-
-
-#### Becalm
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close or Nearby Monsters*
-
-
-
-You can invoke this liturgy to prevent bloodshed among up to [dice] creatures who have not yet begun Combat.  They must be able to speak the same language as you.  The creatures must roll their morale with a -[dice] penalty; if they fail, they will lower any weapons and regard you with wary suspicion.  If used against Allies, the ally must win a {rb} : {foc} against you with a -[dice] penalty.  Weaker Monsters will usually follow the lead of stronger Monsters.  Once Combat has begun, the liturgy immediately ends.  If you attack a group of Monsters who are under the effects of Becalm, you will win Surprise.
-
-
-
-
-#### Conflicting Command
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negate Knocked Out effect) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close or Nearby Monsters*
-
-
-
-You shout this liturgy at up to [dice] Monsters.  To you and to anyone else, the words you've shouted are incomprehensible - but the Monsters interpret it as a magical command that is impossible to fulfill.  "Fall down and jump up at the same time" is a possible translation, but the conflict is more fundamental.  The target(s) take [dice] damage depending on the number of dice targeting them, and must Save or be Knocked Out.  The duration is Markovian and depends on the number of [dice] invested.  The Monster must speak the same language as you.
-
-
-
-
-
-
-#### Duelists' Wings
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Biomancy |**S**|  0 |
-|**D**| Combat / [sum] Minutes |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close (touch) Allies or Self*
-
-
-
-Tiny white wings sprout from the ankles and wrists of up to [dice] Allies.  They always win Init in Combat, and any falling damage is reduced by -[dice] per die.
-
-
-
-
-#### Resonating Command
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Nearby creatures*
-
-
-
-You shout a one word command at up to [dice] Close or Nearby target, who must obey (Save negates).  The target(s) must be able to understand your language.  The command resonates for a Markovian duration - if the Markovian die is not a 1 or a 2, they must Save again.  Each Moment after the first the target(s) gain an additional +1 to their Save.  The command cannot directly cause the target(s) harm or force them to commit a harmful action.  You could cause them to run into a trap they didn't know was there, or into a tactically disadvantageous position, but not off a cliff.
-
-
-### The King in Yellow
-
-
-
-
-
-#### Strange Copy
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (touch) mirror*
-
-
-
-You reach into a mirror-like surface and pull out a copy of an object reflected in the mirror. The object that you pull out must be within reach of the mirror (as if it were a window), small enough to fit through the mirror (as if it were a window) and can't weigh more than [dice]x10kg. The mirror object looks and feels exactly like the object it copied, though it is a mirror image (so if you were to copy a book, the text would be backwards).  You can't copy any magical properties of the object, and you can only duplicate objects, not living things.  The object exists for [sum] Minutes.  If the object suffers a solid blow, it pops like a bubble.
-
-
-
-
-#### Tattered Robe
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Entropy |**S**|  Y (negates Bleeding) |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You must be wearing robes without armor to use this liturgy.  The edges of your robes form into [dice] tatters, each of which can be used as a weapon in combat in addition to your regular attack. The tatters deal no damage and each of their attacks must be rolled separately using your {foc} instead of your {vig} or {dex} - but if you hit the target begins Bleeding unless they make a Save.  You can split these attacks among as many Close opponents as you desire.
-
-The tatters can also be used to hold small objects, as if they were each a prehensile tail.  Each tatter can hold up to 50kg of weight, but cannot attack if they are holding something.
-
-
-
-### Thoth
-
-
-
-
-
-#### Expertise
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-Name a Skill - it can be one of the 7 basic skills, or any other skill you choose (though you can't learn things that would not be contained in a well stocked library, or that are so rare that only a few people could teach them to you).  Gain a [dice]-in-6 {knack} in that Skill for the spell's duration.  If you already know the Skill, add [dice] to the {knack} instead (so if you have a 3-in-6 and spend 2 Faith, you would have a 5-in-6).
-
-
-
-
-
-#### Labyrinth
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You create a spiraling labyrinth of thought in your mind.  Anyone targeting you with Charm, Sleep, or any magical effect whereby the caster tries to read your mind or alter your memories must enter into a {rb} : {foc} contest with you at a -[dice] penalty.  If they fail, they will be caught in your mind for the duration of the liturgy.  If you win, the creature is trapped inside your mind - they immediately catch the Vapors, and you can hear all their thoughts.
-
-
-
-
-#### Reveal Ownership
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  N |
-|**D**| [sum] Minutes |**X** |  n/a  |
-|**K**| Splittable |
-
-***T:**   Close objects*
-
-
-
-Touch up to [dice] objects; letters appear over the objects, spelling out the name of the owner or owners.  The name shown will be the name the owner used when they purchased or acquired the objects (so if they were obtained under an alias, it will just show the alias). 
-
-If you use 2 [dice], the liturgy will also show if the ownership is disputed (the dead cannot dispute ownership).  If you use 3 [dice], arrows will appear pointing in the direction of the owner, or a skull will appear if they are deceased.  If you use 4 [dice], true names will appear alongside the alias as long as the owner is mortal.
-
-The liturgy works on slaves (including those under the effect of Charm Person) and domesticated animals.  If the object has no owner, nothing happens.
-
-
-
-
-#### Scry
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Prophesy |**S**|  N |
-|**D**| Concentration |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Something up to [dice]km away*
-
-
-
-This spell requires something to scry through - a mirror, a quiet pool, clouds, a bonfire, etc.  You create an invisible eye that can travel up to [dice]km away at a speed of 10km/hour.  Because the eye is invisible, it can see and be seen by invisible things.  For as long as you maintain concentration, everything the eye sees is reflected in the thing you're scrying through.  Other people can see what the eye sees if they're looking into the mirror, pool, clouds, bonfire, etc.  as well. 
-
-If you use 3 or more Faith, the eye is joined by an invisible ear that can hear for you as well; if you use 5 or more Faith, the eye and ear are joined by a mouth you can speak through.  You can't separate the eye, ear, and mouth - they have to remain together.  The eye, ear, and mouth can fit through a space that you could reasonably pass the real thing through (a mouse hole, but not under a door)
-
-
-### Tiamat
-
-
-
-
-
-#### Multielemental Spray
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (half) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close or Nearby Monster(s)*
-
-
-
-You emit [dice] sprays of elements from your fingertips that you can split among [dice] Monsters.  For each Monster, if the [sum] of the [dice] targeting the Monster is greater than the Monster's {hd}, they take [dice]+[dice] fire damage.  If the [sum] is twice the Monster's {hd} or more, they also take [dice]+[dice] cold damage.  If the [sum] is three times the Monster's {hd} or more, they also take [dice]+[dice] lightning damage.  If the [sum] is four times the Monster's {hd} or more, they also take [dice]+[dice] acid damage.  Save for half.
-
-
-
-### Umwansh
-
-
-
-
-
-#### Dredge
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| Concentration |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close or Nearby area*
-
-
-
-Choose an area [dice] meters in radius.  Buried or covered objects rise [dice]x10 meters to the surface.  If you cast this spell on the ground, coins, stones, and roots will be pulled to the surface; if you cast it on water, sunken objects will rise to the surface and remain as long as you concentrate.  The objects cannot weigh more than [dice]x100kg.  
-
-
-
-
-#### Excavate
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close or Nearby area*
-
-
-
-You can remove up to [dice] inorganic materials from a [dice]x5 meter cube just in front of your feet.  The materials could be "stone", "water", "dirt", etc. The materials disappear permanently. Objects that would be suspended in the material removed will obey the laws of physics - removing water will cause the surrounding water to rush in, removing dirt from around a chest will cause the chest to fall, etc.
-
-
-
-
-
-#### Sound the Deeps
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close (ground or water)*
-
-
-
-You slap your hand on the ground or the surface of the water.  The echoes of the tremor allow you to precisely know how deep and the approximate shape of bodies of water, chasms, shafts, clefts, mountain peaks, caverns, passages, etc.  up to a distance of [dice]x100m meters.  Additionally, you may use this to rouse up to [dice] Allies Close, Nearby, Far Away, or Distant who are Sleeping, Knocked Out, etc. 
-
-
-
-### Vulcan
-
-
-
-
-
-#### Clamp
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  Y (negates) |
-|**D**| varies |**X** |  n/a  |
-|**K**| Contested |
-
-
-***T:**   Nearby object or Monster*
-
-
-
-A clamp of red light appears over [dice] Monsters or objects you designate. The maximum width of the clamp is [dice] meters, and the clamp must be able to fit around the objects (so you wouldn't be able to clamp something to a floor or a wall).  The clamp will push the objects together until they are held securely, but it will not damage either object.  For example, you could clamp an orc to a chair or a sword to a table.  If one of the things clamped is a living thing, the creature can break free if they {rb} : {vig} with a -[dice] penalty; otherwise, the duration depends on the number of dice spent:  1 [die]: Minutes; 2 [dice]: Days; 3 [dice]: Weeks; 4 [dice]: Months; 5 [dice]: Years; 6+ [dice]: Permanent.  Save negates.
-
-
-
-
-#### Hammer of the Forge
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-A magical blacksmith's hammer appears in your hand that only you can wield.  The hammer deals [dice] damage up to a maximum of 8.  You can also repair the Max \UD of an Ally's armor during a Bivouac.  For every {d+} you repair in this way, the damage of the hammer goes down by 1.  The hammer can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
-
-
-
-
-
-#### Hone
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  0 |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close objects*
-
-
-
-You run your hands over [dice] metal, stone, or wooden edges and hone them to a razor sharpness. If the object is a Bashing weapon, it deals +[dice] damage; if the object is a Stabbing or Chopping weapon, it deals +[dice]x2 damage. The edge must be smaller than your outstretched arms.
-
-
-
-
-#### Vulcan Plate
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Force |**S**|  N |
-|**D**| Session |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Self*
-
-
-
-You cannot wear any other armor while you're wearing Vulcan Plate.  You appear to wear simple and brutal plate mail of welded black iron.  You definitely stand out in a crowd.  Your \MD drops to d4 when you invoke this liturgy.  The \UD for the Armor depends on the number of [dice] invested: 1 d4; 2-3 d6; 4-6 d8; 7-9 d10; 10+ d12.
-
-
-### Xibalba
-
-
-
-
-
-#### Scare
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (negates) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| Splittable |
-
-
-***T:**   Close or Nearby Monsters*
-
-
-
-Up to [dice] Close or Nearby Monsters with combined {hd} equal to or less than [dice] must Save or become Afraid.  The duration is Markovian and depends on the number of [dice] invested.
-
-
-
-
-
-#### Sinister Stillness
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  N |
-|**D**| Combat or [sum] Minutes |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close, Nearby, Far-Away, or Distant Area*
-
-
-
-You can invoke this liturgy in an area  Close, Nearby, Far-Away, or Distant from yourself.  The air Close to the area takes on an unsettling air of silence.  Sound is not magically suppressed, but Monsters and creatures within its bounds feel that any sound they make will disturb something better left undisturbed.  Non-intelligent animals will not enter the area, and Monsters inside must make an immediate morale check. Thereafter, Saves against fear effects have a -[dice] penalty (minimum 1), and morale rolls suffer a -[dice] penalty.  A morale check is needed to enter or pass through the area of the spell.
-
-
-
-
-#### Thunderclap
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (negates Deafness) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Far-Away or Distant area*
-
-
-
-Invoke this liturgy somewhere Far-Away or Distant from yourself.  Monsters Close to the Thunderclap must immediately make a morale check with a -[dice] penalty, or become Afraid.  Additionally, Monsters become Deafened for [dice] Moments unless they make a Save
-
-
-
-
-
-#### Wall of Gloom
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y (see description) |
-|**D**| Markovian |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Nearby or Far-Away area*
-
-
-
-You can anchor a barrier of pure darkness between three or more solid points up to [dice] meters in radius (for example: the 4 points of a door, two trees and the ground, across a hallway, etc).  Monsters that touch the blackness must immediately make a morale check with a -[dice] penalty or become Afraid for a Markovian duration.  Creatures that make their morale check that then continue through the wall must make a second Save; if they fail, they exit the wall the same way they came in (they will need to make a morale check again to touch the wall if they wish to try to move through it again).   
-
-
-### Xotli
-
-
-
-
-
-#### Incinerate
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| See spell |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close objects*
-
-
-
-This liturgy requires you to create a bonfire.  You can place up to [dice] objects into the fire weighing no more than [sum]kg.  The objects are burned to a pile of enchanted ash, which can be harvested and stored as an Insignificant item.  When you wish the objects to become whole again, you must build a fire and sprinkle the ash inside of it; you can reach into the fire unharmed to pull the objects from the flames as they were when you placed them into the fire.  If you perish before the objects are retrieved, the ash reverts to normal, unenchanted ash and the objects are destroyed.
-
-
-
-
-
-#### Ray of Fire
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (negates) |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Nearby or Far-Away target*
-
-
-
-A narrow beam of fire shoots from your outstretched finger.  Make a Fight roll using your {foc}+[dice]; if you hit, the target catches fire for a Markovian duration if they fail a Save.  They are only allowed 1 Save.  They damage taken by the target is whatever is rolled on the Markovian die each Moment.  The beam of fire will also light flammable things alight.
-
-
-
-
-#### Roaring Flames
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close or Nearby flames*
-
-
-
-[dice] light sources Close or Nearby suddenly flare, potentially doing damage and lighting things on fire that are Close to them.  Candles and matches deal no damage; torches and lanterns will deal [dice] damage; bonfires will deal [sum damage].  Extremely flammable things will catch alight (but not creatures or normal objects).  If you invest 3 or more [dice] in the liturgy, the light is snuffed out after it flares. 
-
-
-### Ymir
-
-
-
-
-
-#### Extinguish
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  N |
-|**D**| 0 |**X** |  n/a  |
-|**K**| Splittable |
-
-***T:**   Close or Nearby target(s)*
-
-
-
-Beams of slushy ice shoot from your outstretched hands and strike up to [dice] targets.  If the target is on fire, the flame is immediately extinguished.  Flames the size of torches only require 1 [die]; people or animals would require 2 [dice]; bonfires and the like require 3+ [dice] at the Arbiter's discretion.
-
-
-
-
-
-
-#### Preserve
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Elements |**S**|  Y (negates) |
-|**D**| varies |**X** |  n/a  |
-|**K**| None |
-
-
-***T:**   Close object or creature (touch)*
-
-
-
-By touching an object, you are able to freeze it for a period of time in order to preserve it.  If the object is an Ally or Monster, they must be lying completely still in order to use the liturgy.  Unwilling creatures get a Save.  While frozen, any toxins, diseases, bleeding, or negative effects are stopped for a period of time, depending on the number of dice spent.  You cannot end this liturgy willingly once it has begun, though it could be ended prematurely by great heat (a very large bonfire, for example) or by taking more than [sum] points of damage, which will cause the object to shatter into many pieces.  
-
-1 [die]: Minutes; 3 [dice]: Days; 5 [dice]: Weeks; 7 [dice]: Months; 9 [dice]: Years; 11+ [dice]: Permanent. 
-
-
-
-
-
-
-\mysection{Miracle Working}{miracle working}
-
-You use Faith Dice to perform Miracles.  
-
-**No Miracles can take place on Unhallowed Earth**
-
-
-
-### Ambrosia
-
-You can create [dice] d4 \UD of Provisions.  These \UD can be combined into a single \UD (so 3 d4 \UD could be combined into a \UD of d12) up to a d24 \UD.  These Provisions can be stored for use later, but it also particularly nourishes the faithful.  During the working of the Miracle, up to [dice] Disciples of the Small God can partake of the Ambrosia and gain +1 Faith Die (the miracle worker cannot gain this benefit). Disciples partaking of the meal do not affect the \UD produced in any way.
-
-### Covenant
+\mysubsection{Covenant}{miracle-covenant}
 
 
 The Mystic seals a bargain between themselves (referred to as the Suzerain) and another (referred to as the Vassal) by awarding temporary control over both of their *noumenon* to their Small God (this means that Fae cannot be held to a Covenant).  Free assent is required, but it can be compelled by other factors (like a dagger to the throat or other threats).
 
-The Suzerain must use a number of [dice] equal to the {lvl} of the Vassal, and this Miracle must take place in a shrine of their Small God.  Once complete: 
+The Suzerain must use a number of \DICE equal to the \LVL of the Vassal, and this Miracle must take place in a shrine of their Small God.  Once complete:
 
-- The Suzerain can give Faith and take Faith from the Vassal, as if they were a Disciple
-- The Suzerain always knows where the Vassal is and (roughly) what they're generally feeling - strong emotions (lust, hatred, etc) or  physical extremes ("he's somewhere very, very cold")
-- The Suzerain is completely unable to harm the Vassal (though they can command others to do so); the Vassal does not have the same constraint.
-- The Vassal is immediately converted to the worship of the Small God
-- The Vassal barely needs sleep, and eats and drinks sparingly (roll Provisions \UD twice and take the higher roll).
-- The Vassal is affected as if they were under the effects of Tongues of Fire at all times
-- The Vassal gains +[sum] points of "holy armor".  Damage is subtracted from this total first before it is applied to Armor, Grit, etc.  It can't be healed, but it is restored if the Vassal is able to visit a Shrine to their Small God during a Sojourn or Sabbatical.  
+\mylist { 
+  \item The Suzerain can give Faith and take Faith from the Vassal, as if they were a Disciple
+\item The Suzerain always knows where the Vassal is and (roughly) what they're generally feeling - strong emotions (lust, hatred, etc) or  physical extremes ("he's somewhere very, very cold")
+\item The Suzerain is completely unable to harm the Vassal (though they can command others to do so); the Vassal does not have the same constraint.
+\item The Vassal is immediately converted to the worship of the Small God
+\item The Vassal barely needs sleep, and eats and drinks sparingly (roll Provisions \UD twice and take the higher roll).
+\item The Vassal is affected as if they were under the effects of Tongues of Fire at all times
+\item The Vassal gains +\SUMDICE points of "holy armor".  Damage is subtracted from this total first before it is applied to Armor, Grit, etc.  It can't be healed, but it is restored if the Vassal is able to visit a Shrine to their Small God during a Sojourn or Sabbatical.  
+}
 
 There can only be a single Covenant between the Suzerain and the Vassal - neither is allowed to strike a Covenant with anyone else while the Covenant is in effect.  The Covenant can only broken by: the Suzerain or the Vassal suffering a Crisis of Faith; the Suzerain and the Vassal agreeing to end the Covenant (both must agree); or the death of the Suzerain or the Vassal.
 
 
 
-### Crusade
+\mysubsection{Crusade}{miracle-crusade}
 
 Can be performed by a Suzerain on their Vassal (see Covenant).  By invoking the Crusade, the Suzerain transforms the Vassal into a Paladin of the Faith.  
 
-The Suzerain must use a number of [dice] equal to the {lvl} of the Vassal, and this Miracle must take place in a shrine of the Small God.  In addition to the abilities they had before, Paladins can use Faith Die given to them by their Suzerain as Deed Dice in the same way as Sellswords (if the Paladin is a Sellsword, these Deed Dice are in addition to their regular Deed Dice, and can be rolled separately).  The Paladin is also capable of gaining Faith themselves, separately from their Suzerain.  Finally, the Paladin may cast any of the Seven Sacraments using their Faith Dice
+The Suzerain must use a number of \DICE equal to the \LVL of the Vassal, and this Miracle must take place in a shrine of the Small God.  In addition to the abilities they had before, Paladins can use Faith Die given to them by their Suzerain as Deed Dice in the same way as Sellswords (if the Paladin is a Sellsword, these Deed Dice are in addition to their regular Deed Dice, and can be rolled separately).  The Paladin is also capable of gaining Faith themselves, separately from their Suzerain.  Finally, the Paladin may cast any of the Seven Sacraments using their Faith Dice
 
 This power does not come without cost.  The Suzerain must name a Crusade important to the Small God they worship: "wipe out the infidels of the Crawling Chaos", for example, or "bring the fingerbone of St. Sebastien to the reliquary in the Howling Wastes".  Similar to a Geas, any day not spent in the furtherance of the cause of the Crusade will lose the Paladin a single Faith die.  Note that if the Paladin should lose all their Faith and suffer a Crisis of Faith, the Crusade has failed, and the Covenant is broken.
 
-### Golem
+\mysubsection{Golem}{miracle-golem}
 
 A golem is a mortal-like figure, brought to life through magic.  Creating a golem requires gold for materials and effort, as well as a certain number of Ritual dice:
 
-| Type  | {cost} | Ritual dice | 
-|:---:|:-----------:|:-----------:|
-|  Paper  | 100au  | 10 |
-|  Glass  | 500au  | 12 |
-|  Wood  | 1,000au  | 14 |
-|  Clay  | 5,000au  | 16 |
+\mytable{X c c} {
+  \thead{Type} & \thead{\COST} & \thead{Ritual Dice} \\
+} {
+  Paper  & 100au  & 10 \\
+  Glass  & 500au  & 12 \\
+  Wood  & 1,000au  & 14 \\
+  Clay  & 5,000au  & 16 \\
+}
+
 
 
 Golems requires a *shem* - a slip of paper with a magical rune written on it through the miracle of the Holy Writ.
 
 Golems are completely obedient to their Maker and respectful of any other follower of the Small God.  Presenting a holy symbol is enough to keep a Golem at bay, but only their Maker can give them commands.  If their Maker should perish, the golem will continue on in perpetuity, doing the last task given to it by its Maker.
 
+\mybold{Golems are immune to magic of any kind - including being struck by magical weapons.}
 
-
-**Golems are immune to magic of any kind - including being struck by magical weapons.**  
-
-#### Paper Golem
+\myhighlight{Paper Golem}{miracle-paper-golem}
 
 Paper golems are small (less than 100cm tall) creatures created for menial work to fetch and carry for their Maker.  They can carry a single Significant Item provided it doesn't weight more than 5kg (or a number of Insignificant Items up to 5kg).  Paper golems can "fly" on gusts of wind (similar to how a chicken can "fly") and walk and run as fast as a small child.  Paper golems record everything they see.  At any time, their Maker can ask them a single question ("what was it you saw when you were in the Baron's chamber?", for example) and the golem will flatten itself into a scroll upon which is written what it "saw" (the Golem remains a scroll forever more, with the symbol of the Small God embossed on the bottom of the scroll.  These embossed scrolls are very, very difficult to counterfeit, and if you were to do so and get caught, it would bring about the wrath of the church of the Small God). 
 
 Paper Golems are immediately destroyed by (non-magical) fire
 
-#### Glass Golem
+\myhighlight{Glass Golem}{miracle-glass-golem}
 
 Glass golems are mortal sized (2m tall) automatons filled with pungeant herbs and combustibles called "smokes".  The type of smoke is determined at the moment of their creation by their Maker. Glass golems immediately explode when dealt a forcible blow - a hit with a weapon, a fall from a height greater than 3m, etc.  The effect of exploding a Glass Golem deals d6 damage to everything Nearby (Save negates) as well as the following effects:
 
@@ -3087,56 +2804,59 @@ the smoke persists for Minutes, but can be dispersed by wind.  The Maker is not 
 
 
 
-#### Wood Golem
+\myhighlight{Wood Golem}{miracle-wood-golem}
 
 Wood golems are large (3m tall) docile, hulking, tree-like creatures possessing great strength. They are able to carry up to 50 Significant Items in their branches, weighing up to 1,000kg total.  They can successfully break down non-magical doors, bend iron bars, and perform other feats of strength on a 4-in-6 (this number can be adjusted at the Arbiter's discretion).  They walk at a slow, shuffling gate (d4 \MD)
 
 Wood golems will never attempt to defend themselves.  They can take up to 50 points of damage - Chopping weapons deal double-damage, and fire deals triple-damage.  They will glad and mindlessly stand wherever their Maker demands: in front of a doorway, in the middle of a fire, or charging dumbly into a group of Monsters.
 
-#### Clay Golem
+\myhighlight{Clay Golem}{miracle-clay-golem}
 Clay golems are giant (4m tall) faceless creatures created to protect or guard an area.  They must be told what they must guard at the moment of their creation, and they cannot stray further than 100m from that spot.  The spot they guard must be Hallowed, and if this ever ceases to be they will immediately crumble to dust.
 
-Clay golems house the *noumenon* of a Vassal or Paladin of their Maker (see [Covenant](#the-grimoire-miracle-working-covenant) and [Crusade](#the-grimoire-miracle-working-crusade).  The Vassal or Paladin is ritually slain, and their blood given to the Maker, who combines it with sacred earth and fire to create the clay giant (the Vassal or Paladin does not need to be a willing sacrifice, though remember Mystics cannot directly harm their Vassals).  The golem has all of the memories, skills, saves, and abilities of their Mortal form (including Deed Dice, spell casting, etc.) and Grit, Flesh, etc.  They have a Soak: 2 and do 2d8 damage (2 Close).  They are immune to spells of the Mind paradigm, backstab, surprise, and toxins. They cannot speak and are unswervingly obedient to their Master.
+Clay golems house the *noumenon* of a Vassal or Paladin of their Maker (see \mylink{Covenant}{miracle-covenant}) and \mylink{Crusade}{miracle-crusade}.  The Vassal or Paladin is ritually slain, and their blood given to the Maker, who combines it with sacred earth and fire to create the clay giant (the Vassal or Paladin does not need to be a willing sacrifice, though remember Mystics cannot directly harm their Vassals).  The golem has all of the memories, skills, saves, and abilities of their Mortal form (including Deed Dice, spell casting, etc.) and Grit, Flesh, etc.  They have a Soak: 2 and do 2d8 damage (2 Close).  They are immune to spells of the Mind paradigm, backstab, surprise, and toxins. They cannot speak and are unswervingly obedient to their Master.
 
 Clay golems can be bestowed with the spirits of willing heroes (paladins who wish to protect the temple forever) or with those of unwilling enemies (forced to guard a forgotten hallway, or the temple of a heretic Small God).  When slain, the *noumenon* of the deceased do not travel to the Isle of the Dead.  None know what happens to their souls. 
 
 
-### Hallowed Ground
+\mysubsection{Hallowed Ground}{miracle-hallowed-ground}
 
-The miracle is used to permanently consecrate Unhallowed Earth (see the Occult ritual for details), or to permanently create Hallowed ground for performing miracles.  The range is a circle [dice] meters in radius.  In order to consecrate Unhallowed Earth, this radius must equal or exceed the Unhallowed Earth the Mystic is trying to consecrate.  The ground to be consecrated must be within [dice]km of the Mystic.
+The miracle is used to permanently consecrate Unhallowed Earth (see the Occult ritual for details), or to permanently create Hallowed ground for performing miracles.  The range is a circle \DICE meters in radius.  In order to consecrate Unhallowed Earth, this radius must equal or exceed the Unhallowed Earth the Mystic is trying to consecrate.  The ground to be consecrated must be within \DICE km of the Mystic.
 
 
 
 Hallowed Ground has the following effects:
-- no Fae or Unhallowed creature may enter Hallowed Ground without making a Save.
-- any Mortal inside the radius of the Hallowed Ground can make a Save to end a Markovian effect (in addition to rolling the Markovian die)
-- any Mystics on Hallowed Ground may ignore the negative effect of a Failure when using  their Grace (that is, they may keep their Grace die even if they roll a 1 or a 2).
+
+\mylist {
+\item no Fae or Unhallowed creature may enter Hallowed Ground without making a Save.
+\item any Mortal inside the radius of the Hallowed Ground can make a Save to end a Markovian effect (in addition to rolling the Markovian die)
+\item any Mystics on Hallowed Ground may ignore the negative effect of a Failure when using  their Grace (that is, they may keep their Grace die even if they roll a 1 or a 2).
+}
 
 This Ritual is the only one that does *not* require Hallowed Ground to perform.
 
 
-### Holy Relic
+\mysubsection{Holy Relic}{miracle-holy-relic}
 
-A repository for Faith.  By creating a Holy Relic with [dice] Ritual dice, you can place up to [dice] Faith dice into the relic.  You must place this Faith into the relic at the time of its creation.  This Faith can be used by other Mystics of your Small God (as well as yourself).  The relic itself must be something "special" - a fingerbone of a Saint, a shroud, etc.  (Arbiter's discretion).  The more powerful the relic, the more Faith can be placed inside of it.
+A repository for Faith.  By creating a Holy Relic with \DICE Ritual dice, you can place up to \DICE Faith dice into the relic.  You must place this Faith into the relic at the time of its creation.  This Faith can be used by other Mystics of your Small God (as well as yourself).  The relic itself must be something "special" - a fingerbone of a Saint, a shroud, etc.  (Arbiter's discretion).  The more powerful the relic, the more Faith can be placed inside of it.
 
-The Miracle of the Holy Relic is used to create [Holy Symbols](#mystics-liturgies-and-invocations-the-holy-symbol).  The symbol must be what is indicated under your Small God.  A Holy Symbol only requires a single Ritual [dice]
+The Miracle of the Holy Relic is used to create \mylink{Holy Symbols}{mystic-holy-symbol}.  The symbol must be what is indicated under your Small God.  A Holy Symbol only requires a single Ritual \DICE
 
 
-### Holy Water
+\mysubsection{Holy Water}{miracle-holy-water}
 
-You can create [dice] d4 \UD of Holy Water.  These \UD can be combined into a single \UD (so 3 d4 \UD could be combined into a \UD of d12) up to a d24 \UD.  For each Faith Die spent, you must spend an additional 25 coins in materials.
+You can create \DICE d4 \UD of Holy Water.  These \UD can be combined into a single \UD (so 3 d4 \UD could be combined into a \UD of d12) up to a d24 \UD.  For each Faith Die spent, you must spend an additional 25 coins in materials.
 
-### Holy Writ
+\mysubsection{Holy Writ}{miracle-holy-writ}
 
 The word and the law of your Small God, written as seven sacred words known only to the faithful.  Only you and other members of your faith can see the words; to others, they look like random squiggles, strange designs, or "primitive" carvings.  Contained in the seven words is the performer of the Miracle, but you will need to make a successful Skill: Lore check to identify them unless you know them personally.   The Holy Writ only requires a single Faith.
 
 
 
-### Incorruptibility
+\mysubsection{Incorruptibility}{miracle-incorruptibility}
 
-Can only be performed on a corpse / someone who is already dead.  Incorruptibility stops a body from rotting.  The length of time depends on the number of Faith dice invested:  1 [die]: [sum] Days; 2-5 [dice]: [sum] Weeks; 6-9 [dice]: [sum] Years; 10+ dice: [sum] Centuries.  So long as the body remains on Hallowed ground, it does not decay in any way and cannot be targeted with any spells from the Necromancy paradigm.  If the body is removed from Hallowed ground, it will begin to decay as normal.
+Can only be performed on a corpse / someone who is already dead.  Incorruptibility stops a body from rotting.  The length of time depends on the number of Faith dice invested:  1 [die]: \SUMDICE Days; 2-5 \DICE: \SUMDICE Weeks; 6-9 \DICE: \SUMDICE Years; 10+ dice: \SUMDICE Centuries.  So long as the body remains on Hallowed ground, it does not decay in any way and cannot be targeted with any spells from the Necromancy paradigm.  If the body is removed from Hallowed ground, it will begin to decay as normal.
 
-### Proselytize
+\mysubsection{Proselytize}{miracle-proselytize}
 
 By invoking Proselytize, you can attempt to convert others to the faith of your Small God, or give willing congregants instruction in the ways of your religion.  
 
@@ -3144,46 +2864,48 @@ You can distribute no more than 1 of your Faith die to as many Mortals as you ch
 
 The effects vary depending on whether the congregant is willing, apathetic, or unwilling
 
-- Willing:  you give one of your Faith Die to the worshiper
-- Apathetic:  roll the Ritual Die; on a failure, the die is lost.  On success you have converted them - instead of giving your Faith Die to them, they gain one of their own
-- Unwilling:  the congregant gets a Save.  If they succeed, you lose 2 Faith Die (the original you tried to give them, plus one other).  If they fail, roll as "Apathetic" above - if you succeed in converting them, you gain +1 Faith
+\mylist {
+
+\item Willing:  you give one of your Faith Die to the worshiper
+\item Apathetic:  roll the Ritual Die; on a failure, the die is lost.  On success you have converted them - instead of giving your Faith Die to them, they gain one of their own
+\item Unwilling:  the congregant gets a Save.  If they succeed, you lose 2 Faith Die (the original you tried to give them, plus one other).  If they fail, roll as "Apathetic" above - if you succeed in converting them, you gain +1 Faith
+}
 
 Worshipers who have a Faith Die from you become your Disciple (see the Core Rules for details).
 
-### Sacred Mass
+\mysubsection{Sacred Mass}{miracle-sacred-mass}
 
-You can perform a sacred ceremony for [sum] others (excluding yourself).  Non-Mystics who indulge in a Sacred Mass are Blessed for the next Session.  If you are a Mysic of a different Small God then the miracle worker and partake in the Mass, you lose 2 Faith Die.  If you are the miracle worker, or a Mystic of the same Small God, you gain 1 Faith Die for every 10 people participating up to your {lvl}.
-
-
-
-
-### Sin Eating
-
-You can heal up to [dice] Spirit Wounds on yourself or others Nearby.
-
-
-
-### Tongues of Fire
-
-Up to [sum] people other than the Miracle Worker are affected.  Recipients of Tongues of Fire can speak (but not read) any Language they choose at will, and can command a single creature once per Session (see below).  The recipient can never lie while under the effects of Tongues of Flame.  Unwilling creatures get a Save.  This miracle lasts only for the Session (unless provided by Covenant)
-
-
-
-#### Command
-
-| | | | |
-|:----:|:----:|:----:|:----:|
-|**P**| Mind |**S**|  Y |
-|**D**| 0 |**X** |  n/a  |
-|**K**| None | |
-
-
-***T:**  Nearby creature*
-
-
-
-You shout a [dice] word command to the target, who must then carry it out if the fail a Save.  If the command would last more than a single Moment, the target gets a new Save at the beginning of each Moment.
+You can perform a sacred ceremony for \SUMDICE others (excluding yourself).  Non-Mystics who indulge in a Sacred Mass are Blessed for the next Session.  If you are a Mysic of a different Small God then the miracle worker and partake in the Mass, you lose 2 Faith Die.  If you are the miracle worker, or a Mystic of the same Small God, you gain 1 Faith Die for every 10 people participating up to your \LVL.
 
 
 
 
+\mysubsection{Sin Eating}{miracle-sin-eating}
+
+You can heal up to \DICE Spirit Wounds on yourself or others Nearby.
+
+
+
+\mysubsection{Tongues of Fire}{miracle-tongues-of-fire}
+
+Up to \SUMDICE people other than the Miracle Worker are affected.  Recipients of Tongues of Fire can speak (but not read) any Language they choose at will, and can command a single creature once per Session (see below).  The recipient can never lie while under the effects of Tongues of Flame.  Unwilling creatures get a Save.  This miracle lasts only for the Session (unless provided by Covenant)
+
+
+
+\LITURGY [
+  Name= Command,
+  Link=miracle-command,
+  Paradigm=Mind,
+  Save=Y,
+  Duration=0 ,
+  Counter= n/a  ,
+  Keywords=None ,
+  Target=Nearby creature
+]
+
+You shout a \DICE word command to the target, who must then carry it out if the fail a Save.  If the command would last more than a single Moment, the target gets a new Save at the beginning of each Moment.
+
+
+
+
+}%end

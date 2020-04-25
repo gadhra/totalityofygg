@@ -14,6 +14,10 @@ setup:
 	ln -sf ../leech.tex out/
 	ln -sf ../witch.tex out/
 	ln -sf ../sorcerer.tex out/
+	ln -sf ../mystic.tex out/
+	ln -sf ../spriggan.tex out/
+	ln -sf ../appendices.tex out/
+	ln -sf ../../thanks.tex out/
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=BellBookCandle -output-directory out bbc
 
