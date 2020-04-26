@@ -14,9 +14,9 @@
     
     <h1 class="title">Changelog</h1>
 
-    <div class="row" style="width:50%;margin-left:25%">
+    <div class="row changelog">
             {% for e in errata %}
-            <p>{{e}}</p>
+            {{e|raw}}
             {% endfor %}
     </div>
 <!-- twig: /content  -->

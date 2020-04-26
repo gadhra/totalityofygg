@@ -9,6 +9,7 @@
     $messages = [ 'success'=>[], 'error'=> [] ];
     import( [ 'Template' ] );
     $view = 'rules.html';
+    use Michelf\Markdown;
 
     // handle errata
 	$h = fopen( dirname(__FILE__) . '/../webroot/data/errata.txt', 'r' );
@@ -16,7 +17,7 @@
 	$i = 0;
 	while(! feof( $h ) ) {
 		$line = trim( fgets ($h ) );
-		$errata[] = $line;
+		$errata[] = Markdown::defaultTransform($line);
     }
 
 	fclose( $h );
