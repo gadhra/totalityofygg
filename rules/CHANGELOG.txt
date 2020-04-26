@@ -1,3 +1,4 @@
+2020-04-25: Moved "Classes and Flavors" to "Tropes and Flavors".  Broken the Fae out into "Species".  Nothing mechanical, just made organizing easier.
 2020-04-25: Changed level 3 Witch Ability "Third Eye" to Feyness to avoid conflict with Charm of same name.
 2020-04-25: Clarified the level 3 Sorcerer "spell crossing" ability (spell was supposed to be determined randomly, not be an actual cross of two spells!)  (thanks Javy!)
 2020-04-25: Clarified that a Hammerspace object cannot be put inside another Hammerspace object
