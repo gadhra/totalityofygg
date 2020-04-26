@@ -26,6 +26,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-cache/*
-config/load.php
-lib/vendor/*
+*/cache/*
+*/config/load.php
+*/lib/vendor/

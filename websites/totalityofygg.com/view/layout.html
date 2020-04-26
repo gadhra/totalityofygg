@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Totality of Ygg">
+    <meta name="author" content="gadhra">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
+
+
+    <!-- SkeletonCSS + Normalize and override-->
+    <link rel="stylesheet" href="/css/normalize.4.0.0.min.css" />
+    <link rel="stylesheet" href="/css/skeleton.2.0.4.min.css" />
+    <link rel="stylesheet" href="/css/skeleton-alerts.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+   
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="css/github-prettify-theme.css">
+    <script src="js/site.js"></script>
+
+
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>  

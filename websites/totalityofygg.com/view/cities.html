@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}ToY : The Rules{% endblock %}
+
+{% block content %}
+{% include "navigation.html" %}
+<!-- twig: content  -->
+<div class="example-section">
+    <div class="row">
+	<div class="three columns">&nbsp;</div>
+	<div class="three columns">
+	<h1 class="title">Cities</h1>
+
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Population</th>
+      <th>State</th>
+      <th>Province</th>
+      <th>Culture</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for city in cities %}
+    <tr>
+      <td>{{city.city}}</td>
+      <td>{{city.size}}</td>
+      <td>~{{city.population}}</td>
+      <td>{{city.state}}</td>
+      <td>{{city.province}}</td>
+      <td>{{city.culture}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+	</div>
+	<div class="three columns">&nbsp;</div>
+    </div>
+</div>
+
+<!-- twig: /content  -->
+{% include "footer.html" %}
+{% endblock %}

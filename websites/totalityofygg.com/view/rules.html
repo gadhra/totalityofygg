@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}ToY : The Rules{% endblock %}
+
+{% block content %}
+{% include "navigation.html" %}
+<!-- twig: content  -->
+    <div class="row" style="text-align:center;">
+	    <h1 class="title">Rules (Beta)</h1>
+	    <ul>
+	        <li><a href="https://drive.google.com/open?id=16DmjeIEYh1LS8Sj7RXac7XFSpvnjPQ6x" target="_new">Totality of Ygg Core Rules</a></li>
+	        <li><a href="https://drive.google.com/open?id=1bTgV_8_xLqdhoO9NrDp-TMKL9oNtkZUs" target="_new">Bell, Book, &amp; Candle (Spells and Magic)</a></li>
+	    </ul>
+	</div>
+    
+    <h1 class="title">Changelog</h1>
+
+    <div class="row" style="width:50%;margin-left:25%">
+            {% for e in errata %}
+            <p>{{e}}</p>
+            {% endfor %}
+    </div>
+<!-- twig: /content  -->
+{% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}ToY : The Rules{% endblock %}
+
+{% block content %}
+{% include "navigation.html" %}
+<!-- twig: content  -->
+<div class="example-section">
+    <div class="row">
+        <div class="three columns">
+            <h4>Classes</h4>
+        <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/gadhra/the-totality-of-ygg-beta-rules/"></a>
+        </div>
+        <div class="three columns">
+            <h4>Cities</h4>
+            <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/gadhra/legiolum-corvus/"></a>
+        </div>
+        <div class="three columns">
+            <h4>The Veins</h4>
+            <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/gadhra/the-spiraling-black/"></a>
+        </div>
+        <div class="three columns">
+            <h4>Elfland</h4>
+            <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/gadhra/the-great-wood/"></a>
+        </div>
+	</div>
+</div>
+
+<!-- twig: /content  -->
+{% include "footer.html" %}
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+{% endblock %}
