@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Monsters{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Monsters</h2>
+</section>
+<div class="container">
+<a href="/bbc/monsters/text">GM Binder Format</a> | <a href="/bbc/monsters/json">JSON format</a>
+
+    {% for type, monster in monsters %}
+    <div class="row">
+    <strong>{{ type }}</strong>
+    </div>
+    {% for e in monster %} 
+    <div class="row">
+{{loop.index}}. <a href="/bbc/monsters/{{e.id}}">{{ e.Name }}</a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

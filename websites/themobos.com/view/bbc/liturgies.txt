@@ -1,0 +1,24 @@
+{% for k,v in liturgies %}
+
+### {{ k }}
+
+
+{% for liturgy in v.liturgies %}
+
+<div class="block-spell">
+
+#### {{ liturgy.name }}
+
+| | | | |
+|:----:|:----:|:----:|:----:|
+|**P**| {{ liturgy.paradigm }} |**S**|  {{liturgy.save }} |
+|**D**| {{ liturgy.duration }} |**X** |  {{ liturgy.counterliturgy | default('n/a' ) }}  |
+
+***T:**   {{ liturgy.target }}*
+
+</div>
+
+{{ liturgy.description }}
+
+{% endfor %}
+{% endfor %}

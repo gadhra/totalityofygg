@@ -1,0 +1,92 @@
+field[0] = house
+field[1] = power
+field[2] = secret
+field[3] = leader
+field[4] = stronghold
+field[5] = wealth
+field[6] = allies
+output[0]="House: %s<br />Source of Power: %s<br />Secret: %s<br />Leader: %s<br />Stronghold: %s<br />Wealth: %s<br />Dubious Allies: %s|house|power|secret|leader|stronghold|wealth|allies"
+
+[house]
+value[]="Adelphus"
+value[]="Cavendish"
+value[]="Cromlech"
+value[]="Crowley"
+value[]="Gladstone"
+value[]="Herpetou"
+value[]="Lascelle"
+value[]="Prestor"
+value[]="Salazar"
+value[]="Savile"
+
+[power]
+value[]="Ties to the Church"
+value[]="Sheer privilege"
+value[]="Scholarly talent"
+value[]="Organized crime"
+value[]="Ties to government"
+value[]="Military might"
+value[]="Sorcery"
+value[]="Popular support"
+value[]="Banking"
+value[]="Business"
+
+[secret]
+value[]="Bound to a demon by pacts most ancient and foul"
+value[]="Caper and cavort in wicked midnight bacchanals"
+value[]="Dream every night of mighty conflagration and unending flood"
+value[]="Prophesied to bring about terrible catastrophe"
+value[]="Ruled by a cabal of vampires"
+value[]="Plan to overturn the rightful ruler of the land"
+value[]="Participating in a conspiracy of centennial length and ecumenical proportions"
+value[]="Desire to resurrect their inhuman clan progenitor"
+value[]="Bloodline bears a terrible disease"
+value[]="Patriarch is actually a woman"
+
+[leader]
+value[]="Ruled by grotesque appetites and uncanny predilections"
+value[]="Cheerfully inbred moron"
+value[]="Avuncular, seasoned statesman; loves him some prostitutes"
+value[]="Oscillates between kindly pragmatism and frothing psychopathy"
+value[]="Megalomaniacal genius with childlike sensibilities"
+value[]="Child kept on short leash by manipulative handlers"
+value[]="Seized by Byronic melancholy; addicted to opium; writes terrible poetry"
+value[]="A sorcerer of prodigious talent and boundless ambition"
+value[]="Saintly sense of morals with sinister bearing; is squeaky clean despite everyone's suspicions"
+value[]="Innumerable public affairs make for endless rumor-mill grist; loathed by spouse"
+
+[stronghold]
+value[]="Gilt palace riddled with chapels"
+value[]="Decrepit manor surrounded by toiling peasants"
+value[]="Frigid northern castle"
+value[]="Contemporary urban estate"
+value[]="Dour converted abbey"
+value[]="Imposing mountain fortress"
+value[]="Gothic monstrosity out in the forest"
+value[]="Rococo abomination"
+value[]="Classical lakeside villa"
+value[]="Sepulcral subterranean complex"
+
+[wealth]
+value[]="Valuable but illiquid holdings"
+value[]="Wealthy, but not for long"
+value[]="Massive reserves, little income"
+value[]="Steady cash flow"
+value[]="Middling wealth, lots of embezzlement"
+value[]="Razor thin margins"
+value[]="Impoverished"
+value[]="Nobody's sure, exactly"
+value[]="Incalculably wealthy"
+value[]="Make a lot, spend a lot"
+
+[allies]
+value[]="Elite mercenaries wearing crow's head helmets"
+value[]="The Beldame, a virtuoso assassin with a thing for needles"
+value[]="The Magus Bashool, a necromancer of questionable loyalties and troubling ethics"
+value[]="Pack of half-starved, semi-trained, and uncannily sapient wolves"
+value[]="Red Madama, an insane butterfly demon "
+value[]="King of Knots, gallows-spirit and malign ghost of a long dead monarch"
+value[]="Rompa, shark-toothed sea giant who has power over ice"
+value[]="Trugulore and Choss, Attorneys-At-Brawl"
+value[]="No-Face Man, can crawl through mirrors and dreams"
+value[]="Unnamed rogue angel; once held power over mercy, now seriously reconsidering"

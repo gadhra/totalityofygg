@@ -1,0 +1,13 @@
+<pre>
+{% for spell in mysteries %}
+#### {{ spell.name }}
+---
+- **P:** {{spell.paradigm}} **T:** {{spell.target }}
+- **D:** {{spell.duration}} **K:** {{spell.keywords }} **S:** {% if spell.save %}Y{%else%}N{%endif%}
+
+---
+{{spell.description}}
+
+{% endfor %}
+
+</pre>

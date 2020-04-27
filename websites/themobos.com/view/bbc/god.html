@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}God{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Small God Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/gods">Back to Gods</a>
+
+    
+		<form id="gods" method="post" action="/bbc/gods">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{gods.gid}}" />
+		{{ forms.text( 'name', 'name', 'name', '', '', gods.name ) }}
+		{{ forms.text( 'sphere', 'sphere', 'sphere', '', '', gods.sphere ) }}
+		{{ forms.textarea( 'holy_symbol', 'holy_symbol', 'holy_symbol',  '', gods.holy_symbol ) }}
+		{{ forms.textarea( 'invocation', 'invocation', 'invocation',  '', gods.invocation ) }}
+		{{ forms.textarea( 'liturgy', 'liturgy', 'liturgy',  '', gods.liturgy ) }}
+
+		
+        {{ forms.submit}}        
+        
+    </form>
+   
+ </div>
+
+{% endblock %}

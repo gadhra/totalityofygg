@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Spells List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spells</h2>
+</section>
+<div class="container">
+<a href="/bbc/spells/gmbinder">GM Binder Format</a> | <a href="/bbc/spells/json">JSON format</a>
+
+    {% for spell in spells %}
+    <div class="row">
+{{loop.index}}. <a href="/bbc/spells/{{spell.id}}">{{ spell.name }}</a>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

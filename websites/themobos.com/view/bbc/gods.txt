@@ -1,0 +1,44 @@
+<pre>
+{% for throne in thrones %}
+### {{ throne.name }}
+
+<div style="border:1px solid #c9ad6a; padding:10px; margin-bottom: 10px; text-align: center">
+
+{{ throne.description }}
+
+</div>
+
+#### Blessings
+
+{{ throne.benefit }}
+
+#### Interdictions
+| | |
+|:--:|:---------------:|
+| Armor | {{ throne.armor }} |
+| Helmet | {{ throne.helmet }} |
+| Shield | {{ throne.shield }} |
+| Weapon | {{ throne.weapon }} |
+
+<hr class="main-break" />
+{% for god in throne.gods %}
+
+#### {{ god.name }}
+*{{ god. sphere }}*
+
+---
+The Holy Symbol of {{ god.name }} is {{ god.holy_symbol }}
+
+##### First Invocation
+
+{{ god.invocation }}
+
+##### First Liturgy
+
+{{ god.liturgy }}
+
+<div class="sub-break"></div>
+
+{% endfor %}
+{% endfor %}
+</pre>

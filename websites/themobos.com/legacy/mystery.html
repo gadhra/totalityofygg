@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block title %}Spell{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spell Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/mysteries">Back to Mysteries</a>
+
+    <form id="spells" method="post" action="/bbc/mysteries">
+    {{ forms.select( 'spells', 'spell_id', 'Select Spell', spells, mystery.id ) }}
+    </form>
+
+<hr />
+    
+    {% if mystery %}
+		<form id="mystery" method="post" action="/bbc/mysteries">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{mystery.id}}" />
+		{{ forms.text( 'name', 'name', 'Name', '', '', mystery.name ) }}
+		{{ forms.select_from_array( 'paradigm', 'paradigm', 'Paradigm', paradigms, mystery.paradigm ) }}
+		{{ forms.text( 'target', 'target', 'Target', '', '', mystery.target ) }}
+		{{ forms.text( 'duration', 'duration', 'Duration', '', '', mystery.duration ) }}
+		{{ forms.text( 'keywords', 'keywords', 'Keywords', '', '', mystery.keywords ) }}
+		{{ forms.textarea( 'description', 'description', 'Description', '', mystery.description ) }} 
+		{{ forms.checkbox( 'Saving Throw?', 'getSave', 1, mystery.save ) }}
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+<!-- twig: /content  -->
+<script type="text/javascript">
+    $("#spells").change(function() {
+        $('form#spells').submit();
+    });
+    
+</script>
+
+{% endblock %}

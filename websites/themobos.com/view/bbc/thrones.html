@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Thrones List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Thrones</h2>
+</section>
+<div class="container">
+<a href="/bbc/thrones/gmbinder">GM Binder Format</a> | <a href="/bbc/thrones/json">JSON format</a>
+
+    {% for throne in thrones %}
+    <div class="row">
+{{loop.index}}. <a href="/bbc/thrones/{{throne.id}}">{{ throne.throne }}</a>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

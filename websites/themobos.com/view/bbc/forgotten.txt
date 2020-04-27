@@ -1,0 +1,12 @@
+<pre>
+{% for origin, entity in forgotten %}
+{% for e in entity %}
+
+#### {{e.name}} ({{origin}})
+{{ e.description }}
+
+{% endfor %}
+
+{% endfor %}
+
+</pre>

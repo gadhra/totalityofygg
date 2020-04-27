@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Keyword{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Keyword Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/keywords">Back to Keywords</a>
+
+<hr />
+    
+		<form id="spell" method="post" action="/bbc/keywords">
+		<input type="hidden" name="action" value="keyword" />
+		<input type="hidden" name="id" value="{{keyword.id}}" />
+		{{ forms.text( 'name', 'name', 'Name', '', '', keyword.name ) }}
+		{{ forms.textarea( 'description', 'description', 'Description', '', keyword.description ) }} 
+        {{ forms.submit}}        
+        
+    </form>
+   
+ </div>
+
+<!-- twig: /content  -->
+<script type="text/javascript">
+    $("#spells").change(function() {
+        $('form#spells').submit();
+    });
+    
+</script>
+
+{% endblock %}

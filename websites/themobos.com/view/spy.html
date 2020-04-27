@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}The Totally Sweet Spy NameGenerator{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+{% block content %}
+{% include "navigation.html" %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spy Name Generator (Dudes Only)</h2>
+</section>
+
+<div class="container">
+        <div class="row">
+        <div class="four columns">&nbsp;</div>
+        <div class="eight columns">
+
+        <div id="namegen">
+            <ul>
+                <li v-for="item in names">
+                        ${ item }
+                </li>
+            </ul>
+            <button v-on:click="gen($event,'spy')" class="button-primary">Handle It!</button>
+        </div>
+        </div>
+        </div>
+
+ </div>
+<!-- twig: /content  -->
+{% endblock %}

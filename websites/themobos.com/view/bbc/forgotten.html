@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Spells List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spells</h2>
+</section>
+<div class="container">
+<a href="/bbc/forgotten/text">GM Binder Format</a> | <a href="/bbc/forgotten/json">JSON format</a>
+
+    {% for origin, entity in forgotten %}
+    <div class="row">
+    <strong>{{ origin}} ({{ entity|length }})</strong>
+    </div>
+    {% for e in entity %} 
+    <div class="row">
+{{loop.index}}. <a href="/bbc/forgotten/{{e.id}}">{{ e.name }}</a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

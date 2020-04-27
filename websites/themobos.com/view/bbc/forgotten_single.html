@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}Spell{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spell Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/forgotten">Back to Forgotten</a>
+
+    
+    {% if forgotten %}
+		<form id="forgotten" method="post" action="/bbc/forgotten">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{forgotten.id}}" />
+		{{ forms.text( 'name', 'name', 'Name', '', '', forgotten.name ) }}
+		{{ forms.textarea( 'description', 'description', 'Description', '', forgotten.description ) }} 
+		{{ forms.select_from_array( 'origin', 'origin', 'Origins', origin, forgotten.origin ) }}
+
+		{% for keyword in keywords %}
+		{% if keyword.id in kw_checked %}
+                {{ forms.checkbox( keyword.name, 'keyword', keyword.id, 1  ) }}
+		{% else %}
+		{{ forms.checkbox( keyword.name, 'keyword', keyword.id, 0  ) }}
+		{% endif %}
+		{% endfor %}
+
+		
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+{% endblock %}

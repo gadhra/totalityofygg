@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Login</h2>
+</section>
+<div class="container">
+    {% if messages.error %}
+    <p class="alert alert-error">
+        {% for error in messages.error %}
+        {{ error }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+       <form method="post">
+        {{ forms.text( 'username', 'u', 'username','username' ) }}
+        {{ forms.text( 'password', 'p', 'password','password' ) }}
+        {{ forms.submit}}
+    </form>
+</div>
+
+<!-- twig: /content  -->
+
+
+{% endblock %}

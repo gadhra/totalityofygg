@@ -1,0 +1,28 @@
+<pre>
+{% for type, monster in monsters %}
+
+### {{ type }}
+
+> {{ types[type].description }}
+
+{% for m in monster %}
+
+#### {{m.Name}}
+---
+- **Mv:** {{ m.MV }} **Wk:** {{m.WK}} **Dmg:** {{m.DMG}} {{m.RNG}}
+- **{hd}:** {{ m.HIT }} ({{m.POWER}}) [{{m.SOAK}}] 
+- **Morale:** {{m.MORALE}}  **Save:** {{m.SAVE}}
+---
+{% if m.Atts != '' %}
+*{{m.Atts}}*
+{% endif %}
+
+{{m.notes }}
+{% endfor %}
+
+
+
+{% endfor %}
+
+
+</pre>

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}Cities{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">City Editor</h2>
+</section>
+<div class="container">
+    <form id="citylist" method="post">
+    {{ forms.select( 'city', 'cityId', 'Select City', cities, cityId ) }}
+    </form>
+    
+    {% if city %}
+    <hr />
+    <h4>{{ city.name }}</h4>
+    <h5>Level {{city.level}} </h5>
+    
+        <form id="city" method="post">
+        <input type="hidden" name="action" value="save" />
+        <input type="hidden" name="cityId" value="{{city.id}}" />
+        {{ forms.text( 'population', 'population', 'Population', '', '', city.population ) }}
+        {{ forms.text( 'xp', 'xp', 'XP', '', '', city.xp ) }}
+        {{ forms.text( 'neighborhoods', 'neighborhoods' ,'Neighborhoods', '', '', city.neighborhoods ) }}
+        {{ forms.text( 'leader', 'leader' ,'Leader', '', '', city.leader ) }}
+        {{ forms.textarea( 'landmarks', 'landmarks' ,'Landmarks', '', city.landmarks ) }}
+        <p><em>landmarks are one per line in the following format: category,chance,number</em></p>
+
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+<!-- twig: /content  -->
+<script type="text/javascript">
+    $("#city").change(function() {
+        $('form#citylist').submit();
+    });
+    
+</script>
+
+{% endblock %}
