@@ -1,6 +1,6 @@
 ## [v.2.0.beta] - 2020-04-25
 ### Added
-- Clarified that a Hammerspace object cannot be put inside another Hammerspace object
+- Clarified that a Hammerspace object cannot be put inside another Hammerspace object to avoid a Bagworld scenario
 - Added new Witch Necromancy spells: Exploding Corpse and Zombie Warrior.  Reduced the difficulty of casting Zombie Slave spell. (thanks Lou!)
 - Spriggan restore a Remembrance die during a Bivouac.  Spriggan use Awareness for Combat (thanks Anastasia!)
 - Added in Init rules for fighting monsters with different init types (thanks Javy!)
@@ -8,9 +8,11 @@
 - Added Veins of the Earth explanation and link
 - Added section on hirelings under equipment
 
-### Removed
+### Changed
 - Rewrote rulesets in LaTeX, repo at [github](https://github.com/gadhra/totalityofygg).  Created table of contents and thank you pages.  New layouts for pages
-- Moved "Classes and Flavors" to "Tropes and Flavors".  Broken the Fae out into "Species".  Nothing mechanical, just made organizing easier.
+- Moved "Classes and Flavors" to "Tropes and Flavors".  Broken the Fae out into "Species".  Combined the Flavors under the Tropes. Nothing mechanical, hopefully reads easier. (thanks Rob!)
+- Copied Blood, Mojo, Knowledge, Grace, Faith, and Remembrance charts to start of appropriate sections in BBC.
+- Broke out section on Advancement (thanks Eric!)
 - Changed level 3 Witch Ability "Third Eye" to Feyness to avoid conflict with Charm of same name.
 - Clarified the level 3 Sorcerer "spell crossing" ability (spell was supposed to be determined randomly, not be an actual cross of two spells!)  (thanks Javy!)
 - Witch starting Mojo moved to d8 (thanks Lou!)
