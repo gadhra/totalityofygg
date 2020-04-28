@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Goods List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Goods</h2>
+</section>
+<div class="container">
+    {% for place, good in goodslist %}
+    <div class="row">
+        <h4>{{ place }}</h4>
+        <ul>
+            <li>Barter: {{good.barter}}</li>
+            <li>Money: {{good.money}} sil.</li>
+            <li>Inventory
+                <ul>
+                    {% for obj in good.inventory %}
+                    <li>{{obj.item}} - {{obj.cost}}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

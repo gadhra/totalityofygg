@@ -1,0 +1,38 @@
+{% macro text( id, name, label, type, placeholder, value ) %}
+<label for="{{ id }}">{{ label }}</label>
+<input id="{{id}}" name="{{name}}" class="u-full-width" type="{{ type|default('text') }}" placeholder="{{ placeholder }}" value="{{value}}" />
+{%endmacro%}
+
+
+{% macro select( id, name, label, options, selected ) %}
+<label for="{{ id }}">{{ label }}</label>
+    <select id="{{ id }}" name="{{name}}" class="u-full-width">
+        <option disabled selected></option>
+        {% for option in options %}
+        <option value="{{ option.id }}"{% if option.id == selected %} selected="selected"{% endif %}>{{ option.name }}</option>
+        {% endfor %}
+
+
+    </select>
+{% endmacro %}
+
+{% macro textarea( id, name, label, placeholder, content) %}
+<label for="{{ id }}">{{ label }}</label>
+<textarea id="{{id}}" name="{{name}}" class="u-full-width" placeholder="{{placeholder}}">{{ content }}</textarea>
+{% endmacro %}
+
+{% macro radio() %}
+foo
+{%endmacro%}
+
+{%macro checkbox(label,name, value,checked) %}
+<label class="">
+    <input type="checkbox" name="{{name}}[]" value="{{value}}"{%if checked%}checked="checked"{%endif%}>
+    <span class="label-body">{{label}}</span>
+  </label>
+{%endmacro%}
+
+
+{% macro submit(class, value) %}
+<input class="{{class|default('button-primary')}}" type="submit" value="{{value|default('submit')}}" />
+{% endmacro %}

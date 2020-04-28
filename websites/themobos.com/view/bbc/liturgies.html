@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Liturgies List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Liturgies</h2>
+</section>
+<div class="container">
+<a href="/bbc/liturgies/gmbinder">GM Binder Format</a> | <a href="/bbc/liturgies/json">JSON format</a>
+
+    {% for liturgies in liturgies %}
+    <div class="row">
+{{loop.index}}. <a href="/bbc/liturgies/{{liturgies.id}}">{{ liturgies.name }}</a>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

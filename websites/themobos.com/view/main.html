@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}The Mobos{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<div class="example-section">
+    <div class="row">
+        <div class="six columns"><img src="/img/theMobos.png" /></div>
+        <div class="six columns">
+		<div class="section links">
+			<div class="container">	
+				<div class="row">
+					<h4>Generators</h4>
+            				<ul>
+                				<li><a href="/ecng">The E.C.N.G. (Eric Coumbe Name Generator)</a></li>
+						<li><a href="/spy">The Spy Name Generator (Dudes)</a></li>
+						<li><a href="/meatshields">Meatshield Generator</a></li>
+						<li><a href="/spells">OSR Spell Name Generator</a></li>
+						<li><a href="/lastgasp">Last Gasp generators</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        </div>
+    </div>
+</div>
+
+<!-- twig: /content  -->
+{% include "footer.html" %}
+{% endblock %}

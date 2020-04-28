@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}Monster{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Monster Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/monsters">Back to Monsters</a>
+
+    
+		<form id="monster" method="post" action="/bbc/monsters">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{monsters.id}}" />
+		{{ forms.text( 'Name', 'Name', 'Name', '', '', monsters.Name ) }}
+		{{ forms.text( 'Type', 'Type', 'Type', '', '', monsters.Type ) }}
+		{{ forms.text( 'MV', 'MV', 'MV', '', '', monsters.MV ) }}
+		{{ forms.text( 'WK', 'WK', 'WK', '', '', monsters.WK ) }}
+		{{ forms.text( 'DMG', 'DMG', 'DMG', '', '', monsters.DMG ) }}
+		{{ forms.text( 'RNG', 'RNG', 'RNG', '', '', monsters.RNG ) }}
+		{{ forms.text( 'HIT', 'HIT', 'HIT', '', '', monsters.HIT ) }}
+		{{ forms.text( 'POWER', 'POWER', 'POWER', '', '', monsters.POWER ) }}
+		{{ forms.text( 'SOAK', 'SOAK', 'SOAK', '', '', monsters.SOAK ) }}
+		{{ forms.text( 'MORALE', 'MORALE', 'MORALE', '', '', monsters.MORALE ) }}
+		{{ forms.text( 'SAVE', 'SAVE', 'SAVE', '', '', monsters.SAVE ) }}
+		{{ forms.text( 'Atts', 'Atts', 'Atts', '', '', monsters.Atts ) }}
+		{{ forms.textarea( 'notes', 'notes', 'notes', '', monsters.notes ) }} 
+
+		
+        {{ forms.submit}}        
+        
+    </form>
+   
+ </div>
+
+{% endblock %}

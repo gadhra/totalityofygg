@@ -1,0 +1,18 @@
+{% for spell in spells %}
+
+<div class="block-spell">
+
+#### {{ spell.name }}
+
+| | | | |
+|:----:|:----:|:----:|:----:|
+|**P**| {{ spell.paradigm }} |**S**|  {{spell.save }} |
+|**D**| {{ spell.duration }} |**X** |  {{ spell.counterspell | default('n/a' ) }}  |
+
+***T:**   {{ spell.target }}*
+
+</div>
+
+{{ spell.description }}
+
+{% endfor %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}Liturgy{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Liturgy Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/liturgies">Back to Liturgys</a>
+
+    
+    {% if liturgy %}
+		<form id="liturgy" method="post" action="/bbc/liturgies">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{liturgy.id}}" />
+		{{ forms.text( 'name', 'name', 'Name', '', '', liturgy.name ) }}
+                {{ forms.select( 'gods', 'god_id', 'God', gods, liturgy.god_id ) }}
+		{{ forms.select_from_array( 'paradigm', 'paradigm', 'Paradigm', paradigms, liturgy.paradigm ) }}
+		{{ forms.text( 'target', 'target', 'Target', '', '', liturgy.target ) }}
+		{{ forms.text( 'duration', 'duration', 'Duration', '', '', liturgy.duration ) }}
+		{{ forms.text( 'save', 'save', 'Save', '', '', liturgy.save ) }}
+		{{ forms.textarea( 'description', 'description', 'Description', '', liturgy.description ) }} 
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+<!-- twig: /content  -->
+<script type="text/javascript">
+    $("#liturgies").change(function() {
+        $('form#liturgies').submit();
+    });
+    
+</script>
+
+{% endblock %}

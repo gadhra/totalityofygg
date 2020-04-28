@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Gods{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Gods</h2>
+</section>
+<div class="container">
+<a href="/bbc/gods/text">GM Binder Format</a> | <a href="/bbc/gods/json">JSON format</a>
+
+    {% for throne in thrones %}
+    <div class="row">
+    <strong>{{ throne.name }}</strong>
+    </div>
+    {% for e in throne.gods %} 
+    <div class="row">
+{{loop.index}}. <a href="/bbc/gods/{{e.gid}}">{{ e.name }} - {{e.sphere}} {% if 'cast the following' in e.liturgy %}</a>  [spells]{% endif %}
+    </div>
+    {% endfor %}
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

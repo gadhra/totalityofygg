@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Metropolis{% endblock %}
+
+{% block content %}
+<style>
+    .row { padding:10px;}
+</style>
+
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">The Foo of Bar</h2>
+</section>
+<div class="container">
+    {% for area, street in streets %}
+
+    <div class="row"{% if loop.index is divisibleby(2) %}style="background-color:#D4EE9F"{% endif %}>
+        <div class="six columns" style="border-right: 1px solid grey;">
+            <h3>Area #{{area}}</h3>
+            <strong>Exits</strong>  
+            <ul>
+                {% for exit in street.links %}
+                <li>{{exit}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="six columns">
+            <ul>
+            {% for building in street.buildings %}
+            <li><strong>{{building.name}} ({{building.category}})</strong></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}  
+  
+ 

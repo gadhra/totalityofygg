@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}Spells List{% endblock %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Spells</h2>
+</section>
+<div class="container">
+<div class="row">
+<a href="/bbc/keywords/new">Add New</a>
+
+    {% for keyword in keywords %}
+    <div class="row">
+{{loop.index}}. <a href="/bbc/keywords/{{keyword.id}}">{{ keyword.name }}</a>
+    {% endfor %}
+ </div>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}Last Gasp Generator(s){% endblock %}
+
+{% block content %}
+{% include "navigation.html" %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Last Gasp Generators</h2>
+    <p>I grabbed these from the amazing <a href="https://www.lastgaspgrimoire.com/generators/choose-your-own-generator/">Last Gasp Grimoire</a></p>
+</section>
+<div class="container">
+	<div class="row">
+	<div class="four columns">&nbsp;</div>
+	<div class="eight columns">
+	
+	<div id="namegen">
+	    <ul>
+                <li v-for="item in names" v-html="item">
+                        ${ item }
+                </li>
+            </ul>
+	    <div class="row">
+	    <button v-on:click="gen($event,'lg_occupations', 1)" class="button-primary">Corvus: Random Occupation</button>
+	    </div>
+	    <div class="row">
+	    <button v-on:click="gen($event,'lg_fashions', 1)" class="button-primary">Corvus: Random Fashion</button>
+	    </div>
+            <div class="row">
+            <button v-on:click="gen($event,'lg_brothels', 5)" class="button-primary">Corvus: Random Brothels (5)</button>
+            </div>
+
+            <div class="row">
+            <button v-on:click="gen($event,'lg_noblehouses', 1)" class="button-primary">Corvus: Noble House</button>
+            </div>
+
+	</div>
+	</div>
+	</div>
+   
+ </div>
+<!-- twig: /content  -->
+{% endblock %}

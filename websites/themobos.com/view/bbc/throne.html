@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Throne{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Throne Editor</h2>
+</section>
+<div class="container">
+
+    {% if messages.success %}
+    <p class="alert alert-success">
+        {% for msg in messages.success %}
+        {{ msg }}<br />
+        {% endfor %}
+    </p>
+    {% endif %}
+
+<a href="/bbc/thrones">Back to Thrones</a>
+
+<hr />
+    
+    {% if throne %}
+		<form id="throne" method="post" action="/bbc/thrones">
+		<input type="hidden" name="action" value="save" />
+		<input type="hidden" name="id" value="{{throne.id}}" />
+		{{ forms.textarea( 'benefit', 'benefit', 'Benefit', '', throne.benefit ) }}
+		{{ forms.textarea( 'restrictions', 'restrictions', 'Restrictions', '', throne.restrictions  ) }}
+		{{ forms.textarea( 'description', 'description', 'Description', '', throne.description ) }} 
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+{% endblock %}

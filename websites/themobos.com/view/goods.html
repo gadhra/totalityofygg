@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}Goods{% endblock %}
+{% import "macros/forms.html" as forms %}
+
+{% block content %}
+<!-- twig: content  -->
+<section class="header">
+    <h2 class="title">Goods Editor</h2>
+</section>
+<div class="container">
+    <form id="goodlist" method="post">
+    {{ forms.select( 'goods', 'goodId', 'Select Goods', goods, goodId ) }}
+    </form>
+    
+    
+    {% if good %}
+    <h4>{{ city.good }}</h4>
+    
+        <form id="good" method="post">
+        <input type="hidden" name="action" value="save" />
+        <input type="hidden" name="goodId" value="{{good.id}}" />
+        <h6>Link to building(s)</h6>
+        <table>
+            <tr>
+        {% for building in buildings %}
+            <td>{{ forms.checkbox( building.name, 'building_link', building.id, building.checked )}}</td>
+                {% if loop.index is divisible by(5) %}
+            </tr><tr>
+            {%endif %}
+        {% endfor %}
+            </tr>
+        </table>
+        {{ forms.submit}}        
+        
+    </form>
+    {% endif %}
+   
+ </div>
+
+<!-- twig: /content  -->
+<script type="text/javascript">
+    $("#goods").change(function() {
+        $('form#goodlist').submit();
+    });
+    
+</script>
+
+{% endblock %}
