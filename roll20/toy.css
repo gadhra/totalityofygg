@@ -222,13 +222,147 @@ input[type=number] {
 }
 
 /*this hides the contents of each tab by default*/
-div[class="sheet-row sheet-barbarian"],
-div[class="sheet-row sheet-soldier"] {  
-  border: 1px solid red;
+.charsheet div[class="sheet-1colrow sheet-barbarian"],
+.charsheet div[class="sheet-1colrow sheet-soldier"],
+.charsheet div[class="sheet-1colrow sheet-archaeologist"],
+.charsheet div[class="sheet-1colrow sheet-bravo"],
+.charsheet div[class="sheet-1colrow sheet-leech"],
+.charsheet div[class="sheet-1colrow sheet-sorcerer"],
+.charsheet div[class="sheet-1colrow sheet-mystic"],
+.charsheet div[class="sheet-1colrow sheet-witch"],
+.charsheet div[class="sheet-1colrow sheet-murk"],
+.charsheet div[class="sheet-1colrow sheet-spriggan"],
+.charsheet div[class="sheet-1colrow sheet-night_child"],
+.charsheet div[class="sheet-1colrow sheet-pooka"]
+
+{  
+  display: none !important;
 }
 
+.sheet-isBarbarian:checked ~ .sheet-barbarian {
+  display: block !important;
+}
 
+.sheet-isSoldier:checked ~ .sheet-soldier {
+  display: block !important;
+}
 
-.sheet-isBarbarian:checked ~ .sheet-row > .sheet-barbarian {
-  border:1px solid blue;
+.sheet-isArchaeologist:checked ~ .sheet-archaeologist {
+  display: block !important;
+}
+
+.sheet-isBravo:checked ~ .sheet-bravo {
+  display: block !important;
+}
+
+.sheet-isLeech:checked ~ .sheet-leech {
+  display: block !important;
+}
+
+.sheet-isSorcerer:checked ~ .sheet-sorcerer {
+  display: block !important;
+}
+
+.sheet-isMystic:checked ~ .sheet-mystic {
+  display: block !important;
+}
+
+.sheet-isWitch:checked ~ .sheet-witch {
+  display: block !important;
+}
+
+.sheet-isMurk:checked ~ .sheet-murk {
+  display: block !important;
+}
+
+.sheet-isSpriggan:checked ~ .sheet-spriggan {
+  display: block !important;
+}
+
+.sheet-isNightChild:checked ~ .sheet-night_child {
+  display: block !important;
+}
+
+.sheet-isPooka:checked ~ .sheet-pooka {
+  display: block !important;
+}
+/* Smaller margins - remove these if you want the huge default left margin */
+.sheet-rolltemplate-custom {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-custom {
+  margin-left: -7px;
+}
+
+.sheet-rolltemplate-custom .sheet-container {
+  border: 1px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: black;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-custom .sheet-header {
+  background-color: #a0a0a0;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+.sheet-rolltemplate-custom .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-custom .sheet-subtitle {
+  font-size:.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-custom .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-red {
+  --header-bg-color: #F00;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-green {
+  --header-bg-color: #0F0;
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-custom .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-custom .sheet-content > div {
+  padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-custom .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Empty rule, use this if you want to change the right column 
+.sheet-rolltemplate-custom .sheet-value {
+}
+*/
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-custom .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
 }
