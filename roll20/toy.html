@@ -869,7 +869,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d10</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d10]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d10]]}}"></button></td>
                         </tr>
                         <tr>
 
@@ -915,7 +915,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d10</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d10]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d4]]}}"></button></td>
                         </tr>
                         <tr>
 
@@ -963,7 +963,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d8</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d8]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d8]]}}"></td>
                         </tr>
                         <tr>
                             <td><strong>Current Luck Die:</strong>
@@ -1065,7 +1065,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d8</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d8]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d8]]}}"></button></td>
                         </tr>
                         <tr>
                             <td><strong>Current Luck Die:</strong>
@@ -1161,7 +1161,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d6</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d6]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d6]]}}"></button></td>
                         </tr>
                         <tr>
                             <td><strong>Knowledge Die:</strong></td>
@@ -1295,22 +1295,40 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d6</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d6]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d6]]}}"></button></td>
                         </tr>
                     </table>
                     <h3>Blood Die</h3>
                     <table class="sheet-attributeTable">
-                        <td>Current</td><td><input type="number" name="attr_blood" value="0"/></td>
-                        <td>Max</td><td><input type="number" name="attr_blood_max" value="0"/></td>
+                        <td>Current</td><td><input type="number" name="attr_blood" value="0"/>d6</td>
+                        <td>Max</td><td>
+                          <select name="attr_knowledge_modifier" class="sheet-traitdie">
+                                <option value="1" selected="selected">1d6</option>
+                                <option value="2">2d6</option>
+                                <option value="4">4d6</option>
+                                <option value="6">6d6</option>
+                                <option value="8">8d6</option>
+                                <option value="10">10d6</option>                             
+                            </select>                            
+                        </td>
                     </table>
 
                     <hr />
+                    <table class="sheet-attributeTable">
+                        <td>Torrent</td><td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Torrent}} {{subtitle=@{character_name}}} {{result=[[ 1d@{int}+@{character_level}+1d6>20 ]]}}"></button></td>
+                        <td>Wizards' Duel</td>
+                        <td>
+                            <button class="sheet-square" type="roll" value="&{template:custom} {{title=Wizards' Duel}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{result=[[?{Amount of Blood|1}+@{int}+@{character_level}]]}}"></button>
+                        </td>
+                    </table>
+                    <hr />
+
                     <fieldset class="repeating_sorcerer_spells">
                         <table class="sheet-weaponTable">
                             <thead>
                             <tr>
                                 <th>Spell</th>
-                                <th>Location</th>
+                                <th>Stored In.../th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -1334,25 +1352,68 @@
                     </table>
                     <hr/>
                 </fieldset>
-                        
-                    Torret R20 : ♦INT plus d6 plus Modifiers  
-                    A Wizards’ Duel is R⧁ : ♦INT plus [lvl] plus num dice
+
 
                 </div>
 
                 <div class="sheet-1colrow mystic" style="text-align:left;">
                     <h1>THE MYSTIC</h1>
                     <em>Add your [level] to any rolls that use FOC</em>
-                    <hr />    
+                    <hr />
+                    <label for="small_god">Mystic Of</label>
+                    <input type="text" name="attr_small_god" id="small_god" placeholder="Small God" />
+                    <hr />
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d4</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d4]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d4]]}}"></button></td>
                         </tr>
                     </table>
-
-                    Grace, Max Grace, Faith, Max Faith, area for description of small god, Invocation, Liturgy.
-                 
+                    <h3>Grace</h3>
+                    <table class="sheet-attributeTable">
+                        <td>Current</td>
+                        <td>
+                          <select name="attr_grace" class="sheet-traitdie">
+                                <option value="1" selected="selected">1d4</option>
+                                <option value="2">2d4</option>
+                                <option value="3">3d4</option>
+                                <option value="4">4d4</option>
+                                <option value="5">5d4</option>
+                                <option value="6">6d4</option>                             
+                            </select>  
+                        </td>
+                        <td>Max</td>
+                        <td>
+                          <select name="attr_grace_max" class="sheet-traitdie">
+                                <option value="1" selected="selected">1d4</option>
+                                <option value="2">2d4</option>
+                                <option value="3">3d4</option>
+                                <option value="4">4d4</option>
+                                <option value="5">5d4</option>
+                                <option value="6">6d4</option>                             
+                            </select>                            
+                        </td>
+                    </table>
+                    <h3>Faith</h3>
+                    <table class="sheet-attributeTable">
+                         <td>Current</td><td><input type="number" name="attr_faith" value="0"/>d4</td>
+                        <td>Max</td>
+                        <td>
+                          <select name="attr_faith_max" class="sheet-traitdie">
+                                <option value="1" selected="selected">8</option>
+                                <option value="2">10</option>
+                                <option value="3">12</option>
+                                <option value="4">16</option>
+                                <option value="5">20</option>
+                                <option value="6">24</option>                             
+                            </select>                            
+                        </td>
+                    </table>
+                    <hr />
+                    <h3>Invocations</h3>
+                    <textarea class="sheet-inventory" name="attr_invocation"> </textarea>
+                    <h3>Liturgies</h3>
+                    <textarea class="sheet-inventory" name="attr_liturgy"> </textarea>                 
                 </div>
 
                 <div class="sheet-1colrow witch" style="text-align:left;">
@@ -1362,15 +1423,117 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d4</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d4]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d4]]}}"></button></td>
                         </tr>
                     </table>
+                    <hr/>
+                    <h3>Current Moon</h3>
+                    <select name="attr_moon" class="sheet-traitdie">
+                        <option value="void">Void</option> 
+                        <option value="waning_sickle">Waning Sickle</option>      
+                        <option value="waning_quotidian">Waning Quotidian</option>                                                  
+                        <option value="waning_gibbous">Waning Gibbous</option>
+                        <option value="waxing_sickle">Waxing Sickle</option>
+                        <option value="waxing_quotidian">Waxing Quotidian</option>                                
+                        <option value="waxing_gibbous" selected="selected">Waxing Gibbous</option>
+                        <option value="crown">Crown</option>
+                    </select>
+                    <hr/>
+                    <h3>Mojo</h3>
 
-
-
-
-                    Mojo, Max Mojo, Current Moon, List of necro spells
-
+                    <table class="sheet-attributeTable">
+                         <td>Current</td>
+                         <td>
+                            <select name="attr_mojo" class="sheet-traitdie">
+                                <option value="0">exhausted</option> 
+                                <option value="2">1d2</option>                                
+                                <option value="3">1d3</option>
+                                <option value="4">1d4</option>
+                                <option value="6">1d6</option>                                
+                                <option value="8" selected="selected">1d8</option>
+                                <option value="10">1d10</option>
+                                <option value="12">1d12</option>
+                                <option value="16">1d16</option>
+                                <option value="20">1d20</option>
+                                <option value="24">1d24</option>
+                            </select> 
+                        </td>
+                        <td>Max</td>
+                        <td>
+                          <select name="attr_mojo_max" class="sheet-traitdie">
+                                <option value="8" selected="selected">1d8</option>
+                                <option value="10">1d10</option>
+                                <option value="12">1d12</option>
+                                <option value="16">1d16</option>
+                                <option value="20">1d20</option>
+                                <option value="24">1d24</option>                             
+                            </select>                            
+                        </td>
+                    </table>
+                    <h4>Easy (+9)</h4>
+                    <table class="sheet-attributeTable">
+                        <tr>
+                            <td>Essential Salt</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Essential Salt}} {{subtitle=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Exploding Corpse</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Exploding Corpse}} {{subtitle=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Eyes of the Dead</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Eyes of the Dead}} {{subtitle=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Knit Flesh</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Knit Flesh}} {{subtitle=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Zombie Slave</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Zombie Slave}} {{subtitle=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                    </table>
+                    <h4>Challenging (+6)</h4>
+                    <table class="sheet-attributeTable">            
+                        <tr>
+                            <td>Charon's Price</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Charon's Price} {{subtitle=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Necrography</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Necrography}} {{subtitle=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Zombie Warrior</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Zombie Warrior}} {{subtitle=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                    </table>
+                    <h4>Difficult (+3)</h4>
+                    <table class="sheet-attributeTable">
+                        <tr>
+                            <td>Born of the Grave</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Born of the Grave}} {{subtitle=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Corpse Smoke</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Corpse Smoke}} {{subtitle=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Death Scythe</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Death Scythe}} {{subtitle=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                        <tr>
+                            <td>Speak with Dead</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Speak with Dead}} {{subtitle=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        </tr>
+                    </table>
+                    <h4>Very Difficult (+0)</h4>
+                    <table class="sheet-attributeTable">
+                    <tr>
+                        <td>Worthless Corpse</td>
+                    <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Worthless Corpse}} {{subtitle=@{character_name}}} {{result=[[1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                    </tr>
+                </table>
                 </div>
 
                 <div class="sheet-1colrow murk" style="text-align:left;">
@@ -1380,22 +1543,28 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d4</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d4]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d8]]}}"></td>
                         </tr>
-                    </table>
+                        <tr>
+                            <td><strong>Climb Stone</strong></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Murk: Climb Stone}} {{subtitle=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@8cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                        </tr>
+                    </table>                                 
                     <hr/>
+                    <h3>Veins Culture</h3>
+                    <select name="attr_veins_culture" class="sheet-traitdie">
+                        <option value="deep_janeen">Deep Janeen</option> 
+                        <option value="aelf_adal">Ælf-Adal</option>      
+                        <option value="dvargir">Dvargir</option>                                                  
+                        <option value="dero">d3r0</option>
+                    </select>
+                    <hr/>                    
                     <ul>
                         <li>Unhallowed</li>
                         <li>Darkvision</li>
                         <li>Smell metal up to 1m away</li>
                         <li>Immune to aging</li>
                     </ul>
-
-
-                    Mountaineering d8
-                    Culture: Deep Janeen, Ælf-Adal: The never ending hate of the Ælf-Adal, Dvargir, dEr0
-
-
                 </div>
 
                 <div class="sheet-1colrow spriggan" style="text-align:left;">
@@ -1405,17 +1574,64 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d6</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d6]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d6]]}}"></button></td>
                         </tr>
                     </table>
                     <hr/>
+                    <h3>Remembrance Die</h3>
+                    Dice Locked: <input type="text" name="attr_remembrance_locked" value="0" />
+
+                    <table class="sheet-attributeTable">
+                        <tr>
+                         <td>Current</td>
+                         <td><input type="number" name="attr_remembrance" value="0"/>d6</td>
+                     </tr>
+                     <tr>
+                        <td>Max</td>
+                        <td>
+                          <select name="attr_remembrance_max" class="sheet-traitdie">
+                                <option value="1" selected="selected">1d6</option>
+                                <option value="3">3d6</option>
+                                <option value="5">5d6</option>
+                                <option value="7">7d6</option>
+                                <option value="9">9d6</option>
+                                <option value="12">12d6</option>                             
+                            </select>                            
+                        </td>
+                    </tr>
+                    </table>
+                    <hr />
+                    <fieldset class="repeating_forgotten">
+                        <table class="sheet-weaponTable">
+                            <thead>
+                            <tr>
+                                <th>Forgotten Name</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="attr_forgotten_name" placeholder="Forgotten Name" />
+                                </td>
+                                <td>
+                                    <select name="attr_forgotten_type" class="sheet-weaponselect">
+                                        <option value="seraph"  selected="selected">Seraph</option>
+                                        <option value="archon">Archon</option>
+                                        <option value="fiend">Fiend</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                </fieldset>
+
                     <ul>
                         <li>Unhallowed</li>
                         <li>Iron allergy</li>
                         <li>Antlers (optional)</li>
                     </ul>                    
-
-                    Remembrance Die, Max Rememberance Die, List of Forgotten they know
                 </div>
 
                 <div class="sheet-1colrow night_child" style="text-align:left;">
@@ -1425,20 +1641,70 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d10</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d10]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d10]]}}"></button></td>
                         </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>
+                                <select name="attr_night_child_type" class="sheet-traitdie">
+                                <option value="bogey" selected="selected">Bogey</option> 
+                                <option value="goblin">Goblin</option>                                
+                                <option value="troll">Troll</option>
+                                <option value="kappa">Kappa</option>
+                                <option value="gremlin">Gremlin</option>                                
+                                <option value="boggart">Boggart</option>
+                                </select>
+                            </td>
+                        </tr> 
                     </table>
                     <hr />
+                    <fieldset class="repeating_night_child_bonus">
+                        <table class="sheet-weaponTable">
+                            <thead>
+                            <tr>
+                                <th>Night Child Bonus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select name="attr_night_child_bonus">
+                                        <option value="dodgy">Dodgy</option>
+                                        <option value="strong">Strong</option>
+                                        <option value="smrt">Smrt</option>
+                                        <option value="good_guts">Good Guts</option>
+                                        <option value="good_ears">Good Ears</option>
+                                        <option value="crafty">Crafty</option>
+                                        <option value="sneaks">Sneaks</option>
+                                        <option value="not_dead">Not Dead</option>
+                                        <option value="weird">Weird</option>
+                                        <option value="wut">Wut?</option>
+                                        <option value="sleep">Sleep</option>
+                                        <option value="no_squish">No Squish</option>
+                                        <option value="bug_pal">Bug Pal</option>
+                                        <option value="small_pal">Small Pal</option>
+                                        <option value="tough">Tough</option>
+                                        <option value="sticky">Sticky</option>
+                                        <option value="more_teef">More Teef</option>
+                                        <option value="bug_barf">Bug Barf</option>
+                                        <option value="fat_head">Fat Head</option>
+                                        <option value="ankle_biter">Ankle Biter</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                </fieldset> 
+
                     <ul>
                         <li>Unhallowed</li>
                         <li>Tiny (-2 Significant Items, no 2H weapons, special Gear)</li>
-                        <li>Nullify jinx / no wandering monsters</li>
                         <li>Darkvision</li>
                         <li>Produce Goods (see Core Rules)</li>
                         <li>Eat anything organic</li>
-                        <li>Narcotics Bonuses (See Core Rules)</li>
-                    </ul>  
-                    type (bogey, etc)                 
+                    </ul>
+                    <hr />            
                 </div>
 
                 <div class="sheet-1colrow pooka" style="text-align:left;">
@@ -1448,7 +1714,7 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td><strong>Flesh Die:</strong> d4</td>
-                            <td><button class="sheet-square" type="roll" value="@{character_name} rolls Flesh  [[1d4]]" name="roll_Flesh"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:custom} {{title=Flesh ⚅}} {{subtitle=@{character_name}}} {{result=[[1d4]]}}"></button></td>
                         </tr>
                         <tr>
                             <td><strong>Current Luck Die:</strong>
