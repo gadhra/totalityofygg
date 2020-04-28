@@ -1,6 +1,5 @@
 <?php
 
-	$slack_verify_token = 'lEckkfjzmWHRZtLqyN8lTx0q';
 	if( $_POST['token'] !== $slack_verify_token ) {
  		header("HTTP/1.0 403 Forbidden");
 		exit(0);
