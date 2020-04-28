@@ -1,3 +1,8 @@
+## [unreleased] 
+### Changed
+- Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
+
+
 ## [v.2.0.beta] - 2020-04-25
 ### Added
 - Clarified that a Hammerspace object cannot be put inside another Hammerspace object to avoid a Bagworld scenario
