@@ -392,7 +392,7 @@
                                     <option value="24">d24</option>
                                     </select>               
                             </td>
-                            <td></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title= ☠ Death ☠ }} {{subtitle=@{character_name}}} {{result=[[1d@{death}cf<2]]}}"></td>
                         </tr>
 
                     </table>
@@ -406,15 +406,19 @@
             <div class="sheet-2colrow">
                 <div class="sheet-col">
                     <div class="sheet-subrow" style="font-size:14px;">
-                        <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Init }} {{subtitle=@{character_name}}} {{result=[[?{Monster Speed|Normal,1d20|Fast,1d16|Slow,1d24} + 1d@{armor_move} + 1d@{dex} &{tracker}]]}}"> Init</button> 
+                        <button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Init }} {{charname=@{character_name}}} {{Monster Speed=?{Monster Speed|Normal,1d20|Fast,1d16|Slow,1d24}}} {{roll=[[?{Monster Speed|Normal,1d20|Fast,1d16|Slow,1d24} + ?{Are you a Knave?|No,0|Yes,@{character_level}} + 1d@{armor_move} + 1d@{dex} ]]}}"> Init</button>
                     </div>
                     <div class="sheet-subrow" style="font-size:14px;">
-                        <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Guard }} {{subtitle=@{character_name}}} {{result=[[1d?{Monster Weakness 1d} + ?{Modifers?|0} + 1d@{dex} ]]}}"> Guard</button> 
+                        <button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Guard }} {{charname=@{character_name}}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + ?{Are you a Knave?|No,0|Yes,@{character_level}} + ?{Modifers?|0} + 1d@{dex} ]]}}"> Guard</button> 
                     </div>
                     <div class="sheet-subrow" style="font-size:14px;">
-                        <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Fumble }} {{subtitle=@{character_name}}} {{result=[[1d@{dex}cf<2]]}}"> Fumble</button> 
+                        <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Fumble }} {{subtitle=@{character_name}}} {{result=[[?{Are you a Knave?|No,0|Yes,@{character_level}}+1d@{dex}]]}}"> Fumble</button> 
                     </div>                  
                 </div>
+
+                
+
+
 
                 <div class="sheet-col">
                     <div class="sheet-subrow">
@@ -509,12 +513,13 @@
                 </div>
             </div>
                 
-                
+            
+
             <div class="sheet-1colrow">
                 <div class="sheetcol">
                     <div class="sheet-row">
                         <h4>Weapons</h4>
-                    </div>                
+                    </div>
                     <fieldset class="repeating_weapons">
                         <div style="float:left; padding-right:30px;">
                             <input type="text" name="attr_weapon_name" placeholder="Weapon Name" />
@@ -537,7 +542,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button type="roll" value="@{character_name} @{weapon_type} with their @{weapon_name}! Fight Roll: [[ @{weapon_mod} + 1d@{weapon_speed} + 1d?{Monster Weakness 1d|20} + ?{Other Modifers?|0}  ]] Damage: [[1d@{weapon_damage}cs@{weapon_damage}cf<2]]"></button></td>
+                                <td><button type="roll" value="&{template:toy-rollfight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + 1d@{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}}"></button></td>                                
                                 <td class="sheet-attrankselect">
                                     <select name="attr_weapon_type" class="sheet-weaponselect">
                                         <option value="chops"  selected="selected">Chopping</option>
@@ -1316,7 +1321,7 @@
 
                     <hr />
                     <table class="sheet-attributeTable">
-                        <td>Torrent</td><td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Torrent}} {{subtitle=@{character_name}}} {{result=[[ 1d@{int}+@{character_level}+1d6>20 ]]}}"></button></td>
+                        <td>Torrent</td><td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Torrent}} {{charname=@{character_name}}} {{roll=[[ 1d@{int}+@{character_level}+1d6 ]]}}"></button></td>
                         <td>Wizards' Duel</td>
                         <td>
                             <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Wizards' Duel}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{result=[[?{Amount of Blood|1}+@{int}+@{character_level}]]}}"></button>
@@ -1324,12 +1329,12 @@
                     </table>
                     <hr />
 
-                    <fieldset class="repeating_sorcerer_spells">
+                    <fieldset class="repeating_wizardry">
                         <table class="sheet-weaponTable">
                             <thead>
                             <tr>
                                 <th>Spell</th>
-                                <th>Stored In.../th>
+                                <th>Stored In...</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -1346,7 +1351,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Wizardry: @{spell_name}}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{[sum] = [[?{Amount of Blood|1}d6cf<2]]}}"></button>
+                                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Wizardry: @{spell_name}}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{[sum] = [[?{Amount of Blood|1}d6s]]}}"></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -1383,6 +1388,9 @@
                                 <option value="6">6d4</option>                             
                             </select>  
                         </td>
+                       <td>
+                            <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Grace ⚅}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Grace|1}}} {{[sum] = [[?{Amount of Grace|1}d4s]]}}"></button>
+                        </td>                        
                         <td>Max</td>
                         <td>
                           <select name="attr_grace_max" class="sheet-traitdie">
@@ -1398,6 +1406,8 @@
                     <h3>Faith</h3>
                     <table class="sheet-attributeTable">
                          <td>Current</td><td><input type="number" name="attr_faith" value="0"/>d4</td>
+                         <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Faith ⚅}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Faith|1}}} {{[sum] = [[?{Amount of Faith|1}d4s]]}}"></button>
+                        </td>
                         <td>Max</td>
                         <td>
                           <select name="attr_faith_max" class="sheet-traitdie">
@@ -1428,8 +1438,8 @@
                         </tr>
                     </table>
                     <hr/>
-                    <h3>Current Moon</h3>
-                    <select name="attr_moon" class="sheet-traitdie">
+                    <strong>Current Moon</strong>: 
+                    <select name="attr_moon"" class="sheet-select"">
                         <option value="void">Void</option> 
                         <option value="waning_sickle">Waning Sickle</option>      
                         <option value="waning_quotidian">Waning Quotidian</option>                                                  
@@ -1447,27 +1457,27 @@
                          <td>
                             <select name="attr_mojo" class="sheet-traitdie">
                                 <option value="0">exhausted</option> 
-                                <option value="2">1d2</option>                                
-                                <option value="3">1d3</option>
-                                <option value="4">1d4</option>
-                                <option value="6">1d6</option>                                
-                                <option value="8" selected="selected">1d8</option>
-                                <option value="10">1d10</option>
-                                <option value="12">1d12</option>
-                                <option value="16">1d16</option>
-                                <option value="20">1d20</option>
-                                <option value="24">1d24</option>
+                                <option value="2">d2</option>                                
+                                <option value="3">d3</option>
+                                <option value="4">d4</option>
+                                <option value="6">d6</option>                                
+                                <option value="8" selected="selected">d8</option>
+                                <option value="10">10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>
                             </select> 
                         </td>
                         <td>Max</td>
                         <td>
                           <select name="attr_mojo_max" class="sheet-traitdie">
-                                <option value="8" selected="selected">1d8</option>
-                                <option value="10">1d10</option>
-                                <option value="12">1d12</option>
-                                <option value="16">1d16</option>
-                                <option value="20">1d20</option>
-                                <option value="24">1d24</option>                             
+                                <option value="8" selected="selected">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>                             
                             </select>                            
                         </td>
                     </table>
@@ -1553,7 +1563,7 @@
                     </table>                                 
                     <hr/>
                     <h3>Veins Culture</h3>
-                    <select name="attr_veins_culture" class="sheet-traitdie">
+                    <select name="attr_veins_culture" class="sheet-select">
                         <option value="deep_janeen">Deep Janeen</option> 
                         <option value="aelf_adal">Ælf-Adal</option>      
                         <option value="dvargir">Dvargir</option>                                                  
@@ -1580,16 +1590,28 @@
                     </table>
                     <hr/>
                     <h3>Remembrance Die</h3>
-                    Dice Locked: <input type="text" name="attr_remembrance_locked" value="0" />
-
-                    <table class="sheet-attributeTable">
-                        <tr>
-                         <td>Current</td>
-                         <td><input type="number" name="attr_remembrance" value="0"/>d6</td>
-                     </tr>
-                     <tr>
-                        <td>Max</td>
-                        <td>
+                    Dice Locked: 
+                        <select name="attr_remembrance_locked" class="sheet-traitdie">
+                                <option value="0" selected="selected">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>                          
+                            </select>  
+                        <table class="sheet-attributeTable">
+                             <td>Current</td><td><input type="number" name="attr_remembrance" value="0"/>d6</td>
+                             <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Remembrance ⚅}} {{subtitle=@{character_name}}} {{[dice]=?{Amount of Remembrance|1}}} {{[sum] = [[?{Amount of Remembrance|1}d6s]]}}"></button>           
+                            </td>
+                            <td>Max</td>
+                            <td>
                           <select name="attr_remembrance_max" class="sheet-traitdie">
                                 <option value="1" selected="selected">1d6</option>
                                 <option value="3">3d6</option>
@@ -1598,9 +1620,8 @@
                                 <option value="9">9d6</option>
                                 <option value="12">12d6</option>                             
                             </select>                            
-                        </td>
-                    </tr>
-                    </table>
+                            </td>
+                        </table>
                     <hr />
                     <fieldset class="repeating_forgotten">
                         <table class="sheet-weaponTable">
@@ -1659,7 +1680,7 @@
                         </tr> 
                     </table>
                     <hr />
-                    <fieldset class="repeating_night_child_bonus">
+                    <fieldset class="repeating_nightchildbonus">
                         <table class="sheet-weaponTable">
                             <thead>
                             <tr>
@@ -1778,5 +1799,83 @@
       {{/allprops() title subtitle desc color}}
       {{#desc}}<div class="sheet-desc">{{result}}</div>{{/desc}}
     </div>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-toy-rolltwenty">
+  <div class="sheet-container">
+    <div class="sheet-header">
+        <div class="sheet-title">R⑳: {{title}}</div>
+    </div>
+    <div class="sheet-content">
+          {{#allprops() title subtitle roll charname}}
+          <div class="sheet-key">{{key}}</div>
+          <div class="sheet-value">{{value}}</div>
+          {{/allprops() title subtitle roll charname}}
+          <div class="sheet-key">{{charname}}</div>
+          <div class="sheet-value">{{roll}}</div>
+        {{#rollLess() roll 20 }}
+        <div class="sheet-failure">Failed!</div>
+        {{/rollLess() roll 20 }}
+        {{#rollGreater() roll 20 }}
+        <div class="sheet-success">Success!</div>
+        {{/rollGreater() roll 20 }}        
+    </div>    
+
+  </div>
+</rolltemplate>
+
+
+<rolltemplate class="sheet-rolltemplate-toy-rollfight">
+  <div class="sheet-container">
+    <div class="sheet-header">
+        <div class="sheet-title">R⑳: Fight</div>
+        <div class="sheet-subtitle">{{emote}}</div>
+    </div>
+    <div class="sheet-content">
+          <div class="sheet-key">Fight</div>
+          <div class="sheet-value">{{roll}}</div>
+          <div class="sheet-key">Damage</div>
+          <div class="sheet-value">{{damage}}</div>          
+        {{#rollLess() roll 20 }}
+        <div class="sheet-failure">Failed!</div>
+        {{/rollLess() roll 20 }}
+        {{#rollGreater() roll 20 }}
+        <div class="sheet-success">Success!</div>
+        {{/rollGreater() roll 20 }}
+        Damage
+        {{#rollWasCrit() damage }}
+        crit!
+        {{/rollWasCrit() damage }}
+
+        {{#rollWasFumble() damage }}
+        fumble!
+        {{/rollWasFumble() damage}}
+    </div>    
+
+  </div>
+</rolltemplate>
+
+
+<rolltemplate class="sheet-rolltemplate-toy-rollsucceed">
+  <div class="sheet-container">
+    <div class="sheet-header">
+        <div class="sheet-title">R✓: {{title}}</div>
+        <div class="sheet-subtitle">{{charname}}</div>
+    </div>
+    <div class="sheet-content">
+          {{#allprops() title subtitle roll charname}}
+          <div class="sheet-key">{{key}}</div>
+          <div class="sheet-value">{{value}}</div>
+          {{/allprops() title subtitle roll charname}}        
+        <div class="sheet-roll">{{ roll }}</div>
+        {{#rollLess() roll 3 }}
+        <div class="sheet-failure">Failed!</div>
+        {{/rollLess() roll 3 }}
+        {{#rollGreater() roll 2 }}
+        <div class="sheet-success">Success!</div>
+        {{/rollGreater() roll 2 }}        
+    </div>    
+
   </div>
 </rolltemplate>
