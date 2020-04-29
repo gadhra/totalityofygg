@@ -69,6 +69,8 @@
 /*----------- End Tab Setup -----------*/
 
 
+.charsheet h3 {text-decoration: underline; padding-bottom:5px;}
+.charsheet h4 {padding:10px 0 10px 0;}
 
 
 /*-----cols and rows-----*/
@@ -297,22 +299,27 @@ input[type=number] {
 }
 
 /* I can't figure out how to do class selectors for roll templates */
-.sheet-rolltemplate {
+/* Apparently it'll strip [class="foo"] from the start */
+/* so it's just a lot of copy/paste.  shitty! */
+
+
+/* ROLL FIGHT */
+.sheet-rolltemplate-toy-rollfight {
   margin-left: -37px;
 }
 
-.withoutavatars .sheet-rolltemplate {
+.withoutavatars .sheet-rolltemplate-toy-rollfight {
   margin-left: -7px;
 }
 
-.sheet-rolltemplate .sheet-container {
-  border: 1px solid;
+.sheet-rt-wrapper .sheet-rolltemplate-toy-rollfight  {
+  border: 5px solid;
   /* by default, the border is the same color as the header. You can change this here, e.g. to black */
-  border-color: black;
+  border-color: red;
 }
 
 /* Header formatting - title and subtitle */
-.sheet-rolltemplate .sheet-header {
+.sheet-rolltemplate-toy-rollfight .sheet-header {
   background-color: #a0a0a0;
   text-align: center;
   font-weight:bold;
@@ -322,29 +329,29 @@ input[type=number] {
 
 
 
-*[class^="sheet-rolltemplate-toy-"] .sheet-title {
+.sheet-rolltemplate-toy-rollfight .sheet-title {
   font-size:1.1em;
 }
-*[class^="sheet-rolltemplate-toy-"] .sheet-subtitle {
+.sheet-rolltemplate-toy-rollfight .sheet-subtitle {
   font-size:.9em;
 }
 
 /* example colors */
-*[class^="sheet-rolltemplate-toy-"] .sheet-container {
+.sheet-rolltemplate-toy-rollfight .sheet-container {
   /* this is the default color */
   --header-bg-color: rgba(112,32,130,1);
   --header-text-color: #FFF;
 }
-*[class^="sheet-rolltemplate-toy-"] .sheet-container.sheet-color-red {
+.sheet-rolltemplate-toy-rollfight .sheet-container.sheet-color-red {
   --header-bg-color: #F00;
 }
-*[class^="sheet-rolltemplate-toy-"] .sheet-container.sheet-color-green {
+.sheet-rolltemplate-toy-rollfight .sheet-container.sheet-color-green {
   --header-bg-color: #0F0;
   --header-text-color: #000;
 }
 
 /* Allprops part */
-*[class^="sheet-rolltemplate-toy-"] .sheet-content {
+.sheet-rolltemplate-toy-rollfight .sheet-content {
   display: grid;
   background: #FFF;
   /* Header formatting - modify the column layout below */
@@ -352,50 +359,460 @@ input[type=number] {
   /* Line height to match default roll template */
   line-height:1.4em;
 }
-*[class^="sheet-rolltemplate-toy-"] .sheet-content > div {
+.sheet-rolltemplate-toy-rollfight .sheet-content > div {
   padding: 5px;
 }
 
 /* Left column */
-*[class^="sheet-rolltemplate-toy-"] .sheet-content .sheet-key {
+.sheet-rolltemplate-toy-rollfight .sheet-content .sheet-key {
   font-weight: bold;
   padding-right: 10px;
   text-align: center;
 }
 
-/* Empty rule, use this if you want to change the right column 
-.sheet-rolltemplate-toy-basic .sheet-value {
-}
-*/
-
 /* Make even-numbered rows grey */
-*[class^="sheet-rolltemplate-toy-"] .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-toy-other .sheet-content :nth-child(4n+3),
 *[class^="sheet-rolltemplate-toy-"] .sheet-content :nth-child(4n) {
   background:#EEE;
 }
 
 /* Description field */
-*[class^="sheet-rolltemplate-toy-"] .sheet-desc {
+.sheet-rolltemplate-toy-rollfight .sheet-desc {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
 }
 
-/** roll 20 **/
-
-
-*[class^="sheet-rolltemplate-toy-"] .sheet-failure {
-  grid-column: span 2;
-  padding: 5px;
-  text-align: center;
-  color: white;
-  background-color: red;
-}
-
-[class^="sheet-rolltemplate-toy-"] .sheet-success {
+.sheet-rolltemplate-toy-rollfight .sheet-failure {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
   color: white;
-  background-color: green;
+  background-color: red !important;
 }
+
+.sheet-rolltemplate-toy-rollfight .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+
+.sheet-rolltemplate-toy-rollfight .sheet-damage-crit {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid green;
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-toy-rollfight .sheet-damage-fumble {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid red;
+  font-weight: bold;
+}
+
+
+/* ROLL TWENTY */
+.sheet-rolltemplate-toy-rolltwenty {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-rolltwenty {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-rolltwenty  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-rolltwenty .sheet-header {
+  background-color: #a0a0a0;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+
+
+.sheet-rolltemplate-toy-rolltwenty .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-toy-rolltwenty .sheet-subtitle {
+  font-size:.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-toy-rolltwenty .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-toy-rolltwenty .sheet-container.sheet-color-red {
+  --header-bg-color: #F00;
+}
+.sheet-rolltemplate-toy-rolltwenty .sheet-container.sheet-color-green {
+  --header-bg-color: #0F0;
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-toy-rolltwenty .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-toy-rolltwenty .sheet-content > div {
+  padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-toy-rolltwenty .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-toy-rolltwenty .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-toy-rolltwenty .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-toy-rolltwenty .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+.sheet-rolltemplate-toy-rolltwenty .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+
+.sheet-rolltemplate-toy-rolltwenty .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+
+/* ROLL SUCCEED */
+.sheet-rolltemplate-toy-rollsucceed {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-rollsucceed {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-rollsucceed  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-rollsucceed .sheet-header {
+  background-color: #a0a0a0;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+
+
+.sheet-rolltemplate-toy-rollsucceed .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-toy-rollsucceed .sheet-subtitle {
+  font-size:.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-toy-rollsucceed .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-toy-rollsucceed .sheet-container.sheet-color-red {
+  --header-bg-color: #F00;
+}
+.sheet-rolltemplate-toy-rollsucceed .sheet-container.sheet-color-green {
+  --header-bg-color: #0F0;
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-toy-rollsucceed .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-toy-rollsucceed .sheet-content > div {
+  padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-toy-rollsucceed .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-toy-rollsucceed .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-toy-rollsucceed .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-toy-rollsucceed .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+.sheet-rolltemplate-toy-rollsucceed .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+
+.sheet-rolltemplate-toy-rollsucceed .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+
+.sheet-rolltemplate-toy-rollsucceed .sheet-roll {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+
+/* BASIC */
+/* ROLL FIGHT */
+.sheet-rolltemplate-toy-basic {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-basic {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-basic  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-basic .sheet-header {
+  background-color: #a0a0a0;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+
+
+.sheet-rolltemplate-toy-basic .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-toy-basic .sheet-subtitle {
+  font-size:.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-toy-basic .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-toy-basic .sheet-container.sheet-color-red {
+  --header-bg-color: #F00;
+}
+.sheet-rolltemplate-toy-basic .sheet-container.sheet-color-green {
+  --header-bg-color: #0F0;
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-toy-basic .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-toy-basic .sheet-content > div {
+  padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-toy-basic .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-toy-basic .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-toy-basic .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-toy-basic .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+.sheet-rolltemplate-toy-basic .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+
+.sheet-rolltemplate-toy-basic .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+/* USAGE DIE */
+/* ROLL FIGHT */
+.sheet-rolltemplate-toy-rollud {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-rollud {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-rollud  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-rollud .sheet-header {
+  background-color: #a0a0a0;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+
+
+.sheet-rolltemplate-toy-rollud .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-toy-rollud .sheet-subtitle {
+  font-size:.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-toy-rollud .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-toy-rollud .sheet-container.sheet-color-red {
+  --header-bg-color: #F00;
+}
+.sheet-rolltemplate-toy-rollud .sheet-container.sheet-color-green {
+  --header-bg-color: #0F0;
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-toy-rollud .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-toy-rollud .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-toy-rollud .sheet-roll {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Left column */
+.sheet-rolltemplate-toy-rollud .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-toy-rollud .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-toy-rollud .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-toy-rollud .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+.sheet-rolltemplate-toy-rollud .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+
+.sheet-rolltemplate-toy-rollud .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+
+
+
