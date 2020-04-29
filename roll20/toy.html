@@ -144,7 +144,7 @@
                                     </select>               
                             </td>
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=R☑:♦INT }} {{charname=@{character_name}}} {{result=[[(@{character_level}*@{magician})+1d@{int}cf<2]]}} "></button> 
+                                <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=R☑:♦INT }} {{charname=@{character_name}}} {{result=[[(@{character_level}*@{magician})+1d@{int}]]}} "></button> 
                             </td>
                         </tr>       
                         <tr>
@@ -385,7 +385,7 @@
                                     <option value="24">d24</option>
                                     </select>               
                             </td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title= ☠ Death ☠ }} {{charname=@{character_name}}} {{result=[[1d@{death}cf<2]]}}"></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title= ☠ Death ☠ }} {{charname=@{character_name}}} {{result=[[1d@{death}]]}}"></td>
                         </tr>
 
                     </table>
@@ -442,7 +442,7 @@
                                     <option value="20">d20</option>
                                     <option value="24">d24</option>
                                     </select>
-                                     <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Armor }} {{charname=@{character_name}}} {{roll=[[1d@{armor_current}cf<2]]}}"></button>
+                                     <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Armor }} {{charname=@{character_name}}} {{roll=[[1d@{armor_current}]]}}"></button>
                         </div>
                         <div class="sheet-subrow" style="font-size:14px;">
                             <label>Max Use⚅</label>
@@ -535,7 +535,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button type="roll" value="&{template:toy-rollfight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}}"></button></td>                                
+                                <td><button type="roll" value="&{template:toy-rollfight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}} {{explode=[[1d@{weapon_damage}!]]}} {{level=@{character_level}}}  {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>                                
                                 <td class="sheet-attrankselect">
                                     <select name="attr_weapon_type" class="sheet-weaponselect">
                                         <option value="chops"  selected="selected">Chopping</option>
@@ -896,7 +896,7 @@
                                     <option value="16">d16</option>
                                 </select> 
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}cf<2]]}}"></button> 
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}]]}}"></button> 
                             </td>
                             <td>MAX Deed Die</td>
                             <td>
@@ -942,7 +942,7 @@
                                     <option value="16">d16</option>
                                 </select> 
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}cf<2]]}}"></button> 
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}]]}}"></button> 
 
                                  
                             </td>
@@ -989,7 +989,7 @@
                                     <option value="16">d16</option>
                                 </select>   
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}cf<2]]}}"></button>
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}]]}}"></button>
                             </td>
                             <td>MAX Luck Die</td>
                             <td>
@@ -1091,7 +1091,7 @@
                                     <option value="16">d16</option>
                                 </select>   
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}cf<2]]}}"></button>
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}]]}}"></button>
                             </td>
                             <td>MAX Luck Die</td>
                             <td>
@@ -1839,25 +1839,39 @@
     </div>
     <div class="sheet-content">
         <div class="sheet-key">Fight</div>
-        <div class="sheet-value">{{roll}}</div>        
+        <div class="sheet-value">{{roll}}</div>     
+
         {{#rollLess() roll 20 }}
         <div class="sheet-failure">Miss!</div>
         {{/rollLess() roll 20 }}
 
         {{#rollGreater() roll 19 }}
-        <div class="sheet-key">Damage</div>
-        <div class="sheet-value">{{damage}}</div>          
-        <div class="sheet-success">Hit!</div>
-        {{#rollWasCrit() damage }}
-        <div class="sheet-damage-crit">
-        Crit!  Roll your VIG ♣. Add [level] or explode die.
-        </div>
-        {{/rollWasCrit() damage }}
-        {{#rollWasFumble() damage }}
-        <div class="sheet-damage-fumble">
-        Fumble! Roll your fumble die.
-        </div>
-        {{/rollWasFumble() damage}}        
+            {{#rollGreater() is_sellsword 0 }}
+                <div class="sheet-key">Damage</div>
+                <div class="sheet-value">{{explode}}</div>
+                <div class="sheet-success">Hit!</div>
+                {{#rollLess() explode 2 }}
+                    <div class="sheet-damage-fumble">
+                        Fumble! Roll your fumble die.
+                    </div>
+                {{/rollLess() explode 2 }}                       
+            {{/rollGreater() is_sellsword 0 }}
+
+            {{#rollLess() is_sellsword 1 }}
+                <div class="sheet-key">Damage</div>
+                <div class="sheet-value">{{damage}}</div>          
+                <div class="sheet-success">Hit!</div>
+                {{#rollWasCrit() damage }}
+                    <div class="sheet-damage-crit">
+                        Crit!  Roll your VIG ♣. Success = +{{level}} damage.
+                    </div>
+                {{/rollWasCrit() damage }}
+                {{#rollWasFumble() damage }}
+                    <div class="sheet-damage-fumble">
+                        Fumble! Roll your fumble die.
+                    </div>
+                {{/rollWasFumble() damage}} 
+            {{/rollLess() is_sellsword 1 }}
         {{/rollGreater() roll 19 }}
     </div>    
 
