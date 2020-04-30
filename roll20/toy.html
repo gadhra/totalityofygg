@@ -535,7 +535,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button type="roll" value="&{template:toy-rollfight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}} {{explode=[[1d@{weapon_damage}!]]}} {{level=@{character_level}}}  {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>                                
+                                <td><button type="roll" value="&{template:toy-fight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}} {{explode=[[1d@{weapon_damage}!]]}} {{level=@{character_level}}}  {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>                                
                                 <td class="sheet-attrankselect">
                                     <select name="attr_weapon_type" class="sheet-weaponselect">
                                         <option value="chops"  selected="selected">Chopping</option>
@@ -595,7 +595,7 @@
                 </div>
             </div>
             <div class="sheet-col">
-                <h2>Coin</h2>
+                <h2 style="text-align:left">Coin</h2>
                     <table class="sheet-attributeTable">
                         <tr>
                             <td class="sheet-attributeTitle">
@@ -637,13 +637,14 @@
                                 <option value="20">d20</option>
                                 <option value="24">d24</option>
                                 </select>
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=@{item_name}}} {{charname=@{character_name}}} {{roll=[[1d@{item_ud}]]}}">
                 </div>
                 </fieldset>    
             </div>
 
             <div class="sheet-col" style="text-align:center">
                 <h4>Significant Items</h4>
-                Max: <input type="number" name="attr_inventory_max"  /> <em>Max Vig +/- Modifiers</em>
+                Max: <input type="number" name="attr_inventory_max"  /> <em>Max Vig + 1</em>
                 <div class="sheet-row">
                     <input type="checkbox" name="attr_inventory_1" value="1" />
                     <input type="checkbox" name="attr_inventory_2" value="1" />
@@ -692,7 +693,7 @@
                 <h4>Skills</h4>
                 <div class="sheet-row">
                     <label>Bushcraft</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Bushcraft}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_bushcraft}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Bushcraft}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_bushcraft}]]}}"></button>
                     <select name="attr_skill_bushcraft" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -705,7 +706,7 @@
                 </div>
                 <div class="sheet-row">
                     <label>Eyeball</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Eyeball}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_eyeball}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Eyeball}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_eyeball}]]}}"></button>
                     <select name="attr_skill_eyeball" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -718,7 +719,7 @@
                 </div>  
                 <div class="sheet-row">
                     <label>Listen</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Listen}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_listen}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Listen}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_listen}]]}}"></button>
                     <select name="attr_skill_listen" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -731,7 +732,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Lore</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Lore}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_lore}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Lore}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_lore}]]}}"></button>
                     <select name="attr_skill_lore" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -744,7 +745,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Math</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Math}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_math}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Math}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_math}]]}}"></button>
                     <select name="attr_skill_math" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -757,7 +758,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Salt</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Salt}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_salt}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Salt}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_salt}]]}}"></button>
                     <select name="attr_skill_salt" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -770,7 +771,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Travel</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:Travel}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_travel}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:Travel}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_travel}]]}}"></button>
                     <select name="attr_skill_travel" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -785,7 +786,7 @@
                 <fieldset class="repeating_skills">
                 <div class="sheet-row">
                     <input type="text" name="attr_skill_name" placeholder="Name" style="width:33%" />
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Skill:@{skill_name}}} {{charname=@{character_name}}} {{result=[[1d6cs<@{skill_roll}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Skill:@{skill_name}}} {{charname=@{character_name}}} {{roll=[[1d6<@{skill_roll}]]}}"></button>
                     <select name="attr_skill_roll" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -802,7 +803,8 @@
                 <h4>Saves</h4>
                 <div class="sheet-row">
                     <label>Hexes</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Save vs Hexes}} {{charname=@{character_name}}} {{result=[[1d6cs<@{save_hexes}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Save vs Hexes}} {{charname=@{character_name}}} {{roll=[[1d6<@{save_hexes}]]}}"></button>
+
                     <select name="attr_save_hexes" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -815,7 +817,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Toxins</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Save vs Toxins}} {{charname=@{character_name}}} {{result=[[1d6cs<@{save_toxins}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Save vs Toxins}} {{charname=@{character_name}}} {{roll=[[1d6<@{save_toxins}]]}}"></button>
                     <select name="attr_save_toxins" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -828,7 +830,7 @@
                 </div> 
                 <div class="sheet-row">
                     <label>Doom</label>
-                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Save vs Doom}} {{charname=@{character_name}}} {{result=[[1d6cs<@{save_doom}]]}}"></button>
+                    <button class="sheet-square" type="roll" value="&{template:toy-skill} {{title=Save vs Doom}} {{charname=@{character_name}}} {{roll=[[1d6<@{save_doom}]]}}"></button>
                     <select name="attr_save_doom" class="sheet-traitdie">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -1006,7 +1008,7 @@
                         <tr>
                             <td><strong>Knave Die (Whispers):</strong></td>
                             <td>
-                                <select name="attr_knave" class="sheet-traitdie">
+                                <select name="attr_knave_die" class="sheet-traitdie">
                                     <option value="4" selected="selected">d4</option>
                                     <option value="6">d6</option>
                                     <option value="8">d8</option>
@@ -1022,34 +1024,34 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td>Kate's Key: open locks, untie bonds</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Kate's Key}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Kate's Key}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
 
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{@{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
                         </tr>
 
                         <tr>
                             <td>Clockwork Sense: find and disarm traps</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Clockwork Sense }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Clockwork Sense }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
                         </tr>
                         <tr>
                             <td>Gloomstride: travel silently through shadows</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Gloomstride }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                      
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Gloomstride }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                      
                         </tr>
                         <tr>
                             <td>Monkey's Paws: climb walls and swing from ropes</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Monkey's Paw }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Monkey's Paw }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
                         </tr>
                         <tr>
                             <td>Foyst: pick pockets and palm items</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Foyst}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Foyst}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
                         </tr>
                          <tr>
                             <td>Cast spell from fetish or grimoire</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Read Spell}} {{charname=@{character_name}}} {{result=[[1d@{knave}]]}}"></button></td>                              
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Read Spell}} {{charname=@{character_name}}} {{result=[[1d@{knave_die}]]}}"></button></td>                              
                         </tr>                       
                     </table>
                     <hr/>
@@ -1108,7 +1110,7 @@
                         <tr>
                             <td><strong>Knave Die (Whispers):</strong></td>
                             <td>
-                                <select name="attr_knave" class="sheet-traitdie">
+                                <select name="attr_knave_die" class="sheet-traitdie">
                                     <option value="4" selected="selected">d4</option>
                                     <option value="6">d6</option>
                                     <option value="8">d8</option>
@@ -1124,30 +1126,30 @@
                     <table class="sheet-attributeTable">
                         <tr>
                             <td>Kate's Key: open locks, untie bonds</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Kate's Key}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Kate's Key}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
 
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{@{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{@{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
                         </tr>
 
                         <tr>
                             <td>Clockwork Sense: find and disarm traps</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Clockwork Sense }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Clockwork Sense }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>
                         </tr>
                         <tr>
                             <td>Gloomstride: travel silently through shadows</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Gloomstride }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                      
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Gloomstride }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                      
                         </tr>
                         <tr>
                             <td>Monkey's Paws: climb walls and swing from ropes</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Monkey's Paw }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Monkey's Paw }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
                         </tr>
                         <tr>
                             <td>Red Herring: disguise and forgery</td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Red Herring }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Red Herring }} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@{knave_die}cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Whisper: Luck}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[{1d@{knave_die} - ?{Arbiter's Difficulty|1}, 1d1-1}kh1]]}}">Add Luck</button></td>                                   
                         </tr>                        
                     </table>
                     <hr/>
@@ -1357,7 +1359,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Wizardry: @{spell_name}}} {{charname=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{[sum] = [[?{Amount of Blood|1}d6s]]}}"></button>
+                                    <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Wizardry: @{spell_name}}} {{charname=@{character_name}}} {{[dice]=?{Amount of Blood|1}}} {{[sum] = [[?{Amount of Blood|1}d6cf<2s]]}}"></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -1395,7 +1397,7 @@
                             </select>  
                         </td>
                        <td>
-                            <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Grace ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Grace|1}}} {{[sum] = [[?{Amount of Grace|1}d4s]]}}"></button>
+                            <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Grace ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Grace|1}}} {{[sum] = [[?{Amount of Grace|1}d4cf<2s]]}}"></button>
                         </td>                        
                         <td>Max</td>
                         <td>
@@ -1412,7 +1414,7 @@
                     <h3>Faith</h3>
                     <table class="sheet-attributeTable">
                          <td>Current</td><td><input type="number" name="attr_faith" value="0"/>d4</td>
-                         <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Faith ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Faith|1}}} {{[sum] = [[?{Amount of Faith|1}d4s]]}}"></button>
+                         <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Faith ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Faith|1}}} {{[sum] = [[?{Amount of Faith|1}d4cf<2s]]}}"></button>
                         </td>
                         <td>Max</td>
                         <td>
@@ -1490,65 +1492,65 @@
                     <h4>Easy (+9)</h4>
                     <table class="sheet-attributeTable">
                         <tr>
-                            <td>Essential Salt</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Essential Salt}} {{charname=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td>Essential Salt</td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Essential Salt}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 9]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Exploding Corpse</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Exploding Corpse}} {{charname=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Exploding Corpse}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 9]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Eyes of the Dead</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Eyes of the Dead}} {{charname=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Eyes of the Dead}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 9]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Knit Flesh</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Knit Flesh}} {{charname=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Knit Flesh}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 9]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Zombie Slave</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Zombie Slave}} {{charname=@{character_name}}} {{result=[[9+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Zombie Slave}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 9]]}}"></button></td>
                         </tr>
                     </table>
                     <h4>Challenging (+6)</h4>
                     <table class="sheet-attributeTable">            
                         <tr>
                             <td>Charon's Price</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Charon's Price} {{charname=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Charon's Price} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 6]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Necrography</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Necrography}} {{charname=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Necrography}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 6]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Zombie Warrior</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Zombie Warrior}} {{charname=@{character_name}}} {{result=[[6+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Zombie Warrior}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 6]]}}"></button></td>
                         </tr>
                     </table>
                     <h4>Difficult (+3)</h4>
                     <table class="sheet-attributeTable">
                         <tr>
                             <td>Born of the Grave</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Born of the Grave}} {{charname=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Born of the Grave}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 3]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Corpse Smoke</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Corpse Smoke}} {{charname=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Corpse Smoke}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 3]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Death Scythe</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Death Scythe}} {{charname=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Death Scythe}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 3]]}}"></button></td>
                         </tr>
                         <tr>
                             <td>Speak with Dead</td>
-                        <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Speak with Dead}} {{charname=@{character_name}}} {{result=[[3+1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                        <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Speak with Dead}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level} + 3]]}}"></button></td>
                         </tr>
                     </table>
                     <h4>Very Difficult (+0)</h4>
                     <table class="sheet-attributeTable">
                     <tr>
                         <td>Worthless Corpse</td>
-                    <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Worthless Corpse}} {{charname=@{character_name}}} {{result=[[1d@{mojo}+1d@{foc}+@{character_level}cs>20]]}}"></button></td>
+                    <td><button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Worthless Corpse}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}cf<2s + 1d@{foc} + @{character_level}]]}}"></button></td>
                     </tr>
                 </table>
                 </div>
@@ -1564,7 +1566,7 @@
                         </tr>
                         <tr>
                             <td><strong>Climb Stone</strong></td>
-                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Murk: Climb Stone}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d@8cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
+                            <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Murk: Climb Stone}} {{charname=@{character_name}}} {{Difficulty=?{Arbiter's Difficulty|1}}} {{result=[[1d8cs>?{Arbiter's Difficulty|1}]]}}"></button></td>
                         </tr>
                     </table>                                 
                     <hr/>
@@ -1614,7 +1616,7 @@
                             </select>  
                         <table class="sheet-attributeTable">
                              <td>Current</td><td><input type="number" name="attr_remembrance" value="0"/>d6</td>
-                             <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Remembrance ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Remembrance|1}}} {{[sum] = [[?{Amount of Remembrance|1}d6s]]}}"></button>           
+                             <td><button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Remembrance ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Remembrance|1}}} {{[sum] = [[?{Amount of Remembrance|1}d6cf<2s]]}}"></button>           
                             </td>
                             <td>Max</td>
                             <td>
@@ -1808,6 +1810,7 @@
   </div>
 </rolltemplate>
 
+<!-- ROLL 20 OR BETTER TEMPLATE -->
 <rolltemplate class="sheet-rolltemplate-toy-rolltwenty">
   <div class="sheet-container">
     <div class="sheet-header">
@@ -1831,7 +1834,8 @@
   </div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-toy-rollfight">
+<!-- FIGHTING TEMPLATE -->
+<rolltemplate class="sheet-rolltemplate-toy-fight">
   <div class="sheet-container">
     <div class="sheet-header">
         <div class="sheet-title">R⑳: Fight</div>
@@ -1878,7 +1882,7 @@
   </div>
 </rolltemplate>
 
-
+<!-- USAGE DIE TEMPLATE -->
 <rolltemplate class="sheet-rolltemplate-toy-rollud">
   <div class="sheet-container">
     <div class="sheet-header">
@@ -1893,12 +1897,50 @@
         {{/rollLess() roll 3 }}
               
     </div>    
-
   </div>
 </rolltemplate>
 
+<!-- SAVE AND SKILL TEMPLATE -->
+<rolltemplate class="sheet-rolltemplate-toy-skill">
+  <div class="sheet-container">
+    <div class="sheet-header">
+        <div class="sheet-title">{{title}}</div>
+        <div class="sheet-subtitle">{{charname}}</div>
+    </div>
+    <div class="sheet-content">
+        {{#rollGreater() roll 0}}
+        <div class="sheet-success">Success!</div>
+        {{/rollGreater() roll 0}}
 
+        {{#^rollGreater() roll 0}}
+        <div class="sheet-failure">Failed!</div>
+        {{/^rollGreater() roll 0}}
+    </div>    
+  </div>
+</rolltemplate>
 
+<!-- WHISPER TEMPLATE -->
+<rolltemplate class="sheet-rolltemplate-toy-whisper">
+  <div class="sheet-container">
+    <div class="sheet-header">
+        <div class="sheet-title">Whisper: {{title}}</div>
+        <div class="sheet-subtitle">{{charname}}</div>
+    </div>
+    <div class="sheet-content">
+        <div class="sheet-roll">{{ roll }}</div>
+        
+        {{#rollGreater() roll 0}}
+        <div class="sheet-success">Success!</div>
+        {{/rollGreater() roll 0}}
+
+        {{#^rollGreater() roll 0}}
+        <div class="sheet-failure">Failed!</div>
+        {{/^rollGreater() roll 0}}
+    </div>    
+  </div>
+</rolltemplate>
+
+<!-- ROLL TO SUCCEED TEMPLATE -->
 <rolltemplate class="sheet-rolltemplate-toy-rollsucceed">
   <div class="sheet-container">
     <div class="sheet-header">
@@ -1925,6 +1967,16 @@
 </rolltemplate>
 
 <script type="text/worker">
+    const stats = ['vig','dex','int','foc','presence','talent','sanity','awareness'];
+    on("sheet:opened",function() {
+      stats.foreEach( function(stat) ) {
+        getAttrs([stat],function(values ) {
+          console.log(values);
+        });
+      });
+    });    
+
+
     on("change:character_flavor", function() {
         setAttrs({
             sellsword:0,

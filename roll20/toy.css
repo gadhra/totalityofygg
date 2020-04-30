@@ -304,23 +304,23 @@ input[type=number] {
 
 
 /* ROLL FIGHT */
-.sheet-rolltemplate-toy-rollfight {
+.sheet-rolltemplate-toy-fight {
   margin-left: -37px;
 }
 
-.withoutavatars .sheet-rolltemplate-toy-rollfight {
+.withoutavatars .sheet-rolltemplate-toy-fight {
   margin-left: -7px;
 }
 
-.sheet-rt-wrapper .sheet-rolltemplate-toy-rollfight  {
+.sheet-rt-wrapper .sheet-rolltemplate-toy-fight  {
   border: 5px solid;
   /* by default, the border is the same color as the header. You can change this here, e.g. to black */
   border-color: red;
 }
 
 /* Header formatting - title and subtitle */
-.sheet-rolltemplate-toy-rollfight .sheet-header {
-  background-color: #a0a0a0;
+.sheet-rolltemplate-toy-fight .sheet-header {
+  background-color: #424141;
   text-align: center;
   font-weight:bold;
   color: white;
@@ -329,29 +329,29 @@ input[type=number] {
 
 
 
-.sheet-rolltemplate-toy-rollfight .sheet-title {
+.sheet-rolltemplate-toy-fight .sheet-title {
   font-size:1.1em;
 }
-.sheet-rolltemplate-toy-rollfight .sheet-subtitle {
+.sheet-rolltemplate-toy-fight .sheet-subtitle {
   font-size:.9em;
 }
 
 /* example colors */
-.sheet-rolltemplate-toy-rollfight .sheet-container {
+.sheet-rolltemplate-toy-fight .sheet-container {
   /* this is the default color */
   --header-bg-color: rgba(112,32,130,1);
   --header-text-color: #FFF;
 }
-.sheet-rolltemplate-toy-rollfight .sheet-container.sheet-color-red {
+.sheet-rolltemplate-toy-fight .sheet-container.sheet-color-red {
   --header-bg-color: #F00;
 }
-.sheet-rolltemplate-toy-rollfight .sheet-container.sheet-color-green {
+.sheet-rolltemplate-toy-fight .sheet-container.sheet-color-green {
   --header-bg-color: #0F0;
   --header-text-color: #000;
 }
 
 /* Allprops part */
-.sheet-rolltemplate-toy-rollfight .sheet-content {
+.sheet-rolltemplate-toy-fight .sheet-content {
   display: grid;
   background: #FFF;
   /* Header formatting - modify the column layout below */
@@ -359,12 +359,12 @@ input[type=number] {
   /* Line height to match default roll template */
   line-height:1.4em;
 }
-.sheet-rolltemplate-toy-rollfight .sheet-content > div {
+.sheet-rolltemplate-toy-fight .sheet-content > div {
   padding: 5px;
 }
 
 /* Left column */
-.sheet-rolltemplate-toy-rollfight .sheet-content .sheet-key {
+.sheet-rolltemplate-toy-fight .sheet-content .sheet-key {
   font-weight: bold;
   padding-right: 10px;
   text-align: center;
@@ -377,13 +377,13 @@ input[type=number] {
 }
 
 /* Description field */
-.sheet-rolltemplate-toy-rollfight .sheet-desc {
+.sheet-rolltemplate-toy-fight .sheet-desc {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
 }
 
-.sheet-rolltemplate-toy-rollfight .sheet-failure {
+.sheet-rolltemplate-toy-fight .sheet-failure {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
@@ -391,7 +391,7 @@ input[type=number] {
   background-color: red !important;
 }
 
-.sheet-rolltemplate-toy-rollfight .sheet-success {
+.sheet-rolltemplate-toy-fight .sheet-success {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
@@ -399,7 +399,7 @@ input[type=number] {
   background-color: green !important;
 }
 
-.sheet-rolltemplate-toy-rollfight .sheet-damage-crit {
+.sheet-rolltemplate-toy-fight .sheet-damage-crit {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
@@ -407,7 +407,7 @@ input[type=number] {
   font-weight: bold;
 }
 
-.sheet-rolltemplate-toy-rollfight .sheet-damage-fumble {
+.sheet-rolltemplate-toy-fight .sheet-damage-fumble {
   grid-column: span 2;
   padding: 5px;
   text-align: center;
@@ -433,7 +433,7 @@ input[type=number] {
 
 /* Header formatting - title and subtitle */
 .sheet-rolltemplate-toy-rolltwenty .sheet-header {
-  background-color: #a0a0a0;
+  background-color: #424141;
   text-align: center;
   font-weight:bold;
   color: white;
@@ -529,7 +529,7 @@ input[type=number] {
 
 /* Header formatting - title and subtitle */
 .sheet-rolltemplate-toy-rollsucceed .sheet-header {
-  background-color: #a0a0a0;
+  background-color: #424141;
   text-align: center;
   font-weight:bold;
   color: white;
@@ -633,7 +633,7 @@ input[type=number] {
 
 /* Header formatting - title and subtitle */
 .sheet-rolltemplate-toy-basic .sheet-header {
-  background-color: #a0a0a0;
+  background-color: #424141;
   text-align: center;
   font-weight:bold;
   color: white;
@@ -729,7 +729,7 @@ input[type=number] {
 
 /* Header formatting - title and subtitle */
 .sheet-rolltemplate-toy-rollud .sheet-header {
-  background-color: #a0a0a0;
+  background-color: #424141;
   text-align: center;
   font-weight:bold;
   color: white;
@@ -814,5 +814,76 @@ input[type=number] {
   background-color: green !important;
 }
 
+
+
+/* ROLL FIGHT */
+.sheet-rolltemplate-toy-fight {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-fight {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-fight  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-fight .sheet-header {
+  background-color: #424141;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+/* Roll Skill */
+/* The Cascading Part */
+.sheet-rolltemplate-toy-skill {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-toy-skill {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-toy-skill .sheet-header {
+  background-color: #424141;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+.sheet-rolltemplate-toy-skill .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-toy-skill .sheet-subtitle {
+  font-size:.9em;
+}
+.sheet-rolltemplate-toy-skill .sheet-content {
+  display: grid;
+  background: #FFF;
+  grid-template-columns: auto auto;
+  line-height:1.4em;
+}
+.sheet-rolltemplate-toy-skill .sheet-content > div {
+  padding: 5px;
+}
+.sheet-rolltemplate-toy-skill .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+.sheet-rolltemplate-toy-skill .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+/* end The Cascading Part */
 
 
