@@ -1,7 +1,9 @@
 ## [unreleased] 
 ### Changed
+- Fixed links for elemental monsters
+- Changed "Pack" to target all Close allies instead of all Nearby allies
 - Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
-
+- Changed the population sizes for small, medium, and large civilizations.
 
 ## [v.2.0.beta] - 2020-04-25
 ### Added
