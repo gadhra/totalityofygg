@@ -107,7 +107,7 @@
                                     </select>               
                             </td>
                             <td>
-                                <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=R☑:♣VIG }} {{charname=@{character_name}}} {{result=[[(@{character_level}*@{knave})+1d@{dex}]]}}"></button>  
+                                <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=R☑: ♠DEX }} {{charname=@{character_name}}} {{result=[[(@{character_level}*@{knave})+1d@{dex}]]}}"></button>  
                             </td>
                         </tr>
 
@@ -446,7 +446,7 @@
                         </div>
                         <div class="sheet-subrow" style="font-size:14px;">
                             <label>Max Use⚅</label>
-                            <select name="attr_armor_max" class="sheet-traitdie">
+                            <select name="attr_armor_current_max" class="sheet-traitdie">
                                     <option value="0" selected="selected">0</option>
                                     <option value="2">d2</option>
                                     <option value="3">d3</option>
@@ -619,7 +619,7 @@
             </div>
         </div>
 
-        <div class="sheet-2colrowequal">
+        <div class="sheet-3colrow">
             <div class="sheet-col">
                 <h4>Consumables</h4>
                 <fieldset class="repeating_consumables">
@@ -640,6 +640,13 @@
                                 <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=@{item_name}}} {{charname=@{character_name}}} {{roll=[[1d@{item_ud}]]}}">
                 </div>
                 </fieldset>    
+            </div>
+
+            <div class="sheet-col">
+                <h4>Languages</h4>
+               <textarea class="sheet-inventory" name="attr_languages"> </textarea>                
+                <h4>Legendarium/Notes</h4>
+               <textarea class="sheet-inventory" name="attr_notes"> </textarea>
             </div>
 
             <div class="sheet-col" style="text-align:center">
@@ -918,6 +925,9 @@
                         <li>Two handed weapons count as one Significant Item instead of two.</li>
                         <li>Treat any Brawl weapon you use as if it had <em>Cleave</em></li>
                     </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_barbarian_notes"></textarea>
                 </div>
 
                 <div class="sheet-1colrow soldier"  style="text-align:left;">
@@ -965,7 +975,10 @@
                     <ul>
                         <li>Damage dice explode on Crit</li>
                         <li>Armor doesn't count as a Significant Item</li>
-                    </ul>                    
+                    </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_soldier_notes"></textarea>              
                 </div>
 
                 <div class="sheet-1colrow archaeologist" style="text-align:left;">
@@ -1067,6 +1080,9 @@
                         <li>Bloody: You roll damage normally, but the Monster is also Bleeding. Stabbing only.</li>
                         <li>Waylaying: You can either roll damage and the Monster is Woozy, or do no damage and the Monster must Save or be Knocked Out. Bashing only.</li>
                     </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_archaeologist_notes"></textarea>    
 
                 </div>
 
@@ -1164,6 +1180,9 @@
                         <li>Bloody: You roll damage normally, but the Monster is also Bleeding. Stabbing only.</li>
                         <li>Waylaying: You can either roll damage and the Monster is Woozy, or do no damage and the Monster must Save or be Knocked Out. Bashing only.</li>
                     </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_bravo_notes"></textarea>  
                 </div>
 
                 <div class="sheet-1colrow leech" style="text-align:left;">
@@ -1207,6 +1226,8 @@
                     </tr>
                     </table>
                     <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_leech_notes"></textarea>  
                     <h3>Leechcraft</h3>
 
                     <h4>Easy (+9)</h4>
@@ -1336,6 +1357,8 @@
                         </td>
                     </table>
                     <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_sorcerer_notes"></textarea>  
 
                     <fieldset class="repeating_wizardry">
                         <table class="sheet-weaponTable">
@@ -1432,7 +1455,10 @@
                     <h3>Invocations</h3>
                     <textarea class="sheet-inventory" name="attr_invocation"> </textarea>
                     <h3>Liturgies</h3>
-                    <textarea class="sheet-inventory" name="attr_liturgy"> </textarea>                 
+                    <textarea class="sheet-inventory" name="attr_liturgy"> </textarea>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_mystic_notes"></textarea>              
                 </div>
 
                 <div class="sheet-1colrow witch" style="text-align:left;">
@@ -1489,6 +1515,10 @@
                             </select>                            
                         </td>
                     </table>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_witch_notes"></textarea>  
+                    <hr />
                     <h4>Easy (+9)</h4>
                     <table class="sheet-attributeTable">
                         <tr>
@@ -1584,6 +1614,9 @@
                         <li>Smell metal up to 1m away</li>
                         <li>Immune to aging</li>
                     </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_murk_notes"></textarea>  
                 </div>
 
                 <div class="sheet-1colrow spriggan" style="text-align:left;">
@@ -1661,7 +1694,10 @@
                         <li>Unhallowed</li>
                         <li>Iron allergy</li>
                         <li>Antlers (optional)</li>
-                    </ul>                    
+                    </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_spriggan_notes"></textarea>                    
                 </div>
 
                 <div class="sheet-1colrow night_child" style="text-align:left;">
@@ -1734,7 +1770,9 @@
                         <li>Produce Goods (see Core Rules)</li>
                         <li>Eat anything organic</li>
                     </ul>
-                    <hr />            
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_night_child_notes"></textarea>              
                 </div>
 
                 <div class="sheet-1colrow pooka" style="text-align:left;">
@@ -1785,7 +1823,10 @@
                         <li>Tiny (-2 Significant Items, no 2H weapons, special Gear)</li>
                         <li>Nullify jinx / no wandering monsters</li>
                         <li>Narcotics Bonuses (See Core Rules)</li>
-                    </ul>  
+                    </ul>
+                    <hr />
+                    Notes
+                    <textarea class="sheet-inventory" name="attr_pooka_notes"></textarea>  
                 </div>
             </div>
         </div><!-- end column -->    
@@ -1967,76 +2008,66 @@
 </rolltemplate>
 
 <script type="text/worker">
-    const stats = ['vig','dex','int','foc','presence','talent','sanity','awareness'];
-    on("sheet:opened",function() {
-      stats.foreEach( function(stat) ) {
-        getAttrs([stat],function(values ) {
-          console.log(values);
-        });
-      });
-    });    
+    const stats = [
+        'vig','dex','int','foc','vig_max','dex_max','int_max','foc_max',
+        'presence','talent','sanity','awareness','presence_max','talent_max','sanity_max','awareness_max',
+        'flesh','flesh_max','grit','grit_max',
+        'armor_type','armor_current', 'armor_current_max','armor_move',
+        'skill_bushcraft','skill_eyeball','skill_listen','skill_lore','skill_math','skill_salt','skill_travel',
+        'save_toxins','save_hexes','save_doom'
+    ];
 
+    const stat_map = {
+        'vig':4,'dex':4,'int':4,'foc':4,'vig_max':4,'dex_max':4,'int_max':4,'foc_max':4,
+        'presence':4,'talent':4,'sanity':4,'awareness':4,'presence_max':4,'talent_max':4,'sanity_max':4,'awareness_max':4,
+        'flesh':4,'flesh_max':4,'grit':4,'grit_max':4,
+        'armor_type': 'none', 'armor_current':0,'armor_current_max':0,'armor_move':20,
+        'skill_bushcraft':1,'skill_eyeball':1,'skill_listen':1,'skill_lore':1,'skill_math':1,'skill_salt':1,'skill_travel':1,
+        'save_toxins':1,'save_hexes':1,'save_doom':1
+    };
+
+    const tropes = [ 'sellsword','knave','magician','devotee','pooka','spriggan','murk','night_child' ];
+
+    const trope_map = { 
+        'barbarian' : 'sellsword','soldier':'sellsword',
+        'bravo':'knave','archaeologist':'knave',
+        'witch':'devotee','mystic':'devotee',
+        'sorcerer':'magician','leech':'magician',
+        'pooka':'pooka','murk':'murk','spriggan':'spriggan','night_child':'night_child'
+    };
+
+    on("sheet:opened",function() {
+        stats.forEach( function(stat) {
+            getAttrs([stat],function(values) {
+                if( Object.keys(values).length < 1 ) {
+                    setAttrs({
+                        [stat]: stat_map[stat]
+                    });
+                }
+            });
+        });
+    });
 
     on("change:character_flavor", function() {
-        setAttrs({
-            sellsword:0,
-            knave:0,
-            magician:0,
-            devotee:0,
-            pooka:0,
-            spriggan:0,
-            murk:0,
-            night_child:0
-        },{},set_trope);
+        tropes.forEach( function(trope) {
+            setAttrs({
+                [trope]:0
+            },{},set_trope);
+        });
     });
+
 
 
     function set_trope() {
         getAttrs(["character_flavor"], function(values) {
             var trope = values.character_flavor;
-            if( trope == 'barbarian' || trope == 'soldier' ) {
-                setAttrs({
-                    sellsword:1
-                });
-            }
-            if( trope == 'bravo' || trope == 'archaeologist' ) {
-                setAttrs({
-                    knave:1
-                });
-            }
-            if( trope == 'sorcerer' || trope == 'leech' ) {
-                setAttrs({
-                    magician:1
-                });
-            }
-            if( trope == 'witch' || trope == 'mystic' ) {
-                setAttrs({
-                    devotee:1
-                });
-            }
-
-            if( trope == 'pooka' ) {
-                setAttrs({
-                    pooka:1
-                });
-            }
-            if( trope == 'spriggan' ) {
-                setAttrs({
-                    spriggan:1
-                });
-            }            
-            if( trope == 'murk' ) {
-                setAttrs({
-                    murk:1
-                });
-            }
-            if( trope == 'night_child' ) {
-                setAttrs({
-                    night_child:1
-                });
-            }
+            selected = trope_map[trope];
+            console.log(selected);
+            setAttrs({
+                [selected] : 1
+            });
         });
-    }
-    
+    }    
 
+   
 </script>
