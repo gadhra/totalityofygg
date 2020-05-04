@@ -3,7 +3,7 @@
 # This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 # Please do not apply other licenses one-way.
 
-VERSION=v.2.0.beta
+VERSION=v.2.1.beta
 
 setup:
 	mkdir -p out
