@@ -1,11 +1,22 @@
-## [unreleased] 
+## [v.2.1.beta] - 2020-05-04
+
+### Added
+- Added "the Contract" to the Small Gods section for Mystics.
+- Added "you must make a successful Fight check using your [\FOC or \INT] (instead of \VIG or \DEX)" as clarification to a few spells for how to attack with a summoned weapon. 
+- For Witch and Leech healing ability, clarified it only works "...once per patient during a Breather or Bivouac (before you erase your Knowledge failures/restore your Mojo)."  (thanks Rob!)
+- Added the ability to attach lost limbs (temporarily) for Witches (thanks Lou!)
+- Added clarification of how to divvy up damage to Curse the Unhallowed (thanks Dell!)
+- For Chymistry, added "[i]f you succeed, you generate d4 \UD of the chymical." (thanks Rob!)
+
 ### Changed
 - Fixed links for elemental monsters
 - Changed "Pack" to target all Close allies instead of all Nearby allies
 - Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
 - Changed the population sizes for small, medium, and large civilizations.
 - Death scythe fix - use \FOC to fight and the d8 is a \UD
-- Added "you must make a successful Fight check using your [\FOC or \INT] (instead of \VIG or \DEX)" as clarification to a few spells for how to attack with a summoned weapon. 
+- Allow a Soldier to repair 1 \UD (up to \MAX) of their Armor during a Breather.  Allow everyone else to do the same during a Bivouac. (thanks Rob!)
+- Addiction was essentially instantaneous at low level.  Added a d20 to the \RO attempt.
+
 
 ## [v.2.0.beta] - 2020-04-25
 ### Added
