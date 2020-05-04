@@ -4,6 +4,8 @@
 - Changed "Pack" to target all Close allies instead of all Nearby allies
 - Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
 - Changed the population sizes for small, medium, and large civilizations.
+- Death scythe fix - use \FOC to fight and the d8 is a \UD
+- Added "you must make a successful Fight check using your [\FOC or \INT] (instead of \VIG or \DEX)" as clarification to a few spells for how to attack with a summoned weapon. 
 
 ## [v.2.0.beta] - 2020-04-25
 ### Added
