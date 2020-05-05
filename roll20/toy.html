@@ -9,8 +9,11 @@
     <input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Skills" />
     <span class="sheet-tab sheet-tab3" style='line-height: 40px;'>SKILLS</span>
 
-    <input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Class" />
-    <span class="sheet-tab sheet-tab4" style='line-height: 40px;'>FLAVOR</span>
+    <input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Misc" />
+    <span class="sheet-tab sheet-tab4" style='line-height: 40px;'>MISC</span>
+
+    <input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Class" />
+    <span class="sheet-tab sheet-tab5" style='line-height: 40px;'>FLAVOR</span>
 
     <!-- End Tab setup -->
 
@@ -587,19 +590,43 @@
 
 
     <div class="sheet-section-gear"><!-- Gear Tab -->
-         <div class="sheet-3colrow">
+         <div class="sheet-2colrowequal">
             <div class="sheet-col">
                 <h2>Equipment</h2>
                 <textarea class="sheet-inventory" name="attr_Equipment"> </textarea>
             </div>
+
+            <div class="sheet-col" style="padding-left:10px;">
+                <h2>Consumables</h2>
+                <fieldset class="repeating_consumables">
+                <div class="sheet-row">
+                    <input type="text" name="attr_item_name" placeholder="Name"  />
+                            <select name="attr_item_ud" class="sheet-traitdie">
+                                <option value="2">d2</option>
+                                <option value="3">d3</option>
+                                <option value="4" selected="selected">d4</option>
+                                <option value="6">d6</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>
+                                </select>
+                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=@{item_name}}} {{charname=@{character_name}}} {{roll=[[1d@{item_ud}]]}}"></button>
+                </div>
+                </fieldset>    
+            </div>
+        </div>
+        <div class="sheet-3colrow">
             <div class="sheet-col">
                 <h2>Treasure</h2>
                 <div>
                     <textarea class="sheet-inventory" name="attr_Treasure"> </textarea>
                 </div>
             </div>
-            <div class="sheet-col">
-                <h2 style="text-align:left">Coin</h2>
+            <div class="sheet-col" style="text-align:center">
+                <h2>Coin</h2>
                     <table class="sheet-attributeTable">
                         <tr>
                             <td class="sheet-attributeTitle">
@@ -621,41 +648,10 @@
                         </tr>
                     </table>
             </div>
-        </div>
-
-        <div class="sheet-3colrow">
-            <div class="sheet-col">
-                <h4>Consumables</h4>
-                <fieldset class="repeating_consumables">
-                <div class="sheet-row">
-                    <input type="text" name="attr_item_name" placeholder="Name"  />
-                            <select name="attr_item_ud" class="sheet-traitdie">
-                                <option value="2">d2</option>
-                                <option value="3">d3</option>
-                                <option value="4" selected="selected">d4</option>
-                                <option value="6">d6</option>
-                                <option value="8">d8</option>
-                                <option value="10">d10</option>
-                                <option value="12">d12</option>
-                                <option value="16">d16</option>
-                                <option value="20">d20</option>
-                                <option value="24">d24</option>
-                                </select>
-                                <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=@{item_name}}} {{charname=@{character_name}}} {{roll=[[1d@{item_ud}]]}}">
-                </div>
-                </fieldset>    
-            </div>
-
-            <div class="sheet-col">
-                <h4>Languages</h4>
-               <textarea class="sheet-inventory" name="attr_languages"> </textarea>                
-                <h4>Legendarium/Notes</h4>
-               <textarea class="sheet-inventory" name="attr_notes"> </textarea>
-            </div>
 
             <div class="sheet-col" style="text-align:center">
-                <h4>Significant Items</h4>
-                Max: <input type="number" name="attr_inventory_max"  /> <em>Max Vig + 1</em>
+                <h2>Significant Items</h2>
+                Max: <span name="attr_inventory" style="font-size: 14px;color: red;"></span>
                 <div class="sheet-row">
                     <input type="checkbox" name="attr_inventory_1" value="1" />
                     <input type="checkbox" name="attr_inventory_2" value="1" />
@@ -856,7 +852,54 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="sheet-section-misc"><!-- Misc Tab -->
+        <div class="sheet-3colrow">
+            <div class="sheet-col">
+                <h4>Languages</h4>
+               <textarea class="sheet-inventory" name="attr_languages"> </textarea>
+            </div>
+            <div class="sheet-col">
+                <h4>Madness!</h4>
+                <fieldset class="repeating_madness">
+                    <select name="attr_madness" class="sheet-select">
+                        <option value="Amnesia">Amnesia</option>
+                        <option value="Beaten">Beaten</option>
+                        <option value="Blind_Fury">Blind</option>
+                        <option value="Darkfear">Darkfear</option>
+                        <option value="Fanaticism">Fanaticism</option>
+                        <option value="Foolhardiness">Foolhardiness</option>
+                        <option value="Gluttony">Gluttony</option>
+                        <option value="Hallucinations">Hallucinations</option>
+                        <option value="Melancholy">Melancholy</option>
+                        <option value="The_Needle">The</option>
+                        <option value="Night_Terrors">Night</option>
+                        <option value="Occult_Obsession">Occult</option>
+                        <option value="Odious_Quirks">Odious</option>
+                        <option value="Phobia">Phobia</option>
+                        <option value="Shot_Nerves">Shot</option>
+                        <option value="Split_Personality">Split</option>
+                        <option value="Starvation">Starvation</option>
+                        <option value="True_Madness">True</option>
+                        <option value="The_Voices">The</option>
+                        <option value="Whisper_Rapture">Whisper of the Rapture</option>
+                    </select> 
+
+                </fieldset>
+            </div>
+
+            <div class="sheet-col">
+                <h4>Other Afflictions</h4>
+                <textarea class="sheet-inventory" name="attr_afflictions"></textarea>
+            </div>
+        </div>
+        <div class="sheet-1colrow">
+            <h4>Legendarium/Notes</h4>
+            <textarea class="sheet-inventory" name="attr_notes"> </textarea>
+        </div>
+    </div> <!-- Misc Tab End -->
+
+
     <div class="sheet-section-classes"><!-- Class Tab -->
         <div class="sheet-1colrow" style="line-height: 2em; text-align:center">
             <div class="sheet-col" style="border:none; padding:20px;">
@@ -907,7 +950,8 @@
                                     <option value="10">d10</option>
                                     <option value="12">d12</option>
                                     <option value="16">d16</option>
-                                </select> 
+                                </select>
+                            </td>
                             <td>
                                 <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}]]}}"></button> 
                             </td>
@@ -920,10 +964,11 @@
                                 <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
+                            </select>
                             </td>                            
                         </tr>
                     </table>
-                    <hr />
+                    
                     <ul>
                         <li>Damage dice explode on Crit</li>
                         <li>Two handed weapons count as one Significant Item instead of two.</li>
@@ -956,7 +1001,8 @@
                                     <option value="10">d10</option>
                                     <option value="12">d12</option>
                                     <option value="16">d16</option>
-                                </select> 
+                                </select>
+                            </td>
                             <td>
                                 <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Deed ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{deed}]]}}"></button> 
 
@@ -972,6 +1018,7 @@
                                 <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
+                            </select>
                             </td>                            
                         </tr>
                     </table>
@@ -1006,7 +1053,8 @@
                                     <option value="10">d10</option>
                                     <option value="12">d12</option>
                                     <option value="16">d16</option>
-                                </select>   
+                                </select>
+                            </td>  
                             <td>
                                 <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}]]}}"></button>
                             </td>
@@ -1019,6 +1067,7 @@
                                 <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
+                            </select>
                             </td>                            
                         </tr>
 
@@ -1111,7 +1160,8 @@
                                     <option value="10">d10</option>
                                     <option value="12">d12</option>
                                     <option value="16">d16</option>
-                                </select>   
+                                </select>
+                            </td>
                             <td>
                                 <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Luck}} {{charname=@{character_name}}} {{roll=[[1d@{luck}]]}}"></button>
                             </td>
@@ -1124,6 +1174,7 @@
                                 <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
+                            </select>
                             </td>                            
                         </tr>
 
@@ -1477,7 +1528,7 @@
                     </table>
                     <hr/>
                     <strong>Current Moon</strong>: 
-                    <select name="attr_moon"" class="sheet-select"">
+                    <select name="attr_moon" class="sheet-select">
                         <option value="void">Void</option> 
                         <option value="waning_sickle">Waning Sickle</option>      
                         <option value="waning_quotidian">Waning Quotidian</option>                                                  
@@ -1719,7 +1770,7 @@
                         <tr>
                             <td>Type</td>
                             <td>
-                                <select name="attr_night_child_type" class="sheet-traitdie">
+                                <select name="attr_night_child_type" class="sheet-select">
                                 <option value="bogey" selected="selected">Bogey</option> 
                                 <option value="goblin">Goblin</option>                                
                                 <option value="troll">Troll</option>
@@ -2015,6 +2066,7 @@
 </rolltemplate>
 
 <script type="text/worker">
+    // set new character sheet constants
     const stats = [
         'vig','dex','int','foc','vig_max','dex_max','int_max','foc_max',
         'presence','talent','sanity','awareness','presence_max','talent_max','sanity_max','awareness_max',
@@ -2043,6 +2095,7 @@
         'pooka':'pooka','murk':'murk','spriggan':'spriggan','night_child':'night_child'
     };
 
+    // set default values for new character sheets
     on("sheet:opened",function() {
         stats.forEach( function(stat) {
             getAttrs([stat],function(values) {
@@ -2053,17 +2106,50 @@
                 }
             });
         });
+
+        getAttrs(["vig_max"], function(values) {
+            let vig_max = parseInt(values.vig_max,10)||0;
+            set_sig_items(vig_max+1);
+        });
     });
 
+    // if the flavor changes, set the trope
     on("change:character_flavor", function() {
         tropes.forEach( function(trope) {
             setAttrs({
                 [trope]:0
             },{},set_trope);
         });
+        getAttrs(["vig_max"], function(values) {
+            let vig_max = parseInt(values.vig_max,10)||0;
+            set_sig_items(vig_max+1);
+        });
     });
 
+    // if your max vig changes, update the significant items
+    on("change:vig_max", function() {
+        getAttrs(["vig_max"], function(values) {
+            let vig_max = parseInt(values.vig_max,10)||0;
+            set_sig_items(vig_max+1);
+        });
+    });    
 
+    // set the number of significant items
+    function set_sig_items(vig_max) {
+        getAttrs(["character_flavor"], function(values) {
+            var trope = values.character_flavor;
+            if( trope == 'pooka' || trope == 'night_child' ) {
+                let tiny = parseInt(-2,10)||0;
+                setAttrs({
+                    inventory : vig_max + tiny
+                });
+            } else {
+                setAttrs({
+                    inventory : vig_max
+                });
+            }
+        });
+    }
 
     function set_trope() {
         getAttrs(["character_flavor"], function(values) {

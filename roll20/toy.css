@@ -17,10 +17,13 @@
 .charsheet input.sheet-tab1:checked ~ div.sheet-section-stats,
 .charsheet input.sheet-tab2:checked ~ div.sheet-section-gear,
 .charsheet input.sheet-tab3:checked ~ div.sheet-section-skills,
-.charsheet input.sheet-tab4:checked ~ div.sheet-section-classes,
+.charsheet input.sheet-tab4:checked ~ div.sheet-section-misc,
+.charsheet input.sheet-tab5:checked ~ div.sheet-section-classes,
 {
   display: block;
 }
+
+
 
 .charsheet input.sheet-tab99:checked ~ div[class^="sheet-section"] {  
   display: block;
@@ -59,7 +62,8 @@
 .charsheet input.sheet-tab1:checked + span.sheet-tab1,
 .charsheet input.sheet-tab2:checked + span.sheet-tab2,
 .charsheet input.sheet-tab3:checked + span.sheet-tab3,
-.charsheet input.sheet-tab3:checked + span.sheet-tab4,
+.charsheet input.sheet-tab4:checked + span.sheet-tab4,
+.charsheet input.sheet-tab5:checked + span.sheet-tab5,
 .charsheet input.sheet-tab99:checked + span.sheet-tab99 {
     
     background: #83B583;
@@ -200,7 +204,6 @@ div.sheet-circle {
 }
 
 .sheet-weaponselect {
-    border: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -210,7 +213,6 @@ div.sheet-circle {
 }
 
 .sheet-select {
-    border: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
