@@ -9,6 +9,7 @@
 - For Chymistry, added "[i]f you succeed, you generate d4 \UD of the chymical." (thanks Rob!)
 
 ### Changed
+- Clarified that Mystics gain their 2nd, 3rd, and 4th liturgies and invocations at 3rd, 5th, and 7th level
 - Cleaned up the Staff Magic section (thanks Javy!)
 - Fixed links for elemental monsters
 - Changed "Pack" to target all Close allies instead of all Nearby allies
