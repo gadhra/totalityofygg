@@ -1798,10 +1798,11 @@ All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light 
 
 The staff must have a \mylink{Wizard Sigil}{sigil-wizard} inscribed upon it, at which point the staff is bound to the Sorcerer. The staff in the hands of anyone else is just a normal quarterstaff (though obviously the staff will be of special material that can be made into a new staff). 
 
-You can "mix and match" from either group as you wish (so the staff could have 2 "level 1" powers and 1 "level 2" power). These are just the most common abilities; you're encouraged to work out additional abilities with the Arbiter.
+A Staff is limited to 3 powers, but you can "mix and match" from any group as you wish (so the staff could have 2 Iron powers and 1 Gold power if you wanted). These are just the most common abilities; you're encouraged to work out additional abilities with the Arbiter.
 
-The second column of each table indicates if the ability can be bought more than once.
+The second column of each table indicates if the ability can be bought more than once.  When you see \mybold{[num]} in a description, this is the number of times you bought the ability.
 
+\cbreak
 
 
 
@@ -1816,14 +1817,14 @@ The second column of each table indicates if the ability can be bought more than
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-    +1 to attack \RO and -1 to Guard & No \\
-    +1 to damage & Yes \\
+     Use your \INT for Fight Rolls\footnote{Instead of \VIG} & No \\
+     +1 to damage & Yes \\
      Safe Casting& Yes \\
      Daze & No \\
      All Saves +1 & No \\
-     Mitigation: Mishap to nothing & Yes \\
+     Mitigation: Mishap to nothing & No \\
      Anchor: d8 & No \\
-     Burn: 1 & No \\
+     Blood: 1 & No \\
   }
 
 
@@ -1831,7 +1832,7 @@ The second column of each table indicates if the ability can be bought more than
 
 \mysubsection{Silver Powers}{staff-magic-silver-powers}
 \example { 
-  \mybold{Successes: 1}
+  \mybold{Successes: 2}
   ~\\
   \mybold{\COST 1000\AG}
 }
@@ -1839,16 +1840,17 @@ The second column of each table indicates if the ability can be bought more than
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-    +3 to attack \RO and -3 to Guard & No \\
-     Damage \DCUP &No \\
+    Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
+     Damage \DCUP & No \\
      Power Casting & Yes \\
      Rend & No \\
      All Saves +3 & No \\
-     Mitigation: Calamity to Mishap & Yes \\
+     Mitigation: Calamity to Mishap & No \\
      Anchor: d10 & No \\
-     Burn: 2 & No \\
+     Blood: 2 & No \\
   }
 
+\newpage
 
 \mysubsection{Gold Powers}{staff-magic-gold-powers}
 \example { 
@@ -1860,32 +1862,31 @@ The second column of each table indicates if the ability can be bought more than
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-    +5 to attack \RO and -5 to Guard & No \\
+     Use your \INT for Fight, Guard, and Init\footnote{Instead of \DEX} rolls & No \\
      Damage \DCUP & Yes \\
      Natural Casting & Yes \\
      Cleave & No \\
      All Saves 6-in-6 & No \\
-     Mitigation: Ruin to Calamity & Yes \\
+     Mitigation: Ruin to Calamity & No \\
      Anchor: d12 & No \\
-     Burn: 3 & No \\
+     Blood: 3 & No \\
   }
 
 \myhighlight{Anchor}{staff-magic-anchor}
 
 Changes the die you roll with your \INT when rolling a Torrent. 
 
-\myhighlight{Burn}{staff-magic-burn}
+\myhighlight{Blood}{staff-magic-blood}
 
-You can ignore a Failure when rolling Spellburn. You can do this *n* number of times per Session, where *n* is the number next to the
-colon i.e. Burn: 3 means 3 times per Session.
+Once per Session, you can tap into the power of the Staff directly and add 1 (Iron), 2 (Silver), or 3 (Gold) Blood Dice to your Pool.
 
 \myhighlight{Mitigation}{staff-magic-mitigation}
 
-Mitigation reduces the effect of a Ruin to a Calamity; a Calamity to a Mishap; and eliminates the effect of a Mishap.  You can do this once for each time you buy the ability.
+Once per Session, Mitigation reduces the effect of a Ruin to a Calamity (Gold); a Calamity to a Mishap (Silver); and eliminates the effect of a Mishap (Iron).
 
 \myhighlight{Power Casting}{staff-magic-power casting}
 
-You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) [num]  times per Session.  
+You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \mybold{[num]} times per Session  
 
 \myhighlight{Natural Casting}{staff-magic-natural casting}
 
@@ -1893,7 +1894,7 @@ Your Blood Dice are only depleted on a natural 1 (instead of a 1 or 2).
 
 \myhighlight{Safe Casting}{staff-magic-safe casting}
 
-You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) [num] times per Session.
+You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) \mybold{[num]} times per Session.
 
 
 

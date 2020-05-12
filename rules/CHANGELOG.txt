@@ -9,6 +9,7 @@
 - For Chymistry, added "[i]f you succeed, you generate d4 \UD of the chymical." (thanks Rob!)
 
 ### Changed
+- Cleaned up the Staff Magic section (thanks Javy!)
 - Fixed links for elemental monsters
 - Changed "Pack" to target all Close allies instead of all Nearby allies
 - Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
