@@ -45,10 +45,10 @@
 
 ## [v.1.0.beta] - 2020-01-24
 ### Added
-- Under the Unhallowed flavors, added: Add your [level] to any rolls involving $INTANGIBLE_STAT (though the {ud} still moves {d-} on a natural 1 or 2)
+- Under the Unhallowed flavors, added: Add your \LVL to any rolls involving $INTANGIBLE_STAT (though the \UD still moves \DCDOWN on a natural 1 or 2)
 - Dammit, forgot the ENTIRE SECTION on DIVINE FAVOR. Added to BB&C as its own page after the Seven Sacraments
 
 ### Changed
 - Error under Pooka, changed "Talent moves 2x up" to "Presence moves 2x up"
 - Fixed some formatting issues in BB&C
-- Under Archaeologist, changed scrolls to: You can attempt to cast spells from Sorcerer's scrolls. Instead of rolling d6 however, you roll up to your [level]d4 (so if you were level 4, you could roll up to 4d4). The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.
+- Under Archaeologist, changed scrolls to: You can attempt to cast spells from Sorcerer's scrolls. Instead of rolling d6 however, you roll up to your \LVL d4 (so if you were level 4, you could roll up to 4d4). The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.
