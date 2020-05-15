@@ -1,0 +1,74 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\documentclass[10pt]{article}
+\usepackage{ygg}
+\newcommand{\yggVersion}{%
+  v.0.1
+}
+
+\newcommand{\yggMyTitle}{
+  {Signs of the Small Gods}
+}
+
+% Section Titles
+\newcommand{\yggGods}{}
+\newcommand{\yggThanks}{}
+
+
+% Body
+\newcommand{\yggGodsText}{}
+\newcommand{\yggThanksText}{}
+
+
+\input{gods.tex}
+\input{thanks.tex}
+
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\title{{\Huge\fffancy\yggMyTitle}}
+\author{by Stefan Antonowicz}
+\date{}
+
+% table of contents
+\renewcommand\contentsname{{\small\fftext Table of Contents }}
+
+\begin{document}\fftext
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+% --- title page --------------------------------------------------------------------
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+
+\begin{multicols*}{2}
+  \let\clearpage\relax
+  \vspace{-5cm}
+  \small\fftext\tableofcontents
+\end{multicols*}
+\vfill\newpage
+% --- gods -----------------------------------------------------------------
+\noindent\yggGods
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggGodsText
+\end{multicols}
+\vfill\newpage
+% --- thanks  -----------------------------------------------------------------
+\noindent\yggThanks
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggThanksText
+\end{multicols}
+\vfill\newpage
+
+
+\end{document}

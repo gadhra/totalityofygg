@@ -1,0 +1,133 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggGods}{%
+  \mychapter{The Small Gods}{small-gods}
+}
+
+\renewcommand{\yggGodsText}{%
+
+\mysection{Vulcan}{god-vulcan}
+
+\myital{Seraph of the Forge} (\mylink{Civilized}{throne-civilized})
+
+\mybold{Holy Symbol}
+
+A small crude homonculous hammered from iron
+
+\mysubsection{Invocations}{vulcan-invocations}
+
+
+\mybold{First}
+
+You gain the Skill: Tinker at 2.
+
+\mybold{Second}
+
+Once per Session, you can repair a \UD of Armor by touching it with a \mylink{Hammer of the Forge}{vulcan-liturgy-hammer}.  This Invocation can only be used during Combat.  You do this as many times as you'd like during Combat, but the effect ends once Combat is over.  Repairing the Armor is a Maneuver. The same rules for \mylink{Hammer of the Forge}{vulcan-liturgy-hammer} apply i.e. for every \DCUP you repair in this way, the damage of the hammer goes down by 1.
+
+\mysubsection{Liturgies}{vulcan-liturgies}
+
+\mybold{First}
+
+You may use your Faith to cast the following spells: \mylink{Clamp}{vulcan-liturgy-clamp}; \mylink{Hone}{vulcan-liturgy-hone}; \mylink{Vulcan Plate}{vulcan-liturgy-plate}; \mylink{Hammer of the Forge}{vulcan-liturgy-hammer}
+
+\mybold{Second}
+
+You may use your Faith to cast the spell \mylink{Hearthfire}{vulcan-liturgy-hearthfire}
+
+\cbreak
+
+\mysubsection{Spell Descriptions}{vulcan-spells}
+
+\LITURGY [
+  Name= Clamp,
+  Link= vulcan-liturgy-clamp,
+  Paradigm= Force ,
+  Save=  Y (negates) ,
+  Duration= varies ,
+  Counter=  n/a  ,
+  Keywords= Contested ,
+  Target=   Nearby object or Monster
+]
+
+
+
+A clamp of red light appears over \DICE Monsters or objects you designate. The maximum width of the clamp is \DICE meters, and the clamp must be able to fit around the objects (so you wouldn't be able to clamp something to a floor or a wall).  The clamp will push the objects together until they are held securely, but it will not damage either object.  For example, you could clamp an orc to a chair or a sword to a table.  If one of the things clamped is a living thing, the creature can break free if they \RB : \VIG with a -\DICE penalty; otherwise, the duration depends on the number of dice spent:  1 [die]: Minutes; 2 \DICE: Days; 3 \DICE: Weeks; 4 \DICE: Months; 5 \DICE: Years; 6+ \DICE: Permanent.  Save negates.
+
+\LITURGY [
+  Name= Hammer of the Forge,
+  Link=vulcan-liturgy-hammer,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+A magical blacksmith's hammer appears in your hand that only you can wield.  The hammer deals \DICE damage up to a maximum of 8. You must make a successful Fight check using your \FOC (instead of \VIG or \DEX).   Additionally, you can also repair the Max \UD of an Ally's armor during a Bivouac.  For every \DCUP you repair in this way, the damage of the hammer goes down by 1.  The hammer can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.  
+
+Once the damage die is exhausted (reaches 0), the Hammer disappears.
+
+\LITURGY [
+  Name= Hearthfire,
+  Link=vulcan-liturgy-hearthfire,
+  Paradigm=Elements,
+  Save=0,
+  Duration=Bivouac,
+  Counter=n/a,
+  Keywords=Splittable ,
+  Target=Close allies
+]
+
+During a Bivouac, you may perform up to \DICE effects, once per die (though you may choose an effect multiple times):
+
+\mynumlist {
+  \item Repair the \MAX \UD of any ally's Armor to full
+  \item Provide Provisions for 1 ally
+  \item Heal up to \DICE Flesh on 1 ally
+  \item Prevent any Wandering Monsters from attacking the camp
+}
+
+
+
+\LITURGY [
+  Name= Hone,
+  Link=vulcan-liturgy-hone,
+  Paradigm= Force ,
+  Save=  0 ,
+  Duration= Combat or \SUMDICE Minutes ,
+  Counter=  n/a  ,
+  Keywords= Splittable ,
+  Target=   Close objects
+]
+
+
+
+You run your hands over \DICE metal, stone, or wooden edges and hone them to a razor sharpness. If the object is a Bashing weapon, it deals +\DICE damage; if the object is a Stabbing or Chopping weapon, it deals +\DICE X2 damage. The edge must be smaller than your outstretched arms.
+
+\LITURGY [
+  Name= Vulcan Plate,
+  Link=vulcan-liturgy-plate,
+  Paradigm= Force ,
+  Save=  N ,
+  Duration= Session ,
+  Counter=  n/a  ,
+  Keywords= None ,
+  Target=   Self
+]
+
+
+
+You cannot wear any other armor while you're wearing Vulcan Plate.  You appear to wear simple and brutal plate mail of welded black iron.  You definitely stand out in a crowd.  Your \MD drops to d4 when you invoke this liturgy.  The \UD for the Armor depends on the number of \DICE invested: 1 d4; 2-3 d6; 4-6 d8; 7-9 d10; 10+ d12.
+
+
+
+
+}%end
