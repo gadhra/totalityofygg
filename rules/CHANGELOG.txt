@@ -1,3 +1,12 @@
+## [unreleased] 
+
+### Added
+- Added some helper tables to appendices
+
+### Changed
+- Rewrote the combat action economy for clarity (thanks Eric!)
+- Made small modifications to the Small God Vulan (thanks Dave!)
+
 ## [v.2.1.beta] - 2020-05-04
 
 ### Added
