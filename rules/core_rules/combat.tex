@@ -10,6 +10,22 @@
 \renewcommand{\yggCombatText}{%
   \mysection{Rules of Engagement}{combat-rules}
 
+  \mysubsection{Overview}{combat-overview}
+
+  \mybullet {
+    \item Combat is conflict that takes place between \mylink{Allies and Monsters}{combat-allies-monster} at a particular \mylink{Distance}{distance-combat}.
+
+    \item Combat consists of \mylink{Moments}{time-combat} and takes \mylink{Minutes}{time-combat} to comple.  Each Moment consists of the Allies and Monsters taking a turn trying to resolve Combat.
+
+    \item Each Moment you can perform \mylink{Actions}{combat-actions}.  You can take 1 or 2 Actions in a Moment. The number of Actions you can take depends on your \mylink{Init}{combat-init} roll.
+
+    \item Actions are divided into two groups: Maneuver Actions and Combat Actions.  \mybold{If you take a Combat Action, your Moment ends}.
+
+    \item Certain Actions occur at the \mylink{top and bottom of the Moment}{time-top-bottom}
+  }
+
+
+
   \mysubsection{Allies and Monsters}{combat-allies-monsters}
 
   Allies consist of all the Adventurers and any henchmen or hirelings they might have;  Monsters are everyone (or everything) else involved in the Combat.  It could be a group of peasants armed with pitchforks, a timed trap, or a swarm of bees.  Could also be a monster.
@@ -18,11 +34,19 @@
 
   Combat consists of \mylink{Moments}{time-combat} and takes \mylink{Minutes}{time-combat} to finish.
 
-  You can take 1 or 2 Actions in a Moment, depending on your Initiative (Init) roll (see below). 
+  You can take 1 or 2 Actions in a Moment, depending on your \mylink{Initiative (Init)}{combat-init} roll. 
 
-  If you \RO on your Init check, you can take 1 Action \mybold{before} the Monster and 1 Action \mybold{after} the Monster. If you fail, you can only take 1 Action \mybold{after} the Monster. You can always choose to act after - there's no need to roll at that point. You can act as a group and decide your own order for Actions in each Moment. 
+  If you \RO on your Init check, you can take 1 Action \mybold{before} the Monster and 1 Action \mybold{after} the Monster. If you fail, you can take 1 Action \mybold{after} the Monster. You can always choose to act after - there's no need to roll at that point. You can act as a group and decide your own order for Actions in each Moment. 
 
-  Your Actions can be a Maneuver Action (\mylink{Basic}{combat-basic-maneuver} or \mylink{Tactical}{combat-tactical-maneuver}) or a Combat Action (\mylink{Fight}{combat-fighting} or \mylink{Mighty Deed of Arms}{combat-mighty-deeds}).  You can only take 1 Combat Action in a Moment - so if you successfully \RO your Init and take a Combat Action before the Monsters, you don't get to take one after the Monsters as well.  Casting a spell counts as a "Fight" maneuver unless otherwise noted.
+  \cbreak
+
+  Your Actions can be:
+  \mybullet {
+    \item A Maneuver Action:  \mylink{Basic}{combat-basic-maneuver} or \mylink{Tactical}{combat-tactical-maneuver}, or;
+    \item A Combat Action: \mylink{Fighting}{combat-fighting} or \mylink{Mighty Deed of Arms}{combat-mighty-deeds}
+  }
+
+  You can only take 1 Combat Action in a Moment, even if you win Init.
 
 
   \mysubsection{Initiative (Init)}{combat-init}
@@ -64,6 +88,125 @@
 
   Knaves can also try to get the Drop on someone \myital{during} Combat.  More details can be found in the section on \mylink{Whispers: Gloomstride}{knave-whisper-gloomstride}. 
 
+  \mysubsection{Maneuver Actions}{combat-maneuvers}
+
+  A Maneuver Action does not end your Moment.  You may take a Maneuver as an Action.  
+
+
+
+  \myhighlight{Basic Maneuvers}{combat-basic-maneuver}
+
+  Basic maneuvers involve positioning yourself in combat, readying equipment, helping fallen Allies, etc.  A Maneuver is anything that might take you a handful of seconds to do.  For example:
+
+  \mybullet { 
+    \item Moving somewhere \mylink{Nearby}{distance-combat};  
+    \item Readying a shield and/or weapon; 
+    \item Switching weapons; 
+    \item Picking up something you dropped; 
+    \item Getting up from the Prone position; 
+    \item Finding a spell in your grimoire; 
+    \item Lighting a torch or flaming oil; 
+    \item Grabbing something out of your pack; 
+    \item Drinking a potion or applying a salve
+  }
+
+  Whether or not something qualifies as a Basic Maneuver is up to the Arbiter's discretion.  It's possible that an action might take longer than a single Maneuver.  Some examples:
+  \mybullet {
+    \item Picking a lock while a fight rages around you;
+    \item Tying off a rope and swinging into combat;
+    \item Running across the room and digging through a fallen Allies pack;
+    \item etc.
+  }
+
+  The Arbiter should decide how many Actions this will take ("it'll take you an Action to tie off the rope and another Action to swing into Combat"; "it's an Action to move Nearby, another Action to roll him over and open his pack, and a third Action to find what you're looking for").
+
+  \myhighlight{Tactical Maneuvers}{combat-tactical-maneuver}
+
+  Tactical Maneuvers involve creating scenarios to positively influence your next Combat Action or change the environment of the battlefield.  They have a few rules:
+
+  \mynumlist {
+    \item You can only use one Tactical Maneuver at a time
+    \item Unless it says otherwise, bonuses and penalties to Fight or Guard occur for a single \RO check
+    \item Tactics don't stack i.e. you can't Aim for multiple Moments and stack the bonuses
+  }
+
+
+  \myhighlight{Aim}{combat-tactical-maneuver-aim}
+  \myital{Shoot or Throw Weapons Only}
+  
+  You take careful aim with your weapon. Your \myital{next} Fight \RO gets a modifier of +4, but your Guard \RO gets a modifier of -4.  These modifiers lasts until you take a Combat Action or something breaks your aim (moving, taking damage, etc)
+
+  \myhighlight{Block}{combat-tactical-maneuver-block}
+  If you have an Action before the Monsters, you can move somewhere Nearby.  The Monster will attack you during its Action if \RS : Presence.
+
+  \myhighlight{Brace}{combat-tactical-maneuver-brace}
+  \myital{Polearm or spear only}
+  If a Monster moves Close to you during its turn, you may immediately take a Combat Action \mybold{before} the Monster attacks
+
+  \myhighlight{Rage}{combat-tactical-maneuver-rage}
+  You take an Action to be come \mylink{Enraged}{effect-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
+
+  \myhighlight{Reckless}{combat-tactical-maneuver-reckless}
+  \myital{Brawl weapons only}
+
+  You use an Action to aggressively position yourself against the Monster.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.
+
+  \myhighlight{Splinter}{combat-tactical-maneuver-splinter}
+  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
+
+  You may use an Action to destroy your shield.  You take no \mybold{physical} damage from a Monster's attack.  You cannot use this ability if you have already taken a Combat Action in this Moment.  If you won Init, you can wait to splinter your shield and counter-attack after the Monster's Action; otherwise, using this Action ends your Moment.
+
+  \myhighlight{Warding}{combat-tactical-maneuver-warding}
+  \myital{Brawl weapons only}
+
+  You use an Action to defensively position yourself against the Monster.  You gain a bonus modifier to your next Guard \RO and a double penalty to your next Fight \RO i.e. take +2 to Guard but -4 to Fight.
+
+
+  \mysubsection{Combat Actions}{combat-combat-actions}
+
+  The \mylink{Fighting Combat Action}{combat-fighting} is covered below.
+
+  \myhighlight{Mighty Deeds of Arms}{combat-mighty-deeds}
+
+   \mynumlist {
+    \item You can only use one Combat Action at a time i.e. you can't use Bum Rush and Florentine at the same time
+    \item Unless it says otherwise, bonuses and penalties to Fight or Guard occur for a single \RO check
+    \item Combat Actions end your Moment
+  } 
+
+  \myhighlight{Bash}{combat-deeds-bash}
+  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
+
+  Get the Monster's attention.  Roll your Fight \RO but deal damage as if you were \mylink{Unarmed}{combat-damage-unarmed}.   If you hit, the Monster will attack you at the next opportunity.
+
+  \myhighlight{Bum Rush}{combat-deeds-bum-rush}
+  \myital{Hard Brawl weapons only}
+
+  Charge!  Move somewhere Close and immediately roll your Fight \RO. If you succeed, roll your damage dice twice and pick the higher number (i.e. if using a Military Pick, roll 2d10 and take the higher roll).  Damage die will explode if you're a Sellsword. 
+
+  \myhighlight{Disarm}{combat-deeds-disarm}
+  \myital{Unarmed or Fast Brawl 1H weapons only. Target must be using a 1H weapon}
+
+  Try a Fight \RO; if you succeed, your opponent is \mylink{Disarmed}{effect-disarmed}
+
+  \myhighlight{Florentine}{combat-deeds-florentine}
+  \myital{Fast Brawl weapons only, but see below. \DEX d12 or better}
+
+  Fight with 2 weapons - if you hit, roll damage for both weapons.  Pick the highest. These dice do NOT explode.
+
+  The combined damage of the 2 weapons must be d12 or less.  OK - 2 short swords (d6+d6), short sword and dagger (d6+d4), Knave's Sword and Dagger (d8+d4).  Not OK - 2 Knave's Swords (d8+d8), Knave Sword + Short Sword (d8+d6)*
+
+  \myhighlight{Gambit}{combat-deeds-gambit}
+  \myital{Arbiter gets to add penalties to your roll depending on how crazy it is.}
+
+  Called shot.  Make your Fight \RO twice.  If both hit, it happens.  If one hits, it doesn't.  If neither hit, you automatically \mylink{Fumble}{appendixa-combat-tables-fumbles}
+
+
+  \myhighlight{Grapple}{combat-deeds-grapple}
+  \myital{No Shield, Light Armor or Unarmored; Unarmed or Fast Brawl 1H weapons only}
+
+  Make your Fight \RO.  If you succeed, the Monster is grappled.  Any subsequent Fight checks \mybold{you} make succeed automatically until the grapple is broken.  Other attackers Fight \RO gain a +2 modifier while the Monster is grappled, but if their attack misses you must roll a an \RS : \DEX.  If you fail, you are struck by the attack.  If you take any damage or are affected by a spell, the grapple is broken.
+
   
 
 
@@ -87,11 +230,11 @@
 
   \myhighlight{Dealing Damage}{combat-dealing-damage}
 
-  The damage your weapon does is a \STATIC die.  Weapon damage is found in \mylink{Equipment}{gear-weapons}.  You roll the \STATIC and deal that much damage to the Monster.
+  The damage your weapon does is a \STATIC die.  Weapon damage is found in \mylink{Equipment}{gear-weapons}.  You roll the \STATIC and deal that much damage to the Monster.  If you roll a 1, you Fumble.  If you roll \MAX damage on the die, you Crit.
 
   \myhighlight{Crits and Fumbles}{combat-crits-and-fumbles}
 
-  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \DEX.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}.  The die you roll on that table is specified in the \mylink{Armor type}{gear-armor}.
+  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \DEX.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}.  The die you roll on the Fumble table is specified in the \mylink{Armor type}{gear-armor}.
 
   If you roll the \MAX number on the die naturally (or someone turns your die into that \MAX number), test your \RS : \VIG.  If you \mybold{don't} roll a Failure, your attack is a Crit.  Add your \LVL to the damage.
 
@@ -195,100 +338,7 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
   If you ever take 4x your \MAX Flesh in damage, and this results in you Dying, you perish at the \mylink{top of the next Moment}{time-top-bottom} as if you had failed your \RS : \DEATH i.e. if you were a Bravo with 8 Flesh and took 32 damage, you would perish at the \mylink{top of the next Moment}{time-top-bottom}
 
 
-  \mysubsection{Maneuvers}{combat-maneuvers}
-
-  \myhighlight{Basic Maneuvers}{combat-basic-maneuver}
-
-  Basic maneuvers involve positioning yourself in combat, readying equipment, helping fallen Allies, etc.  Some non-comprehensive examples:
-
-  Moving somewhere \mylink{Nearby}{distance-combat};  Readying a shield and/or weapon; Switching weapons; Picking up something you dropped; Getting up from the Prone position; Finding a spell in your grimoire; Lighting a torch or flaming oil; Grabbing something out of your pack; Drinking a potion or applying a salve
-
-  \myhighlight{Tactical Maneuvers}{combat-tactical-maneuver}
-
-  \mynumlist {
-    \item You can only use one Tactical Maneuver at a time
-    \item Unless it says otherwise, bonuses and penalties to Fight or Guard occur for a single \RO check
-    \item Tactics don't stack i.e. you can't Aim for multiple Moments and stack the bonuses
-    \item Tactical Maneuvers don't necessarily end your Moment unless noted
-  }
-
-
-  \myhighlight{Aim}{combat-tactical-maneuver-aim}
-  \myital{Shoot or Throw Weapons Only}
-  
-  You take careful aim with your weapon. Your \myital{next} Fight \RO gets a modifier of +4, but your Guard \RO gets a modifier of -4.  These modifiers lasts until you roll your Fight \RO or something breaks your aim (moving, taking damage, etc)
-
-  \myhighlight{Block}{combat-tactical-maneuver-block}
-  If you have an Action before the Monsters, you can move somewhere Nearby.  The Monster will attack during its Action if \RS : Presence.
-
-  \myhighlight{Brace}{combat-tactical-maneuver-brace}
-  \myital{Polearm or spear only}
-  If a Monster moves Close to you during its turn, you may immediately take a Combat Action \mybold{before} the Monster attacks
-
-  \myhighlight{Rage}{combat-tactical-maneuver-rage}
-  You take an Action to be come \mylink{Enraged}{effect-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
-
-  \myhighlight{Reckless}{combat-tactical-maneuver-reckless}
-  \myital{Brawl weapons only}
-
-  You use an Action to aggressively position yourself against the Monster.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.
-
-  \myhighlight{Splinter}{combat-tactical-maneuver-splinter}
-  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
-
-  You may use an Action to destroy your shield.  You take no \mybold{physical} damage from a Monster's attack.  You cannot use this ability if you have already taken a Combat Action in this Moment.  If you won Init, you can wait to splinter your shield and counter-attack after the Monster's Action; otherwise, using this Action ends your Moment.
-
-  \myhighlight{Warding}{combat-tactical-maneuver-warding}
-  \myital{Brawl weapons only}
-
-  You use an Action to defensively position yourself against the Monster.  You gain a bonus modifier to your next Guard \RO and a double penalty to your next Fight \RO i.e. take +2 to Guard but -4 to Fight.
-
-
-  \mysubsection{Combat Actions}{combat-combat-actions}
-
-  The \mylink{Fight}{combat-fighting} Combat Action is covered above.
-
-  \myhighlight{Mighty Deeds of Arms}{combat-mighty-deeds}
-
-   \mynumlist {
-    \item You can only use one Combat Action at a time i.e. you can't use Bum Rush and Florentine at the same time
-    \item Unless it says otherwise, bonuses and penalties to Fight or Guard occur for a single \RO check
-    \item Combat Actions end your Moment
-  } 
-
-  \myhighlight{Bash}{combat-deeds-bash}
-  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
-
-  Get the Monster's attention.  Roll your Fight \RO but deal damage as if you were \mylink{Unarmed}{combat-damage-unarmed}.   If you hit, the Monster will attack you at the next opportunity.
-
-  \myhighlight{Bum Rush}{combat-deeds-bum-rush}
-  \myital{Hard Brawl weapons only}
-
-  Charge!  Move somewhere Close and immediately roll your Fight \RO. If you succeed, roll your damage dice twice and pick the higher number (i.e. if using a Military Pick, roll 2d10 and take the higher roll).  Damage die will explode if you're a Sellsword. 
-
-  \myhighlight{Disarm}{combat-deeds-disarm}
-  \myital{Unarmed or Fast Brawl 1H weapons only. Target must be using a 1H weapon}
-
-  Try a Fight \RO; if you succeed, your opponent is \mylink{Disarmed}{effect-disarmed}
-
-  \myhighlight{Florentine}{combat-deeds-florentine}
-  \myital{Fast Brawl weapons only, but see below. \DEX d12 or better}
-
-  Fight with 2 weapons - if you hit, roll damage for both weapons.  Pick the highest. These dice do NOT explode.
-
-  The combined damage of the 2 weapons must be d12 or less.  OK - 2 short swords (d6+d6), short sword and dagger (d6+d4), Knave's Sword and Dagger (d8+d4).  Not OK - 2 Knave's Swords (d8+d8), Knave Sword + Short Sword (d8+d6)*
-
-  \myhighlight{Gambit}{combat-deeds-gambit}
-  \myital{Arbiter gets to add penalties to your roll depending on how crazy it is.}
-
-  Called shot.  Make your Fight \RO twice.  If both hit, it happens.  If one hits, it doesn't.  If neither hit, you automatically \mylink{Fumble}{appendixa-combat-tables-fumbles}
-
-
-  \myhighlight{Grapple}{combat-deeds-grapple}
-  \myital{No Shield, Light Armor or Unarmored; Unarmed or Fast Brawl 1H weapons only}
-
-  Make your Fight \RO.  If you succeed, the Monster is grappled.  Any subsequent Fight checks \mybold{you} make succeed automatically until the grapple is broken.  Other attackers Fight \RO gain a +2 modifier while the Monster is grappled, but if their attack misses you must roll a an \RS : \DEX.  If you fail, you are struck by the attack.  If you take any damage or are affected by a spell, the grapple is broken.
-
+ 
 
   \mysection{When The Dust Settles}{combat-resting}
 
