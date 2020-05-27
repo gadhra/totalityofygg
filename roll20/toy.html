@@ -536,13 +536,14 @@
                                 <th>Speed</th>
                                 <th>Hands</th>
                                 <th>Damage</th>
+                                <th>Explodes?</th>
                                 <th>Mod</th>
                                 
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button type="roll" value="&{template:toy-fight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}} {{explode=[[1d@{weapon_damage}!]]}} {{level=@{character_level}}}  {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>                                
+                                <td><button type="roll" value="&{template:toy-fight} {{emote=@{character_name} @{weapon_type} with their @{weapon_name}!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + @{weapon_mod} + @{weapon_speed} + ?{Other Modifers?|0}]]}} {{damage=[[1d@{weapon_damage}]]}} {{explode=[[1d@{weapon_damage}!]]}} {{does_explode=[[1d1*@{weapon_explodes}]]} {{level=@{character_level}}}  {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>                                
                                 <td class="sheet-attrankselect">
                                     <select name="attr_weapon_type" class="sheet-weaponselect">
                                         <option value="chops"  selected="selected">Chopping</option>
@@ -578,6 +579,12 @@
                                         <option value="10">d10</option>
                                         </select>               
                                 </td>
+                                <td class="sheet-attrankselect">
+                                    <select name="attr_weapon_explodes" class="sheet-weaponselect">
+                                        <option value="0"  selected="selected">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>               
+                                </td>                                
                                 <td><input class="sheet-attribute" type="number" name="attr_weapon_mod" value="0" /></td>
                             </tr>
                             </tbody>
@@ -585,6 +592,35 @@
                         <hr />
                     </fieldset>    
                 </div>             
+            </div>
+            <div class="sheet-1colrow">
+                <div class="sheetcol">
+                    <div class="sheet-row">
+                        <h4>Special</h4>
+
+                        <table class="sheet-specialTable">
+                            <thead>
+                                <tr>
+                                    <th>Ability</th>
+                                    <th>Damage</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hammer of the Forge</td>
+                                    <td><input type="text" name="attr_vulcan_hammer_damage" /></td>
+                                    <td><button type="roll" value="&{template:toy-fight} {{emote=@{character_name} attacks with the Hammer of the Forge!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + 1d@{foc} + @{character_level}]]}} {{damage=@{vulcan_hammer_damage}}} {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Trident of Ik'tik'buboe</td>
+                                    <td><input type="text" name="attr_iktikbuboe_trident_damage" /></td>
+                                    <td><button type="roll" value="&{template:toy-fight} {{emote=@{character_name} attacks with the Trident of Ik'tik'buboe!}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + 1d@{foc} + @{character_level}]]}} {{damage=@{iktikbuboe_trident_damage}}} {{is_sellsword=[[1d1*@{sellsword}]]}}"></button></td>
+                                </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1962,12 +1998,19 @@
 
             {{#rollLess() is_sellsword 1 }}
                 <div class="sheet-key">Damage</div>
-                <div class="sheet-value">{{damage}}</div>          
+                {{#rollGreater() does_explode 0 }}
+                <div class="sheet-value">{{explode}}</div>
+                {{/rollGreater() does_explode 0 }}
+                {{#rollLess() does_explode 1 }}
+                <div class="sheet-value">{{damage}}</div>
+                {{/rollLess() does_explode 1 }}        
                 <div class="sheet-success">Hit!</div>
                 {{#rollWasCrit() damage }}
-                    <div class="sheet-damage-crit">
-                        Crit!  Roll your VIG ♣. Success = +{{level}} damage.
-                    </div>
+                    {{#rollLess() does_explode 1 }}
+                        <div class="sheet-damage-crit">
+                            Crit!  Roll your VIG ♣. Success = +{{level}} damage.
+                        </div>
+                    {{/rollLess() does_explode 1 }}
                 {{/rollWasCrit() damage }}
                 {{#rollWasFumble() damage }}
                     <div class="sheet-damage-fumble">

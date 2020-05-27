@@ -156,6 +156,26 @@
   text-align: center;
 }
 
+.charsheet .sheet-specialTable {
+  width: 50%;
+}
+
+.charsheet .sheet-specialTable input {
+  width: 35px;
+  text-align:center;
+}
+
+.charsheet .sheet-specialTable th {
+  text-align:center;
+  text-decoration: underline;
+}
+.charsheet .sheet-specialTable td {
+    padding: 5px;
+  text-align: center;
+}
+
+
+
 
 .charsheet .sheet-attributeTable td {
     padding: 5px;
