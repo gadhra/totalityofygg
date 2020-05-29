@@ -65,19 +65,21 @@ The ToY dice chain is:
 
 Dice can't go higher than d24 or lower than d2.  If a die is \mybold{exhausted}  that means it is lost (set to 0).
 
-\mysubsection{Static Dice \hfill \STATIC}{dice-static-dice}
+\mysubsection{Static Dice}{dice-static-dice}
 \example{%
+  \STATIC \\
   \mybold{The base die used in \RO tries.}
 }
 
 Static dice are dice used in \RO tries; they are often combined together with other modifiers to get to a 20 or better.
 
-\myital{Examples: \mylink{Tangible Stats}{tangible-stats}; Knowledge Dice}
+\myital{Examples: \mylink{Tangible Stats}{tangible-stats}; \mylink{Knowledge Dice}{magician-blood-knowledge}}
 
 \cbreak
 
-\mysubsection{Usage Dice \hfill \UD}{dice-usage-dice}
+\mysubsection{Usage Dice}{dice-usage-dice}
 \example{% 
+ \UD \\
   \mybold{A die used to \RS or modify \RO tries. It moves \DCDOWN on a Failure}
 }
 
@@ -85,21 +87,23 @@ Whenever you \RS a Usage Die (\UD), you move \DCDOWN on a Failure (see Rolls).  
 
 \UD have a maximum (\MAX) and current value.  For example, your \UD for your Armor might be a d8 \MAX but you've taken a few hits and now it's a d4 (current).  Unless specified, a \DCDOWN or \DCUP refers to the "current" value.  i.e.  "your Presence moves \DCDOWN" vs. "your \MAX Presence moves \DCDOWN"
 
-\myital{Examples: \mylink{Intangible Stats}{intangible-stats}; Deed Dice and Luck Dice; Mojo; some equipment (narcotics, armor, arrows, torches, etc)}
+\myital{Examples: \mylink{Intangible Stats}{intangible-stats}; \mylink{Deed Dice}{sellsword-deed-dice}  and \mylink{Luck Dice}{knave-luck-die}; \mylink{Mojo}{devotee-faith-and-mojo}; some \mylink{equipment}{gear-adventuring} (narcotics, armor, arrows, torches, etc)}
 
 
-\mysubsection{Pool Dice  \hfill \POOL}{dice-pool-dice}
+\mysubsection{Pool Dice}{dice-pool-dice}
 \example{%
+  \POOL \\
   \mybold{A die used to \RS.  It is exhausted on a Failure} 
 }
 
 When you \RS a Pool die, the die is immediately exhausted if you fail (it doesn't move \DCDOWN like a \UD does).  
 
-\myital{Examples: Faith Die, Blood Die, Grace Die}
+\myital{Examples: \mylink{Faith Die}{devotee-faith-and-mojo}, \mylink{Blood Die}{magician-blood-knowledge}, \mylink{Grace Die}{devotee-faith-and-mojo}}
 
 
-\mysubsection{Knack Dice  \hfill \KNACK}{dice-knack-dice}
+\mysubsection{Knack Dice}{dice-knack-dice}
 \example{%
+  \KNACK \\
   \mybold{A d6 (always) rolled used for simple checks} 
 }
 
@@ -107,7 +111,7 @@ There are certain skills and abilities in ToY that are Knack Die.  A Knack Die i
 
 It's possible for a Knack die to be a 6-in-6.  If you see 6-in-6, roll 2d6 - you only fail on a 2 (snake eyes).
 
-Examples: Saves, Skill Dice
+Examples: \mylink{Saves}{saves}, \mylink{Skill Dice}{skills}
 
 \newpage
 
@@ -117,22 +121,22 @@ Tangible Stats are the physical, definable aspects of your character.  Tangible 
 
 Each Mortal Trope has a \myanchor{Primary Stat}{primary-stat} listed below.
 
-\mysubsection{VIGOR}{tangible-stats-vigor}
+\mysubsection{Vigor}{tangible-stats-vigor}
 
 How strong you are, how much pain and hardship you can endure, your physical essence.  \VIG is used for Hard attacks and is the Primary Stat for Sellswords (Soldiers and Barbarians)
 
 
-\mysubsection{DEXTERITY}{tangible-stats-dexterity}
+\mysubsection{Dexterity}{tangible-stats-dexterity}
 
 How adroit you are, your hand-eye coordination, your speed.  A high \DEX gets you bonuses to figuring out if you attack first, and is used for Fast attacks.  Primary Stat for Knaves (Bravos and Archaeologists)
 
 
-\mysubsection{INTELLECT}{tangible-stats-intellect}
+\mysubsection{Intellect}{tangible-stats-intellect}
 
 How smart you are, how easy it is for you to learn and remember things.   A high \INT gets you bonuses on Leechcraft, Chymistry, Blood, and Wizardry. Primary Stat for Magicians (Sorcerers and Leeches)
 
 
-\mysubsection{FOCUS}{tangible-stats-focus}
+\mysubsection{Focus}{tangible-stats-focus}
 
 How well you can concentrate, how patient you are, your ability to observe and control magical energies. A high \FOC gets you bonuses on Faith, Liturgies, Charms, and Necromancy. Primary Stat for Devotees (Witches and Mystics)
 
@@ -147,7 +151,7 @@ Intangible Stats are the nonphysical, abstract aspects of your character. Intang
 Each Fae Species has a \myanchor{Primary Stat}{primary-stat} listed below.
 
 
-\mysubsection{PRESENCE}{intangible-stats-presence}
+\mysubsection{Presence}{intangible-stats-presence}
 
 Confidence, attractiveness, leadership, and intimidation. The Arbiter might ask you if you'd like to roll your Presence \UD if you're trying to sweet talk someone, keep a group of peons from breaking morale, or scaring a couple of kobolds into telling you what you want to know. 
 
@@ -156,7 +160,7 @@ You can roll your Presence die and add its result to any \RO or \RB attempt you'
 Presence is the Primary Stat for Pooka.
 
 
-\mysubsection{TALENT}{intangible-stats-talent}
+\mysubsection{Talent}{intangible-stats-talent}
 
 It always seems like you're in the right place at the right time, or that you have the favor of the Gods. The Arbiter might ask you if you'd like to roll your Talent \UD if you're trying to see if something works by pure random luck ("I randomly press buttons on the console and hope something good happens"; "I close my eyes and try to jump off the roof into the hay cart").  
 
@@ -164,8 +168,9 @@ You can roll your Talent die and add its result to any \RO or \RB attempt you're
 
 Talent is the Primary Stat for Night Children
 
+\newpage
 
-\mysubsection{AWARENESS}{intangible-stats-awareness}
+\mysubsection{Awareness}{intangible-stats-awareness}
 
 Your idle perception, your "sixth sense".   The Arbiter will ask you to roll your Awareness to  notice something that you might not be actively looking for (you can say no!).  
 
@@ -173,8 +178,9 @@ You can roll your Awareness die and add its result to any \RO or \RB attempt you
 
 Awareness is the Primary Stat for Spriggan
 
+\cbreak
 
-\mysubsection{SANITY}{intangible-stats-sanity}
+\mysubsection{Sanity}{intangible-stats-sanity}
 
 How lucid you are, and how likely you are to keep your cool.  The Arbiter might tell you to make a Sanity roll when you see something particularly heinous (you don't get to say no on this one).  
 
@@ -198,11 +204,13 @@ There are 2 important types of tracked time in Combat - Moments and Minutes.  Mo
 
 \mysubsection{Markovian}{time-markovian}
 
-During Combat, you may be hit with an effect or spell that has a Markovian duration.  Markovian effects happen immediately, but have a random duration over the course of Moments.  Markovian durations have a die attached to them i.e "d4 Markovian".  
+During Combat, you may be hit with an effect or spell that has a Markovian duration.  Markovian effects happen immediately, but have a random duration over the course of Moments.  Markovian durations have a duration die attached to them i.e "d4 Markovian".  
 
-At the bottom of a Moment, \RS with the die associated with the duration.  If you fail (roll a 1 or a 2), the effect immediately ends.  If you don't fail, the die moves \DCDOWN.
+At the bottom of a Moment, \RS using the effect's duration die.  If you roll a Failure (a 1 or a 2) for the effect, it immediately ends.  Otherwise, the duration die moves \DCDOWN. 
 
-For example, if you were struck by a Ghast and paralyzed for d4 Markovian, you would roll a d4 at the bottom of the Moment.  If you rolled a 1 or a 2, the paralysis would end.  If you rolled a 3 or a 4, the die would move to a d3.
+For example, if you were struck by a Ghast and paralyzed for d4 Markovian, you would roll a d4 at the bottom of the Moment for the effect.  If you rolled a 1 or a 2, the paralysis effect would end.  If you rolled a 3 or a 4, the die would move to a d3.
+
+\cbreak
 
 \mysubsection{Out of Combat}{time-out-of-combat}
 
@@ -213,7 +221,7 @@ A session is any time you sit down to play for a morning/afternoon/evening.  Whe
 
 
 \mysubsection{Adventure}{time-adventure}
-Determined by the Arbiter, see the section on \mylink{Adventures}{misc-adventuring}.
+Determined by the Arbiter, see the section on \mylink{Adventures}{advancement-adventuring}.
 
 \cbreak
 
@@ -235,6 +243,8 @@ There are 4 abstract ranges for measuring distance:  \mybold{Close}, \mybold{Nea
 \mysubsection{Non-Combat}{distance-non-combat}
 
 Non Combat distances are covered in the Arbiter's section on Travel
+
+\cbreak
 
 
 \mysection{Other Stuff}{other-stuff}
@@ -267,7 +277,7 @@ Decide if your adventurer is \mylink{Mortal}{mortals} or \mylink{Fae}{fae}.  Rol
 
 For your Tangible Stats, take out a d10, a d8, a d6, and a d4.  Assign one of the dice to \VIG, \DEX, \INT, and \FOC, one die per stat ("bigger" dice are better)
 
-Each Intangible Stat starts at a d4 (though this may be modified by your  or Small God)
+Each Intangible Stat starts at a d4 (though this may be modified by your Trope, Race, or Small God)
 
 \mybold{Step 3: \mylink{Initial Skills}{skills}}
 
@@ -277,7 +287,6 @@ Write down the 7 basic \mylink{Skills}{skills}: Bushcraft, Eyeball, Listen, Lore
 
 Pick your Edge, Ordinary, and Flawed \mylink{Save Die}{saves}.  Each of these is a \KNACK.  Edge starts at 2-in-6, Flawed and Ordinary start at 1-in-6.
 
-\cbreak
 
 \mybold{Step 5: Choose your Trope/Flavor or Species}
 
@@ -292,6 +301,8 @@ Everyone starts with Acheron, the "common" tongue. If you are Mortal, you also c
   \item \mybold{Night Child:} Draconic
   \item \mybold{Spriggan:} Archaic, Fiendish, OR Seraphic
 }
+
+\cbreak
 
 Finally,\RO using your \INT + d12.  If you roll a 20, gain one additional language; 21, two languages; and 23, three additional languages. 20: 1 additional; 21: 2 additional; 22: 3 additional.
 
