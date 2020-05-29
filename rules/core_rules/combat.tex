@@ -13,7 +13,7 @@
   \mysubsection{Overview}{combat-overview}
 
   \mybullet {
-    \item Combat is conflict that takes place between \mylink{Allies and Monsters}{combat-allies-monster} at a particular \mylink{Distance}{distance-combat}.
+    \item Combat is conflict that takes place between \mylink{Allies and Monsters}{combat-allies-monsters} at a particular \mylink{Distance}{distance-combat}.
 
     \item Combat consists of \mylink{Moments}{time-combat} and takes \mylink{Minutes}{time-combat} to comple.  Each Moment consists of the Allies and Monsters taking a turn trying to resolve Combat.
 
@@ -77,6 +77,17 @@
 
   Most Monsters have a speed of d16.  Some Monsters are Fast - their speed is d12.  Some Monsters are Slow - their speed is d20.  See the section on \mylink{Monsters}{bestiary} for more details.
 
+  \myhighlight{Mixed Init}{combat-mixed-init}
+
+  If the Allies are fighting Monsters with mixed speeds (a group of slow blood puppets led by a necromancer who moves at normal speed, say), roll the initiatives as follows:
+  \mynumlist {
+    \item  The Allies roll their Init against the necromancer (d16 speed).  If they \RO, they can take a Maneuver or Combat Action (the Combat Action ends their Moment).
+    \item  The necromancer takes her turn
+    \item  Any Allies that won Init against the necromancer can take their second Action now.  Any Allies who failed to \RO against the necromancer should now test their Init against the blood puppets.  If they \RO, they can take a Maneuver or Combat Action (the Combat Action ends their Moment)
+    \item  The blood puppets take their turn
+    \item  Allies who have any Actions left, or Allies who failed both Init tests take their final Maneuver or Combat Action
+  }
+
 
   \myhighlight{Surprise}{combat-surprise}
 
@@ -134,31 +145,27 @@
   \myhighlight{Aim}{combat-tactical-maneuver-aim}
   \myital{Shoot or Throw Weapons Only}
   
-  You take careful aim with your weapon. Your \myital{next} Fight \RO gets a modifier of +4, but your Guard \RO gets a modifier of -4.  These modifiers lasts until you take a Combat Action or something breaks your aim (moving, taking damage, etc)
+  You take careful aim with your weapon.  If your \myital{next} Fight \RO hits, you Crit (\MAX damage + level).  If you are a Sellsword, roll damage twice and take the higher value (dice explode).  
+
+  This bonus lasts until you take a Combat Action or something breaks your aim (moving, taking damaging, Guarding, etc).
 
   \myhighlight{Block}{combat-tactical-maneuver-block}
-  If you have an Action before the Monsters, you can move somewhere Nearby.  The Monster will attack you during its Action if \RS : Presence.
+  Get in a Monster's way and try to get it to attack you.  Move somewhere Close or Nearby, pick a Monster to engage with, and \RS : Presence.  If you succeed, the Monster will attack you at its next opportunity.
 
   \myhighlight{Brace}{combat-tactical-maneuver-brace}
   \myital{Polearm or spear only}
-  If a Monster moves Close to you during its turn, you may immediately take a Combat Action \mybold{before} the Monster attacks
+  Set your polearm or spear to defend against incoming Monsters.  If a Monster moves from Nearby to Close during its Action, you may immediately take a Combat Action \mybold{before} the Monster attacks
 
   \myhighlight{Rage}{combat-tactical-maneuver-rage}
   You take an Action to be come \mylink{Enraged}{effect-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
 
   \myhighlight{Reckless}{combat-tactical-maneuver-reckless}
   \myital{Brawl weapons only}
+  You use an Action to aggressively position yourself against the Monsters.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.
 
-  You use an Action to aggressively position yourself against the Monster.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.
-
-  \myhighlight{Splinter}{combat-tactical-maneuver-splinter}
-  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
-
-  You may use an Action to destroy your shield.  You take no \mybold{physical} damage from a Monster's attack.  You cannot use this ability if you have already taken a Combat Action in this Moment.  If you won Init, you can wait to splinter your shield and counter-attack after the Monster's Action; otherwise, using this Action ends your Moment.
 
   \myhighlight{Warding}{combat-tactical-maneuver-warding}
   \myital{Brawl weapons only}
-
   You use an Action to defensively position yourself against the Monster.  You gain a bonus modifier to your next Guard \RO and a double penalty to your next Fight \RO i.e. take +2 to Guard but -4 to Fight.
 
 
@@ -192,9 +199,13 @@
   \myhighlight{Florentine}{combat-deeds-florentine}
   \myital{Fast Brawl weapons only, but see below. \DEX d12 or better}
 
-  Fight with 2 weapons - if you hit, roll damage for both weapons.  Pick the highest. These dice do NOT explode.
+  Fight with 2 weapons.  If you hit, roll damage for both weapons.  Pick the highest:
+  \mylist {
+    \item  If both dice are natural 1s, you automatically \mylink{Fumble}{appendixa-combat-tables-fumbles}
+    \item  If one die is a natural 1, the other die can't Crit (even if you roll \MAX damage)
+  }
 
-  The combined damage of the 2 weapons must be d12 or less.  OK - 2 short swords (d6+d6), short sword and dagger (d6+d4), Knave's Sword and Dagger (d8+d4).  Not OK - 2 Knave's Swords (d8+d8), Knave Sword + Short Sword (d8+d6)*
+  The combined damage of the 2 weapons must be d12 or less.  OK - 2 short swords (d6+d6), short sword and dagger (d6+d4), Knave's Sword and Dagger (d8+d4).  Not OK - 2 Knave's Swords (d8+d8), Knave Sword + Short Sword (d8+d6)
 
   \myhighlight{Gambit}{combat-deeds-gambit}
   \myital{Arbiter gets to add penalties to your roll depending on how crazy it is.}
@@ -207,7 +218,11 @@
 
   Make your Fight \RO.  If you succeed, the Monster is grappled.  Any subsequent Fight checks \mybold{you} make succeed automatically until the grapple is broken.  Other attackers Fight \RO gain a +2 modifier while the Monster is grappled, but if their attack misses you must roll a an \RS : \DEX.  If you fail, you are struck by the attack.  If you take any damage or are affected by a spell, the grapple is broken.
 
-  
+  \myhighlight{Splinter}{combat-deeds-splinter}
+  \myital{Must have a shield equipped (it has to be on your arm / you have to be using it)}
+
+  If a Monster's attack is about to cause you \mybold{physical} damage, you may immediately take a Combat Action to destroy your shield, taking no damage. You can wait until after the damage is rolled to decide if you're sundering your shield.  Since this is a Combat Action, it ends your Moment; conversely, if you already took a Combat Action this Moment, you can't use this Deed.
+
 
 
   \mysubsection{Fighting}{combat-fighting}
@@ -284,7 +299,7 @@
   \end{center}
 
   \mynumlist {
-    \item \mybold{Shield} : If you have a shield equipped (that is, on your arm) and take \mybold{physical damage} , you can perform the \mylink{Mighty Deed of Arms: Splinter}{combat-tactical-maneuver-splinter} (this counts as your Fight Action for the Moment; if you already took your Fight Action, you can't use this). The shield is sundered and you take no damage. Stop here.  Otherwise ...
+    \item \mybold{Shield} : If you have a shield equipped (that is, on your arm) and take \mybold{physical damage}, and you haven't taken a Combat Action yet, you can \mylink{Splinter}{combat-deeds-splinter} your shield. Stop here.  Otherwise ...
     \item \mybold{Grit} : Subtract the damage from your Grit.  If there's any damage left over, move to Armor i.e. if I have a Grit of 4 and I take 9 damage, I have 5 damage left over and I move onto to Armor.
     \item \mybold{Armor} : If you have armor, see if it will absorb the damage.  Roll the {ud} for your armor and subtract the result from the damage.  For example, if I'm wearing chain mail (Medium armor) I roll a d8; if I rolled a 5, I'd subtract 5 from the total damage.  If there's any damage left over, move onto Flesh
     \item \mybold{Flesh} : Subtract the rest of the damage from Flesh. If you go to 0 or less Flesh, you are \mylink{Dying}{combat-dying}
@@ -337,7 +352,7 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
 
   If you ever take 4x your \MAX Flesh in damage, and this results in you Dying, you perish at the \mylink{top of the next Moment}{time-top-bottom} as if you had failed your \RS : \DEATH i.e. if you were a Bravo with 8 Flesh and took 32 damage, you would perish at the \mylink{top of the next Moment}{time-top-bottom}
 
-
+  \newpage
  
 
   \mysection{When The Dust Settles}{combat-resting}
@@ -349,12 +364,12 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
 
   You do not need to take a Breather in a safe place, but dropping down for a nap right after you've gutted the Plague Prophet in front of his congregation may not be the hottest idea.  You can only take 1 Breather per Combat.  
 
-  \cbreak
-  
   \mysubsection{Taking a Bivouac (Hours)}{combat-resting-bivouac}
   You must take a Bivouac in a "safe" place (though this doesn't necessarily have to be in \mylink{Civilization}{civilization}).  Each time you Bivouac you must make a \UD roll of your Personal Provisions (you can share Personal Provisions with others, but you have to roll for each person).  If you don't have enough Personal Provisions, you can't get any of the effects of a Bivouac.  There's always a chance of wandering Monsters during a Bivouac (unless you have a Pooka with you)
 
+
   \mybold{If a Wound doesn't prevent you from doing so:}
+
   \mybullet {
     \item Restore all your Grit.  
     \item Restore \LVL Flesh.  If you're a \mylink{Barbarian}{flavor-barbarian}, restore \LVL x2 Flesh
@@ -365,6 +380,7 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
   \cbreak
 
   \mybold{Additionally:}
+
   \mybullet {
     \item If you're a \mylink{Soldier}{flavor-soldier}, restore 1 \UD of Armor up to its \MAX and 1 \DEED
     \item If you're a \mylink{Barbarian}{flavor-barbarian}, restore 1 Deed \UD
