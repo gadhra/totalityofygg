@@ -10,6 +10,7 @@ setup:
 	ln -sf ../../ocgx.sty out/
 	ln -sf ../mechanics.tex out/
 	ln -sf ../mortals.tex out/
+	ln -sf ../advancement.tex out/
 	ln -sf ../skills_and_saves.tex out/
 	ln -sf ../fae.tex out/
 	ln -sf ../civilization.tex out/
