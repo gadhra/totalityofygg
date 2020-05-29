@@ -39,7 +39,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
   \mybullet {
     \item Monster Speed is used when rolling Init
     \item Monster \RB is used if a \DEX \RB is required
-    \item Monster Actions are the number of Actions they can take in a Moment. Like the adventurers, the Monster's Moment ends when they take a Fight action.
+    \item Monster Actions are the number of Actions they can take in a Moment. Like the Adventurers, the Monster's Moment ends when they take a Combat Action.
   }
 
 \myhighlight{Monster Power}{monster-power}
@@ -69,9 +69,7 @@ Soak is a general term to represent a damage threshold because of armor, thick s
     4 & Dragons, Titans, etc   \\
   }
 
- \mysubsection{Monster Basic Stats}{monster-basic-tats} 
-
-
+ \mysubsection{Monster Basic Stats}{monster-basic-stats} 
 
   \mytable{X c c c}{
   \thead{\HD} & \thead{Damage} & \thead{Weakness} & \thead{Base Save (x-in-6)} \\ 
@@ -86,6 +84,18 @@ Soak is a general term to represent a damage threshold because of armor, thick s
    8 & 2d10 &  d6 & 5 \\
    9 & d10+d12 &  d3 & 6 \\
  }
+
+ \mysubsection{Monster Actions}{monster-actions}
+
+ %
+ %Monsters have access to the following Tactical Maneuvers:
+%  Cunning:  Aim and Brace
+% Martial:  Bum Rush, Disarm, and Grapple
+%
+
+
+
+
 
  \newpage
 
@@ -127,7 +137,7 @@ Keen Monsters can't be Surprised at the \mybold{start}  of Combat, and can detec
 
 \mysubsection{Leaper}{monster-attribute-leaper}
 
-Once per combat the monster can move to a Faraway place
+Once per Combat the monster can move to a Faraway place
 
 \mysubsection{Mindless}{monster-attribute-mindless}
 
@@ -163,7 +173,7 @@ All Nearby swarming Monsters share their Health equally as one "pool".  Swarms t
 
 \mysubsection{Swift}{monster-attribute-swift}
 
-If the monster is hit by an Attack it may immediately Move
+If the monster is struck by an Ally's Combat Action it may immediately take a Maneuver Action.
 
 \mysubsection{Vulnerable}{monster-attribute-vulnerable}
 
@@ -1252,7 +1262,7 @@ If reduced to 0 Health - and not in a manner appropriate for truly killing vampi
 \example{All Nearby swarming Monsters share their Health equally as one "pool", and take double damage from attacks that affect multiple targets.  Swarms deal damage equal to their \HD times 2 i.e. a 3\HD swarm would deal 6 damage to all Close targets}
 
 \MONSTERBLOCK[
-  Name=Insect Swarm
+  Name=Insect Swarm,
   Link=monster-insect-swarm,
   MV=Base,
   WK=d20,
@@ -1268,7 +1278,7 @@ If reduced to 0 Health - and not in a manner appropriate for truly killing vampi
 If an insect swarm hits Flesh, the damage is doubled.
 
 \MONSTERBLOCK[
-  Name=Rat Swarm
+  Name=Rat Swarm,
   Link=monster-rat-swarm,
   MV=Base,
   WK=d20,
@@ -1284,7 +1294,7 @@ If an insect swarm hits Flesh, the damage is doubled.
 If a rat swarm hits Flesh, make a Save vs. Toxins or suffer a Disease.
 
 \MONSTERBLOCK[
-  Name=Snake Swarm
+  Name=Snake Swarm,
   Link=monster-snake-swarm,
   MV=Base,
   WK=d20,
