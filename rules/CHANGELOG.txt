@@ -1,15 +1,12 @@
 ## [unreleased] 
-
 ### Added
-- Added some helper tables to appendices
-
 ### Changed
-- Rewrote the combat action economy for clarity (thanks Eric!)
-- Made small modifications to the Small God Vulan (thanks Dave!)
+
 
 ## [v.2.1.beta] - 2020-05-04
 
 ### Added
+- Added some helper tables to appendices
 - Added "the Contract" to the Small Gods section for Mystics.
 - Added "you must make a successful Fight check using your [\FOC or \INT] (instead of \VIG or \DEX)" as clarification to a few spells for how to attack with a summoned weapon. 
 - For Witch and Leech healing ability, clarified it only works "...once per patient during a Breather or Bivouac (before you erase your Knowledge failures/restore your Mojo)."  (thanks Rob!)
@@ -18,6 +15,11 @@
 - For Chymistry, added "[i]f you succeed, you generate d4 \UD of the chymical." (thanks Rob!)
 
 ### Changed
+- Sorcerers get a single Blood Die per level (thanks Javy!)
+- Cleaned up combat, skills, etc. and fixed missing content (thanks Javy!)
+- Formatting, typos, etc.
+- Rewrote the combat action economy for clarity (thanks Eric!)
+- Made small modifications to the Small God Vulan (thanks Dave!)
 - Clarified that Mystics gain their 2nd, 3rd, and 4th liturgies and invocations at 3rd, 5th, and 7th level
 - Cleaned up the Staff Magic section (thanks Javy!)
 - Fixed links for elemental monsters
