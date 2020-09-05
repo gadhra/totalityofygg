@@ -4,7 +4,7 @@
 % Please do not apply other licenses one-way.
 
 \renewcommand{\yggMechanics}{%
-  \mychapter{Core Mechanics}{core-mechanics}
+  \mychapter{Mechanics}{core-mechanics}
 }
 
 \renewcommand{\yggMechanicsText}{%
@@ -18,33 +18,42 @@ There are 3 types of "special" die rolls in ToY
   \thead{Roll} & \thead{Symbol} \\
 }{
     Roll 20 & \RO \\
-    Roll Better & \RB \\
+    Roll to Beat & \RB \\
     Roll to Succeed & \RS \\
 }
 
 Rolls are distinct from one another i.e. powers and abilities that affect \RO (like a Knave's Luck Die) cannot affect \RB or \RS
 
-\mysubsection{Failure}{rolls-failure}
-A Failure occurs when you roll a \myital{natural} 1 or a 2 on a \RS (\myital{natural} means that's what's on the face of the die). Failure has different effects depending on the type of die you might be rolling.  Details of what happens if you fail will be in the description of the roll.
-
 \mysubsection{Roll Twenty}{rolls-roll-twenty}
-In a \RO attempt you have to roll a 20 or better with a combination of dice and modifiers. A 19 misses, a 20 succeeds. 
+In a \RO try you have to roll a 20 or better with a combination of dice and modifiers. A 19 misses, a 20 succeeds. 
 
-\mysubsection{Roll to Succeed}{rolls-roll-to-succeed}
-To roll to succeed, you must roll a die without rolling a Failure (a natural 1 or 2, see below).  \RS rolls cannot be modified (though they can sometimes be changed).  
+\mysubsection{Roll to Beat}{rolls-roll-to-beat}
+In a \RB try you roll a single die plus modifiers and try to beat 1 or more other \RB rolls.  The type of die will be defined with the \RB
 
-\cbreak
 
-\mysubsection{Roll Better}{rolls-roll-better}
-In a \RB attempt you roll a single die plus modifiers and try to beat 1 or more other \RB rolls.  This roll is called a "test". The type of die will be defined with the \RB
 
 \example {%
-  An orc attempts to push a Barbarian off a ledge.  Both the orc and the Barbarian attempt a \RB : \VIG test, highest roll wins \\ ~\\ A Sorcerer casts Battering Beam at a kobold.  The kobold fails its Save and must attempt a \RB : \VIG vs. the Sorcerer's \INT \\ ~\\ Two Allies rush toward an idol teetering on the brink of a chasm.  They each attempt a \RB : \MD+\DEX test to see who gets there first
+  An orc trys to push a barbarian off a ledge.  Both the orc and the barbarian try a \RB : \VIG test, highest roll wins \\ ~\\ A sorcerer casts Battering Beam at a kobold.  The kobold fails its Save and must try a \RB : \VIG vs. the sorcerer's \INT \\ ~\\ Two Allies rush toward an idol teetering on the brink of a chasm.  They each try a \RB : \MD+\DEX test to see who gets there first
 }
 
-When Monsters attempt a \RB, they add their \HD as a modifier to their test i.e. a 6\HD Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{primary-stat}.
+
+
+When Monsters try a \RB, they add their \HD as a modifier to their test i.e. a 6\HD Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{primary-stat}.
 
 Ties go to the Allies.  If there's a tie between Allies, roll a d6 and add its result to your \RB until there's a winner.
+
+\cbreak\bump
+
+\mysubsection{Roll to Succeed}{rolls-roll-to-succeed}
+To roll to succeed, you must roll a die without rolling a Failure (a natural 1 or 2).  \RS rolls cannot be modified (though they can sometimes be changed).  
+
+\mysubsection{Failure}{rolls-failure}
+A Failure occurs when you roll a \myital{natural} 1 or 2 on a \RS (\myital{natural} means that's what's on the face of the die). Failure has different effects depending on the type of die you might be rolling.  Details of what happens if you fail will be in the description of the roll.
+
+\begin{center}
+\includegraphics[scale=.25]{Moonscape}
+\end{center}
+
 
 \newpage
 
@@ -73,9 +82,8 @@ Dice can't go higher than d24 or lower than d2.  If a die is \mybold{exhausted} 
 
 Static dice are dice used in \RO tries; they are often combined together with other modifiers to get to a 20 or better.
 
-\myital{Examples: \mylink{Tangible Stats}{tangible-stats}; \mylink{Knowledge Dice}{magician-blood-knowledge}}
+\cbreak\bump
 
-\cbreak
 
 \mysubsection{Usage Dice}{dice-usage-dice}
 \example{% 
@@ -83,12 +91,11 @@ Static dice are dice used in \RO tries; they are often combined together with ot
   \mybold{A die used to \RS or modify \RO tries. It moves \DCDOWN on a Failure}
 }
 
-Whenever you \RS a Usage Die (\UD), you move \DCDOWN on a Failure (see Rolls).  If you roll a d2, the \UD is automatically exhausted after your roll.
+\myital{To the best of my knowledge, the Usage Die is a mechanic invented by David Black.}
 
-\UD have a maximum (\MAX) and current value.  For example, your \UD for your Armor might be a d8 \MAX but you've taken a few hits and now it's a d4 (current).  Unless specified, a \DCDOWN or \DCUP refers to the "current" value.  i.e.  "your Presence moves \DCDOWN" vs. "your \MAX Presence moves \DCDOWN"
+When the Arbiter asks you to roll your \UD, the die moves \DCDOWN on a Failure (a natural 1 or a 2).  If your \UD is a d2, it's automatically exhausted after you roll.  
 
-\myital{Examples: \mylink{Intangible Stats}{intangible-stats}; \mylink{Deed Dice}{sellsword-deed-dice}  and \mylink{Luck Dice}{knave-luck-die}; \mylink{Mojo}{devotee-faith-and-mojo}; some \mylink{equipment}{gear-adventuring} (narcotics, armor, arrows, torches, etc)}
-
+All \UD have a maximum (\MAX) and current value.  For example, your \UD for your Armor might be a d8 \MAX but you've taken a few hits and now it's a d6 (current).  Unless specified, a \DCDOWN or \DCUP refers to the "current" value.  i.e.  "your Presence moves \DCDOWN" vs. "your \MAX Presence moves \DCDOWN"
 
 \mysubsection{Pool Dice}{dice-pool-dice}
 \example{%
@@ -96,22 +103,7 @@ Whenever you \RS a Usage Die (\UD), you move \DCDOWN on a Failure (see Rolls).  
   \mybold{A die used to \RS.  It is exhausted on a Failure} 
 }
 
-When you \RS a Pool die, the die is immediately exhausted if you fail (it doesn't move \DCDOWN like a \UD does).  
-
-\myital{Examples: \mylink{Faith Die}{devotee-faith-and-mojo}, \mylink{Blood Die}{magician-blood-knowledge}, \mylink{Grace Die}{devotee-faith-and-mojo}}
-
-
-\mysubsection{Knack Dice}{dice-knack-dice}
-\example{%
-  \KNACK \\
-  \mybold{A d6 (always) rolled used for simple checks} 
-}
-
-There are certain skills and abilities in ToY that are Knack Die.  A Knack Die is always a d6.  Knack Die are written as \myital{x-in-6} i.e. 1-in-6, 2-in-6, etc.  If your Knack Die is 2-in-6, you succeed if you roll a 1 or a 2 on a d6.  
-
-It's possible for a Knack die to be a 6-in-6.  If you see 6-in-6, roll 2d6 - you only fail on a 2 (snake eyes).
-
-Examples: \mylink{Saves}{saves}, \mylink{Skill Dice}{skills}
+Pool dice are like \UD, except the die is immediately exhausted when you roll a Failure (it doesn't move \DCDOWN like a \UD does).  
 
 \newpage
 
@@ -119,26 +111,25 @@ Examples: \mylink{Saves}{saves}, \mylink{Skill Dice}{skills}
 
 Tangible Stats are the physical, definable aspects of your character.  Tangible Stats are \STATIC and don't go up or down unless something really bad happens.
 
-Each Mortal Trope has a \myanchor{Primary Stat}{primary-stat} listed below.
+Each \mylink{Mortal Trope}{mortal} has a \myanchor{Primary Stat}{primary-stat} listed below.
 
 \mysubsection{Vigor}{tangible-stats-vigor}
 
-How strong you are, how much pain and hardship you can endure, your physical essence.  \VIG is used for Hard attacks and is the Primary Stat for Sellswords (Soldiers and Barbarians)
-
+How strong you are, how much pain and hardship you can endure, your physical essence.  In \mylink{Combat}{combat}, \VIG is used when \mylink{Fighting}{combat-fighting} with Hard weapons. \VIG is the Primary Stat for \mylink{Sellswords}{trope-sellsword}. 
 
 \mysubsection{Dexterity}{tangible-stats-dexterity}
 
-How adroit you are, your hand-eye coordination, your speed.  A high \DEX gets you bonuses to figuring out if you attack first, and is used for Fast attacks.  Primary Stat for Knaves (Bravos and Archaeologists)
+How adroit you are, your hand-eye coordination, your speed.  In \mylink{Combat}{combat}, \DEX is used when \mylink{Fighting}{combat-fighting} with Fast weapons and \mylink{Guarding}{combat-guarding} against attacks. \DEX is the Primary Stat for \mylink{Knaves}{trope-knave}.  
 
 
 \mysubsection{Intellect}{tangible-stats-intellect}
 
-How smart you are, how easy it is for you to learn and remember things.   A high \INT gets you bonuses on Leechcraft, Chymistry, Blood, and Wizardry. Primary Stat for Magicians (Sorcerers and Leeches)
+How smart you are, how observant you are, how easy it is for you to learn and remember things. In \mylink{Combat}{combat}, \INT is combined with your Move Die to determine \mylink{Init}{combat-init} (when you get to take your turn in Combat). \INT is the Primary Stat of \mylink{Philosophers}{trope-philosopher}.  
 
 
 \mysubsection{Focus}{tangible-stats-focus}
 
-How well you can concentrate, how patient you are, your ability to observe and control magical energies. A high \FOC gets you bonuses on Faith, Liturgies, Charms, and Necromancy. Primary Stat for Devotees (Witches and Mystics)
+How well you can concentrate, how patient you are, your will to live, your ability to observe and control magical energies.  In \mylink{Combat}{combat}, \FOC is rolled for \mylink{Crits and Fumbles}{combat-crits-and-fumbles} and when you are \mylink{Dying}{combat-dying}.  \FOC is the Primary Stat of \mylink{Mystics}{trope-mystic}
 
 \cbreak
 
@@ -146,27 +137,27 @@ How well you can concentrate, how patient you are, your ability to observe and c
 \mysection{Intangible Stats }{intangible-stats}
 
 
-Intangible Stats are the nonphysical, abstract aspects of your character. Intangible Stats are \UD and their die will decrease with use.  You can use your Intangible Stats to modify any \RO or \RB attempt using its \myital{corresponding} Tangible Stat (see below).
+Intangible Stats are the nonphysical, abstract aspects of your character. Intangible Stats are \UD and their die will decrease with use.  You can use your Intangible Stats to modify any \RO or \RB try using its \myital{corresponding} Tangible Stat (see below).
 
-Each Fae Species has a \myanchor{Primary Stat}{primary-stat} listed below.
+Each \mylink{Unseelie Species}{unseelie} has a \myanchor{Primary Stat}{primary-stat} listed below.
 
 
 \mysubsection{Presence}{intangible-stats-presence}
 
 Confidence, attractiveness, leadership, and intimidation. The Arbiter might ask you if you'd like to roll your Presence \UD if you're trying to sweet talk someone, keep a group of peons from breaking morale, or scaring a couple of kobolds into telling you what you want to know. 
 
-You can roll your Presence die and add its result to any \RO or \RB attempt you're making that involves \VIG.  If your Presence is exhausted, your confidence ebbs: you are unable to heal Grit until you gain a Presence \UD back.
+You can roll your Presence die and add its result to any \RO or \RB try you're making that involves \VIG.  If your Presence is exhausted, your confidence ebbs: you are unable to heal Grit until you gain a Presence \UD back.
 
-Presence is the Primary Stat for Pooka.
+Presence is the Primary Stat for \mylink{Pooka}{species-pooka}.
 
 
 \mysubsection{Talent}{intangible-stats-talent}
 
 It always seems like you're in the right place at the right time, or that you have the favor of the Gods. The Arbiter might ask you if you'd like to roll your Talent \UD if you're trying to see if something works by pure random luck ("I randomly press buttons on the console and hope something good happens"; "I close my eyes and try to jump off the roof into the hay cart").  
 
-You can roll your Talent die and add its result to any \RO or \RB attempt you're making that involves \DEX.  If your Talent is exhausted, your luck has run out: you automatically take a 1 in any \mylink{Luck Contests}{other-stuff-luck-contests} until you gain a Talent \UD back.
+You can roll your Talent die and add its result to any \RO or \RB try you're making that involves \DEX.  If your Talent is exhausted, your luck has run out: you automatically take a 1 in any \mylink{Luck Contests}{other-stuff-luck-contests} until you gain a Talent \UD back.
 
-Talent is the Primary Stat for Night Children
+Talent is the Primary Stat for \mylink{Night Children}{species-night-child}
 
 \newpage
 
@@ -174,9 +165,9 @@ Talent is the Primary Stat for Night Children
 
 Your idle perception, your "sixth sense".   The Arbiter will ask you to roll your Awareness to  notice something that you might not be actively looking for (you can say no!).  
 
-You can roll your Awareness die and add its result to any \RO or \RB attempt you're making that involves \INT.  If your Awareness is exhausted, you are mentally fogged: you always lose Init until you gain an Awareness \UD back.
+You can roll your Awareness die and add its result to any \RO or \RB try you're making that involves \INT.  If your Awareness is exhausted, you are mentally fogged: you always lose Init until you gain an Awareness \UD back.
 
-Awareness is the Primary Stat for Spriggan
+Awareness is the Primary Stat for \mylink{Spriggan}{species-spriggan}
 
 \cbreak
 
@@ -184,65 +175,86 @@ Awareness is the Primary Stat for Spriggan
 
 How lucid you are, and how likely you are to keep your cool.  The Arbiter might tell you to make a Sanity roll when you see something particularly heinous (you don't get to say no on this one).  
 
-You can roll your Sanity \UD and add its result to any \RO or \RB attempt you're making that involves \FOC.  If you ever Fail a Sanity roll (roll a 1 or a 2), you must roll on \mylink{Terrifying Tables}{misc-terrifying-tables} (the Arbiter will determine which table to roll on). If your Sanity is exhausted, you immediately gain the Madness "Shot Nerves" in addition to any other Madnesses until you gain a Sanity \UD back.
+You can roll your Sanity \UD and add its result to any \RO or \RB try you're making that involves \FOC.  If you ever Fail a Sanity roll (roll a 1 or a 2), you must roll on \mylink{Terrifying Tables}{misc-terrifying-tables} (the Arbiter will determine which table to roll on). If your Sanity is exhausted, you immediately gain the Madness \mylink{Shot Nerves}{madness-shot-nerves} in addition to any other Madnesses until you gain a Sanity \UD back.
 
-Sanity is the Primary Stat for Murks
+Sanity is the Primary Stat for \mylink{Murks}{species-murk}
+
+\end{multicols}
+\begin{center}
+\includegraphics[scale=.4]{Doorway}
+\end{center}
+
 
 \newpage
+
+\begin{multicols*}{2}
 
 
 \mysection{Time}{time}
 
-\mysubsection{Top Of / Bottom Of ...}{time-top-bottom}
-If you see an effect that happens at the "top of the Moment", this is immediately before \mybold{you} take your \myital{first} action in a Moment (but after you've rolled Init).
-
-If you see an effect that happens at the "bottom of the Moment", this is immediately after everyone (including the Monsters) have taken a turn, and before Init is rolled.
-
+Time is divided into abstracts:  Moments, Minutes, Hours, Days, Weeks, Years, etc.  No specific amount of time is specified i.e. "that will take Minutes to do" or "you'll need to rest for Hours"
 
 \mysubsection{Combat}{time-combat}
-There are 2 important types of tracked time in Combat - Moments and Minutes.  Moments are fast-paced scenes of danger and Minutes encompass the entire Combat.  
 
-\mysubsection{Markovian}{time-markovian}
+Combat is divided into Moments and takes Minutes to complete.  You can take 1 or 2 Actions every Moment, depending on your \mylink{Init}{combat-init}.
 
-During Combat, you may be hit with an effect or spell that has a Markovian duration.  Markovian effects happen immediately, but have a random duration over the course of Moments.  Markovian durations have a duration die attached to them i.e "d4 Markovian".  
+\mybold{\myhighlight{Top Of / Bottom Of ...}{time-top-bottom}}
+
+Effects that happen at the top of the Moment occur immediately before \mybold{you personally} take your first Action, but after you've rolled \mylink{Init}{combat-init}.
+
+Effects that happen at the bottom of the Moment occur immediately after \mybold{everyone} (including Monsters) has taken all their Actions, \myital{before} \mylink{Init}{combat-init} is rolled.
+
+
+\mybold{\myhighlight{Markovian}{time-markovian}}
+
+Some spells or effects have a "Markovian" duration.  Markovian effects start immediately but have a random duration over the course of Moments. Markovian durations have a duration die attached to them i.e "d4 Markovian".
 
 At the bottom of a Moment, \RS using the effect's duration die.  If you roll a Failure (a 1 or a 2) for the effect, it immediately ends.  Otherwise, the duration die moves \DCDOWN. 
 
 For example, if you were struck by a Ghast and paralyzed for d4 Markovian, you would roll a d4 at the bottom of the Moment for the effect.  If you rolled a 1 or a 2, the paralysis effect would end.  If you rolled a 3 or a 4, the die would move to a d3.
 
-\cbreak
-
-\mysubsection{Out of Combat}{time-out-of-combat}
-
-Outside of combat there are Hours, Days and Weeks for things that take … you know, that long.  You don't specify a number, it's just an abstract i.e. "that will take Minutes to do" or "you'll need to rest for Hours".  More information can be found in the sections \mylink{Taking a Breather}{combat-resting-breather} and \mylink{Longer Rests}{civilization-longer-rests}
-
 \mysubsection{Session}{time-session}
-A session is any time you sit down to play for a morning/afternoon/evening.  When everyone goes home or the game stops, that ends the session.
 
+When you sit down to play, this begins a "session".  When the game stops and everyone goes home, that ends the session.  
+
+\cbreak\bump
 
 \mysubsection{Adventure}{time-adventure}
+
 Determined by the Arbiter, see the section on \mylink{Adventures}{advancement-adventuring}.
 
-\cbreak
+\mysubsection{Resting}{time-resting}
+
+Using time to rest is divided into 3 groups:
+
+\mynumlist {
+    \item \mylink{Taking a Breather}:  \\~  Takes Minutes.  More details found in \mylink{Combat}{combat-resting-breather}
+    \item \mylink{Taking a Bivouac}:  \\~ Takes Hours.  More details found in \mylink{Combat}{combat-resting-bivouac}
+    \item \mylink{Taking a Vacation}:  \\~ Takes Days or Weeks.  More details found in \mylink{Civilization}{civilization-vacation}
+}
+
+
 
 \mysection{Distance}{distance}
 
 \mysubsection{Combat}{distance-combat}
-There are 4 abstract ranges for measuring distance:  \mybold{Close}, \mybold{Nearby}, \mybold{Far-Away}, and \mybold{Distant} .  \MAX Combat distance is 100 meters
+
+Like Time, Distance is broken into abstract lengths: \mybold{Close}, \mybold{Nearby}, \mybold{Far-Away}, and \mybold{Distant}.  \MAX Combat distance is 100 meters
 
 \mytable{X c}{
   \thead{} & \thead{} \\
 }{
-    Close & ~1m \\
-    Nearby & ~10m \\
-    Far Away & ~50m \\
-    Distant & ~100m \\
+    Close & \Tilde 1m \\
+    Nearby & \Tilde 10m \\
+    Far Away & \Tilde 50m \\
+    Distant & \Tilde 100m \\
 }
 
 
 \mysubsection{Non-Combat}{distance-non-combat}
 
-Non Combat distances are covered in the Arbiter's section on Travel
+Non Combat distances are covered in the Arbiter's section on \mylink{Travel}{arbiter-travel}
+
 
 \cbreak
 
@@ -256,78 +268,12 @@ Bearing witness to horrible or terrible things can prompt a roll of your Sanity 
 
 Examples that might prompt a Sanity roll:  witnessing a member of the party getting killed; a horrifying creature you've never seen before; a situation that shakes your beliefs; or not \mylink{Dying}{combat-dying}
 
+\cbreak\bump
 
 \mysubsection{Luck Contests}{other-stuff-luck-contests}
 
 The Arbiter may call for a Luck Contest if she is trying to figure out what random bad thing is going to happen to someone ("the ogre turns his attention towards one of you"; "one of you gets hit with 2 effects, not just one", etc. )
 
-You can choose to roll \mybold{any} \mylink{Intangible Stats }{intangible-stats} \UD you choose.  Instead of rolling the \UD, you can opt to "take a one" (meaning your roll is the equivalent of a 1).  The person with the lowest roll is the victim. If there's a tie for last (including if multiple people decide to "take a one"), the Arbiter chooses whoever has the lowest Talent.  If there is still a tie, the Arbiter gets to pick (roll randomly or do whatever feels right).
-
-\newpage
-
-\mysection{Adventurers}{adventurer-create}
-
-To create an adventurer:
-
-\mybold{Step 1: Mortal or Fae?}
-
-Decide if your adventurer is \mylink{Mortal}{mortals} or \mylink{Fae}{fae}.  Roll or pick your Mortal or Fae origin.
-
-\mybold{Step 2: Pick your \mylink{Tangible Stats}{tangible-stats} and \mylink{Intangible Stats}{intangible-stats}}
-
-For your Tangible Stats, take out a d10, a d8, a d6, and a d4.  Assign one of the dice to \VIG, \DEX, \INT, and \FOC, one die per stat ("bigger" dice are better)
-
-Each Intangible Stat starts at a d4 (though this may be modified by your Trope, Race, or Small God)
-
-\mybold{Step 3: \mylink{Initial Skills}{skills}}
-
-Write down the 7 basic \mylink{Skills}{skills}: Bushcraft, Eyeball, Listen, Lore, Math, Salt, and Travel.  Each of these skills are a \KNACK that starts at 1-in-6.
-
-\mybold{Step 4: \mylink{Initial Saves}{saves}}
-
-Pick your Edge, Ordinary, and Flawed \mylink{Save Die}{saves}.  Each of these is a \KNACK.  Edge starts at 2-in-6, Flawed and Ordinary start at 1-in-6.
-
-
-\mybold{Step 5: Choose your Trope/Flavor or Species}
-
-If you're Mortal, choose a \mylink{Trope and Flavor}{mortal-adventurers}.  If you're Fae, choose your {Species}{fae-adventurers}. Adjust your stats as necessary.
-
-\mybold{Step 6:  Choose your \mylink{Languages}{civilization-languages}}
-
-Everyone starts with Acheron, the "common" tongue. If you are Mortal, you also can speak one Dialect of your choice as you secondary language.  If you are Fae, your secondary language is:
-\mylist {
-  \item \mybold{Pooka:}  Saltish or Birdsong
-  \item \mybold{Murk:}  Silent Speech
-  \item \mybold{Night Child:} Draconic
-  \item \mybold{Spriggan:} Archaic, Fiendish, OR Seraphic
-}
-
-\cbreak
-
-Finally,\RO using your \INT + d12.  If you roll a 20, gain one additional language; 21, two languages; and 23, three additional languages. 20: 1 additional; 21: 2 additional; 22: 3 additional.
-
-It's up to you if you can read AND write these languages.
-
-
-\mybold{Step 7:  \mylink{Flesh and Grit}{combat-flesh-grit}}
-
-Your starting Flesh is the \MAX value of your \FLESH as listed under your Template.  For example, Sellswords have a \FLESH of d10, so they start with 10 Flesh.  
-
-Roll your \VIG.  If the total is greater than your current Flesh, your Flesh is that number instead (i.e. if you roll a 6 and you have 4 Flesh, your Flesh is now 6). \mylink{Sellswords}{trope-sellsword} (Soldiers and Barbarians) can add their \LVL to this roll, but no other modifiers.
-
-\mybold{Step 8: Additional Skill}
-
-Adventurers have been around the block a bit.  Increase one \mylink{Skill}{skills} by 1 (up to 2) or give yourself a 1 in a new Skill based on your character concept.
-
-\mybold{Step 9:  \myanchor{Starting Gear}{starting-gear}}
-
-In addition to any professional gear for your Flavor, you've got:
-\mylist {
-  \item 2 iron pieces; 
-  \item a backpack containing a worn bedroll;
-  \item d4 \UD of personal provisions; and 
-  \item a stained and patched waterproof cloak
-}
-
+You can choose to roll \mybold{any} \mylink{Intangible Stat}{intangible-stats} \UD you choose.  Instead of rolling the \UD, you can opt to "take a one" (meaning your roll is an automatic 1).  The person with the lowest roll is the victim. If there's a tie for last (including if multiple people decide to "take a one"), the Arbiter chooses the adventurer with the lowest \MAX Talent.  If there is still a tie, the Arbiter gets to pick (roll randomly or do whatever feels right).
 
 } %end
