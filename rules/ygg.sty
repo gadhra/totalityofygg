@@ -25,6 +25,8 @@
 % --- graphics -----------------------------------------------------------
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{wrapfig}
+\usepackage{cuted}
 
 
 % --- page & basic text setup ------------------------------------------
@@ -44,6 +46,12 @@
   \vfill\null
   \columnbreak
 } 
+
+% Add a bump for some columns
+\newcommand{\bump} {
+  \vspace*{22.5pt}
+}
+
 
 % Don't indent paragraphs, add some space instead
 \setlength{\parindent}{0em}
@@ -158,7 +166,7 @@
 \newcommand{\DCDOWN}{{\fftext \textbf{DC\ffstixmath{\char"21E9}}}}
 \newcommand{\PLUS}{{\fftext \textbf{\ffstixmath{\char"002B}}~}}
 \newcommand{\RB}{{\fftext \textbf{R\ffstixmath{\char"29C1}}~}}
-\newcommand{\RS}{{\fftext \textbf{R\ffstixmath{\char"2713}}~}}
+\newcommand{\RS}{{\fftext\textbf{R\ffstixmath{\char"2713}}}}
 \newcommand{\RO}{{\fftext \textbf{R\ffstixmath{\char"2473}}~}}
 
 %Stats
@@ -173,12 +181,12 @@
 \newcommand{\HD}{\fftext \textbf{HD\diceglyph}~}
 \newcommand{\STATIC}{\fftext \textbf{Static\diceglyph}~}
 \newcommand{\POOL}{\fftext \textbf{Pool\diceglyph}~}
-\newcommand{\DEATH}{\fftext \textbf{Pool\diceglyph}~}
+\newcommand{\DEATH}{\fftext \textbf{Death\diceglyph}~}
 \newcommand{\KNACK}{\fftext \textbf{Knack\diceglyph}~}
 \newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}~}
-\newcommand{\FLESH}{\fftext \textbf{Flesh\diceglyph}~}
+\newcommand{\FLESH}{\fftext \textbf{Vitality\diceglyph}~}
 \newcommand{\LUCK}{\fftext \textbf{Luck\diceglyph}~}
-\newcommand{\KNAVE}{\fftext \textbf{Knave\diceglyph}~}
+\newcommand{\KNAVE}{\fftext \textbf{Whisper\diceglyph}~}
 
 %Magic
 \newcommand{\DICE}{\fftext \textbf{\numdiceglyph}~}
@@ -218,7 +226,7 @@
 \setcounter{tocdepth}{3}
 
 \titleformat*{\section}{\Huge\bfseries\fffancy\filcenter}
-\titleformat*{\subsection}{\Huge\bfseries\raggedleft\fftext}
+\titleformat*{\subsection}{\Huge\bfseries\raggedright\fftext}
 \titleformat*{\subsubsection}{\Large\bfseries\raggedright\fftext}
 \titleformat*{\paragraph}{\large\bfseries\raggedright\fftext}
 
@@ -234,7 +242,7 @@
 
 
 \newcommand{\mysection}[2]{\hypertarget{#2}{\subsection{#1}\zlabel{#2}}} 
-\newcommand{\mysubsection}[2]{\hypertarget{#2}{\subsubsection{#1}\zlabel{#2}}\hrule height1mm} 
+\newcommand{\mysubsection}[2]{\hypertarget{#2}{\subsubsection{#1}\zlabel{#2}}\hrule height.25mm} 
 \newcommand{\myhighlight}[2]{\hypertarget{#2}{\paragraph{#1}\zlabel{#2} \hfill}} 
 
 
@@ -326,7 +334,11 @@
 
 
 % --- example block ------------------------------------------------------------
-\usepackage{tcolorbox}
+\usepackage[breakable,hooks]{tcolorbox}
+
+\tcbuselibrary{breakable,skins}
+
+
 \newcommand{\example}[1] {%
   \begin{tcolorbox}[width=\linewidth,colback={gainsboro}]
     \centering
@@ -341,6 +353,33 @@
     \myital{#1}
   \end{tcolorbox}
 }
+
+
+% --- dashed block ------------------------------------------------------------
+\newcommand{\dashedbox}[1] {%
+  \begin{tcolorbox}[
+    width=\linewidth,
+    blanker,
+    top=8mm,
+    bottom=8mm,
+    borderline horizontal={2pt}{0pt}{gainsboro,dashed}
+    ]
+    \centering
+    #1
+  \end{tcolorbox}
+}
+
+
+
+
+
+% --- callout block ------------------------------------------------------------
+\newcommand{\callout}[1] {%
+  \begin{tcolorbox}[width=\linewidth,colback={gainsboro}]
+    #1
+  \end{tcolorbox}
+}
+
 
 
 % --- monster block ------------------------------------------------------------
@@ -371,7 +410,8 @@
 {%
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
     \rowcolors[]{1}{silver}{}%
@@ -457,7 +497,8 @@
 {%
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
     \rowcolors[]{1}{silver}{}%
@@ -496,11 +537,21 @@
   }
 }
 
-\newkeycommand{\GOD}[Name=,Link=,GodOf=,Holy=]
+\newkeycommand{\GOD}[Name=,GodOf=,Holy=]
 {%
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}]
+    \begin{tcolorbox}[
+        width=\linewidth,
+        colbacktitle=silver, 
+        colback=white,coltitle=black,
+        colframe=gainsboro,
+        fonttitle=\fftext\normalsize,
+        title=\commandkey{Name},
+        fontlower=\fftext\scriptsize, 
+        halign lower=center,
+        sharp corners, 
+        borderline vertical={2pt}{0pt}{gainsboro,dashed}]
     \begin{center}
     \myital{\commandkey{GodOf}}
     \end{center}

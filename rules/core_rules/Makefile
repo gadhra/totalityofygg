@@ -3,22 +3,22 @@
 # This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 # Please do not apply other licenses one-way.
 
-VERSION=v.2.1.beta
+VERSION=v.3.0.beta
 setup:
 	mkdir -p out
 	ln -sf ../../ygg.sty out/
 	ln -sf ../../ocgx.sty out/
 	ln -sf ../mechanics.tex out/
+	ln -sf ../theband.tex out/
 	ln -sf ../mortals.tex out/
 	ln -sf ../advancement.tex out/
 	ln -sf ../skills_and_saves.tex out/
-	ln -sf ../fae.tex out/
+	ln -sf ../unseelie.tex out/
 	ln -sf ../civilization.tex out/
 	ln -sf ../miscellania.tex out/
 	ln -sf ../arbiter.tex out/
-	ln -sf ../bestiary.tex out/
 	ln -sf ../appendices.tex out/
-	ln -sf ../../thanks.tex out/	
+	ln -sf ../../thanks.tex out/
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname="ToY_Core_Rules_${VERSION}" -output-directory out core_rules
 
