@@ -6,7 +6,7 @@
 \documentclass[10pt]{article}
 \usepackage{ygg}
 \newcommand{\yggVersion}{%
-  v.2.1.beta
+  v.3.0.beta
 }
 
 \newcommand{\yggMyTitle}{
@@ -17,7 +17,7 @@
 % Section Titles
 \newcommand{\yggMechanics}{}
 \newcommand{\yggMortals}{}
-\newcommand{\yggFae}{}
+\newcommand{\yggUnseelie}{}
 \newcommand{\yggAdvancement}{}
 \newcommand{\yggSkillsSaves}{}
 \newcommand{\yggCombat}{}
@@ -25,14 +25,14 @@
 \newcommand{\yggEquipment}{}
 \newcommand{\yggMiscellania}{}
 \newcommand{\yggArbiter}{}
-\newcommand{\yggBestiary}{}
 \newcommand{\yggAppendix}{}
 \newcommand{\yggThanks}{}
+\newcommand{\yggTheBand}{}
 
 % Body
 \newcommand{\yggMechanicsText}{}
 \newcommand{\yggMortalsText}{}
-\newcommand{\yggFaeText}{}
+\newcommand{\yggUnseelieText}{}
 \newcommand{\yggAdvancementText}{}
 \newcommand{\yggSkillsSavesText}{}
 \newcommand{\yggCombatText}{}
@@ -40,13 +40,14 @@
 \newcommand{\yggEquipmentText}{}
 \newcommand{\yggMiscellaniaText}{}
 \newcommand{\yggArbiterText}{}
-\newcommand{\yggBestiaryText}{}
 \newcommand{\yggAppendixText}{}
 \newcommand{\yggThanksText}{}
+\newcommand{\yggTheBandText}{}
 
 \input{mechanics.tex}
+\input{theband.tex}
 \input{mortals.tex}
-\input{fae.tex}
+\input{unseelie.tex}
 \input{advancement.tex}
 \input{skills_and_saves.tex}
 \input{combat.tex}
@@ -54,7 +55,6 @@
 \input{equipment.tex}
 \input{miscellania.tex}
 \input{arbiter.tex}
-\input{bestiary.tex}
 \input{appendices.tex}
 \input{thanks.tex}
 
@@ -69,6 +69,7 @@
 \title{{\Huge\fffancy\yggMyTitle }}
 \author{by Stefan Antonowicz}
 \date{}
+
 
 % table of contents
 \renewcommand\contentsname{{\small\fftext Table of Contents }}
@@ -87,106 +88,119 @@
   \vspace{-5cm}
   \small\fftext\tableofcontents
 \end{multicols*}
-\vfill\newpage
+\vfill\newpage\raggedbottom
 % --- core mechanics -----------------------------------------------------------------
 \noindent\yggMechanics
-\vfill\newpage
+\vfill\newpage\raggedbottom
 \begin{multicols}{2}
+  \raggedcolumns
   \noindent\yggMechanicsText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
+% --- the band -----------------------------------------------------------------
+\noindent\yggTheBand
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggTheBandText
+\end{multicols*}
+\vfill\newpage
+
 % --- mortals -----------------------------------------------------------------
 \noindent\yggMortals
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggMortalsText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
-% --- fae -----------------------------------------------------------------
-\noindent\yggFae
-\vfill\newpage
-\begin{multicols}{2}
-  \noindent\yggFaeText
-\end{multicols}
+% --- unseelie -----------------------------------------------------------------
+\noindent\yggUnseelie
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggUnseelieText
+\end{multicols*}
 \vfill\newpage
 % --- advancement -----------------------------------------------------------------
 \noindent\yggAdvancement
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggAdvancementText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- skills and saves -----------------------------------------------------------------
 \noindent\yggSkillsSaves
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggSkillsSavesText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- combat -----------------------------------------------------------------
 \noindent\yggCombat
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggCombatText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- civilization -----------------------------------------------------------------
 \noindent\yggCivilization
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggCivilizationText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- equipment -----------------------------------------------------------------
 \noindent\yggEquipment
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggEquipmentText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- miscellania  -----------------------------------------------------------------
 \noindent\yggMiscellania
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggMiscellaniaText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- arbiter's resources  -----------------------------------------------------------------
 \noindent\yggArbiter
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggArbiterText
-\end{multicols}
-\vfill\newpage
-
-% --- bestiary  -----------------------------------------------------------------
-\noindent\yggBestiary
-\vfill\newpage
-\begin{multicols}{2}
-  \noindent\yggBestiaryText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- appendices -----------------------------------------------------------------
 \noindent\yggAppendix
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggAppendixText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 % --- thanks  -----------------------------------------------------------------
 \noindent\yggThanks
-\vfill\newpage
-\begin{multicols}{2}
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
   \noindent\yggThanksText
-\end{multicols}
+\end{multicols*}
 \vfill\newpage
 
 \end{document}
