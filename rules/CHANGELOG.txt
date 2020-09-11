@@ -1,6 +1,45 @@
-## [unreleased] 
+## [v.3.0.beta] - 2020-09-10
+
+Buckle up, cause it's a lot.  
+
 ### Added
+- Added background info for the Totality of Ygg and Acheron
+- Added the concept of "The Band" (the group of Adventurers you travel with)
+- Fleshed out (more addition than change) the concept of the Tribes of the Authority (Mortals) and the Unseelie Court (Fae)
+- Mortals now broken down into Tropes;  Unseelie Court now broken down into Species
+- Added the concept of Virtues: traits that build a Trope or Species
+- Added the concept of Complications: a "wrinkle" to give Adventurers some flavor
+- Added random treasure generator to appendix 
+
+### Removed
+- Removed x-in-6 mechanic (Knack Dice).  Saves, Skills, and the Death die are now a Roll20 test
+- Removed the Monsters from the Arbiter's section (except for basic information) - they'll be inside the Bestiary
+
 ### Changed
+
+#### Mechanics
+- Combined the various Tropes into 4:  Sellsword (was Soldier and Barbarian), Knave (was Archaeologist and Bravo), Philosopher (was Sorcerer and Leech), and Mystic (was Witch and Devotee)
+- Combined old Trope skills into Virtues beneath the Trope header.  Tropes (humans) can choose their Virtues, but Species (metahumans) get their abilities "as is".
+- Advancement now follows the paradigm of building a Trope/Species, allows you to hand pick your Virtues
+- Combined "Sojourn" and "Sabbatical" into Vacation
+- During Vacation, you can perform Research (Philosophers) or Marvels (Mystics).  No longer a die roll, just a straight spend of Research, Cunning, or Faith (i.e. "This potion requires 3 Research to create").
+- Skills rework.  You can now "assist" other players.
+
+
+#### Tropes  
+- Complete rework of Mystics (Witches and Mystics).  No specific spells for individual Small Gods.  There are now 4 liturgies of the 10 Thrones.  Liturgies of Small Gods can be worked out with Arbiter
+- Fixed typo under Bless, changed "Faith" to "Grace"
+
+
+#### Species
+- Changed Fae to Unseelie Court
+- Complete rework of Spriggan.  Spriggan now have 3 facets - Remembrance, Sovereignty, and Potential - that they use to summon Forgotten.  No longer any Remembrance dice.
+- Complete rework of Night Children.  Random generation now rolls 3d6 at creation to determine Looks, Weird, and Gear.  You can increase the die as you level and reroll i.e. move Looks to a d8, d10, etc.
+
+#### Combat
+- \INT is now the core Static die for rolling Init (was \DEX)
+- \FOC is now the core Static die for rolling Death
+
 
 
 ## [v.2.1.beta] - 2020-05-04
