@@ -10,6 +10,7 @@ Buckle up, cause it's a lot.
 - Added the concept of Virtues: traits that build a Trope or Species
 - Added the concept of Complications: a "wrinkle" to give Adventurers some flavor
 - Added random treasure generator to appendix 
+- Added art!
 
 ### Removed
 - Removed x-in-6 mechanic (Knack Dice).  Saves, Skills, and the Death die are now a Roll20 test
