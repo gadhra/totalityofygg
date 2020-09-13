@@ -22,7 +22,9 @@ There are 3 types of "special" die rolls in ToY
     Roll to Succeed & \RS \\
 }
 
-Rolls are distinct from one another i.e. powers and abilities that affect \RO (like a Knave's Luck Die) cannot affect \RB or \RS
+Rolls are distinct from one another i.e. powers and abilities that affect \RO (like a Knave's Luck Die) cannot affect \RB or \RS.  
+
+Making an \RO, \RB, or \RS attempt is a \mybold{try}
 
 \mysubsection{Roll Twenty}{rolls-roll-twenty}
 In a \RO try you have to roll a 20 or better with a combination of dice and modifiers. A 19 misses, a 20 succeeds. 
@@ -38,7 +40,7 @@ In a \RB try you roll a single die plus modifiers and try to beat 1 or more othe
 
 
 
-When Monsters try a \RB, they add their \HD as a modifier to their test i.e. a 6\HD Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test, provided they are testing their \mylink{Primary Stat}{primary-stat}.
+When Monsters try a \RB, they add their \HD as a modifier to their test i.e. a 6\HD Monster adds +6 to their \RB roll.  When Allies roll a \RB, they add their level as a modifier to their test \mybold{if} they are rolling their \mylink{Primary Stat}{primary-stat}.
 
 Ties go to the Allies.  If there's a tie between Allies, roll a d6 and add its result to your \RB until there's a winner.
 
@@ -77,10 +79,10 @@ Dice can't go higher than d24 or lower than d2.  If a die is \mybold{exhausted} 
 \mysubsection{Static Dice}{dice-static-dice}
 \example{%
   \STATIC \\
-  \mybold{The base die used in \RO tries.}
+  \mybold{The base die used in \RO and \RB tries.}
 }
 
-Static dice are dice used in \RO tries; they are often combined together with other modifiers to get to a 20 or better.
+Static dice are dice used in \RO and \RB tries; they are often combined together with other modifiers to get to a 20 or better.
 
 \cbreak\bump
 
@@ -93,7 +95,7 @@ Static dice are dice used in \RO tries; they are often combined together with ot
 
 \myital{To the best of my knowledge, the Usage Die is a mechanic invented by David Black.}
 
-When the Arbiter asks you to roll your \UD, the die moves \DCDOWN on a Failure (a natural 1 or a 2).  If your \UD is a d2, it's automatically exhausted after you roll.  
+When you roll a \UD, the die moves \DCDOWN on a Failure.  If your \UD is a d2, it's automatically exhausted after you roll.  
 
 All \UD have a maximum (\MAX) and current value.  For example, your \UD for your Armor might be a d8 \MAX but you've taken a few hits and now it's a d6 (current).  Unless specified, a \DCDOWN or \DCUP refers to the "current" value.  i.e.  "your Presence moves \DCDOWN" vs. "your \MAX Presence moves \DCDOWN"
 
