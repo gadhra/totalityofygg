@@ -12,17 +12,20 @@
 
   \mysubsection{Overview}{combat-overview}
 
+  \dashedbox {
   \mybullet {
     \item Combat is conflict that takes place between \mylink{Allies and Monsters}{combat-allies-monsters} at a particular \mylink{Distance}{distance-combat}.
 
-    \item Combat consists of \mylink{Moments}{time-combat} and takes \mylink{Minutes}{time-combat} to comple.  Each Moment consists of the Allies and Monsters taking a turn trying to resolve Combat.
+    \item Combat consists of \mylink{Moments}{time-combat} and takes \mylink{Minutes}{time-combat} to complete. 
 
-    \item Each Moment you can perform \mylink{Actions}{combat-actions}.  You can take 1 or 2 Actions in a Moment. The number of Actions you can take depends on your \mylink{Init}{combat-init} roll.
+    \item Each Moment you roll your \mylink{Init}{combat-init} to determine how many Actions you get.  If you \RO, you get 2 Actions; otherwise, you get 1 Action.
 
-    \item Actions are divided into two groups: Maneuver Actions and Combat Actions.  \mybold{If you take a Combat Action, your Moment ends}.
+    \item If you have 2 Actions, you can take 1 \mybold{before} the Monsters' turn and one \mybold{after} the Monsters' turn. If you have 1 Action, you can only take it \mybold{after} the Monsters' turn.
+
+    \item There are 2 kinds of Actions: Maneuver Actions and Combat Actions.  \mybold{If you take a Combat Action, your Moment ends}.
 
     \item Certain Actions occur at the \mylink{top and bottom of the Moment}{time-top-bottom}
-  }
+  }}
 
 
 
@@ -38,7 +41,6 @@
 
   If you \RO on your Init check, you can take 1 Action \mybold{before} the Monster and 1 Action \mybold{after} the Monster. If you fail, you can take 1 Action \mybold{after} the Monster. You can always choose to act after - there's no need to roll at that point. You can act as a group and decide your own order for Actions in each Moment. 
 
-  \cbreak
 
   Your Actions can be:
   \mybullet {
@@ -51,14 +53,11 @@
 
   \mysubsection{Initiative (Init)}{combat-init}
 
-  To determine who goes first, all Allies roll their Init at the top of the Moment. The result of this \RO attempt will tell you how many Actions you can take.
-
-
-  The Init check is a \RO attempt using the following dice:
-
   \example {
-    \DEX \PLUS \MD \PLUS \mybold{Monster Speed}
-  }
+    \RO: \INT \PLUS \MD \PLUS \mybold{Monster Speed}
+  } 
+
+  To determine who goes first, all Allies roll their Init at the top of the Moment. The result of this \RO attempt will tell you how many Actions you can take.
 
   \myhighlight{Move Die}{combat-move-die}
 
@@ -73,13 +72,14 @@
     Heavy & d4 \STATIC \\
   }
 
-  \myhighlight{Move Die}{combat-monster-speed}
+  \myhighlight{Monster Speed}{combat-monster-speed}
 
-  Most Monsters have a speed of d16.  Some Monsters are Fast - their speed is d12.  Some Monsters are Slow - their speed is d20.  See the section on \mylink{Monsters}{bestiary} for more details.
+  Most Monsters have a speed of d16.  Some Monsters are Fast - their speed is d12.  Some Monsters are Slow - their speed is d20.  See the section on \mylink{Monsters}{arbiter-monsters} in the Arbiter's section for more details.
 
   \myhighlight{Mixed Init}{combat-mixed-init}
 
-  If the Allies are fighting Monsters with mixed speeds (a group of slow blood puppets led by a necromancer who moves at normal speed, say), roll the initiatives as follows:
+  If the Allies are fighting Monsters with mixed speeds (a group of slow blood puppets led by a necromancer who moves at normal speed, say), roll the Init as follows:
+
   \mynumlist {
     \item  The Allies roll their Init against the necromancer (d16 speed).  If they \RO, they can take a Maneuver or Combat Action (the Combat Action ends their Moment).
     \item  The necromancer takes her turn
@@ -97,13 +97,11 @@
 
   If a Monster is surprised at the start of Combat, all of the players automatically win Init.  Knaves can consider this getting "The Drop" on someone, meaning they can attempt a \mylink{Murder}{knave-murder}
 
-  Knaves can also try to get the Drop on someone \myital{during} Combat.  More details can be found in the section on \mylink{Whispers: Gloomstride}{knave-whisper-gloomstride}. 
+  Knaves can also try to get the Drop on someone \myital{during} Combat.  More details can be found in the section on \mylink{Whispers}{knave-whispers}
 
   \mysubsection{Maneuver Actions}{combat-maneuvers}
 
   A Maneuver Action does not end your Moment.  You may take a Maneuver as an Action.  
-
-
 
   \myhighlight{Basic Maneuvers}{combat-basic-maneuver}
 
@@ -122,6 +120,7 @@
   }
 
   Whether or not something qualifies as a Basic Maneuver is up to the Arbiter's discretion.  It's possible that an action might take longer than a single Maneuver.  Some examples:
+
   \mybullet {
     \item Picking a lock while a fight rages around you;
     \item Tying off a rope and swinging into combat;
@@ -143,9 +142,10 @@
 
 
   \myhighlight{Aim}{combat-tactical-maneuver-aim}
+
   \myital{Shoot or Throw Weapons Only}
   
-  You take careful aim with your weapon.  If your \myital{next} Fight \RO hits, you Crit (\MAX damage + level).  If you are a Sellsword, roll damage twice and take the higher value (dice explode).  
+  You take careful aim with your weapon.  If your \myital{next} Fight \RO hits, you Crit (you still must roll your \FOC).
 
   This bonus lasts until you take a Combat Action or something breaks your aim (moving, taking damaging, Guarding, etc).
 
@@ -154,19 +154,19 @@
 
   \myhighlight{Brace}{combat-tactical-maneuver-brace}
   \myital{Polearm or spear only}
-  Set your polearm or spear to defend against incoming Monsters.  If a Monster moves from Nearby to Close during its Action, you may immediately take a Combat Action \mybold{before} the Monster attacks
+  Set your polearm or spear to defend against incoming Monsters.  If a Monster moves from Nearby to Close during its Action, you may immediately take a Combat Action \mybold{before} the Monster attacks (provided you haven't taken a Combat Action already)
 
   \myhighlight{Rage}{combat-tactical-maneuver-rage}
   You take an Action to be come \mylink{Enraged}{effect-enraged}.  The target of the rage is "the Monsters". If one of your Allies has injured you in this fight, they count as a Monster.
 
   \myhighlight{Reckless}{combat-tactical-maneuver-reckless}
   \myital{Brawl weapons only}
-  You use an Action to aggressively position yourself against the Monsters.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.
+  You use an Action to aggressively position yourself against the Monsters.  You gain a bonus modifier to your next Fight \RO and a double penalty to your next Guard \RO i.e. take +2 to Fight but -4 to Guard.  You can only gain up to +4/-8 in this way.
 
 
   \myhighlight{Warding}{combat-tactical-maneuver-warding}
   \myital{Brawl weapons only}
-  You use an Action to defensively position yourself against the Monster.  You gain a bonus modifier to your next Guard \RO and a double penalty to your next Fight \RO i.e. take +2 to Guard but -4 to Fight.
+  You use an Action to defensively position yourself against the Monster.  You gain a bonus modifier to your next Guard \RO and a double penalty to your next Fight \RO i.e. take +2 to Guard but -4 to Fight. You can only gain up to +4/-8 in this way.
 
 
   \mysubsection{Combat Actions}{combat-combat-actions}
@@ -189,12 +189,12 @@
   \myhighlight{Bum Rush}{combat-deeds-bum-rush}
   \myital{Hard Brawl weapons only}
 
-  Charge!  Move somewhere Close and immediately roll your Fight \RO. If you succeed, roll your damage dice twice and pick the higher number (i.e. if using a Military Pick, roll 2d10 and take the higher roll).  Damage die will explode if you're a Sellsword. 
+  Charge!  Move somewhere Nearby and immediately take a Combat Action.
 
   \myhighlight{Disarm}{combat-deeds-disarm}
   \myital{Unarmed or Fast Brawl 1H weapons only. Target must be using a 1H weapon}
 
-  Try a Fight \RO; if you succeed, your opponent is \mylink{Disarmed}{effect-disarmed}
+  If your Fight \RO succeeds, make a \RB \VIG or \RB \DEX (your choice) vs. your opponent's \VIG or \DEX (Arbiter's choice). If you win you deal no damage, but your opponent is \mylink{Disarmed}{effect-disarmed}.
 
   \myhighlight{Florentine}{combat-deeds-florentine}
   \myital{Fast Brawl weapons only, but see below. \DEX d12 or better}
@@ -227,15 +227,13 @@
 
   \mysubsection{Fighting}{combat-fighting}
 
+  \example{
+    \RO : \VIG OR \DEX  \PLUS  \mybold{Monster Weakness}  \PLUS \mybold{modifiers}
+  }
+
+
   When you attack a Monster, you must make a Fight roll.
 
-  \example{
-    A Fight \RO is:
-
-    \VIG  \PLUS  \mybold{Monster Weakness}  \PLUS \mybold{modifiers}  OR
-    
-    \DEX  \PLUS  \mybold{Monster Weakness}  \PLUS \mybold{modifiers} 
-  }
 
   The Arbiter will tell you the \mybold{Monster Weakness}, a \STATIC die between d24 (weakest) and d3 (strongest).
 
@@ -249,14 +247,13 @@
 
   \myhighlight{Crits and Fumbles}{combat-crits-and-fumbles}
 
-  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \DEX.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}.  The die you roll on the Fumble table is specified in the \mylink{Armor type}{gear-armor}.
+  If you roll a natural 1 for damage (or someone turns your die roll into a natural 1), test your  \RS : \FOC.  If you get a Failure, your attack is a \mylink{Fumble}{appendixa-combat-tables-fumbles}.  The die you roll on the Fumble table is specified in the \mylink{Armor type}{gear-armor}.
 
-  If you roll the \MAX number on the die naturally (or someone turns your die into that \MAX number), test your \RS : \VIG.  If you \mybold{don't} roll a Failure, your attack is a Crit.  Add your \LVL to the damage.
+  If you roll the \MAX number on the die naturally (or someone turns your die into that \MAX number), test your \RS : \FOC.  If you \mybold{don't} roll a Failure, your attack is a Crit.  Add your \LVL to the damage.
 
-  \myhighlight{Sellsword Damage}{combat-damage-sellsword}
+  \myhighlight{Exploding Dice}{combat-damage-exploding-dice}
 
-  Sellswords cannot Crit (since their damage die explodes if they roll \MAX damage), but they can Fumble as above.
-
+  If your damage explodes (for instance, if you are a Sellsword with the \mylink{Lethal}{sellsword-virtue-lethal} Virtue), you can't Crit since your damage die explodes if you roll \MAX damage.  You can still Fumble, however.
 
 
   \myhighlight{Unarmed Damage}{combat-damage-unarmed}
@@ -280,15 +277,11 @@
 
   \mysubsection{Guarding}{combat-guarding}
 
-  When you are defending against a Monster's attack, you must make a Guard roll.
-
   \example {
-    A Guard \RO is:
-
-    \DEX \PLUS \mybold{Monster Weakness} \PLUS \mybold{modifiers} 
+    \RO : \DEX \PLUS \mybold{Monster Weakness} \PLUS \mybold{modifiers} 
   }
 
-  If you don't make your \RO test, you take damage from the Monster.
+  When you are defending against a Monster's attack, you must make a Guard roll.  If you fail, you take damage.
 
   \myhighlight{Taking Damage}{combat-taking-damage}
 
@@ -300,8 +293,8 @@
 
   \mynumlist {
     \item \mybold{Shield} : If you have a shield equipped (that is, on your arm) and take \mybold{physical damage}, and you haven't taken a Combat Action yet, you can \mylink{Splinter}{combat-deeds-splinter} your shield. Stop here.  Otherwise ...
-    \item \mybold{Grit} : Subtract the damage from your Grit.  If there's any damage left over, move to Armor i.e. if I have a Grit of 4 and I take 9 damage, I have 5 damage left over and I move onto to Armor.
-    \item \mybold{Armor} : If you have armor, see if it will absorb the damage.  Roll the {ud} for your armor and subtract the result from the damage.  For example, if I'm wearing chain mail (Medium armor) I roll a d8; if I rolled a 5, I'd subtract 5 from the total damage.  If there's any damage left over, move onto Flesh
+    \item \mybold{Grit} : Subtract the damage from your Grit.  If there's any damage left over, move to Armor i.e. if I have a Grit of 4 and I take 9 damage, I have 5 damage left over and I move on to to Armor.
+    \item \mybold{Armor} : If you have armor, see how much damage it will absorb.  Roll the \UD for your armor and subtract the result from the damage.  For example, if I'm wearing chain mail (Medium armor) I roll a d8; if I rolled a 5, I'd subtract 5 from the total damage. If there's any damage left over, move onto Flesh.  Remember your Armor is a \UD!
     \item \mybold{Flesh} : Subtract the rest of the damage from Flesh. If you go to 0 or less Flesh, you are \mylink{Dying}{combat-dying}
   }
 
@@ -312,45 +305,41 @@
 
 Flesh is your ability to withstand injury; Grit is your ability to avoid injury in the first place.  Damage affects Grit first - dodging and weaving, close calls, little nicks, stunning blows, getting worn out from the fight, etc. When Grit is gone you're too exhausted to ward off physical harm and you start taking Flesh damage.
 
-Your starting Flesh is defined by your \FLESH.  When you start your life as an adventurer, your initial \FLESH is the \MAX of a d4, d6, d8, or d10 (the die is defined in your Trope or Species). You then roll your \VIG and, if the number on the die is higher than your initial \FLESH, your \MAX Flesh is this new number (for example, if I have a d6 \FLESH and a d8 \VIG, I start with 6 Flesh.  I then roll the d8 - if I roll a 7, my \MAX Flesh is now 7).
+Your starting Flesh is defined by your \FLESH.  When you start your life as an Adventurer, your initial \FLESH is the \MAX of a d4, d6, d8, or d10 (the die is defined in your Trope or Species). You then roll your \VIG and, if the number on the die is higher than your initial \FLESH, your \MAX Flesh is this new number (for example, if I have a d6 \FLESH and a d8 \VIG, I start with 6 Flesh.  I then roll the d8 - if I roll a 7, my \MAX Flesh is now 7).
 
 When you're \mylink{taking a Breather}{combat-resting-breather} or resting, you use your \FLESH to heal your \mybold{Grit} - basically patching yourself up, strapping wounds, getting yourself psyched up, that sort of thing.  
 
-Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get to roll to see if their Flesh increases at every level.  If you're ever at a point where you're taking damage to Flesh, you're getting pretty close to \mylink{Dying}{combat-dying}.
+Flesh is generally pretty static; if you're ever at a point where you're taking damage to Flesh, you're getting pretty close to \mylink{Dying}{combat-dying}.
 
 
   \mysubsection{Dying}{combat-dying}
 
-  If your Flesh ever goes to 0 or below, you are on \mybold{Dying} .  Your Grit immediately drops to 0 if it isn't 0 already (you can't duck, dive, dodge, dip and dive while trying to hold your intestines in, right?) and your Flesh is set to 0.
-
-  Until your Flesh is healed, you must roll a \DEATH any time you take damage.  Your Death Die depends on your \LVL.
-
-  \mytable{X c}{
-    \thead{\LVL} & \thead{Base \DEATH} \\
-  }{
-    1 & d3  \\
-    2 & d4  \\
-    3 & d6  \\
-    4 & d8  \\
-    5 & d10  \\
-    6 & d12  \\
-    7 & d16  \\
-    8 & d20  \\
-    9 & d24  \\    
+  \example {
+    \RO: \FOC \PLUS \DEATH \PLUS \mybold{modifiers} 
   }
 
-  The Death Die above are just the base. The Arbiter might start you at a lower Death Die than your level dictates if something particularly terrible happens. 
 
-  You can't heal Grit while you are on Dying.  If you are healed above 0 Flesh (through Resting, Leechcraft, etc), you are no longer on Dying.  Your Death Die resets and you must roll on the \mylink{Wound table}{appendixa-combat-tables-wounds} as well as roll your Sanity \UD.  Note that some Wounds will prevent you from healing Grit until they are dealt with.
+  If your Flesh ever goes to 0 or below, you are \mybold{Dying}.  Your Grit immediately drops to 0 if it isn't 0 already (you can't duck, dive, dodge, dip and dive while trying to hold your intestines in, right?) and your Flesh is set to 0.
+
+  While your Flesh is at 0, you must roll a \DEATH at the \mylink{top of each Moment}{time-top-bottom}.  If you fail, you immediately perish.  You can't do anything but crawl to safety and hold your intestines in; if you do, the Arbiter can add additional negatives to your roll (see below).
+
+  Unless noted in their Trope or Species, all Adventurers' \DEATH starts at a d3.  Additional levels of \DEATH can be learned during advancement.
 
 
-  \myhighlight{The Death Die}{combat-death-die}
+  \mytable{X c}{
+    \thead{\DEATH} & \thead{\STATIC} \\
+  }{
+      Precarious & d3 \\
+      Tough & d6  \\
+      Resilient & d10 \\
+      Enduring & d16 \\
+      Amaranthine & d24 \\
+  }
 
-  While you are Dying, you must \RS : \DEATH any time you take damage or do something strenuous (fighting or running counts, crawling off to a corner doesn't). If you succeed, the \DEATH moves \DCDOWN. If you fail you perish at the \mylink{top of the next Moment}{time-top-bottom} (if you're lucky, you can be healed before that happens).
+  The Arbiter may add negative modifiers to your roll.  A good rule of thumb for "heinous" damage (damage well in excess of your Flesh) is to divide \MAX Flesh into the result (rounded) down, and apply that as a negative modifier.  For instance, if an adventurer had 8 Flesh and took 30 damage, their roll would be at -2 (30-8 = 22.  22/8 = 2.75, rounded down = 2).  Additionally, if the adventurer does anything but crawl to safety, assign additional modifiers.
 
-  \mybold{Optional: Heinous Damage}
+  If you are Dying, you can't heal Grit.  The moment you are healed above 0 Flesh (through Resting, Leechcraft, etc) you are no longer Dying; you must immediately roll on the \mylink{Wound table}{appendixa-combat-tables-wounds} as well as \RS : Sanity.  Note that some Wounds will prevent you from healing Grit until they are dealt with.
 
-  If you ever take 4x your \MAX Flesh in damage, and this results in you Dying, you perish at the \mylink{top of the next Moment}{time-top-bottom} as if you had failed your \RS : \DEATH i.e. if you were a Bravo with 8 Flesh and took 32 damage, you would perish at the \mylink{top of the next Moment}{time-top-bottom}
 
   \newpage
  
@@ -360,19 +349,21 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
 
   \mysubsection{Taking a Breather (Minutes)}{combat-resting-breather}
 
-  Combat takes Minutes to finish, no matter how many Moments actually occurred.  Once Combat is over, you can take a \mybold{Breather}.  Roll your \FLESH and restore that much Grit up to your \MAX (unless a Wound prevents you from doing so). Pooka can help with this process significantly. Additionally, if you are a Soldier, you may repair your Armor up to its \MAX \UD.   
+  Combat takes Minutes to finish, no matter how many Moments actually occurred.  Once Combat is over, you can take a \mybold{Breather}.  Roll your \FLESH and restore that much Grit up to your \MAX (unless a Wound prevents you from doing so). Pooka can help with this process significantly.  If you have \mylink{Second Skin}{sellsword-virtue-second-skin}, you can repair a \UD of Armor as well, up to its \MAX.
 
-  You do not need to take a Breather in a safe place, but dropping down for a nap right after you've gutted the Plague Prophet in front of his congregation may not be the hottest idea.  You can only take 1 Breather per Combat.  
+  You don't need to take a Breather in a safe place, but common sense should prevail - taking a quick nap in front of the goblin horde after you beheaded the chieftain isn't OK.  You can only take 1 Breather per Combat.
+
 
   \mysubsection{Taking a Bivouac (Hours)}{combat-resting-bivouac}
-  You must take a Bivouac in a "safe" place (though this doesn't necessarily have to be in \mylink{Civilization}{civilization}).  Each time you Bivouac you must make a \UD roll of your Personal Provisions (you can share Personal Provisions with others, but you have to roll for each person).  If you don't have enough Personal Provisions, you can't get any of the effects of a Bivouac.  There's always a chance of wandering Monsters during a Bivouac (unless you have a Pooka with you)
+
+  If you need a longer rest, you can set up camp and take a Bivouac.  You can only camp in a "safe" place (though this doesn't necessarily have to be in \mylink{Civilization}{civilization}).  Each time you make a Bivouac, make a \UD roll of your Personal Provisions (you can share Personal Provisions with others, but you have to roll for each person).  If you don't have enough Personal Provisions, you can't get any of the good effects.  There's always a chance of wandering Monsters when you're camping, unless you have a Pooka with you
 
 
   \mybold{If a Wound doesn't prevent you from doing so:}
 
   \mybullet {
     \item Restore all your Grit.  
-    \item Restore \LVL Flesh.  If you're a \mylink{Barbarian}{flavor-barbarian}, restore \LVL x2 Flesh
+    \item Restore \LVL Flesh
     \item Restore 1 \UD of any \myital{one} \mylink{Intangible Stat}{intangible-stats}
     \item Restore your Armor up to its \MAX \UD
   }
@@ -382,18 +373,16 @@ Flesh is pretty static, except for \mylink{Barbarians}{flavor-barbarian} who get
   \mybold{Additionally:}
 
   \mybullet {
-    \item If you're a \mylink{Soldier}{flavor-soldier}, restore 1 \UD of Armor up to its \MAX and 1 \DEED
-    \item If you're a \mylink{Barbarian}{flavor-barbarian}, restore 1 Deed \UD
-    \item If you're a \mylink{Knave}{trope-knave} or a \mylink{Pooka}{species-pooka}, restore 1 Luck \UD
-    \item If you're a \mylink{Sorcerer}{flavor-sorcerer}, restore 1 Blood \POOL
-    \item If you're a \mylink{Leech}{flavor-leech}, reset any negative modifiers to Knowledge
-    \item If you're a \mylink{Mystic}{flavor-mystic}, restore 1 Grace \POOL
-    \item If you're a \mylink{Witch}{flavor-witch}, restore 1 Mojo \UD
-    \item If you're a \mylink{Spriggan}{species-spriggan}, restore 1 Remembrance die \UD
+    \item \mylink{Sellswords}{trope-sellsword} restore 1 \UD of their \DEED
+    \item \mylink{Knaves}{trope-knave} and \mylink{Pooka}{species-pooka} restore 1 \UD of their Luck
+    \item \mylink{Philosophers}{trope-philosopher} restore 1 Blood \POOL and/or reset any negative modifiers to Knowledge
+    \item \mylink{Mystics}{trope-mystic} restore 1 Grace \POOL and/or 1 Mojo \UD
+    \item \mylink{Spriggan}{species-spriggan} restore 1 Remembrance die
   }
 
 
-  \mysubsection{Longer Rests}{civilization-resting-longer-rests}
-  As your injuries mount and your experience grows,  you may find you need to take a longer rest.  Longer rests require \mylink{Civilization}{civilization}.  If you rest for a Days in Civilization, this is a Sojourn; if you rest for Weeks, this is a Sabbatical. 
+  \mysubsection{Taking a Vacation (Days/Weeks)}{civilization-vacation}
+
+  As your injuries mount and your experience grows,  you may find you need to take a longer rest.  Longer rests require \mylink{Civilization}{civilization}.
 
 } %end
