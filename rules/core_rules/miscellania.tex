@@ -30,7 +30,7 @@
 
   \mysubsection{Bleeding}{effect-bleeding}
 
-  If you are Bleeding, you lose 1 Flesh every Moment.  This doesn't stack (i.e. you can't Bleed for 2 damage every Moment).  If you are Bleeding while on Death's Door, it will prompt a Death Die roll every Moment. 
+  If you are Bleeding, you lose 1 Flesh every Moment.  This doesn't stack (i.e. you can't Bleed for 2 damage every Moment).
 
   \mysubsection{Blinded}{effect-blinded}
 
@@ -42,7 +42,7 @@
 
   \mysubsection{Concussed}{effect-concussed}
 
-  You automatically lose Init and any \KNACK (including Skills and Saves) are reduced by 1 (if your Skill is 1-in-6, you can't use it while you're Concussed)
+  You automatically lose Init and any Skill or Saves rolls take a -2 penalty
 
   \mysubsection{Deafened}{effect-deafened}
 
@@ -75,15 +75,15 @@
 
   \mysubsection{Knocked Out}{effect-knocked-out}
 
-  You immediately drop Prone and drop any items you're holding.  Fight rolls against you hit automatically, do maximum damage (Crit) and can only be blocked by Armor.  If the effect is not Markovian, roll a \RS : \VIG at the top of each Moment; if you succeed, you awaken (but you are still Prone).  Once you awaken, the effect ends.
+  You immediately drop Prone and drop any items you're holding.  Fight rolls against you hit automatically, bypass Grit, do maximum damage (Crit) and can only be blocked by Armor.  If the effect is not Markovian, roll a \RS : \VIG at the top of each Moment; if you succeed, you awaken (but you are still Prone).  Once you awaken, the effect ends.
 
   \mysubsection{Paralyzed}{effect-paralyzed}
 
-  You immediately grow rigid - you cannot move or act, even to defend yourself.  Guard rolls automatically fail: the attack does maximum damage (Crit) and can only be blocked by Armor.  
+  You immediately grow rigid - you cannot move or act, even to defend yourself.  Guard rolls automatically fail: the attack bypasses Grit, does maximum damage (Crit) and can only be blocked by Armor.  
 
   \mysubsection{Prone}{effect-prone}
 
-  If you are knocked Prone you must spend an action getting to your feet.  While you are in a prone position you can continue to Fight at \DCDOWN. Any Guard \RO tries are at -4.
+  If you are knocked Prone you must spend an action getting to your feet.  While you are in a prone position you can continue to Fight and Guard at a -4 penalty
 
   \mysubsection{Shaken}{effect-shaken}
 
@@ -99,11 +99,11 @@
 
   \mysubsection{The Vapors}{effect-the-vapors}
 
-  You immediately pass out.  Any damage will wake you up immediately, but any attacks against you do maximum damage (Crit) and can only be blocked by Armor.
+  You immediately pass out.  Any damage will wake you up immediately, but any attacks against you bypass Grit, do maximum damage (Crit) and can only be blocked by Armor.
 
   \mysubsection{Woozy}{effect-woozy}
 
-  You take a -4 modifier to \myital{every} \RO  and \RB  attempt (including Fight and Guard)
+  You take a -4 penalty to \myital{every} \RO  and \RB  attempt (including Fight and Guard)
 
 
   \mysection{Vision}{vision}
@@ -213,11 +213,11 @@
 
   \myhighlight{Foolhardiness}{madness-foolhardiness}
 
-  Your continued survival in the face of the unnatural has given you the irrational belief that you are invincible. You cannot retreat or withdraw from dangerous situations by any means, and you lose 1/2 of your \mylink{Grit}{combat-flesh-grit}, rounded down.
+  Your continued survival in the face of the unnatural has given you the irrational belief that you are invincible. You cannot retreat or withdraw from dangerous situations by any means.
 
   \myhighlight{Gluttony}{madness-gluttony}
 
-  You are overcome by the irrational belief that if you consume you will not be consumed by your fear. You refuse to wear armor since it's "binding".  If you Bivouac, roll your Personal Provisions 3 times.  If you Sojourn or Sabbatical, your costs are increased by 100 coins (you don't receive XP for this extra money)
+  You are overcome by the irrational belief that if you consume you will not be consumed by your fear. You refuse to wear armor since it's "binding".  If you Bivouac, roll your Personal Provisions 3 times.  If you take a Vacation, your costs are increased by x3 coins (you don't receive XP for this extra money)
 
   \myhighlight{Hallucinations}{madness-hallucinations}
 
@@ -249,15 +249,17 @@
 
   \myhighlight{Shot Nerves}{madness-shot-nerves}
 
-  Your madness has weakened your already fragile mental state.  Whenever you enter Combat or a stressful situation (determined by the Arbiter), roll a \RS : \INT.  If you fail you can only stand gaping in horror for the rest of Combat.  You cannot Fight or Guard, but you can be pulled / moved by allies.
+  Your madness has weakened your already fragile mental state.  Whenever you enter Combat or a stressful situation (determined by the Arbiter), roll a \RS : \INT.  If you fail you can only stand gawping in horror for the rest of Combat.  You cannot Fight or Guard, but you can be pulled / moved by allies.
 
   \myhighlight{Split Personality}{madness-split-personality}
 
   Roll up a new level 1 character that uses your current physical stats (\VIG and \DEX), but new mental stats (\INT and \FOC). The class must be different from your current one. Each session, alternate between these two characters, each one tracking XP separately.
 
+  \cbreak
+
   \myhighlight{Starvation}{madness-starvation}
 
-  Your madness has inspired the irrational belief that if you deny yourself food you can deny the extent of your fear. Whenever you Bivouac, roll a \RS : \FOC.  If you fail you are unable to consume your Personal Provisions (and thus get no benefit for resting).  If you Sojourn or Sabbatical while under the effect of this Madness, you start your next adventure with a maximum Flesh of 1.
+  Your madness has inspired the irrational belief that if you deny yourself food you can deny the extent of your fear. Whenever you Bivouac, roll a \RS : \FOC.  If you fail you are unable to consume your Personal Provisions (and thus get no benefit for resting).  If you Vacation while under the effect of this Madness, you start your next adventure with a maximum Flesh of 1.
 
 
   \myhighlight{True Madness}{madness-true-madness}
