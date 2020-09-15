@@ -33,8 +33,8 @@ If something doesn't apply, move up the chart (that is, things get worse) to the
 
 \mynumlist {
   \item  You miss spectacularly and everyone laughs at you and now no one will invite you to prom.  Lose 1 Grit on account of the shame.
-  \item You miss and lose your grip on your weapon and you're holding it all awkward and things feel weird.  Your next Fight roll is \DCDOWN
-  \item You'll tell everyone that your opponent dodged but really you got all turned around.  Your next Guard roll is \DCDOWN
+  \item You miss and lose your grip on your weapon and you're holding it all awkward and things feel weird.  Your next Fight roll is -4
+  \item You'll tell everyone that your opponent dodged but really you got all turned around.  Your next Guard roll is -4
   \item You Trip and Fall - you are now Prone.
   \item You Disarm yourself. If it's a Shoot weapon, the bowstring breaks and it'll take Minutes to fix, so let's hope you have an Option B.
   \item If you're wearing a backpack you sever the straps, it splits open, and all the contents spill onto the ground.  Backpack is now useless and everyone can see your weird collection of things you've been stealing
@@ -45,7 +45,7 @@ If something doesn't apply, move up the chart (that is, things get worse) to the
 
 \mysubsection{Wounds}{appendixa-combat-tables-wounds}
 
-Touching Death's Door is not without its cost.  Roll a d3:  1) Physical Wound, 2) Mental Wound, 3) Spiritual Wound.  The effects of Wounds are healed by taking a Bivouac unless the damage is permanent. Serious Wounds, Madness, and Life Drain will take longer (a Sojourn or more), or the ministrations of someone skilled in Leechcraft. 
+Touching Death's Door is not without its cost.  Roll a d3:  1) Physical Wound, 2) Mental Wound, 3) Spiritual Wound.  The effects of Wounds are healed by taking a Bivouac unless the damage is permanent. Serious Wounds, Madness, and Life Drain can only be healed during a Vacation.
 
 Roll a d10 on the appropriate table below
 
@@ -89,8 +89,8 @@ Roll a d10 on the appropriate table below
     \item  Only saved by luck.  Your \MAX Talent is \DCDOWN until dealt with.
     \item  Marked for death.  Monsters will target you first in Combat
     \item  Empty luck battery.  Automatically take a 1 in any Luck Contests.
-    \item  Winds of Doom.  You've only postponed the inevitable.  Your Save vs. Doom goes to 1.
-    \item  Arcane target.  Your Save vs. Hexes goes to 1.
+    \item  Winds of Doom.  You've only postponed the inevitable.  Your Saves vs. Doom have a -4 penalty
+    \item  Arcane target.  Your Save vs. Hexes have a -4 penalty
     \item  Karma extracts a toll - your \MAX Talent is \DCDOWN permanently.
     \item  Unquiet thoughts.  You are unable to heal Grit.
     \item   Roll on the \mylink{Life Drain}{appendixa-life-drain-table} table
@@ -159,24 +159,334 @@ Roll a d10 on the appropriate table below
   \item \mybold{Skill}  You've forgotten how to do anything not related to eating, fighting, and sleeping. All of your Skills drop to 0 in 6
 
 
-  \item \mybold{Passion} You become depressed and lethargic, unable to perform any actions during a Sojourn or Sabbatical (including going Carousing).  During play, any action that would take Minutes or longer of continuous concentration requires a Sanity roll to complete (remember, a Failure requires a roll on the \mylink{Terrifying Tables}{misc-terrifying-tables})
+  \item \mybold{Passion} You become depressed and lethargic, unable to perform any actions during a Vacation (including going Carousing).  During play, any action that would take Minutes or longer of continuous concentration requires a Sanity roll to complete (remember, a Failure requires a roll on the \mylink{Terrifying Tables}{misc-terrifying-tables})
 
   \item \mybold{Humanity} You become perceptibly but indescribably inhuman.  Your \MAX Presence drops to d2. Animals growl or otherwise act hostile in your presence, and hirelings won't follow you. 
 
-  \item \mybold{Allies} An attendant spirit was stolen from you. Familiars, intelligent weapons, the ability to remember the Forgotten, and relationships with the Authority or Small Gods are all at risk.
+  \item \mybold{Allies} An attendant spirit was stolen from you. Familiars, intelligent weapons, the ability to remember the Forgotten, and relationships with \TheAuthority or Small Gods are all at risk.
 }
 
 \newpage
 
-\end{multicols}
+
 
 \mysection{Appendix B: Random Tables}{appendixb-random-tables}
+
+
+\mysubsection{Random Treasure}{appendixb-random-treasure}
+
+\mybold{Basic Treasure Table}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Nothing \\
+ 2 & Mundane Treasure I \\
+ 3 & Mundane Treasure II \\
+ 4 & d6 coins \\
+ 5 & d6x10 coins \\
+ 6 & Roll on \mybold{Better Treasure Table}
+}
+
+
+\mybold{Better Treasure Table}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Roll on \mybold{Gems} \\
+ 2 & Roll on \mybold{Jewelry} \\
+ 3 & Roll on \mybold{Drugs} \\
+ 4 & Roll on \mybold{Chymistry} \\
+ 5 & Roll on \mybold{Fetishes} \\
+ 6 & Roll twice
+}
+
+\cbreak\bump
+
+
+\mybold{Mundane Treasure I} \\~
+\myital{Roll 2d6}
+
+\mytable{l X} {
+    \thead{} & \thead{} \\
+}{
+    11 & False Teeth \\
+    12 & Obscure treasure map \\
+    13 & Love Letter \\
+    14 & Small silver knife \\
+    15 & Set of rusty keys \\
+    16 & Matches \\
+    21 & Copper hand mirror \\
+    22 & Spikes and a hammer \\
+    23 & Syringe (empty) \\
+    24 & Leather work gloves \\
+    25 & Flask of oil \\
+    26 & Flask of liquor \\
+    31 & Chalk \\
+    32 & 3 beans \\
+    33 & Mousetrap \\
+    34 & A few wooden puzzle pieces \\
+    35 & A carved pipe \\
+    36 & A rabbit's foot \\
+    41 & A set of dice \\
+    42 & Brass ring \\
+    43 & 3 playing cards (Aces) \\
+    44 & A children's toy top \\
+    45 & Small bone statues \\
+    46 & Blue quartz crystal \\
+    51 & A pair of purple ladies gloves \\
+    52 & A bag of teeth \\
+    53 & A few bones \\
+    54 & A comb \\
+    55 & A hankerchief \\
+    56 & Small petrified head \\
+    61 & A few round stones \\
+    62 & A wool cap \\
+    63 & A pair of undarned socks \\
+    64 & Small bottle of urine \\
+    65 & A duck bill \\
+    66 & A morbid shopping list (body parts) \\
+}
+
+\newpage
+
+
+\mybold{Mundane Treasure II} \\~
+\myital{Roll 2d6}
+
+\mytable{l X} {
+    \thead{} & \thead{} \\
+}{
+    11 & A sash with a skull embroidered on it \\
+    12 & A small glowing stone (candlelight) \\
+    13 & A box of moss \\
+    14 & A severed finger \\
+    15 & A fishing hook and some line \\
+    16 & A belt buckle \\
+    21 & A recipe for mead \\
+    22 & A hand paper fan \\
+    23 & A pair of rose colored glasses \\
+    24 & A map to an area of the Veins \\
+    25 & A small metal sundial \\
+    26 & A hand drawn picture of a cave entrance \\
+    31 & A candle \\
+    32 & A lumb of obsidian \\
+    33 & A magnet \\
+    34 & A bit of lace \\
+    35 & A list of names \\
+    36 & A silk shift \\
+    41 & An erotic drawing \\
+    42 & A bottle of regular glue \\
+    43 & A chess piece \\
+    44 & Fake ID \\
+    45 & A women's shift \\
+    46 & A handful of seeds \\
+    51 & A pouch of salt \\
+    52 & A polished glass eyeball \\
+    53 & Wooden carving of an elephant \\
+    54 & Penknife \\
+    55 & A bottle of honey in the shape of a bear \\
+    56 & An oily rag \\
+    61 & A padlock and key \\
+    62 & An empty leather wallet \\
+    63 & A razor \\
+    64 & Sea glass \\
+    65 & Long rainbow scarf \\
+    66 & Heart shaped iron locket \\
+}
+
+\cbreak
+
+
+\mybold{Gems}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Roll on \mybold{Poor Gems} \\
+ 2 & Roll on \mybold{Valuable Gems} \\
+ 3 & Roll on \mybold{Costly Gems} \\
+ 4 & Roll on \mybold{Poor Gems} d6 times \\
+ 5 & Roll on \mybold{Valuable Gems} d6 times \\
+ 6 & Roll on \mybold{Costly Gems} d6 times
+}
+
+
+\mybold{Poor Gems (d6x10 Iron)}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Amber \\
+ 2 & Amethyst \\
+ 3 & Coral \\
+ 4 & Garnet \\
+ 5 & Jade \\
+ 6 & Pearl
+}
+
+
+\mybold{Valuable Gems (d6x10 Silver)}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Aquamarine \\
+ 2 & Garnet \\
+ 3 & Black Pearl \\
+ 4 & Topaz \\
+ 5 & Alexandrite \\
+ 6 & Spinel
+}
+
+\mybold{Costly Gems (d6x10 Gold)}
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Diamond \\
+ 2 & Emerald \\
+ 3 & Ruby \\
+ 4 & Sapphire \\
+ 5 & Opal \\
+ 6 & Jacinth
+}
+
+\newpage 
+
+\mybold{Jewelry}
+
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Necklace \\
+ 2 & Ring \\
+ 3 & Earring \\
+ 4 & Brooch \\
+ 5 & Bracelet \\
+ 6 & Circlet \\
+}
+
+
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Roll on \mybold{Poor Jewelry} \\
+ 2 & Roll on \mybold{Valuable Jewelry} \\
+ 3 & Roll on \mybold{Costly Jewelry} \\
+ 4 & Incorporates a \mybold{Poor Gem}. Roll on that table. Roll again on this table. \\
+ 5 & Incorporates a \mybold{Valuable Gem}. Roll on that table.  Roll again on this table. \\
+ 6 & Incorporates a \mybold{Costly Gem}. Roll on that table.  Roll again on this table. \\
+}
+
+\mybold{Poor Jewelry (d6x10 Iron)}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Bronze \\
+ 2 & Tin \\
+ 3 & Copper \\
+ 4 & Iron  \\
+ 5 & Bone \\
+ 6 & Glass
+}
+
+\mybold{Valuable Jewelry (d6x10 Silver)}
+
+\mytable{l X}{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 & Steel \\
+ 2 &  Ivory \\
+ 3 &  Stoneshape \\
+ 4 &  Shroomfoil \\
+ 5 &  Silver \\
+ 6 &  Brass
+}
+
+\mybold{Costly Jewelry (d6x10 Gold)}
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 &  Gold \\
+ 2 &  Platinum \\
+ 3 &  Orichalcum \\
+ 4 &  Occultum \\
+ 5 &  Moon-bronze \\
+ 6 & Mithril
+}
+
+\mybold{Fetishes}
+
+Roll randomly on Wizardry Arcana in Bell, Book, and Candle.  d4 \UD
+
+
+\mybold{Drugs}
+
+\mytable{l X X}{
+ \thead{d6} & \thead{} & \thead{\UD}  \\
+}{
+ 1 &  Pipeweed & d10  \\
+ 2 &  Smokes & d10  \\
+ 3 &  Weed of Hasheeshian & d10  \\
+ 4 &  Woad & d8  \\
+ 5 &  Blackthroat & d4  \\
+ 6 & Locus & d4
+}
+
+
+\mybold{Chymicals}
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1 &  Roll on \mybold{Toxins} \\
+ 2 &  Roll on \mybold{Acids} \\
+ 3 &  Random Tonic \\
+ 4 &  Random Powder \\
+ 5 &  Random Sera \\
+ 6 & Random Ungeant 
+}
+
+\myital{See Bell, Book, and Candle for details on Chymistry}
+
+\mybold{Toxins}
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1-3 &  1 Dose Iron Toxin \\
+ 4-5 &  1 Dose Silver Toxin \\
+ 6 &  1 Dose Gold Toxin \\
+}
+
+\mybold{Acids}
+
+\mytable{l X }{
+ \thead{d6} & \thead{}  \\
+}{
+ 1-3 &  1 Dose Iron Acid \\
+ 4-5 &  1 Dose Silver Acid \\
+ 6 &  1 Dose Gold Acid \\
+}
+
+
+
+
+
+\newpage
+
 
 \mysubsection{Mutations!}{appendixb-mutations}
 
 \myital{Roll twice ... [Adjective] [Verb]}
 
-  \mytable{X l l}{
+  \mytable{l l l}{
     \thead{d20} & \thead{Adjective} & \thead{Verb}  \\
   }{
     1&Atrophied&Antennae\\
@@ -201,50 +511,53 @@ Roll a d10 on the appropriate table below
     20&Withered&Wings (vestigial)\\
   }
 
-  \newpage
+\end{multicols}
 
 \mysubsection{Adventurer Occupations}{appendixb-occupations}
 
-  \mytable{X l l l}{
+\myital{d6:  1-3 Country; 4-5 Village; 6 City}
+
+  \mytable{X X X X}{
     \thead{d30} & \thead{Country} & \thead{Village} &  \thead{City} \\
   }{
-    1&Hobo&Hobo&Hobo\\
-    2&Drunkard / Addict&Drunkard /Addict&Drunkard /Addict\\
-    3&Orphan&Orphan&Orphan\\
-    4&Gypsy&Farmhand&Pickpocket\\
-    5&Ditchdigger&Farmer&Beggar\\
-    6&Serf&Miner&Mudlark\\
-    7&Poacher&Miller&Sewerjack\\
-    8&Herder&Smith&Gongfarmer\\
-    9&Mushroom Farmer&Grocer&Chimneysweep\\
-    10&Gatherer&Fishmonger&Prostitute\\
-    11&Hunter/Trapper&Baker&Bawd\\
-    12&Fisherman&Alewife /Barkeep&Servingwench\\
-    13&Woodcutter&Porter&Alewife /Barkeep\\
-    14&Butcher&Hayward&Ostler\\
-    15&Prospector&Weaver&Porter\\
-    16&Molecatcher&Tanner&Apprentice\\
-    17&Guide&Cobbler&Caravan Guard\\
-    18&Linkboy&Tailor&Nightwatchman\\
-    19&Alewife/Barkeep&Wainwright&Sailor/Dockhand\\
-    20&Prostitute&Servingwench&Crimp\\
-    21&Servingwench&Prostitute&Cultist\\
-    22&Escaped Criminal/Slave&Brewer&Executioner\\
-    23&Cultist&Cheesemaker&Gambler\\
-    24&Midwife/Medicine Man&Ranchero&Haberdasher\\
-    25&Ferryman&Cultist&Goliard\\
-    26&Graverobber&Mummer&Teamster\\
-    27&Village Elder&Guard&Cartographer\\
-    28&MadScientist&Trader&EsotericScholar\\
-    29&RetiredExplorer&Fence&RetiredExplorer\\
-    30&IncognitoNobility&RetiredExplorer&MinorNobility\\
+    1 & Hobo & Hobo & Hobo\\
+    2 & Drunkard / Addict & Drunkard /Addict & Drunkard /Addict\\
+    3 & Orphan & Orphan & Orphan\\
+    4 & Gypsy & Farmhand & Pickpocket\\
+    5 & Ditchdigger & Farmer & Beggar\\
+    6 & Serf & Miner & Mudlark\\
+    7 & Poacher & Miller & Sewerjack\\
+    8 & Herder & Smith & Gongfarmer\\
+    9 & Mushroom Farmer & Grocer & Chimneysweep\\
+    10 & Gatherer & Fishmonger & Prostitute\\
+    11 & Hunter/Trapper & Baker & Bawd\\
+    12 & Fisherman &Alewife /Barkeep & Servingwench\\
+    13 & Woodcutter & Porter & Alewife /Barkeep\\
+    14 & Butcher & Hayward & Ostler\\
+    15 & Prospector & Weaver & Porter\\
+    16 & Molecatcher & Tanner & Apprentice\\
+    17 & Guide & Cobbler & Caravan Guard\\
+    18 & Linkboy & Tailor & Nightwatchman\\
+    19 & Alewife/Barkeep & Wainwright & Sailor/Dockhand\\
+    20 & Prostitute & Servingwench & Crimp\\
+    21 & Servingwench & Prostitute & Cultist\\
+    22 & Escaped Criminal/Slave & Brewer & Executioner\\
+    23 & Cultist & Cheesemaker & Gambler\\
+    24 & Midwife/Medicine Man & Ranchero & Haberdasher\\
+    25 & Ferryman & Cultist & Goliard\\
+    26 & Graverobber & Mummer & Teamster\\
+    27 & Village Elder & Guard & Cartographer\\
+    28 & Mad Scientist & Trader & Esoteric Scholar\\
+    29 & Retired Explorer & Fence & Retired Explorer\\
+    30 & Incognito Nobility & Retired Explorer & Minor Nobility\\
   }
+
 
   \newpage
 
-\mysubsection{Random Gear}{appendixb-random-gear}
+\mysubsection{Random Items}{appendixb-random-items}
 
-\mytable{X l }{
+\mytable{l X}{
  \thead{d100} & \thead{Loot}  \\
 }{
    1 & a crumpled pack of Smokes \\
@@ -291,7 +604,7 @@ Roll a d10 on the appropriate table below
   }
 
 
-  \mytable{X l }{
+  \mytable{l X}{
    \thead{d100} & \thead{Loot}  \\
   }{  
 
@@ -345,7 +658,7 @@ Roll a d10 on the appropriate table below
    88 & a chipped "world's best boss" mug \\
    89 & an incomprehensible book about toadstools \\
    }
-  \mytable{X l }{
+  \mytable{l X}{
    \thead{d100} & \thead{Loot}  \\
   }{  
    90 & a fur hat \\
@@ -361,7 +674,11 @@ Roll a d10 on the appropriate table below
    100 & you pick (run it past the Arbiter) \\
 }
 
+
+
 \begin{multicols}{2}
+
+
 
 
 
@@ -384,7 +701,7 @@ There are some additional dice that ToY uses (the d24, the d16 and the d3) that 
 \myital{n.b. For every +1 you add to your roll, you increase your odds by an average of 4\%}
 
 
-  \mytable{X l }{
+  \mytable{l X}{
    \thead{Dice} & \thead{\RO Odds}  \\
   }{  
     d24+d24  & A little better than 2-in-3\\
