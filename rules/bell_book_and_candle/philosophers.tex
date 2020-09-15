@@ -1,0 +1,113 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggPhilosophers}{%
+  \mychapter{Philosophers}{philosophers}
+}
+
+\renewcommand{\yggPhilosophersText}{%
+
+ \mysection{The Crux of Blood}{philosopher-crux-blood}
+
+ The Crux of Blood grants the Philosopher a Blood Die - a d6 \POOL used to perform \mylink{Wizardry}{arcana-wizardry}.  When you first learn the Crux of Blood, choose a \mylink{Wizardry}{philosopher-wizardry} spell.  This spell is etched on the inside of your cranium "...like moth larvae burrowing through the bark of a tree."  This spell can be cast without speaking or moving.  If someone cuts off your head and scoops out your brains, they can read (and learn) the spell too (see \mylink{Fetishes}{philosopher-fetishes}).
+
+
+\mysubsection{Wizardry}{philosopher-wizardry}
+
+Performing Wizardry requires rolling one or more Blood Die - how many is up to you, but you have to roll them all at once.  Each Blood Die is a \POOL; if you roll a 1 or a 2 on a Blood Die, you lose the die. Additionally:
+
+\mybullet {
+  \item If you roll any triples, roll on the \mylink{Mishap table}{table-mishap}. The spell works.
+  \item If you roll any quadruples, roll on the \mylink{Calamity table}{table-calamities}. The spell fails.
+  \item If you roll any quintuples, roll on the \mylink{Ruin table}{table-ruin}. The spell fails.  This will most likely kill you.
+}
+
+
+You restore 1 Blood Die when you Bivouac, or all your Blood Die with a Vacation - but you can also attempt to ride the Torrent.
+
+More information on Wizardry and spells can be found in the section on \mylink{Arcana}{arcana-wizardry}
+
+\mysubsection{The Torrent}{philosopher-torrent}
+
+If you have 0 Blood Die in your pool, you can try to cast your Wizardry directly from the Torrent (a dangerous proposition).  For each Blood Die you want to add to your Wizardry, try the following \RO:
+
+\example {
+  \mybold{Torret}
+
+  \RO : \INT plus d6 plus Modifiers ~\\
+
+  \myital{Don't forget to add your \LVL, since this roll uses your \INT!}
+}
+
+If you succeed, you can add a Blood Die to the spell.  You can do this as many times as you like for each spell. If you fail any \RO attempt, the spell fails and you suffer a \mylink{Calamity}{table-calamities}.
+
+
+
+\mysubsection{Components}{philosopher-components}
+
+You can harvest and use components to cast spells:
+
+\example {
+  \mybold{Harvest Component}
+  \RO : \INT plus d6 plus d20 plus Modifiers
+
+  ~\\
+  
+  \myital{Don't forget to add your \LVL, since this roll uses your \INT!}
+}
+
+If you succeed on your \RO try, gain d4 \UD of a Component.
+
+You decide what Components augment which spells. For example, you could declare that kobold's eyes are a component for the spell Sleep.  If you succeed in your \RO try, then kobold's eyes are always a component for Sleep (note it on your character sheet) for YOU and not for anyone else (someone else's version of Sleep has a different way of casting, needs boggart boogers or whatever). 
+
+If you cast a spell with a Component, then you only burn a Blood die if you roll a 1 (instead of a 1 or 2).  Components are Insignificant items, but using a component consumes it in a puff of smoke / blue flame / swarm of gnats etc.
+
+\mybullet {
+  \item Components can only be harvested during a Breather, and have to be from one of the Monsters you've (presumably) killed.  It has to be something you can reasonably carry (Arbiter's choice) - basilisk tongue, ok.  Green slime, not ok.
+  \item Monsters only provide one component.  You can't say kobold's eyes help Magic Missile and kobold's tongues help cast Battering Beam.   
+  \item You can only try once per Monster type per Breather, so if you kill 9 kobolds and 14 trolls then you get two shots - once on kobolds and once on trolls.
+  \item You can only harvest d4 \UD from a Monster no matter how many there are - 9 kobolds or 1, you get d4 \UD
+}
+
+
+\newpage
+
+
+
+
+
+ \mysection{The Crux of Knowledge}{philosopher-crux-knowledge}
+
+  
+  The Crux of Knowledge gives you a \STATIC Knowledge Die that you can use to make a Knowledge Test:
+
+  \example {
+    \mybold{Knowledge Test}
+
+    \RO: \INT plus \mybold{Knowledge Die} plus \mybold{Modifiers}
+
+  }
+
+  Any time you fail a Knowledge Test, you begin to accumulate negative modifiers.  The modifiers reset once you take a Bivouac or longer rest.
+
+  \mytable{X X} {
+    \thead{Failure} & \thead{Modifier} \\
+  } {
+      1st  & -1 \\
+      2nd  & -1 \\
+      3rd  & -2 \\
+      4th  & -3 \\
+      5th  & -5 \\
+      6th  & -8 \\
+      7th  & -13 \\
+      8th  & etc. \\
+}
+
+\mysubsection{Leechcraft}{philosopher-leechcraft}
+
+Knowledge Dice are used in the pratice of \mylink{Leechcraft}{arcana-leechcraft}
+
+
+} % end

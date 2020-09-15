@@ -1,0 +1,106 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\documentclass[10pt]{article}
+\usepackage{ygg}
+\newcommand{\yggVersion}{%
+  v.3.0.beta
+}
+
+\newcommand{\yggMyTitle}{
+  {Bestiarum Vocabulum}
+}
+
+% Section Titles
+\newcommand{\yggMonsters}{}
+\newcommand{\yggCoreCreatures}{}
+\newcommand{\yggConversions}{}
+\newcommand{\yggSpells}{}
+\newcommand{\yggThanks}{}
+
+% Body
+\newcommand{\yggMonstersText}{}
+\newcommand{\yggCoreCreaturesText}{}
+\newcommand{\yggConversionsText}{}
+\newcommand{\yggSpellsText}{}
+\newcommand{\yggThanksText}{}
+
+\input{monsters.tex}
+\input{core_creatures.tex}
+\input{conversions.tex}
+\input{spells.tex}
+\input{thanks.tex}
+
+
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\title{{\Huge\fffancy\yggMyTitle }}
+\author{by Stefan Antonowicz}
+\date{}
+\setcounter{tocdepth}{4}
+
+% table of contents
+\renewcommand\contentsname{{\small\fftext Table of Contents }}
+
+\begin{document}\fftext
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+% --- title page --------------------------------------------------------------------
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+
+\begin{multicols*}{2}
+  \let\clearpage\relax
+  \vspace{-5cm}
+  \small\fftext\tableofcontents
+\end{multicols*}
+\vfill\newpage
+% --- monsters  -----------------------------------------------------------------
+\noindent\yggMonsters
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggMonstersText
+\end{multicols}
+\vfill\newpage
+% --- core creatures  -----------------------------------------------------------------
+\noindent\yggCoreCreatures
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggCoreCreaturesText
+\end{multicols}
+\vfill\newpage
+% --- conversions  -----------------------------------------------------------------
+\noindent\yggConversions
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggConversionsText
+\end{multicols}
+\vfill\newpage
+
+% --- spells  -----------------------------------------------------------------
+\noindent\yggSpells
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggSpellsText
+\end{multicols}
+\vfill\newpage
+
+
+% --- thanks  -----------------------------------------------------------------
+\noindent\yggThanks
+\vfill\newpage
+\begin{multicols}{2}
+  \noindent\yggThanksText
+\end{multicols}
+\vfill\newpage
+
+\end{document}

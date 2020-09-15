@@ -1,0 +1,812 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons
+% Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggMystics}{%
+  \mychapter{Mystics}{mystics}
+}
+
+\renewcommand{\yggMysticsText}{%
+
+\flavor{ 
+  And it has been said of old that all things that have been were wrought by the small gods, excepting only \TheAuthority, the Authority, the God of Having Done, who made the gods, and hath thereafter rested.  And none may pray to \TheAuthority but only to the gods whom he hath made.
+}
+
+
+\mysection{The Gift of Grace}{mystics-grace}
+
+The Holy Word echoes and reverberates along the branches of Ygg.  The act of trying to understand the Word bestows the Authority's Grace on you.  Grace allows you to perform the \mylink{Seven Sacraments}{mystics-seven-sacraments}, found in the section on \mylink{Arcana}{arcana}
+
+Grace Dice are \POOL, meaning if you roll a Failure (a 1 or a 2) you lose the die until you rest.  You can restore 1 Grace \POOL whenever you Bivouac. You can never use Grace to perform something that requires Faith. 
+
+\mysection{The Crux of Mojo}{mystics-mojo}
+
+\flavor{
+    Where's the game in life, behind the game behind the game...
+    \~ Public Enemy
+}
+
+TK TK TK TK DESCRIPTION
+
+
+
+Your Mojo is represented as a \UD.  You can roll this \UD to practice 
+
+  When you perform Necromancy, you combine your Mojo \UD with your \FOC in a \RO attempt:
+
+  \example {
+    \mybold{Mojo Test}
+
+    \RO : \mybold{Mojo \UD} plus \mybold{\FOC} plus \mybold{Modifiers}
+
+  }
+
+  Finally, you can use your Mojo \UD as if it were an Armor Die (see the Core Rules) if you fail your Guard \RO in Combat.
+
+  \mysection{Cunning}{witch-cunning}
+
+  Cunning is used to perform Occultism, and be used to help Spriggans create magic weapons.  A Cunning die is a d4; you have a base number of Cunning die equal to your \LVL (so if you were \LVL 6, you'd have 6d4 Cunning Dice).  You earn these Cunning Dice at the start of any Sabbatical you take.  Any Cunning Dice you do not use at the end of the Sabbatical are lost.
+
+  You may obtain more Cunning Dice as specified below:
+
+  \mytable{X X}{}
+  {
+    Wheel: Crown & +3 \\
+    Wheel: Gibbous & +2 \\
+    Wheel: Wax Quotidian & +1 \\
+    Coven & +1 each member \\
+    Familiar: & +1 if present \\
+  }  
+
+
+  You gain a Coven at 7th level (see Core Rules). 
+
+  Cunning Dice can be traded be traded between you and other Witches. You can give as many Cunning Dice to different people as you wish, but you can only accept a number of Cunning Dice up to your \LVL-1.
+
+  Each Occult rite requires 1 or more Cunning Dice to be rolled (how many is up to you).  You must obtain a number of successes (that is, roll a 3 or 4 on the Cunning Die) equal to or greater than what is specified in the Occult rite.  
+
+
+ 
+
+\mysection{The Crux of Faith}{mystics-faith}
+
+It is forbidden to worship \TheAuthority directly (lest She awaken and speak the final Word).  Instead, you whisper your prayers and invocations to the Small Gods, the Gods of Doing.  Your Faith (measured as d4 \UD) in your Small God allows you to invoke the Liturgies of the Throne that they sit beneath.
+
+Unlike Grace, Faith does not come back when you rest.  You can gain or regain Faith up to your \MAX by actively, aggressively pursing your Small God's influence on Acheron.  You gain Faith \UD completely at the Arbiter's discretion.  Some examples of things that might gain you Faith: slaughtering the priest of a rival cult; converting a crowd of listeners; invoking the name of your Small God and succeeding; eating hallucinogenic mushrooms and tripping balls while your Small God copulates with you, proclaiming your destiny, etc.
+
+It's possible to lose Faith through your actions, as well.  When you do something your Small God doesn't approve of or witnesses something which would shake your belief: a commune of the converted found diseased deformed and starved, a call for help which goes unanswered, a nocturnal visit by a creeping hulking thing which whispers terrible secrets of the endless sky into the your ear heedless to the invocation of your God, you lose Faith Die.
+
+If your Faith Die reach 0, you must immediately roll a d4 - on a Failure (a 1 or a 2) you suffer a \mylink{Crisis of Faith}{table-crisis-of-faith}; otherwise, gain +1 Faith \UD
+
+\mysubsection{The Contract}{mystics-the-contract}
+
+The Small Gods must obey certain "rules" when dealing with Mortals:
+
+\mynumlist {
+  \item  The Small Gods must be true to their nature
+  \item  The Small Gods must hear what Mortals have to say, and they must honor their bargains
+  \item  The Small Gods can only hear a Mortal's words - they cannot hear their thoughts
+  \item  The Small Gods must speak truth to Mortals about what is happening in distant places
+  \item  The Small Gods must prophesy honestly - though they may try to trick Mortals with their words
+}
+
+\mysubsection{The Holy Symbol}{mystics-holy-symbol}
+
+Your Holy Symbol allows you to harness your Faith to perform the \mylink{Liturgies}{mystics-liturgies}.  Tell the Arbiter what the Holy Symbol of your Small God is (there are a few ideas in the section on \mylink{Liturgies}{mystics-liturgies}).
+
+A Holy Symbol is a \mylink{Holy Relic}{miracle-holy-relic}; you must perform the Miracle of \mylink{Holy Relic}{miracle-holy-relic} to create a new one if yours is lost or destroyed.  Remember that your Holy Symbol contains a single Faith die that you can use in a pinch.  If you use this Faith Die and roll a Failure, the Faith Die is lost and the Holy Symbol becomes a normal item (and can't be used to perform \mylink{Liturgies}{mystics-liturgies} anymore).
+
+You don't need a Holy Symbol to practice the \mylink{The Seven Sacraments}{mystics-seven-sacraments}
+
+\newpage
+
+\mysubsection{Divine Favor}{mystics-divine-favor}
+
+You may call upon your Small God to directly intercede on your behalf.  To do this, you must roll \mybold{all} of your Faith dice, the \SUMDICE of the roll must be 60 or better.
+
+The divine favor must be something your Small God would have some control over, based on their aspect (Arbiter's discretion).  For example, Vulcan (Small God of fires, volcanoes, and the forge, who sits beneath the Civilized Throne) might not be able to affect the curse of the Ice Queen.  
+
+The Small Gods cannot violate the basic laws of the Authority:
+
+\mybullet {
+  \item Matter and energy can neither be created nor destroyed, as this is the demense of \TheAuthority; they can only be transformed or changed from one form to another.  Once a spirit has departed for the Isle of the Dead, it is beyond the reach of the Small Gods forever. 
+
+  \item Entropy always increases.  Time cannot flow backward; sword strikes cannot heal; you cannot "fall" against the direction of gravity. It is possible to suspend this Law (to roll back time, for instance), but only for a few Moments before it reverts to entropy again.
+
+}
+
+
+\cbreak
+
+\example {
+  \mylist {
+    \item Time rolls back for a few seconds to stop a killing blow from falling, or to reroll a missed Save.
+
+    \item A powerful magical item or artifact needs to be sundered
+
+    \item A sea must be parted, a tunnel opened through a mountain, or a boulder pushed to seal an entrance
+
+    \item Stones and trees, or sand and ice, assemble themselves into a fortress to protect the faithful
+  }
+}
+
+\mybullet {
+
+  \item A \myital{noumenon} cannot be removed by a Small God. A Small God cannot directly slay something on the Mortal plane.
+
+  \item All matter and energy has a destiny in the dream of \TheAuthority.  A Small God cannot cause matter or energy to do something that violates this destiny, and the ultimate destiny is only known to the Authority. (Practically, this means the effects of a Divine Favor are up to the Arbiter's discretion in the end!)
+}
+
+The Small God may also demand a sacrifice of some kind, or expect payment later ...
+
+
+
+
+\newpage
+ 
+\end{multicols*}
+
+\mysubsection{The Transcendent Thrones}{mystics-thrones}
+
+The Small Gods sit in uncountable multitudes beneath the ten Transcendent Thrones (though there are said to be 13 in all, 3 hidden from the eyes of Mortals). Your personal Faith in a Small God allows you to invoke the Liturgies of the Throne they sit beneath. Each Throne has four core \mylink{Liturgies}{mystics-liturgies} that the faithful can practice: the Liturgy of the Novitiates, the Liturgy of the Clerics, the Liturgy of the Apostles, and the Liturgy of the Saints.  During your adventures, you may also find Liturgies of your Small God etched on bronze tablets hidden by fearful priests in stinking swamps, forgotten in reliquaries lying in pawn shops, or written in the slime of snails tripping balls on shrooms.  
+
+
+\begin{multicols*}{2}
+\raggedcolumns
+
+
+\mybold{\mylink{The Civilized Throne}{civilized-liturgies}}
+
+\flavor{
+    Beauty  $\cdot$ Gems $\cdot$  Cities $\cdot$  Trade $\cdot$  Commerce $\cdot$  Filth $\cdot$  Pollution $\cdot$  Art $\cdot$  Music $\cdot$  Fermentation $\cdot$  Builders $\cdot$  Forge
+}
+
+
+
+\mybold{\mylink{The Cthonic Throne}{cthonic-liturgies}}
+
+\flavor{
+    Murder $\cdot$  Betrayal $\cdot$  Shadows $\cdot$  Thieves $\cdot$  The Abyss $\cdot$  Death $\cdot$  Blood $\cdot$  Wyrms
+}
+
+
+\mybold{\mylink{The Cunning Throne}{cunning-liturgies}}
+
+\flavor{
+Mysteries $\cdot$  Riddles $\cdot$  Wizards $\cdot$  Tricksters $\cdot$  Runes $\cdot$  Diplomacy $\cdot$  Inspiration $\cdot$  Knowledge
+}
+
+\mybold{\mylink{The Empyrean Throne}{empyrean-liturgies}}
+
+\flavor {
+Sunlight $\cdot$  Mountaintops $\cdot$  Heavens $\cdot$  Moonlight $\cdot$  Lightning $\cdot$  Tempests $\cdot$  Rains
+}
+
+\mybold{\mylink{The Errant Throne}{errant-liturgies}}
+
+\flavor{
+Games $\cdot$  Songs $\cdot$  Strength $\cdot$  Valor $\cdot$  Suffering $\cdot$  Freedom $\cdot$  Journeys $\cdot$  Homecomings $\cdot$  Treasures $\cdot$  Trials
+}
+
+\cbreak
+
+\mybold{\mylink{The Heathen Throne}{heathen-liturgies}}
+
+\flavor {
+Hearths $\cdot$  Gardens $\cdot$  Hunting $\cdot$  Glades $\cdot$  Fertility $\cdot$  Agriculture $\cdot$  Narcotics $\cdot$  "The Green Man" $\cdot$  Ancestors
+}
+
+
+\mybold{\mylink{The Jötnar Throne}{jötnar-liturgies}}
+
+\flavor {
+Honorable Death $\cdot$  Battle Frenzy $\cdot$  Vengeance $\cdot$  Mercs And Assassins $\cdot$  Strategy And Combat $\cdot$  The Fire Of War $\cdot$  Ice And Snow
+}
+
+
+\mybold{\mylink{The Monstrous Throne}{monstrous-liturgies}}
+\flavor{
+Cats $\cdot$  Toads $\cdot$  Reptiles $\cdot$  Arachnids $\cdot$  Monsters $\cdot$  Rats $\cdot$  Vermin $\cdot$  Birds
+}
+
+\mybold{\mylink{The Righteous Throne}{righteous-liturgies}}
+\flavor {
+Judgement $\cdot$  Punishment $\cdot$  Truth $\cdot$  Light $\cdot$  Time $\cdot$  Order $\cdot$  Law $\cdot$  Obedience $\cdot$  Protection $\cdot$  Oaths $\cdot$  Agreements
+}
+
+\mybold{\mylink{The Ruinous Throne}{ruinous-liturgies}}
+\flavor{
+Luck $\cdot$  Doom $\cdot$  Destruction $\cdot$  Hunger $\cdot$  Fate $\cdot$  Curses $\cdot$  Plagues
+}
+
+\end{multicols*}
+
+\newpage
+
+
+
+\mybold{Heresies}
+
+The more esoteric scholars further divide the Thrones into "left hand" and "right hand", placing them in opposition at the feet of \TheAuthority.  This is the realm of zealots and sectarians: those who swear eternal vengeance on the Throne that sits across from them.
+
+  \mytable{X X}{
+    \thead{Left-Hand Throne} & \thead{Right-Hand Throne} \\
+  }{
+    Cthonic & Empyrean \\
+    Heathen & Civilized \\
+    Errant & Righteous \\
+    Monstrous & Jötnar  \\
+    Ruinous & Cunning \\
+}
+
+\mybold{The Major Divinities}
+
+The four empires of Acheron recognize the following Small Gods as major divinities.  You will find shrines, temples, and churches dedicated to these Small Gods in every major city and port.  These 70 Small Gods represent a small fraction of the thousands of Small Gods worshipped across the face of Acheron. 
+
+
+\begin{multicols*}{2}
+\raggedcolumns
+
+
+\mybold{Civilized}
+\mylist{
+        \item \GOD[Name=Balder,GodOf=Seraph of Beauty and Gems,Holy={a silver mirror}]
+        \item \GOD[Name=Gomorrah,GodOf=Archfiend of Cities,Holy={a single iron nail, often driven into the hand or wrist}]
+        \item \GOD[Name=Minerva,GodOf=Archon of Trade and Commerce,Holy={a knotted string, hung from the belt, useful for counting (like an abacus)}]
+
+}
+\cbreak
+\mylist{
+        \item \GOD[Name=Nimlurun,GodOf=Fiend of Filth and Pollution,Holy={an iron vial of sewer water}]
+        \item \GOD[Name=Ninkasi,GodOf={Seraph of Art, Music and Fermentation},Holy={an iron amulet hung from a necklace in the exact size and shape of a modern bottle opener}]
+        \item \GOD[Name=Ptah,GodOf=God of Builders,Holy={an amulet in the shape of an ankh}]
+        \item \GOD[Name=Vulcan,GodOf=Seraph of the Forge,Holy={a small crude homonculous, hammered from iron}]
+    }
+
+\newpage
+
+\mybold{Cthonic}
+\mylist{
+        \item \GOD[Name=Arioch,GodOf=Fiend of Murder and Betrayal,Holy={a silver coin with a face on each side}]
+        \item \GOD[Name=Erebus,GodOf=Lord of Shadows,Holy={a piece of black gauze covering the mouth}]
+        \item \GOD[Name=Ik'tik'buboe,GodOf=The Drowned Sultan,Holy={a necklace made from crab's claws and nautical rope, tied in elaborate knots}]
+        \item \GOD[Name=Loki,GodOf=King of Thieves,Holy={an image of two snakes, circling one another to form an 'S' shape, and biting the tail of the other}]
+        \item \GOD[Name=Nyx,GodOf=Cousin of Death,Holy={a black lace shroud}]
+        \item \GOD[Name=Shezmu,GodOf=Prince of Blood,Holy={a vial of blood other than your own (preferably the blood of the one who indoctrinated you into the faith)}]
+        \item \GOD[Name=The King in Yellow,GodOf=Fiend of Illusion and Disguises,Holy={a yellow cowl and mask}]
+    }
+
+\cbreak
+
+\mybold{Cunning}
+\mylist{
+        \item \GOD[Name=Cthulhu,GodOf=Arbiter of Mysteries and Riddles,Holy={A piece of jewelry depicting an octopus}]
+        \item \GOD[Name=Hecate,GodOf=Archfiend of Wizardry,Holy={your Spellbook}]
+        \item \GOD[Name=Iktomi,GodOf=God of Tricksters,Holy={a small puppet, worn from the belt or neck}]
+        \item \GOD[Name=Mímir,GodOf=God of Runes,Holy={a necklace of runes scribed on tiles}]
+        \item \GOD[Name=The Grey Lords,GodOf=Archons of Diplomacy,Holy={a choker of dove feathers}]
+        \item \GOD[Name=The Muses,GodOf=Gods of Inspiration,Holy={a nine-pointed star, worn as an amulet or inscribed on a headband}]
+        \item \GOD[Name=Thoth,GodOf=God of Knowledge,Holy={a small book of scripture}]
+    }
+
+\newpage
+
+\mybold{Empyrean}
+\mylist{
+        \item \GOD[Name=Asura,GodOf=Seraph of Sunlight,Holy={polished mirrors or brass, hung from the neck or belt}]
+        \item \GOD[Name=Empress Wa,GodOf=God of the Heavens,Holy={a jade diadem}]
+        \item \GOD[Name=Raiden,GodOf=Lord of Lightning,Holy={two iron bracers with lightning bolts etched on them}]
+        \item \GOD[Name=Raimonds Mountainhand,GodOf=Seraph of the Mountaintops,Holy={3 iron spikes in the shape of icicles or teeth, hung from the neck}]
+        \item \GOD[Name=Shul,GodOf=Seraph of Moonlight,Holy={3 pearl earrings, hung from either ear}]
+        \item \GOD[Name=Tiamat,GodOf=Fiendish Prince of Tempests,Holy={a five pointed star, worn from a necklace}]
+        \item \GOD[Name=Tlaloc,GodOf=Archon of the Rains,Holy={a wreath of ferns and mosses}]
+    }
+
+\cbreak
+
+\mybold{Errant}
+\mylist{
+        \item \GOD[Name=Balo,GodOf=Archon of Games and Contests,Holy={a leather bag of bone dice, hung from the neck or belt}]
+        \item \GOD[Name=Gilgamesh,GodOf=Lord of Strength and Valor,Holy={a pair of bull's horns, hung from the neck or worn as a helmet}]
+        \item \GOD[Name=Issek of the Jug,GodOf=Seraph of Suffering and Freedom,Holy={a broken pair of manacles}]
+        \item \GOD[Name=Kismet,GodOf=Arbiter of Journeys,Holy={a carved walking stick}]
+        \item \GOD[Name=Odysseus,GodOf=God of Homecomings,Holy={an iron wheel hanging from a bowstring necklace}]
+        \item \GOD[Name=Umwansh,GodOf=Lord of Many Treasures,Holy={a coin (gold is best) with a hole through the center, worn on a chain}]
+        \item \GOD[Name=Xbalanque and Hunahpu,GodOf=Twin Gods of Trials,Holy={two ears of dried corn (hung from a belt, around the neck, etc.)}]
+    }
+
+\newpage
+
+\mybold{Heathen}
+\mylist{
+        \item \GOD[Name=Brigid,GodOf=Seraph of Hearth and Gardens,Holy={a shillelagh}]
+        \item \GOD[Name=Cernunnos,GodOf=Archon of the Hunt,Holy={a tine of the antler of a game animal}]
+        \item \GOD[Name=Ildavir,GodOf=Lady of the Glade,Holy={a vial of clear water}]
+        \item \GOD[Name=Ishtar,GodOf=Lady of Fertility and Agriculture,Holy={an eight pointed star, usually worn as an amulet}]
+        \item \GOD[Name=Pilzesser,GodOf=Seraph of Hallucinogenic Plants and Fungi,Holy={a symbol of a pyramid with an eye at the top, and the letters "FNORD" along its base.  Worn as a necklace or headband}]
+        \item \GOD[Name=The Green Man,GodOf=Lord of the Wood,Holy={a crown of ivy or holly}]
+        \item \GOD[Name=Yan Oshoth,GodOf=Lady of Songs and Poetry (Ancestors),Holy={a small musical instrument}]
+    }
+
+\cbreak
+
+\mybold{Jötnar}
+\mylist{
+        \item \GOD[Name=Crom,GodOf=Arbiter of Honorable Death,Holy={The Devotee must name one of their weapons; this weapon will be used as their holy symbol}]
+        \item \GOD[Name=Cú Chulainn,GodOf=God of the Battle Frenzy,Holy={A headdress of raven or crow feathers}]
+        \item \GOD[Name=Justicia,GodOf=Seraph of Vengeance,Holy={An image or symbol of something the Devotee wants vengeance against}]
+        \item \GOD[Name=Kos,GodOf=Archon of Mercenaries and Assassins,Holy={3 rusted iron coins, sewn or welded to a bracelet on the dominant hand}]
+        \item \GOD[Name=Odin,GodOf=Archon of Strategy and Combat,Holy={3 interlocking triangles, worn as a necklace from a chain}]
+        \item \GOD[Name=Xotli,GodOf=Fiendish Prince of Fire,Holy={A red stone (agate, garnet, carnelian, red cinnabar, etc) worn on a choker.}]
+        \item \GOD[Name=Ymir,GodOf=Archon of Ice and Snow,Holy={Quartz stones affixed to a pair of leather or iron bracers}]
+    }
+
+\newpage
+
+\mybold{Monstrous}
+\mylist{
+        \item \GOD[Name=Bast,GodOf=Archon of Cats,Holy={a small bell without a clapper, worn on a choker}]
+        \item \GOD[Name=Bobugbubilz,GodOf=the Croaking Fane,Holy={3 dessicated frogs, worn from the belt or neck}]
+        \item \GOD[Name=Hhaaashh-Lusss,GodOf=Princess of Reptiles,Holy={snakeskin bracers}]
+        \item \GOD[Name=Mog,GodOf=Princess of Arachnids,Holy={a gossamer veil}]
+        \item \GOD[Name=Ptah-Ungurath,GodOf=Archfiend of Monsters,Holy={an amulet in the shape of an upside-down ankh}]
+        \item \GOD[Name=The Rat God,GodOf=Prince of Rats and Vermin,Holy={a mouse-skin glove worn on the dominant hand}]
+        \item \GOD[Name=Tyaa,GodOf=Archon of Birds,Holy={a short cloak of feathers}]
+    }
+
+\cbreak
+
+\mybold{Righteous}
+\mylist{
+        \item \GOD[Name=Anubis,GodOf=Fiend of Judgement and Punishment,Holy={a set of scales hung from a chain}]
+        \item \GOD[Name=Bahamut,GodOf=Lord of Truth and Light,Holy={an iron or silver circlet, embossed with an arrow pointing upwards}]
+        \item \GOD[Name=Chrontics,GodOf=Lord of Time,Holy={an amulet (silver preferred) embossed with a hammered hourglass}]
+        \item \GOD[Name=Marduk,GodOf=God of Law ,Holy={an unblinking eye worn on a linen headband}]
+        \item \GOD[Name=Mitra,GodOf=Seraph of Obedience and Protection,Holy={an iron thorn, coincidentally in the shape of a modern bullet, suspended from a chain around the neck}]
+        \item \GOD[Name=Týr,GodOf=Seraph of Order,Holy={an iron sleeve worn over the non-dominant hand (the hand is unable to hold anything)}]
+        \item \GOD[Name=Vár,GodOf=Seraph of Oaths and Agreements,Holy={a crystal vial containing the blood and spit of two Mortals who have struck a deal with one another}]
+    }
+
+\newpage
+
+\mybold{Ruinous}
+\mylist{
+        \item \GOD[Name=Fortuna,GodOf=Seraph of Luck,Holy={A deck of cards}]
+        \item \GOD[Name=Nergal,GodOf=God of Dooms,Holy={an iron mask}]
+        \item \GOD[Name=Set-Utekh,GodOf=Archfiend of Destruction,Holy={a ceramic circle broken in half, worn on the belt or a necklace}]
+} 
+
+\cbreak
+
+\mylist{
+        \item \GOD[Name=The Corpulent One,GodOf=God of Hunger,Holy={a necklace of teeth}]
+        \item \GOD[Name=The Morrigan,GodOf=Archon(s) of Fate,Holy={a triangle whose points extend into counterclockwise swirls, usually worn on a headband or scarf}]
+        \item \GOD[Name=Vecna,GodOf=Archfiend of Curses,Holy={a severed hand hung from the neck or belt}]
+        \item \GOD[Name=Xibalba,GodOf=Fiendish Prince of Fear,Holy={a white cowl and blank mask}]
+    }
+
+
+
+\newpage
+
+
+
+\end{multicols*}
+
+
+\mysection{The Liturgies}{mystics-liturgies}
+
+The core Liturgies of the Ten Thrones can be found below.  Your personal Faith in a Small God allows you to invoke the Liturgies of the Throne they sit beneath. During your adventures, you may also find Liturgies of your Small God etched on bronze tablets hidden by fearful priests in stinking swamps, forgotten in reliquaries lying in pawn shops, or written in the slime of snails tripping balls on shrooms (Liturgies of your Small God depend completely on the Arbiter)
+
+\mybold{Liturgies require a Holy Symbol to perform}.  If you don't have your Holy Symbol, you get none of the benefits of a Liturgy, and you can't invoke any of the powers beneath it.
+
+
+\begin{multicols*}{2}
+\raggedcolumns
+
+
+
+
+\mysubsection{The Civilized Throne}{civilized-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{civilized-liturgy-novitiates}}
+
+\mybullet{
+    \item  Gain a +4 on all \mylink{Math}{skills-math} rolls.
+    \item  When using a Bashing weapon, you may roll your \FOC instead of your \VIG or \DEX
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item  You may perform the Miracles: \mylink{Holy Relic}{marvels-miracle-holy-relic}, \mylink{Holy Writ}{marvels-miracle-holy-relic}
+}
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{civilized-liturgy-clerics}}
+
+\mybullet {
+    \item If you have a forge, you can create \DICE x 100 spears or shields (any combination) - enough to arm a brigade of soldiers
+    \item You can create enough hardtack, gruel, and water to feed \DICE x 100 infantry
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item  You may perform the Miracles: \mylink{Proselytize}{marvels-miracle-proselytize}, \mylink{Sacred Mass}{marvels-miracle-sacred-mass}
+}
+
+\cbreak
+
+\mybold{\myanchor{Liturgy of the Apostles}{civilized-liturgy-apostles}}
+
+
+\mybullet {
+    \item You know the exact worth of any gem or piece of art you can examine for uninterrupted Minutes.
+    \item You can convert Faith directly into coin.  You can only do this during a Vacation, and the money you generate does not count towards XP.  Roll \DICE Faith.  For every 2 you get, gain 100fe (and lose the die); for every 3 you get, gain 25ag; for every 4 you get, gain 10au.
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item You may perform the Miracles: \mylink{Covenant}{marvels-miracle-covenant}, \mylink{Hallowed Ground}{marvels-miracle-hallowed-ground}
+    
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{civilized-liturgy-saints}}
+\mybullet {
+    \item \mylink{Conflicting Command}{liturgy-conflicting-command}; \mylink{Crown of Gold}{liturgy-crown-gold}; \mylink{Resonating Command}{liturgy-resonating-command}
+    \item When using a firearm, you may roll your \FOC instead of your \DEX
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item  You may perform the Miracles: \mylink{Crusade}{marvels-miracle-crusade}
+}
+
+  \end{multicols*}
+
+  \begin{multicols*}{3}
+
+  \cbreak
+
+  \mybold{Civilized Arcana}
+
+
+\begin{minipage}[c]{.3\textwidth}
+ 
+  \mytable{X X} {
+  }{
+    \mylink{Armor of the Gods}{arcana-armor-of-gods} & \mylink{Foehammer}{arcana-foehammer} \\
+    \mylink{Clamp}{arcana-clamp} & \mylink{Hone}{arcana-hone} \\
+    \mylink{Compartmentalization}{arcana-compartmentalization} & \mylink{Millworks}{arcana-millworks} \\
+    \mylink{Exchequer}{arcana-exchequer} & \mylink{Package Neatly}{arcana-package-neatly} \\
+  }
+
+\end{minipage}
+
+\cbreak
+
+\end{multicols*}
+
+\newpage
+
+\begin{multicols*}{2}
+
+
+\mysubsection{The Cthonic Throne}{cthonic-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{cthonic-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 on all \mylink{Salt}{skills-salt} rolls.
+    \item When using a Throw weapon, you may roll your \FOC instead of your \DEX
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{cthonic-liturgy-clerics}}
+
+\mybullet {
+    \item  You can palm any hand sized item you can get your hands on.  As long as you're reasonably discrete, no need to roll.  Otherwise, \RB using your \FOC vs everyone's \INT
+    \item  You can lie undetected, but you have to secretly roll a d6 when you do.  On a 1-4 you can lie freely, but on a 5 or 6 you must tell the truth. You can roll a die even if you're aren't invoking the power, and you can invoke the power at any time by telling the Arbiter discretely. TK TK TK TK TOO WEAK
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Apostles}{cthonic-liturgy-apostles}}
+
+\mybullet {
+    \item Something based off of heart-attack jack tk tk tk
+    \item TK
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item You may perform the Miracles: \mylink{Covenant}{marvels-miracle-covenant}, \mylink{Hallowed Ground}{marvels-miracle-hallowed-ground}
+    
+}
+
+
+
+\mybold{\myanchor{Liturgy of the Saints}{cthonic-liturgy-saints}}
+
+\mybullet {
+    \item TK 
+    \item TK
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+    \item  You may perform the Miracles: \mylink{Crusade}{marvels-miracle-crusade}
+}
+
+
+
+
+
+\mysubsection{The Cunning Throne}{cunning-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{cunning-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 on all \mylink{Lore}{skills-lore} rolls.
+    \item When rolling Init, you may roll your \FOC instead of your \INT
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{cunning-liturgy-clerics}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Apostles}{cunning-liturgy-apostles}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{cunning-liturgy-saints}}
+
+\mybullet {
+    \item Use Faith to cast spells off of Fetishes
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+\mysubsection{The Empyrean Throne}{empyrean-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{empyrean-liturgy-novitiates}}
+
+\mybullet{
+    \item When using a Shoot weapon, you may roll your \FOC instead of your \DEX
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Clerics}{empyrean-liturgy-clerics}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Apostles}{empyrean-liturgy-apostles}}
+
+\mybullet {
+    \item Glorious Sunburst
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Saints}{empyrean-liturgy-saints}}
+
+
+
+
+\mysubsection{The Errant Throne}{errant-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{errant-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 on all \mylink{Travel}{skills-travel} rolls
+    \item When rolling a Guard check, you may roll your \FOC instead of your \DEX
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{errant-liturgy-clerics}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+
+}
+
+
+
+\mybold{\myanchor{Liturgy of the Apostles}{errant-liturgy-apostles}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{
+    errant-liturgy-saints
+}}
+
+
+
+
+\mysubsection{The Heathen Throne}{heathen-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{heathen-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 modifier \mylink{Bushcraft}{skills-bushcraft} rolls.
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{heathen-liturgy-clerics}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+
+}
+
+\mybold{\myanchor{Liturgy of the Apostles}{heathen-liturgy-apostles}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{heathen-liturgy-saints}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+
+}
+
+
+
+\mysubsection{The Jötnar Throne}{jötnar-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{jötnar-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 modifier on \DEATH rolls
+    \item When using a 2-handed weapon, you may roll your \FOC instead of your \VIG
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+
+}
+
+\mybold{\myanchor{Liturgy of the Clerics}{jötnar-liturgy-clerics}}
+
+\mybullet {
+    \item You can continue Fighting if you are Dying; however, each point of damage you take \myital{to Flesh} in a Moment is a -1 modifier on your next \DEATH roll
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Apostles}{jötnar-liturgy-apostles}}
+
+\mybullet {
+    \item Once per Session, if you are reduced to 0 Flesh, you immediately regain \MAX Grit. 
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith. 
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{
+    jötnar-liturgy-saints
+}}
+
+
+
+
+\mysubsection{The Monstrous Throne}{monstrous-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{monstrous-liturgy-novitiates}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{
+    monstrous-liturgy-clerics
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Apostles}{
+    monstrous-liturgy-apostles
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Saints}{
+    monstrous-liturgy-saints
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+\mysubsection{The Righteous Throne}{righteous-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{righteous-liturgy-novitiates}}
+
+\mybullet {
+    \item Gain a +4 on all \mylink{Listen}{skills-listen} rolls.
+    \item When rolling a Fight check, you may roll \FOC instead of \VIG
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+\mybold{\myanchor{Liturgy of the Clerics}{
+    righteous-liturgy-clerics
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Apostles}{
+    righteous-liturgy-apostles
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+\mybold{\myanchor{Liturgy of the Saints}{
+    righteous-liturgy-saints
+}}
+
+\mybullet {
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+
+
+\mysubsection{The Ruinous Throne}{ruinous-liturgies}
+
+\mybold{\myanchor{Liturgy of the Novitiates}{ruinous-liturgy-novitiates}}
+
+\mylist {
+    \item When attacking with a weapon, you deal +1 damage
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+
+
+}
+
+\mybold{\myanchor{Liturgy of the Clerics}{ruinous-liturgy-clerics}}
+
+\mylist {
+    \item When attacking with a weapon, your damage die explodes
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+
+\mybold{\myanchor{Liturgy of the Apostles}{ruinous-liturgy-apostles}}
+
+\mylist {
+    \item When attacking with a weapon, you add +\LVL damage instead of +1
+    \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+\mybold{\myanchor{Liturgy of the Saints}{ruinous-liturgy-saints}}
+
+\mylist {
+        \item  Choose two arcana from this Throne, or from the arcana for your Small God (if applicable).  You may cast those arcana using your Faith.
+}
+
+
+
+
+
+
+
+
+
+
+}%end

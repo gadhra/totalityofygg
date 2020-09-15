@@ -1,0 +1,891 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\renewcommand{\yggConversions}{%
+  \mychapter{Conversions}{conversions}
+}
+
+\renewcommand{\yggConversionsText}{%
+
+  \mysection{Monster Coversions}{monster-conversions}
+
+
+  \mysubsection{My Monsters}{conversion-my-monsters}
+
+  \mybold{\mylink{The First Men}{monster-first-men}}
+  
+  The First Men are a mashup of beasts found in Rakehell, Dolmenwood, and Beneath the Missing Sea. They are the "Restless Dead of man's ambitious birth form, crypt things and specters, the undead. Scabrous and rotting, they seek to avenge old crimes, to herald dark times, and to feel for a moment the joys of life long lost".
+
+    \mybold{Commanding Presence:} All First Men can command up to \HD other Horrors, Shades, or Walking Dead, provided their individual \HD does not exceed their own (for example, a 4 \HD First Man could command up to 4 undead who have up to 4 \HD).  
+    
+    \mybold{Terrifying:}  The First Men prompt a Sanity roll when seen.
+
+    \mybold{Unhallowed:}  Arguably the very definition of Unhallowed
+
+
+
+
+    \MONSTERBLOCK[
+      Name=Corrupted Orm Priest,
+      Link=monster-corrupted-orm-priest,
+      MV=Base,
+      WK=d24,
+      DMG=d4 1 Close,
+      HD=1,
+      Power=Average,
+      Soak=0,
+      Morale=Fanatical,
+      Save=1,
+      Extras=Disease
+  ]
+  
+      \RS : \VIG or gain a random disease
+
+
+    \MONSTERBLOCK[
+      Name=Corrupted Orm Master,
+      Link=monster-corrupted-orm-master,
+      MV=Base,
+      WK=d20,
+      DMG=2d4 1 Close,
+      HD=3,
+      Power=Average,
+      Soak=1,
+      Save=2,
+      Extras=Spells
+    ]
+
+    \mybullet {
+      \item  Pestilence:   \RB : \VIG or contract the Maggot Plague. Contagious.
+      \item Locust:  Summon 1hd locust swarm
+    }  
+
+
+
+
+    \MONSTERBLOCK[
+      Name=The Thing from the Deep,
+      Link=monster-thing-from-the-deep,
+      MV=Base,
+      WK=d12,
+      DMG=d6 All Nearby,
+      HD=6,
+      Power=Strong,
+      Soak=0,
+      Morale=Cowardly,
+      Save=4,
+      Extras={See below.  Using d16 for \RB \VIG tries}
+    ]
+
+    The Thing from the Deep attacks all targets Close and Nearby with its tentacles.  It's modestly intelligent i.e. it knows mortals need to breathe.  The body itself is in the water.
+
+    If \MAX damage is rolled, the creature grabs ahold of the adventurer.  The adventurers can make a \RB using \VIG to escape at the bottom of each Moment.
+
+    If the player is held at the top of any Moment, one of the following happens (random, or utilize the creature's intelligence):
+
+    \mynumlist {
+      \item Holds the adventurer under the water.  They start to drown.  Roll your \VIG - if you fail, you fall unconscious.  You must roll a Save vs. Doom every Moment afterwards to keep yourself off Death's Door.  If you fail, you fall to Death's Door and must roll your Death Die at the top of every following Moment, or perish.
+
+      \item Throw the adventurer against the wall, or dash them on the ground.  Equivalent of falling 10m.  
+
+      \item Squeeze the adventurer for d6 damage (bypasses Grit).
+
+      \item Bludgeon another adventurer with the one held in its tentacle as a free attack.  If the Thing hits, the adventurer rolls their \VIG - this much damage is applied to both the adventurer struck, and the one held in its tentacles.
+    }
+
+    The Thing is cowardly, however - every time the creature takes 7+ points of damage from a single attack, roll its morale.  It will sink beneath the waves for Minutes before resurfacing again. The creatures heals 3 Health at the bottom of every Moment, as long as it is in water
+
+
+
+
+
+
+  \newpage 
+
+  \mysubsection{Dolmenwood}{conversion-dolmenwood}
+
+    \MONSTERBLOCK[
+      Name=Antler Wraith,
+      Link=monster-antler-wraith,
+      MV=Base,
+      WK=d16,
+      DMG=d10 1 Close + Drain,
+      HD=5,
+      Power=Average,
+      Soak=1,
+      Morale=n/a,
+      Save=3,
+      Extras={Life draining touch, First Man}
+  ]
+
+    Silent and ruthless.  Sinister, looming humanoids, cloaked in ragged black, with stag-skull heads (featuring a full set of antlers) and bony claws. Antler wraiths haunt rings of old standing stones, servants of grim, forgotten gods. They seek out warm-blooded sentients whom they drag to their stone rings for sacrifice. Antler wraiths only manifest at nighttime — coalescing out of mist. At dawn (or upon death), they evaporate once more. However, tampering with their standing stones or unearthing their treasure hoards (the remains of their victims, carefully buried nearby) will summon antler wraiths in Minutes, even during daylight hours.
+
+    \mybold{Life draining touch:} In addition to damage, the touch of an antler wraith drops any Intangible Stat (player choice) \DCDOWN
+
+    \mynumlist {
+
+        \item Wields a scythe or ancient longsword (same damage)
+        \item Utters a single, sinister word, mantra-like
+        \item Skull wreathed in blue flame
+        \item Glinting black jewels in eye sockets (500ag each, cursed)
+        \item Antlers draped with shrivelled human intestines
+        \item Shrieks upon sight of living souls
+
+    }
+
+
+
+
+
+
+    \MONSTERBLOCK[
+      Name=Nightworm,
+      Link=monster-nightworm,
+      MV=Base,
+      WK=d20,
+      DMG=2d4 1 Close,
+      HD=3,
+      Power=Average,
+      Soak=1,
+      Save=2,
+      Extras={Constriction, Regeneration}
+    ]
+
+Long, thin, eyeless, red worms with rubbery, ribbed bodies and tooth-filled maws. Nightworms burrow into mud and sludge to sleep during the day, emerging at night to hunt warm-blooded prey. Additionally:
+
+\mynumlist {
+  \item Covered in writhing tentacles
+  \item Odd, light pink hue, organs visible through skin
+  \item Three long, black tongues dart in and out of its mouth
+  \item Slug-like antenna
+  \item Needle-like spines around mouth (+1 damage)
+  \item 2 heads (2 attacks)
+}
+
+  \mysubsection{Beneath the Missing Sea}{conversion-beneath-the-missing-sea}
+
+  \mybullet {
+    \item Renamed the Anglergoblins to Deep Ones
+    \item Levianthic changed to Umwansh
+  }
+
+  \MONSTERBLOCK[
+    Name=Deep One,
+    Link=monster-deep-one,
+    MV=Base,
+    WK=d24,
+    DMG=d4 1 Close,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=Cowardly,
+    Save=1,
+    Extras={Pack, Nocturnal, Goblinoid}
+  ]
+
+
+  \MONSTERBLOCK[
+    Name=Deep One Trawler,
+    Link=monster-deep-one-trawler,
+    MV=Base,
+    WK=d20,
+    DMG=d6 1 Close,
+    HD=2,
+    Power=Average,
+    Soak=0,
+    Morale=Cowardly,
+    Save=1,
+    Extras={Pack, Nocturnal, Goblinoid}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Deep One Shaman,
+    Link=monster-deep-one-shaman,
+    MV=Base,
+    WK=d20,
+    DMG=2d4 2 Nearby,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=Fanatical,
+    Save=2,
+    Extras={Supportive, Nocturnal, Goblinoid}
+  ]
+
+  All Nearby Deep Ones have a morale of Fanatical so long as the Shaman is alive.  The death of the Shaman prompts an immediate morale check.  Shaman can heal 3 Hits on themselves or any other Close Monsters up to 3 times (Supportive).  They throw water bolts from their coral staves or wands that can strike for 2d4 damage unless a successful \RO Guard is made.
+
+
+  \MONSTERBLOCK[
+    Name=Extraction Guard,
+    Link=monster-extraction-guard,
+    MV=Base,
+    WK=d24,
+    DMG=d6 1 Close or Nearby,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=Orderly,
+    Save=1,
+    Extras={See below}
+  ]
+
+  2-in-6 chance of having sea rot.  If damage 6+, \RO DEX or be hit with their blood
+
+  \MONSTERBLOCK[
+    Name=Extraction Worker,
+    Link=monster-extraction-worker,
+    MV=Base,
+    WK=d24,
+    DMG=d3 1 Close,
+    HD=0,
+    Power=n/a,
+    Soak=0,
+    Morale=Cowardly,
+    Save=1,
+    Extras={See below}
+  ]
+
+  4-in-6 chance of having sea rot. If damage 6+, \RO DEX or be hit with their blood
+
+  \MONSTERBLOCK[
+    Name=Umwansh Cultist,
+    Link=monster-umwansh-cultist,
+    MV=Base,
+    WK=d24,
+    DMG=d4 Nearby,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=Fanatical,
+    Save=1,
+    Extras={Berserk}
+  ]
+
+  Wounds from their daggers do not bleed, but ossify if they hit Flesh
+
+
+
+  \MONSTERBLOCK[
+    Name=Feral Pack,
+    Link=monster-feral-pack,
+    MV=Base,
+    WK=d20,
+    DMG=\HD x2 All Close,
+    HD=varies,
+    Power=Average,
+    Soak=0,
+    Morale=Cowardly,
+    Save=2,
+    Extras={Bloodthirsty,Swarm}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Giant Hermit Crab,
+    Link=monster-giant-hermit-crab,
+    MV=Slow,
+    WK=d16,
+    DMG=d8 2 Close,
+    HD=4,
+    Power=Average,
+    Soak=1,
+    Morale=Cowardly,
+    Save=3,
+    Extras={Berserk}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Sea Plagued,
+    Link=monster-sea-plagued,
+    MV=Slow,
+    WK=d24,
+    DMG=d3 1 Close,
+    HD=0,
+    Power=n/a,
+    Soak=0,
+    Morale=n/a,
+    Save=1,
+    Extras={Disease, Horror}
+  ]
+
+  If struck by a Sea Plagued, immediately make a \RS: VIG check.  If you fail you contract Sea Rot.
+
+  \MONSTERBLOCK[
+    Name=Ossified Crewman,
+    Link=monster-ossified-crewman,
+    MV=Average,
+    WK=d24,
+    DMG=d6 1 Close,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=1,
+    Extras={Horror}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Andrussian Albatross,
+    Link=monster-andrussian-albatross,
+    MV=Average,
+    WK=d20,
+    DMG=d6 1 Close,
+    HD=2,
+    Power=Average,
+    Soak=0,
+    Morale=Cowardly,
+    Save=2,
+    Extras={Flying}
+  ]
+
+  Flying monsters can move up and down as a Maneuver (and will use this to repeatedly Charge). They will go after provisions.
+
+  \MONSTERBLOCK[
+    Name=Dehydrated Merfolk,
+    Link=monster-dehydrated-merfolk,
+    MV=Slow,
+    WK=d20,
+    DMG=2d4 1 Close,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=Orderly,
+    Save=2,
+    Extras={Brittleskinned}
+  ]
+
+  Dehydrated Merfolk take double damage from Bashing weapons
+
+  \MONSTERBLOCK[
+    Name=Merfolk Ascetic,
+    Link=monster-dehydrated-merfolk,
+    MV=Average,
+    WK=d20,
+    DMG=2d4 1 Close,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=Fanatical,
+    Save=2,
+    Extras={See below}
+  ]
+
+  Merfolk Ascetics can attack with nets; \RO DEX or Prone for d3 Markovian
+
+  \MONSTERBLOCK[
+    Name=Sea Golem,
+    Link=monster-sea-golem,
+    MV=Average,
+    WK=d20,
+    DMG=d6 1 Close,
+    HD=2,
+    Power=Average,
+    Soak={3 [chopping,slashing]},
+    Morale=n/a,
+    Save={1, 4 vs Hexes},
+    Extras={}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Waterbound Revenant,
+    Link=monster-waterbound-revenant,
+    MV=Average,
+    WK=d24,
+    DMG=d4 1 Close,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=1,
+    Extras={Horror}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Handmaiden's Thrall,
+    Link=monster-handmaiden-thrall,
+    MV=Base,
+    WK=d24,
+    DMG=d4 Nearby,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=1,
+    Extras={Berserk}
+  ]
+
+  The thrall is broken if the Handmaiden dies.
+
+  
+  \myhighlight{Bosses}{beneath-the-missing-sea-bosses}
+
+    \MONSTERBLOCK[
+    Name=The Sea Monk,
+    Link=monster-sea-monk,
+    MV=Slow,
+    WK=d12,
+    DMG=d6+d8 Close,
+    HD=6,
+    Power=Strong,
+    Soak=0,
+    Morale=Fanatical,
+    Save=4,
+    Extras={Slippery, Amorphous, Horror}
+  ]
+
+  The Sea Monk's Save v Hex is 6-in-6. Outside of Combat, the Sea Monk uses the Sea Monk's Drone.  
+
+  Those chosen by the Sea Monk will hear its song like the sound of crashing waves.  If they do not plug their ears within a few minutes they soon feel compelled to seek out hooks or hook-like objects to drive through their mouth and cheeks.  Failing 2 Sanity checks worsens the compulsion.  In time, the adventurer is compelled to drown themselves in saltwater.
+
+  The Sea Monk prefers to pick adventurers off one by one, starting with companions and retainers.  It moves silently and conceals itself in shadow (3-in-6).  
+
+  \MONSTERBLOCK[
+    Name=Captain Sarpedon,
+    Link=monster-boss-captain-sarpedon,
+    MV=Average,
+    WK=d20,
+    DMG=d8 1 Close,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=2,
+    Extras={Horror}
+  ]
+
+  Hits with his cutlass explode
+
+  \MONSTERBLOCK[
+    Name=Colerdige,
+    Link=monster-boss-colerdige,
+    MV=Average,
+    WK=d16,
+    DMG=d10 1 Close,
+    HD=4,
+    Power=Average,
+    Soak=0,
+    Morale=Cowardly,
+    Save=3,
+    Extras={Flying}
+  ]
+
+  Coleridge will snatch weapons, Grimoires, etc. from hands with a \RB VIG
+
+  \MONSTERBLOCK[
+    Name=The Ossifier,
+    Link=monster-boss-ossifier,
+    MV=Base,
+    WK=d20,
+    DMG=see below,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=Fanatical,
+    Save=2,
+    Extras={Nocturnal, Goblinoid, Horror}
+  ]
+
+  The Ossifier has d12 Mojo and d16 Focus. He can use this to:
+  \mybullet {
+    \item Absorb damage
+    \item Exploding Corpse (Everything Close to the corpse \RO \MD + \DEX or take 6 damage)
+    \item Throw a water bolt for [sum]
+  }
+
+ If out of Mojo, attacks for d6 1 Close
+
+\MONSTERBLOCK[
+    Name=Handmaiden of Umwansh,
+    Link=monster-boss-handmaiden-umwansh,
+    MV=Fast,
+    WK=d20,
+    DMG=2d4 1 Close,
+    HD=3,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=1,
+    Extras={Sprightly,Graceful}
+  ]
+
+  Siren's Song: Can use this as a 3d6 "Charm" 
+
+\MONSTERBLOCK[
+    Name=The Baptist,
+    Link=monster-boss-baptist,
+    MV=Average,
+    WK=d16,
+    DMG=d10 1 Close,
+    HD=4,
+    Power=Strong,
+    Soak=1,
+    Morale=Fanatical,
+    Save=3,
+    Extras={}
+  ]
+
+  Will throw his magic bolas (return to his hand). \RO DEX at -4 or become entangled (Prone) for d6 Markovian
+
+  \MONSTERBLOCK[
+    Name=Conseil,
+    Link=monster-boss-conseil,
+    MV=Fast,
+    WK=d10,
+    DMG=2d8 1 Close,
+    HD=7,
+    Power=Strong,
+    Soak=1,
+    Morale=Fanatical,
+    Save=3,
+    Extras={Bloodthirsty, Grudge}
+  ]
+
+  Giant Shark. Conseil will heal to full if submerged in his pool
+
+  \newpage
+
+  \mysubsection{Sleeping Place of the Feathered Swine}{conversion-feathered-swine}
+
+  \MONSTERBLOCK[
+    Name=Worm Tumor,
+    Link=monster-worm-tumor,
+    MV=Base,
+    WK=d20,
+    DMG=d6 1 Close,
+    HD=2,
+    Power=Average,
+    Soak=0,
+    Morale=n/a,
+    Save=2,
+    Extras={Horror}
+  ]
+
+  If the Worm Tumor strikes flesh, Save vs Toxin to avoid infection by the worms teeming through the bile or bursting through the skin when they grab you.  The can't see or hear but they can feel your vibrations and taste you on the air.  
+
+  The disease spreads in 1 hour, consumes your Flesh a forearm's width every 10 minutes after that, subtracting 1 Flesh until you die.  You can cut off the infection to live.
+
+
+  \MONSTERBLOCK[
+    Name=Feathered Swine,
+    Link=monster-feathered-swine,
+    MV=Slow,
+    WK=d16,
+    DMG=d10 1 Close,
+    HD=4,
+    Power=Strong,
+    Soak=1,
+    Morale=n/a,
+    Save=3,
+    Extras={Burst}
+  ]
+
+  If an attack does 6+ damage, a cyst bursts open.  Everyone Close must \RS DEX or be covered in worms (as Worm Tumor above).
+
+  \mysubsection{The Gnomes of Levnec}{conversion-gnomes-levnec}
+
+
+
+  \MONSTERBLOCK[
+    Name=Wodwose,
+    Link=monster-wodewose,
+    MV=Average,
+    WK=d16,
+    DMG=d10 1 Close,
+    HD=4,
+    Power=Strong,
+    Soak=0,
+    Morale=Orderly,
+    Save=3,
+    Extras=Giantkin
+  ]
+
+These creatures are a solid ten feet in height and fairly well built on average. They are coated in a thick layer of fur. They gorge themselves on meats, and prefer that of men above all else. It isn’t a flavour thing mind you, they prefer the flavour of lamb if truth be told. It is about power. They view the ability to eat another thinking being alive as the ultimate sign of power and glory. No one is terribly sad to see them go; well, almost no one
+
+  \MONSTERBLOCK[
+    Name=Gnome Villager,
+    Link=monster-gnome-villager,
+    MV=Fast,
+    WK=d24,
+    DMG=d3 1 Close,
+    HD=0,
+    Power=n/a,
+    Soak=0,
+    Morale=Cowardly,
+    Save=1,
+    Extras=
+  ]
+
+  \MONSTERBLOCK[
+    Name=Gnome Commando,
+    Link=monster-gnome-commando,
+    MV=Fast,
+    WK=d24,
+    DMG=d4 1 Close,
+    HD=1,
+    Power=Weak,
+    Soak=0,
+    Morale=Orderly,
+    Save=1,
+    Extras=
+  ]
+
+  \MONSTERBLOCK[
+    Name=Flesh Squirrel,
+    Link=monster-flesh-squirrel,
+    MV=Fast,
+    WK=d24,
+    DMG=\HD All Close,
+    HD=varies,
+    Power=Weak,
+    Soak=0,
+    Morale=Fanatical,
+    Save=1,
+    Extras={Bloodthirsty,Swarm}
+  ]
+
+
+  \MONSTERBLOCK[
+    Name=Veles Cultist,
+    Link=monster-umwansh-cultist,
+    MV=Base,
+    WK=d24,
+    DMG=d4 Nearby,
+    HD=1,
+    Power=Average,
+    Soak=0,
+    Morale=Fanatical,
+    Save=1,
+    Extras={Berserk}
+  ]
+
+  \newpage
+
+
+\mysubsection{The Stygian Library}{conversion-stygian-library}
+
+  \MONSTERBLOCK[
+    Name=Librarians,
+    Link=monster-librarians,
+    MV=Base,
+    WK=d16,
+    DMG=d2 1 Close or d6 2 Nearby,
+    HD=4,
+    Power=Weak,
+    Soak=0,
+    Morale=Fanatical,
+    Save=3 (5 Hex),
+    Extras={}
+  ]
+
+Immune to mind control if the command would harm the library in some way.  Attack with hands or magical missile (d6 on 2 Nearby) or spells at will as below.  They have an INT of d16+[level] if Wizard dueling, etc.
+
+\mybullet {
+  \item Red (Infrastructure): Mending, Message, Shape Stone, Shape Wood, Spider Climb, Levitate, Create Stone, Shelf Step
+  \item Yellow (Books): Mending, Message, Charm, Suggestion, Detect Thief, Invisibility, Shelf Step
+  \item Black (Portals): Lock, Knock, Hold Person, Turn Mortal, Shelf Step
+  \item White (Shepherds):  Detect Unhallowed, Invisibility, Command Unhallowed, Reduce to  Phantom
+  \item Grey (Calculators): Invisibility, Dispel Magic, Levitate, Blind, Deafen
+}
+
+  \MONSTERBLOCK[
+    Name=Stygian Phantoms,
+    Link=monster-stygian-phantoms,
+    MV=Base,
+    WK=d16,
+    DMG=d2 1 Close or d6 2 Nearby,
+    HD=4,
+    Power=Weak,
+    Soak=0,
+    Morale=Fanatical,
+    Save=3 (5 Hex),
+    Extras={Shade}
+  ]
+
+Make an opposed d10 FOC roll or:
+
+\mynumlist {
+  \item SAN \DCDOWN (no Sanity check since it's not rolled)
+  \item AWA \DCDOWN
+  \item FOC \DCDOWN
+  \item TAL \DCDOWN
+  \item d4 damage to Grit
+  \item 1 damage to Flesh
+}
+
+  \MONSTERBLOCK[
+    Name=Giant Bookworm,
+    Link=monster-giant-bookworm,
+    MV=Base,
+    WK=d20,
+    DMG=0 to d6 Close (see below),
+    HD=2,
+    Power=Average,
+    Soak=0,
+    Morale=Orderly,
+    Save=2,
+    Extras={Zoological}
+  ]
+
+  \MONSTERBLOCK[
+    Name=Rust Moth Swarm,
+    Link=monster-rust-moth,
+    MV=Slow,
+    WK=d16,
+    DMG=0 to All Close + Rust,
+    HD=varies,
+    Power=Average,
+    Soak=1,
+    Morale=n/a,
+    Save=1,
+    Extras={Swarm}
+  ]
+
+Any metal weapons exposed must roll their damage die - if a Failure is rolled, the weapon is useless.  Any metal armor has its Max UD reduced by 1.
+
+  \MONSTERBLOCK[
+    Name=Dust Elemental,
+    Link=monster-dust-eemental,
+    MV=Base,
+    WK=d16,
+    DMG=d12 1 Close,
+    HD=5,
+    Power=Weak,
+    Soak=0,
+    Morale=Average,
+    Save=3,
+    Extras={Elemental}
+  ]
+
+Immune to normal weapons and physical attacks. Fire, cleaning with water, strong winds and so on all
+deal 2d6 damage per Moment.. Immune to poison, pain, fear, etc. Can seep through any crack or gap.
+
+  \MONSTERBLOCK[
+    Name=Furious Book,
+    Link=monster-furious-book,
+    MV=Fast,
+    WK=d20,
+    DMG=2d4 1 Close,
+    HD=3,
+    Power=Weak,
+    Soak=0,
+    Morale=Fanatical,
+    Save=2,
+    Extras={Aberration}
+  ]
+
+Each time you are struck by the book, make a SAN check as it injects its madness into you
+
+  \MONSTERBLOCK[
+    Name=Paper Bee,
+    Link=monster-paper-bee,
+    MV=Fast,
+    WK=d24,
+    DMG=d4 to 1 Close,
+    HD=1,
+    Power=Weak,
+    Soak=0,
+    Morale=Fanatical,
+    Save=1,
+    Extras={}
+  ]
+
+
+Origami Golem
+Automaton
+MV Slow; Wk d12; Atk 2 Close d6+d8
+Hlth 6 (Weak) [0]; Morale n/a; Save 4-in-6
+
+Half damage from non-magical weapons.  Triple damage from fire. 
+
+Guardian Shade
+Shade
+MV Base; WK d20; Dmg d4 Close plus drain
+Hlth 2 (Avg) [0]; Morale Orderly; Save 2-in-6
+
+Each successful hit drains PRE DC↓.  Once they are out of PRE, VIG DC↓
+
+Ogre Spider
+Arthropod
+MV Base; WK d20; Dmg 2d4 1 Close plus poison OR web net
+Hlth 3 (Avg) [0]; Morale Orderly; Save 2-in-6
+
+Web: Save or paralyzed for d4 Markovian
+Poison: d4 for d4
+
+
+Floating Brain
+
+Obsidian Marmoset
+Hit Dice 3, Hit Points 12, Armour as plate plus
+shield, two obsidian fists (+0, 2d4) , saves as thief 3.
+Half damage from slashing or piercing weapons.
+Healed by heat/fire/electricity rather than taking
+damage. Double damage from cold.
+
+Bandersnatch (avian, like a heron)
+Hit Dice 10, Hit Points 25, Armour as un-
+armoured, two hands (see below), saves as thief 10.
+Half damage from non-iron weapons, double from
+iron ones.
+3-in-6 chance to go unnoticed if it wants to and hasn’t
+done anything dramatic.
+Long arms give 15 feet of reach.
+Each round, it can use each hand to do one of the
+following:
+• Slap (+10 to hit, d4 damage).
+• Grab (+10 to hit, grabs the victim, no damage.
+Escaping from the grab requires 3 successful
+strength rolls).
+• Squeeze (hits automatically, does 2d6 damage
+to a grabbed victim).
+• Pick a Pocket (3-in-6 chance to succeed).
+• Snatch a Held Item (5-in-6 chance to succeed).
+Roll a d12 every so often for what the Bandersnatch
+wishes to steal right now.
+Food
+Shiny Things
+Beautiful People
+Eyes
+Stolen Things
+String \& Rope
+Tools
+Weapons
+Clothing
+Skin
+Tongues
+Maps
+
+Animate Book
+3 HD, 12 HP, Armour as leather, slam (+3, d6)
+or grab (+0, d4 and grab), saves as fighter 3. Can
+levitate. Immune to poison, cold, backstabs and other
+things that need the victim to be alive. Double damage
+from fire.
+Once grabbed by an animate book, breaking out
+requires a full round spent making a strength roll.
+Until this succeeds, d4 damage and 1 intelligence loss
+as the book chews on its victim and digests the data
+stored within them.
+
+Lost Soul
+Ink Elemental
+Inkblot
+Skull Warden
+Tooth Warden
+Animate Spell
+Neurovore
+Hungry Book
+Archivist-Lich
+Infernal Merchant
+escaped Fiction
+Crawling Things
+Educated Rodents
+Patrolling Apparition
+Eye Sentinel
+Black Ooze
+Conceptual Well
+
+
+
+} %end
