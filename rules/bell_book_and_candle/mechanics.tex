@@ -30,8 +30,6 @@
       \item \hrulefill
       \item \COST\bgspace The number and type of coins worth of materials required for the spell, ritual, etc. If the type of coin isn't specified (iron, silver, or gold) it will be the coin appropriate for the Civilization (small, medium, or large)
       \item \hrulefill
-      \item \SUCCESS\bgspace The number of successes you need for the ritual, miracle, etc. to take effect.  The number of "good" rolls must be greater than or equal to the number of "bad" rolls i.e. if you're rolling a \KNACK, a "good" roll is when you roll less than or equal to x-in-6; if you're rolling a \POOL or \UD, a "good" roll is anything but a 1 or 2.
-      \item \hrulefill
       \item \TARGET\bgspace Who or what you can target, and how far away
       \item \hrulefill
       \item \COUNTER\bgspace If the spell can be countered by another spell (and if so, what spell counters it).
@@ -53,7 +51,7 @@
 
   \mysubsection{Markovian}{duration-markovian}
   
-  Markovian spells take effect immediately, but have a random duration depending on the number of \DICE invested in the casting:
+  Markovian spells take effect immediately, but have a random duration depending on the number of dice \DICE invested in the casting:
 
   \mytable{>{\centering\arraybackslash}X  X} {
     \thead{\DICE} & {Duration} \\
@@ -76,8 +74,10 @@
   \mysubsection{Other}{duration-other}
 
   \mylist {
-    \item A duration of \mybold{Combat} indicates a spell or effect that will end at the end of Combat, before you take a Breather.
-    \item A duration of \mybold{\SUM Minutes} indicates a spell or effect that will last a number of real world minutes as shown on the di(c)e.  The Arbiter should use a stopwatch or clock to measure the passage of time.  The adventurer can ask how many minutes are left at any time and get an answer, but the Arbiter is under no obligation to volunteer how much time remains if she doesn't want to.
+    \item A duration of \mybold{Combat} indicates a spell or effect that will end at the end of Combat, before you take a Breather. \\~ \\~
+
+    \item A duration of \mybold{\SUM Minutes} indicates a spell or effect that will last a number of real world minutes as shown on the di(c)e.  The Arbiter should use a stopwatch or clock to measure the passage of time.  The adventurer can ask how many minutes are left at any time and get an answer, but the Arbiter is under no obligation to volunteer how much time remains if she doesn't want to. \\~ \\~
+
     \item A duration of \mybold{Session} means the spell lasts for the entire Session.  It will need to be recast at the start of the next Session if you want the effect to continue.
   }
 
@@ -85,7 +85,7 @@
 
   \mysubsection{Contested}{keyword-contested}
 
-  Contested spells are a \RB between the spell caster and a Monster.  The caster's \RB is their Primary Stat ( \INT for Philosophers, \FOC for Devotees, and Awareness for Spriggan).  The target's \RB will be defined in the spell.  
+  Contested spells are a \RB between the spell caster and a Monster.  The caster's \RB is their Primary Stat ( \INT for Philosophers, \FOC for Mystics, and Awareness for Spriggan).  The target's \RB will be defined in the spell.  
   \example{
     The Wizardry arcanum \mylink{Battering Beam}{wizardry-battering-beam} is a \RB between the Philospher's \INT and the target's \VIG with a -\DICE penalty.  The Philosopher will \RB : \INT + \LVL (since Philosophers add their level to any \INT rolls), and the victim will need to \RB : \VIG - \DICE, plus any other modifiers. 
   }
@@ -95,7 +95,7 @@
   Spells that can be split can have their dice split up among up to \DICE targets.  Each target resolves the effect of the dice on them separately, but the \DICE are pooled when considering Mishaps, Calamities, and Ruin.
 
   \example {
-    The Wizardry arcanum \mylink{Charm}{wizardry-charm} is Splittable and allows you to "...[e]nsorcel one or more Monsters whose \HD are less than or equal to \DICE". If you had a pool of 4 Blood Dice, you could use 3 \DICE on 1 Monster and 2 on another, 1 [die] on 4 Monsters, etc. with the additional requirement that the number of \DICE used on the Monster is equal to or greater than their \HD
+    The Wizardry arcanum \mylink{Charm}{wizardry-charm} is Splittable and allows you to "...[e]nsorcel one or more Monsters whose \HD are less than or equal to \DICE". If you had a pool of 4 Blood Dice, you could use 3 [dice] on 1 Monster and 2 on another, 1 [die] on 4 Monsters, etc. with the additional requirement that the \DICE used on the Monster is equal to or greater than their \HD
   }
 
  \newpage
@@ -105,7 +105,7 @@
     "... a fan-envisioned extradimensional, instantly accessible storage area in fiction, which is used to explain how animated, comic, and game characters can produce objects out of thin air." 
   }
 
-  Arcana that make use of hammerspace allow you to place objects in an "out of game" area until they can be retrieved.  Hammerspace objects can't be stolen, used, or obtained by others - but certain other arcana can tell unsavories whether or not you have things stored in Hammerspace.  You can't put one Hammerspace object in another (they repel like magnets). Objects in Hammerspace immediately return to reality when you die.  No one is really 100\% on how long a living thing can survive in Hammerspace.  
+  Arcana that make use of Hammerspace allow you to place objects in an "out of game" area until they can be retrieved.  Hammerspace objects can't be stolen, used, or obtained by others - but certain other arcana can tell unsavories whether or not you have things stored in Hammerspace.  You can't put one Hammerspace object in another (they repel like magnets). Objects in Hammerspace immediately return to reality when you die.  No one is really 100\% on how long a living thing can survive in Hammerspace.  
 
 \cbreak
 
