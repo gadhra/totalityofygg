@@ -370,6 +370,21 @@
 }
 
 
+% --- editor block ------------------------------------------------------------
+\newcommand{\ed}[1] {%
+  \begin{tcolorbox}[
+    width=\linewidth,
+    blanker,
+    top=3mm,
+    bottom=3mm,
+    borderline horizontal={1pt}{0pt}{gainsboro,dashed}
+    ]
+    \centering
+    \footnotesize{\myital{Ed: #1}}
+  \end{tcolorbox}
+}
+
+
 
 
 
@@ -517,7 +532,7 @@
   }
 }
 
-\newkeycommand{\OCCULT}[Name=,Link=,Success=,Cost=,Widdershins=]
+\newkeycommand{\OCCULT}[Name=,Link=,Success=,Cost=]
 {%
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
@@ -525,12 +540,11 @@
 ,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
-    \rowcolors[]{1}{silver}{}%
     \begin{tabularx}{\linewidth}{lXlX|c}
     \hline
-    \rowcolor{silver}
-    \SUCCESS & \commandkey{Success} & \COST & \commandkey{Cost} \\
-    \multicolumn{4}{c}{\mybold{Widdershins} \commandkey{Widdershins}} \\
+    \rowcolor{white}
+    \mybold{Cunning} & \commandkey{Success} \\
+    \mybold{Cost} & \commandkey{Cost} \\
     \hline
     \end{tabularx}\vspace{2pt plus 6pt}
     \end{tcolorbox}
