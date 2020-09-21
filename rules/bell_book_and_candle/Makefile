@@ -17,6 +17,7 @@ setup:
 	ln -sf ../arcana.tex out/
 	ln -sf ../research.tex out/
 	ln -sf ../marvels.tex out/ 
+	ln -sf ../wonders.tex out/ 
 	ln -sf ../appendices.tex out/
 	ln -sf ../../thanks.tex out/
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname="Bell_Book_and_Candle_${VERSION}" -output-directory out bbc
