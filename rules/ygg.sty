@@ -28,6 +28,10 @@
 \usepackage{wrapfig}
 \usepackage{cuted}
 
+% --- fonts -----------------------------------------------------------
+\usepackage{fontawesome5}
+
+
 
 % --- page & basic text setup ------------------------------------------
 
@@ -124,6 +128,21 @@
   BoldItalicFont={STIX2Math} 
 ]{STIX2Math}
 
+\newfontfamily{\FAS}[
+  Path=\fontsearchpath/fontawesome5/,
+  Mapping=tex-text,
+  Extension={.otf},
+  BoldFont={fa5-solid-900}
+]{fa5-solid-900}
+
+\newfontfamily{\FAR}[
+  Path=\fontsearchpath/fontawesome5/,
+  Mapping=tex-text,
+  Extension={.otf},
+  UprightFont={fa5-regular-400}
+]{fa-regular-400}
+
+
 % --- symbol macros --------------------------------------------------
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -131,25 +150,28 @@
 \usepackage{amssymb}
 
 % 6-sided die
-\newcommand{\diceglyph}{\ffstixmath{\char"2685}}
+\newcommand{\diceglyph}{\FAS{\faDiceSix}}
 % coin
-\newcommand{\coinglyph}{\ffstixmath{[\char"0023\char"20AC}]}
-% num successes
-\newcommand{\successglyph}{\ffstixmath{[\char"0023\char"2713}]}
+\newcommand{\coinglyph}{\FAS{\faPiggyBank}}
 % sum
 \newcommand{\sumglyph}{\ffstixmath{[\char"03A3\char"2685}]}
 % duration
-\newcommand{\durationglyph}{\ffstixmath{[\char"231A~D}]}
+\newcommand{\durationglyph}{\FAR{\faHourglassR}}
+% keyword
+\newcommand{\keywordglyph}{\FAS{\faKey}}
 % length
-\newcommand{\lengthglyph}{\ffstixmath{[\char"21E2}~L]}
-%num dice
-\newcommand{\numdiceglyph}{\ffstixmath{[\char"0023\char"2685}]}
+\newcommand{\lengthglyph}{\FAS{\faStopwatch}}
 %mod
-\newcommand{\moddiceglyph}{\ffstixmath{[\char"00B1~M]}}
+\newcommand{\moddiceglyph}{\FAS{\faAlternateArrowsVertical}}
 %target
-\newcommand{\targetglyph}{\ffstixmath{[\char"25CE~T]}}
+\newcommand{\targetglyph}{\FAS{\faBullseye}}
 %counterspell
-\newcommand{\counterglyph}{\ffstixmath{[\char"2932~C}]}
+\newcommand{\counterglyph}{\FAS{\faRandom}}
+%paradigm
+\newcommand{\paradigmglyph}{\FAS{\faAnkh}}
+%paradigm
+\newcommand{\saveglyph}{\FAS{\faSaveR}}
+
 
 
 %text abbreviations
@@ -176,21 +198,22 @@
 \newcommand{\DEX}{\fftext \textbf{\ffstixmath{\char"2660}}DEX~}
 
 %Dice Types
-\newcommand{\UD}{\fftext \textbf{U\diceglyph}~}
-\newcommand{\MD}{\fftext \textbf{M\diceglyph}~}
+\newcommand{\UD}{\fftext \textbf{Use~\diceglyph}}
+\newcommand{\MD}{\fftext \textbf{Move~\diceglyph}~}
 \newcommand{\HD}{\fftext \textbf{HD\diceglyph}~}
-\newcommand{\STATIC}{\fftext \textbf{Static\diceglyph}~}
-\newcommand{\POOL}{\fftext \textbf{Pool\diceglyph}~}
-\newcommand{\DEATH}{\fftext \textbf{Death\diceglyph}~}
-\newcommand{\KNACK}{\fftext \textbf{Knack\diceglyph}~}
-\newcommand{\DEED}{\fftext \textbf{Deed\diceglyph}~}
-\newcommand{\FLESH}{\fftext \textbf{Vitality\diceglyph}~}
-\newcommand{\LUCK}{\fftext \textbf{Luck\diceglyph}~}
-\newcommand{\KNAVE}{\fftext \textbf{Whisper\diceglyph}~}
+\newcommand{\STATIC}{\fftext \textbf{Static~\diceglyph}~}
+\newcommand{\POOL}{\fftext \textbf{Pool~\diceglyph}~}
+\newcommand{\DEATH}{\fftext \textbf{Death~\diceglyph}~}
+\newcommand{\DEED}{\fftext \textbf{Deed~\diceglyph}~}
+\newcommand{\FLESH}{\fftext \textbf{Vitality~\diceglyph}~}
+\newcommand{\LUCK}{\fftext \textbf{Luck~\diceglyph}~}
+\newcommand{\KNAVE}{\fftext \textbf{Whisper~\diceglyph}~}
+
+\newcommand{\KNACK}{\fftext \textbf{TK TK TK}~}
 
 %Magic
-\newcommand{\DICE}{\fftext \textbf{\numdiceglyph}~}
-\newcommand{\SUMDICE}{\fftext \textbf{\sumglyph }~}
+\newcommand{\DICE}{{\mybold{[dice]}}~}
+\newcommand{\SUMDICE}{{\mybold{[sum]}}~}
 \newcommand{\MOD}{\fftext \textbf{\moddiceglyph }~}
 \newcommand{\DURATION}{\fftext \textbf{\durationglyph}~}
 \newcommand{\LENGTH}{\fftext \textbf{\lengthglyph}~}
@@ -199,11 +222,9 @@
 \newcommand{\TARGET}{\fftext \textbf{\targetglyph}~}
 \newcommand{\COUNTER}{\fftext \textbf{\counterglyph}~}
 
-\newcommand{\PARADIGM}{\fftext \textbf{[P]}~}
-\newcommand{\KEYWORD}{\fftext \textbf{[K]}~}
-\newcommand{\SAVE}{\fftext \textbf{[S]}~}
-
-
+\newcommand{\PARADIGM}{\fftext \textbf{\paradigmglyph}~}
+\newcommand{\KEYWORD}{\fftext \textbf{\keywordglyph}~}
+\newcommand{\SAVE}{\fftext {\saveglyph}}
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4}}~}}
 \newcommand{\Tilde}{{\fftext \textbf{\ffstixmath{\char"223C}}~}}
@@ -492,45 +513,60 @@
 ,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
-    \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{lXXX|ll}
-    \hline
-    \rowcolor{silver}
-    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
-    \mybold{\DURATION} & \multicolumn{3}{l}{\commandkey{Duration}} \\
-    \mybold{\COUNTER} & \multicolumn{3}{l}{ \commandkey{Counter}} \\
-    \mybold{\KEYWORD} & \multicolumn{3}{l}{ \commandkey{Keywords}} \\
-    \hline
-    \end{tabularx}\vspace{2pt plus 6pt}
-    \tcblower
-    \TARGET : \commandkey{Target}
+    \mytable{l X l X}{}
+    {
+        \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{\SAVE} & \commandkey{Save} \\
+        \mybold{\DURATION} & \commandkey{Duration} & \mybold{\COUNTER} & \commandkey{Counter} \\
+        \mybold{\KEYWORD} & \commandkey{Keywords} & \mybold{\TARGET} & \commandkey{Target} 
+    }
+
     \end{tcolorbox}
   }
 }
 
-\newkeycommand{\LITURGY}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
+\newkeycommand{\MYSTERY}[Name=,Link=,Paradigm=,Save=,Duration=,Target=,Counter=,Keywords=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\commandkey{Name}}\zlabel{\commandkey{Link}}
+,sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \mytable{l X}{}
+    {
+        \mybold{\PARADIGM} & \commandkey{Paradigm} \\
+        \mybold{\SAVE} & \commandkey{Save} \\
+        \mybold{\DURATION} & \commandkey{Duration} \\
+        \mybold{\TARGET} & \commandkey{Target}
+    }
+
+    \end{tcolorbox}
+  }
+}
+
+
+\newkeycommand{\SACRAMENT}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
 {%
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
     \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
 ,sharp corners=all]
+
     \vspace{2pt plus 6pt}%
     \noindent%
-    \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{lXXX|ll}
-    \hline
-    \rowcolor{silver}
-    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
-    \mybold{\DURATION} & \multicolumn{3}{l}{\commandkey{Duration}} \\
-    \mybold{\COUNTER} & \multicolumn{3}{l}{ \commandkey{Counter}} \\
-    \mybold{\KEYWORD} & \multicolumn{3}{l}{ \commandkey{Keywords}} \\
-    \hline
-    \end{tabularx}\vspace{2pt plus 6pt}
-    \tcblower
-    \TARGET : \commandkey{Target}
+    \mytable{l X l X}{}
+    {
+        \mybold{\PARADIGM} & \commandkey{Paradigm} & \SAVE & \commandkey{Save} \\
+        \mybold{\DURATION} & \commandkey{Duration} & \KEYWORD & \commandkey{Keywords}
+    }
+
     \end{tcolorbox}
+
   }
 }
+
+
+
 
 \newkeycommand{\OCCULT}[Name=,Link=,Success=,Cost=]
 {%
