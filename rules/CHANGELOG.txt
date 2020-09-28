@@ -11,6 +11,8 @@ Buckle up, cause it's a lot.
 - Added the concept of Complications: a "wrinkle" to give Adventurers some flavor
 - Added random treasure generator to appendix 
 - Added art!
+- Added "martyr" Virtues (thanks Dell!)
+- Added rules for swimming
 
 ### Removed
 - Removed x-in-6 mechanic (Knack Dice).  Saves, Skills, and the Death die are now a Roll20 test
@@ -28,7 +30,7 @@ Buckle up, cause it's a lot.
 
 
 #### Tropes  
-- Complete rework of Mystics (Witches and Mystics).  No specific spells for individual Small Gods.  There are now 4 liturgies of the 10 Thrones.  Liturgies of Small Gods can be worked out with Arbiter
+- Complete rework of Mystics (Witches and Mystics).  No specific spells for individual Small Gods.  There are now 4 liturgies beneath each of the 10 Authorities (was Thrones).  Liturgies of Small Gods can be worked out with Arbiter
 - Fixed typo under Bless, changed "Faith" to "Grace"
 
 
@@ -40,6 +42,15 @@ Buckle up, cause it's a lot.
 #### Combat
 - \INT is now the core Static die for rolling Init (was \DEX)
 - \FOC is now the core Static die for rolling Death
+
+#### Equipment
+- Rework of Narcotics.  Dropped the Overdose number and added restrictions. Added 2 new narcotics (Dust and Twitch) and dropped Shrooms, since those have become their own thing.
+
+#### Spells
+- Cleanup of Miracles and Occultism, grouped under "Marvels"
+- Restructured mystic Liturgies to include Mysteries (under Arcana) and base abilities per Authority
+- Grouped Staff and Sword Magic under "Wonders"
+
 
 
 
