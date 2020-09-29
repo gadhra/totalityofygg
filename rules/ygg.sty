@@ -442,6 +442,9 @@
   }
 }
 
+
+% --- ARCANCA ------------------------------------------------------------
+
 \newkeycommand{\LEECHCRAFT}[Name=,Link=,Mod=,Length=,Keywords=]
 {%
   \setlength{\arrayrulewidth}{0mm}
@@ -462,24 +465,6 @@
   }
 }
 
-\newkeycommand{\CHYMISTRY}[Name=,Link=,Cost=,Duration=,Toxin=,Narcotic=]
-{%
-  \setlength{\arrayrulewidth}{0mm}
-  \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\myanchor{\commandkey{Name}}{\commandkey{Link}},sharp corners=all]
-    \vspace{2pt plus 6pt}%
-    \noindent%
-    \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{|l|X|l|X|}
-    \hline
-    \rowcolor{silver}
-    \COST & \commandkey{Cost} & \DURATION & \commandkey{Duration} \\
-    Toxin? & \commandkey{Toxin} & Narcotic? & \commandkey{Narcotic} \\
-    \hline
-    \end{tabularx}\vspace{2pt plus 6pt}
-    \end{tcolorbox}
-  }
-}
 
 
 \newkeycommand{\NECRO}[Name=,Link=,Paradigm=,Save=,Duration=,Mod=,Keywords=,Target=]
@@ -543,6 +528,28 @@
     \end{tcolorbox}
   }
 }
+
+% --- RESEARCH ------------------------------------------------------------
+
+
+\newkeycommand{\CHYMISTRY}[Name=,Link=,Cost=,Duration=,Toxin=,Narcotic=]
+{%
+  \setlength{\arrayrulewidth}{0mm}
+  \renewcommand{\arraystretch}{1.5}{
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\commandkey{Name}}\zlabel{\commandkey{Link}}
+,sharp corners=all]
+    \vspace{2pt plus 6pt}%
+    \noindent%
+    \mytable{l X l X}{}
+    {
+        \mybold{\COST} & \commandkey{Cost} & \mybold{\DURATION} & \commandkey{Duration} \\
+        \mybold{Toxin?} & \commandkey{Toxin} & \mybold{Narcotic?} & \commandkey{Narcotic}
+    }
+
+    \end{tcolorbox}
+  }
+}
+
 
 
 \newkeycommand{\SACRAMENT}[Name=,Link=,Paradigm=,Save=,Duration=,Counter=,Keywords=,Target=]
