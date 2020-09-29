@@ -11,6 +11,20 @@
 \renewcommand{\yggResearchText}{%
 
 
+The oddities below can only be created by using Research.  Research can only be used during a Vacation.  More notes on Research can be found in the Core Rules.  
+
+Research is divided into 3 generic types - Iron, Silver, and Gold - with the following costs:
+
+
+\mytable{X X X} {
+    \thead{Type} & \thead{Research} & \thead{Cost} \\
+} {
+    Iron & 1 & 100\FE \\
+    Silver & 3 & 200\AG \\
+    Gold & 5 & 500\AU
+}
+
+The "Cost" is a generic amount to reflect the materials needed to manifest the fruits of your Research - special books, alembics, inks, quills, etc.   The amount paid counts towards your XP.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% CHYMISTRY
@@ -18,9 +32,9 @@
 
 
 
-\mysection{Chymistry}{leech-chymistry}
+\mysection{Chymistry}{research-chymistry}
 
-The science of the transformation of matter, Chymistry can only be practiced in Civilization during a Sabbatical.  There are 4 basic kinds of chymicals:
+Researching the transformation of matter into magic, Chymistry is practiced in Civilization during a Vacation.  There are 4 basic kinds of chymicals:
 
 \mylist {
   \item \mybold{Tonics}  are mixtures of booze, narcotics, and other things you probably don't want to know about. They must be drunk
@@ -29,65 +43,63 @@ The science of the transformation of matter, Chymistry can only be practiced in 
   \item \mybold{Ungeants} include oils, salves, lubricants, and pastes - basically anything you rub on things (heh heh).  They're usually super viscous and anyone will know the moment they try to drink it.  You can coat a weapon with an unguent  and "apply" it to a Monster by injuring them with the weapon (1 point of damage or more to Flesh).  If your attack misses the unguent doesn't rub off, but if you hit armor / scales / etc. without piercing Flesh, it does.  Unguents can be rubbed on someone who is who is unconscious or petrified.  Can’t be eaten -  tastes shitty and the person will spit it out.
 }
 
+\cbreak
 
-\mylink{Research}{leech-research} \KNACK for each potion you wish to create.  If you fail you are unable to create the potion and the money spent on materials is lost. 
+\mysubsection{Such Mortal Drugs I Have (Toxins)}{research-chymistry-toxins}
 
-Potions are divided into 3 groups - Iron, Silver, and Gold.  \mybold{Each potion, toxin, or acid costs 500 coins in materials}, depending on the group they are in i.e. 500\FE, 500\AG, or 500\AU. If you succeed, you generate d4 \UD of the chymical.
+You can create a Toxin in the form of a Tonic, Unguent, Sera, or Powder. The efficacy of the potion depends on the type:
 
-\mysubsection{Such Mortal Drugs I Have (Toxins)}{leech-chymistry-toxins}
-
-You can create a Toxin in the form of a Tonic, Unguent, Sera, or Powder. The efficacy of the potion depends on the coins spent:
-
-  \mytable{X X r} {
-    \thead{\COST} & \thead{Damage \& Duration} & \thead{Saves} \\
+  \mytable{X c X} {
+    \thead{Type} & \thead{Damage \& Duration} & \thead{Saves}  \\
   } {
-    500\FE  & d4 & 1 \\
-    500\AG  & d8 & 2 \\
-    500\AU & d12 & 3 \\
+     Iron & d4 & 1  \\
+     Silver & d8 & 2  \\
+     Gold & d12 & 3  \\
   }
 
-  The die type is the amount of damage over a number of Minutes, rolled separately. Thus, a Silver Toxin would deal d8 damage every Minute for d8 Minutes (the Arbiter is encouraged to roll the duration in secret). Damage hits Grit first (as it wears away your will to live), then Flesh.  You cannot heal Grit while under the effects of a Toxin.  The victim of these Toxins \mybold{always} gets a Save (though see below). 
+  The die type is the amount of damage over a number of minutes (not Minutes, which is its own unit of time), rolled separately. Thus, a Silver Toxin would deal d8 damage for d8 minutes (the Arbiter is encouraged to roll the duration in secret). Damage hits Grit first (as it wears away your will to live), then Flesh.  You cannot heal Grit while under the effects of a Toxin.  The victim of these Toxins \mybold{always} gets a Save (though see below). 
 
-  When Saving against one of these Toxins, the victim can make a Save every Minute \myital{before} they are affected by the damage.  If they make the Save, they do not take damage that Minute, BUT the Save does not necessarily end the effect of the Toxin.  In order to shake off the effect of the Toxin, the victim must make a number of  rolls based on the number in parenthesis (1 for Iron, 2 for Silver, and 3 for Gold).  Otherwise, the Toxin must run its course.
+  When Saving against one of these Toxins, the victim can make a Save every minute \myital{before} they are affected by the damage.  If they make the Save, they do not take damage that minute, BUT the Save does not necessarily end the effect of the Toxin.  In order to shake off the effect of the Toxin, the victim must make a number of rolls equal to the Toxin's Duration.  The Saves do not have to be consecutive. 
 
-  When using a Toxin, you must make a \RS : \DEX or risk poisoning yourself.  Bravos do not need to make this roll.
+  When using a Toxin, you must make a \RS : \DEX or risk poisoning yourself unless you have the Knave Virtue \mylink{Poisonous}{advancement-leveling-silver-knaves}
+
 
   \example {
-    Andre Preneur (Grit 7, Flesh 6) drinks a Silver Toxin in a cup of wine.  The Arbiter rolls the duration in secret (d8) and gets 7(!) - so the Toxin will course through his veins for 7 Minutes.  The Arbiter starts a timer. Andre rolls a Save and fails - the Arbiter rolls d8 and gets a 6, so Andre takes 6 points of damage, and he has 1 Grit and 6 Flesh left.  His friends run around trying to find a Leech but the clock is ticking.  Another Minute passes, Andre rolls another Save ... and makes it!  2 Minutes have passed (5 to go).  His compatriots decide to try to let the Toxin run its course.  The 3rd Minute passes, and Andre rolls his Save again ... and fails.  The Arbiter rolls 8 damage.  He is now Dying with 4 Minutes left of the Toxin.  He will need to roll his Death Die every time he takes damage from the Toxin for the next 4 Minutes, unless he can make 2 consecutive Saves
+Andre Preneur (Grit 7, Flesh 6) drinks a Silver Toxin hidden in a glass of wine.  The Arbiter rolls the duration (d8) and gets a 7; the effect will last 7 minutes. The Arbiter starts a timer.  Andre rolls a Save and fails - the Arbiter rolls a d8 and gets a 6.  Andre applies the damage (1 Grit, 6 Flesh).  Another minute passes, Andre rolls a Save and makes it. At the 3rd minute, Andre rolls his Save and fails.  The Arbiter rolls 8 damage.  Andre is now Dying.  He will need to roll his \DEATH every time he takes damage from the Toxin for the next 4 minutes, unless he makes 2 more Saves
   }
 
   \newpage
 
-  \mysubsection{Potent Waters (Acids)}{leech-chymistry-acids}
+  \mysubsection{Potent Waters (Acids)}{research-chymistry-acids}
 
-  In addition to Toxins, you can create various kinds of acids.  Acids are always treated as if they were unguents (though they are on the liquid side), and will dissolve flesh, stone, wood, or metal.  They are often used for etching, ruining locks, and pouring on people you hate.  Like Toxins, you must make a \RS : \DEX when using acids or risk pouring them on yourself.  Bravos do not need to make this roll.
+  In addition to Toxins, you can create various kinds of acids.  Acids are always treated as if they were unguents (though they are on the liquid side), and will dissolve flesh, stone, wood, or metal.  They are often used for etching, ruining locks, and pouring on people you hate.  Like Toxins, you must make a \RS : \DEX when using acids or risk pouring them on yourself.
 
-  The efficacy of the acid depends on the type of coin you spend:
-
-  \mytable{X X} {
-    \thead{\COST} & \thead{Effects} \\
+  \mytable{X c} {
+    \thead{Type} & \thead{\# Effects}  \\
   } {
-    500\FE  & 1 \\
-    500\AG  & 2 \\
-    500\AU & 3 \\
+     Iron & 1  \\
+     Silver & 2  \\
+     Gold & 3 \\
   }
 
-  You can pick one of the effects only once (so if you spend Gold, you can get all 3 effects)
+  Iron acids allow you to pick one of the results below; Silver acids allow you to pick 2; and Gold acids allow you to take all 3.
+
   \mybullet {
-    \item if it hits Flesh, deals d4 damage for d4 Minutes. If it hits Armor, removes 1 \UD every Minute. 
-    \item melt an area 100cm cubed of wood, metal, or stone
-    \item create an acrid plume of smoke that causes coughing and choking for Minutes to everything Nearby (-2 to \RO and \RB attempts)
+    \item if the acid hits Flesh, deals d4 damage for d4 Minutes. If it hits Armor, removes 1 \UD every Minute. 
+    \item the acid can melt an area 100cm cubed of wood, metal, or stone
+    \item the acid will create an acrid plume of smoke that causes coughing and choking for Minutes to everything Nearby (-2 to \RO and \RB attempts)
   }
 
   You can sunder your Shield to negate the effect of acids thrown on you.  
 
+  \cbreak
 
-  \mysubsection{Tonics}{leech-chymistry-tonics}
+  \mysubsection{Tonics}{research-chymistry-tonics}
 
   \CHYMISTRY[
     Name=Chyme's Nerve Tonic,
     Link=chymistry-chymes-nerve-tonic,
-    Cost=500\FE,
+    Cost=Iron (1),
     Duration=until Bivouac,
     Toxin=No,
     Narcotic=\MAX 1
@@ -98,32 +110,32 @@ You can create a Toxin in the form of a Tonic, Unguent, Sera, or Powder. The eff
 \CHYMISTRY[
   Name=Cuckhold's Courage,
   Link=chymistry-cuckhold-courage,
-  Cost=500\FE,
+  Cost=Iron (1),
   Duration=0,
   Toxin=No,
   Narcotic=\MAX 3 
 ]
 
-Drinking Cuckhold's Courage restores Grit when imbibed during a Breather.  For every bottle of Cuckhold's Courage drunk, the drinker's Grit is healed or increased (even above Max Grit!) by d6.  It cannot heal Flesh (only Grit).  Narcotic
+Drinking Cuckhold's Courage restores Grit when imbibed during a Breather.  For every bottle of Cuckhold's Courage drunk, the drinker's Grit is healed or increased (even above \MAX !) by 4.  It cannot heal Flesh (only Grit).  Narcotic
 
 
 
 \CHYMISTRY[
   Name=Fulcanelli's Clarifying Elixir,
   Link=chymistry-fulcanelli-clarifying-elixir,
-  Cost=500\AG,
+  Cost=Silver (3),
   Duration=until Bivouac/0,
   Toxin=No,
   Narcotic=No 
 ]
 
 
-Renders you almost immune to any spells or effects from the Mind paradigm.  If you wouldn't normally get a Save against the effect, you now do.  If you *do* get a Save against the effect, the Save is a 6 in 6 (roll 2d6, and you only fail on a snake eyes).  If taken while under the effect of a Mind spell, immediately gives the imbiber a Save as above and ends its Duration.  Can be used to break the effects of the Philter of von Fuchs (it is rumored that Fulcanelli was under the sway of von Fuchs)
+Renders you almost immune to any spells or effects from the Mind paradigm.  If you wouldn't normally get a Save against the effect, you now do.  If you \mybold{do} get a Save against the effect, the Save is at +4.  If taken while under the effect of a Mind spell, immediately gives the imbiber a Save as above and ends its Duration.  Can be used to break the effects of the Philter of von Fuchs (it is rumored that Fulcanelli was under the sway of von Fuchs)
 
 \CHYMISTRY[
   Name=Liebnitz Purgation,
   Link=chymistry-liebnitz-purgation,
-  Cost=500\AG,
+  Cost=Silver (3),
   Duration=0 ,
   Toxin=No,
   Narcotic=No 
@@ -134,20 +146,20 @@ If imbibed while under the effects of an ingested Toxin (Tonic, drunk Powder, or
 \CHYMISTRY[
   Name=Philter of von Fuchs,
   Link=chymistry-philter-von-Fuchs,
-  Cost=varies,
-  Duration=varies ,
+  Cost=See Below,
+  Duration=See Below,
   Toxin=Yes,
   Narcotic=No 
 ]
 
-When imbibed, the drinker will fall under the sway of whoever gave them the tonic.  Treat as a \mylink{Charm}{wizardry-charm} spell.  Save Negates.  The duration depends on the type of coins spent:  Iron, Days; Silver, Weeks; Gold, Months.  Can be broken by spells, rituals, etc. that relieve effects of the Mind.
+When imbibed, the drinker will fall under the sway of whoever gave them the tonic.  Treat as a \mylink{Charm}{wizardry-charm} spell.  Save Negates.  The duration depends on the amount of Research used:  Iron (1), Days; Silver (3), Weeks; Gold (5), Months.  Can be broken by spells, rituals, etc. that relieve effects of the Mind.
 
-  \mysubsection{Powders}{leech-chymistry-powders}
+  \mysubsection{Powders}{research-chymistry-powders}
 
   \CHYMISTRY[
     Name=Dastin's Basic Talc,
-    Link=chymistry-dastins-basic talc,
-    Cost=500\FE,
+    Link=chymistry-dastins-basic-talc,
+    Cost=Iron (1),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
@@ -160,34 +172,34 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
   \CHYMISTRY[
     Name=Mermaid's Kiss,
     Link=chymistry-mermaids-kiss,
-    Cost=500\AG,
+    Cost=Silver (3),
     Duration=0 ,
     Toxin=Yes,
     Narcotic=No 
   ]
 
 
-  When used, the recipient stops breathing for d6 Hours.  They can feign death or travel underwater, are not affected by inhaled powders or gases, and are unable to speak or cast spells.  Unwilling victims get a Save (as if this were a Toxin)
+  The imbiber stops breathing for Hours.  They can feign death or travel underwater, are not affected by inhaled powders or gases, and are unable to speak or cast spells.  Unwilling victims get a Save (as if this were a Toxin)
 
 
 
   \CHYMISTRY[
     Name=Powdered Bezoar,
     Link=chymistry-powdered-bezoar,
-    Cost=500\FE,
+    Cost=Iron (1),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
   ]
 
 
-  When sprinkled on a food or into a beverage, has a 4-in-6 chance of neutralizing any Toxin contained inside.  The roll is made in secret by the Arbiter.
+  When sprinkled on a food or into a beverage, has a 5-in-6 chance of neutralizing any Toxin contained inside.  The roll is made in secret by the Arbiter.
 
 
   \CHYMISTRY[
     Name=Woundseal,
     Link=chymistry-woundseal,
-    Cost=500\FE,
+    Cost=Iron (1),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
@@ -197,11 +209,12 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
   Sprinkling this powder on a wound stops all effects of Bleeding, like the Leechcraft skill \mylink{Staunch}{leechcraft-staunch}
 
 
-  \mysubsection{Ungeants}{leech-chymistry-ungeants}
+
+  \mysubsection{Ungeants}{research-chymistry-ungeants}
   \CHYMISTRY[
     Name=Boyle's Sharpening Paste,
     Link=chymistry-boyles-sharpening-paste,
-    Cost=500\FE,
+    Cost=Iron (1),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
@@ -212,18 +225,18 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
   \CHYMISTRY[
     Name=Brahe's Efficacious Sealant,
     Link=chymistry-brahes-efficacious-sealant,
-    Cost=500\AU,
+    Cost=Gold (5),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
   ]
-  A strong, fast-drying paste. Capable of bonding stone, glass, wood, or metal (but not flesh). Lasts potentially forever.  Can cover an area roughly 10cm square.
+  Fast-drying paste. Capable of bonding stone, glass, wood, or metal (but not flesh). Lasts forever.  Can cover an area roughly 10cm square.
 
 
   \CHYMISTRY[
     Name=Faivre's Aqua Grease,
-    Link=chymistry-faivres-aqua grease,
-    Cost=500\FE,
+    Link=chymistry-faivres-aqua-grease,
+    Cost=Iron (1),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
@@ -232,20 +245,20 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
 
   \CHYMISTRY[
     Name=Tesla's Silver Wash,
-    Link=chymistry-teslas-silver wash,
-    Cost=500\AG,
+    Link=chymistry-teslas-silver-wash,
+    Cost=Silver (3),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
   ]
-  When applied to a blade no larger than a longsword, the weapon becomes imbued with silver permanently.  Requires an ingot of silver in addition to the normal cost of 500\AG.
+  When applied to a 1-handed weapon, the weapon becomes permanently imbued with silver.  Requires an ingot of silver.
 
   \newpage
 
   \CHYMISTRY[
     Name=Wei Boyang's Alkahest,
-    Link=chymistry-wei boyangs-alkahest,
-    Cost=500\AU,
+    Link=chymistry-wei-boyangs-alkahest,
+    Cost=Gold (5),
     Duration=0 ,
     Toxin=No,
     Narcotic=No 
@@ -254,58 +267,58 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
   This oil will dissolve any adhesive (including Brahe's Efficacious Sealant).  Can cover an area roughly 10cm square.
 
 
-\mysubsection{Sera}{leech-chymistry-sera}
+\mysubsection{Sera}{research-chymistry-sera}
 
   \CHYMISTRY[
     Name=Al-Farabi's Calming Injection,
     Link=chymistry-al-farabis-calming-injection,
-    Cost=500\AU,
+    Cost=Gold (5),
     Duration=0 ,
     Toxin=Yes,
     Narcotic=No 
   ]
 
-  When injected, the creature is becalmed. The injected creature ceases immediately to be Enraged, Shaken, Frenzied, or Disgusted.  If the creature is Zoological, they become passive and docile.  Creatures under the effect of the Calming Injection cannot attack unless they are attacked first.  Lasts for Hours. Unwilling creatures get a Save to negate.
+  The injected creature ceases immediately to be Enraged, Shaken, Frenzied, or Disgusted.  If the creature is Zoological, they become passive and docile.  Creatures under the effect of the Calming Injection cannot attack unless they are attacked first.  Lasts for Hours. Unwilling creatures get a Save to negate.
 
   \CHYMISTRY[
     Name=Davy's Soothing Anesthetic,
     Link=chymistry-davys-soothing-anesthetic,
-    Cost=500\AG,
+    Cost=Silver (3),
     Duration=0 ,
     Toxin=Yes,
     Narcotic=No 
   ]
 
-  When injected, the creature feels any pain as pleasure for Hours.  Often surreptitiously given to those undergoing torture, or going under the knife for surgery.  Attacks against the recipient ignore Grit as the mind loses the cues to shift away from painful events.  
+  The injected creature feels any pain as pleasure for Hours.  Often surreptitiously given to those undergoing torture, or going under the knife for surgery.  Attacks against the recipient ignore Grit as the mind loses the cues to shift away from painful events.  
 
 
   \CHYMISTRY[
     Name=Grimm's Stupurous Preparation,
     Link=chymistry-grimms-stupurous-preparation,
-    Cost=500\AU,
+    Cost=Gold (5),
     Duration=0 ,
     Toxin=Yes,
     Narcotic=No 
   ]
 
 
-  When injected into a person or creature, the creature immediately falls into a slumber in all ways like \mylink{Sleep}{wizardry-sleep} (can't be awakened except by a slap, doesn't effect a creature of greater than 4 \HD) unless they Save
+  An injected creature immediately falls into a slumber in all ways like \mylink{Sleep}{wizardry-sleep} (can't be awakened except by a slap, doesn't effect a creature of greater than 4 \HD) unless they Save
 
-  If, however, the sera is injected into a solid food of some sort (like an apple), and the food is ingested, it's true power becomes manifest.  The creature falls into a deep slumber and cannot be awakened except by a Witch feeding the curse to a Hekaphage (see Occultism). While asleep the creature is in a state of suspended animation - they do not age, and do not need to eat or drink - but they can still be killed in the normal means (dagger through the heart, etc).  Putting a creature into suspended animation will stop the effects of progressing disease and toxins.  Unwilling creatures get a Save. 
+  If the sera is injected into solid food of some sort (like an apple), any creature ingesting the food falls into a deep slumber and cannot be awakened except by a Mystic feeding the curse to a 3+ Cunning \mylink{Hekaphage}{occultism-hekaphage}. While asleep the creature is in a state of suspended animation - they do not age, and do not need to eat or drink - but they can still be killed in the normal means (dagger through the heart, etc).  Putting a creature into suspended animation will stop the effects of progressing disease and toxins.  Unwilling creatures get a Save. 
 
   \CHYMISTRY[
     Name=Wordwarp,
     Link=chymistry-wordwarp,
-    Cost=500\AU,
+    Cost=Gold (5),
     Duration=0 ,
     Toxin=Yes,
     Narcotic=No 
   ]
 
-  An oil that causes a form of dyslexia.  If the victim fails a Save, they are unable to read written words for Hours.  Often used on \mylink{Sorcerers}{sorcerers}.
+  An oil that causes a form of dyslexia.  If the victim fails a Save, they are unable to read written words for Hours.  Often used on spell casters and scribes.
 
 
-
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% INSCRIPTION
@@ -313,79 +326,55 @@ When imbibed, the drinker will fall under the sway of whoever gave them the toni
 
 
 
-\mysection{Inscription}{sorcerer-inscription}
+\mysection{Inscription}{research-inscription}
 
-Inscription requires \mylink{Research Dice}{sorcerer-research} to practice.  There are 4 ways of practicing Inscription:
+Inscription is the catch-all for mystical control over the written words, incantations, symbols, and engravings that allow Philosophers to capture and control Arcana.  Inscription is generally divided into 4 groups:
 
 \mybullet{
-  \item \mylink{Transcription}{sorcerer-inscription-transcription}: Writing magical texts to fetishes and grimoires
-  \item \mylink{Indagation}{sorcerer-inscription-indagation}: Researching information, including the true names of the \mylink{Forgotten}{spriggan-forgotten}
-  \item \mylink{Tattoo}{sorcerer-inscription-tattoo}: Branding and marking the flesh of living things with magical symbols
-  \item \mylink{Sigils}{sorcerer-inscription-sigils}: Etching and scribing runes and powerful names 
+  \item \mylink{Transcription}{research-inscription-transcription}: Writing magical texts to Fetishes and Grimoires
+  \item \mylink{Tattoo}{research-inscription-tattoo}: Branding and marking the flesh of living things with magical symbols
+  \item \mylink{Sigils}{research-inscription-sigils}: Etching and scribing runes and powerful names 
 }
 
 
-\mysubsection{Transcription}{sorcerer-inscription-transcription}
+\mysubsection{Transcription}{research-inscription-transcription}
 
 Transcription is used to: 
 \mybullet {
   \item prepare a new Grimoire so that it "belongs" to you; or
   \item defuse a Grimoire you've stolen from another wizard; or
-  \item scribe a spell from a scroll or item into a Grimoire; or
-  \item scribe a spell from your Grimoire to a scroll or item
+  \item scribe a spell from a Fetish into a Grimoire; or
+  \item scribe a spell from your Grimoire to a Fetish
 }
 
 \myhighlight{Preparing Grimoires}{inscription-preparing-grimoires}
 
-By purchasing a blank grimoire and placing one or more Wizard Sigils on it, the grimoire becomes yours and can now have spells written into it.  It is also trapped and needs to be defused in order to be read by another.   You can place up to \LVL Wizard Sigils on your grimoire(s),, making them harder to defuse.
+By purchasing a blank Grimoire and placing one or more \mylink{Wizard Sigils}{research-sigil-wizard} on it, the Grimoire becomes yours and can now have spells written into it with Scribing (see below).  It is also trapped and needs to be defused in order to be read by another.   You can place as many Wizard Sigils on your Grimoire(s) as you can afford, making them harder to defuse - but you must create all of the Wizard Sigils at once.
 
 \myhighlight{Defusing Grimoires}{inscription-defusing-grimoires}
 
-In order to read another Sorcerer's grimoire, you must defuse the traps inside.  You must roll Research Dice for every Wizard Sigil on the grimoire.  
-
-When rolling the Research Dice, if the number of failures exceed the number of successes, you fail (you win on a tie).  If you fail, you trigger one of the traps - roll on the "Grimoire Traps" table (good news is that setting off a trap removes it).
+In order to read another's Grimoire, you must defuse the traps inside.  You must spend a Research for every Wizard Sigil on the Grimoire.  You can read a Grimoire even if it's trapped, but that sets the traps off (this removes the Sigil(s), however).  Roll on \mylink{Grimoire Traps}{grimoire-traps} once for each Sigil.
 
 \myhighlight{Scribing: Fetish to Grimoire}{inscription-scribing-fetish-to-grimoire}
 
-You can write a spell from a fetish (including a Sorcerer's skull) to your grimoire.  Doing so erases the spell from the fetish or skull no matter how many \UD it had remaining.  You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie).  The spell still disappears from the fetish.
+You can write a spell from a Fetish (including a Philosopher's skull) to your Grimoire.  Doing so erases the spell from the Fetish or skull no matter how many \UD it had remaining.  Scribing a spell into your Grimoire is an Iron craft (1 Research; 100\FE)
 
 \myhighlight{Scribing: Grimoire to Fetish}{inscription-scribing-grimoire-to-fetish}
 
-A fetish can be a papyrus, set of mouse skulls, handle of an axe, roll of snakeskin, etc. etc.  The item can't be living (that would be a Tattoo) but can be anything you desire.  The cost of exotic materials is up to the Arbiter. A fetish can only have a single spell on it.  All fetishes have a \UD of d4 - when the \UD is exhausted, the magical words disappear from the fetish. 
+You create a Fetish containing a spell.  The Fetish can be a papyrus, set of mouse skulls, handle of an axe, roll of snakeskin, etc. etc.  The item can't be living (that would be a Tattoo) but can be anything you desire.  A Fetish can only have a single spell on it.  All Fetishes have a \UD of d4 - when the \UD is exhausted, the magical words disappear from the Fetish. 
 
-You may cast the spell inscribed on the fetish with any number of Blood you choose, OR you may forgo the Blood die and roll a single d6 for the effect.  You still roll the \UD for the fetish either way.
+You may cast the spell inscribed on the Fetish with any number of Blood you choose, OR you may forgo the Blood die and roll a single d6 for the effect.  You still roll the \UD for the Fetish either way.
 
-You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie) and the fetish is destroyed 
-
-
-\mysubsection{Indagation}{sorcerer-inscription-indagation}
-
-Indagation is the process of researching information, including the true names of the Forgotten.
-
-\myhighlight{True Name}{inscription-true-name}
+Creating a Fetish is an Iron craft (1 Research; 100\FE)
 
 
-You may learn the True Name of one of the \mylink{Forgotten}{spriggan-forgotten} on behalf of a Spriggan.  You can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie).
+\mysubsection{Tattoo}{research-inscription-tattoo}
 
-\myhighlight{Magical History}{inscription-magical-history}
-
-By researching the magical history of an item, you can learn about its powers, creator, and command words.  The Arbiter will assign a number to different things to learn about something, and for each successful roll of your Research Die, you uncover something new. You always know if there's more to learn or if you've learned all you can.
-
-Note that this won't tell you if something is magical per se (you'll need a Witch or Spriggan for that), so it's possible for you to waste your Research Dice on something completely mundane.
-
-
-\mysubsection{Tattoo}{sorcerer-inscription-tattoo}
-
-Tattoos can be inscribed on the body as specified below.  Each tattoo costs 100 coins in materials. You can't move a tattoo from yourself to someone else - the tattoo stays with the person.  The tattoos below are the most common, work out with the Arbiter if you want something more esoteric ...
-
-To scribe a tattoo you can roll as many Research Dice as you choose - if the number of failures exceed the number of successes, you fail (you win on a tie) and the materials are consumed.
-
-
+Tattoos can be inscribed on the body as specified below.  Creating a tattoo is a Silver craft (3 Research; 300\AG).  You can't move a tattoo from yourself to someone else - the tattoo stays with the person.  The tattoos below are the most common, but work out with the Arbiter if you want something more esoteric ...
 
 \myhighlight{Dagger (Limb)}{sorcerer-tattoo-dagger}
 
 Touching the dagger immediately brings it into your hand.  Place the dagger back on the limb returns it to being a tattoo.  The dagger is normal in all ways.
-
 
 \myhighlight{Torch (Limb)}{sorcerer-tattoo-torch}
 
@@ -397,7 +386,7 @@ Always points towards true north.
 
 \myhighlight{Quill and Scroll (Back)}{sorcerer-tattoo-quill-scroll}
 
-The quill can be removed as the Dagger, above - and given to someone else.  Anything that the other person writes with the quill will appear on the scroll ... painfully.  The writing disappears in Minutes.
+The quill can be removed as the Dagger, above - and given to someone else.  Anything that the other person writes with the quill will appear on the scroll tatooed on your Flesh ... painfully.  The writing disappears in Minutes.
 
 \myhighlight{Eye (Palm)}{sorcerer-tattoo-eye}
 
@@ -410,104 +399,73 @@ As Dagger above, 25m of rope. Needs to be completely rewound around the person t
 
 \myhighlight{Mermaid (chest or neck)}{sorcerer-tattoo-mermaid}
 
-The Sorcerer inscribes this tattoo on you and a \mylink{Wizard Sigil}{sigil-wizard} on a different object (usually a ship in a bottle or a scrimshawed whale bone).  You do not need to breathe to stay alive - you draw breath instead from the area immediately around the object.  This means that if the object is immersed in water, or sealed in an airtight container, you will suffocate.
+The Philosopher inscribes this tattoo on you and a \mylink{Wizard Sigil}{research-sigil-wizard} on a different object (usually a ship in a bottle or a scrimshawed whale bone).  You do not need to breathe to stay alive - you draw breath instead from the area immediately around the object.  This means that if the object is immersed in water, or sealed in an airtight container, you will suffocate.
+
+\mysubsection{Sigils}{research-inscription-sigils}
+
+Sigils are runes etched into surfaces.  Sigils glow slightly and exude arcane mystery, and are really obvious to everyone Nearby - but what the rune does is only interpretable with a successful Skill:Lore check.  The creation of a new Sigil causes any previous Sigils of the same type created by the Philosopher to vanish.
+
+A Sigil you encounter may be lifeless.  Sigils remain even after their magic is exhausted; only the Philosopher who created the Sigil can erase it from existence by placing a finger on it and reading its name aloud (note: the finger does not need to be attached to the hand, and the finger doesn't have to have flesh on it).  The power of the Sigil depends on the type created.
+
+Unless otherwise specified, a Sigil can only be placed on something that is generally immobile and not alive - a door, a wall, the floor, a statue, etc.  Philosophers are immune to their own Sigil's effects where appropriate.  Sigils are permanent unless noted (even if they are lifeless).
+
+\cbreak
+
+\large{\underline{\mybold{Iron Sigils} (1 Research, 100\FE)}}\normalsize
+
+\myanchor{\mybold{Chaining Sigil}}{research-sigil-chaining}  
+
+A Chaining Sigil can be scribed and "married" to another Sigil.  The Chaining Sigil must be created at the same time as its partner Sigil.  If a Chaining Sigil is erased by the Sorcerer who inscribed it, the Sigil it is partnered with will immediately manifest.  Chaining Sigils are permanent until dispelled.
+
+\myanchor{\mybold{Talking Sigil}}{research-sigil-talking} 
+
+When anyone comes Close to an object with a Talking Sigil on it, it will yell out a number of words at ear-splitting volume.  It will repeat these words a number of times, depending on the Research spent.
+
+Each additional word/time you want the Talking Sigil to speak, you must spend an additional +1 Research/+100\FE.
 
 
-
-\mysubsection{Sigils}{sorcerer-inscription-sigils}
-
-Sigils are runes etched into surfaces.  Sigils glow slightly and exude arcane mystery, and are really obvious to everyone Nearby - but what the rune does is only interpretable by other Sorcerers.  The creation of a new Sigil causes any previous Sigils of the same type created by the Sorcerer to vanish.
-
-A Sigil you encounter may be lifeless.  Sigils remain even after their magic is exhausted; only the Sorcerer who created the Sigil can erase it from existence by placing a finger on it and reading its name aloud (note: the finger does not need to be attached to the hand, and the finger doesn't have to have flesh on it).  A Sigil's power will manifest a number of times equal to the [dice] of Research Dice used to create it.  When a Sigil manifests, it will be Minutes before it can manifest again.
-
-\example {
-  Craps Bastogne inscribes a Talking Sigil using 3 Research Dice.  Some haphazard party comes down the hallway, and the glyph is triggered (screaming out "I'M BEING REPRESSED!" 3 times before falling quiet).  The Talking Sigil will manifest 2 more times before it's exhausted
-}
-
-The duration of the Sigil depends on the number of Research Dice being spent (the Talking Sigil above would last for Years, for example):
-
-  \mytable{l X}{
-    \thead{Research Dice} & \thead{Duration} \\
-  }{
-    1 & Weeks \\
-    2-3 & Months \\
-    4-5 & Years \\
-    6-7 & Permanent \\
-  }
-
-The Sigil you can etch depends on the number of successes you get on your Research Dice roll(s) and has a monetary cost in materials as well.  You must say which Sigil(s) you're inscribing and spend the money before you roll.  Unless otherwise specified, a Sigil can only be placed on something that is generally immobile and not alive - a door, a wall, the floor, a statue, etc.  
-
-Sorcerer's are immune to their own Sigil's effects where appropriate
-
-
-\myhighlight{Trivial Sigils}{sorcerer-sigils-trivial}
-
-\example { 
-  \mybold{Successes: 1}
-  ~\\
-  \mybold{\COST 50\FE}
-}
-
-\myanchor{\mybold{Chaining Sigil}}{sigil-chaining}  A Chaining Sigil can be scribed and "marrieD" to another Sigil.  The Chaining Sigil must be created at the same time as its partner Sigil.  If a Chaining Sigil is erased by the Sorcerer who inscribed it, the Sigil it is partnered with will immediately manifest.
-
-\myanchor{\mybold{Talking Sigil}}{sigil-talking} When anyone comes Close to an object with a Talking Sigil on it, it will yell out up to [dice] words at ear-splitting top volume [dice] times.
-
-
-\myanchor{\mybold{Wizard Sigil}}{sigil-wizard}
-
-The most basic Sigil, essentially just the Sorcerer's name - but necessary to allow a weapon, object, or person to be a receptacle for magic.  A Wizard Sigil is always permanent, no matter how many Research Dice are used.  Other Sorcerers can identify the owner of a Wizard Sigil using "Magical History" above.
-
-\myhighlight{Minor Sigils}{sorcerer-sigils-minor}
-
-\example { 
-  \mybold{Successes: 2}
-  ~\\
-  \mybold{\COST 50\AG}
-}
-
-
-\myanchor{\mybold{ Elemental Sigil}}{sigil-elemental}
-
-When anyone comes Close to an object with an Elemental Sigil on it, they are dealt \SUMDICE damage.  The inscriber chooses the elemental type (lightning, fire, etc).  Save for half damage.
-
-\myanchor{\mybold{ Warding Sigil}}{sigil-warding}
+\myanchor{\mybold{ Warding Sigil}}{research-sigil-warding}
 
 This glyph can only be placed on something that is closed : a book, a lock, a chest but not a sword in a scabbard or someone's mouth (Arbiter's discretion).  If the warded item is opened, the Sigil immediately becomes lifeless.
 
-When anyone comes Close to an item with a Warding Sigil on it, they must Save or move somewhere Nearby, back the way they came. 
+When anyone comes Close to an item with a Warding Sigil on it, they must Save or move somewhere Nearby, back the way they came.  
+
+For each 1 Research/100\FE you spend past the initial cost, the Warding Sigil affects a -2 modifier on the Save.
 
 
+\myanchor{\mybold{Wizard Sigil}}{research-sigil-wizard}
 
-\myhighlight{Major Sigils}{sorcerer-sigils-major}
-
-\example { 
-  \mybold{Successes: 3}
-  ~\\
-  \mybold{\COST 10\AU}
-}
-
-\myanchor{\mybold{ Cursing Sigil}}{sigil-cursing}
-
-This Sigil can only be created with the help of a Witch's \mylink{Malison}{occultism-malison}, or a \mylink{Mystic of Vecna}{small-god-vecna}.  The Curse is placed within the Sigil.  When anyone comes Close to an object with the Sigil on it, they must Save vs. Hexes or fall victim to the curse.  If there is more than 1 target, they should hold a Luck contest. 
-
-\myanchor{\mybold{ Petrifying Sigil}}{sigil-petrifying}
-
-When anyone comes Close to a Petrifying Sigil, they must Save or become Paralyzed.  The duration of the paralysis lasts until the Sigil becomes lifeless. You age while you are paralyzed.
-
-\myanchor{\mybold{Portal Sigil}}{sigil-portal}
-
-These must be placed on doors, gates, or entrances.  A Portal Sigil is placed on the threshold or top of one doorway and a Wizard Sigil is placed on another; the two doors are connected as if they are the same door.  Someone stepping through the Portal Sigil side will exit through the \mylink{Wizard Sigil}{sigil-wizard} side (but not vice-versa).  Erasing either Sigil closes the doorway.
-
-\myhighlight{Primary Sigils}{sorcerer-sigils-primary}
-
-\example { 
-  \mybold{Successes: 4}
-  ~\\
-  \mybold{\COST 100\AU}
-}
+The most basic Sigil, essentially just the Sorcerer's name - but necessary to allow a weapon, object, or person to be a receptacle for magic.  The inscriber of the Wizard Sigil can only be determined with a successful Skill:Lore role.
 
 
-\myanchor{\mybold{ Erasing Sigil }}{sigil-erasing}
+\large{\underline{\mybold{Silver Sigils} (3 Research, 300\AG)}}\normalsize
+
+\myanchor{\mybold{Cursing Sigil}}{research-sigil-cursing}
+
+This Sigil can only be created with the help of a Mystic, who must use Cunning to create the \mylink{Malison}{occultism-malison} that resides in the Sigil.  When anyone comes Close to an object with the Sigil on it, they must Save vs. Hexes or fall victim to the curse. If there is more than 1 target, they should hold a Luck contest.
+
+For each 1 Research/100\AG you spend past the initial cost, the Cursing Sigil affects a -2 modifier on the Save.
+
+
+\myanchor{\mybold{Elemental Sigil}}{research-sigil-elemental}
+
+When anyone comes Close to an object with an Elemental Sigil on it, they are dealt 5 elemental damage.  The inscriber chooses the elemental type (lightning, fire, etc).  Save for half damage.
+
+For each 1 Research/100\AG you spend past the initial cost, the Elemental Sigil deals +2 damage
+
+
+\myanchor{\mybold{ Petrifying Sigil}}{research-sigil-petrifying}
+
+When anyone comes Close to a Petrifying Sigil, they must Save or become Paralyzed.  The duration of the paralysis lasts until the Sigil is erased. You age while you are paralyzed.
+
+\myanchor{\mybold{Portal Sigil}}{research-sigil-portal}
+
+These must be placed on doors, gates, or entrances.  A Portal Sigil is placed on the threshold or top of one doorway and a Wizard Sigil is placed on another; the two doors are connected as if they are the same door.  Someone stepping through the Portal Sigil side will exit through the \mylink{Wizard Sigil}{research-sigil-wizard} side (but not vice-versa).  Erasing either Sigil closes the doorway.
+
+\large{\underline{\mybold{Gold Sigils} (5 Research, 500\AU)}}\normalsize
+
+
+\myanchor{\mybold{ Erasing Sigil }}{research-sigil-erasing}
 
 When anyone comes close to an Erasing Sigil, they must Save or suffer one of the effects below (roll a d6):
 
@@ -520,139 +478,33 @@ When anyone comes close to an Erasing Sigil, they must Save or suffer one of the
   \item Erases a person's Flesh and they are Dying
 }
 
+For each 1 Research/100\AU you spend past the initial cost, the Erasing Sigil affects a -2 modifier on the Save.
+
+\cbreak
+
+\myanchor{\mybold{Remembrance Sigil}}{research-sigil-remembrance}
+
+This Sigil can only be created with the help of a Spriggan, who will place one of the \mylink{Obliterated}{forgotten-obliterated} inside of the Sigil.  The maximum \HD of the creature starts at 2; for each 1 Research/100\AU you spend past the initial cost, this maximum is increased by +1.
+
+Anyone other than the Sorcerer or Spriggan who comes Close to the Remembrance Sigil will cause the Obliterated to come forth - very pissed off - and immediately attack.  If the Obliterated is slain, the Sigil will become lifeless.
+
+
+\myanchor{\mybold{Revisitation Sigil}}{research-sigil-revisitation}
+
+The Revisitation Sigil is scribed as normal (usually on a floor in the Sorcerer's laboratory) and a \mylink{Chaining Sigil}{research-sigil-chaining} is placed on another portable item.  When the Chaining Sigil is erased, the Sorcerer is transported to the location of the Revisitation Sigil.  
+
+For each 1 Research/100\AU you spend past the initial cost, you can bring 1 other Ally with you.
 
 \newpage
-
-
-\myanchor{\mybold{Remembrance Sigil}}{sigil-remembrance}
-
-When created with a Spriggan present, they can place one of the \mylink{Obliterated}{forgotten-obliterated} inside of the Sigil.  The summoning of the Obliterated does not "lock" the \mylink{Remembrance Dice}{spriggan-remembrance} of the Spriggan.  The Spriggan cannot use more Remembrance Dice than the Research Dice you used to create the Sigil (though they can use the same amount).  
-
-Anyone other than the Sorcerer or Spriggan who comes Close to the Remembrance Sigil will cause the Obliterated to come forth - very pissed off - and immediately attack.  If the Obliterated is slain, it will return to the Sigil over and over until the Sigil becomes lifeless.
-
-
-
-
-\myanchor{\mybold{Revisitation Sigil}}{sigil-revisitation}
-
-The Revisitation Sigil is scribed as normal (usually on a floor in the Sorcerer's laboratory) and a \mylink{Chaining Sigil}{sigil-chaining} is placed on another portable item.  When the Chaining Sigil is erased, the Sorcerer and up to [dice] others can be transported to the location of the Revisitation Sigil.  
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% MEDICINALS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 TK TK TK MEDICINALS????
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% STAFF MAGIC
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\mysection{Staff Magic}{sorcerer-staff-magic}
-
-A magical staff is a necessity for a Sorcerer to control more complex wizardry and mysteries.  A staff must be made out of a special material that should be worked out between you and the Arbiter.  The more powerful the staff, the better the material must be.  If you're making a low level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a high level staff, it might need to be the femur of the Great Wyrm Vermithrax.  
-
-All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will  prompt a \mylink{Wizards' Duel}{sorcerer-wizards-duel} if the opposing Sorcerer is present).
-
-The staff must have a \mylink{Wizard Sigil}{sigil-wizard} inscribed upon it, at which point the staff is bound to the Sorcerer. The staff in the hands of anyone else is just a normal quarterstaff (though obviously the staff will be of special material that can be made into a new staff). 
-
-A Staff is limited to 3 powers, but you can "mix and match" from any group as you wish (so the staff could have 2 Iron powers and 1 Gold power if you wanted). These are just the most common abilities; you're encouraged to work out additional abilities with the Arbiter.
-
-The second column of each table indicates if the ability can be bought more than once.  When you see \mybold{[num]} in a description, this is the number of times you bought the ability.
-
-\cbreak
 
 
 
-\mysubsection{Iron Powers}{staff-magic-iron-powers}
-
-\example { 
-  \mybold{Successes: 1}
-  ~\\
-  \mybold{\COST 500\FE}
-}
-
-  \mytable{X r}{
-    \thead{Effect} & \thead{Stackable} \\
-  }{
-     Use your \INT for Fight Rolls\footnote{Instead of \VIG} & No \\
-     +1 to damage & Yes \\
-     Safe Casting& Yes \\
-     Daze & No \\
-     All Saves +1 & No \\
-     Mitigation: Mishap to nothing & No \\
-     Anchor: d8 & No \\
-     Blood: 1 & No \\
-  }
-
-
-
-
-\mysubsection{Silver Powers}{staff-magic-silver-powers}
-\example { 
-  \mybold{Successes: 2}
-  ~\\
-  \mybold{\COST 1000\AG}
-}
-
-  \mytable{X r}{
-    \thead{Effect} & \thead{Stackable} \\
-  }{
-    Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
-     Damage \DCUP & No \\
-     Power Casting & Yes \\
-     Rend & No \\
-     All Saves +3 & No \\
-     Mitigation: Calamity to Mishap & No \\
-     Anchor: d10 & No \\
-     Blood: 2 & No \\
-  }
-
-\newpage
-
-\mysubsection{Gold Powers}{staff-magic-gold-powers}
-\example { 
-  \mybold{Successes: 3}
-  ~\\
-  \mybold{\COST 2500\AU}
-}
-
-  \mytable{X r}{
-    \thead{Effect} & \thead{Stackable} \\
-  }{
-     Use your \INT for Fight, Guard, and Init\footnote{Instead of \DEX} rolls & No \\
-     Damage \DCUP & Yes \\
-     Natural Casting & Yes \\
-     Cleave & No \\
-     All Saves 6-in-6 & No \\
-     Mitigation: Ruin to Calamity & No \\
-     Anchor: d12 & No \\
-     Blood: 3 & No \\
-  }
-
-\myhighlight{Anchor}{staff-magic-anchor}
-
-Changes the die you roll with your \INT when rolling a Torrent. 
-
-\myhighlight{Blood}{staff-magic-blood}
-
-Once per Session, you can tap into the power of the Staff directly and add 1 (Iron), 2 (Silver), or 3 (Gold) Blood Dice to your Pool.
-
-\myhighlight{Mitigation}{staff-magic-mitigation}
-
-Once per Session, Mitigation reduces the effect of a Ruin to a Calamity (Gold); a Calamity to a Mishap (Silver); and eliminates the effect of a Mishap (Iron).
-
-\myhighlight{Power Casting}{staff-magic-power casting}
-
-You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \mybold{[num]} times per Session  
-
-\myhighlight{Natural Casting}{staff-magic-natural casting}
-
-Your Blood Dice are only depleted on a natural 1 (instead of a 1 or 2). 
-
-\myhighlight{Safe Casting}{staff-magic-safe casting}
-
-You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) \mybold{[num]} times per Session.
 
 
 
