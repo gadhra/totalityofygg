@@ -14,17 +14,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\mysection{Staff Magic}{sorcerer-staff-magic}
+\mysection{Staff Magic}{wonder-staff-magic}
 
-A magical staff is a necessity for a Sorcerer to control more complex wizardry and mysteries.  A staff must be made out of a special material that should be worked out between you and the Arbiter.  The more powerful the staff, the better the material must be.  If you're making a low level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a high level staff, it might need to be the femur of the Great Wyrm Vermithrax.  
+A magical staff is a necessity for a Philosopher to control more complex wizardry and mysteries.  A staff must be made out of a special material that should be worked out between you and the Arbiter.  The more powerful the staff, the better the material must be.  If you're making a low level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a high level staff, it might need to be the femur of the Great Wyrm Vermithrax.  
 
-All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will  prompt a \mylink{Wizards' Duel}{sorcerer-wizards-duel} if the opposing Sorcerer is present).
+All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will  prompt a \mylink{Wizards' Duel}{sorcerer-wizards-duel} if the opposing wizard is present).
 
-The staff must have a \mylink{Wizard Sigil}{sigil-wizard} inscribed upon it, at which point the staff is bound to the Sorcerer. The staff in the hands of anyone else is just a normal quarterstaff (though obviously the staff will be of special material that can be made into a new staff). 
+If you do not wish anyone else to use this staff, it can be bound with a \mylink{Wizard Sigil}{research-sigil-wizard} created by you. As long as the staff has your Wizard Sigil on it, the staff is just a normal quarterstaff in anyone else's hands (though obviously made of special material!).
 
 A Staff is limited to 3 powers, but you can "mix and match" from any group as you wish (so the staff could have 2 Iron powers and 1 Gold power if you wanted). These are just the most common abilities; you're encouraged to work out additional abilities with the Arbiter.
 
-The second column of each table indicates if the ability can be bought more than once.  When you see \mybold{[num]} in a description, this is the number of times you bought the ability.
+The "Stackable" column in the table indicates if the ability can be bought more than once.  When you see \NUM in a description, this is the number of times you bought the ability.
 
 \cbreak
 
@@ -32,18 +32,16 @@ The second column of each table indicates if the ability can be bought more than
 
 \mysubsection{Iron Powers}{staff-magic-iron-powers}
 
-\example { 
-  \mybold{Successes: 1}
-  ~\\
-  \mybold{\COST 500\FE}
-}
+    \example { 
+        \COST  500\FE each
+    }
 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
      Use your \INT for Fight Rolls\footnote{Instead of \VIG} & No \\
      +1 to damage & Yes \\
-     Safe Casting& Yes \\
+     Safe Casting & Yes \\
      Daze & No \\
      All Saves +1 & No \\
      Mitigation: Mishap to nothing & No \\
@@ -55,20 +53,18 @@ The second column of each table indicates if the ability can be bought more than
 
 
 \mysubsection{Silver Powers}{staff-magic-silver-powers}
-\example { 
-  \mybold{Successes: 2}
-  ~\\
-  \mybold{\COST 1000\AG}
-}
+    \example { 
+      \COST 1000\AG each
+    }
 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-    Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
+     Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
      Damage \DCUP & No \\
      Power Casting & Yes \\
      Rend & No \\
-     All Saves +3 & No \\
+     All Saves +2 & No \\
      Mitigation: Calamity to Mishap & No \\
      Anchor: d10 & No \\
      Blood: 2 & No \\
@@ -78,27 +74,27 @@ The second column of each table indicates if the ability can be bought more than
 
 \mysubsection{Gold Powers}{staff-magic-gold-powers}
 \example { 
-  \mybold{Successes: 3}
-  ~\\
-  \mybold{\COST 2500\AU}
+  \COST 2500\AU each
 }
 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-     Use your \INT for Fight, Guard, and Init\footnote{Instead of \DEX} rolls & No \\
+     Use your \INT for Fight and Guard rolls.  Add +4 to these rolls. & No \\
      Damage \DCUP & Yes \\
      Natural Casting & Yes \\
      Cleave & No \\
-     All Saves 6-in-6 & No \\
+     All Saves +4 & No \\
      Mitigation: Ruin to Calamity & No \\
      Anchor: d12 & No \\
      Blood: 3 & No \\
   }
 
+\cbreak
+
 \myhighlight{Anchor}{staff-magic-anchor}
 
-Changes the die you roll with your \INT when rolling a Torrent. 
+Changes the die you roll with your \INT when rolling a Torrent, instead of a d6
 
 \myhighlight{Blood}{staff-magic-blood}
 
@@ -110,7 +106,7 @@ Once per Session, Mitigation reduces the effect of a Ruin to a Calamity (Gold); 
 
 \myhighlight{Power Casting}{staff-magic-power casting}
 
-You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \mybold{[num]} times per Session  
+You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \NUM times per Session  
 
 \myhighlight{Natural Casting}{staff-magic-natural casting}
 
@@ -118,7 +114,7 @@ Your Blood Dice are only depleted on a natural 1 (instead of a 1 or 2).
 
 \myhighlight{Safe Casting}{staff-magic-safe casting}
 
-You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) \mybold{[num]} times per Session.
+You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) \NUM times per Session.
 
 \newpage
 
@@ -158,20 +154,28 @@ Weapons are often named after their wielder or maker, and the powers of the rune
 
 \mylist {
 
-  \item Because Spriggan cannot handle iron, the material of the weapon must be exotic (silver, gold, etc) or otherworldly (adamantium, meteorite).  The material needs to be available and should be worked out with the Arbiter.  Only daggers, swords (long and short), and spears can be enchanted
+  \item You can place a maxiumum of 3 runes on a weapon
+
+  \item Because Spriggan can't handle iron, the material of the weapon must be exotic (silver, gold, etc) or otherworldly (adamantium, meteorite).  The material needs to be available and should be worked out with the Arbiter.  Only daggers, swords (long and short), and spears can be enchanted
 
   \item In order to accept an enchantment, the weapon must have a Mortal sigil, mark, or writ etched onto the blade, once for each Elfland Rune.  Archaic runes require a \mylink{Wizard Sigil}{sigil-wizard}, Fiendish runes require a \mylink{Witch Mark}{occultism-witch-mark}, and Seraphic runes require a \mylink{Holy Writ}{miracle-holy-writ}.
 
-  \item The weapons is enchanted with the help of the Abandoned.  You must use 4 Remembrance Die to summon one of the Abandoned whose True Name you know.  Each Abandoned can write a single Elfland Rune on the weapon.  The Abandoned can only write in the language that they know:  Archons can only write Archaic Runes, Fiends can only write Fiendish Runes, and Seraphs can only write Seraphic Runes.
+  \item The weapons is enchanted with the help of the Abandoned.  You must summon one of the Abandoned for each rune you wish to etch on the blade; each Abandoned can write a single Elfland Rune on the weapon.  The Abandoned can only write in the language that they know:  Archons can only write Archaic Runes, Fiends can only write Fiendish Runes, and Seraphs can only write Seraphic Runes.
 
-  \item  Aside from the cost of the weapon itself, you must pay for the materials necessary to perform the magic.  The 
-  The first Rune costs 5,000\FE in materials.  The second Rune costs 5,000\AG in materials.  The third (or more) Rune(s) cost 5,000\AU in materials.
+  \item  Aside from the cost of the weapon itself, you must pay for the materials necessary to perform the magic.  
+
+  \mybullet{
+    \item The first Rune costs 1,000\FE in materials.  
+    \item The second Rune costs 2,500\AG in materials.  
+    \item The third Rune cost 5,000\AU in materials.
+  }
 
 
 }
  
 The runes on the next page will get you started.  Feel free to work with the Arbiter for additional powers.  
 
+\newpage
 
 
 \mysubsection{Archaic Runes}{spriggan-archaic-runes}
@@ -198,7 +202,7 @@ The weapon has the Weapon Trait: Brutal
 
 \mybold{ Lucky}
 
-When in your hands, the weapon has a d4 \UD that can be used to add to any \RO attempt you're making. You can use this \UD to add to any \RO attempt you're making (including Fight and Guard).  The \UD is restored at the start of the next Session.
+The weapon has a d4 \UD that can be used to add to any \RO attempt you're making. You can use this \UD to add to any \RO attempt you're making (including Fight and Guard).  The \UD is restored at the start of the next Session.
 
 \mysubsection{Fiendish Runes}{spriggan-fiendish-runes}
 
@@ -221,7 +225,7 @@ The weapon's damage is \DCUP.  This Rune can be written more than once.
 \mybold{Flaming}
 
 
-In addition to its normal damage, the weapon deals +d4 fire damage.  On a Crit, the victim must make a Save vs. Doom or be lit on fire for d4 Markovian (+d3 damage at the start of every Moment).
+In addition to its normal damage, the weapon deals +d4 fire damage.  On a Crit, the victim must make a Save vs. Doom or be lit on fire for d4 Markovian (+d3 damage at the top of the Moment)
 
 \mybold{Icy}
 
@@ -234,29 +238,27 @@ In addition to its normal damage, the weapon deals +d4 ice damage.  On a Crit, t
 In addition to its normal damage, the weapon inflicts Bleeding when it hits Flesh.
 
 
-
-
 \mysubsection{Seraphic Runes}{spriggan-seraphic-runes}
 
 
 \mybold{ Hallowed}
 
 
-In addition to its normal damage, the weapon deals +d6 extra damage to the Unhallowed.  This Rune can be written more than once.
+In addition to its normal damage, the weapon deals +d4 extra damage to the Unhallowed.  This Rune can be written more than once.
 
 \mybold{ Indestructible}
 
 
-The weapon cannot be destroyed by non-magical means (acid, rust, etc.), and it gets a 6-in-6 Save against being destroyed by magical means (if it would normally not get a Save).
+The weapon cannot be destroyed by non-magical means (acid, rust, etc.), and it gets a +4 to its Saves against being destroyed by magical means (even if it would normally not get a Save).  The sword uses your Save vs Doom for its Saves.
 
 \mybold{ Tenacious}
 
-When in your hands, the weapon cannot be dropped unless you will it so.  If you are struck down, there is no way to remove the weapon from your hand short of cutting the hand off (which breaks the enchantment)
+The weapon cannot be dropped unless wielder wills it.  If you are struck down, there is no way to remove the weapon from your hand short of cutting the hand off (which breaks the enchantment)
 
 
 \mybold{ Infamous}
 
-When you deal a killing blow with this weapon, the victim's noumenon is briefly revealed (for most creatures, it appears as a small, vaporous homunculus which vanishes after a few moments).  This immediately forces a morale check for all enemies that are Close.
+When you deal a killing blow with this weapon, the victim's \myital{noumenon} is briefly revealed (for most creatures, it appears as a small, vaporous homunculus which vanishes after a few moments).  This immediately forces a morale check for all enemies that are Close.
 
 \mybold{ Vigilant}
 
