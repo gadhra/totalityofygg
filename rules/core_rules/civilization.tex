@@ -22,7 +22,11 @@
     100 fe (iron) = 10 ag (silver) = 1 au (gold)
   }
 
+
+
   Iron is the core of the monetary system, specifically the iron ingot (1kg of iron), which is equal to 100 iron coins.  It is not uncommon for iron coins to be smelted to forge the tools, weapons, and armor they pay for (particularly when various cities are trying to feed and arm their military).  
+
+  \cbreak
 
   Ingots of each type are common, and weigh 1kg each.  Every ingot you find is worth 100 of the coin type:
   \mybullet {
@@ -31,12 +35,18 @@
     \item 1 gold ingot = 1 kg gold = 100au (gold pieces)
   }
 
-  4 1kg ingots / 400 coins count as 1 \mylink{Significant Item}{equipment-encumbrance}.
+  4 1kg ingots / 400 coins count as 1 \mylink{Burden}{gear-burden}.
 
   \myhighlight{Coins}{civilization-coins}
 
   Whenever you see "coins" instead of a coin type, this means a coin appropriate to your \LVL.  Levels 1-2 are the Iron levels (fe), levels 3-5 are the Silver levels (ag), and levels 6+ are the Gold levels (au)
 
+  \begin{center}
+  \includegraphics{Moneychanger}
+  \end{center}
+
+
+\newpage
 
   \mysection{Settlements}{settlements}
 
@@ -56,8 +66,9 @@
     Big towns and cities (100,000+ people).  The "gold" settlements.  Large settlements deal almost entirely in gold.  Trying to spend iron pieces in a metropolis would be met with disdain, like trying to pay your cab fare with pennies (and unlike modern civilization, no one is under any obligation to honor your tender if they don't feel like it).
   }
 
-  The size of the settlement is important when it comes to longer rests, spending treasure, and finding \mylink{equipment}{equipment-gear}, \mylink{services}{civilization-services}, and \mylink{hirelings}{gear-hirelings}.
+  The size of the settlement is important when it comes to longer rests, spending treasure, and finding \mylink{equipment}{equipment}, \mylink{services}{civilization-services}, and \mylink{hirelings}{gear-hirelings}.
 
+  \cbreak
 
   \mysubsection{Taking a Vacation}{civilization-vacation}
   
@@ -83,19 +94,26 @@
     \item Restore all Blood \POOL (Sorcerers)
     \item Restore all Mojo \UD
     \item Restore all Grace \POOL (Mystics)
-    \item Restore all Remembrance dice (Spriggan)
+    \item Restore all Remembrance (Spriggan)
   }
 
   \cbreak
 
-  In addion, you can:
+  In addion, you can do the following (explained in detail in \mybold{Bell, Book, \& Candle}:
 
   \mybullet {
-    \item  Perform Research, Marvels, or Wonders
-    \item  Seek the help of witches, chymists, apothecaries, and leeches to heal Wounds, cure Diseases, cure Addiction, and remove Curses
+    \item  Perform Research and Marvels, or create Wonders
+    \item  Cure Disease, remove Addiction, or expel a curse
+    \item  Heal a Beating, Madness, or Life Drain
   }
 
-  These are all covered in Bell, Book, \& Candle.
+  \cbreak
+
+  \begin{center}
+  \includegraphics{Vacation}
+  \end{center}
+
+
 
   \newpage
   \end{multicols}
@@ -105,29 +123,38 @@
   Not all Settlements have all the services an adventurer may require:
 
   \mybullet {
-    \item You'll need a Trader to buy \mylink{Adventuring Gear}{gear-adventuring}; otherwise, there's only a 1-in-6 chance that the Settlement has something you're looking for.
-    \item You'll need a Leatherworker to \mylink{repair Light Armor}{gear-armor-repair}
-    \item You'll have to pay a Smith to \mylink{repair Medium or Heavy Armor}{gear-armor-repair}, or to buy \mylink{weapons}{gear-weapons}
+    \item You'll need a Trader to buy \mylink{Adventuring Gear}{gear-adventuring}; otherwise, there's only a 1-in-6 chance that the Settlement has something you're looking for (including weapons and armor if a Leatherworker or Smith isn't present)
+    \item You'll need a Leatherworker to \mylink{buy or repair Light Armor}{gear-armor-repair}
+    \item You'll have to pay a Smith to \mylink{buy or repair Medium or Heavy Armor}{gear-armor-repair}, or to buy \mylink{weapons}{gear-weapons}
     \item Not all Settlements have shrines or chapels to specific Small Gods, so their worshippers may not be present
     \item You'll need to know if there's an apothecary or ... less savory type ... who can sell you \mylink{Narcotics}{gear-narcotics} 
-    \item You'll need a Library in order to use any Research Dice
-    \item You may need to visit a sanitarium, wisewoman, doctor, or cunning man to heal your Wounds
+    \item You'll need a Library in order to use Research (Chymistry, Inscription, and Medicinals)
+    \item You'll need a Sanitarium in order to use Research on Medicinals (if a Library isn't present)
+    \item If you don't have access to Medicinals or a Hekaphage, you'll need a Miracle Worker (wisewoman, witch, chymist, apothecary, leech, etc) to cure Disease; remove Addiction; expel a Curse; or heal a Beating, Madness, or Life Drain
   }
 
-  These are the basic odds of you finding what you need.  The Arbiter can feel free to ignore these results if she chooses!
+
+  These are the basic odds of you finding a service you need are an x-in-6 (for example, if you see 2-in-6, that means the service is present if you  roll a 1 or a 2 on a d6).
+
+  The Arbiter can feel free to ignore these results if she chooses!
 
   \mytable{X c c c c}{
     \thead{} & \thead{Tiny} & \thead{Small} & \thead{Medium} & \thead{Large} \\
   }{
-    Trader? & No & 4-in-6 & 6-in-6 & 6-in-6 \\
-    Leatherworker? & No & 4-in-6 & 6-in-6 & 6-in-6 \\
+    Trader? & 1-in-6 & 4-in-6 & 6-in-6 & 6-in-6 \\
+    Leatherworker? & 1-in-6 & 4-in-6 & 6-in-6 & 6-in-6 \\
     Smith? & No & 1-in-6 & 6-in-6 & 6-in-6 \\
     Shrine to a specific Small God? & No & 1-in-6 & 3-in-6 & 6-in-6 \\
-    Library? & No & 1-in-6 & 3-in-6 & 6-in-6 \\
+    Library? & No & 2-in-6 & 4-in-6 & 6-in-6 \\
     Narcotics? & No & \MAX-in-6 & 6-in-6 & 6-in-6 \\
-    Sanitarium? & No & No & 2-in-6 & 6-in-6 \\
-    Witch/Wisewoman? & 3-in-6 & 6-in-6 & 3-in-6 & No \\
+    Sanitarium? & No & 1-in-6 & 3-in-6 & 6-in-6 \\
+    Miracle Worker? & 6-in-6 & 5-in-6 & 4-in-6 & 3-in-6 \\
   }
+
+    \begin{center}
+  \includegraphics{Dagger}
+  \end{center}
+
 
   \newpage
 
