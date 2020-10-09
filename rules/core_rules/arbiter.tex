@@ -88,18 +88,25 @@
 
   These effects stack - so making your Talent roll + Save vs. Doom will reduce the amount of damage by 75\%.  Roll the check and Save before you apply damage to Armor or Flesh.  If falling means you are \mylink{Dying}{combat-dying}, you also take the effects of \mylink{Bleeding}{effect-bleeding} and \mylink{Knocked Out}{effect-knocked-out}
 
+
+
 \mysubsection{Swimming}{arbiter-movement-swimming}
 
 Swimming is fairly straightforward:
 
 \mybullet {
-    \item   If the adventurer is in Combat, all Actions are take twice as long i.e.  it will take them two Maneuvers to move from Close to Nearby, two Maneuvers to get something from their pack, etc.
+    \item   If the adventurer is in Combat, all Actions take twice as long i.e.  it will take them two Maneuvers to move from Close to Nearby, two Maneuvers to get something from their pack, etc.
     \item   The adventurer is unable to Fight or Guard while swimming
     \item   The adventurer cannot be carrying any Significant Items
 }
 
 Adventurers are heroic, so they should generally be able to swim long distances without any additional checks.  However, in high seas or over very long distances, the Arbiter can have the advenuturer attempt a Skill:Salt check.  If they fail, they begin drowning unless they can breathe underwater.  Each time they fail their Skill:Salt roll, they must make a \DEATH roll.  Each time they fail thereafter, they receive a -2 cumulative modifier (-2 the first time, -4 the second, -6 the third, etc).  
 
+  \myhighlight{Removing Armor}{gear-armor-removal} 
+
+  Helmets, Shields, and Light Armor take Moments to remove.  Medium and Heavy Armor take Minutes to remove.
+
+\cbreak
 
   \mysubsection{Random Encounters}{arbiter-movement-random-encounters}
 
@@ -109,17 +116,23 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 
   If the adventurers are crossing an area that is dangerous, or where time is of the essence, give the room a total number that you need to roll to cross it.  Every \MD roll takes a Moment - so crossing the room with a movement number of 12 will require at least 3 Moments for the adventurer in Heavy Plate (3d4), while the guy in a nightshirt has a 45\% to do it in one shot.
 
-  \end{multicols}
+
+  \begin{center}
+  \includegraphics{Ruins}
+  \end{center}
+
+ 
+
+ \end{multicols}
+
 
   \mysection{Knavery}{arbiter-knave}
 
-   First - a \KNAVE roll should only be required if the difference between success and failure would be interesting, or when the attempt shouldn't be an automatic success.
+   First - a \KNAVE roll should only be required if the difference between success and failure would be interesting, or when the attempt shouldn't be an automatic success.  If either of these cases are true, let the Knave succeed without rolling anything.
 
-  Setting a difficulty for a Knave's \mylink{Whisper}{knave-whispers} abilities means picking a number between 2 and 9. If you set it at 9, it's really only doable by a Knave who's level 8 or 9.  The following chart shows the odds by level for a straight roll (first table) and a roll using common Luck configurations (second table).  
+  Setting a difficulty for a Knave's \mylink{Whisper}{knave-whispers} abilities means picking a number between 2 and 9 (remember the Adventurer can only add a \MAX of +4 to their \KNAVE roll with their Luck).
 
-  \begin{center}
-  \includegraphics[scale=.7]{Knavery}
-  \end{center}
+
 
   \begin{multicols}{2}
 
@@ -142,7 +155,7 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 
        \mybold{Traps:} assign two difficulties - the difficulty of \mybold{finding} the trap and the difficulty of \mybold{disarming} a trap.  A hunter's snare or goblin trap might be a 2 or 3; a elaborate Rube Goldeberg trap in a mummy's tomb might be a 5; an invisible tripwire that triggers an explosion might be a 7; a trap designed by an Grimtooth might be a 9.
 
-      Inscribed Sigils\footnote{See Bell, Book, and Candle} can also be disarmed with the Whispers of Sun Wukong. Trivial Sigils are a 3, Minor Sigils are a 5, Major Sigils are a 7, and Primary Sigils are a 9.
+      Inscribed Sigils\footnote{See Bell, Book, and Candle} can also be disarmed with the Whispers of Sun Wukong. Iron Sigils are a 3, Silver Sigils are a 6, and Primary Sigils are a 9.
 
 
     \mybold{\mylink{Whispers of The Bride}{knave-virtue-the-bride}}
@@ -198,7 +211,6 @@ If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do,
   \mysubsection{Bad Weather}{arbiter-travel-weather}
   You hit appropriate bad weather (snowstorm, sandstorm, torrential downpour, etc).  Someone in your party must roll their Skill: Travel.  If they succeed, nothing happens.  If they fail, roll a d3:  1) roll your Party Provisions, 2) you're Lost, 3) you run into Hostilities.
 
-  \newpage
 
   \mysubsection{Lost}{arbiter-travel-lost}
   This can only happen if you are \myital{not} on a road. If you're traveling by road, you can ignore this result.
@@ -209,8 +221,6 @@ If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do,
   \mysubsection{Hostiles}{arbiter-travel-hostiles}
 
   Roll on your random monster table for this area
-
-  \cbreak
 
   \mysubsection{Something Interesting}{arbiter-travel-pointofinterest}
 
@@ -286,18 +296,20 @@ Soak is a general term to represent a damage threshold because of armor, thick s
  \mysubsection{Basic Monster Stats}{monster-basic-stats} 
 
   \mytable{X c c c}{
-  \thead{\HD} & \thead{Damage} & \thead{Weakness} & \thead{Base Save (x-in-6)} \\ 
-   0\footnote{0 \HD means the Monster has 1 Health} & d3 &  d24 & 1 \\
-   1 & d4 &  d24 & 1 \\
-   2 & d6 &  d20 & 2 \\
-   3 & 2d4 &  d20 & 2 \\
-   4 & d10 &  d16 & 3 \\
-   5 & d12 &  d16 & 3 \\
-   6 & d6+d8 &  d12 & 4 \\
-   7 & 2d8 &  d10 & 4 \\
-   8 & 2d10 &  d6 & 5 \\
-   9 & d10+d12 &  d3 & 6 \\
+  \thead{\HD} & \thead{Damage} & \thead{Weakness} & \thead{Save Die} \\ 
+   0\footnote{0 \HD means the Monster has 1 Health} & d3 &  d24 & d3 \\
+   1 & d4 &  d24 & d4 \\
+   2 & d6 &  d20 & d6 \\
+   3 & 2d4 &  d20 & d8 \\
+   4 & d10 &  d16 & d10 \\
+   5 & d12 &  d16 & d12 \\
+   6 & d6+d8 &  d12 & d16 \\
+   7 & 2d8 &  d10 & d20 \\
+   8 & 2d10 &  d6 & d24 \\
+   9 & d10+d12 &  d3 & d24+4 \\
  }
+
+
 
 
 \MONSTERBLOCK[
@@ -436,7 +448,7 @@ This is just a general overview of the Monsters you might encounter in the Total
     \item[$\square$]  Use the {Services}{civilization-services} chart for Leatherworkers, Smiths, Traders, Narcotics, etc. if the adventurers go "shopping" or are trying to find something specific.  Let them spend their money and assign them XP as they go.
     \item[$\square$]  Ask if anyone is going \mylink{Carousing}{advancement-carousing} (do they have a Pooka?)
     \item[$\square$]  Check if anyone \mylink{gained a level}{advancement-leveling}
-    \item[$\square$]  Check if anyone is using any Research, Cunning, or Faith; or attempting to create a Staff, Caduceus, or Magic Sword
+    \item[$\square$]  Check if anyone is using any Research, Cunning, or Faith; or attempting to create a weapon with Staff Magic or Sword Magic
   }
 
 
