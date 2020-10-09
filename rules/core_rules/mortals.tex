@@ -51,7 +51,8 @@
     How heavy this axe \\
     Burden carried from birth \\
     Wrought in Stygian visions \\
-    By the gods of the earth \Tilde The Sword, "How Heavy this Axe"
+    By the gods of the earth \\
+    \Tilde The Sword, "How Heavy this Axe"
   }
 
   \mysubsection{Base Stats}{sellsword-base-stats}
@@ -72,7 +73,7 @@
   The Deed Die is a \UD whose result can be applied to any of your Fight checks. Roll the Deed Die and add its result to your Fight roll; if you hit, also add the result to your damage (applied \mybold{after} the die explodes, if applicable).  You can roll your Deed Die \myital{after} your Fight check is rolled (it doesn't have to be at the same time), but you can only roll it once per Moment.  Don't forget that this is a \UD, so it moves \DCDOWN if you roll a 1 or a 2.  You get a Deed Die back when you take a \mylink{Vacation}{civilization-vacation}.
 
     \begin{center}
-  \includegraphics[scale=.45]{Sellsword_1}
+  \includegraphics{Sellsword_1}
   \end{center}
 
 
@@ -380,7 +381,7 @@
     \mysubsection{Whispers}{knave-whispers}
 
     \example {
-        \RB: \KNAVE (optional: \PLUS \LUCK - Difficulty) vs. Difficulty
+        \RB: \KNAVE + Modifiers vs. Target
     } 
 
     Whispers are the disciplines, incantations, hedge magic, illusion, sleight-of-hand, and minor telepathy that constitute the \mybold{Left Hand Path}.  Passed down through instruction, ancient books, and word-of-mouth, Whispers allow you to trick reality into doing what you want.
@@ -402,14 +403,14 @@
 
     Rolling your \KNAVE should only be required by the Arbiter if the difference between success and failure would be interesting, or when the attempt shouldn't be an automatic success.
 
-    If the Arbiter decides the roll is required, she will set a Difficulty (a number between 1 and 9) for the roll (details on difficulty are found in the Arbiter's section on \mylink{Knavery}{arbiter-knave}).  \RB than this number using your \KNAVE (ties go to the Adventurer!)
+    If the Arbiter decides the roll is required, she will set a Target (a number between 2 and 9) for the roll (details on difficulty are found in the Arbiter's section on \mylink{Knavery}{arbiter-knave}).  \RB than this number using your \KNAVE (ties go to the Adventurer!)
 
-    You may use your \LUCK to affect your \KNAVE roll, but \mybold{the Difficulty is subtracted from your Luck roll}.  You cannot go below 0 in this way.  Again, see the section on \mylink{Knavery}{arbiter-knave} in the Arbiter's section to get a sense of your odds of success.
+    You may use your \LUCK to affect your \KNAVE roll, but it can never provide more than a +4 Modifier.
 
 
 
     \example {
-      Flink Lighthand is 3rd level and a Footpad in the Whispers of Sun Wukong (so he has d6 \KNAVE and d6 \LUCK), and he's robbing a crypt.  Creeping down a hallway he peeks through the broken door of an antechamber, and sees the glint of gold at the far end.  Flink's sixth-sense is tingling though, and he asks the Arbiter if he sees any traps in here.  The Arbiter knows there's a cunning poisoned spear trap in the room and assigns a difficulty of 4/2 to it (4 to find it and 2 to disarm it).  Flink rolls his \KNAVE and gets a 4 - he smells a whiff of tarantula venom in the air, and the large flagstone just inside the door seems to shimmer for a moment.  Bending close to the flagstone that would release the trap, Flink whispers to it and asks it to lock in place.  He rolls again ... and gets a 1!  Thinking quickly, Flink rolls his \LUCK and rolls a 4.  He has to subtract the 2 difficulty from this roll and gets a total of 3 (1 + (4 - 2)).  Lucky break, he's able to recover, and the trap mechanism disarms.
+      Flink Lighthand is 3rd level and a Footpad in the Whispers of Sun Wukong (so he has d6 \KNAVE and d6 \LUCK), and he's robbing a crypt.  Creeping down a hallway he peeks through the broken door of an antechamber, and sees the glint of gold at the far end.  Flink's sixth-sense is tingling though, and he asks the Arbiter if he sees any traps in here.  The Arbiter knows there's a cunning poisoned spear trap in the room and assigns a Target of 4/2 to it (4 to find it and 2 to disarm it).  Flink rolls his \KNAVE and gets a 4 - he smells a whiff of tarantula venom in the air, and the large flagstone just inside the door seems to shimmer for a moment.  Bending close to the flagstone that would release the trap, Flink whispers to it and asks it to lock in place.  He rolls again ... and gets a 1!  Thinking quickly, Flink rolls his \LUCK and rolls a 4.  He adds 4 to his roll, making it a 5.  Lucky break - he mixed up the words of the Whisper, but it worked out better than he hoped.
     }
 
 
@@ -421,7 +422,7 @@
 
     Br'er Rabbit (The Curious) knows a thing or two about tight squeezes.  His Whispers can help you remove items from pockets without anyone seeing; perform sleight-of-hand, ventriloquism, and distraction to befuddle your marks; escape from ropes and manacles; and cast spells from Fetishes.  If you are a student of the Whispers of Br'er Rabbit, you can turn Invisible (as the spell) once per Session.
 
-    When casting spells from a Fetish, you roll your \KNAVE for the Whispers of Br'er Rabbit instead of Blood Dice.  You can add the result of a \LUCK to this roll as well. The difficulty of reading a spell off a specific Fetish is up to the Arbiter, but the difficulty should default to 0.   
+    When casting spells from a Fetish, you roll your \KNAVE for the Whispers of Br'er Rabbit instead of Blood Dice.  You can add the result of a \LUCK to this roll as well. The difficulty of reading a spell off a specific Fetish is up to the Arbiter, but the difficulty should default to "automatic"  
 
     \myhighlight{Whispers of Sun Wukong}{knave-whisper-sun-wukong}
 
@@ -489,7 +490,7 @@
 
     \myhighlight{Cursed}{knave-complication-cursed}
 
-    Probably should have left that amulet alone.  Roll on the TK TK TK Curse table - you start the game under that curse.  Tell the Arbiter how you acquired this curse.
+    Probably should have left that amulet alone.  Roll on the Curse table in Bell, Book, \& Candle - you start the game under that curse.  Tell the Arbiter how you acquired this curse.
 
     \myhighlight{Expensive Tastes}{knave-complication-tastes}
 
@@ -635,7 +636,8 @@
       \item a suit of Light or Medium armor (incompatible with Wizardry);
       \item 5 picks from the \mylink{Adventuring Gear}{gear-adventuring} table;
       \item a pouch of 3 gems (roll on the \mylink{Gems table}{appendixb-random-treasure} in Appendix B);
-      \item d4 \UD of a Narcotic of your choice 
+      \item d4 \UD of a Narcotic of your choice;
+      \item a Staff or Caduceus with 1 Iron ability (see Bell, Book, and \& Candle: Staff Magic)
     }}
 
   \myhighlight{The Crux of Blood}{philosopher-virtue-blood}
@@ -648,7 +650,8 @@
 
   Magic exists.  Undeniably.  To say otherwise would be to defy what we know.  But those who try to control \myital{arcana} are buffeted by it, controlled by it, consumed by it.  Slain by it.  Science though - that is \myital{our} creation.  It exists to serve - humble, obedient, and aloof.  Few have the discipline to seduce it; it takes a lifetime of dedication, a lifetime of asking "why?" over and over again and knowing that there will be no end to the question.  "Why?" will reverberate in the heavens when the last star winks out.  "Why?" is a quest, a calling.  It drives us to travel the heights and depths, tame the riches of the world, cheat death and defy Chance and spit in the face of Luck.  When you walk the path of "Why?", you follow in the footsteps of Gods.
 
-  You gain 1 d8 Knowledge \STATIC; you can use this \STATIC to practice Leechcraft.\footnotemark[\value{footnote}]
+
+  You gain 1 d10 Knowledge \STATIC; you can use this \STATIC to practice Leechcraft.\footnotemark[\value{footnote}]
 
   \myhighlight{Intangibles}{philosopher-virtue-intangibles}
 
@@ -787,7 +790,7 @@
   \flavor{Creedsmen roll out across the dying dawn - Sacred Israel holy mountain Zion - Sun beams down on to the sandsea reigns - Caravan migrates through deep sandscape - Lungsmen unearth the creed of Hasheeshian - Procession of the weed-priests to cross the sands - Desert legion smoke-covenant is complete - Herb bales re-tied on to backs of beasts - Arise arise arise - The Son of the God of Israel - Jordan river flows on evermore - Bathe in glow of sunlight's beating rays - They feel the serpent's standard rule our day \Tilde Sleep, "Dopesmoker"}
 
     \begin{center}
-  \includegraphics[scale=.38]{Mystic}
+  \includegraphics{Mystic}
   \end{center}
 
   \cbreak
@@ -854,7 +857,7 @@
 
     True magic is not written. It is passed down, mother to daughter, since the very beginning.  It is richly colored, deeply echoing, singing in the rivers and whispering through the leaves.  The Philosopher seeks it in the Void or inside some book or rattling around at the edges of madness, but that is false magic, waiting to betray.  True magic is the pulling of a baby from the womb, knitting bones and purging poisons, reading the entrails and speaking with the crickets and seeing the patterns in the smokes. This is not some power that is beyond mortal reckoning, but a power that is here for anyone - from king to mudlark - to harness for weal or woe.
 
-    You gain 1 d8 Mojo \UD; you can use this \UD to protect yourself, harm your enemies, perform Occult Marvels, and practice the Virtue of Necromancy\footnotemark
+    You gain 1 d8 Mojo \UD; you can use this \UD to protect yourself, harm your enemies, perform Occult Marvels, and practice the Virtue of Necromancy\footnotemark[\value{footnote}]
 
     \myhighlight{The Crux of Faith}{mystic-virtue-faith}
   
@@ -959,6 +962,9 @@
   \myhighlight{Vow of Poverty}{mystic-vow-of-poverty}
 
   You have taken a vow of poverty.  You will never possess more money than you need to live a basic existence; you live as humbly as you possibly can.  You still insist on your full share of treasure, but you will donate it or give it away.  The donation must be anonymous, and you cannot gain Faith in this way (though you can gain XP if you spend this money during a \mylink{Vacation}{civilization-vacation}).
+
+\newpage
+
 
   \mysubsection{Starting Gear}{mystic-starting-gear}
 
