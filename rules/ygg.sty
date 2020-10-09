@@ -171,16 +171,18 @@
 \newcommand{\paradigmglyph}{\FAS{\faAnkh}}
 %paradigm
 \newcommand{\saveglyph}{\FAS{\faSaveR}}
-
+%reversible
+\newcommand{\reverseglyph}{\FAS{\faAlternateUndo}}
 
 
 %text abbreviations
 \newcommand{\LVL}{{\fftext \textbf{[lvl] }}}
 \newcommand{\MAX}{{\fftext \textbf{[max] }}}
+\newcommand{\NUM}{{\fftext \textbf{[num] }}}
 \newcommand{\SUM}{{\fftext \textbf{[sum] }}}
-\newcommand{\FE}{{\fftext{fe}}}
-\newcommand{\AU}{{\fftext{ag}}}
-\newcommand{\AG}{{\fftext{au}}}
+\newcommand{\FE}{{\fftext{fe}}~}
+\newcommand{\AU}{{\fftext{au}}~}
+\newcommand{\AG}{{\fftext{ag}}~}
 
 
 % Dice
@@ -224,6 +226,7 @@
 
 \newcommand{\PARADIGM}{\fftext \textbf{\paradigmglyph}~}
 \newcommand{\KEYWORD}{\fftext \textbf{\keywordglyph}~}
+\newcommand{\REVERSE}{\fftext \textbf{\reverseglyph}~}
 \newcommand{\SAVE}{\fftext {\saveglyph}}
 
 \newcommand{\DubArrw}{{\fftext \textbf{\ffstixmath{\char"21D4}}~}}
@@ -445,47 +448,43 @@
 
 % --- ARCANCA ------------------------------------------------------------
 
-\newkeycommand{\LEECHCRAFT}[Name=,Link=,Mod=,Length=,Keywords=]
+\newkeycommand{\LEECHCRAFT}[Name=,Link=,Target=,Keywords=,Reversible=]
 {%
   \setlength{\arrayrulewidth}{0mm}
+
   \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\commandkey{Name}}\zlabel{\commandkey{Link}}
 ,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
-    \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{|l|X|l|X|}
-    \hline
-    \rowcolor{silver}
-    \MOD & \commandkey{Mod} & \LENGTH & \commandkey{Length} \\
-    \KEYWORD & \commandkey{Keywords} & ~ \\
-    \hline
-    \end{tabularx}\vspace{2pt plus 6pt}
+    \mytable{X X}{}
+    {
+        \mybold{\TARGET} & \commandkey{Target} \\
+        \mybold{\REVERSE} & \commandkey{Reversible} \\
+        \KEYWORD & \commandkey{Keywords}   \\
+    }
+
     \end{tcolorbox}
   }
 }
 
 
 
-\newkeycommand{\NECRO}[Name=,Link=,Paradigm=,Save=,Duration=,Mod=,Keywords=,Target=]
+\newkeycommand{\NECRO}[Name=,Link=,Paradigm=,Save=,Duration=,Keywords=,Target=]
 {%
+
   \setlength{\arrayrulewidth}{0mm}
   \renewcommand{\arraystretch}{1.5}{
-    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\subsubsection{\commandkey{Name}}\zlabel{\commandkey{Link}}}
+    \begin{tcolorbox}[width=\linewidth,colback=gainsboro!1!white,fonttitle=\fftext\large,title=\hypertarget{\commandkey{Link}}{\commandkey{Name}}\zlabel{\commandkey{Link}}
 ,sharp corners=all]
     \vspace{2pt plus 6pt}%
     \noindent%
-    \rowcolors[]{1}{silver}{}%
-    \begin{tabularx}{\linewidth}{XXXX|l}
-    \hline
-    \rowcolor{silver}
-    \mybold{\PARADIGM} & \commandkey{Paradigm} & \mybold{Save} & \commandkey{Save} \\
-    \multicolumn{4}{l}{\mybold{\DURATION} \commandkey{Duration}} \\
-    \mybold{\MOD} & \commandkey{Mod} & \mybold{\KEYWORD} & \commandkey{Keywords}  \\
-    \hline
-    \end{tabularx}\vspace{2pt plus 6pt}
-    \tcblower
-    \TARGET : \commandkey{Target}
+    \mytable{l X l X}{}
+    {
+        \mybold{\TARGET} & \commandkey{Target} & \mybold{\SAVE} & \commandkey{Save} \\
+        \mybold{\DURATION} & \commandkey{Duration} & \mybold{\PARADIGM} & \commandkey{Paradigm}  \\
+    }
+
     \end{tcolorbox}
   }
 }
@@ -626,7 +625,8 @@
 % some usefull default pdf settings
 % this needs to go last in order to generate
 % a PDF index
-\usepackage{hyperref}
+\usepackage[breaklinks]{hyperref}
+
 \hypersetup{
   pdfpagelayout=TwoPageRight,
   pdfstartview=Fit,
