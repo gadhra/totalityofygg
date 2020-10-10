@@ -43,6 +43,9 @@ If you have 0 Blood Die in your pool, you can try to cast your Wizardry directly
 
 If you succeed, you can add a Blood Die to the spell.  You can do this as many times as you like for each spell. If you fail any \RO attempt, the spell fails and you suffer a \mylink{Calamity}{table-calamities}.
 
+  \begin{center}
+  \includegraphics[scale=.5]{Philosopher_1}
+  \end{center}
 
 
 \mysubsection{Components}{philosopher-components}
@@ -72,6 +75,55 @@ If you cast a spell with a Component, then you only burn a Blood die if you roll
 }
 
 
+\mysubsection{Grimoires}{philosopher-grimoires}
+
+Grimoires are solid, with thick vellum pages and a sturdy cover. Special runes and symbols trap spells inside cages of crystallized thought. Each book contains enought room for 10 spells. Some spells must be stored across several pages for safety, so the books contain more than 10 pages, and have
+plenty of room for notes, ledgers, or sketches - and curses, hexes, coded and cryptic entries written with poisonous and hallucinogenic inks. Grimoires start in a waterproof, acid- and fire-resistant bag. Outside the bag, they are not waterproof and are quite flammable. See the section on
+\mylink{Inscription}{research-inscription} for more details.
+
+
+\mysubsection{Fetishes}{philosopher-fetishes}
+
+Fetishes are inscribed with a single spell from your grimoire, cranium, or another fetish.  All fetishes have a \UD of d4 - when the \UD is exhausted, the magical words disappear from the fetish.  A Sorcerer's skull counts as a fetish, though obviously the brain can't be in the way if you want to read
+it.  See the section on \mylink{Inscription}{research-inscription} for more details.
+
+You may cast the spell from the Fetish with any number of Blood you choose, OR you may forgo the Blood die and roll a single d6 for the effect.
+
+\mysubsection{Wizards' Duel}{philosopher-wizards-duel}
+
+Certain spells can be countered by other spells - for example,
+\mylink{Balthazar's Breathtaking
+Blast}{wizardry-balthazars-breathtaking-blast} can be countered by
+\mylink{Mighty Lungs}{wizardry-mighty-lungs}, and
+\mylink{Invisibility}{wizardry-invisibility} can be dispelled by the wisps
+summoned in the \mylink{Fool's Fire}{wizardry-fools-fire} spell. 
+
+If you attempt to counter a spell and the Sorcerer who cast it is not
+present (that is, not somewhere Close, Nearby, Far-Away, or Distant) you
+automatically succeed.  Otherwise, you enter into a duel with the other
+Sorcerer.
+
+Each Sorcerer must \RB : \INT, adding their \LVL and the \DICE invested in
+the spell as well as any other modifiers.  
+
+\example {
+  \mybold{A Wizards' Duel is}
+  \RB : \INT plus \LVL plus \DICE
+}
+
+
+The winner's spell stays, the loser's spell goes.  Put another way: 
+
+\mybullet{
+  \item If you are countering a spell and you win, the spell you're
+attempting to counter is dispelled and your spell takes effect
+  \item If you are countering a spell and you lose, the spell you're
+attempting counter remains and your spell fizzles with no effect.
+}
+
+If you attempt to counter a spell and you roll a \mylink{Calamity}{table-calamities} or \mylink{Ruin}{table-ruin}, the counterspell doesn't work. 
+
+
 \newpage
 
 
@@ -81,39 +133,44 @@ If you cast a spell with a Component, then you only burn a Blood die if you roll
 
  \mysection{The Crux of Knowledge}{philosopher-crux-knowledge}
 
-\begin{multicols}{2}
+\begin{multicols}{2}\raggedbottom
 
   
-  The Crux of Knowledge gives you a \STATIC Knowledge Die that you can use to make a Knowledge Test:
+  The Crux of Knowledge gives you a \STATIC Knowledge Die that you can use to learn and practices the sciences, most notably Leechcraft.  The Crux of Knowledge bestows an honorific on the practioner; your title will be used in "polite society".   
 
-  \example {
-    \mybold{Knowledge Test}
 
-    \RO: \INT plus \mybold{Knowledge Die} plus \mybold{Modifiers}
+    \mytable{X r}{
+      \thead{Honorific} & \thead{Knowledge Die} \\
+    }{
+      Honorable & d10 \STATIC \\
+      Professor & d12 \STATIC \\
+      Doctor & d16 \STATIC \\
+      Maestro & d20 \STATIC \\
+    }
 
-  }
-
-  Any time you fail a Knowledge Test, you begin to accumulate negative modifiers.  The modifiers reset once you take a Bivouac or longer rest.
-
-  \mytable{X X} {
-    \thead{Failure} & \thead{Modifier} \\
-  } {
-      1st  & -1 \\
-      2nd  & -1 \\
-      3rd  & -2 \\
-      4th  & -3 \\
-      5th  & -5 \\
-      6th  & -8 \\
-      7th  & -13 \\
-      8th  & etc. \\
-}
+   
 
 
 \mysubsection{Leechcraft}{philosopher-leechcraft}
 
-Knowledge Dice are used in the pratice of \mylink{Leechcraft}{arcana-leechcraft}
+Knowledge Dice are used in the pratice of \mylink{Leechcraft}{arcana-leechcraft}.   In order to perform the healing arts, you must roll your Knowledge Die vs. a Target.  Your \INT adds a bonus to your roll:
 
-\cbreak
+    \mytable{X r}{
+      \thead{\INT} & \thead{Bonus} \\
+    }{
+      d2-d10 & +0  \\
+      d12 & +1  \\
+      d16 & +2  \\
+      d20 & +3  \\
+      d24 & +4 \\
+    }
+   
+  When applying Leechcraft, if you roll less than the Target number, your next roll is at -2.  This is cumulative:  -2 for the first miss, -4 for the second, etc.  These negatives are removed when you take a Bivouac.
+
+  \begin{center}
+  \includegraphics[scale=.5]{Philosopher_2}
+  \end{center}
+
 
 \mysection{Research}{philosopher-research}
 
