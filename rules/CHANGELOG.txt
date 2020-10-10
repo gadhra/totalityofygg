@@ -1,8 +1,17 @@
-## [v.3.0.beta] - 2020-09-10
+## [v.3.0.beta] - 2020-10-10
 
-Buckle up, cause it's a lot.  
+Buckle up, cause it's a lot.
 
-### Added
+### What Got Love
+-  Necromancers are more combat effective, and the way they cast Necro with Mojo is a little more clear.  Charms don't cost nothin. [thanks Lou!]
+-  Spriggan got lots of love - no more rolling! (OK, a little bit of rolling) [thanks Anastasia!]
+-  Goblin generator is a lot more robust, and the way they level is more ... entertaining [thanks Shane!]
+-  Leechcraft, Necromancy, and Whispers all work the same.  Simple target number, roll it or better (with some modifiers)
+-  Research (Chymistry, Inscription, and Medicinals) and Marvels (Miracles and Occultism) got streamlined and simplified
+-  Big rewrite on Mystics - simplification of the overall concept (10 "Authorities" with infinite gods beneath).  Liturgies clarified and tightened up.  Each Authority has 8 spells associated with it.  [thanks Dell, Dave, and Rob!]
+-  Added some art!
+  
+### Additions
 - Added background info for the Totality of Ygg and Acheron
 - Added the concept of "The Band" (the group of Adventurers you travel with)
 - Fleshed out (more addition than change) the concept of the Tribes of the Authority (Mortals) and the Unseelie Court (Fae)
@@ -10,11 +19,10 @@ Buckle up, cause it's a lot.
 - Added the concept of Virtues: traits that build a Trope or Species
 - Added the concept of Complications: a "wrinkle" to give Adventurers some flavor
 - Added random treasure generator to appendix 
-- Added art!
 - Added "martyr" Virtues (thanks Dell!)
 - Added rules for swimming
 
-### Removed
+### Removals
 - Removed x-in-6 mechanic (Knack Dice).  Saves, Skills, and the Death die are now a Roll20 test
 - Removed the Monsters from the Arbiter's section (except for basic information) - they'll be inside the Bestiary
 
@@ -32,6 +40,7 @@ Buckle up, cause it's a lot.
 #### Tropes  
 - Complete rework of Mystics (Witches and Mystics).  No specific spells for individual Small Gods.  There are now 4 liturgies beneath each of the 10 Authorities (was Thrones).  Liturgies of Small Gods can be worked out with Arbiter
 - Fixed typo under Bless, changed "Faith" to "Grace"
+- Rework of Whispers
 
 
 #### Species
@@ -46,11 +55,14 @@ Buckle up, cause it's a lot.
 #### Equipment
 - Rework of Narcotics.  Dropped the Overdose number and added restrictions. Added 2 new narcotics (Dust and Twitch) and dropped Shrooms, since those have become their own thing.
 
-#### Spells
+#### Magic and Research
 - Cleanup of Miracles and Occultism, grouped under "Marvels"
 - Restructured mystic Liturgies to include Mysteries (under Arcana) and base abilities per Authority
 - Grouped Staff and Sword Magic under "Wonders"
-
+- Cleaned up how Research works
+- Cleaned up the Abandoned and Forgotten rules
+- Restructured Necromancy
+- Broke Curses into Lesser and Greater
 
 
 
