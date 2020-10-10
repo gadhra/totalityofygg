@@ -31,11 +31,6 @@
     \item \myanchor{\mybold{Prophesy}}{paradigm-prophesy} Predicting the future, divining the present, unearthing the past
   }
 
-TK TK TK TK TK TK TK TK TK 
-LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
-
-
-
 
 
 
@@ -49,6 +44,13 @@ LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
   \mysection{Charms}{arcana-charms}
 
   You can perform Charms at will.  Casting a Charm takes Moments.  In Combat, invoking a Charm is a Combat Maneuver.
+
+  \begin{center}
+  \includegraphics[scale=.5]{Charmer}
+  \end{center}
+
+
+  \cbreak
 
 
   \mysubsection{Aphrodite’s Sigh}{charm-aphrodites-sigh}
@@ -64,7 +66,7 @@ LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
   You can raise or lower the temperature of any non-living material a few degrees, enough to warm or cool food or drinks or a room.  The temperature cannot be raised to a degree where it would injure anyone.
 
 
-  \mysubsection{Dowsing)}{charm-dowsing}
+  \mysubsection{Dowsing}{charm-dowsing}
 
   Using a forked wand of hazelwood, you can sense the direction of a substantial body of potable water.  It ignores "insignificant" amounts of water, as found in a waterskin or barrel.  The spell doesn’t tell you how hard it might be to get to the water.
 
@@ -124,6 +126,8 @@ LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
 
   You can create a single piece of food or drink, such as a Turkish delight, a piece of fruit, or glass of wine. It is exquisitely delicious and provides no nourishment whatsoever. If not eaten within Minutes, it dissolves into black smoke.  If you have a Toxin, you can use it on this food.
 
+  \cbreak
+
   \mysubsection{Unbolting}{charm-unbolting}
 
   This spell creates allows you to open one door, window, chest or other item that is not locked or otherwise barred. 
@@ -141,95 +145,122 @@ LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
 
     \mysection{Leechcraft}{arcana-leechcraft}
 
-    In order to practice Leechcraft, you must make a Knowledge Test. 
 
   \example {
-    \mybold{Knowledge Test}
-
-    \RO: \INT plus \mybold{Knowledge Die} plus \mybold{Modifiers}
+    \mybold{Knowledge Die} + Modifiers vs. Target
   }
-  
+
+    Knowledge Dice are used in the pratice of \mylink{Leechcraft}{arcana-leechcraft}.   In order to perform the healing arts, you must roll your Knowledge Die vs. the Target (below).  Unless otherwise noted, Leechcraft requires 2 Actions to perform.  The recipient of the Leechcraft \mybold{cannot move} while you are applying your healing arts.   
+
+    Your \INT can add a bonus to your roll:
+
+    \mytable{X X}{
+      \thead{\INT} & \thead{Bonus} \\
+    }{
+      d2-d10 & +0  \\
+      d12 & +1  \\
+      d16 & +2  \\
+      d20 & +3  \\
+      d24 & +4 \\
+    }
+
+   
+  When applying Leechcraft, if you roll less than the Target number, your next roll is at -2.  This is cumulative:  -2 for the first miss, -4 for the second, etc.  These negatives are removed when you take a Bivouac.  When rolling, your \SUMDICE can never be less than 1.
+
+
   \LEECHCRAFT[
     Name=Bonesetting,
     Link=leechcraft-bonesetting,
-    Mod=+3,
-    Length=Hours,
-    Keywords=Purge
+    Target=9,
+    Keywords=Purge,
+    Reversible=Y
   ]
 
-  Purge a single non-serious Physical Wound
+  Can only be performed during a Bivouac.  Purge a single non-serious Physical Wound.  If desired, you can use this 'craft to cause a non-serious Physical wound (your choice).  
 
   \LEECHCRAFT[
     Name=Delay Infection,
     Link=leechcraft-delay-infection,
-    Mod=+3,
-    Length=2 Maneuvers,
-    Keywords=None 
+    Target=7,
+    Keywords=None,
+    Reversible=Y 
   ]
   
-  Delay the onset of a single Disease (including contagion) for the rest of the Session.  Curing the disease requires \mylink{Medicinals}{research-medicinals}
+  Can only be performed during a Breather or Bivouac.  Delay the onset of a single Disease (including contagion) for the rest of the Session.  If desired, you can use this 'craft to speed the disease along (Arbiter's discretion - the disease should move 1 "step" in a worse direction).
+
+  Curing Disease requires \mylink{Medicinals}{research-medicinals}
+
+  \begin{center}
+  \includegraphics[scale=.5]{Skull}
+  \end{center}
 
 
   \LEECHCRAFT[
     Name=Hair of the Dog,
     Link=leechcraft-hair-of-the-dog,
-    Mod=+9,
-    Length=Minutes,
-    Keywords=Purge 
+    Target=2,
+    Keywords=Purge,
+    Reversible=N
   ]
-  Purge the effect of a Hang Over on a single person
+
+  Purge the effect of a Hang Over on a single person.
 
   \LEECHCRAFT[
     Name=Laudanum,
     Link=leechcraft-laudanum,
-    Mod=+0,
-    Length=see below,
-    Keywords=Purge 
+    Target=9,
+    Keywords=Purge,
+    Reversible=Y 
   ]
-  Purge a single non-serious Mental Wound (Minutes) OR remove a Disgusted, Shaken, or Sickened effect (1 Maneuver) on a single patient
+
+  Remove a Disgusted, Shaken, or Sickened effect on a single patient.  If applied during a Bivouac, Purge a single non-serious Mental Wound.   If desired, you can use this 'craft to cause a non-serious Mental wound (your choice) during a Bivouac.
 
   \LEECHCRAFT[
     Name=Mend,
     Link=leechcraft-mend,
-    Mod=+9,
-    Length=1 Maneuver,
-    Keywords=None 
+    Target=2,
+    Keywords=None,
+    Reversible=Y
   ]
-  Can only be applied to a patient who is Dying. Heal 1 Flesh
+
+  Can only be applied to a patient who is Dying. Heal 1 Flesh.  
+
+  You can also use Mend to cause a point of damage to a dying person (prompting a \DEATH roll).  The attempt isn't noticable to others unless they're practiced in Leechcraft.
 
   \LEECHCRAFT[
     Name=Purge Toxin,
     Link=leechcraft-purge-toxin,
-    Mod=+3,
-    Length=1 Maneuver,
-    Keywords=Purge 
+    Target=6,
+    Keywords=None,
+    Reversible=N 
   ]
+
   Immediately purge a Toxin from the body of a single patient
 
   \LEECHCRAFT[
     Name=Restore Senses,
     Link=leechcraft-restore-senses,
-    Mod=+6,
-    Length=2 Maneuvers,
-    Keywords=None 
+    Target=6,
+    Keywords=None,
+    Reversible=N 
   ]
   Remove a Blindness or Deafness effect on a single patient
 
   \LEECHCRAFT[
     Name=Sew Wounds,
     Link=leechcraft-sew-wounds,
-    Mod=+9,
-    Length=Minutes,
-    Keywords=None 
+    Target=4,
+    Keywords=None,
+    Reversible=N
   ]
-  The patient rolls 1 \FLESH and heals that much Flesh. You can only do this once per patient during a Breather or Bivouac (\mybold{before} you erase your Knowledge failures).
+  You can only perform this during a Breather or Bivouac. The patient rolls 1 \FLESH and heals that much Flesh.
 
   \LEECHCRAFT[
     Name=Smelling Salts,
     Link=leechcraft-smelling-salts,
-    Mod=+6,
-    Length=2 Maneuvers,
-    Keywords=Purge 
+    Target=3,
+    Keywords=Purge,
+    Reversible=N
   ]
   Purge a Knocked Out effect on a single patient
 
@@ -237,31 +268,31 @@ LINKS TO VARIOUS THINGS FROM THIS INTRO PAGE
   \LEECHCRAFT[
     Name=Staunch,
     Link=leechcraft-staunch,
-    Mod=+6,
-    Length=1 Maneuver,
-    Keywords=Purge 
+    Target=4,
+    Keywords=Purge,
+    Reversible=Y
   ]
-  Purge a Bleed effect on a single patient
+  Purge or cause a Bleed effect on a single patient
 
-  \cbreak
 
   \LEECHCRAFT[
     Name=Trepanation,
     Link=leechcraft-trepanation,
-    Mod=+0,
-    Length=Hours,
-    Keywords=Purge 
+    Target=8,
+    Keywords=Purge,
+    Reversible=Y  
   ]
-  Purge a Woozy effect on a single patient
+  You can only drill holes in peoples' heads during a Bivouac.  Purge a Woozy effect on a single patient.   If desired, you can use this 'craft to cause the patient to become Woozy instead.
 
   \LEECHCRAFT[
     Name=Virtigo,
     Link=leechcraft-virtigo,
-    Mod=+6,
-    Length=Hours,
-    Keywords=Purge 
+    Target=6,
+    Keywords=None,
+    Reversible=Y 
   ]
-  Purge a Befuddled or Concussed effect on a single patient
+  
+  Bivouac only.  Purge a Befuddled or Concussed effect on a single patient.   If desired, you can use this 'craft to cause the patient to become Befuddled or Concussed
 
 
 \newpage
@@ -318,8 +349,13 @@ You can command something that's a mixture of different types (soup, coins, etc.
   Target = Close Target(s)
 ]
 
-You can convert up to \SUMDICE kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item). For example, if the \SUMDICE of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces. Additionally, you can place up to \DICE X100kg of coins into "hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Encumbrance, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
+You can convert up to \SUMDICE kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item). For example, if the \SUMDICE of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces. Additionally, you can place up to \DICE X100kg of coins into "hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Burden, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
 You can combine the effects above (so you could convert money and store it in hammerspace if you'd like).  You must cast this spell each time you want to put more coins into hammerspace, but everything that's in hammerspace is released upon your death.
+
+  \begin{center}
+  \includegraphics[scale=.5]{CivilizedArcana}
+  \end{center}
+
 
 
 \MYSTERY [
@@ -369,8 +405,6 @@ A tree no larger than \DICE X 5m tall and \DICE meters in diameter topples over,
 ]
 
 Up to \DICE X250kg of nonliving objects, as you designate, are packed neatly. You must name the objects or their general category when you cast the spell ("those coins", "the contents of that room") If no packing materials are provided, the objects will be stacked into compact cubes, with the largest and most stable objects at the bottom. If chests, paper and twine, sacks, carts, etc. are provided, the spell will use them as you direct. The packages created will take up the minimum space possible, and will be remarkably sturdy. The spell will continue to pack objects for as long as you maintain concentration. The objects must be able to move freely. You could not use this spells to pack clothes someone was wearing. The objects will not lift more than 3m off the ground during the packing process.
-
-\newpage
 
 \mysubsection{Cthonic}{arcana-mystery-cthonic}
 \MYSTERY [
@@ -430,6 +464,11 @@ You can remove up to \DICE inorganic materials from a \DICE x5 meter cube just i
 ]
 
 You can cause a Ally, Monster, or object to fade out of existence.  You can still see them, though they're insubstantial (like a ghost).  The target can't move, talk, or interact with the world in any way.  Not even magic can affect the target.  If the target is unwilling, it gets a Save to negate.  The duration is Markovian and depends on the number of \DICE invested.
+
+  \begin{center}
+  \includegraphics[scale=.5]{CthonicArcana}
+  \end{center}
+
 
 \MYSTERY [
   Name = Mermaid's Breath,
@@ -515,6 +554,12 @@ disappear.  However, if the illusion is touched with an \mylink{Ego Weapon}{wiza
 ]
 
 You create a spiraling labyrinth of thought in your mind.  Anyone targeting you with Charm, Sleep, or any magical effect whereby the caster tries to read your mind or alter your memories must enter into a \RB : \FOC contest with you at a -\DICE penalty.  If they fail, they will be caught in your mind for the duration of the spell;  they immediately catch the Vapors, and you can hear all their thoughts.
+
+  \begin{center}
+  \includegraphics[scale=.5]{CunningArcana}
+  \end{center}
+
+
 
 \MYSTERY [
   Name = Memory Lane,
@@ -624,6 +669,11 @@ You invoke the madness of the moon.  \DICE creatures must immediately make a San
 
 The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the Monster becomes Enraged; 2) the Monster becomes Afraid; 3) the Monster is Knocked Out; 4) the Monster suffers Anathema.  The duration is Markovian and depends on the number of \DICE used.
 
+  \begin{center}
+  \includegraphics[scale=.5]{EmpyreanArcana}
+  \end{center}
+
+
 \MYSTERY [
   Name = Mountainhands,
   Link = arcana-mystery-mountainhands,
@@ -712,6 +762,13 @@ A magical rapier appears in your hand that only you can wield.  The rapier deals
 
 Once the damage die is exhausted (reaches 0), the Hero's Rapier disappears.
 
+
+  \begin{center}
+  \includegraphics[scale=.5]{ErrantArcana}
+  \end{center}
+
+
+
 \MYSTERY [
   Name = Duelists' Wings,
   Link = arcana-mystery-duelists-wings,
@@ -767,7 +824,6 @@ This mystery can only be invoked during a Breather or Bivouac.  You play a rousi
 
 Your next \DICE+\DICE strides (about 1m each stride) land on a plane of Force the size of your foot.  The step can be taken in any direction up, down, sideways, or across (though you cannot pass through physical objects).  You can combine these in any way you want - stride 45 degrees into the air, take another step up, and a final step down (for example).  Your final step must be on a solid surface, or you fall. 
 
-\newpage
 
 \mysubsection{Heathen}{arcana-mystery-heathen}
 \MYSTERY [
@@ -860,6 +916,12 @@ During a Bivouac, you may perform up to \DICE effects, once per die (though you 
 \item Prevent any Wandering Monasters from attacking your camp
 }
 
+  \begin{center}
+  \includegraphics[scale=.5]{HeathenArcana}
+  \end{center}
+
+
+
 \MYSTERY [
   Name = Sporous Breath,
   Link = arcana-mystery-sporous-breath,
@@ -872,8 +934,6 @@ During a Bivouac, you may perform up to \DICE effects, once per die (though you 
 You breathe a cloud of mushroom spores into an area Nearby.  All Allies and Monsters are affected by the Sporous Breath unless they make their Save.  The effects depend on the number of \DICE used: 1-3 all targets suffer Anathema; 4-6 all targets are Woozy; 7-9 all targets are Befuddled; 10+ all targets are affected with an Iron (d4) Toxin.
 
 Only yourself and Pooka are immune to the effects of the Sporous Breath.
-
-\newpage
 
 \mysubsection{Jötnar}{arcana-mystery-jötnar}
 \MYSTERY [
@@ -919,6 +979,13 @@ You grow \DICE x 500cm in height, with strength to match.  Your Unarmed Attacks 
 ]
 
 This mystery requires you to create a bonfire.  You can place up to \DICE inorganic objects into the fire weighing no more than \SUMDICE kg.  The objects are burned to a pile of enchanted ash, which can be harvested and stored as an Insignificant item.  When you wish the objects to become whole again, you must build a fire and sprinkle the ash inside of it; you can reach into the fire unharmed to pull the objects from the flames as they were when you placed them into the fire.  If you perish before the objects are retrieved, the ash reverts to normal, unenchanted ash and the objects are destroyed.
+
+
+  \begin{center}
+  \includegraphics[scale=.5]{JotnarArcana}
+  \end{center}
+
+
 
 \MYSTERY [
   Name = Preserve,
@@ -1033,6 +1100,12 @@ You transform yourself and all of your Gear into a slime.  You can absorb up to 
 
 You can speak with spiders (and they can speak with you).  Small spiders know about water, wind, and bugs.  Larger spiders know about people (maybe they can tell them apart).  Big, dangerous spiders know all kinds of things.  Spiders will be friendly towards you, but if you attack them they'll fight back.  Additionally, your spittle becomes a Toxin whose power depends on the number of \DICE spent: 1 [die] Iron Toxin; 3 \DICE Silver Toxin; 6 \DICE Gold Toxin.  Your spittle is enough to poison a drink, a needle or syringe, or infect someone you might bite, but not enough to poison a knife or dagger.  The spittle becomes normal when the duration ends.
 
+
+  \begin{center}
+  \includegraphics[scale=.5]{MonstrousArcana}
+  \end{center}
+
+
 \MYSTERY [
   Name = Tasty,
   Link = arcana-mystery-tasty,
@@ -1070,8 +1143,6 @@ You turn yourself into a hideous undead caricature of your "normal self".  You i
 
 You can only speak Graveborn for the duration of the spell.  Your Undead form prompts a Sanity or morale check among all who see you (Allies and Monsters alike), unless they have seen you in your Undead form before. 
 
-
-\newpage
 
 \mysubsection{Righteous}{arcana-mystery-righteous}
 \MYSTERY [
@@ -1116,7 +1187,7 @@ A holy weapon (describe to the Arbiter) appears in your hands that only you can 
   Target = See Below
 ]
 
-This mystery requires you to create a bonfire.  Up to \DICE Allies can step into the flames of the Purging Flames; each Moment they remain inside of the fire, they take 3 damage to Flesh, but can activate 1 of the following effects:
+This mystery requires you to create a bonfire.  Up to \DICE Allies can step into the flames of the Purging Flames; each Moment they remain inside of the fire; they take 2 damage to Flesh, but can activate 1 of the following effects:
 
 \mynumlist {
     \item Immediately end a Markovian effect;
@@ -1126,6 +1197,12 @@ This mystery requires you to create a bonfire.  Up to \DICE Allies can step into
 }
 
 Anyone inside of the Purging Flames cannot lie, and must answer truthfully any question asked of them
+
+
+  \begin{center}
+  \includegraphics[scale=.5]{RighteousArcana}
+  \end{center}
+
 
 
 \MYSTERY [
@@ -1182,7 +1259,6 @@ The mystery has no effect on Tatoos or spells written in the heads of Philosophe
 
 You create a fluttering star of light that twitters like a bird.  Name an object using up to \DICE words - it can be a person ("the Stygian witch") or a thing ("the nearest body of water" or "the cask of Amontillado").  It has to be something you've seen clearly before.  Once named, the seeker will fly to it at the speed of an arrow and hover near it, chiming as loud as a bell.  If the object is not within the spell's range, it will try to find a similar object; otherwise, it disappears.
 
-\newpage
 
 \mysubsection{Ruinous}{arcana-mystery-ruinous}
 \MYSTERY [
@@ -1195,6 +1271,12 @@ You create a fluttering star of light that twitters like a bird.  Name an object
 ]
 
 Target takes \SUMDICE+\DICE damage, Save for half. You do not need to see the target, but you do need to know their approximate location, and there must be a clear path a bolt could trace to reach them. The path can be as convoluted as required. The bolt can pass through gaps as small as a fist.  Note that this spell can only target Far-Away creatures.
+
+  \begin{center}
+  \includegraphics[scale=.5]{SkullLine}
+  \end{center}
+
+
 
 \MYSTERY [
   Name = Gaze of the Void,
@@ -1285,220 +1367,225 @@ You can anchor a barrier of pure darkness between three or more solid points up 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-  \mysection{Necromancy}{arcana-necromancy}
+\mysection{Necromancy}{arcana-necromancy}
 
-    \example {
-        \RO: \FOC plus \mylink{Mojo}{mystics-mojo} \UD plus \mybold{Modifiers}
-     }
+To reach through the veil between life and death is to plunge your hands into the black rivers surrounding the Isle of the Dead.  Necromancy is abhorrent to Hallowed creatures; there are those who insist that Necromancy defies \TheAuthority, while others insist that it would not be possible if it were not permitted.  
 
-  To perform Necromancy, \RO using your Mojo \UD and your \FOC, plus the modifier listed in the necromantic rite
 
+Necromancy requires the \mylink{Crux of Mojo}{mortal-crux-mojo}, and is divided into three loose groups:  Black Magic, Carnomancy, and Corpse Witching.  Each Necromantic spell has a "Target" associated with it - you must this number or greater using your Mojo.  You can try as many times as you like, but if you roll a 1 or a 2, your Mojo moves \DCDOWN.  Rolling your Mojo in this way is a Maneuver Action.
+
+
+\mysubsection{Black Magic}{arcana-necromancy-black-magic}
 
 \NECRO[
   Name=Born of the Grave,
   Link=necromancy-born-of-the-grave,
   Paradigm=Death,
   Save=N,
-  Duration=Combat or \LVL Minutes,
-  Mod=+3,
-  Keywords=None,
-  Target=Self
+  Duration=Session,
+  Target=4
 ]
 
+Requires a sniff of \mylink{Corpse Salt}{necromancy-corpse-salt}.  In addition to the Salt's narcotic abilities (see the Core Rules), you become as on born of the grave:
 
-You become as one born of the grave.  You can speak Graveborn, breathe dirt as if it were air, have Darkvision, and grow long, black claws that you can attack with for 2d4 damage in Combat.  Additionally, these claws can dig 5m every Minute in any direction through ground as hard as packed earth.  
+\mybullet {
+    \item You take on a sickly/ghostly/rotting aspect.   You have \SUM additional Flesh while you are in this form.
+    \item You are Unhallowed, breathe dirt as if it were air, have Darkvision, and can speak Graveborn fluently
+    \item Any Allies that see you for the first time must roll their Sanity.  Monsters must roll their morale
+    \item Shades and the Walking Dead will ignore you (unless you mess with them)
+}
 
-You are considered Unhallowed for the duration of the necromancy.  Other Undead will ignore you.  The Necromancy must run its course, it cannot be ended at will.
-
-\cbreak
+The effect can be ended at will; otherwise, it lasts until the end of the Session
 
 \NECRO[
-  Name=Charon's Price,
-  Link=necromancy-charon-price,
+  Name=Crown of Thorns,
+  Link=necromancy-crown-of-thorns,
+  Paradigm=Death,
+  Save=N,
+  Duration=Session (see below),
+  Target=5
+]
+
+A crown of blackberry thorns criss-crosses your forehead; blood leaks from your scalp.  Similar to the Virtue of Aura (see Core Rules), you use your Mojo as an Armor \UD in Combat.  Anyone who strikes you physically (including missile weapons) must Save or immediately take the Bleeding effect.  
+
+The effect can be ended at will; otherwise, it lasts until the end of the Session or until your Mojo is exhausted.
+
+
+  \begin{center}
+  \includegraphics[scale=.5]{Crow}
+  \end{center}
+
+
+\NECRO[
+  Name=Laughin' Jack,
+  Link=necromancy-laughin-jack,
   Paradigm=Death,
   Save=N,
   Duration=0,
-  Mod=+6,
-  Keywords=None,
-  Target=Corpse in a boat
+  Target=2
 ]
 
+In a burst of blue flame and a whiff of brimstone, Laughin' Jack appears in your hand.  Jack appears as the blackened and burned skull of an infant, roughly the size of a grapefruit.  He emits a guttering, bluish corpselight from his eyes and mouth (treat as candlelight); if no one is looking at him, he whispers and chatters to himself in a language no one understands.  You may throw Jack (as a Throw weapon, obviously) using your \FOC instead of your \DEX.  Jack explodes for d4+1 damage on impact, and is able to strike creatures only hit by magic.  Throwing Jack counts as a Combat Action.
 
-This spell requires a rowboat, 2 gold coins, and an open body of water (roughly the size of a lake).  If a corpse is placed in the rowboat with two gold coins on its eyes and pushed out into the water, it will return an hour later, empty. There will be no trace of the corpse anywhere, no evidence left in the boat, and people will forget the corpse even existed.
+
 
 \NECRO[
-  Name=Corpse Smoke,
-  Link=necromancy-corpse-smoke,
+  Name=Storm of Crows,
+  Link=necromancy-storm-of-crows,
   Paradigm=Death,
-  Save=N,
-  Duration=0,
-  Mod=+3,
-  Keywords=None,
-  Target=Close (touch) Mortal corpse
+  Save=Y (neg.),
+  Duration=Concentration,
+  Target=3
 ]
 
+An inky murder of crows bursts from the ground in a whirling cloud, cloaking you and anyone Close to you.  For as long as you maintain Concentration, any ranged attacks fired into or out of the hurricane automatically miss (AoE effects like dragon's fire aren't affected).  
 
-You remove the dead flesh from a corpse and smoke it.  The corpse must be fresh (with a few hours of death) and you must have a pipe.   You gain all the Skills, languages, and memories of the corpse for for the rest of the Session.  You do not gain any spells or supernatural abilities, or Class abilitie. If the creature was magical or particularly strong-willed, you must Save vs. Hexes or gain some aspect of the creature's personality for the duration. If the creature was over 100 years old, you must \RS : Sanity.  This spell consumes the corpse.
+\mysubsection{Carnomancy}{arcana-necromancy-carnomancy}
+
+\example{
+    Using Carnomancy on an Ally requires them to make a \RS Sanity check. 
+}
+
 
 \NECRO[
-  Name=Death Mask,
-  Link=necromancy-death-mask,
-  Paradigm=Death,
-  Save=N,
-  Duration=Permanent,
-  Mod=+9,
-  Keywords=None,
-  Target=Close (touch) corpse
-]
-
-
-You touch a corpse and the face peels off like a mask (and can be worn as one) while the rest of the corpse is consumed.
-
-\NECRO[
-  Name=Death Scythe,
-  Link=necromancy-death-scythe
-  Paradigm=Death,
-  Save=N,
-  Duration=Until Exhausted,
-  Mod=+3,
-  Keywords=None,
-  Target=Close (touch) corpse
-]
-
-
-The corpse disintegrates as you pluck a black scythe from its center of mass. The scythe is 2 Handed and does d8 damage; this d8 is a \UD - when you exhaust the \UD, the scythe disappears.  Against Monsters of the same type, the scythe has the Weapon Trait: Cleave (for example, a scythe made from a troll corpse would have Cleave against trolls.) The scythe is only usable by you and counts as a magic weapon; it does not count as a Significant Item. You must make a successful Fight check using your \FOC (instead of \VIG or \DEX) to hit with the weapon. This spell consumes the corpse.
-
-\NECRO[
-  Name=Essential Salt,
-  Link=necromancy-essential-salt,
-  Paradigm=Death,
-  Save=N,
-  Duration=Permanent,
-  Mod=+9,
-  Keywords=None,
-  Target=Close (touch) corpse
-]
-
-
-You reduce a corpse into a coarse grit that can be stored in a tiny pouch or vial. You can cast Speak with Dead to speak with the spirit as many times as you want (normally you are limited to one attempt per corpse). This requires you to spread the salt out on a flat surface; be mindful it doesn't get blown away or mixed in with mundane sand. After several conversations, spirits tend to regain much of their memory, personality, and goals. This spell consumes the corpse.
-
-\NECRO[
-  Name=Exploding Corpse,
-  Link=necromancy-exploding-corpse,
-  Paradigm=Death,
-  Save=N,
-  Duration=0,
-  Mod=+9,
-  Keywords=None,
-  Target=Nearby Corpse
-]
-
-You cause a corpse to explode in a shower of bone and blood. Anyone Close to the corpse must \RO their \MD + \DEX or take \LVL x2 damage.  Makes a really big fucking mess.  Corpse is consumed.
-
-\NECRO[
-  Name=Eyes of the Dead,
-  Link=necromancy-eyes-of-the-dead,
+  Name=Canopic Jar,
+  Link=necromancy-canopic-jar,
   Paradigm=Death,
   Save=N,
   Duration=Session,
-  Mod=+9,
-  Keywords=None,
-  Target=Close (touch) corpse
+  Target=4
 ]
 
+You can reach into your body and pull out yours or an Ally's stomach, intestines, lungs, or liver - and store them in Hammerspace.  You can only store 1 organ per personin Hammerspace at a time.  For each person after the first, the Target increases by +1 (for example, you could store your stomach in Hammerspace, the paladin's lungs [the Target would 5], and the wizard's stomach [the Target would be 6]).  While the organ is stored in Hammerspace, you (or your Ally) are Unhallowed.  Unwilling participants get a Save.
 
-You remove one of your own eyes from your head and place it in the empty eye socket of a dead creature (including a Zombie Slave). For the duration of the spell you can see through the eye of the corpse.  When the spell ends, or if the corpse is consumed, your eye is returned to you.
+\mybullet {
+    \item \mybold{Stomach:}   You do not need to eat or drink
+    \item \mybold{Intestines:}  You can heal Grit even if an effect (like a specific wound) would normally prevent you from doing so
+    \item \mybold{Lungs:}  You no longer need to breathe (this makes talking impossible)
+    \item \mybold{Liver:}  You are not affected by any ingested Toxins.  If performed while under the effect of the Toxin, the Toxin is removed from the body (and placed in Hammerspace).  The Toxin must be dealt with when the liver is (presumably) returned to the body.
+}
+
+The Covenant of Blood allows you to do the following:
+
+\NECRO[
+  Name=Corpse Tongue,
+  Link=necromancy-corpse-tongue,
+  Paradigm=Death,
+  Save=N,
+  Duration=Session or \SUMDICE Minutes,
+  Target=3
+]
+
+Using Corpse Tongue requires \mylink{Corpse Salt}{necromancy-corpse-salt}
+
+\mybullet{ 
+    \item \mybold{Corpse Smoke:} The Corpse Salt is mixed with pipeweed and Smoked (eliminating its Narcotic effects).  You gain the languages, memories, and Skills of the corpse for the rest of the Session (but not any spells, supernatural abilities, Virtues, etc.).  If the creatures particularly powerful (Arbiter's discretion), you must Save vs. hexes of gain some aspect of the creature's personality for the duration of the Session.  If the creature was over 100 years old, you must \RS : Sanity.  
+    \item \mybold{Speak with Dead:}  You spread the Corpse Salt on a flat surface (be careful it doesn't blow away!)  The corpse will answer questions for \SUMDICE Minutes (the Arbiter will start a timer).  The dead only speak in Graveborn.  They will answer honestly, but the words tend to be cryptic and unhelpful, especially if the creature has no reason to help you.  Corpses usually don't remember exactly how they died.
+}
+
+
+\NECRO[
+  Name=Covenant of Blood,
+  Link=necromancy-blood-sacrament,
+  Paradigm=Death,
+  Save=Y (see below),
+  Duration=see below,
+  Target=2 (see below)
+]
+
+The Covenant of Blood allows you to do the following:
+
+\mybullet {
+    \item You can anoint someone with blood from your pricked finger.  They are Unhallowed until the end of the Session.  Unwilling creatures get a Save.
+    \item Add +4 to the Target (6).  This rite can only be performed during a Bivouac.  You transfer blood from one creature to another; both creatures must be alive at the time of the transference.  Each Moment, the "donor" loses 1 point of Flesh, and the "recipient" gains 1 point of Flesh.  If the donor is brought to 0 Flesh during the transference, the recipient must Save vs Doom or fall to 0 Flesh, prompting a roll of their \DEATH
+    \item Add +8 to the Target (10),  You heal from drinking another sentient creature's blood.  You may perform this liturgy during a Breather or Bivouac.  The creature must be alive when you feast on them; the act of drinking their blood takes their life.  Heal yourself to full Flesh and Grit.
+
+}
+
+
+  \begin{center}
+  \includegraphics[scale=.5]{Graveyard}
+  \end{center}
+
 
 \NECRO[
   Name=Knit Flesh,
   Link=necromancy-knit-flesh,
   Paradigm=Death,
   Save=N,
-  Duration=0/Session,
-  Mod=+9,
-  Keywords=None,
-  Target=Close (touch) creature
+  Duration=0 or Session,
+  Target=2 (see below)
 ]
 
+You heal 1 \HD of Flesh on a single creature. The healed flesh will appear grey and bloodless; wounds are sealed with wire and crude staples.  Horrible scars are usually left behind. You can only do this once per creature during a Breather or Bivouac (before you restore any Mojo).
 
-Heal 1 \HD of Flesh on a single creature. The creature you're healing needs to make a \RS Sanity.  The healed flesh will appear grey and bloodless; wounds are sealed with wire and crude staples.  Horrible scars are usually left behind. You can only do this once per creature during a Breather or Bivouac (before you restore any Mojo).
+You can also stitch a lost limb or hand to a stump.  Doing this increases your \mybold{Target} by +2 (4).   This requires an available limb of the appropriate size.  The limb rots quickly and a new one needs to be attached each Session.  The Witch also can "feel" what the limb feels (i.e. they can tell if the creature is holding something [but not what], if the creature is walking or running, etc).  While the stitched limb is attached, the creature is Unhallowed.
 
-You can also use this Necromancy to stitch a lost limb or hand to a stump.  This requires an available limb of the appropriate size.  The limb rots quickly and a new one needs to be attached each Session.  The Witch also can "feel" what the limb feels (i.e. they can tell if the creature is holding something [but not what], if the creature is walking or running, etc).  While the stitched limb is attached, the creature is Unhallowed.
+
+\mysubsection{Corpse Witching}{arcana-necromancy-corpse-witching}
+
+\example{
+    Corpse Witching must be performed on a corpse, no more than 7 days dead (by the law of \TheAuthority).  Corpse Witching consumes (destroys) the corpse
+}
 
 
 \NECRO[
-  Name=Necrography,
-  Link=necromancy-necrography,
+  Name=Corpse Salt,
+  Link=necromancy-corpse-salt,
   Paradigm=Death,
   Save=N,
-  Duration=\LVL Minutes,
-  Mod=+6,
-  Keywords=None,
-  Target=Close (touch) Mortal corpse
+  Duration=0,
+  Target=2
 ]
 
-The touched corpse is compelled to answer \LVL questions.  The body only speaks in Graveborn. The body will answer honestly, but flesh bodies technically see/hear/experience everything the living body does, but they only remember things that involve food, sex, pain, adrenaline responses, and stuff like that. Usually the corpse will talk using it's normal mouth, but it may also communicate the response in other ways. It's always understandable, although sometimes a bit cryptic.  This spell consumes the corpse
+You create d4 \UD of Corpse Salt, a coarse and gritty distillation that can be stored in a tiny pouch or vial.  Corpse Salt is a necessary component in certain Necromantic arts, and a Narcotic sought out by Philosophers (see Narcotics under the Core Rules).
+
 
 \NECRO[
-  Name=Speak with Dead,
-  Link=necromancy-speak-with-dead,
+  Name=Death Scythe,
+  Link=necromancy-death-scythe
   Paradigm=Death,
   Save=N,
-  Duration=\LVL x2 Minutes,
-  Mod=+3,
-  Keywords=None,
-  Target=Close (touch) Mortal corpse
+  Duration=Session or Until Exhausted,
+  Target=4
 ]
 
 
-You can converse freely with any corpse that has an intact jaw, but only in Graveborn. The words of the dead tend to be cryptic and unhelpful, especially if the creature has no reason to help you. Corpses usually don't remember exactly how they died. Corpses can only speak Graveborn.  This spell consumes the corpse
+The corpse disintegrates as you pluck a black scythe from its center of mass. The scythe is 2 Handed and does d8 damage; this d8 is a \UD - when you exhaust the \UD, the scythe disappears.  Against Monsters of the same type, the scythe has the Weapon Trait: Cleave (for example, a scythe made from a troll corpse would have Cleave against trolls.) The scythe is only usable by you and counts as a magic weapon; it does not count as a Significant Item. You must make a successful Fight check using your \FOC (instead of \VIG or \DEX) to hit with the weapon.
 
 \NECRO[
-  Name=Worthless Corpse,
-  Link=necromancy-worthless-corpse,
-  Paradigm=Death,
-  Save=N,
-  Duration=Session,
-  Mod=+0,
-  Keywords=None,
-  Target=Close (touch) Mortal corpse
-]
-
-
-Sometimes it's not enough to be dead - corpses can be resources. This spell makes the body of the target appear not simply dead, but utterly worthless, not worth investigating, without even marrow to crack open and eat. If the Witch casts this spell on themselves, all observers (including allies ) will believe the caster to be dead, even if they saw them casting the spell. Should the ‘corpse’ get up and walk it will provoke horror and uncomprehending disgust (and a \RS: Sanity). All present, including allies, will compulsively attack the target until the target is destroyed.  The spell cannot be ended at will by the Witch - its duration must run its course
-
-\NECRO[
-  Name=Zombie Slave,
-  Link=necromancy-zombie-slave,
-  Paradigm=Death,
-  Save=N,
-  Duration=Session,
-  Mod=+9,
-  Keywords=None,
-  Target=Close (touch) corpse
-]
-
-
-You can raise a corpse to help with mundane tasks, test for traps, etc.  The corpse moves very slowly (d3 \MD) but doesn't need to eat, sleep, rest, or breathe.  The corpse cannot Fight or Guard, and any damage to it (including Curse the Unhallowed) immediately ends the spell.  The corpse has the strength of a normal person and can carry 25kg worth of stuff without tiring, but it'll need to be strapped to them (in a backpack or whatever).  Arbiter gets final say on what's allowed. The corpse can obey one word commands i.e. "dig", "sit", "go", "stop", etc.  The corpse can only understand Graveborn. It is completely mindless and extremely literal. The corpse will obey your last command until the spell's duration expires.  When the spell ends, the corpse falls to the ground, but is not consumed.
-
-\NECRO[
-  Name=Zombie Warrior,
-  Link=necromancy-zombie-warrior,
+  Name=Exploding Corpse,
+  Link=necromancy-exploding-corpse,
   Paradigm=Death,
   Save=N,
   Duration=Combat,
-  Mod=+6,
-  Keywords=Conc.,
-  Target=Close (touch) corpse
+  Target=3
 ]
 
-You can raise a corpse to fight for you. The Corpse acts as a Zombie under your control for the duration of Combat.  You must maintain Concentration to control the zombie, and the zombie uses your Mojo to Fight and Guard.  You can raise as many zombies as you wish, but each uses your Mojo to Fight/Guard.  If you run out of Mojo, are incapacitated, or the spell ends the corpse falls to the ground and is immediately consumed.
+A corpse Close or Nearby to you explodes in a shower of bone and blood.  Anyone Close to the corpse must Save vs Hexes or take \SUMDICE damage.  Makes a really big fucking mess.
 
-\cbreak
+
+
+\NECRO[
+  Name=Zombie,
+  Link=necromancy-zombie,
+  Paradigm=Death,
+  Save=N,
+  Duration=Session or Conc.,
+  Target=5
+]
+
+\mybullet{
+    \item \mybold{Slave:} You raise a corpse to help with mundane tasks, test for traps, etc.  The corpse moves very slowly (d3 \MD) but doesn't need to eat, sleep, rest, or breathe.  The corpse cannot Fight or Guard, and any damage to it (including Curse the Unhallowed) immediately destroys the Zombie.  The corpse has the strength of a normal person and can carry 25kg worth of stuff without tiring, but it'll need to be strapped to them (in a backpack or whatever).  Arbiter gets final say on what's allowed. The corpse can obey one word commands i.e. "dig", "sit", "go", "stop", etc.  The corpse can only understand Graveborn. It is completely mindless and extremely literal. The corpse will obey your last command until the spell's duration expires.  When the spell ends, the corpse falls to the ground and is immediately consumed.
+
+    \item \mybold{Warrior:}  Creating a Warrior adds +3 to the Target (8).  The corpse is raised and will fight for you for as long as you maintain Concentration.  The Zombie uses your Mojo to Fight and Guard; you can raise as many Warriors as you wish, but they each use your Mojo to Fight and Guard. If you exhaust your Mojo or cease Concentration, the corpse falls to the ground and is immediately consumed.
+
+}
+
 
 \MONSTERBLOCK[
-  Name=Zombie,
-  Link=monster-zombie,
+  Name=Zombie (Monster Stats),
+  Link=necromancy-zombie-stats,
   MV=Slow*,
   WK=d20,
   DMG=2d4 1 Close,
@@ -1526,13 +1613,18 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
     The Seven Sacraments are invoked by Mystics through the \mylink{Gift of Grace}{mystic-grace}
 
 
+  \begin{center}
+  \includegraphics[scale=.5]{Sacraments}
+  \end{center}
+
+
     \SACRAMENT [
       Name=Bless,
       Link=mystic-sacrament-bless,
       Paradigm=Grace,
       Save=N,
       Duration=Session,
-      Counter=n/a,
+      Counter=None,
       Keywords=Splittable,
       Target=Close Ally or object
     ]
@@ -1551,7 +1643,7 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
       Paradigm=Grace,
       Save=N,
       Duration=Concentration,
-      Counter=n/a,
+      Counter=None,
       Keywords=None,
       Target=Close radius
     ]
@@ -1560,15 +1652,13 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
 
     Note that the area of Hallowed Ground will temporarily cancel out the effects of \mylink{Unhallowed Earth}{occultism-unhallowed-earth} (making it "normal"), but that Sacraments cannot be performed while you are on Unhallowed Earth.
 
-    \cbreak\bump
-
    \SACRAMENT [
       Name=Curse the Unhallowed,
       Link=mystic-sacrament-curse-the-unhallowed,
       Paradigm=Grace,
       Save=Y,
       Duration=0,
-      Counter=n/a,
+      Counter=None,
       Keywords=Splittable,
       Target=\DICE Nearby Unhallowed
     ]
@@ -1587,7 +1677,7 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
       Paradigm=Grace,
       Save=N,
       Duration=Concentration,
-      Counter=n/a,
+      Counter=None,
       Keywords=None,
       Target=Close (touch) Allies
     ]
@@ -1605,7 +1695,7 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
       Paradigm=Grace,
       Save=N,
       Duration=0,
-      Counter=n/a,
+      Counter=None,
       Keywords=None,
       Target=Close radius
     ]
@@ -1619,7 +1709,7 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
       Paradigm=Grace,
       Save=N,
       Duration=0,
-      Counter=n/a,
+      Counter=None,
       Keywords=0,
       Target=Self
     ]
@@ -1642,7 +1732,7 @@ Zombies always go last in Combat. Zombies will try to grapple and bite automatic
       Paradigm=Grace,
       Save=N,
       Duration=Concentration,
-      Counter=n/a,
+      Counter=None,
       Keywords=Splittable,
       Target=Self and \DICE-1 Close (touch) Allies
     ]
@@ -1790,7 +1880,9 @@ entire Session unless you ask them to do something they might think was a little
 Contested roll by the victim, using \FOC with a -\DICE penalty.  You must touch the targets' flesh (like with a handshake) to cast the spell.  The charmed person must stay Close, Neary, or Far-Away from you - if you ever
 move beyond this distance, the spell is ended.  The Charm can be broken and dispelled by another Charm if a Wizards' Duel is lost. 
 
-
+  \begin{center}
+  \includegraphics[scale=.5]{Tongue}
+  \end{center}
 
 
 \SPELL[
@@ -1799,7 +1891,7 @@ move beyond this distance, the spell is ended.  The Charm can be broken and disp
   Paradigm=Mind,
   Save=Y (negate),
   Duration=0 / Markovian,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=Splittable,
   Target=Close or Nearby Monster(s)
 ]
@@ -1858,7 +1950,7 @@ Illusion spell with a touch if a Wizards' Duel is won.
   Paradigm=Entropy,
   Save=Y (half),
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close or Nearby Magical Monster
 ]
@@ -1879,7 +1971,7 @@ or creatures that have no Blood die, are unaffected by this spell.
   Paradigm=Elements,
   Save=Y (half),
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Any point
 ]
@@ -1917,6 +2009,9 @@ succeeds automatically.
 
 
 
+  \begin{center}
+  \includegraphics[scale=.5]{Toad}
+  \end{center}
 
 
 
@@ -1982,7 +2077,7 @@ Duel is lost; the grease is also highly flammable.
   Paradigm=Elements,
   Save=Y (half),
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close or Nearby Monster or Object
 ]
@@ -2063,7 +2158,7 @@ something else (a claw, a tentacle, etc) at the Arbiter's discretion.
   Paradigm=Biomancy,
   Save=N,
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Self or Close Ally
 ]
@@ -2090,7 +2185,7 @@ spells or Fight while you're jumping around.
   Paradigm=Biomancy,
   Save=N,
   Duration=Session,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=Hammerspace,
   Target=Self
 ]
@@ -2107,6 +2202,12 @@ ends while items are stored in your head they will mix with your
 brain-matter. Usually this is fatal, though ambitious sorcerers sometimes
 add drugs.  While your head is hollow, another sorcerer could read the
 spell(s) inscribed on the inside.
+
+
+  \begin{center}
+  \includegraphics[scale=.5]{HollowHead}
+  \end{center}
+
 
 
 
@@ -2140,7 +2241,7 @@ if you are struck by a Greaseball spell and you fail a Wizards' Duel.
   Paradigm=Elements,
   Save=Y (half),
   Duration=0 / Markovian,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close or Nearby point (straight line)
 ]
@@ -2207,6 +2308,7 @@ disappear if a Wizards' Duel is lost.
 
 
 
+
 \SPELL[
   Name=Invisibility,
   Link=wizardry-invisibility,
@@ -2229,6 +2331,10 @@ object to become seen.  The duration of the charm depends on the dice
 invested.  1 [die]: \SUMDICE Moments; 2 \DICE: Minutes; 3 \DICE: Hours; 4
 \DICE Days; 5 \DICE: Weeks; 6+ \DICE: Forever.  The wisps from a Fool's Fire
 can dispel the Invisibility of a Wizards' Duel is lost.
+
+  \begin{center}
+  \includegraphics[scale=.5]{Invisibility}
+  \end{center}
 
 
 
@@ -2344,7 +2450,7 @@ disc will be dispelled if a Wizards' Duel is lost.
   Paradigm=Biomancy,
   Save=N,
   Duration=Combat or \SUMDICE Minutes,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Self
 ]
@@ -2365,7 +2471,7 @@ not anything you're wearing or carrying.
   Paradigm=Mind,
   Save=Y (negate),
   Duration=Markovian,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close and Nearby Objects
 ]
@@ -2388,7 +2494,7 @@ Duel is lost.
   Paradigm=Biomancy,
   Save=N,
   Duration=Combat or \SUMDICE Minutes ,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close and Nearby
 ]
@@ -2411,7 +2517,7 @@ Wizards' Duel is lost (otherwise, it will take damage as normal).
   Paradigm=Biomancy,
   Save=N,
   Duration=Until exhalation,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=Contested,
   Target=Self
 ]
@@ -2435,7 +2541,7 @@ spell with 3 or more \DICE, Save or your teeth shatter.
   Paradigm=Entropy,
   Save=N,
   Duration=Combat or \SUMDICE Minutes,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Self
 ]
@@ -2518,7 +2624,7 @@ is lost.
   Paradigm=Entropy,
   Save=Y (half),
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=Splittable,
   Target=Nearby or Far-Away
 ]
@@ -2551,7 +2657,7 @@ each beam and apply its results.
   Paradigm=Biomancy,
   Save=N,
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close and Nearby Area
 ]
@@ -2592,6 +2698,9 @@ by a Prismatic Ray of the same elemental type, the protection is dispelled
 if a Wizards' Duel is lost.
 
 
+  \begin{center}
+  \includegraphics[scale=.5]{Wizardry_1}
+  \end{center}
 
 
 
@@ -2601,7 +2710,7 @@ if a Wizards' Duel is lost.
   Paradigm=Force,
   Save=N,
   Duration=Moments,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=See description
 ]
@@ -2627,7 +2736,7 @@ or more, the width becomes \SUMDICE meters wide.
   Paradigm=Elements,
   Save=N,
   Duration=Concentration,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close
 ]
@@ -2697,7 +2806,7 @@ if a Wizards' Duel is lost.
   Paradigm=Force,
   Save=Y (half),
   Duration=0,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Nearby or Far Away Area
 ]
@@ -2808,7 +2917,7 @@ fall) if a Wizards' Duel is lost.
   Paradigm=Elements,
   Save=N,
   Duration=One trip,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Close
 ]
@@ -2850,6 +2959,10 @@ Duel is lost.
 
 
 
+  \begin{center}
+  \includegraphics[scale=.5]{Spider}
+  \end{center}
+
 
 \SPELL[
   Name=Web,
@@ -2857,7 +2970,7 @@ Duel is lost.
   Paradigm=Entropy,
   Save=Y (negate),
   Duration=Markovian,
-  Counter=n/a ,
+  Counter=None ,
   Keywords=None,
   Target=Nearby or Far Away Area
 ]
