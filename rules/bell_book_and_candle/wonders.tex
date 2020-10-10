@@ -16,9 +16,9 @@
 
 \mysection{Staff Magic}{wonder-staff-magic}
 
-A magical staff is a necessity for a Philosopher to control more complex wizardry and mysteries.  A staff must be made out of a special material that should be worked out between you and the Arbiter.  The more powerful the staff, the better the material must be.  If you're making a low level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a high level staff, it might need to be the femur of the Great Wyrm Vermithrax.  
+A staff can be a cane, club, wand, staff, caduceus, or walking stick; it is a necessary accessory for any Philosopher reaching the heights of their study. It must be made out of a special material: the more powerful the staff, the better the material must be.  If you're making an Iron level staff you might need a branch from an ash tree from the Forbidden Wood.  If you're making a Gold level staff, it might need to be the femur of the Great Wyrm Vermithrax.  Work this out with the Arbiter!
 
-All staffs are 2-handed Fast Brawl weapons that do d6 damage; can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will  prompt a \mylink{Wizards' Duel}{sorcerer-wizards-duel} if the opposing wizard is present).
+All staffs are 2-handed Fast Brawl weapons that do d6 damage.  They can produce light at will (as a Torch); can hit creatures only affected by magic weapons; and can dispel \mylink{Illusion}{wizardry-illusion} with a touch (though this will prompt a \mylink{Wizards' Duel}{philosopher-wizards-duel} if the opposing wizard is present).
 
 If you do not wish anyone else to use this staff, it can be bound with a \mylink{Wizard Sigil}{research-sigil-wizard} created by you. As long as the staff has your Wizard Sigil on it, the staff is just a normal quarterstaff in anyone else's hands (though obviously made of special material!).
 
@@ -26,7 +26,9 @@ A Staff is limited to 3 powers, but you can "mix and match" from any group as yo
 
 The "Stackable" column in the table indicates if the ability can be bought more than once.  When you see \NUM in a description, this is the number of times you bought the ability.
 
-\cbreak
+  \begin{center}
+    \includegraphics[scale=.5]{StaffMagic}
+  \end{center}
 
 
 
@@ -39,17 +41,19 @@ The "Stackable" column in the table indicates if the ability can be bought more 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-     Use your \INT for Fight Rolls\footnote{Instead of \VIG} & No \\
-     +1 to damage & Yes \\
-     Safe Casting & Yes \\
-     Daze & No \\
      All Saves +1 & No \\
-     Mitigation: Mishap to nothing & No \\
      Anchor: d8 & No \\
      Blood: 1 & No \\
+     Damage +1 & Yes \\    
+     Daze & No \\
+     Insight: +1 & Yes \\
+     Mending & No \\
+     Mitigation: Mishap to nothing & No \\
+     Safe Casting & Yes \\
+     Use your \INT for Fight Rolls\footnote{Instead of \VIG} & No \\
   }
 
-
+\newpage
 
 
 \mysubsection{Silver Powers}{staff-magic-silver-powers}
@@ -60,17 +64,17 @@ The "Stackable" column in the table indicates if the ability can be bought more 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-     Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
-     Damage \DCUP & No \\
-     Power Casting & Yes \\
-     Rend & No \\
      All Saves +2 & No \\
-     Mitigation: Calamity to Mishap & No \\
      Anchor: d10 & No \\
      Blood: 2 & No \\
+     Damage \DCUP & No \\
+     Insight: +2 & Yes \\
+     Mitigation: Calamity to Mishap & No \\
+     Power Casting & Yes \\
+     Rend & No \\
+     Use your \INT for Fight\ and Guard\footnote{Instead of \DEX}  rolls & No \\
   }
 
-\newpage
 
 \mysubsection{Gold Powers}{staff-magic-gold-powers}
 \example { 
@@ -80,14 +84,15 @@ The "Stackable" column in the table indicates if the ability can be bought more 
   \mytable{X r}{
     \thead{Effect} & \thead{Stackable} \\
   }{
-     Use your \INT for Fight and Guard rolls.  Add +4 to these rolls. & No \\
-     Damage \DCUP & Yes \\
-     Natural Casting & Yes \\
-     Cleave & No \\
      All Saves +4 & No \\
-     Mitigation: Ruin to Calamity & No \\
      Anchor: d12 & No \\
      Blood: 3 & No \\
+     Cleave & No \\
+     Damage \DCUP & Yes \\
+     Insight: +3 & Yes \\
+     Mitigation: Ruin to Calamity & No \\
+     Natural Casting & Yes \\
+     Wisdom & No \\
   }
 
 \cbreak
@@ -100,21 +105,37 @@ Changes the die you roll with your \INT when rolling a Torrent, instead of a d6
 
 Once per Session, you can tap into the power of the Staff directly and add 1 (Iron), 2 (Silver), or 3 (Gold) Blood Dice to your Pool.
 
+\myhighlight{Insight}{staff-magic-insight}
+
+Up to \NUM times a Session, you can add a +1,+2, or +3 (depending on the level) to any Knowledge roll.  You can only use this ability once per roll i.e.  you cannot use Insight: +2 twice on the same roll to get a +4
+
+\myhighlight{Mending}{staff-magic-mending}
+
+The \TARGET cost of \mylink{Mend}{leechcraft-mend} is 1 as long as the staff is in your possession.
+
+
 \myhighlight{Mitigation}{staff-magic-mitigation}
 
 Once per Session, Mitigation reduces the effect of a Ruin to a Calamity (Gold); a Calamity to a Mishap (Silver); and eliminates the effect of a Mishap (Iron).
-
-\myhighlight{Power Casting}{staff-magic-power casting}
-
-You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \NUM times per Session  
 
 \myhighlight{Natural Casting}{staff-magic-natural casting}
 
 Your Blood Dice are only depleted on a natural 1 (instead of a 1 or 2). 
 
+
+\myhighlight{Power Casting}{staff-magic-power casting}
+
+You can replace one of your rolled Blood Die with a natural 6 (as if it was rolled) \NUM times per Session  
+
+ 
+
 \myhighlight{Safe Casting}{staff-magic-safe casting}
 
 You can replace one of your rolled Blood Die with a natural 1 (as if it was rolled) \NUM times per Session.
+
+\myhighlight{Wisdom}{staff-magic-wisdom}
+
+Whenever you fail a Leechcraft roll, the negative modifier is -1 instead of -2 (the modifiers are still cumulative).
 
 \newpage
 
@@ -150,6 +171,12 @@ Weapons are often named after their wielder or maker, and the powers of the rune
   \item The Flaming and Twice Accurate Sword of Magnuss
 }
 
+
+  \begin{center}
+    \includegraphics[scale=.5]{SwordMagic}
+  \end{center}
+
+
 \mysubsection{The Runes of Elfland}{spriggan-elfland-runes}
 
 \mylist {
@@ -158,7 +185,7 @@ Weapons are often named after their wielder or maker, and the powers of the rune
 
   \item Because Spriggan can't handle iron, the material of the weapon must be exotic (silver, gold, etc) or otherworldly (adamantium, meteorite).  The material needs to be available and should be worked out with the Arbiter.  Only daggers, swords (long and short), and spears can be enchanted
 
-  \item In order to accept an enchantment, the weapon must have a Mortal sigil, mark, or writ etched onto the blade, once for each Elfland Rune.  Archaic runes require a \mylink{Wizard Sigil}{sigil-wizard}, Fiendish runes require a \mylink{Witch Mark}{occultism-witch-mark}, and Seraphic runes require a \mylink{Holy Writ}{miracle-holy-writ}.
+  \item In order to accept an enchantment, the weapon must have a Mortal sigil, mark, or writ etched onto the blade, once for each Elfland Rune.  Archaic runes require a \mylink{Wizard Sigil}{research-sigil-wizard}, Fiendish runes require a \mylink{Witch Mark}{occultism-witch-mark}, and Seraphic runes require a \mylink{Holy Writ}{miracle-holy-writ}.
 
   \item The weapons is enchanted with the help of the Abandoned.  You must summon one of the Abandoned for each rune you wish to etch on the blade; each Abandoned can write a single Elfland Rune on the weapon.  The Abandoned can only write in the language that they know:  Archons can only write Archaic Runes, Fiends can only write Fiendish Runes, and Seraphs can only write Seraphic Runes.
 
