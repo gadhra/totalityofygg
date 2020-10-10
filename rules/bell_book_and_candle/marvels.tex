@@ -33,6 +33,8 @@
 
 You can create \DICE d4 \UD of Provisions. These \UD can be combined into a single \UD (see "Adding and Splitting Usage Dice" in the Arbiter's Miscellania section of hte core rules). These Provisions can be stored for use later, but it also particularly nourishes the faithful.  During the working of the Miracle, up to \DICE disciples of the Small God can partake of the Ambrosia and gain +1 Faith Die (the miracle worker cannot gain this benefit). Disciples partaking of the meal do not affect the \UD produced in any way.
 
+\cbreak
+
 \mysubsection{Covenant}{miracle-covenant}
 
 You seal a bargain between yourself (the Suzerain) and another (the Vassal) by awarding your Small God temporary control over your collective *noumenon* (this means that the Unhallowed can't be held to a Covenant).  A Covenant has to be given freely, but can be compelled by other factors (like a dagger to the throat).
@@ -51,9 +53,16 @@ Roll a number of \DICE equal to the \LVL of the Vassal and gain the following ef
 
 You and your Vassal can only have a single Covenant at any time.  The Covenant can be broken by one of you having a Crisis of Faith; the death of you or your Vassal; or by mutual, peaceful agreement.
 
+\newpage
+
 \mysubsection{Crusade}{miracle-crusade}
 
 Transforms your Vassal into a Paladin of the Faith.
+
+  \begin{center}
+  \includegraphics[scale=.5]{Crusade}
+  \end{center}
+
 
 Roll a number of \DICE equal to the \LVL x2 of the Vassal and gain the following effects (in addition to the benefits of being a Vassal):
 
@@ -64,6 +73,8 @@ Roll a number of \DICE equal to the \LVL x2 of the Vassal and gain the following
 }
 
 You now have to name a \myital{jihad} important to your Small God: "wipe out the infidels of the Crawling Chaos", for example, or "bring the fingerbone of St. Sebastien to the reliquary in the Howling Wastes".  Similar to a Geas, any day not spent in the furtherance of the cause of the Crusade will lose your Vassal a single Faith die.  It's important to note that if your Vassal should lose all their Faith and suffer a Crisis of Faith, the Crusade has failed and the Covenant is broken.
+
+
 
 \mysubsection{Golem}{miracle-golem}
 
@@ -136,7 +147,11 @@ This miracle is the only one that does {not} require Hallowed Ground to perform.
 
 A repository for Faith.  You can spend \DICE Faith and place them in the relic at the time of its creation.  This Faith can be used by other Mystics of your Small God (as well as yourself).  The relic itself must be something "special" - a fingerbone of a Saint, a shroud, etc.  - at the Arbiter's discretion.  The more powerful the relic, the more Faith can be placed inside of it.
 
-The Miracle of the Holy Relic is used to create \mylink{Holy Symbols}{mystic-holy-symbol}.  The symbol must be what is indicated under your Small God.  A Holy Symbol only requires you to spend a single Faith \POOL
+The Miracle of the Holy Relic is used to create \mylink{Holy Symbols}{mystics-liturgies}.  The symbol must be what is indicated under your Small God.  A Holy Symbol only requires you to spend a single Faith \POOL
+
+  \begin{center}
+  \includegraphics[scale=.5]{Miracle_1}
+  \end{center}
 
 
 \mysubsection{Holy Water}{miracle-holy-water}
@@ -174,9 +189,12 @@ Worshipers who have a Faith Die from you become your Disciple (see the Mystic Vi
 You can perform a sacred ceremony for \SUMDICE others (excluding yourself).  Non-Mystics who indulge in a Sacred Mass are Blessed for the remainder of the Session (or for the next Session at the Arbiter's discretion).  If you are a Mysic of a different Small God then the miracle worker and partake in the Mass, you lose 2 Faith Die.  If you are the miracle worker, or a Mystic of the same Small God, you gain 1 Faith Die for every 10 people participating up to your \MAX.
 
 
+
 \mysubsection{Sin Eating}{miracle-sin-eating}
 
 You can heal up to \DICE serious and non-serious Spirit Wounds on yourself or others
+
+\cbreak
 
 \mysubsection{Tongues of Fire}{miracle-tongues-of-fire}
 
@@ -227,6 +245,7 @@ If the victim fails their save, the suffer the following maledictions:
 
 The ritual requires a dog (your familiar is fine); an item belonging to the victim; and 66\AG in supplies.  No harm comes to the dog, but the spectral figure will resemble him or her if examined closely
 
+\cbreak
 
 \OCCULT[
   Name=Bind Familiar,
@@ -253,7 +272,7 @@ When you summon your familiar, roll below (or discuss with the Arbiter if you wa
 
 \myhighlight{Familiars}{occultism-familiars}
 
-  \mytable{X c}{
+  \mytable{l X}{
     \thead{d6} & \thead{Familiar}\\
   }{
     1 & Cat \\
@@ -274,6 +293,11 @@ When you summon your familiar, roll below (or discuss with the Arbiter if you wa
     5 &  Miniature, horribly deformed homunculus resembling you \\
     6 & An intelligent moss \\
   }  
+
+  \begin{center}
+  \includegraphics[scale=.5]{Occult_1}
+  \end{center}
+
 
 \OCCULT[
   Name=Create Juju,
@@ -333,6 +357,10 @@ Each piece of Juju must have a \mylink{Witch Mark}{occultism-witch-mark} on it f
     \item \mybold{Phylactery:} A receptacle appropriate for the ritual of Lichdom
 }
 
+  \begin{center}
+  \includegraphics[scale=.5]{Fetish_or_Juju}
+  \end{center}
+
 \mybold{Supreme "Devil's" Juju; 13 Cunning; 6{,}666\AU}
 
 \mybullet {
@@ -350,7 +378,7 @@ Each piece of Juju must have a \mylink{Witch Mark}{occultism-witch-mark} on it f
   Cost=666\AG
 ]
 
-When you perform this ritual on a Mortal corpse no more than 7 days dead, you prevent them from departing the Isle of the Dead.  The soul is trapped in Hell permanently (though their spirit can still be lead back to the Mortal plane through \mylink{Katabasis}{occultism-katabasis}.  The corpse is consumed when this ritual is performed.
+When you perform this ritual on a Mortal corpse no more than 7 days dead (by the law of \TheAuthority), you prevent them from departing the Isle of the Dead.  The soul is trapped in Hell permanently (though their spirit can still be lead back to the Mortal plane through \mylink{Katabasis}{occultism-katabasis}.  The corpse is consumed when this ritual is performed.
 
 
 \OCCULT[
@@ -364,7 +392,12 @@ You can see events transpiring within [Cunning]x100km of you by gazing into a si
 
 The scrying doesn't have to only show events of the present; you can look up to [Cunning] centuries into the past.  You'd have to have a rough idea of what you'd want to see - "show me the temples of Syrinx before they were cast down" would work, but "show me the secret entrance to the Caverns of Chaos" wouldn't.  The more detailed the description of what you want to see, the better you see it.
 
-Scrying requires that the silver bowl, censer, crystal ball be a \mylink{Minor, Major, or Greater Juju}{occultism-juju}.  Major Juju adds 100km and 100 years; Greater Juju adds 1,000km and 1,000 years.
+Scrying requires that the silver bowl, censer, crystal ball be a \mylink{Minor, Major, or Greater Juju}{occultism-create-juju}.  Major Juju adds 100km and 100 years; Greater Juju adds 1,000km and 1,000 years.
+
+  \begin{center}
+  \includegraphics[scale=.5]{Occult_2}
+  \end{center}
+
 
 
 \OCCULT[
@@ -409,11 +442,25 @@ You summon [Cunning] poltergeists to haunt an Unhallowed place up to [Cunning]km
 \OCCULT[
   Name=Hekaphage,
   Link=occultism-hekaphage,
-  Success=varies,
+  Success=4+,
   Cost=varies
 ]
 
-You can destroy a curse by feeding it to a Hekaphage, ethereal creatures that eat magic and curses.  You must spend a [Cunning] equal to the cost of the \mylink{Malison}{occultism-malison}.  The cost to remove the curse is [Cunning]x10\FE
+You can destroy a malison by feeding it to a Hekaphage: ethereal creatures that eat magic and Curses.  
+
+\mybullet{
+    \item a Lesser Curse requires 4 [Cunning]
+    \item a Greater Curse requires 8 [Cunning]
+}
+
+Summoning a Hekaphage costs no coin (only Unhallowed Earth), but you can spend up to [Cunning]x100 coins in materials if you would like to convert coin to XP.
+
+\cbreak
+
+  \begin{center}
+  \includegraphics[scale=.5]{Occult_3}
+  \end{center}
+
 
 
 \end{multicols}
@@ -452,11 +499,20 @@ Any who journey to the Isle of the Dead and return are forever more Unhallowed.
 
 This dangerous and depraved rite binds a Mortal's \myital{noumenon} to a phylactery, allowing them to live on as a lich with life everlasting. In addition to the exhorbitant costs above, this rite requires:
 
+\begin{wrapfigure}{c}{0.4\textwidth}
+  \begin{center}
+    \includegraphics[scale=.5]{Lich}
+  \end{center}
+\end{wrapfigure}
+
+
+
 \mylist{
     \item a phylactery (see \mylink{Create Juju}{occultism-create-juju})
     \item a dagger or knife enchanted with Bleeding (see \mylink{Sword Magic}{spriggan-sword-magic})
     \item a Mortal vessel - that is, a human corpse - dead for less than 7 days
 }
+
 
 
 The witch performing the ritual must do the following:
@@ -472,7 +528,7 @@ The witch performing the ritual must do the following:
 
 Once the \myital{Shikari} and the lich return, the lich is reincarnated in a vessel that is in all ways their original self, with no loss of power or skill, though they will appear cadaverous. Despite this, they now only age 1 year for every 1,000 years that pass; they are immune to iron weapons, Toxins, and spells of the Mind and Entropy paradigms; they may commit as many spells as they desire to be inscribed inside their skulls (making Lich skulls extremely potent magical books in their own right); and they are able to read and speak all languages
 
-\newpage
+
 
 \begin{multicols}{2}\raggedcolumns
 
@@ -491,7 +547,16 @@ You can place one of the base {Curses}{table-curses}:
   \item on your familiar.  
 }
 
-If the curse is chosen randomly, at least 3 [Cunning] is required.  If you wish to choose the curse, at least 6 [Cunning] is required.  The more Cunning you use, the more difficult it will be to remove the curse with \mylink{Hekaphage}{occulism-hekaphage}.
+\mybullet{
+    \item a \myital{random} Lesser Curse requires 3 [Cunning]
+    \item a \myital{specific} Lesser Curse requires 5 [Cunning]
+    \item a \myital{random} Greater Curse requires 7 [Cunning]
+    \item a \myital{specific} Greater Curse requires 9 [Cunning]
+
+}
+
+
+If the curse is chosen randomly, at least 3 [Cunning] is required.  If you wish to choose the curse, at least 6 [Cunning] is required.  The more Cunning you use, the more difficult it will be to remove the curse with \mylink{Hekaphage}{occultism-hekaphage}.
 
 You can break any of your own curses at will. Malisons survive the death of the witch that casts them.  The cost to cast the curse is [Cunning]x10\AU
 
@@ -504,8 +569,6 @@ You can break any of your own curses at will. Malisons survive the death of the 
 ]
 
 You can either desecrate Hallowed Ground, or create Unhallowed Earth for the casting of rituals, somewhere within [Cunning]km of you.  You create / desecrate an area [Cunning]x2 meters in diameter.  If you're attempting to desecrate Hallowed Ground, the diameter must be equal to or exceed the area of the Hallowed Ground.  You must create a \mylink{Witch Mark}{occultism-witch-mark} that will be consumed during the ritual; this Witch Mark identifies the Unhallowed Earth as "belonging" to you.  Another Mystic knows the size of the Unhallowed Earth, but not necessarily who it belongs to.
-
-\cbreak
 
 Unhallowed Earth with your Witch Mark on it provides the following benefits:
 
