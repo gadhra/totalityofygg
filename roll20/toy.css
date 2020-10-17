@@ -2,9 +2,10 @@
 
 
 .charsheet {
-    background-color: white;
+  background-color: #fffbfb;
   font-family: Futura, Copse, Arial, sans-serif;
   font-size:12px;
+  color: black;
 }
 
 /*this hides the contents of each tab by default*/
@@ -12,13 +13,21 @@
   display: none;
 }
 
+.charsheet .repcontrol {
+    margin-top:15px;
+    width: 175px;
+}
+
+
+.charsheet button[type="roll"] {
+    color: red;
+    font-weight:bold;
+}
 
 /*this shows the tab content when the appropriate input field is selected*/
 .charsheet input.sheet-tab1:checked ~ div.sheet-section-stats,
-.charsheet input.sheet-tab2:checked ~ div.sheet-section-gear,
-.charsheet input.sheet-tab3:checked ~ div.sheet-section-skills,
-.charsheet input.sheet-tab4:checked ~ div.sheet-section-misc,
-.charsheet input.sheet-tab5:checked ~ div.sheet-section-classes,
+.charsheet input.sheet-tab2:checked ~ div.sheet-section-combat,
+.charsheet input.sheet-tab3:checked ~ div.sheet-section-gear,
 {
   display: block;
 }
@@ -62,8 +71,6 @@
 .charsheet input.sheet-tab1:checked + span.sheet-tab1,
 .charsheet input.sheet-tab2:checked + span.sheet-tab2,
 .charsheet input.sheet-tab3:checked + span.sheet-tab3,
-.charsheet input.sheet-tab4:checked + span.sheet-tab4,
-.charsheet input.sheet-tab5:checked + span.sheet-tab5,
 .charsheet input.sheet-tab99:checked + span.sheet-tab99 {
     
     background: #83B583;
@@ -73,75 +80,141 @@
 /*----------- End Tab Setup -----------*/
 
 
-.charsheet h3 {text-decoration: underline; padding-bottom:5px;}
-.charsheet h4 {padding:10px 0 10px 0;}
+.charsheet h3 {text-decoration: underline; padding-bottom:5px; color:black;}
+.charsheet h4 {text-decoration: underline; padding-bottom:5px; color:black;}
 
 
 /*-----cols and rows-----*/
 
-.charsheet .sheet-3colrow .sheet-col  {
-    width: calc(32% - 10x) !important;
-    margin-right: 5px !important;
+.sheet-green {
+    background-color: #91ae7e;
+}
+
+.sheet-brown {
+    background-color: #a9ae7e;
+}
+
+.sheet-blue {
+    background-color: #7e9ad0;
+}
+
+.sheet-black {
+    background-color: #000000;
+}
+
+.sheet-white {
+    background-color: #FFFFFF;
+}
+
+
+.sheet-center {
+    text-align: center;
+}
+
+.sheet-center label {
+    text-align: center;
+}
+
+.charsheet .sheet-my1colrow {
+}
+
+.charsheet .sheet-my1colrow .sheet-col {
+    width: calc(100% - 5px);
     padding: 5px;
 }
 
-.charsheet .sheet-3colrow .sheet-col:nth-child(2) {
-    width: calc(32% - 10px) !important;
-    margin-right:5px;
-    padding: 5px;    
+.charsheet .sheet-my2colrow  {
 }
-.charsheet .sheet-3colrow .sheet-col:nth-child(3){
-    width: calc(32% - 10px) !important;
-    margin-right: 0px !important;
+
+.charsheet .sheet-my2colrow .sheet-col {
+    width: calc(48% - 10px) !important;
     padding: 5px;
-    text-align:right;
-}
-
-.charsheet .sheet-2colrowequal .sheet-col {
-    width: calc(50% - 10px) !important;
-    margin-right: 2px !important;
-}
-
-.charsheet .sheet-2colrowequal .sheet-col:nth-child(2) {
-    width: calc(50% - 10px) !important;
-    margin-right: 2px !important;
-}
-
-.charsheet .sheet-2colrow .sheet-col {
-    width: calc(25% - 10px) !important;
-    margin-right: 2px !important;
-}
-.charsheet .sheet-2colrow .sheet-col:nth-child(2) {
-    width: calc(75% - 10px) !important;
-    margin-right: 0 !important;
-  border: 1px solid #83B583;
-}
-
-.charsheet .sheet-2colrow .sheet-col-reversed {
-    width: calc(75% - 3px) !important;
-    margin-right: 2px !important;
-}
-.charsheet .sheet-2colrow .sheet-col-reversed:nth-child(2) {
-    width: calc(25% - 3px) !important;
-    margin-right: 0 !important;
 }
 
 
-.charsheet .sheet-1colrow .sheet-col {
-    width: calc(100% - 3px) !important;
-    margin-right: 0 !important;
-  border: 1px solid #83B583;
+.charsheet .sheet-my3colrow {
 }
 
-.charsheet .sheet-row {
-    height: 45px;
-    margin: 0 0 2px;
-  margin-top:30px;
+.charsheet .sheet-my3colrow .sheet-col {
+    width: calc(30% - 10px) !important;
+    padding: 5px;
+    color: black;
 }
+
+.charsheet .mysheet-row {
+    margin-top:15px;
+}
+
+
+/* character sheets */
+.charsheet .sheet-my1colrow .sheet-sellsword,
+.charsheet .sheet-my1colrow .sheet-knave,
+.charsheet .sheet-my1colrow .sheet-philosopher,
+.charsheet .sheet-my1colrow .sheet-mystic,
+.charsheet .sheet-my1colrow .sheet-murk,
+.charsheet .sheet-my1colrow .sheet-spriggan,
+.charsheet .sheet-my1colrow .sheet-night_child,
+.charsheet .sheet-my1colrow .sheet-pooka
+{
+    margin-left: -20px;
+    max-width: 100%;
+    background-color: #f0dbb3;
+}
+
+.charsheet .sheet-my1colrow .sheet-sellsword .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-knave .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-philosopher .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-mystic .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-murk .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-spriggan .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-night_child .sheet-3colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-pooka .sheet-3colrow .sheet-col 
+{
+  color: #000000;
+  text-align: left;
+  width: calc(30% - 10px) !important;
+  padding: 5px;
+}
+
+.charsheet .sheet-my1colrow .sheet-sellsword  .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-knave .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-philosopher .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-mystic .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-murk  .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-spriggan .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-night_child .sheet-my2colrow .sheet-col,
+.charsheet .sheet-my1colrow .sheet-pooka .sheet-my2colrow .sheet-col
+{
+    width: calc(48% - 10px) !important;
+    padding: 5px;
+}
+
+
+.sheet-box {
+    border: 1px solid black;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+
+.sheet-halfbox {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
 
 
 /*----------- End cols -----------*/
 
+
+.charsheet .sheet-inventory {
+    min-height: 300px;
+    max-width: 800px;
+    background-color: #f7f3f3;
+    margin-left: 5px;
+}
 
 .charsheet .sheet-weaponTable {
   width: 100%;
@@ -152,7 +225,6 @@
   text-align:center;
 }
 .charsheet .sheet-weaponTable td {
-    padding: 5px;
   text-align: center;
 }
 
@@ -238,6 +310,7 @@ div.sheet-circle {
     appearance: none;
     text-align: center;
     margin: 0px;
+    max-width: 190px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -251,56 +324,40 @@ input[type=number] {
 
 .charsheet label {
   margin:0px;
-  font-size:1em;
+  color: black;
+  padding:5px;
 }
 
+
 /*this hides the contents of each tab by default*/
-.charsheet div[class="sheet-1colrow sheet-barbarian"],
-.charsheet div[class="sheet-1colrow sheet-soldier"],
-.charsheet div[class="sheet-1colrow sheet-archaeologist"],
-.charsheet div[class="sheet-1colrow sheet-bravo"],
-.charsheet div[class="sheet-1colrow sheet-leech"],
-.charsheet div[class="sheet-1colrow sheet-sorcerer"],
-.charsheet div[class="sheet-1colrow sheet-mystic"],
-.charsheet div[class="sheet-1colrow sheet-witch"],
-.charsheet div[class="sheet-1colrow sheet-murk"],
-.charsheet div[class="sheet-1colrow sheet-spriggan"],
-.charsheet div[class="sheet-1colrow sheet-night_child"],
-.charsheet div[class="sheet-1colrow sheet-pooka"]
+.charsheet div[class="sheet-my1colrow sheet-sellsword"],
+.charsheet div[class="sheet-my1colrow sheet-knave"],
+.charsheet div[class="sheet-my1colrow sheet-philosopher"],
+.charsheet div[class="sheet-my1colrow sheet-mystic"],
+.charsheet div[class="sheet-my1colrow sheet-murk"],
+.charsheet div[class="sheet-my1colrow sheet-spriggan"],
+.charsheet div[class="sheet-my1colrow sheet-night_child"],
+.charsheet div[class="sheet-my1colrow sheet-pooka"]
 
 {  
   display: none !important;
+  background-color: #FFFFFF;  
 }
 
-.sheet-isBarbarian:checked ~ .sheet-barbarian {
+
+.sheet-isSellsword:checked ~ .sheet-sellsword {
   display: block !important;
 }
 
-.sheet-isSoldier:checked ~ .sheet-soldier {
+.sheet-isKnave:checked ~ .sheet-knave {
   display: block !important;
 }
 
-.sheet-isArchaeologist:checked ~ .sheet-archaeologist {
-  display: block !important;
-}
-
-.sheet-isBravo:checked ~ .sheet-bravo {
-  display: block !important;
-}
-
-.sheet-isLeech:checked ~ .sheet-leech {
-  display: block !important;
-}
-
-.sheet-isSorcerer:checked ~ .sheet-sorcerer {
+.sheet-isPhilosopher:checked ~ .sheet-philosopher {
   display: block !important;
 }
 
 .sheet-isMystic:checked ~ .sheet-mystic {
-  display: block !important;
-}
-
-.sheet-isWitch:checked ~ .sheet-witch {
   display: block !important;
 }
 
@@ -837,6 +894,84 @@ input[type=number] {
 }
 
 
+/* ROLL DEATH */
+.sheet-rolltemplate-toy-death {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-death {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-death  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-death .sheet-header {
+  background-color: #424141;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+.sheet-rolltemplate-toy-death .sheet-failure {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: red !important;
+}
+
+.sheet-rolltemplate-toy-death .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+.sheet-rolltemplate-toy-death .sheet-success {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background-color: green !important;
+}
+
+
+/* ROLL KNOWLEDGE */
+.sheet-rolltemplate-toy-knowledge {
+  margin-left: -37px;
+}
+
+.withoutavatars .sheet-rolltemplate-toy-knowledge {
+  margin-left: -7px;
+}
+
+.sheet-rt-wrapper .sheet-rolltemplate-toy-knowledge  {
+  border: 5px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: red;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-toy-knowledge .sheet-header {
+  background-color: #424141;
+  text-align: center;
+  font-weight:bold;
+  color: white;
+  padding: 5px;
+}
+
+.sheet-rolltemplate-toy-knowledge .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+
 
 /* ROLL FIGHT */
 .sheet-rolltemplate-toy-fight {
@@ -864,6 +999,12 @@ input[type=number] {
 
 /* Roll Skill */
 /* The Cascading Part */
+.sheet-rolltemplate-toy-skill .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
 .sheet-rolltemplate-toy-skill {
   margin-left: -37px;
 }
@@ -906,6 +1047,34 @@ input[type=number] {
   color: white;
   background-color: green !important;
 }
+
+/* Tooltip container */
+.sheet-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.sheet-tooltip .sheet-tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.sheet-tooltip:hover .sheet-tooltiptext {
+  visibility: visible;
+}
+
+
 /* end The Cascading Part */
 
 
