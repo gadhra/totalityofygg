@@ -314,7 +314,8 @@
   Target = Self
 ]
 
-You cannot wear any other armor while you're wearing Armor of the Gods.  What the armor looks like is up to you, but it should be elaborate/brutal/gilded etc. - something that makes you stand out in a crowd.  Your \MD drops to d4; the \UD for the Armor depends on the number of \DICE invested: 1 d4; 2-3 d6; 4-6 d8; 7-9 d10; 10+ d12.
+You can't wear any other armor while wearing Armor of the Gods.  What the armor looks like is up to you, but it should be elaborate/brutal/gilded etc. - something that makes you stand out in a crowd.  Your \MD drops to d4; the \UD for the Armor depends on the number of \DICE invested: 1 d4; 2 d6; 3 d8; 4 d10; 5+ d12.  The Armor cannot be repaired; once its \UD is exhausted, the Armor disappears.
+
 
 \MYSTERY [
   Name = Clamp,
@@ -349,8 +350,8 @@ You can command something that's a mixture of different types (soup, coins, etc.
   Target = Close Target(s)
 ]
 
-You can convert up to \SUMDICE kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item). For example, if the \SUMDICE of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces. Additionally, you can place up to \DICE X100kg of coins into "hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Burden, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
-You can combine the effects above (so you could convert money and store it in hammerspace if you'd like).  You must cast this spell each time you want to put more coins into hammerspace, but everything that's in hammerspace is released upon your death.
+You can convert up to \SUMDICE kg of coins into coins of another type of equivalent value (as a reminder, there are 100 coins in a kg, and 4kg of coins are 1 Significant Item). For example, if the \SUMDICE of your dice roll was 10 you could convert 1,000 iron pieces (10kg) into 100 silver pieces (1kg) or 10 gold pieces (1/10kg); or you could convert 10 gold pieces into 100 silver pieces or 1,000 iron pieces. Additionally, you can place up to \DICE X100kg of coins into "Hammerspace" for an indefinite period of time; the coins essentially cease to exist, have no Burden, and cannot be stolen or taken by others (though the existence of the coins can be divined through a Scry spell or similar).  You can retrieve the coins at any time (though you have to retrieve all of them at once).  The coins are also released upon your death, meaning that you might occassionally be a target of thieves.
+You can combine the effects above (so you could convert money and store it in Hammerspace if you'd like).  You must cast this spell each time you want to put more coins into Hammerspace, but everything that's in Hammerspace is released upon your death.
 
   \begin{center}
   \includegraphics[scale=.5]{CivilizedArcana}
@@ -367,7 +368,7 @@ You can combine the effects above (so you could convert money and store it in ha
   Target = Self
 ]
 
-A magical blacksmith's hammer appears in your hand that only you can wield.  The hammer deals \DICE damage up to a maximum of 8. You fight with this weapon using your \FOC (instead of your \VIG).  Every time the hammer deals damage, its damage goes down by 1.   Additionally, you can also repair the Max \UD of an Ally's armor during a Bivouac; for every \DCUP you repair in this way, the damage of the hammer goes down by 1.  Once the Forgehammer hits 0 damage, it disappears. The Forgehammer can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
+A magical blacksmith's hammer appears in your hand that only you can wield.  The hammer deals \DICE+\DICE damage up to a maximum of 8. You fight with this weapon using your \FOC (instead of your \VIG).  You can repair the Max \UD of an Ally's armor during a Bivouac; for every \DCUP you repair in this way, the damage of the hammer goes down by 2. The Forgehammer can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.
 
 Once the damage die is exhausted (reaches 0), the Forgehammer disappears.
 
@@ -429,7 +430,7 @@ Once the damage die is exhausted (reaches 0), the Abyssal Trident disappears.
   Target = Close Target(s)
 ]
 
-You must be near a body of water to use this liturgy (a river is OK, a puddle isn't).  You summon a lock up to \DICE meters in length, width, and height.  The box can hold up to \DICE X100kg in weight, or about 25 Significant Items (provided the box is big enough in terms of height, width, and depth i.e. you could put a 2 meter long pole in a 1 [die] locker).  Once you seal the box and carve your name onto it, the waters will take the locker back beneath the surface, where it will disappear.  At any time, you can return to the same body of water and bring the locker back from the depths. Nothing else can bring the locker back from the deeps (not even the liturgy of Dredge) except your death.  When you die, the locker will wash up on shore within a few days for some lucky (or unlucky) soul to find.
+You must be near a body of water to use this liturgy (a river is OK, a puddle isn't).  You summon a chest up to \DICE meters in length, width, and height.  The box can hold up to \DICE X100kg in weight, or about 25 Significant Items (provided the box is big enough in terms of height, width, and depth i.e. you could lie a 2 meter long pole in a 2 [die] locker).  Once you seal the box and carve your name onto it, the waters will take the locker back beneath the surface, where it will disappear.  At any time, you can return to the same body of water and bring the locker back from the depths. Nothing else can bring the locker back from the deeps (not even the liturgy of Dredge) except your death.  When you die, the locker will wash up on shore within a few days for some lucky (or unlucky) soul to find.
 If you place a living thing inside, it can breathe - but it will starve or die of thirst without food or water (incidentally, this is a great way to make \myital{vodyanoi})
 
 \MYSTERY [
@@ -441,7 +442,7 @@ If you place a living thing inside, it can breathe - but it will starve or die o
   Target = Close or Nearby
 ]
 
-Choose an area \DICE meters in radius.  Buried or covered objects rise \DICE x5 meters to the surface.  If you cast this spell on the ground, coins, stones, and roots will be pulled to the surface; if you cast it on water, sunken objects will rise to the surface and remain as long as you concentrate.  The objects cannot weigh more than \DICE x100kg.  
+The ground \DICE+\DICE meters in diameter (with you at the center) rumbles and quakes.  Buried or covered objects rise \DICE x5 meters to the surface.  Coins, stones, and roots will be pulled to the surface; if you cast it on water, sunken objects will rise to the surface and remain as long as you concentrate.  The objects cannot weigh more than \DICE x100kg.  
 
 \MYSTERY [
   Name = Excavate,
@@ -490,7 +491,7 @@ For \SUMDICE Minutes, up to \DICE+1 Allies or Monsters (including yourself) can 
   Target = Close\, Nearby\, Far-Away\, or Distant
 ]
 
-You can invoke this liturgy in an area  Close, Nearby, Far-Away, or Distant from yourself.  The air Close to the area takes on an unsettling air of silence.  Sound is not magically suppressed, but Monsters and creatures within its bounds feel that any sound they make will disturb something better left undisturbed.  Non-intelligent animals will not enter the area, and Monsters inside must make an immediate morale check. Thereafter, Saves against fear effects have a -\DICE penalty (minimum 1), and morale rolls suffer a -\DICE penalty.  A morale check is needed to enter or pass through the area of the spell.
+You can invoke this liturgy in an area  Close, Nearby, Far-Away, or Distant from yourself.  The air Close to the area takes on an unsettling air of silence.  Sound is not magically suppressed, but Monsters and creatures within its bounds feel that any sound they make will disturb something better left undisturbed.  Non-intelligent animals will not enter the area, and Monsters inside must make an immediate morale check. Thereafter, Saves against fear effects have a -\DICE and morale rolls suffer a -\DICE penalty (maximum -4).  A morale check is needed to enter or pass through the area of the spell.
 
 \MYSTERY [
   Name = Sound the Deeps,
@@ -501,7 +502,7 @@ You can invoke this liturgy in an area  Close, Nearby, Far-Away, or Distant from
   Target = Close Target(s)
 ]
 
-You slap your hand on the ground or the surface of the water.  The echoes of the tremor allow you to precisely know how deep and the approximate shape of bodies of water, chasms, shafts, clefts, mountain peaks, caverns, passages, etc.  up to a distance of [dice]x100m meters.  Additionally, you may use this to rouse up to \DICE Allies Close, Nearby, Far Away, or Distant who are Sleeping, Knocked Out, etc. 
+You slap your hand on the ground or the surface of the water.  The echoes of the tremor allow you to precisely know how deep and the approximate shape of bodies of water, chasms, shafts, clefts, mountain peaks, caverns, passages, etc.  up to a distance of \DICE x100m meters.  Additionally, you may use this to rouse \DICE+\DICE Allies Close, Nearby, Far Away, or Distant who are Sleeping, Knocked Out, etc. 
 
 \newpage
 
@@ -515,7 +516,7 @@ You slap your hand on the ground or the surface of the water.  The echoes of the
   Target = Self
 ]
 
-Name a Skill - it can be one of the 7 basic skills, or any other skill you choose (though you can't learn things that would not be contained in a well stocked library, or that are so rare that only a few people could teach them to you).  You are Trained (d8) in that Skill for the spell's duration.  If you already know the Skill, add +\DICE x2 to your Skill roll.
+Name a Skill - it can be one of the 7 basic skills, or any other skill you choose (though you can't learn things that would not be contained in a well stocked library, or that are so rare that only a few people could teach them to you).  You are Skilled (d12+2) in that Skill for the spell's duration.  If you already know the Skill at a level of Skilled or better, add +\DICE x2 (up to a maximum of +4) to your Skill roll.
 
 \MYSTERY [
   Name = Illusion,
@@ -542,7 +543,7 @@ meters), but if you want the illusion of acrobats or pouncing lions it will be m
 cost 1 [die] (a living creature wearing the face and clothing of a random beggar), but disguising yourself as the king will be significantly harder.
 
 The Illusion will last for \DICE Hours.  Anyone touching the illusion will immediately know it to be fake, but this doesn't cause the illusion to
-disappear.  However, if the illusion is touched with an \mylink{Ego Weapon}{wizardry-ego-weapon}, it will immediately disappear.
+disappear.  However, if the illusion is touched with an \mylink{Ego Weapon}{wizardry-ego-weapon}, it will immediately evaporate.
 
 \MYSTERY [
   Name = Labyrinth,
@@ -553,7 +554,7 @@ disappear.  However, if the illusion is touched with an \mylink{Ego Weapon}{wiza
   Target = Self
 ]
 
-You create a spiraling labyrinth of thought in your mind.  Anyone targeting you with Charm, Sleep, or any magical effect whereby the caster tries to read your mind or alter your memories must enter into a \RB : \FOC contest with you at a -\DICE penalty.  If they fail, they will be caught in your mind for the duration of the spell;  they immediately catch the Vapors, and you can hear all their thoughts.
+You create a spiraling labyrinth of thought in your mind.  Anyone targeting you with Charm, Sleep, or any magical effect where the caster tries to read your mind or alter your memories must enter into a \RB : \FOC contest with you at a -\DICE penalty.  If they fail, they will be caught in your mind for the duration of the spell;  their physical body immediately catches the Vapors, and you can hear all their thoughts.
 
   \begin{center}
   \includegraphics[scale=.5]{CunningArcana}
@@ -628,9 +629,9 @@ You reach into a mirror-like surface and pull out a copy of yourself.  The mirro
   Target = Self
 ]
 
-You create \DICE small moons that circle the top of your head, casting moonlight Close and Nearby.  The shadows thrown by this moonlight give a +\DICE bonus to all Whispers made by Allies who are Close to you.  The moonlight will also activate abilities and powers that manifest in lunar rays (like lycanthropy), and throw light equivalent to \DICE candles.
+You create \DICE small moons that circle the top of your head, casting moonlight Close and Nearby.  The shadows thrown by this moonlight give a +\DICE bonus (up to +4) to all Whispers made by Allies who are Close to you.  The moonlight will also activate abilities and powers that manifest in lunar rays (like lycanthropy), and throw light equivalent to \DICE x10 candles.
 
-You can unerringly throw one these moons at Nearby Monsters every Moment, striking for 3 damage each (including creatures only struck by Magic weapons).  When you have no moons left, the spell ends.
+You can unerringly throw one these moons at Nearby Monsters every Moment, striking for 4 damage each (including creatures only struck by Magic weapons).  When you have no moons left, the spell ends.
 
 The moons can be dispelled at any time, but can only be summoned once a Session.
 
@@ -643,7 +644,7 @@ The moons can be dispelled at any time, but can only be summoned once a Session.
   Target = See Below
 ]
 
-You raise your hands to the heavens and fire a flare up to 50m upwards, where it hovers providing bright sunlight to all areas Close, Nearby, and Far-Away.  You can command the sunburst to change color, move horizontally, or explode.  No shadows can be cast beneath the sunlight (meaning sneaking around is difficult if not impossible), and all invisible creatures and objects appear with a thin halo around them the color of the sun.  Anyone who performs the sacrament Curse the Unhallowed while under the Glorious Sunburst adds an additional +\DICE to their damage; anyone Close to the sunburst if it explodes takes \SUMDICE+\DICE damage, Save for half.
+You raise your hands to the heavens and fire a flare up to 50m upwards, where it hovers providing bright sunlight to all areas Close, Nearby, and Far-Away.  You can command the sunburst to change color, move horizontally, or explode.  No shadows can be cast beneath the sunlight (meaning sneaking around is difficult if not impossible), and all invisible creatures and objects appear with a thin halo around them the color of the sun.  Anyone who performs the sacrament Curse the Unhallowed while under the Glorious Sunburst adds an additional +\DICE x2 to their damage; anyone Close to the sunburst if it explodes takes \SUMDICE+\DICE damage, Save for half.
 
 \MYSTERY [
   Name = Lightning,
@@ -654,7 +655,7 @@ You raise your hands to the heavens and fire a flare up to 50m upwards, where it
   Target = Close or Nearby Target(s)
 ]
 
-Forks of lightning erupt from your forehead, striking a Close or Nearby target for \SUMDICE+\DICE damage (Save for half). You can cause the lightning to "jump" up to \DICE-1 times to another creature or object Close by, provided they are conductive (iron armor, metal ladders, etc).  Magic swords aren't conductive.  You can "ping-pong" between two objects if you desire. Creatures struck by this secondary lightning bolt take \DICE damage (no Save). Objects struck by this secondary lightning bolt will become momentarily electrified, and deal a shock that could cause someone to lose their grip unless they \RO : \VIG + \FOC with a -\DICE penalty.
+Forks of lightning erupt from your forehead, striking a Close or Nearby target for \SUMDICE+\DICE damage (Save for half). You can cause the lightning to "jump" up to \DICE-1 times to another creature or object Close by, provided they are conductive (iron armor, metal ladders, etc).  Magic swords aren't conductive.  You can "ping-pong" between two objects if you desire. Creatures struck by a secondary (or greater) lightning bolt take \DICE damage (no Save). Objects struck by the lightning bolt will become momentarily electrified, and deal a shock that could cause someone to lose their grip unless they \RO : \VIG + \FOC with a -\DICE penalty.
 
 \MYSTERY [
   Name = Lunacy,
@@ -665,9 +666,9 @@ Forks of lightning erupt from your forehead, striking a Close or Nearby target f
   Target = Close or Nearby Target(s)
 ]
 
-You invoke the madness of the moon.  \DICE creatures must immediately make a Sanity roll; if they do not have Sanity (Monsters, for instance) the creatures are permitted a Save.
+You invoke the madness of the moon.  \DICE creatures must immediately \RS : Sanity; if they do not have Sanity (Monsters, for instance) the creatures are permitted a Save.
 
-The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the Monster becomes Enraged; 2) the Monster becomes Afraid; 3) the Monster is Knocked Out; 4) the Monster suffers Anathema.  The duration is Markovian and depends on the number of \DICE used.
+The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the Monster becomes Enraged at someone or something that isn't an Ally; 2) the Monster becomes Afraid of you and your Allies; 3) the Monster is Knocked Out; 4) the Monster suffers Anathema.  The duration is Markovian and depends on the number of \DICE used.
 
   \begin{center}
   \includegraphics[scale=.5]{EmpyreanArcana}
@@ -683,7 +684,7 @@ The Lunacy is random for each Monster that fails its Save.  Roll a d4:  1) the M
   Target = Self
 ]
 
-Your hands enlarge and become stone.  Unarmed Attacks do an extra point of damage for every 2 \DICE you spend; in addition, you can reach your hands into substances that might affect Flesh but not stone (fire, boiling water - OK.  Lava or acid - not OK).  Holding a stone in your hands allows you to speak to it as the Murk ability (see the Core Rules). 
+Your hands enlarge and become stone.  Unarmed Attacks do +\DICE damage (up to a maximum of +4).  In addition, you can reach your hands into substances that might affect Flesh but not stone (fire, boiling water - OK.  Lava or acid - not OK).  Holding a stone in your hands allows you to speak to it as the Murk ability (see the Core Rules). 
 
 Your hands must be empty (including rings and gloves) in order to invoke this mystery. You can only invoke this mystery once per Session.
 
@@ -718,7 +719,7 @@ You shout a one word command at up to \DICE Close or Nearby target, who must obe
   Target = Far-Away or Distant
 ]
 
-You can invoke this mystery somewhere Far-Away or Distant from yourself.  Monsters Close to the Thunderclap must immediately make a morale check with a -\DICE penalty, or become Afraid.  Additionally, Monsters become Deafened for \DICE Moments unless they make a Save with a -\DICE penalty.
+You can invoke this mystery somewhere Far-Away or Distant from yourself.  Monsters Close to the Thunderclap must immediately make a morale check with a -\DICE penalty, or become Afraid of you.  Additionally, Monsters become Deafened for \DICE Moments unless they make a Save with a -\DICE penalty.
 
 \newpage
 
@@ -758,9 +759,7 @@ If the wind is a magical breath that would do damage (dragon's breath, etc.) you
   Target = Self
 ]
 
-A magical rapier appears in your hand that only you can wield.  The rapier deals \DICE damage up to a maximum of 6.  You must make a successful Fight check using your \FOC (instead of \VIG or \DEX).  The Hero's Rapier ignores Armor and Soak, and while you wield it you always win Init.  Every time the rapier deals damage, its damage goes down by 1. The rapier can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.  
-
-Once the damage die is exhausted (reaches 0), the Hero's Rapier disappears.
+A magical rapier appears in your hand that only you can wield.  The rapier deals \DICE+\DICE damage up to a maximum of 6.  You must make a successful Fight check using your \FOC (instead of \VIG or \DEX).  The Hero's Rapier ignores Armor and Soak, and while you wield it you always win Init. The rapier can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled.  
 
 
   \begin{center}
@@ -800,7 +799,7 @@ You summon a rope \DICE x50m in length.  You can command the rope to arrange its
   Target = Close or Nearby
 ]
 
-By invoking this mystery, you can sunder up to \DICE bonds either Close or Nearby.  The bonds may be physical (shackles, chains, or locks) or mental (Charm, Command, Labyrinth, etc) at the Arbiter's discretion.
+By invoking this mystery, you can sunder up to \DICE+\DICE bonds either Close or Nearby.  The bonds may be physical (shackles, chains, or locks) or mental (Charm, Command, Labyrinth, etc) at the Arbiter's discretion.
 
 \MYSTERY [
   Name = Skald's Tongue,
@@ -913,7 +912,7 @@ During a Bivouac, you may perform up to \DICE effects, once per die (though you 
 \item Repair the \MAX \UD of an Allies armor to full
 \item Provide Provisions for 1 Ally
 \item Heal up to \DICE Flesh on 1 Ally
-\item Prevent any Wandering Monasters from attacking your camp
+\item Prevent any Wandering Monsters from attacking your camp
 }
 
   \begin{center}
@@ -931,7 +930,7 @@ During a Bivouac, you may perform up to \DICE effects, once per die (though you 
   Target = Nearby Target(s)
 ]
 
-You breathe a cloud of mushroom spores into an area Nearby.  All Allies and Monsters are affected by the Sporous Breath unless they make their Save.  The effects depend on the number of \DICE used: 1-3 all targets suffer Anathema; 4-6 all targets are Woozy; 7-9 all targets are Befuddled; 10+ all targets are affected with an Iron (d4) Toxin.
+You breathe a cloud of mushroom spores into an area Nearby.  All Allies and Monsters are affected by the Sporous Breath unless they make their Save.  The effects depend on the number of \DICE used: 1) all targets suffer Anathema; 2-3)  all targets are Woozy; 4-5 all targets are Befuddled; 6+) all targets are affected with an Iron (d4) Toxin.
 
 Only yourself and Pooka are immune to the effects of the Sporous Breath.
 
@@ -945,7 +944,7 @@ Only yourself and Pooka are immune to the effects of the Sporous Breath.
   Target = Close Target(s)
 ]
 
-You begin droning a hero's dirge.  For as long as you concentrate, all Close and Nearby Allies gain a +\DICE bonus to their \DEATH checks.
+You begin droning a hero's dirge.  For as long as you concentrate, all Close and Nearby Allies gain a +\DICE bonus to their \DEATH checks, up to a maximum of +4.
 
 \MYSTERY [
   Name = Extinguish,
@@ -956,7 +955,7 @@ You begin droning a hero's dirge.  For as long as you concentrate, all Close and
   Target = Close or Nearby Target(s)
 ]
 
-Beams of slushy ice shoot from your outstretched hands and strike up to \DICE targets.  If the target is on fire, the flame is immediately extinguished.  Flames the size of torches only require 1 [die]; people or animals would require 2 \DICE; bonfires and the like require 3+ \DICE at the Arbiter's discretion.
+Beams of slushy ice shoot from your outstretched hands and strike up to \DICE+\DICE targets.  Multiple beams can hit the same target.  If the target is on fire, the flame is immediately extinguished.  Flames the size of torches only require 1 [die]; people or animals would require 2 \DICE; bonfires and the like require 3+ \DICE at the Arbiter's discretion.
 
 \MYSTERY [
   Name = Giantform,
@@ -998,7 +997,7 @@ This mystery requires you to create a bonfire.  You can place up to \DICE inorga
 
 By touching an object, you are able to freeze it for a period of time in order to preserve it.  If the object is an Ally or Monster, they must be lying completely still in order to use the liturgy.  Unwilling creatures get a Save.  While frozen, any toxins, diseases, bleeding, or negative effects are stopped for a period of time, depending on the number of dice spent.  You cannot end this liturgy willingly once it has begun, though it could be ended prematurely by great heat (a very large bonfire, for example) or by taking more than \SUMDICE points of damage, which will cause the object to shatter into many pieces.  
 
-1 [die]: Minutes; 3 \DICE: Days; 5 \DICE: Weeks; 7 \DICE: Months; 9 \DICE: Years; 11+ \DICE: Permanent. 
+1 [die]: Minutes; 2-3 \DICE: Days; 4-5 \DICE: Weeks; 4 \DICE: Months; 6-7 \DICE: Years; 8+ \DICE: Permanent. 
 
 \MYSTERY [
   Name = Ray of Fire,
@@ -1009,7 +1008,7 @@ By touching an object, you are able to freeze it for a period of time in order t
   Target = Nearby or Far-Away Target(s)
 ]
 
-A narrow beam of fire shoots from your outstretched finger.  Make a Fight roll using your \FOC+\DICE; if you hit, the target catches fire for a Markovian duration if they fail a Save.  They are only allowed 1 Save.  They damage taken by the target is whatever is rolled on the Markovian die each Moment.  The beam of fire will also light flammable things alight.
+A narrow beam of fire shoots from your outstretched finger.  Make a Fight roll using your \FOC with a +\DICE modifier (up to +4); if you hit, the target catches fire for a Markovian duration if they fail a Save.  They are only allowed 1 Save.  They damage taken by the target is whatever is rolled on the Markovian die each Moment.  The beam of fire will also light flammable things alight.
 
 \MYSTERY [
   Name = Trollblood,
@@ -1031,7 +1030,7 @@ This mystery can be invoked at any time during Combat.  As long as you are alive
   Target = Self
 ]
 
-This mystery can only be invoked in Combat.  For the remainder of Combat, you gain +\DICE on your Fight checks, and deal +\SUMDICE damage when you hit (rolled each time along with your damage).  At the end of Combat, you immediately catch the Vapors and drop to 0 Flesh, and must make a \DEATH check.
+This mystery can only be invoked in Combat.  For the remainder of Combat, you gain +\DICE x2 (up to +8) on your Fight checks, and deal +\SUMDICE damage when you hit (rolled each time along with your damage).  At the end of Combat, you immediately catch the Vapors and drop to 0 Flesh, and must make a \DEATH check.
 
 \newpage
 
@@ -1098,7 +1097,7 @@ You transform yourself and all of your Gear into a slime.  You can absorb up to 
   Target = Self
 ]
 
-You can speak with spiders (and they can speak with you).  Small spiders know about water, wind, and bugs.  Larger spiders know about people (maybe they can tell them apart).  Big, dangerous spiders know all kinds of things.  Spiders will be friendly towards you, but if you attack them they'll fight back.  Additionally, your spittle becomes a Toxin whose power depends on the number of \DICE spent: 1 [die] Iron Toxin; 3 \DICE Silver Toxin; 6 \DICE Gold Toxin.  Your spittle is enough to poison a drink, a needle or syringe, or infect someone you might bite, but not enough to poison a knife or dagger.  The spittle becomes normal when the duration ends.
+You can speak with spiders (and they can speak with you).  Small spiders know about water, wind, and bugs.  Larger spiders know about people (maybe they can tell them apart).  Big, dangerous spiders know all kinds of things.  Spiders will be friendly towards you, but if you attack them they'll fight back.  Additionally, your spittle becomes a Toxin whose power depends on the number of \DICE spent: 1-2 \DICE Iron Toxin; 3-4 \DICE Silver Toxin; 5+ \DICE Gold Toxin.  Your spittle is enough to poison a drink, a needle or syringe, or infect someone you might bite, but not enough to poison a knife or dagger.  The spittle becomes normal when the duration ends.
 
 
   \begin{center}
@@ -1128,7 +1127,7 @@ The target object or Monster (alive or dead) smells delcious for the spell's dur
 
 You must be wearing robes without armor to use this liturgy.  The edges of your robes form into \DICE tatters, each of which can be used as a weapon in combat in addition to your regular attack. The tatters deal no damage and each of their attacks must be rolled separately using your \FOC instead of your \VIG or \DEX - but if you hit the target begins Bleeding unless they make a Save.  You can split these attacks among as many Close opponents as you desire.
 
-The tatters can also be used to hold small objects, as if they were each a prehensile tail.  Each tatter can hold up to 50kg of weight, but cannot attack if they are holding something.
+The tatters can also be used to hold small objects, as if they were each a prehensile tail.  Each tatter can hold up to 5kg of weight, but cannot attack if they are holding something.
 
 \MYSTERY [
   Name = Undead Visage,
@@ -1176,7 +1175,7 @@ By invoking this liturgy, you shackle up to \DICE creatures to the ground.  They
   Target = Self
 ]
 
-A holy weapon (describe to the Arbiter) appears in your hands that only you can wield.  The weapon is a 2-handed weapon that deals \DICE damage up to a maximum of 10.  In addition, you deal +\DICE damage against Unhallowed creatures. You fight with this weapon using your \FOC (instead of your \VIG). Every time the weapon deals damage, its damage goes down by 1; when it hits 0, the weapon disappears.  The trident can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled. 
+A holy weapon (describe to the Arbiter) appears in your hands that only you can wield.  The weapon is a 2-handed weapon that deals \DICE+\DICE damage up to a maximum of 10.  In addition, you deal +\DICE damage against Unhallowed creatures. You fight with this weapon using your \FOC (instead of your \VIG). Every time the weapon deals damage, its damage goes down by 1; when it hits 0, the weapon disappears.  The Holy Weapon can strike creatures who are only struck by magical weapons, but because there is no die to roll when dealing damage, it cannot Crit or be Fumbled. 
 
 \MYSTERY [
   Name = Purging Fire,
@@ -1214,7 +1213,7 @@ Anyone inside of the Purging Flames cannot lie, and must answer truthfully any q
   Target = Self
 ]
 
-Take \DICE Faith and put them "in reserve".  You summon a brightly mirrored shield that can be Splintered (see the Combat Actions under Core Rules) up to \DICE times before it disappears.  Note that Splintering your shield is a Combat Action, and it ends your Moment; conversely, if you already took a Combat Action this Moment, you can’t Splinter your the Revered Aegis.  Any unused \DICE are lost at the end of the Session.  You can only invoke this mystery once per Session.
+Take \DICE Faith and put them "in reserve".  You summon a brightly mirrored shield that can be Splintered (see the Combat Actions under Core Rules) up to \DICE times before it disappears.  Note that Splintering your shield is a Combat Action, and it ends your Moment; conversely, if you already took a Combat Action this Moment, you can’t Splinter the Revered Aegis.  Any unused \DICE are lost at the end of the Session.  You can only invoke this mystery once per Session.
 
 \MYSTERY [
   Name = Sacred Mail,
@@ -1225,7 +1224,7 @@ Take \DICE Faith and put them "in reserve".  You summon a brightly mirrored shie
   Target = Self
 ]
 
-You can't wear any other armor while wearing Sacred Mail.  The mail appears as a glimmering suit of chainmail.  Your \MD drops to d8; the \UD for the Armor depends on the number of \DICE invested:  1-3 d4; 4-6 d6; 7-9 d8; 10+ d10.
+You can't wear any other armor while wearing Sacred Mail.  The mail appears as a glimmering suit of chainmail.  Your \MD drops to d8; the \UD for the Armor depends on the number of \DICE invested:  1 d4; 2 d6; 3 d8; 4+ d10. The Mail cannot be repaired; once its \UD is exhausted, the Armor disappears.
 
 \MYSTERY [
   Name = Satanic Verses,
@@ -1236,14 +1235,14 @@ You can't wear any other armor while wearing Sacred Mail.  The mail appears as a
   Target = Close
 ]
 
-Books, scrolls, and parchment with writing on them burst into holy flame.  You can affect all writing in a \DICE meter radius around you.  If a Grimoire or Fetish is in possession of another (that is, on their person):
+You shout a holy word, and books, scrolls, and parchment with writing on them burst into holy flame.  You can affect all writing in a \DICE meter radius centering on you.  If a Grimoire or Fetish is in possession of another (that is, on their person):
 \mybullet {
-\item the Grimoire will not catch fire if the Philosopher can \RB : INT vs. your \FOC.  They gain a bonus modifier for every spell in the Grimoire, but a -\DICE penalty on their roll.
-\item the Fetish will not catch fire if the owner can \RB : \INT vs. your \FOC.  They may add the Fetish's \UD to their roll (and if they roll a 1 or a 2, the \UD moves \DCDOWN), but take a -\DICE penalty
+    \item the Grimoire will not catch fire if the Philosopher can \RB : INT vs. your \FOC.  They gain a bonus modifier for every spell in the Grimoire, but a -\DICE penalty on their roll.
+    \item the Fetish will not catch fire if the owner can \RB : \INT vs. your \FOC.  They may add the Fetish's \UD to their roll (and if they roll a 1 or a 2, the \UD moves \DCDOWN), but take a -\DICE penalty
 }
 If the Grimoire or Fetish is not in a persons' possession at the time the mystery is invoked, it does not get a Save.
 
-Sigils will similarly catch aflame if they are unable to \RS using a d24.  Minor Sigils get a +2, Major Sigils get a +4, and Primary Sigils get a +8.  
+Sigils will similarly catch aflame if the Arbiter is unable to \RB vs. your \FOC using a d10 (Minor), d16 (Major), or d24 (Primary) with a -\DICE penalty.
 
 The mystery has no effect on Tatoos or spells written in the heads of Philosophers.  This mystery is indiscriminate in what writing it will set alight.
 
@@ -1257,7 +1256,7 @@ The mystery has no effect on Tatoos or spells written in the heads of Philosophe
   Target = See Below
 ]
 
-You create a fluttering star of light that twitters like a bird.  Name an object using up to \DICE words - it can be a person ("the Stygian witch") or a thing ("the nearest body of water" or "the cask of Amontillado").  It has to be something you've seen clearly before.  Once named, the seeker will fly to it at the speed of an arrow and hover near it, chiming as loud as a bell.  If the object is not within the spell's range, it will try to find a similar object; otherwise, it disappears.
+You create a fluttering star of light that twitters like a bird.  Name an object using up to \DICE+\DICE words - it can be a person ("the Stygian witch") or a thing ("the nearest body of water" or "the cask of Amontillado").  It has to be something you've seen clearly before.  Once named, the seeker will fly to it at the speed of an arrow and hover near it, chiming as loud as a bell.  If the object is not within the spell's range, it will try to find a similar object; otherwise, it disappears.
 
 
 \mysubsection{Ruinous}{arcana-mystery-ruinous}
@@ -1355,12 +1354,7 @@ You summon a swarm of vermin that crawl up from the ground, walls, and ceiling. 
   Target = Nearby or Far-Away
 ]
 
-You can anchor a barrier of pure darkness between three or more solid points up to \DICE meters in radius (for example: the 4 points of a door, two trees and the ground, across a hallway, etc).  Monsters that touch the blackness must immediately make a morale check with a -\DICE penalty or become Afraid for a Markovian duration.  Creatures that make their morale check that then continue through the wall must make a second Save; if they fail, they exit the wall the same way they came in (they will need to make a morale check again to touch the wall if they wish to try to move through it again).   
-
-
-
-
-
+You can anchor a barrier of pure darkness between three or more solid points up to \DICE meters in radius (for example: the 4 points of a door, two trees and the ground, across a hallway, etc).  Monsters that touch the blackness must immediately make a morale check with a -\DICE penalty or become Afraid for a Markovian duration.  If you spend 3 or more Faith, creatures that make their morale check that then continue through the wall must make a second Save; if they fail, they exit the wall the same way they came in (they will need to make a morale check again to touch the wall if they wish to try to move through it again).   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%  NECROMANCY
@@ -1517,9 +1511,11 @@ The Covenant of Blood allows you to do the following:
   Target=2 (see below)
 ]
 
-You heal 1 \HD of Flesh on a single creature. The healed flesh will appear grey and bloodless; wounds are sealed with wire and crude staples.  Horrible scars are usually left behind. You can only do this once per creature during a Breather or Bivouac (before you restore any Mojo).
-
-You can also stitch a lost limb or hand to a stump.  Doing this increases your \mybold{Target} by +2 (4).   This requires an available limb of the appropriate size.  The limb rots quickly and a new one needs to be attached each Session.  The Witch also can "feel" what the limb feels (i.e. they can tell if the creature is holding something [but not what], if the creature is walking or running, etc).  While the stitched limb is attached, the creature is Unhallowed.
+\mybullet {
+    \item You heal 1 \HD of Flesh on a single creature. The healed flesh will appear grey and bloodless; wounds are sealed with wire and crude staples.  Horrible scars are usually left behind. You can only do this once per creature during a Breather or Bivouac (before you restore any Mojo).
+    \item Add +1 to the Target (3).  You can remove someone's face and wear it as a mask.  You will look exactly like them (but not have their memories, skills, abilities, etc.).  The person does not need to be alive to perform this necromancy, but they do need to keep fucking still for a few minutes.
+    \item Add +2 to the Target (4).  You stitch a lost limb or hand to a stump.  This requires an available limb of the appropriate size.  The limb rots quickly and a new one needs to be attached each Session.  The Mystic also can "feel" what the limb feels (i.e. they can tell if the creature is holding something [but not what], if the creature is walking or running, etc).  While the stitched limb is attached, the creature is Unhallowed.
+}
 
 
 \mysubsection{Corpse Witching}{arcana-necromancy-corpse-witching}
