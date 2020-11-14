@@ -548,11 +548,13 @@
                         </div>
                     </div>
                     <div class="sheet-myrow">
-                        <div class="sheet-my2colrow">
+                        <div class="sheet-my3colrow">
                             <div class="sheet-col box">
                                 <h4>Virtues</h4>
                                 <fieldset class="repeating_sellswordvirtues">
 	                                <select name="attr_sellsword_virtue" class="sheet-select">
+                                        <option value="" selected="selected"></option>
+                                        <option value="" selected="selected"></option>
 		                                <option value="Berserker">Berserker</option>
 		                                <option value="Blademaster">Blademaster</option>
 		                                <option value="Danger Sense">Danger Sense</option>
@@ -574,6 +576,21 @@
 		                                <option value="Warding">Warding</option>
 	                                </select>
                                 </fieldset>
+                            </div>
+                            <div class="sheet-col box">
+                                <h4>Complication</h4>
+                                <select name="attr_sellsword_complication" class="sheet-select">
+                                    <option value="" selected="selected"></option>
+	                                <option value="Cheap Tricks">Cheap Tricks</option>
+	                                <option value="Credo">Credo</option>
+	                                <option value="Filthy">Filthy</option>
+	                                <option value="Hippophobia">Hippophobia</option>
+	                                <option value="Honorable">Honorable</option>
+	                                <option value="Mortal Enemy">Mortal Enemy</option>
+	                                <option value="Pit Fighter">Pit Fighter</option>
+	                                <option value="Sins of the Father">Sins of the Father</option>
+	                                <option value="The Cimmerian">The Cimmerian</option>
+                                </select>
                             </div>
                             <div class="sheet-col">
                               <h4>Notes</h4>
@@ -626,6 +643,7 @@
                             <h4>Virtues</h4>
                             <fieldset class="repeating_knavevirtues">
 	                            <select name="attr_knave_virtue" class="sheet-select">
+                                    <option value="" selected="selected"></option>
 		                            <option value="Brutal">Brutal</option>
 		                            <option value="Deadeye">Deadeye</option>
 		                            <option value="Duelist">Duelist</option>
@@ -646,6 +664,19 @@
 		                            <option value="Whispers of The Bride">Whispers of The Bride</option>
                                 </select>
                             </fieldset>
+                            <h4 style="margin-top:30px;">Complication</h4>
+                            <select name="attr_knave_complication" class="sheet-select">
+                                    <option value="" selected="selected"></option>
+		                            <option value="Cursed">Cursed</option>
+		                            <option value="Expensive Tastes">Expensive Tastes</option>
+		                            <option value="Honor Among Thieves">Honor Among Thieves</option>
+		                            <option value="Outstanding Contract">Outstanding Contract</option>
+		                            <option value="Pacifist">Pacifist</option>
+		                            <option value="Pandemonium">Pandemonium</option>
+		                            <option value="Religious">Religious</option>
+		                            <option value="Remorseless">Remorseless</option>
+		                            <option value="Superstitious">Superstitious</option>
+	                            </select>
                         </div>
                         <div class="sheet-col box">
                             <h4>WHISPERS</h4>
@@ -799,6 +830,7 @@
                             <h4>Virtues</h4>
                             <fieldset class="repeating_philosophervirtues">
 	                            <select name="attr_philosopher_virtue" class="sheet-select">
+                                    <option value="" selected="selected"></option>
 		                            <option value="College">College</option>
 		                            <option value="Intangibles">Intangibles</option>
 		                            <option value="Knowledge Is Power">Knowledge Is Power</option>
@@ -815,6 +847,20 @@
 		                            <option value="Wonder: Staff Magic">Wonder: Staff Magic</option>
 	                            </select>
                             </fieldset>
+
+                            <h4 style="margin-top:30px">Complication</h4>
+	                            <select name="attr_philosopher_complication" class="sheet-select">
+		                            <option value="" selected="selected"></option>
+		                            <option value="It is I - Balthazar the Breathtaking!">It is I - Balthazar the Breathtaking!</option>
+		                            <option value="Logical">Logical</option>
+		                            <option value="Morbid">Morbid</option>
+		                            <option value="Mysophobia">Mysophobia</option>
+		                            <option value="Necronomicon">Necronomicon</option>
+		                            <option value="One More Page">One More Page</option>
+		                            <option value="Out of Shape">Out of Shape</option>
+		                            <option value="Transcendental Research">Transcendental Research</option>
+		                            <option value="Whoops!">Whoops!</option>
+	                            </select>
                         </div>
                         <div class="sheet-col">
                             <h4>Wizardry
@@ -883,7 +929,8 @@
                             </select>
                             <label for="attr_grace">Grace</label>
                             <select name="attr_grace" class="sheet-traitdie">
-                                <option value="1" selected="selected">1d4</option>
+                                <option value="" selected="selected"></option>
+                                <option value="1">1d4</option>
                                 <option value="2">2d4</option>
                                 <option value="3">3d4</option>
                                 <option value="4">4d4</option>
@@ -896,7 +943,8 @@
                             <button class="sheet-square" type="roll" value="&{template:toy-basic} {{title=Grace ⚅}} {{charname=@{character_name}}} {{[dice]=?{Amount of Grace|1}}} {{[sum] = [[?{Amount of Grace|1}d4cf<2s]]}}"></button>
                             <label for="attr_grace_max">Grace Max</label>
                             <select name="attr_grace_max" class="sheet-traitdie">
-                                <option value="1" selected="selected">1d4</option>
+                                <option value="" selected="selected"></option>
+                                <option value="1">1d4</option>
                                 <option value="2">2d4</option>
                                 <option value="3">3d4</option>
                                 <option value="4">4d4</option>
@@ -923,13 +971,14 @@
                             </select>
                             <label for="attr_mojo">Mojo</label>
                             <select name="attr_mojo" class="sheet-traitdie">
+                                <option value="" selected="selected"></option>
                                 <option value="0">exhausted</option> 
                                 <option value="2">d2</option>                                
                                 <option value="3">d3</option>
                                 <option value="4">d4</option>
                                 <option value="6">d6</option>                                
-                                <option value="8" selected="selected">d8</option>
-                                <option value="10">10</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
                                 <option value="20">d20</option>
@@ -938,7 +987,8 @@
                             <button class="sheet-square" type="roll" value="&{template:toy-rollud} {{title=Mojo ⚅}} {{charname=@{character_name}}} {{roll=[[1d@{mojo}]]}}"></button>
                             <label for="attr_mojo_max">Mojo Max</label>
                             <select name="attr_mojo_max" class="sheet-traitdie">
-                                <option value="8" selected="selected">d8</option>
+                                <option value="" selected="selected"></option>
+                                <option value="8">d8</option>
                                 <option value="10">d10</option>
                                 <option value="12">d12</option>
                                 <option value="16">d16</option>
@@ -957,6 +1007,7 @@
                         <h4>Virtues</h4>
                         <fieldset class="repeating_mysticvirtues">
 	                        <select name="attr_mystic_virtue" class="sheet-select">
+                                <option value="" selected="selected"></option>
 		                        <option value="Charmed Circle">Charmed Circle</option>
 		                        <option value="Charms">Charms</option>
 		                        <option value="Crux of Faith">Crux of Faith</option>
@@ -981,6 +1032,21 @@
 		                        <option value="Tongues of Fire">Tongues of Fire</option>
 	                        </select>
                         </fieldset>
+
+                        <h4 style="margin-top:30px">Complication</h4>                 
+	                    <select name="attr_mystic_complication" class="sheet-select">
+		                    <option value="" selected="selected"></option>
+		                    <option value="Burn the Witch!">Burn the Witch!</option>
+		                    <option value="Cat’s Eyes">Cat’s Eyes</option>
+		                    <option value="Heretic">Heretic</option>
+		                    <option value="Imma Smoke It">Imma Smoke It</option>
+		                    <option value="My Name is Earl">My Name is Earl</option>
+		                    <option value="Otherworldly">Otherworldly</option>
+		                    <option value="The Unseelie">The Unseelie</option>
+		                    <option value="Transubstantiation">Transubstantiation</option>
+		                    <option value="Vow of Poverty">Vow of Poverty</option>
+	                    </select>
+
                         </div>
                         <div class="sheet-col">
                             <h4>Liturgies</h4>
@@ -1033,6 +1099,7 @@
                             <h4>Virtues</h4>
                             <fieldset class="repeating_murkvirtues">
 	                            <select name="attr_murk_virtue" class="sheet-select">
+                                    <option value="" selected="selected"></option>
 		                            <option value="Cat's Eyes">Cat's Eyes</option>
 		                            <option value="Duelist">Duelist</option>
 		                            <option value="Fate's Hand">Fate's Hand</option>
@@ -1049,7 +1116,7 @@
                         </div>
                         <div class="sheet-col box">
                             <h4>Complications</h4>
-                            <ul>
+                            <ul style="text-align:left">
                                 <li>Unhallowed</li>
                                 <li>Sun Allergy</li>
                                 <li>Logical</li>
@@ -1107,6 +1174,7 @@
                             <h4>Virtues</h4>
                             <fieldset class="repeating_sprigganvirtues">
 	                            <select name="attr_spriggan_virtue" class="sheet-select">
+                                    <option value="" selected="selected"></option>
 		                            <option value="Anamnesis of the Damned">Anamnesis of the Beasts</option>
 		                            <option value="Anamnesis of the Damned">Anamnesis of the Damned</option>
 		                            <option value="Anamnesis of the Elements">Anamnesis of the Elements</option>
@@ -1123,7 +1191,7 @@
                         </div>
                         <div class="sheet-col">
                             <h4>Complications</h4>
-                            <ul>
+                            <ul style="text-align:left">
                                 <li>Unhallowed</li>
                                 <li>Iron Allergy</li>
                                 <li>Antlers</li>
@@ -1151,8 +1219,9 @@
                             </ul>
                         </div>
                         <div class="sheet-col" style="color:black;">
-                            <label>Snag</label>
+                              <label>Snag</label>
                               <select name="attr_nightchild_snag" class="sheet-select">
+                                      <option value="" selected="selected"></option>
 		                              <option name="Angry">Angry</option>
 		                              <option name="Backwards">Backwards</option>
 		                              <option name="Bad Mouth">Bad Mouth</option>
@@ -1175,8 +1244,18 @@
                     <div class="sheet-my3colrow">
                         <div class="sheet-col">
                             <h4>Weird</h4>
+                            <select name="attr_weird_die" class="sheet-traitdie">
+                                <option value="6" selected="selected">d6</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>
+                            </select>
                             <fieldset class="repeating_ncweird">
                               <select name="attr_nightchild_weird" class="sheet-select">
+                                    <option value="" selected="selected"></option>
 		                            <option name="Anklebiter">Anklebiter</option>
 		                            <option name="Bad Blood">Bad Blood</option>
 		                            <option name="Bad Breath">Bad Breath</option>
@@ -1206,8 +1285,18 @@
                         </div>
                         <div class="sheet-col">
                             <h4>Looks</h4>
+                            <select name="attr_looks_die" class="sheet-traitdie">
+                                <option value="6" selected="selected">d6</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>
+                            </select>
                             <fieldset class="repeating_nclooks">
                               <select name="attr_nightchild_looks" class="sheet-select">
+                                      <option value="" selected="selected"></option>
 		                              <option name="Babies!">Babies!</option>
 		                              <option name="Bat Ears">Bat Ears</option>
 		                              <option name="Beardy">Beardy</option>
@@ -1237,8 +1326,18 @@
                         </div>
                         <div class="sheet-col">
                             <h4>Gear</h4>
+                            <select name="attr_gear_die" class="sheet-traitdie">
+                                <option value="6" selected="selected">d6</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="16">d16</option>
+                                <option value="20">d20</option>
+                                <option value="24">d24</option>
+                            </select>
                             <fieldset class="repeating_ncgear">
                               <select name="attr_nightchild_gear" class="sheet-select">
+                                      <option value="" selected="selected"></option>
 		                              <option name="Bedlam Bag">Bedlam Bag</option>
 		                              <option name="Big Helm">Big Helm</option>
 		                              <option name="Big Pal">Big Pal</option>
@@ -1315,6 +1414,8 @@
                       <h4>Virtues</h4>
                       <fieldset class="repeating_pookavirtues">
                         <select name="attr_pooka_virtue" class="sheet-select">
+                          <option value="" selected="selected"></option>
+                          <option value="Apotropaic">Apotropaic</option>
                           <option value="Best. Night. EVAR!!">Best. Night. EVAR!!</option>
                           <option value="Briar Patch">Briar Patch</option>
                           <option value="Bro, Hit This">Bro, Hit This</option>
@@ -1329,7 +1430,7 @@
                     </div>
                     <div class="sheet-col">
                       <h4>Complications</h4>
-                      <ul>
+                      <ul style="text-align:left">
                           <li>Unhallowed</li>
                           <li>You My Boy Blue!</li>
                           <li>Tiny</li>

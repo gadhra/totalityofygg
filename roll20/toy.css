@@ -194,6 +194,7 @@
     border: 1px solid black;
     padding: 7px;
     margin-bottom: 15px;
+    min-height:66px;
 }
 
 
