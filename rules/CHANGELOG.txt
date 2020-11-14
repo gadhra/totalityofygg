@@ -1,3 +1,17 @@
+## unreleased
+
+### Changed
+- Fixing typos
+- Tweaked the Authorities' arcana to be a little more effective
+- Change Monster Saves to fit with the \RO mechanic elsewhere
+
+### Added
+- Added note that Arbiter can increase/decrease skill rolls and saves (-4 to +4)
+- Added better \DEATH for Spriggan as part of "Hound of Sish"
+- Clarified that Pooka don't count as a "person" when helping someone with a Skill
+- Lou missed Death Mask - I added it back in under "Knit Flesh"
+
+
 ## [v.3.0.beta] - 2020-10-10
 
 Buckle up, cause it's a lot.
