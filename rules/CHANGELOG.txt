@@ -4,12 +4,17 @@
 - Fixing typos
 - Tweaked the Authorities' arcana to be a little more effective
 - Change Monster Saves to fit with the \RO mechanic elsewhere
+- Tweaked Bivouac rest to give a bigger bonus to Mystics, Philosophers, and Spriggan
 
 ### Added
 - Added note that Arbiter can increase/decrease skill rolls and saves (-4 to +4)
 - Added better \DEATH for Spriggan as part of "Hound of Sish"
 - Clarified that Pooka don't count as a "person" when helping someone with a Skill
 - Lou missed Death Mask - I added it back in under "Knit Flesh"
+- Added line "...[y]ou can add additional Wizard Sigils at any time during a Vacation." to Grimoire
+- Added notes on when a Sigil is permanent, lifeless, or erased.
+- Added additional blogs to the "Thanks" section
+
 
 
 ## [v.3.0.beta] - 2020-10-10
