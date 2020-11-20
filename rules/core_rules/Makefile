@@ -19,6 +19,7 @@ setup:
 	ln -sf ../arbiter.tex out/
 	ln -sf ../appendices.tex out/
 	ln -sf ../../thanks.tex out/
+	ln -sf ../../introduction.tex out/
 
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname="ToY_Core_Rules_${VERSION}" -output-directory out core_rules
 
