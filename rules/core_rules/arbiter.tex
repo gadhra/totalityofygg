@@ -76,6 +76,7 @@
   }
 
   \mysubsection{Climbing and Falling}{arbiter-movement-falling}
+
   There's no damage if you fall 5m or less.  
 
   For every meter over 5 you fall, you take 1 damage (so 6m would be 6 damage).  This damage can be absorbed by Armor but not Grit (or a shield).  
@@ -97,10 +98,10 @@ Swimming is fairly straightforward:
 \mybullet {
     \item   If the adventurer is in Combat, all Actions take twice as long i.e.  it will take them two Maneuvers to move from Close to Nearby, two Maneuvers to get something from their pack, etc.
     \item   The adventurer is unable to Fight or Guard while swimming
-    \item   The adventurer cannot be carrying any Significant Items
+    \item   The adventurer cannot be carrying or wearing any Significant Items except a dagger
 }
 
-Adventurers are heroic, so they should generally be able to swim long distances without any additional checks.  However, in high seas or over very long distances, the Arbiter can have the advenuturer attempt a Skill:Salt check.  If they fail, they begin drowning unless they can breathe underwater.  Each time they fail their Skill:Salt roll, they must make a \DEATH roll.  Each time they fail thereafter, they receive a -2 cumulative modifier (-2 the first time, -4 the second, -6 the third, etc).  
+Adventurers are heroic, so they should generally be able to swim long distances without any additional checks.  However, in high seas or over very long distances, the Arbiter can have the advenuturer attempt a Skill:Salt check.  If they fail, they begin drowning unless they can breathe underwater.  Each time they fail their Skill:Salt roll, they must make a \DEATH roll.  Each time they fail thereafter, they receive a -1 cumulative modifier (-1 the first time, -2 the second, etc up to a -4).  
 
   \myhighlight{Removing Armor}{gear-armor-removal} 
 
@@ -114,7 +115,7 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 
   \mysubsection{Dangerous Terrain}{arbiter-movement-dangerous-terrain}
 
-  If the adventurers are crossing an area that is dangerous, or where time is of the essence, give the room a total number that you need to roll to cross it.  Every \MD roll takes a Moment - so crossing the room with a movement number of 12 will require at least 3 Moments for the adventurer in Heavy Plate (3d4), while the guy in a nightshirt has a 45\% to do it in one shot.
+  If the adventurers are crossing an area that is dangerous, or where time is of the essence, give the room a total number that you need to roll to cross it.  Every \MD roll takes a Moment - so crossing the room with a movement number of 12 will require at least 3 Moments for the adventurer in Heavy Plate (3d4), while the guy in a nightshirt has a 45\% chance to do it in one try.
 
 
   \begin{center}
@@ -130,7 +131,7 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 
    First - a \KNAVE roll should only be required if the difference between success and failure would be interesting, or when the attempt shouldn't be an automatic success.  If either of these cases are true, let the Knave succeed without rolling anything.
 
-  Setting a difficulty for a Knave's \mylink{Whisper}{knave-whispers} abilities means picking a number between 2 and 9 (remember the Adventurer can only add a \MAX of +4 to their \KNAVE roll with their Luck).
+  Setting a difficulty for a Knave's \mylink{Whisper}{knave-whispers} trye means picking a number between 2 and 9 (remember the Adventurer can only add a \MAX of +4 to their \KNAVE roll with their Luck).
 
 
 
@@ -155,7 +156,7 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 
        \mybold{Traps:} assign two difficulties - the difficulty of \mybold{finding} the trap and the difficulty of \mybold{disarming} a trap.  A hunter's snare or goblin trap might be a 2 or 3; a elaborate Rube Goldeberg trap in a mummy's tomb might be a 5; an invisible tripwire that triggers an explosion might be a 7; a trap designed by an Grimtooth might be a 9.
 
-      Inscribed Sigils\footnote{See Bell, Book, and Candle} can also be disarmed with the Whispers of Sun Wukong. Iron Sigils are a 3, Silver Sigils are a 6, and Primary Sigils are a 9.
+      Inscribed Sigils\footnote{See Bell, Book, and Candle} can also be erased with the Whispers of Sun Wukong. Iron Sigils are a 3, Silver Sigils are a 6, and Primary Sigils are a 9.
 
 
     \mybold{\mylink{Whispers of The Bride}{knave-virtue-the-bride}}
@@ -170,12 +171,14 @@ Adventurers are heroic, so they should generally be able to swim long distances 
 \ed{This idea is taken from John Carr's \href{https://ageofruins.wordpress.com/2012/10/18/deck-of-many-threats-wilderness-encounters-based-on-playing-cards-plus-a-simple-system-for-provisions/}{Age of Ruins}}
 
 \mysubsection{Journeys}{arbiter-travel-journeys}
-Journeys consist of a number of routes (called Legs) to get from one point to another.  These routes are sometimes defined ("the Iron Road", "the High Pass", etc.) but the adventurers will often make routes of their own from looking at a map.  For example, "we must bear north, following the Miskatonic River, until we reach the mouth of the bay.  From there we will follow the coast west until we reach the point where the Iron Road meets Portsmouth, then follow the road south to Erl" is a journey of 3 legs (north to the bay, west to the road, south to Erl).
+
+Journeys consist of a number of routes (called Legs) to get from one point to another.  These routes are sometimes defined ("the Iron Road", "the High Pass", etc.) but the adventurers will often make routes of their own from looking at a map.  For example, "we must bear north, following the Miskatonic River, until we reach the mouth of the bay.  From there we will follow the coast west until we reach the point where the Iron Road meets Portsmouth, then follow the road south to Erl" is a journey of 3 legs (north to the bay, west to the road, south to Erl).  At the end of each Leg, you must roll your Party Provisions \UD - just before you do, if someone can \RO using their Skill:Travel, the provisions only move \DCDOWN on a roll of a 1 (instead of a 1 or 2).
 
 To figure out what happens on a Journey, you'll need a deck of cards.  Leave the Jokers in.
 
 \mysubsection{Legs}{arbiter-travel-legs}
-Roughly speaking, each leg of a journey is about 5-10 Days (50-100 leagues) (this can change at the Arbiter's discretion).  The Arbiter should assign a Danger value to each leg on a scale of 1 (the Gold Road) to 6 (trog-infested swamps).  The Arbiter should inform the adventurers of the Danger value of each Leg before they set out, in case they want to change their mind.
+
+Roughly speaking, each leg of a journey is about 5-10 Days (50-100 leagues) (this can change at the Arbiter's discretion).  The Arbiter should assign a Danger value to each leg on a scale of 1 (the Gold Road) to 6 (trog-infested swamps).  The Arbiter should inform the adventurers of the Danger value of each Leg before they set out, in case they want to change their minds.
 
 Grab a deck of cards.  For each Leg, draw a number of cards equal to the Danger of the Leg.  You'll use the same deck of cards for the entire Journey (so don't shuffle the cards back in until the Journey is complete).
 
@@ -184,7 +187,7 @@ If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do,
   \mytable{X c}{
     \thead{Suit} & \thead{Effect} \\
   }{
-    \mybold{Clubs} & Roll your Party Provisions \UD \\
+    \mybold{Clubs} & Lose provisions \UD \\
     \mybold{Diamonds} & You hit some bad weather  \\
     \mybold{Hearts} & You get lost or are off course \\
     \mybold{Spades} & You run into some hostiles  \\
@@ -205,17 +208,20 @@ If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do,
   }     
 
 
-  \mysubsection{Party Provisions}{arbiter-travel-provisions}
-  Roll your Party Provisions if you pull a Club (rats ate the flour; the mule stumbled and dropped the bacon in a river; etc) and at the end of a Leg of your Journey.  Before this roll, someone in your party must roll their Skill: Travel.  If they succeed, the Provisions \UD only drops \DCDOWN if you roll a 1 (instead of a 1 or 2).  
+  \mysubsection{Lose Provisions}{arbiter-travel-provisions}
+
+  Rats ate the flour; the mule stumbled and dropped the bacon in a river; someone ate more than their fair share along the way.  Move your Provisions \DCDOWN.  Someone can try a \RO using their Skill:Travel to prevent this from happening.
 
   \mysubsection{Bad Weather}{arbiter-travel-weather}
-  You hit appropriate bad weather (snowstorm, sandstorm, torrential downpour, etc).  Someone in your party must roll their Skill: Travel.  If they succeed, nothing happens.  If they fail, roll a d3:  1) roll your Party Provisions, 2) you're Lost, 3) you run into Hostilities.
+
+  You hit appropriate bad weather (snowstorm, sandstorm, torrential downpour, etc).  Someone in your party must try their Skill: Travel.  If they succeed, nothing happens.  If they fail, roll a d3:  1) you lose provisions (see above) 2) you're lost (see below); 3) you run into hostiles (see below)
 
 
   \mysubsection{Lost}{arbiter-travel-lost}
+
   This can only happen if you are \myital{not} on a road. If you're traveling by road, you can ignore this result.
 
-  Someone in your party must roll their Skill: Travel.  If they succeed, you get back on track.  If they fail, pull another card. The Arbiter will move you in a random direction (on a hex map, roll a d6 and move the party in that direction). Continue in this way until someone succeeds at their Skill: Travel roll.  
+  Someone in your party must try their Skill: Travel.  If they succeed, you get back on track.  If they fail, the Arbiter will move you in a random direction (on a hex map, roll a d6 and move the party in that direction) and will draw another card and put it on the bottom of the pile. Continue in this way until someone succeeds at their Skill: Travel roll to figure out where they are.
 
 
   \mysubsection{Hostiles}{arbiter-travel-hostiles}
@@ -228,6 +234,7 @@ If you don't draw a face card, an Ace, or a Joker - nothing happens.  If you do,
 
 
   \mysubsection{We're Out of Food}{arbiter-travel-starvation}
+
   If you run out of food, time switches to Game Time.  The Arbiter should determine how many Days the party is from their destination (the party can cover 10 leagues / 1 hex on a road every Day, whereas it might take 3 Days to cover 1 hex in the mountains).  The party should now follow the rules as if they were in a wilderness dungeon, including rolling Personal Provisions, using their Skill: Bushcraft, etc. 
 
 
@@ -256,7 +263,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
     \thead{} & \thead{Slow} & \thead{Base} & \thead{Fast}  \\
   }{
     Speed & d20 & d16 & d12 \\
-    \DEX \RB & d6 & d10 & d16 \\
+    \DEX \RB & d6+\HD & d10+\HD & d16+\HD \\
     Actions & 1 & 2 & 3 \\
   }
 
@@ -274,7 +281,7 @@ Morale is broken into 3 general types:  Cowardly, Orderly, and Fanatical.  Roll 
     \thead{} & \thead{Weak} & \thead{Average} & \thead{Strong}  \\
   }{
     Health & 3 per \HD & 5 per \HD & 7 per \HD \\
-    \VIG \RB & d6 & d10 & d16 \\
+    \VIG \RB & d6+\HD & d10+\HD & d16+\HD \\
   }
 
   \mybullet {
@@ -406,8 +413,8 @@ This is just a general overview of the Monsters you might encounter in the Total
   }
 
   \mybullet {
-    \item If an Adventurer rolls \mybold{minimum} damage, \RS:\DEX. Failure is a \mylink{Fumble}{combat-crits-and-fumbles}
-    \item If an Adventurer rolls \mybold{maximum} damage, \RS:\VIG. Success means a \mylink{Crit}{combat-crits-and-fumbles}
+    \item If an Adventurer rolls \mybold{minimum} damage, \RS:\FOC. Failure is a \mylink{Fumble}{combat-crits-and-fumbles}
+    \item If an Adventurer rolls \mybold{maximum} damage, \RS:\FOC. Success means a \mylink{Crit}{combat-crits-and-fumbles}
     \item If an Adventurer is \mylink{Dying}{combat-dying}, roll for a \mylink{Wound}{appendixa-combat-tables-wounds} right away - it might affect their Breather.
   }
 
@@ -435,6 +442,7 @@ This is just a general overview of the Monsters you might encounter in the Total
 
   \mylist {
     \item[$\square$]  Collect a \UD roll against Personal Provisions for each person resting.  Anyone who doesn't make the roll gets none of the following benefits
+    \item[$\square$]  Each adventurer may remove a single non-serious wound
     \item[$\square$]  If a Wound doesn't prevent them from doing so, they can restore all Grit
     \item[$\square$]  Each adventurer can restore \LVL Flesh
     \item[$\square$]  Adventurers can restore 1 \UD of any Intangible Stat
@@ -442,8 +450,9 @@ This is just a general overview of the Monsters you might encounter in the Total
     \item[$\square$]  Adventurers restore some \POOL or \UD depending on their Flavor:
     * Sellswords: Restore 1 Deed \UD
     * Knaves and Pooka: Restore 1 Luck \UD
-    * Philosophers: Restore 1 Blood \POOL and/or reset your Knowledge Die modifiers
-    * Mystics:  Restore 1 Grace \POOL and/or 1 Mojo \UD
+    * Philosophers: Restore up to 2 Blood \POOL and/or reset your Knowledge Die modifiers
+    * Mystics:  Restore up to 2 Grace \POOL and/or 1 Mojo \UD
+    * Spriggan: Restore all Sovereignty
     \item[$\square$]  Roll for Wandering Monsters if you desire (unless there's a Pooka present)
   }
 
@@ -455,8 +464,8 @@ This is just a general overview of the Monsters you might encounter in the Total
     \item[$\square$]  Repair your Armor up to \MAX. To repair a \MAX value, they'll need a Leatherworker or Smith (see Civilization)
     \item[$\square$]  Restore \UD for all Intangible Stats up to \MAX
     \item[$\square$]  Restore all \POOL dice to \MAX
-    \item[$\square$]  Assign {Adventuring XP}{advancement-adventuring} if appropriate
-    \item[$\square$]  Use the {Services}{civilization-services} chart for Leatherworkers, Smiths, Traders, Narcotics, etc. if the adventurers go "shopping" or are trying to find something specific.  Let them spend their money and assign them XP as they go.
+    \item[$\square$]  Assign {Glory}{advancement-adventuring} if appropriate
+    \item[$\square$]  Use the {Services}{civilization-services} chart for Leatherworkers, Smiths, Traders, Narcotics, etc. if the adventurers go "shopping" or are trying to find something specific.  Let them spend their money and assign them Glory as they go.
     \item[$\square$]  Ask if anyone is going \mylink{Carousing}{advancement-carousing} (do they have a Pooka?)
     \item[$\square$]  Check if anyone \mylink{gained a level}{advancement-leveling}
     \item[$\square$]  Check if anyone is using any Research, Cunning, or Faith; or attempting to create a weapon with Staff Magic or Sword Magic
