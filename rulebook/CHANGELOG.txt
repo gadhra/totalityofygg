@@ -1,0 +1,147 @@
+## unreleased
+
+### Changed
+- Fixing typos
+- Tweaked the Authorities' arcana to be a little more effective
+- Change Monster Saves to fit with the \RO mechanic elsewhere
+- Tweaked Bivouac rest to give a bigger bonus to Mystics, Philosophers, and Spriggan
+
+### Added
+- Added note that Arbiter can increase/decrease skill rolls and saves (-4 to +4)
+- Added better \DEATH for Spriggan as part of "Hound of Sish"
+- Clarified that Pooka don't count as a "person" when helping someone with a Skill
+- Lou missed Death Mask - I added it back in under "Knit Flesh"
+- Added line "...[y]ou can add additional Wizard Sigils at any time during a Vacation." to Grimoire
+- Added notes on when a Sigil is permanent, lifeless, or erased.
+- Added additional blogs to the "Thanks" section
+
+
+
+## [v.3.0.beta] - 2020-10-10
+
+Buckle up, cause it's a lot.
+
+### What Got Love
+-  Necromancers are more combat effective, and the way they cast Necro with Mojo is a little more clear.  Charms don't cost nothin. [thanks Lou!]
+-  Spriggan got lots of love - no more rolling! (OK, a little bit of rolling) [thanks Anastasia!]
+-  Goblin generator is a lot more robust, and the way they level is more ... entertaining [thanks Shane!]
+-  Leechcraft, Necromancy, and Whispers all work the same.  Simple target number, roll it or better (with some modifiers)
+-  Research (Chymistry, Inscription, and Medicinals) and Marvels (Miracles and Occultism) got streamlined and simplified
+-  Big rewrite on Mystics - simplification of the overall concept (10 "Authorities" with infinite gods beneath).  Liturgies clarified and tightened up.  Each Authority has 8 spells associated with it.  [thanks Dell, Dave, and Rob!]
+-  Added some art!
+  
+### Additions
+- Added background info for the Totality of Ygg and Acheron
+- Added the concept of "The Band" (the group of Adventurers you travel with)
+- Fleshed out (more addition than change) the concept of the Tribes of the Authority (Mortals) and the Unseelie Court (Fae)
+- Mortals now broken down into Tropes;  Unseelie Court now broken down into Species
+- Added the concept of Virtues: traits that build a Trope or Species
+- Added the concept of Complications: a "wrinkle" to give Adventurers some flavor
+- Added random treasure generator to appendix 
+- Added "martyr" Virtues (thanks Dell!)
+- Added rules for swimming
+
+### Removals
+- Removed x-in-6 mechanic (Knack Dice).  Saves, Skills, and the Death die are now a Roll20 test
+- Removed the Monsters from the Arbiter's section (except for basic information) - they'll be inside the Bestiary
+
+### Changed
+
+#### Mechanics
+- Combined the various Tropes into 4:  Sellsword (was Soldier and Barbarian), Knave (was Archaeologist and Bravo), Philosopher (was Sorcerer and Leech), and Mystic (was Witch and Devotee)
+- Combined old Trope skills into Virtues beneath the Trope header.  Tropes (humans) can choose their Virtues, but Species (metahumans) get their abilities "as is".
+- Advancement now follows the paradigm of building a Trope/Species, allows you to hand pick your Virtues
+- Combined "Sojourn" and "Sabbatical" into Vacation
+- During Vacation, you can perform Research (Philosophers) or Marvels (Mystics).  No longer a die roll, just a straight spend of Research, Cunning, or Faith (i.e. "This potion requires 3 Research to create").
+- Skills rework.  You can now "assist" other players.
+
+
+#### Tropes  
+- Complete rework of Mystics (Witches and Mystics).  No specific spells for individual Small Gods.  There are now 4 liturgies beneath each of the 10 Authorities (was Thrones).  Liturgies of Small Gods can be worked out with Arbiter
+- Fixed typo under Bless, changed "Faith" to "Grace"
+- Rework of Whispers
+
+
+#### Species
+- Changed Fae to Unseelie Court
+- Complete rework of Spriggan.  Spriggan now have 3 facets - Remembrance, Sovereignty, and Potential - that they use to summon Forgotten.  No longer any Remembrance dice.
+- Complete rework of Night Children.  Random generation now rolls 3d6 at creation to determine Looks, Weird, and Gear.  You can increase the die as you level and reroll i.e. move Looks to a d8, d10, etc.
+
+#### Combat
+- \INT is now the core Static die for rolling Init (was \DEX)
+- \FOC is now the core Static die for rolling Death
+
+#### Equipment
+- Rework of Narcotics.  Dropped the Overdose number and added restrictions. Added 2 new narcotics (Dust and Twitch) and dropped Shrooms, since those have become their own thing.
+
+#### Magic and Research
+- Cleanup of Miracles and Occultism, grouped under "Marvels"
+- Restructured mystic Liturgies to include Mysteries (under Arcana) and base abilities per Authority
+- Grouped Staff and Sword Magic under "Wonders"
+- Cleaned up how Research works
+- Cleaned up the Abandoned and Forgotten rules
+- Restructured Necromancy
+- Broke Curses into Lesser and Greater
+
+
+
+## [v.2.1.beta] - 2020-05-04
+
+### Added
+- Added some helper tables to appendices
+- Added "the Contract" to the Small Gods section for Mystics.
+- Added "you must make a successful Fight check using your [\FOC or \INT] (instead of \VIG or \DEX)" as clarification to a few spells for how to attack with a summoned weapon. 
+- For Witch and Leech healing ability, clarified it only works "...once per patient during a Breather or Bivouac (before you erase your Knowledge failures/restore your Mojo)."  (thanks Rob!)
+- Added the ability to attach lost limbs (temporarily) for Witches (thanks Lou!)
+- Added clarification of how to divvy up damage to Curse the Unhallowed (thanks Dell!)
+- For Chymistry, added "[i]f you succeed, you generate d4 \UD of the chymical." (thanks Rob!)
+
+### Changed
+- Sorcerers get a single Blood Die per level (thanks Javy!)
+- Cleaned up combat, skills, etc. and fixed missing content (thanks Javy!)
+- Formatting, typos, etc.
+- Rewrote the combat action economy for clarity (thanks Eric!)
+- Made small modifications to the Small God Vulan (thanks Dave!)
+- Clarified that Mystics gain their 2nd, 3rd, and 4th liturgies and invocations at 3rd, 5th, and 7th level
+- Cleaned up the Staff Magic section (thanks Javy!)
+- Fixed links for elemental monsters
+- Changed "Pack" to target all Close allies instead of all Nearby allies
+- Fixed typo for Spriggan. 19d6 -> 9d6 for Remembrance Die.
+- Changed the population sizes for small, medium, and large civilizations.
+- Death scythe fix - use \FOC to fight and the d8 is a \UD
+- Allow a Soldier to repair 1 \UD (up to \MAX) of their Armor during a Breather.  Allow everyone else to do the same during a Bivouac. (thanks Rob!)
+- Addiction was essentially instantaneous at low level.  Added a d20 to the \RO attempt.
+
+
+## [v.2.0.beta] - 2020-04-25
+### Added
+- Clarified that a Hammerspace object cannot be put inside another Hammerspace object to avoid a Bagworld scenario
+- Added new Witch Necromancy spells: Exploding Corpse and Zombie Warrior.  Reduced the difficulty of casting Zombie Slave spell. (thanks Lou!)
+- Spriggan restore a Remembrance die during a Bivouac.  Spriggan use Awareness for Combat (thanks Anastasia!)
+- Added in Init rules for fighting monsters with different init types (thanks Javy!)
+- Added Chartalist explanation for money in game.
+- Added Veins of the Earth explanation and link
+- Added section on hirelings under equipment
+
+### Changed
+- Rewrote rulesets in LaTeX, repo at [github](https://github.com/gadhra/totalityofygg).  Created table of contents and thank you pages.  New layouts for pages
+- Moved "Classes and Flavors" to "Tropes and Flavors".  Broken the Fae out into "Species".  Combined the Flavors under the Tropes. Nothing mechanical, hopefully reads easier. (thanks Rob!)
+- Copied Blood, Mojo, Knowledge, Grace, Faith, and Remembrance charts to start of appropriate sections in BBC.
+- Broke out section on Advancement (thanks Eric!)
+- Changed level 3 Witch Ability "Third Eye" to Feyness to avoid conflict with Charm of same name.
+- Clarified the level 3 Sorcerer "spell crossing" ability (spell was supposed to be determined randomly, not be an actual cross of two spells!)  (thanks Javy!)
+- Witch starting Mojo moved to d8 (thanks Lou!)
+- Reworked Knave Die to avoid the "picking the gates of Hell at level 5" scenario.  Reworked Knave abilities as "Whispers" or Knave magic.  Bravos and Knaves now share climb walls, sneak, open locks, and find/disarm traps.  Bravos have a disguise/forgery ability, Archaeologists have a sleight of hand ability.  Moved the Archaeologist ability to carry cursed items to level 1.  Level 3 Archaeologist can make a "bag of holding", Level 3 Bravo can create a knife from shadows.  Finally, allow Bravos to use War Axe, Mace, and Spear to backstab.  (thanks Eric!)
+- Moved finding traps back to Knaves.
+- Rewrote Charms to be less esoteric in their titles, and combined a few redundant ones. (thanks Lou!)
+- Change "Hit Dice" for characters to "Flesh Dice" to avoid confusion (thanks Bobby!)
+
+## [v.1.0.beta] - 2020-01-24
+### Added
+- Under the Unhallowed flavors, added: Add your \LVL to any rolls involving $INTANGIBLE_STAT (though the \UD still moves \DCDOWN on a natural 1 or 2)
+- Dammit, forgot the ENTIRE SECTION on DIVINE FAVOR. Added to BB&C as its own page after the Seven Sacraments
+
+### Changed
+- Error under Pooka, changed "Talent moves 2x up" to "Presence moves 2x up"
+- Fixed some formatting issues in BB&C
+- Under Archaeologist, changed scrolls to: You can attempt to cast spells from Sorcerer's scrolls. Instead of rolling d6 however, you roll up to your \LVL d4 (so if you were level 4, you could roll up to 4d4). The same rules apply for triples (Mishaps), quadruples (Calamity), and quintuples (Ruin) as they do for Sorcerers.

@@ -1,0 +1,283 @@
+% (c) 2020 Stefan Antonowicz
+% Based off of tex found at https://github.com/ludus-leonis/nipajin
+% This file is released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% Please do not apply other licenses one-way.
+
+\documentclass[a4paper,10pt]{book}
+
+\usepackage{ygg}
+\newcommand{\yggVersion}{%
+  v.1.0
+}
+
+\newcommand{\yggMyTitle}{
+  {The Totality of Ygg}
+}
+
+
+% Section Titles
+\newcommand{\yggIntroduction}{}
+\newcommand{\yggMechanics}{}
+\newcommand{\yggTheBand}{}
+\newcommand{\yggMortals}{}
+\newcommand{\yggUnseelie}{}
+\newcommand{\yggAdvancement}{}
+\newcommand{\yggSkillsSaves}{}
+\newcommand{\yggCombat}{}
+\newcommand{\yggCivilization}{}
+\newcommand{\yggEquipment}{}
+\newcommand{\yggMiscellania}{}
+\newcommand{\yggArbiter}{}
+\newcommand{\yggArcana}{}
+\newcommand{\yggResearch}{}
+\newcommand{\yggMarvels}{}
+\newcommand{\yggWonders}{}
+\newcommand{\yggAppendix}{}
+
+% Body
+\newcommand{\yggIntroductionText}{}
+\newcommand{\yggMechanicsText}{}
+\newcommand{\yggTheBandText}{}
+\newcommand{\yggMortalsText}{}
+\newcommand{\yggUnseelieText}{}
+\newcommand{\yggAdvancementText}{}
+\newcommand{\yggSkillsSavesText}{}
+\newcommand{\yggCombatText}{}
+\newcommand{\yggCivilizationText}{}
+\newcommand{\yggEquipmentText}{}
+\newcommand{\yggMiscellaniaText}{}
+\newcommand{\yggArbiterText}{}
+\newcommand{\yggArcanaText}{}
+\newcommand{\yggResearchText}{}
+\newcommand{\yggMarvelsText}{}
+\newcommand{\yggWondersText}{}
+\newcommand{\yggAppendixText}{}
+
+
+
+\input{introduction.tex}
+\input{mechanics.tex}
+\input{theband.tex}
+\input{tropes.tex}
+\input{species.tex}
+\input{advancement.tex}
+\input{skills_and_saves.tex}
+\input{combat.tex}
+\input{civilization.tex}
+\input{equipment.tex}
+\input{miscellania.tex}
+\input{arcana.tex}
+\input{research.tex}
+\input{marvels.tex}
+\input{wonders.tex}
+\input{arbiter.tex}
+\input{appendices.tex}
+
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+% --- front cover --------------------------------------------------------------------
+
+\pagecolor{black}
+\thispagestyle{empty}
+\ThisCenterWallPaper{1}{FrontCover.png}
+% Blank page overlay on the front cover
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \hspace*{1cm}\includegraphics[scale=0.5,keepaspectratio]{BlackRiver}
+    }
+}
+
+\begin{tikzpicture}
+\end{tikzpicture}
+\afterpage{\blankpage}
+\newpage
+
+
+
+
+% --- introduction  -----------------------------------------------------------------
+\thispagestyle{empty}
+\noindent\yggIntroduction
+\vfill\newpage\raggedbottom
+\raggedcolumns
+\noindent\yggIntroductionText
+\vfill\newpage
+
+% --- table of contents  -----------------------------------------------------------------
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforetoctitleskip}{-3em}
+\renewcommand\contentsname{{\Large\fftext Table of Contents }}
+\renewcommand{\cftchapfont}{\fftext\normalsize}
+\renewcommand{\cftsecfont}{\fftext\small}
+\renewcommand{\cftsubsecfont}{\fftext\small}
+\renewcommand{\cftchappagefont}{\fftext\normalsize}
+\renewcommand{\cftsecpagefont}{\fftext\small}
+\renewcommand{\cftsubsecpagefont}{\fftext\small}
+
+
+\begin{multicols*}{2}
+    \tableofcontents
+\end{multicols*}
+\vfill\newpage\raggedbottom
+
+
+% --- core mechanics -----------------------------------------------------------------
+\noindent\yggMechanics
+\vfill\newpage\raggedbottom
+\begin{multicols}{2}
+  \raggedcolumns
+  \noindent\yggMechanicsText
+\end{multicols*}
+\vfill\newpage
+% --- the band -----------------------------------------------------------------
+\noindent\yggTheBand
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggTheBandText
+\end{multicols*}
+\vfill\newpage
+
+% --- mortals -----------------------------------------------------------------
+\noindent\yggMortals
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggMortalsText
+\end{multicols*}
+\vfill\newpage
+% --- unseelie -----------------------------------------------------------------
+\noindent\yggUnseelie
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggUnseelieText
+\end{multicols*}
+\vfill\newpage
+% --- advancement -----------------------------------------------------------------
+\noindent\yggAdvancement
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggAdvancementText
+\end{multicols*}
+\vfill\newpage
+
+% --- skills and saves -----------------------------------------------------------------
+\noindent\yggSkillsSaves
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggSkillsSavesText
+\end{multicols*}
+\vfill\newpage
+
+% --- combat -----------------------------------------------------------------
+\noindent\yggCombat
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggCombatText
+\end{multicols*}
+\vfill\newpage
+
+% --- civilization -----------------------------------------------------------------
+\noindent\yggCivilization
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggCivilizationText
+\end{multicols*}
+\vfill\newpage
+
+% --- equipment -----------------------------------------------------------------
+\noindent\yggEquipment
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggEquipmentText
+\end{multicols*}
+\vfill\newpage
+
+% --- miscellania  -----------------------------------------------------------------
+\noindent\yggMiscellania
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggMiscellaniaText
+\end{multicols*}
+\vfill\newpage
+
+
+
+% --- arcana -----------------------------------------------------------------
+\noindent\yggArcana
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}\raggedcolumns
+  \noindent\yggArcanaText
+\end{multicols*}
+\vfill\newpage
+
+% --- research -----------------------------------------------------------------
+\noindent\yggResearch
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}\raggedcolumns
+  \noindent\yggResearchText
+\end{multicols*}
+\vfill\newpage
+
+% --- marvels -----------------------------------------------------------------
+\noindent\yggMarvels
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}\raggedcolumns
+  \noindent\yggMarvelsText
+\end{multicols*}
+\vfill\newpage
+
+% --- wonders -----------------------------------------------------------------
+\noindent\yggWonders
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}\raggedcolumns
+  \noindent\yggWondersText
+\end{multicols*}
+\vfill\newpage
+
+% --- arbiter's resources  -----------------------------------------------------------------
+\noindent\yggArbiter
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggArbiterText
+\end{multicols*}
+\vfill\newpage
+
+
+% --- appendices -----------------------------------------------------------------
+\noindent\yggAppendix
+\vfill\newpage\raggedbottom
+\begin{multicols*}{2}
+  \raggedcolumns
+  \noindent\yggAppendixText
+\end{multicols*}
+\vfill\newpage
+
+
+% --- back cover --------------------------------------------------------------------
+
+\pagecolor{black}
+\thispagestyle{empty}
+\ThisCenterWallPaper{1}{BackCover.png}
+\begin{tikzpicture}
+\end{tikzpicture}
+
+
+\end{document}
