@@ -24,7 +24,7 @@
           </div>
           <div class="sheet-col" style="text-align:right">
             <label style="text-align:right">Level</label> <input type="number" name="attr_character_level" value="1" /><br />
-            <label style="display:inline">XP</label> <input type="text" name="attr_character_xp" value="0" style="width:50px; border: none;" />
+            <label style="display:inline">Glory</label> <input type="text" name="attr_character_xp" value="0" style="width:50px; border: none;" />
             <label style="display:inline">Next Level:</label> <input type="text" value="1000" name="attr_character_next_level" style="width:50px; border: none;" />
           </div>
         </div>
@@ -1157,16 +1157,18 @@
                     </div>
                     <div class="sheet-my3colrow halfbox">
                         <div class="sheet-col">
-                            <label for="attr_remembrance">Remembrance</label>
-                            <input type="number" name="attr_remembrance" value="1" />
-                        </div>
-                        <div class="sheet-col">
                             <label for="attr_sovereignty">Sovereignty</label>
                             <input type="number" name="attr_sovereignty" value="1" />
+                            <label for=attr_sovereignty_max">Max Sovereignty</label>
+                            <input type="number" name="attr_sovereignty_max" value="1" />
                         </div>
                         <div class="sheet-col">
                             <label for="attr_potential">Potential</label>
                             <input type="number" name="attr_potential" value="1" />
+                        </div>
+                        <div class="sheet-col">
+                            <label for="attr_remembrance">Remembrance (unbound)</label>
+                            <input type="number" name="attr_remembrance" value="1" />
                         </div>
                     </div>
                     <div class="sheet-my3colrow">
@@ -1175,7 +1177,7 @@
                             <fieldset class="repeating_sprigganvirtues">
 	                            <select name="attr_spriggan_virtue" class="sheet-select">
                                     <option value="" selected="selected"></option>
-		                            <option value="Anamnesis of the Damned">Anamnesis of the Beasts</option>
+		                            <option value="Anamnesis of the Beasts">Anamnesis of the Beasts</option>
 		                            <option value="Anamnesis of the Damned">Anamnesis of the Damned</option>
 		                            <option value="Anamnesis of the Elements">Anamnesis of the Elements</option>
 		                            <option value="Arcane Armory">Arcane Armory</option>
@@ -1198,8 +1200,10 @@
                             </ul>
                         </div>
                         <div class="sheet-col">
-                            <h4>Forgotten</h4>
-                            <textarea class="sheet-inventory" style="width:85%" name="attr_forgotten"></textarea>
+                            <h4>Remembrance (bound)</h4>
+                            <fieldset class="repeating_remembrance">
+                                <input type="text" name="attr_weapon_name" placeholder="Abandoned Name" />
+                            </fieldset>
                         </div>
                     </div>
                 </div>
@@ -1642,13 +1646,7 @@
                     <span class="tooltiptext">RO: DEX + Monster Weakness</span>
                 </div>
                 <button class="sheet-square" type="roll" value="&{template:toy-rolltwenty} {{title=Guard }} {{charname=@{character_name}}} {{roll=[[?{Monster Weakness|d24|d20|d16|d12|d10|d8|d6|d4|d3|d2|0} + (@{character_level}*@{knave}) + ?{Modifers?|0} + 1d@{dex} ]]}}"> Guard</button>
-            </div>
-            <div class="sheet-col center">
-                <div class="tooltip">❓
-                    <span class="tooltiptext">RS: FOC</span>
-                </div>
-                <button class="sheet-square" type="roll" value="&{template:toy-rollsucceed} {{title=Fumble }} {{charname=@{character_name}}} {{roll=[[(@{character_level}*@{mystic})+1d@{foc}]]}}">Fumble</button>
-            </div>                  
+            </div>                
         </div>
         <!-- end Init, Guard, and Fumble-->
 
@@ -1989,49 +1987,49 @@
         <div class="sheet-failure">Miss!</div>
         {{/rollLess() roll 20 }}
 
-
-        <!-- if it's a hit ... -->
+        <!-- if it's a hit -->
         {{#^rollLess() roll 20 }}
-            <!-- if the damage explodes ... -->
-            {{#rollGreater() does_explode 0 }}
-                <div class="sheet-key">Damage</div>
-                <div class="sheet-value">{{explode}}+{{dam_bonus}}</div>
-                <div class="sheet-success">Hit!</div>
-                <!-- ... but you fumble ... -->
-                {{#rollLess() explode 2 }}
-                    <div class="sheet-damage-fumble">
-                        Fumble! Roll your fumble die.
-                    </div>
-                {{/rollLess() explode 2 }}                       
-            {{/rollGreater() does_explode 0 }}
-
-            <!-- if the damage DOESN'T explode ... -->
-            {{#^rollGreater() does_explode 0 }}
-                <div class="sheet-key">Damage</div>
-                <!-- if there's an override, show that ... -->
-                {{#rollGreater() dam_override 0 }}
-                    <div class="sheet-value">{{dam_override}}+{{dam_bonus}}</div>
-                    <div class="sheet-success">Hit!</div>
-                {{/rollGreater() dam_override 0 }}
-                <!-- if there's NOT an override -->
-                {{#^rollGreater() dam_override 0 }}
-                    <div class="sheet-value">{{damage}}+{{dam_bonus}}</div>
-                    <div class="sheet-success">Hit!</div>
-                    <!-- if you CRIT -->
-                    {{#rollWasCrit() damage }}
-                     <div class="sheet-damage-crit">
-                        Crit!  Roll your VIG ♣. Success = +{{level}} damage.
-                      </div>
-                    {{/rollWasCrit() damage }}
-                    <!-- if you FUMBLE -->
-                    {{#rollWasFumble() damage }}
-                    <div class="sheet-damage-fumble">
-                        Fumble! Roll your fumble die.
-                    </div>
-                   {{/rollWasFumble() damage}}
-                {{/^rollGreater() dam_override 0 }}
-            {{/^rollGreater() does_explode 0 }}
+        <div class="sheet-success">Hit!</div>
         {{/^rollLess() roll 20 }}
+
+        <!-- show the damage -->
+        <!-- if the damage explodes ... -->
+        {{#rollGreater() does_explode 0 }}
+            <div class="sheet-key">Damage</div>
+            <div class="sheet-value">{{explode}}+{{dam_bonus}}</div>
+            <!-- ... but you fumble ... -->
+            {{#rollLess() explode 2 }}
+                <div class="sheet-damage-fumble">
+                    Fumble! Roll your FOC ♥. Failure = roll Fumble die.
+                </div>
+            {{/rollLess() explode 2 }}                       
+        {{/rollGreater() does_explode 0 }}
+
+        <!-- if the damage DOESN'T explode ... -->
+        {{#^rollGreater() does_explode 0 }}
+            <div class="sheet-key">Damage</div>
+            <!-- if there's an override, show that ... -->
+            {{#rollGreater() dam_override 0 }}
+                <div class="sheet-value">{{dam_override}}+{{dam_bonus}}</div>
+            {{/rollGreater() dam_override 0 }}
+            <!-- if there's NOT an override -->
+            {{#^rollGreater() dam_override 0 }}
+                <div class="sheet-value">{{damage}}+{{dam_bonus}}</div>
+                <!-- if you CRIT -->
+                {{#rollWasCrit() damage }}
+                 <div class="sheet-damage-crit">
+                    Crit!  Roll your FOC ♥. Success = +{{level}} damage.
+                  </div>
+                {{/rollWasCrit() damage }}
+                <!-- if you FUMBLE -->
+                {{#rollWasFumble() damage }}
+                <div class="sheet-damage-fumble">
+                    Fumble! Roll your FOC ♥. Failure =  roll Fumble die.
+                </div>
+               {{/rollWasFumble() damage}}
+            {{/^rollGreater() dam_override 0 }}
+        {{/^rollGreater() does_explode 0 }}
+        
     </div>    
 
   </div>
