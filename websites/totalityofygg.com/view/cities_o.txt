@@ -1,0 +1,14 @@
+<pre>
+
+{% for city in cities %}
+\CITY[
+  Name = {{ city.city }},
+  Province = city-{{city.city|lower}},
+  State = {{ city.state }},
+  Province = {{ city.province }},
+  Ruler = ,
+  Population = {{ city.size }} ({{city.population|round(-2,'ceil')}})
+]
+
+{% endfor %}
+</pre>
